@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Raul Retail
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/main.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+<header>
+    <figure>
+        <p> R A Ù L </p>
+        <p> Home </p>
+        <p> Store  </p>
+        <p > Contact </p>
+        <p onclick="openLogin()" draggable="false" id ="loginText"> Login </p>
+        <div class ="loginSlide" id="login">
+            <div class="loginText">
+                <p>L O G I N</p>
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="submit" placeholder="Login">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+                <a>Forgot Password?</a>
+            </div>
+            <div class ="arrow">
+                <img src= "{% static 'Raul/Images/arrowDown.png' %}" onclick="closeLogin()" draggable="false" id="arrow">
+            </div>
+            <div class="signUp">
+                <p> S I G N - U P </p>
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="submit" placeholder="Login">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+                <a>Forgot Password?</a>
+            </div>
+        </div>
+        <p> Cart </p>
+    </figure>
+
+    <figcaption> R A Ù L </figcaption>
+
+    <nav>
+        <img src="{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+        <ul id="contentHam">
+
+            <li class="exitButton">
+                <img src="{% static 'Raul/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
+            </li>
+            <li>
+                <a  href="{% url 'Raul-Home'%}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'Raul-About'%}">Store</a>
+            </li>
+            <li>
+                <a href= {% url 'Raul-About'%}>Contact</a>
+            </li>
+            <li>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#">Cart</a>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class ="bannerHead" id = "mainBanner">
+    <div class = "bannerHeading">
+        <figcaption> R A Ù L </figcaption>
+    </div>
+</div>
+<div class="shopImage" id = "shop">
+    <div class="shopHeading">
+        <figcaption>SH OP</figcaption>
+    </div>
+    <div class="organizer">
+        <img draggable="false" alt="Organizer Photo" src="{% static 'Raul/Images/2.jpg' %}" width="100%" class="staticImage">
+        <div class = "textMiddle">
+            <div class ="textInfo">Lighting</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <img alt="Organizer Photo" src="{% static 'Raul/Images/3.jpg' %}" width="100%" class="staticImage">
+        <div class = "textMiddle">
+            <div class ="textInfo">Wall Art</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <img alt="Organizer Photo" src="{% static 'Raul/Images/4.jpg' %}" width="100%" class="staticImage">
+        <div class = "textMiddle">
+            <div class ="textInfo">Plates</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <img alt="Organizer Photo" src="{% static 'Raul/Images/4.jpg' %}" width="100%" class="staticImage">
+        <div class = "textMiddle">
+            <div class ="textInfo">Damn Son</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <img alt="Organizer Photo" src="{% static 'Raul/Images/1.jpg' %}" width="100%" class="staticImage">
+        <div class = "textMiddle">
+            <div class ="textInfo">Furniture</div>
+        </div>
+    </div>
+    <div class="organizer">
+        <img alt="Organizer Photo" src="{% static 'Raul/Images/5.jpg' %}" width="100%" class="staticImage">
+        <div class = "textMiddle">
+            <div class ="textInfo">Damn Son</div>
+        </div>
+    </div>
+</div>
+<footer>
+
+</footer>
+<script>
+    function openNav() {
+        document.getElementById("contentHam").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("contentHam").style.height = "0%";
+    }
+
+    function openLogin(){
+        document.getElementById("login").style.height = "100%"
+    }
+
+    function closeLogin(){
+        document.getElementById("login").style.height = "0%"
+    }
+
+</script>
+
+</body>
+</html>
