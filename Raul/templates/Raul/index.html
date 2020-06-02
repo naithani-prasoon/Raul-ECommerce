@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Zoom Effect-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .zoom {
+            transition: transform .2s;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            -ms-transform: scale(1.1); /* IE 9 */
+            -webkit-transform: scale(1.1); /* Safari 3-8 */
+            transform: scale(1.1);
+        }
+
+        .container_Hover {
+            position: relative;
+            width: 50%;
+        }
+
+        .image_Hover {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay_image {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+
+        }
+
+        .container_Hover:hover .overlay_image {
+            opacity: 1;
+        }
+
+        .Hovertext {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+
+    </style>
+    <!-- Header Nav Bar-->
+    <title>Raul Retail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/design.css' %}">    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+<body>
+
+<!-- Header Nav Bar-->
+<header class="header-area overlay">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">R A Ù L</a>
+            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+            </button>
+
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li><a href="#" class="nav-item nav-link active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-item nav-link" data-toggle="dropdown">Store</a>
+                        <div class="dropdown-menu">
+                            <a href="{% url 'Raul-About' %}" class="dropdown-item">Second Homepage</a>
+                            <a href="#" class="dropdown-item">Blah</a>
+                            <a href="#" class="dropdown-item">Blah</a>
+                            <a href="#" class="dropdown-item">Blah</a>
+                            <a href="#" class="dropdown-item">Blah</a>
+                        </div>
+                    <li><a href="#" class="nav-item nav-link">Contact</a></li>
+                    <li><a href="{% url 'register' %}" class="nav-item nav-link">Login</a></li>
+                    <li><a href="#" class="nav-item nav-link">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="container" id ="test">
+            <h1>  R A U L </h1>
+        </div>
+    </div>
+</header>
+
+
+<!-- Begin of Shopping Section-->
+
+<main>
+
+    <!-- Shop Text-->
+    <div class  = "container-fluid" id = "Shop">
+    <div class = "d-flex justify-content-center">
+        <display1> S H O P </display1>
+    </div>
+    </div>
+
+    <!-- First Row of Pictures-->
+    <section id="2nd Row" class="content">
+        <div data-aos = "fade-in" class="container">
+            <div class="row">
+                <!-- Picture with Zoom effect and Hover -->
+                <div class="col-md-4" id = "2ndRow">
+                    <div class ="zoom">
+                        <figure>
+                    <img src=  "{% static 'Raul/Images/table.jpg' %}" width="380" height="640"  class = "img-fluid" alt = " Raul" height="183">
+                            <figcaption><h1>. </h1>  </figcaption>
+                        </figure>
+                        <div class="middle">
+                            <div class="text">Plates</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Picture with Zoom effect and Hover -->
+                <div class="col-md-4">
+                    <div class ="zoom">
+                        <img src=  "{% static 'Raul/Images/lighting_-_5_x_7_400x.jpg' %}" width="380" height="640" class = "img-fluid" alt = " Raul" height="183">
+                        <div class="middle2">
+                            <div class="text">Lighting</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Picture with Zoom effect and Hover -->
+                <div class="col-md-4">
+                    <div class ="zoom">
+                    <img src= "{% static 'Raul/Images/furn_400x.jpg' %}" width="380" height="640" class = "img-fluid" alt = " Raul" height="183">
+                        <div class="middle3">
+                            <div class="text">FURNITURE</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class ="zoom">
+                        <img src= "{% static 'Raul/Images/wall.jpg' %}" width="380" height="640" class = "img-fluid" alt = " Raul" height="183">
+                        <div class="middle4">
+                            <div class="text">WALL ART</div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class ="zoom">
+                            <img src= "{% static 'Raul/Images/floaral.jpg' %}" width="380" height="840" class = "img-fluid" alt = " Raul" height="183">
+                            <div class="middle4">
+                                <div class="text">FLORAL</div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class ="zoom">
+                        <img src= "{% static 'Raul/Images/decorative_accesories.jpg' %}" width="380" height="640" class = "img-fluid" alt = " Raul" height="183">
+                        <div class="middle5">
+                            <div class="text">Decorative Accessories</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<!-- 3rd Row of Pictures -->
+<main>
+</main>
+
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
