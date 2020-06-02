@@ -1,3 +1,8 @@
+{% extends "Raul/base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+
 <!doctype html>
 {% load crispy_forms_tags %}
 <html lang="en">
@@ -23,6 +28,11 @@
             </div>
         </fieldset>
     </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+        </small>
+    </div>
 </div>
 
 
@@ -32,3 +42,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+{% endblock %}
