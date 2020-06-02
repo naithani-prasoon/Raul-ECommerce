@@ -93,9 +93,15 @@
                             <a href="#" class="dropdown-item">Blah</a>
                             <a href="#" class="dropdown-item">Blah</a>
                         </div>
-                    <li><a href="#" class="nav-item nav-link">Contact</a></li>
-                    <li><a href="{% url 'register' %}" class="nav-item nav-link">Login</a></li>
+                        {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a></li>
+                    <li><a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></li>
+                    {% else %}
+                    <li><a href="{% url 'register' %}" class="nav-item nav-link">Register</a></li>
+                    <li><a href="{% url 'login' %}" class="nav-item nav-link">Login</a></li>
                     <li><a href="#" class="nav-item nav-link">Cart</a></li>
+                    {% endif %}
+
                 </ul>
             </div>
         </div>
