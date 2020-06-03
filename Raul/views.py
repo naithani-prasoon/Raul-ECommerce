@@ -6,8 +6,8 @@ from django.contrib import messages
 def home(request):
     return render(request, 'Raul/index.html')
 
-def about(request):
-    return render(request, 'Raul/about.html')
+def secondHome(request):
+    return render(request, 'Raul/home.html')
 
 
 
