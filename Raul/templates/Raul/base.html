@@ -72,7 +72,7 @@
 <!-- Header Nav Bar-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container">
-            <a href="#" class="navbar-brand">R A Ù L</a>
+            <a href="{% url 'Raul-Home' %}" class="navbar-brand">R A Ù L</a>
             <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
                 <span class="menu-icon-bar"></span>
                 <span class="menu-icon-bar"></span>
@@ -81,7 +81,7 @@
 
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
-                    <li><a href="#" class="nav-item nav-link active">Home</a></li>
+                    <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link active">Home</a></li>
                     <li class="dropdown">
                         <a href="#" class="nav-item nav-link" data-toggle="dropdown">Store</a>
                         <div class="dropdown-menu">
@@ -92,7 +92,7 @@
                             <a href="#" class="dropdown-item">Blah</a>
                         </div>
                         {% if user.is_authenticated %}
-                    <li><a href="{% url 'register' %}" class="nav-item nav-link">Profile</a></li>
+                    <li><a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a></li>
                     <li><a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></li>
                     {% else %}
                     <li><a href="{% url 'register' %}" class="nav-item nav-link">Register</a></li>
