@@ -23,8 +23,18 @@ header{
     z-index: 1;
 }
 
+figure a{
+    text-align: center;
+    text-decoration: none;
+    color:white;
+}
+
 figure p{
     text-align: center;
+}
+
+figure img{
+    margin-left:4em;
 }
 
 .bannerHead{
@@ -387,12 +397,12 @@ nav ul li a:hover{
         margin-top: 30%;
     }
 
-    header figcaption{
-        font-size: 1em;
+    header figcaption img{
         margin-left: 2em;
-        margin-top: 5%;
+        margin-top:0.2em;
+        width:15%;
     }
-
+    
     nav ul li a{
         text-align: left;
         font-size: 1.5em;
@@ -450,10 +460,10 @@ nav ul li a:hover{
         margin-top: 15%;
     }
 
-    header figcaption{
-        font-size: 1.5em;
+    header figcaption img{
         margin-left: 2em;
-        margin-top: 1.5%;
+        margin-top:0.2em;
+        width:7%;
     }
 
     nav ul li a{
@@ -509,10 +519,10 @@ nav ul li a:hover{
         margin-top: 15%;
     }
 
-    header figcaption{
-        font-size: 1.5em;
+    header figcaption img{
         margin-left: 2em;
-        margin-top: 1.5%;
+        margin-bottom:0.5em;
+        width:7%;
     }
 
     nav ul li a{
@@ -572,8 +582,16 @@ nav ul li a:hover{
         height: 4em;
     }
 
+    figure a{
+        margin-right: 2em;
+    }
     figure p{
-        margin: 20px;
+        margin-right:20px;
+    }
+
+    figure img{
+        margin-top:0.5em;
+        width:7%;
     }
 
     .bannerHead{
@@ -718,8 +736,15 @@ nav ul li a:hover{
         height: 4em;
     }
 
+    figure a{
+        margin-right: 2em;
+    }
     figure p{
-        margin: 20px;
+        margin-right:20px;
+    }
+
+    figure img{
+        padding:0px;
     }
 
     .bannerHead{
