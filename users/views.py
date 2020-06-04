@@ -21,5 +21,7 @@ def register(request):
 def profile(request):
     return render(request, 'users/profile.html')
 
+def products(request):
+    return render(request, 'users/products.html')
 
 # Create your views here.
