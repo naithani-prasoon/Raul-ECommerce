@@ -6,7 +6,7 @@ class product(models.Model):
     title = models.CharField(max_length=128)
     description = models.TextField(null=True, blank=True)
     price = models.DecimalField(decimal_places=2, max_digits=100)
-
+    image = models.ImageField(blank=True, null=True)
     slug = models.SlugField(null = True)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
@@ -17,7 +17,7 @@ class product(models.Model):
 
 class productimage(models.Model):
     product = models.ForeignKey(product, on_delete=models.PROTECT)
-    image= models.ImageField(upload_to='Raul/')
+    image=models.ImageField()
     active = models.BooleanField(default=True)
     thumbnail = models.BooleanField(default=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

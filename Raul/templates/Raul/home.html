@@ -20,8 +20,8 @@
         <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%">
         <a href="#"><p> Home </p></a>
         <a href="#"><p> Store </p></a>
-        <a href="#"><p> Contact </p></a>
-        <a href="#"><p onclick="openLogin()" draggable="false" id ="loginText"> Login </p></a>
+        <a href="{% url 'register' %}"><p> Contact </p></a>
+        <a href="#"> <p>Login </p></a>
 
         <div class ="loginSlide" id="login">
             <div class="loginText">
@@ -68,10 +68,10 @@
                 <a href="#">Store</a>
             </li>
             <li>
-                <a href="#">Contact</a>
+                <a href="{% url 'register' %}">Contact</a>
             </li>
             <li>
-                <a href="#">Login</a>
+                <a href="{% url 'register' %}">Login</a>
             </li>
             <li>
                 <a href="#">Cart</a>
