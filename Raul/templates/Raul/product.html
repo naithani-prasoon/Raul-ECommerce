@@ -1,0 +1,28 @@
+{% extends "Raul/base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+
+<div class="content-section">
+
+    <div class="'row">
+        {% for product in products %}
+
+        {{product.title}}
+        {{product.price}}
+
+
+        {% endfor %}
+
+    </div>
+
+
+</div>
+{% endblock %}
+
+
+
+
+
+
