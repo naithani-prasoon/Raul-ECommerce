@@ -23,8 +23,18 @@ header{
     z-index: 1;
 }
 
+figure a{
+    text-align: center;
+    text-decoration: none;
+    color:white;
+}
+
 figure p{
     text-align: center;
+}
+
+figure img{
+    margin-left:4em;
 }
 
 .bannerHead{
@@ -718,8 +728,15 @@ nav ul li a:hover{
         height: 4em;
     }
 
+    figure a{
+        margin-right: 2em;
+    }
     figure p{
-        margin: 20px;
+        margin-right:20px;
+    }
+
+    figure img{
+        padding:0px;
     }
 
     .bannerHead{

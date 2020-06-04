@@ -17,11 +17,11 @@
 <body>
 <header>
     <figure>
-        <p> R A Ù L </p>
-        <p> Home </p>
-        <p> Store </p>
-        <p> Contact </p>
-        <p onclick="openLogin()" draggable="false" id ="loginText"> Login </p>
+        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%">
+        <a href="#"><p> Home </p></a>
+        <a href="#"><p> Store </p></a>
+        <a href="#"><p> Contact </p></a>
+        <a href="#"><p onclick="openLogin()" draggable="false" id ="loginText"> Login </p></a>
 
         <div class ="loginSlide" id="login">
             <div class="loginText">
@@ -35,7 +35,7 @@
                 <a>Forgot Password?</a>
             </div>
             <div class ="arrow">
-                <img src="arrowDown.png" onclick="closeLogin()" draggable="false" id="arrow">
+                <img src="{% static 'Raul/Images/arrowDown.png' %}" onclick="closeLogin()" draggable="false" id="arrow">
             </div>
             <div class="signUp">
                 <p> S I G N - U P </p>
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        <p> Cart </p>
+        <a href ="#"><p> Cart </p></a>
     </figure>
 
     <figcaption> R A Ù L </figcaption>
