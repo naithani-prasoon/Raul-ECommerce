@@ -8,7 +8,7 @@ body{
     flex-wrap: wrap-reverse;
     justify-items: center;
     align-items: center;
-    background: url("bg.jpeg");
+    background-color: grey;
 }
 
 a{
