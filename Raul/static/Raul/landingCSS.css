@@ -1,79 +1,86 @@
-html,body{
+body{
     margin:0;
     padding:0;
-    height:100%;
-    font-family: 'Roboto', sans-serif;
+    height:100vh;
+    font-family: 'Roboto Condensed', sans-serif;
     overflow-x: hidden;
+    display:flex;
+    flex-wrap: wrap-reverse;
+    justify-items: center;
+    align-items: center;
+    background: url("bg.jpeg");
 }
 
 a{
-    text-decoration: none;
+   overflow: hidden;
+   text-emphasis: none;
+   width: 30%;
+   height:70%;
+   margin-left:auto;
+   margin-right:auto;
 }
 
- /* video{
-            object-fit: cover;
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top:0;
-            left:0;
-            z-index: -1;
-            filter:blur(5px);
-        }*/
-
-.landingIcons{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    margin-left: auto;
+a .container{
+    width:80%;
+    height:100%;
+    overflow: hidden;
+    margin-left:auto;
     margin-right: auto;
-    margin-top:20%;            
-}
-
-.cafeBanner{
-    background-color: indianred;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    width: 80%;
+    flex-direction: column;
     transition: 0.5s ease-in-out;
 }
 
-.cafeHeading{
-    color:white;
-    font-size: 5em;
-    text-align: center;
-    padding:30px;
-    transition: 0.5s ease-in-out;
+a .container p{
+   background:whitesmoke;
+   position: fixed;
+   margin-top:12%;
+   opacity: 0.7;
+   transition: 0.5s ease-in-out;
 }
 
-.raulBanner{
-    background-color: indianred;
-    margin-left: auto;
+a #raul{
+   margin-left:1.5%;
+   width: 5.5em;
+   height:2.5em;
+   font-size: 3em;
+   padding:30px;
+}
+
+a #raul img{
+    align-self: center;
+    width: 50%;
+    margin-left: 1.2em;
     margin-right: auto;
-    margin-top: 2em;
-    width: 80%;
-    transition: 0.5s ease-in-out;
 }
 
-.raulHeading{
-    color:white;
-    font-size: 5em;
-    text-align: center;
-    padding:30px;
+a #cafe{
+   margin-left:1.5%;
+   width:15em;
+   height: 6em;
+   padding:40px;
 }
 
-.thirdBanner{
-    background-color: indianred;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-    width: 80%;
-    transition: 0.5s ease-in-out;
+a #cafe img{
+   align-self: center;
+   width:100%;
+   padding-top:15px;
 }
 
-.thirdHeading{
-    color:white;
-    font-size: 5em;
-    text-align: center;
-    padding:30px;
+a #third{
+   margin-left:7.5%;
+}
+
+a .container video{
+    z-index:-1;            
+}
+
+a .container:hover{
+    width:82%;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px 1px black;
+}
+
+a .container:hover p{
+    opacity: 1;
+    
 }
