@@ -5,6 +5,24 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import product, Category
 
+
+def search(request):
+    try:
+        q= request.GET.get('q')
+    except:
+        q= None
+    if q:
+        products= product.objects.filter(title__icontains=q)
+        pro=product.price
+        context = {'query': q , 'products': products, "price" : pro}
+        template = 'Raul/results.html'
+    else:
+        context = {}
+        template ='Raul/product.html'
+    return render(request, template, context)
+
+
+
 def home(request):
     return render(request, 'Raul/index.html')
 

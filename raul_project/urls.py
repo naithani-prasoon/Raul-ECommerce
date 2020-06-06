@@ -36,8 +36,12 @@ urlpatterns = [
     path('password-reset-confirm/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'),name='password_reset_confirm'),
     path('password-reset-complete/',auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),name='password_reset_complete'),
     path('', include('Raul.urls')),
+    path('s/', views.search, name='search'),
+    #path('s/', auth_views.resultsView.as_view(template_name='users/results.html'), name='search'),
 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
