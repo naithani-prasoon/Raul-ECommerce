@@ -21,7 +21,7 @@
         {% for product in products %}
         <div class="col-md-4 product-grid">
             <div class="image">
-                <a href="#">
+                <a href="{% url 'Raul-single' product.slug %}" >
                     <img src="{{ product.image.url }}" class="w-100">
                     <div class="overlay">
                         <div class="detail">{{product.description}}</div>

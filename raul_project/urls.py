@@ -25,10 +25,11 @@ from Raul import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('category/<str:cats>/', views.CategoryView,name='cat-view'),
+    path('category/<str:cats>/<str:slug>', views.CategoryView,name='cat-view'),
     path('register/', user_views.register, name='register'),
-    path('products/', user_views.products, name='products'),
     path('profile/', user_views.profile, name='profile'),
     path('product/', views.products, name='Raul-product'),
+    path('product/<str:slug>/', views.singleView, name='Raul-single'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('password-reset/',auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
