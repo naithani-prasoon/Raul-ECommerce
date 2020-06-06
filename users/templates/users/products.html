@@ -1,65 +1,41 @@
-<main class="container">
-
-    <!-- Left Column / Headphones Image -->
-    <div class="left-column">
-        <img data-image="black" src="images/black.png" alt="">
-        <img data-image="blue" src="images/blue.png" alt="">
-        <img data-image="red" class="active" src="images/red.png" alt="">
+<div class="images">
+    {if #product.primaryImages.medium}
+    <div id="product-img">
+        {if #product.primaryImages.large}
+        <a href="{#product.primaryImages.large.srcValue}" rel="lightbox[slides]" title="{#product.productName}">
+            {#product.primaryImages.medium.tag}
+        </a>
+        <div id="product-img-zoom">
+            <a href="{#product.primaryImages.large.srcValue}" rel="lightbox" title="{#product.productName}">
+                Click to view larger
+            </a>
+        </div>
+        {else}
+        {#product.primaryImages.medium.tag}
+        {/if}
     </div>
-
-
-    <!-- Right Column -->
-    <div class="right-column">
-
-        <!-- Product Description -->
-        <div class="product-description">
-            <span>Headphones</span>
-            <h1>Beats EP</h1>
-            <p>The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance</p>
-        </div>
-
-        <!-- Product Configuration -->
-        <div class="product-configuration">
-
-            <!-- Product Color -->
-            <div class="product-color">
-                <span>Color</span>
-
-                <div class="color-choose">
-                    <div>
-                        <input data-image="red" type="radio" id="red" name="color" value="red" checked>
-                        <label for="red"><span></span></label>
-                    </div>
-                    <div>
-                        <input data-image="blue" type="radio" id="blue" name="color" value="blue">
-                        <label for="blue"><span></span></label>
-                    </div>
-                    <div>
-                        <input data-image="black" type="radio" id="black" name="color" value="black">
-                        <label for="black"><span></span></label>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Cable Configuration -->
-            <div class="cable-config">
-                <span>Cable configuration</span>
-
-                <div class="cable-choose">
-                    <button>Straight</button>
-                    <button>Coiled</button>
-                    <button>Long-coiled</button>
-                </div>
-
-                <a href="#">How to configurate your headphones</a>
-            </div>
-        </div>
-
-        <!-- Product Pricing -->
-        <div class="product-price">
-            <span>148$</span>
-            <a href="#" class="cart-btn">Add to cart</a>
-        </div>
+    <div class="additional-images">
+        {loop items="#product.additionalImages" value="images"}
+        <a href="{#images.imageSet.largeImage.srcValue}" rel="lightbox[slides]" title="{#product.productName}">
+            <img src="{#images.imageSet.smallImage.srcValue}" />
+        </a>
+        {/loop}
     </div>
-</main>
+    {/if}
+</div>
+<div id="product-details">
+    <h1>{#product.productName}</h1>
+    <p>{#product.subcaption}</p>
+    {#product.orderForm.tag.open}
+    <div id="product-price">
+        {if #product.orderingOptionsChangePrice}Starting at {/if}
+        {#product.currentPrice.value}
+        {if #product.pricePerUnit exists && #product.pricePerUnit != "None"} / {#product.pricePerUnit}{/if}
+    </div>
+    {#product.orderForm.fields.quantity.tag}
+    {#product.orderForm.fields.partialQuantity.tag}
+    <input type="submit" name="submit" value="Add to Cart" />
+    {#product.orderForm.tag.close}
+    {#product.description}
+    <b>SKU: {#product.sku}</b>
+</div>
