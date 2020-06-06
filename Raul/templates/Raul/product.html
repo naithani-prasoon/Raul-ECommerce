@@ -1,161 +1,46 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-    <!-- Zoom Effect-->
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .zoom {
-            transition: transform .2s;
-            margin: 0 auto;
-        }
-
-        .zoom:hover {
-            -ms-transform: scale(1.1); /* IE 9 */
-            -webkit-transform: scale(1.1); /* Safari 3-8 */
-            transform: scale(1.1);
-        }
-
-        .container_Hover {
-            position: relative;
-            width: 50%;
-        }
-
-        .image_Hover {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .overlay_image {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-
-        }
-
-        .container_Hover:hover .overlay_image {
-            opacity: 1;
-        }
-
-        .Hovertext {
-            color: black;
-            font-size: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-
-    </style>
-    <!-- Header Nav Bar-->
-    <title>Raul Retail</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/design.css' %}">    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Bootstrap Product Grid</title>
+    <!-- Bootstrap css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+
+<!-- Style css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul/style.css' %}">
+</head>
+
 <body>
 
-<!-- Header Nav Bar-->
-<header class="header-area overlay">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container">
-            <a href="{% url 'Raul-Home' %}" class="navbar-brand">R A Ù L</a>
-            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-            </button>
+<div class="container">
+    <h1 class="text-center">RAUL</h1>
+    <hr>
 
-            <div id="main-nav" class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link active">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-item nav-link" data-toggle="dropdown">Store</a>
-                        <div class="dropdown-menu">
-                            <a href="{% url 'Raul-SecondHome' %}" class="dropdown-item">Second Homepage</a>
-                            <a href="{% url 'cat-view' 'Plates' %}" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                        </div>
-                        {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a></li>
-                    <li><a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></li>
-                    {% else %}
-                    <li><a href="{% url 'register' %}" class="nav-item nav-link">Register</a></li>
-                    <li><a href="{% url 'login' %}" class="nav-item nav-link">Login</a></li>
-                    <li><a href="#" class="nav-item nav-link">Cart</a></li>
-                    {% endif %}
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="banner">
-        <div class="container" id ="test">
-            <h1>  R A U L </h1>
-        </div>
-    </div>
-</header>
-
-
-<!-- Begin of Shopping Section-->
-
-<main>
-
-    <!-- Shop Text-->
-    <div class  = "container-fluid" id = "Shop">
-        <div class = "d-flex justify-content-center">
-            <display1> S H O P </display1>
-        </div>
-    </div>
-
-    <!-- First Row of Pictures-->
-    <section id="2nd Row" class="content">
-        <div data-aos = "fade-in" class="container">
-            <div class="row">
-                {% for product in products %}
-                <!-- Picture with Zoom effect and Hover -->
-                <div class="col-md-4">
-                    <div class ="zoom">
-                        <img src= "{{ product.image.url }}" width="380" height="640" class = "img-fluid" alt = " Raul" height="183">
-                        <div class="middle5">
-                            <div class="text">{{product.price}}</div>
-                        </div>
+    <div class="row">
+        <!-- Product  -->
+        {% for product in products %}
+        <div class="col-md-4 product-grid">
+            <div class="image">
+                <a href="#">
+                    <img src="{{ product.image.url }}" class="w-100">
+                    <div class="overlay">
+                        <div class="detail">{{product.description}}</div>
                     </div>
-                </div>
-                {% endfor %}
+                </a>
             </div>
+            <h5 class="text-center">{{product.title}}</h5>
+            <h5 class="text-center">Price: ${{product.price}}</h5>
+            <a href="#" class="btn buy">BUY</a>
         </div>
-    </section>
-</main>
+        {% endfor %}
+        <!-- ./Product -->
 
+        <!-- ./Product -->
 
-<!-- 3rd Row of Pictures -->
-<main>
-</main>
+    </div>
 
+</div>
 
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -164,4 +49,5 @@
     AOS.init();
 </script>
 </body>
+
 </html>
