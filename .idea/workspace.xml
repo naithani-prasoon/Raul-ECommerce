@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -140,7 +133,7 @@
       <workItem from="1591120429969" duration="2439000" />
       <workItem from="1591127247261" duration="1333000" />
       <workItem from="1591150595377" duration="729000" />
-      <workItem from="1591456604475" duration="6853000" />
+      <workItem from="1591456604475" duration="7626000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -212,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591412086458</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="started search bar">
+      <created>1591463941544</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1591463941544</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +239,8 @@
     <MESSAGE value="product grid" />
     <MESSAGE value="product grid 2" />
     <MESSAGE value="product grid 3 looks okay" />
-    <option name="LAST_COMMIT_MESSAGE" value="product grid 3 looks okay" />
+    <MESSAGE value="started search bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="started search bar" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">
