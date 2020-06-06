@@ -20,6 +20,7 @@ from django.urls import path,include
 from users import views as user_views
 from raul_project import settings
 from Raul import views
+from carts import views as cart_views
 
 
 urlpatterns = [
@@ -37,7 +38,12 @@ urlpatterns = [
     path('password-reset-complete/',auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),name='password_reset_complete'),
     path('', include('Raul.urls')),
     path('s/', views.search, name='search'),
-    #path('s/', auth_views.resultsView.as_view(template_name='users/results.html'), name='search'),
+    path('cart/<str:slug>/', cart_views.update_cart, name='update_cart'),
+    path('cart/', cart_views.view, name='cart'),
+
+
+
+                  #path('s/', auth_views.resultsView.as_view(template_name='users/results.html'), name='search'),
 
 
 
