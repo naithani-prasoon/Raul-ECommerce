@@ -21,7 +21,7 @@
 
     {% for item in cart.products.all %}
 
-<tr><td> {{item}}</td> <td> {{item.price}}</td></tr>
+<tr><td> {{item}}</td> <td> {{item.price}}</td><td></td><a href="{% url 'update_cart' item.slug %}">Remove </tr>
 
     {% endfor %}
 

@@ -27,6 +27,13 @@ def update_cart(request,slug):
     else:
         cart.products.remove(producter)
 
+    new_total = 0.00
+    for item in cart.products.all():
+        new_total += float(item.price)
+
+    cart.total = new_total
+    cart.save()
+
     return HttpResponseRedirect(reverse("cart"))
 
 
