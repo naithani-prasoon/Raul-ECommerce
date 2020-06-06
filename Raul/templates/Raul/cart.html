@@ -2,6 +2,14 @@
 
 {% block content %}
 
+{% if empty %}
+
+<h1 style= 'text-align:center;'>
+    {{ empty_message}}
+</h1>
+
+{% else %}
+
 
 <div class='col-sm-8 col-sm-offset-2'>
 
@@ -28,5 +36,6 @@
 </table>
 
 </div>
+{% endif %}
 
 {% endblock %}
