@@ -3,9 +3,13 @@
 
 <h1>Searched for {{query}}</h1>
 
-{{ products }}
+{% for prod in query  %}
+    {{ prod.price }}
 
-{{pro}}
+
+
+    {% endfor %}
+
 
 
 {% endblock %}}
