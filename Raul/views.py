@@ -14,7 +14,7 @@ def search(request):
     if q:
         products= product.objects.filter(title__icontains=q)
         pro=product.price
-        context = {'query': q , 'products': products, "price": pro}
+        context = {'query': q , 'products': products, "price" : pro}
         template = 'Raul/results.html'
     else:
         context = {}
