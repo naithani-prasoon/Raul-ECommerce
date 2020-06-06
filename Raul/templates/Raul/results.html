@@ -1,0 +1,15 @@
+{% extends "Raul/base.html" %}
+{% block content %}
+
+<h1>Searched for {{query}}</h1>
+
+{% for prod in query  %}
+    {{ prod.price }}
+
+
+
+    {% endfor %}
+
+
+
+{% endblock %}}
