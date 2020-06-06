@@ -227,10 +227,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="53" key="CommitChangelistDialog2" timestamp="1591412085808">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="331" y="51" key="CommitChangelistDialog2" timestamp="1591414336005">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591407327778" />
+    <state x="331" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1591414336005" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
