@@ -22,6 +22,6 @@ def profile(request):
     return render(request, 'users/profile.html')
 
 def products(request):
-    return render(request, 'users/products.html')
+    return render(request, 'product_grid/index.html.html')
 
 # Create your views here.
