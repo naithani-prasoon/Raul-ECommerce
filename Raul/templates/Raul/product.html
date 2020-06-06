@@ -30,7 +30,7 @@
             </div>
             <h5 class="text-center">{{product.title}}</h5>
             <h5 class="text-center">Price: ${{product.price}}</h5>
-            <a href="#" class="btn buy">BUY</a>
+            <a href="{% url 'update_cart' product.slug %}" class="btn buy">BUY</a>
         </div>
         {% endfor %}
         <!-- ./Product -->
