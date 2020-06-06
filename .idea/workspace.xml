@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/Art1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static.Raul/Images/Art1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/candle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/flow.png" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static.Raul/Images/flow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/floweeer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/myflower.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/plates.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/table.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/images/vase.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_grid/js/bootstrap.min.js" beforeDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,12 +88,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul/static.Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
+      <recent name="$PROJECT_DIR$/Raul/templates/Raul" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Raul" />
-      <recent name="$PROJECT_DIR$/product_grid/images" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.product.html">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/templates/Raul/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -88,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.product.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.landing.html" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
         <item itemvalue="JavaScript Debug.products.html" />
@@ -164,7 +189,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591404591579</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="product grid">
+      <created>1591407162928</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1591407162928</updated>
+    </task>
+    <task id="LOCAL-00009" summary="product grid 2">
+      <created>1591407328225</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1591407328225</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +228,8 @@
     <MESSAGE value="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <MESSAGE value="no" />
     <MESSAGE value="product grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="product grid" />
+    <MESSAGE value="product grid 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="product grid 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">
@@ -200,10 +240,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="54" key="CommitChangelistDialog2" timestamp="1591407162631">
+    <state x="331" y="54" key="CommitChangelistDialog2" timestamp="1591407327778">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591407162631" />
+    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591407327778" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -233,10 +273,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="23" width="1024" height="822" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591069631229" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1591404600344">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1591407345054">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1591404600344" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1591407345054" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591407137868">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
