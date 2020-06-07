@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,18 +68,33 @@
     <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/Raul/static.Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/Raul/templates/Raul" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Raul" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
-    </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.shopping-cart.html">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.single_product.html">
+    <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/templates/Raul/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/product_grid/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -86,19 +104,16 @@
     <configuration name="product.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/templates/Raul/product.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="shopping-cart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/shopping-cart/shopping-cart.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="single_product.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/templates/Raul/single_product.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.shopping-cart.html" />
         <item itemvalue="JavaScript Debug.single_product.html" />
         <item itemvalue="JavaScript Debug.product.html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.landing.html" />
+        <item itemvalue="JavaScript Debug.index.html (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +135,7 @@
       <workItem from="1591120429969" duration="2439000" />
       <workItem from="1591127247261" duration="1333000" />
       <workItem from="1591150595377" duration="729000" />
-      <workItem from="1591456604475" duration="13617000" />
+      <workItem from="1591456604475" duration="17698000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -213,7 +228,28 @@
       <option name="project" value="LOCAL" />
       <updated>1591465710129</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="can add and remove from cart">
+      <created>1591478184167</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1591478184167</updated>
+    </task>
+    <task id="LOCAL-00015" summary="can add and remove from cart 2">
+      <created>1591479023625</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1591479023625</updated>
+    </task>
+    <task id="LOCAL-00016" summary="can add and remove from cart 3">
+      <created>1591480509086</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1591480509086</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,8 +277,10 @@
     <MESSAGE value="product grid 2" />
     <MESSAGE value="product grid 3 looks okay" />
     <MESSAGE value="started search bar" />
-    <MESSAGE value="st" />
-    <option name="LAST_COMMIT_MESSAGE" value="st" />
+    <MESSAGE value="can add and remove from cart" />
+    <MESSAGE value="can add and remove from cart 2" />
+    <MESSAGE value="can add and remove from cart 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="can add and remove from cart 3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">
