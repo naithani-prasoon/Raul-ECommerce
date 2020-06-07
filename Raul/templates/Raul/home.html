@@ -19,10 +19,24 @@
 <header>
     <figure>
         <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%">
-        <a href="#"><p> Home </p></a>
-        <a href="#"><p> Store </p></a>
-        <a href="{% url 'register' %}"><p> Contact </p></a>
-        <a href="#"> <p>Login </p></a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+        <a href="{% url 'Raul-product' %}"><p> Store </p></a>
+<!--        <a href="{% url 'register' %}"><p> Register </p></a>-->
+        <a href="{% url 'logout' %}"> <p>Logout </p></a>
+        <a href="{% url 'cart' %}"> <p>Cart </p></a>
+
+
+        {% else %}
+        <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+        <a href="{% url 'Raul-product' %}"><p> Store </p></a>
+        <a href="{% url 'register' %}"><p> Register </p></a>
+        <a href="{% url 'login' %}"> <p>Login </p></a>
+        <a href="{% url 'cart' %}"> <p>Cart </p></a>
+
+
+        {% endif %}
+
 
         <div class ="loginSlide" id="login">
             <div class="loginText">
@@ -50,7 +64,9 @@
             </div>
         </div>
 
+<!--
         <a href ="#"><p> Cart </p></a>
+-->
     </figure>
 
     <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"></figcaption>
@@ -69,14 +85,15 @@
                 <a href="#">Store</a>
             </li>
             <li>
-                <a href="{% url 'register' %}">Contact</a>
+                <a href="{% url 'register' %}">Register</a>
             </li>
             <li>
                 <a href="{% url 'register' %}">Login</a>
             </li>
             <li>
-                <a href="#">Cart</a>
+                <a href="{% url 'cart' %}">Cart</a>
             </li>
+
 
 
         </ul>

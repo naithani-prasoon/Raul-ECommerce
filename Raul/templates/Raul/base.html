@@ -70,60 +70,60 @@
 <body>
 
 <!-- Header Nav Bar-->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container">
-            <a href="{% url 'Raul-Home' %}" class="navbar-brand"><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="8%"></a>
-            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-                <span class="menu-icon-bar"></span>
-            </button>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="container">
+        <a href="{% url 'Raul-Home' %}" class="navbar-brand"><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="8%"></a>
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+        </button>
 
-            <div id="main-nav" class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link">Home</a></li>
-                    <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link">Home2</a></li>
-                    <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link">Home3</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="nav-item nav-link" data-toggle="dropdown">Store</a>
-                        <div class="dropdown-menu">
-                            <a href="{% url 'Raul-SecondHome' %}" class="dropdown-item">Second Homepage</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                        </div>
-                        {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a></li>
-                    <li><a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></li>
-                    {% else %}
-                    <li><a href="{% url 'register' %}" class="nav-item nav-link">Register</a></li>
-                    <li><a href="{% url 'login' %}" class="nav-item nav-link">Login</a></li>
-                    <li><a href="#" class="nav-item nav-link">Cart</a></li>
-                    {% endif %}
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                    </form>
+        <div id="main-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link">Home</a></li>
+                <li><a href="{% url 'Raul-SecondHome' %}" class="nav-item nav-link">Other Home Page</a></li>
+                <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link">Home3</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-item nav-link" data-toggle="dropdown">Store</a>
+                    <div class="dropdown-menu">
+                        <a href="{% url 'Raul-SecondHome' %}" class="dropdown-item">Second Homepage</a>
+                        <a href="#" class="dropdown-item">Blah</a>
+                        <a href="#" class="dropdown-item">Blah</a>
+                        <a href="#" class="dropdown-item">Blah</a>
+                        <a href="#" class="dropdown-item">Blah</a>
+                    </div>
+                    {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a></li>
+                <li><a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'register' %}" class="nav-item nav-link">Register</a></li>
+                <li><a href="{% url 'login' %}" class="nav-item nav-link">Login</a></li>
+                <li><a href="#" class="nav-item nav-link">Cart</a></li>
+                {% endif %}
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
 
-                </ul>
-            </div>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
 <div class="container">
-<div class = "container1">
-    {% block content %}{% endblock %}
-</div>
+    <div class = "container1">
+        {% block content %}{% endblock %}
+    </div>
 </div>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
