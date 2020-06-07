@@ -22,11 +22,12 @@
         {% if user.is_authenticated %}
         <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
         <a href="{% url 'Raul-product' %}"><p> Store </p></a>
+<!--        <a href="{% url 'register' %}"><p> Register </p></a>-->
         <a href="{% url 'logout' %}"> <p>Logout </p></a>
         <a href="{% url 'cart' %}"> <p>Cart </p></a>
 
 
-        {% else %}  
+        {% else %}
         <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
         <a href="{% url 'Raul-product' %}"><p> Store </p></a>
         <a href="{% url 'register' %}"><p> Register </p></a>
@@ -62,6 +63,10 @@
                 <a>Forgot Password?</a>
             </div>
         </div>
+
+<!--
+        <a href ="#"><p> Cart </p></a>
+-->
     </figure>
 
     <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"></figcaption>
@@ -110,7 +115,7 @@
                 </div>
                     <span>FURNITURE</span>
                 <div class = "linksShop">
-                    | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |                
+                    <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |                
                 </div>
             </div>
 
@@ -205,7 +210,7 @@
                 <div class="shopNow">
                     SHOP NOW
                 </div>
-                    WALLART
+                    <span>WALLART</span>
                 <div class = "linksShop">
                     | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
@@ -229,9 +234,9 @@
                 <div class="shopNow">
                     SHOP NOW
                 </div>
-                    <span>DECORATIVE ACCESSORIES</span>
+                    <span>DECORATIVE</span>
                 <div class = "linksShop">
-                    | <a href="#">FLORAL</a> | <a href="#">TABLE TOP</a> | <a href="#">LIGHTING</a> | <a href="#">WALL ART</a> | <a href ="#">FURNITURE</a> |
+                    | <a href="#">FLORAL</a> | <a href="#">TABLE TOP</a> | <a href="#">LIGHTING</a> | <a href="#">WALL ART</a> | <a href ="#">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 
@@ -245,10 +250,6 @@
                 <img src="{% static 'Raul/Images/6.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
             </div>
         </div>
-    </div>
-
-    <div class="contact" id="Contact">
-        
     </div>
 
 <footer>
