@@ -5,9 +5,9 @@ html,body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-snap-type: mandatory;
+    /*scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory; */
 }
 
 a{
@@ -264,59 +264,6 @@ nav ul li a:hover{
     width:60px;
 }
 
-/*.shopImage{
-    background-color: whitesmoke;
-    display: flex;
-    flex-wrap: nowrap;
-    grid-template-columns: 50% 50%;
-    overflow-x: auto;
-}
-
-.shopImage::-webkit-scrollbar{
-    display: none;
-} 
-
-.organizer {
-    cursor: pointer;
-    flex: 0 0 auto;
-}
-
-.textInfo{
-    font-family: 'Poppins', sans-serif;
-    background-color: rgba(0,0,0,0.85);
-    color:white;  
-}
-
-.staticImage {
-    opacity: 1;
-    display: block;
-    width:100%;
-    height: auto;
-    backface-visibility: hidden;
-    transition: 0.3s  ease-in-out; 
-}
-
-.textMiddle{
-    transition: 0.3s ease-in-out;
-    opacity: 0;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(50%,50%);
-    text-align: center;
-    position: absolute;
-}
-
-.organizer:hover .staticImage {
-    filter: grayscale(100%) blur(1px);
-    
-}
-
-.organizer:hover .textMiddle{
-    opacity: 1;
-}
-
-.shopHeading figcaption {
-    font-family: 'Roboto Condensed', sans-serif;
-}*/
 
 /* Scroll Bar*/
 ::-webkit-scrollbar {
@@ -774,7 +721,7 @@ nav ul li a:hover{
     figure{
         margin: 0px;
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
         height: 4em;
     }
 
@@ -822,113 +769,9 @@ nav ul li a:hover{
         font-weight:700;
     }
 
-    #loginText{
-        cursor: pointer;
-    }
-    
-    .loginText{
-        margin:auto;
-        width: 35em;
-        height: 35em;
-        background-color: #2E1114;
-    }
-
-    .loginText p{
-        font-size: 4em;
-        font-weight: bolder;
-        padding: 5%;
-    }
-
-    .loginText input[type=email]{
-        font-size: 1.7em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .loginText input[type=password]{
-        font-size: 1.7em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-       
-    }
-
-    .loginText input[type=submit]{
-        font-size: 1.3em;
-        padding:0.5em;
-        width: 60%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .loginText label{
-        font-size: 1em;
-        padding:18%;
-    }
-
-    .loginText a{
-        font-size: 1em;
-    }
-
-    .signUp{
-        margin:auto;
-        width: 35em;
-        height: 35em;
-        background-color: #2E1114;
-    }
-
-    .signUp p{
-        font-size: 4em;
-        font-weight: bolder;
-        padding: 5%;
-    }
-
-    .signUp input[type=email]{
-        font-size: 1.7em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .signUp input[type=password]{
-        font-size: 1.7em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-       
-    }
-
-    .signUp input[type=submit]{
-        font-size: 1.3em;
-        padding:0.5em;
-        width: 60%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .signUp label{
-        font-size: 1em;
-        padding:18%;
-    }
-
-    .signUp a{
-        font-size: 1em;
-    }
-
-    #arrow{
-        width:70px;
-        transition: 0.5s ease-in-out;
-    }
-
-    .arrow{
-        margin:auto;
-    }
-
     .furniture{
         height:100vh;
         width:100%;
-        scroll-snap-align: start;
         background-color: white;
     }
 
@@ -946,13 +789,8 @@ nav ul li a:hover{
         font-family: 'Roboto Condensed';
         margin:20% .5em;
         color: white;
-        opacity: 0.9;
+        opacity: 1;
     }
-
-    /* .furnitureHeading span{
-        -webkit-text-stroke: 4px;
-        -webkit-text-fill-color: transparent;
-    } */
 
     .linksShop{
         font-size:0.1em;
@@ -1069,47 +907,21 @@ nav ul li a:hover{
         letter-spacing: 0.04em;
     }
 
-    
-    
+    #wall .furnitureHeading{
+        letter-spacing: 0.1em;
+    }
 
-/*.shopImage{
+    #decorative .furnitureHeading{
+        margin:15% 0.4em;
+        font-size: 8em;
+    }
+
+    .contact{
         height: 100vh;
-        
-    }
-
-    .organizer{
-        margin:14% 0% 4% 4%;
-        height: 60%;
-        width:20%;    
-        transition: 0.5s ease-in-out; 
-    }
-
-    .organizer:hover{
-        width: 21%;
-    }
-
-    .shopHeading {        
-        margin: 0% 0% 2% 2%;
-    }
-
-    .shopHeading figcaption{
-        text-align: right;
-        font-size: 15em;
         width:100%;
+        background-color: white;
     }
 
-    .textInfo{
-        width:60%;
-        padding: 16px 32px 16px 32px;
-        font-size: 1.5em;
-        font-family: 'Roboto';
-    }
-
-    .textMiddle{
-        top:50%;
-        left:50%;
-    }*/
-          
 }
 
 

@@ -1,4 +1,6 @@
+<!--
 {% extends "Raul/base.html" %}
+-->
 {% block content %}
 {% load crispy_forms_tags %}
 
@@ -12,7 +14,7 @@
             {{ form|crispy }}
         </fieldset>
         <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Login</button>
+            <button class="btn btn-outline-info" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
             <small class="text-muted ml-2">
                 <a href="{% url 'password_reset' %}">Forgot Password?</a>
             </small>
