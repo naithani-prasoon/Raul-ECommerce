@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.urls import reverse
-from .models import CartItem, Cart
+from .models import CartItem
 
 
 # Create your views here.
