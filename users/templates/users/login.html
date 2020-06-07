@@ -1,10 +1,61 @@
 <!--
 {% extends "Raul/base.html" %}
 -->
-{% block content %}
-{% load crispy_forms_tags %}
+<!--{% block content %}
+{% load crispy_forms_tags %}-->
 
 
+
+
+<figure>
+    {% if user.is_authenticated %}
+    <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+    <a href="{% url 'Raul-product' %}"><p> Store </p></a>
+    <!--        <a href="{% url 'register' %}"><p> Register </p></a>-->
+    <a href="{% url 'logout' %}"> <p>Logout </p></a>
+    <a href="{% url 'cart' %}"> <p>Cart </p></a>
+
+
+    {% else %}
+    <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+    <a href="{% url 'Raul-product' %}"><p> Store </p></a>
+    <a href="{% url 'register' %}"><p> Register </p></a>
+    <a href="{% url 'login' %}"> <p>Login </p></a>
+    <a href="{% url 'cart' %}"> <p>Cart </p></a>
+
+
+    {% endif %}
+
+
+    <div class ="loginSlide" id="login">
+        <div class="loginText">
+            <p>L O G I N</p>
+            <input type="email" placeholder="Email ID">
+            <input type="password" placeholder="Password">
+            <input type="submit" placeholder="Login">
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember Me
+            </label>
+            <a>Forgot Password?</a>
+        </div>
+        <div class ="arrow">
+        </div>
+        <div class="signUp">
+            <p> S I G N - U P </p>
+            <input type="email" placeholder="Email ID">
+            <input type="password" placeholder="Password">
+            <input type="submit" placeholder="Login">
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember Me
+            </label>
+            <a>Forgot Password?</a>
+        </div>
+    </div>
+
+    <!--
+            <a href ="#"><p> Cart </p></a>
+    -->
+</figure>
 
 <div class="content-section">
     <form method="POST">
@@ -26,5 +77,4 @@
         </small>
     </div>
 </div>
-{% endblock %}
-
+<!--{% endblock %}-->
