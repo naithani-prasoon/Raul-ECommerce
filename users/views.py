@@ -4,6 +4,10 @@ from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 
 
+
+
+
+
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -21,5 +25,22 @@ def register(request):
 def profile(request):
     return render(request, 'users/profile.html')
 
+def products(request):
+    return render(request, 'product_grid/index.html.html')
+
+
+# def search(request):
+#     try:
+#         q= request.GET.get('q')
+#     except:
+#         q= None
+#     if q:
+#         products= products.objects.filter(title__icontains=q)
+#         context = {'query':q , 'products':products}
+#         template = 'Raul/results.html'
+#     else:
+#         context = {}
+#         template ='Raul/product.html'
+#     return render(request, template, context)
 
 # Create your views here.

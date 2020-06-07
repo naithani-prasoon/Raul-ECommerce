@@ -88,19 +88,24 @@
                         <a href="#" class="nav-item nav-link" data-toggle="dropdown">Store</a>
                         <div class="dropdown-menu">
                             <a href="{% url 'Raul-SecondHome' %}" class="dropdown-item">Second Homepage</a>
-                            <a href="#" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
+                            <a href="{% url 'cat-view' 'Plates' %}" class="dropdown-item">Blah</a>
                             <a href="#" class="dropdown-item">Blah</a>
                             <a href="#" class="dropdown-item">Blah</a>
                         </div>
                         {% if user.is_authenticated %}
+                      <li><a href="{% url 'cart' %}" class="nav-item nav-link">Cart <span class="badge badge-light">{{ request.session.items_total }}</span> </a>
                     <li><a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a></li>
                     <li><a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></li>
                     {% else %}
+                    <li><a href="{% url 'cart' %}" class="nav-item nav-link">Cart <span class="badge badge-light">{{ request.session.items_total }}</span></a>
                     <li><a href="{% url 'register' %}" class="nav-item nav-link">Register</a></li>
                     <li><a href="{% url 'login' %}" class="nav-item nav-link">Login</a></li>
-                    <li><a href="#" class="nav-item nav-link">Cart</a></li>
                     {% endif %}
+
+                    <form class="form-inline my-2 my-lg-0" role="search" action='/s/'>
+                        <input class="form-control mr-sm-2" type="search" name= 'q' placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</form>
 
                 </ul>
             </div>
