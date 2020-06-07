@@ -79,54 +79,160 @@
 
         </ul>
     </nav>
+    <div class ="bannerHead" id = "mainBanner">
+        <video src="{% static 'Raul/Images/bgFinal.mp4' %}" autoplay loop muted id = "videoBG"></video>
+        <div class = "bannerHeading">
+            <figcaption> The perfect arrangment for you. </figcaption>
+        </div>
+        
+    </div>
+    <div class="furniture" id ="FurnitureSec">
+        <div class="shopBack">
+            <div class="furnitureHeading">                
+                <div class="shopNow">
+                    SHOP NOW
+                </div>
+                    <span>FURNITURE</span>
+                <div class = "linksShop">
+                    | <a href="{% templates 'Raul/home' %}#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
+                </div>
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <div class="textMiddle">
+                    <div class="textInfo">
+                        SHOP.
+                    </div>
+                </div>
+
+                <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="LightingSec">
+        <div class="shopBack" id="lighting">
+            <div class="furnitureHeading">
+                <div class="shopNow">
+                    SHOP NOW
+                </div>
+                    <span id="Lighting">LIGHTING</span>
+                <div class = "linksShop">
+                    | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
+                </div>
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="Images/1.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+                <div class="textMiddle">
+                    <div class="textInfo">
+                        SHOP.
+                    </div>
+                </div>
+                <img src="Images/7.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="FlowerSec">
+        <div class="shopBack" id="flower">
+            <div class="furnitureHeading">
+                <div class="shopNow">
+                    SHOP NOW
+                </div>
+                    <span id= "Floral">FLORAL</span>
+                <div class = "linksShop">
+                    | <a href="#LightingSec">LIGHTING</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
+                </div>
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="Images/9.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+                <div class="textMiddle">
+                    <div class="textInfo">
+                        SHOP.
+                    </div>
+                </div>
+                <img src="Images/8.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="TableSec">
+        <div class="shopBack" id="table">
+            <div class="furnitureHeading">
+                <div class="shopNow">
+                    SHOP NOW
+                </div>
+                <span>TABLETOP</span>
+                <div class = "linksShop">
+                    | <a href="#FlowerSec">FLORAL</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
+                </div>
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="Images/3.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+                <div class="textMiddle">
+                    <div class="textInfo">
+                        SHOP.
+                    </div>
+                </div>
+                <img src="Images/10.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="WallSec">
+        <div class="shopBack" id="wall">
+            <div class="furnitureHeading">
+                <div class="shopNow">
+                    SHOP NOW
+                </div>
+                    <span>WALLART</span>
+                <div class = "linksShop">
+                    | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
+                </div>
+            </div>
+
+            <div class ="furnitureImages" id ="DecorativeSec">
+                <img src="Images/2.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+                <div class="textMiddle">
+                    <div class="textInfo">
+                        SHOP.
+                    </div>
+                </div>
+                <img src="Images/11.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="DecorativeSec">
+        <div class="shopBack" id="decorative">
+            <div class="furnitureHeading">                
+                <div class="shopNow">
+                    SHOP NOW
+                </div>
+                    <span>DECORATIVE</span>
+                <div class = "linksShop">
+                    | <a href="#">FLORAL</a> | <a href="#">TABLE TOP</a> | <a href="#">LIGHTING</a> | <a href="#">WALL ART</a> | <a href ="#">DECORATIVE ACCESSORIES</a> |
+                </div>
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="Images/5.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+                <div class="textMiddle">
+                    <div class="textInfo">
+                        SHOP.
+                    </div>
+                </div>
+                <img src="Images/6.jpg" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
 
 </header>
-<div class ="bannerHead" id = "mainBanner">
-    <div class = "bannerHeading">
-        <figcaption> R A Ù L </figcaption>
-    </div>
-</div>
-<div class="shopImage" id = "shop">
-    <div class="shopHeading">
-        <figcaption>SH OP</figcaption>
-    </div>
-    <div class="organizer">
-        <img draggable="false" alt="Organizer Photo" src="{% static 'Raul/Images/lighting_-_5_x_7_400x.jpg' %}" width="100%" class="staticImage">
-        <div class = "textMiddle">
-            <div class ="textInfo">Lighting</div>
-        </div>
-    </div>
-    <div class="organizer">
-        <img alt="Organizer Photo" src="{% static 'Raul/Images/2.jpg' %}" width= "100%" class="staticImage">
-        <div class = "textMiddle">
-            <div class ="textInfo">Wall Art</div>
-        </div>
-    </div>
-    <div class="organizer">
-        <img alt="Organizer Photo" src="{% static 'Raul/Images/3.jpg' %}" width="100%" class="staticImage">
-        <div class = "textMiddle">
-            <div class ="textInfo">Plates</div>
-        </div>
-    </div>
-    <div class="organizer">
-        <img alt="Organizer Photo" src="{% static 'Raul/Images/4.jpg' %}" width="100%" class="staticImage">
-        <div class = "textMiddle">
-            <div class ="textInfo">Damn Son</div>
-        </div>
-    </div>
-    <div class="organizer">
-        <img alt="Organizer Photo" src="{% static 'Raul/Images/5.jpg' %}" width="100%" class="staticImage">
-        <div class = "textMiddle">
-            <div class ="textInfo">Furniture</div>
-        </div>
-    </div>
-    <div class="organizer">
-        <img alt="Organizer Photo" src="{% static 'Raul/Images/1.jpg' %}" width="100%" class="staticImage">
-        <div class = "textMiddle">
-            <div class ="textInfo">Damn Son</div>
-        </div>
-    </div>
-</div>
+
 <footer>
 
 </footer>

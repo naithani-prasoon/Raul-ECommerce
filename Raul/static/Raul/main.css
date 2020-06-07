@@ -4,6 +4,10 @@ html,body{
     height:100%;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
 }
 
 a{
@@ -17,10 +21,16 @@ footer{
 header{
     position: fixed;
     width: 100%;
-    background-color:#2E1114;
-    color: white;
-    font-weight: 700;
+    transition: 0.4s ease-in-out;
+    top:0;
+    overflow: hidden;
     z-index: 1;
+    background-color: black;
+}
+
+figure{
+    background: transparent;
+    transition: ease-in-out;
 }
 
 figure a{
@@ -38,7 +48,7 @@ figure img{
 }
 
 .bannerHead{
-    background-image: url('Images/BannerTrial.jpeg');
+    background-image: url('BannerTrial.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -49,7 +59,6 @@ figure img{
 .bannerHeading figcaption{
     font-family: 'Roboto', serif; /*Change the font*/
     background-color: white;
-    opacity: 0.9;
 }
 
 .menuBar{
@@ -155,7 +164,7 @@ nav ul li a:hover{
     margin-left: auto;
     border: 2px solid white;
     font-weight: bold;
-
+    
 }
 
 .loginText input[type=submit]:hover{
@@ -230,7 +239,7 @@ nav ul li a:hover{
     margin-left: auto;
     border: 2px solid white;
     font-weight: bold;
-
+    
 }
 
 .signUp input[type=submit]:hover{
@@ -255,29 +264,27 @@ nav ul li a:hover{
     width:60px;
 }
 
-.shopImage{
-    scroll-behavior: smooth;
-    background-color: whitesmoke /*#501B1D*/;
+/*.shopImage{
+    background-color: whitesmoke;
     display: flex;
     flex-wrap: nowrap;
+    grid-template-columns: 50% 50%;
     overflow-x: auto;
-    overflow-y: hidden;
 }
 
 .shopImage::-webkit-scrollbar{
     display: none;
-}
+} 
 
 .organizer {
     cursor: pointer;
-    position: relative;
     flex: 0 0 auto;
 }
 
 .textInfo{
     font-family: 'Poppins', sans-serif;
     background-color: rgba(0,0,0,0.85);
-    color:white;
+    color:white;  
 }
 
 .staticImage {
@@ -286,7 +293,7 @@ nav ul li a:hover{
     width:100%;
     height: auto;
     backface-visibility: hidden;
-    transition: 0.3s  ease-in-out;
+    transition: 0.3s  ease-in-out; 
 }
 
 .textMiddle{
@@ -300,7 +307,7 @@ nav ul li a:hover{
 
 .organizer:hover .staticImage {
     filter: grayscale(100%) blur(1px);
-
+    
 }
 
 .organizer:hover .textMiddle{
@@ -308,34 +315,31 @@ nav ul li a:hover{
 }
 
 .shopHeading figcaption {
-    font-family: 'Roboto', serif; /*Change the font*/
-    background-color: black;
-    color: white;
-    opacity: 0.8;
-}
+    font-family: 'Roboto Condensed', sans-serif;
+}*/
 
 /* Scroll Bar*/
 ::-webkit-scrollbar {
-    width: 6px;
-    overflow: auto;
+	width: 6px;
+	overflow: auto;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius:20px;
-    overflow: auto;
+	background: #f1f1f1;
+	border-radius:20px;
+	overflow: auto;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #3D444A;
-    border-radius: 20px;
-    overflow: auto;
+	background: #3D444A; 
+	border-radius: 20px;
+	overflow: auto;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: grey;
-    cursor: pointer;
-    overflow: auto;
+	background: grey; 
+	cursor: pointer;
+	overflow: auto;
 }
 
 /* Fade-In Transition*/
@@ -385,7 +389,7 @@ nav ul li a:hover{
 }
 
 @media only screen and (max-width:640px){
-
+    
     header{
         display: grid;
         height: 3.5em;
@@ -396,13 +400,13 @@ nav ul li a:hover{
         width: 25px;
         margin-top: 30%;
     }
-
+    
     header figcaption img{
         margin-left: 2em;
         margin-top:0.2em;
         width:15%;
     }
-    
+
     nav ul li a{
         text-align: left;
         font-size: 1.5em;
@@ -425,14 +429,14 @@ nav ul li a:hover{
         display: none;
     }
 
-    .bannerHead{
-        height: 43em;
+    .bannerHead{    
+        height: 100vh;
     }
 
     .bannerHeading{
         padding-top: 12em;
         padding-left: 4em;
-
+        
     }
 
     .bannerHeading figcaption{
@@ -443,6 +447,14 @@ nav ul li a:hover{
     }
 
     .shopImage{
+        display: none;
+    }
+
+    .furniture{
+        display: none;
+    }
+
+    #videoBG{
         display: none;
     }
 }
@@ -459,7 +471,7 @@ nav ul li a:hover{
         width: 30px;
         margin-top: 15%;
     }
-
+    
     header figcaption img{
         margin-left: 2em;
         margin-top:0.2em;
@@ -484,14 +496,14 @@ nav ul li a:hover{
         display: none;
     }
 
-    .bannerHead{
-        height: 43em;
+    .bannerHead{    
+        height: 100vh;
     }
 
     .bannerHeading{
         padding-top: 12em;
         padding-left: 5em;
-
+        
     }
 
     .bannerHeading figcaption{
@@ -502,6 +514,14 @@ nav ul li a:hover{
     }
 
     .shopImage{
+        display: none;
+    }
+
+    .furniture{
+        display: none;
+    }
+
+    #videoBG{
         display: none;
     }
 }
@@ -518,7 +538,7 @@ nav ul li a:hover{
         width: 40px;
         margin-top: 15%;
     }
-
+    
     header figcaption img{
         margin-left: 2em;
         margin-bottom:0.5em;
@@ -543,14 +563,18 @@ nav ul li a:hover{
         display: none;
     }
 
-    .bannerHead{
-        height: 43em;
+    .bannerHead{    
+        height: 100vh;
+    }
+
+    #videoBG{
+        display: none;
     }
 
     .bannerHeading{
         padding-top: 12em;
         padding-left: 4em;
-
+        
     }
 
     .bannerHeading figcaption{
@@ -561,6 +585,10 @@ nav ul li a:hover{
     }
 
     .shopImage{
+        display: none;
+    }
+
+    .furniture{
         display: none;
     }
 }
@@ -594,27 +622,33 @@ nav ul li a:hover{
         width:7%;
     }
 
-    .bannerHead{
-        height: 43em;
-    }
-
-    .bannerHeading{
-        padding-top: 12em;
-        padding-left: 5em;
-
+    .bannerHead{    
+        height: 100vh;
+        width:100vw;
+        background:transparent;
+        overflow: hidden;
+        position: relative;
+        scroll-snap-align: start;
     }
 
     .bannerHeading figcaption{
-        font-size: 8em;
-        padding: 20px;
-        width:25%;
+        font-size: 3.5em;
+        background-color: transparent;
+        width:100%;
+        height:auto;
+        position: absolute;
+        top:50%;
+        left:0;
         text-align: center;
+        color:white;
+        font-family:'Roboto';
+        font-weight:700;
     }
 
     #loginText{
         cursor: pointer;
     }
-
+    
     .loginText{
         margin:auto;
         width: 28em;
@@ -640,7 +674,7 @@ nav ul li a:hover{
         padding:0.5em;
         margin-top: 5%;
         margin-bottom: 5%;
-
+       
     }
 
     .loginText input[type=submit]{
@@ -685,7 +719,7 @@ nav ul li a:hover{
         padding:0.5em;
         margin-top: 5%;
         margin-bottom: 5%;
-
+       
     }
 
     .signUp input[type=submit]{
@@ -714,7 +748,11 @@ nav ul li a:hover{
         margin:auto;
     }
 
-    .shopImage{
+    .furniture{
+        display: none;
+    }
+
+    #videoBG{
         display: none;
     }
 }
@@ -729,6 +767,10 @@ nav ul li a:hover{
         display: none;
     }
 
+    header{
+        background:white; /*Change to transparent*/
+    }
+
     figure{
         margin: 0px;
         display: grid;
@@ -738,6 +780,9 @@ nav ul li a:hover{
 
     figure a{
         margin-right: 2em;
+        color:black;
+        font-family: 'Roboto Condensed';
+        letter-spacing: 0.1em;
     }
     figure p{
         margin-right:20px;
@@ -747,27 +792,40 @@ nav ul li a:hover{
         padding:0px;
     }
 
-    .bannerHead{
-        height: 43em;
+    .bannerHead{    
+        height: 100vh;
+        width:100vw;
+        background:transparent;
+        overflow: hidden;
+        position: relative;
+        scroll-snap-align: start;
     }
 
-    .bannerHeading{
-        padding-top: 12em;
-        padding-left: 5em;
-
+    #videoBG{
+        z-index:-1;
+        opacity:0.9;
+        width:100%;
+        filter:brightness(60%);
     }
 
     .bannerHeading figcaption{
-        font-size: 10em;
-        padding: 20px;
-        width:25%;
+        font-size: 3.5em;
+        background-color: transparent;
+        width:100%;
+        height:auto;
+        position: absolute;
+        top:50%;
+        left:0;
         text-align: center;
+        color:white;
+        font-family:'Roboto';
+        font-weight:700;
     }
 
     #loginText{
         cursor: pointer;
     }
-
+    
     .loginText{
         margin:auto;
         width: 35em;
@@ -793,7 +851,7 @@ nav ul li a:hover{
         padding:0.5em;
         margin-top: 5%;
         margin-bottom: 5%;
-
+       
     }
 
     .loginText input[type=submit]{
@@ -838,7 +896,7 @@ nav ul li a:hover{
         padding:0.5em;
         margin-top: 5%;
         margin-bottom: 5%;
-
+       
     }
 
     .signUp input[type=submit]{
@@ -867,32 +925,177 @@ nav ul li a:hover{
         margin:auto;
     }
 
-    .shopImage{
-        height: 36em;
-        padding:2em;
+    .furniture{
+        height:100vh;
+        width:100%;
+        scroll-snap-align: start;
+        background-color: white;
+    }
+
+    .shopBack{
+        display: flex;
+        flex-wrap: nowrap;
+        margin:40px;
+        background-color: indianred;
+        width:95vw;
+        height:95vh;
+    }
+
+    .furnitureHeading{
+        font-size:9em;
+        font-family: 'Roboto Condensed';
+        margin:20% .5em;
+        color: white;
+        opacity: 0.9;
+    }
+
+    /* .furnitureHeading span{
+        -webkit-text-stroke: 4px;
+        -webkit-text-fill-color: transparent;
+    } */
+
+    .linksShop{
+        font-size:0.1em;
+        font-family:'Roboto';
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-align: center;
+        color: whitesmoke;
+        font-family: 'Roboto Condensed';
+    }
+
+    .linksShop a{
+        text-decoration: none;
+        color:whitesmoke;
+    }
+
+    .linksShop a:hover{
+        color: black;
+        font-family: 'Roboto Condensed';
+    }
+
+    .shopNow {
+        font-size:0.2em;
+        font-family:'Roboto';
+        letter-spacing: 2.2em;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .furnitureImages{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin:7% 0.5em;
+    }
+
+    .furnitureImages img{
+        padding:20px;
+        transition: 0.4s ease-in-out;
+        display: block;
+    }
+
+    .furnitureImages:hover .staticImage {
+        filter: grayscale(40%) blur(1px);
+    }
+    
+    .textMiddle{
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top:50%;
+        right:10%;
+        text-align: center; 
+        z-index: 1;
+    }
+
+    .textInfo{
+        width:80%;
+        padding: 16px 32px 16px 32px;
+        font-size: 5em;
+        font-family: 'Roboto Condensed';
+        background-color: white;
+        color:black;  
+        
+    }
+
+    .furnitureImages:hover .textMiddle{
+        opacity: 1;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px 1px black;
+    }
+
+    #Lighting{
+        letter-spacing: 0.1em;
+        color:black
+    }
+
+    #lighting .furnitureHeading .linksShop a{
+        color:black;
+    }
+
+    #lighting .furnitureHeading .linksShop a:hover{
+        color:darkred;
+    }
+
+    #lighting .furnitureHeading .linksShop{
+        color:black;
+    }
+
+    #lighting .shopNow{
+        color:black;
+    }
+
+    #lighting{
+        background-color: #ffccbc;
+    }
+
+    #Floral{
+        letter-spacing: 0.25em;
+    }
+
+    #flower{
+        background-color: #C96567;
+    }   
+
+    #table{
+        background-color: #86C232;
+    }
+
+    #table .shopNow{
+        letter-spacing: 2em;
+    }
+
+    #table .furnitureHeading span{
+        letter-spacing: 0.04em;
+    }
+
+    
+    
+
+/*.shopImage{
+        height: 100vh;
+        
     }
 
     .organizer{
-        height: 80%;
-        width:20%;
-        margin: 4%;
-        transition: 0.5s ease-in-out;
+        margin:14% 0% 4% 4%;
+        height: 60%;
+        width:20%;    
+        transition: 0.5s ease-in-out; 
     }
 
     .organizer:hover{
         width: 21%;
     }
 
-    .shopHeading {
-        margin: 8%;
+    .shopHeading {        
+        margin: 0% 0% 2% 2%;
     }
 
     .shopHeading figcaption{
-        font-size: 7em;
-        padding: 20px;
+        text-align: right;
+        font-size: 15em;
         width:100%;
-        text-align: center;
-        margin: 4%;
     }
 
     .textInfo{
@@ -905,8 +1108,8 @@ nav ul li a:hover{
     .textMiddle{
         top:50%;
         left:50%;
-    }
-
+    }*/
+          
 }
 
 
