@@ -1,5 +1,4 @@
 {% extends "Raul/base.html" %}
-
 {% block content %}
 
 {% if empty %}
@@ -27,9 +26,11 @@
 
     </tfoot>
 
-    {% for item in cart.products.all %}
+    {% for item in cart.items.all %}
 
-<tr><td> {{item}}</td> <td> {{item.price}}</td><td></td><a href="{% url 'update_cart' item.slug %}">Remove </tr>
+
+<tr><td> {{item.product}}</td> <td> {{item.product.price}}</td><td></td>></tr>
+        <a href="{% url 'update_cart' item.product.slug %}">remove</a>
 
     {% endfor %}
 
