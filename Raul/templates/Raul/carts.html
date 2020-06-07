@@ -1,0 +1,13 @@
+{% extends "Raul/base.html" %}
+{% block content %}
+    {% load crispy_forms_tags %}
+    <table class = table>
+        {% for item in cart.products.all %}
+        <tr><td> {{ item }} </td><td> {{ item.price }} </td>  </tr>
+    {% endfor %}
+        <tr>
+            <td colspan="2"></td>
+            <td><b>Total</b> $<span class='cart-total'>{{ cart.total }}</span></td>
+        </tr>
+    </table>
+{% endblock %}
