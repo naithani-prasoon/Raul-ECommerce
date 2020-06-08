@@ -5,9 +5,9 @@ html,body{
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    /*scroll-snap-type: mandatory;
+    scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory; */
+    scroll-snap-type: y mandatory;
 }
 
 a{
@@ -48,12 +48,19 @@ figure img{
 }
 
 .bannerHead{
-    background-image: url('BannerTrial.jpeg');
+    background-image: url('Banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color:#501B1D;
+    background-image: url('Images/Banner.png');
+}
+
+#videoBG{
+    z-index:-1;
+    opacity:0.9;
+    width:100%;
+    filter:brightness(60%);
 }
 
 .bannerHeading figcaption{
@@ -550,16 +557,23 @@ nav ul li a:hover{
         display: none;
     }
 
+    header{
+        background:white; /*Change to transparent*/
+    }
+
     figure{
         margin: 0px;
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
         height: 4em;
     }
 
     figure a{
         margin-right: 2em;
+        color:black;
+        font-family: 'Roboto Condensed';
     }
+
     figure p{
         margin-right:20px;
     }
@@ -572,14 +586,17 @@ nav ul li a:hover{
     .bannerHead{    
         height: 100vh;
         width:100vw;
-        background:transparent;
         overflow: hidden;
         position: relative;
         scroll-snap-align: start;
     }
 
+    .bannerHead video {
+        display: none;
+    }
+
     .bannerHeading figcaption{
-        font-size: 3.5em;
+        font-size: 3em;
         background-color: transparent;
         width:100%;
         height:auto;
@@ -592,116 +609,161 @@ nav ul li a:hover{
         font-weight:700;
     }
 
-    #loginText{
-        cursor: pointer;
+    .furniture{
+        height:800px;
+        width:100%;
+        background-color: white;
+        scroll-snap-align: start;
+        padding:10px;
+    }
+
+    .shopBack{
+        display: flex;
+        flex-wrap: nowrap;
+        margin:50px;
+        background-color: indianred;
+        width:95vw;
+        height:95vh;
+    }
+
+    .furnitureHeading{
+        font-size:6em;
+        font-family: 'Roboto Condensed';
+        margin:30% .5em;
+        color: white;
+        opacity: 1;
+    }
+
+    .linksShop{
+        font-size:0.1em;
+        font-family:'Roboto';
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-align: center;
+        color: whitesmoke;
+        font-family: 'Roboto Condensed';
+    }
+
+    .linksShop a{
+        text-decoration: none;
+        color:whitesmoke;
+    }
+
+    .linksShop a:hover{
+        color: black;
+        font-family: 'Roboto Condensed';
+    }
+
+    .shopNow {
+        font-size:0.2em;
+        font-family:'Roboto';
+        letter-spacing: 2.2em;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .furnitureImages{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin:7% 0.5em;
+    }
+
+    .furnitureImages img{
+        padding:20px;
+        transition: 0.4s ease-in-out;
+        display: block;
+    }
+
+    .furnitureImages:hover .staticImage {
+        filter: grayscale(40%) blur(1px);
     }
     
-    .loginText{
-        margin:auto;
-        width: 28em;
-        height: 28em;
-        background-color: #2E1114;
+    .textMiddle{
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top:50%;
+        right:10%;
+        text-align: center; 
+        z-index: 1;
     }
 
-    .loginText p{
-        font-size: 3em;
-        font-weight: bolder;
-        padding: 4%;
+    .textInfo{
+        width:80%;
+        padding: 16px 32px 16px 32px;
+        font-size: 5em;
+        font-family: 'Roboto Condensed';
+        background-color: white;
+        color:black;  
+        
     }
 
-    .loginText input[type=email]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
+    .furnitureImages:hover .textMiddle{
+        opacity: 1;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px 1px black;
     }
 
-    .loginText input[type=password]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-       
+    #Lighting{
+        letter-spacing: 0.1em;
+        color:black
     }
 
-    .loginText input[type=submit]{
-        font-size: 1em;
-        padding:0.5em;
-        width: 60%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+    #lighting .furnitureHeading .linksShop a{
+        color:black;
     }
 
-    .loginText label{
-        font-size: 0.8em;
-        padding:15%;
+    #lighting .furnitureHeading .linksShop a:hover{
+        color:darkred;
     }
 
-    .loginText a{
-        font-size: 0.8em;
+    #lighting .furnitureHeading .linksShop{
+        color:black;
     }
 
-    .signUp{
-        margin:auto;
-        width: 28em;
-        height: 28em;
-        background-color: #2E1114;
+    #lighting .shopNow{
+        color:black;
     }
 
-    .signUp p{
-        font-size: 3em;
-        font-weight: bolder;
-        padding: 4%;
+    #lighting{
+        background-color: #ffccbc;
     }
 
-    .signUp input[type=email]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
+    #Floral{
+        letter-spacing: 0.25em;
     }
 
-    .signUp input[type=password]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-       
+    #flower{
+        background-color: #C96567;
+    }   
+
+    #table{
+        background-color: #86C232;
     }
 
-    .signUp input[type=submit]{
-        font-size: 1em;
-        padding:0.5em;
-        width: 60%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+    #table .shopNow{
+        letter-spacing: 2em;
     }
 
-    .signUp label{
-        font-size: 0.8em;
-        padding:15%;
+    #table .furnitureHeading span{
+        letter-spacing: 0.04em;
     }
 
-    .signUp a{
-        font-size: 0.8em;
+    #wall .furnitureHeading{
+        letter-spacing: 0.1em;
     }
 
-    #arrow{
-        width:65px;
-        transition: 0.5s ease-in-out;
+    #decorative .furnitureHeading{
+        margin:15% 0.4em;
+        font-size: 8em;
     }
 
-    .arrow{
-        margin:auto;
+    .contact{
+        height: 100vh;
+        width:100%;
+        background-color: white;
     }
 
-    .furniture{
-        display: none;
-    }
-
-    #videoBG{
-        display: none;
-    }
 }
 
 @media only screen and (min-width:1200px) and (max-width: 1600px){
@@ -748,13 +810,6 @@ nav ul li a:hover{
         scroll-snap-align: start;
     }
 
-    #videoBG{
-        z-index:-1;
-        opacity:0.9;
-        width:100%;
-        filter:brightness(60%);
-    }
-
     .bannerHeading figcaption{
         font-size: 3.5em;
         background-color: transparent;
@@ -773,6 +828,7 @@ nav ul li a:hover{
         height:100vh;
         width:100%;
         background-color: white;
+        scroll-snap-align: start;
     }
 
     .shopBack{
