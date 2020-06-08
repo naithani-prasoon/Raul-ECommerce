@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
+from carts.models import Cart, CartItem
+from django.contrib.auth import get_user
 
 
 
@@ -23,7 +25,12 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, 'users/profile.html')
+    User = get_user(request)
+    UserOrders = CartItem.objects.filter(user=User)
+    context = {"userorders":UserOrders}
+    return render(request, 'users/profile.html',context)
+
+
 
 def products(request):
     return render(request, 'product_grid/index.html.html')
