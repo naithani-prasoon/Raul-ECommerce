@@ -71,7 +71,7 @@
 -->
     </figure>
 
-    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"></figcaption>
+    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
 
     <nav>
         <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
@@ -270,12 +270,22 @@
         document.getElementById("contentHam").style.height = "0%";
     }
 
-    function openLogin(){
-        document.getElementById("login").style.height = "100%"
+    function openStore(){
+        document.getElementById("store").style.height = "100%"
     }
 
-    function closeLogin(){
-        document.getElementById("login").style.height = "0%"
+    function closeStore(){
+        document.getElementById("store").style.height = "0%"
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("logo").style.backgroundColor = "white";
+        } else {
+            document.getElementById("logo").style.backgroundColor = "black";
+        }
     }
 
 </script>
