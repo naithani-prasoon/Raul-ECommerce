@@ -25,6 +25,8 @@
 <!--        <a href="{% url 'register' %}"><p> Register </p></a>-->
         <a href="{% url 'logout' %}"> <p>Logout </p></a>
         <a href="{% url 'cart' %}"> <p>Cart </p></a>
+        <a href="{% url 'profile' %}"> <p>Profile</p></a>
+
 
 
         {% else %}
@@ -115,7 +117,8 @@
                 </div>
                     <span>FURNITURE</span>
                 <div class = "linksShop">
-                    <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |                
+                    <a href="{% url 'cat-view' 'Flowers' %}" >Flowers</a>
+                    | <a href="{% url 'cat-view' 'Plates' %}" >Plates</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 

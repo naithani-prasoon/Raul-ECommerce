@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
     </list>
@@ -270,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591561972471</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="new home page set2">
+      <created>1591567152578</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591567152578</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +312,8 @@
     <MESSAGE value="can add and remove from cart 2" />
     <MESSAGE value="can add and remove from cart 3" />
     <MESSAGE value="new home page set" />
-    <option name="LAST_COMMIT_MESSAGE" value="new home page set" />
+    <MESSAGE value="new home page set2" />
+    <option name="LAST_COMMIT_MESSAGE" value="new home page set2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">

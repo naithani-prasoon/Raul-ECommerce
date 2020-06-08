@@ -19,19 +19,24 @@
     <div class="row">
         <!-- Product  -->
         {% for product in cat_products %}
-            <div class="col-md-4 product-grid">
-                <div class="image">
-                    <a href="{% url 'Raul-single' product.slug %}" >
-                        <img src="{{ product.image.url }}" class="w-100">
-                        <div class="overlay">
-                            <div class="detail">{{product.description}}</div>
-                        </div>
-                    </a>
-                </div>
-                <h5 class="text-center">{{product.title}}</h5>
-                <h5 class="text-center">Price: ${{product.price}}</h5>
-                <a href="{% url 'update_cart' product.slug %}?qty=12" class="btn buy">BUY</a>
+        <div class="col-md-4 product-grid">
+            <div class="image">
+                <a href="{% url 'Raul-single' product.slug %}" >
+                    <img src="{{ product.image.url }}" class="w-100">
+                    <div class="overlay">
+                        <div class="detail">{{product.description}}</div>
+                    </div>
+                </a>
             </div>
+            <h5 class="text-center">{{product.title}}</h5>
+            <form class= 'form pull-right' method='GET' action="{% url 'update_cart' product.slug %}">
+                <input name='qty' type='number' placeholder='1' value='1' />
+                <input type='submit' value='Add to cart' />
+            </form>
+
+            <h5 class="text-center">Price: ${{product.price}}</h5>
+            <a href="{% url 'update_cart' product.slug %}?qty=12" class="btn buy">BUY</a>
+        </div>
         {% endfor %}
         <!-- ./Product -->
 

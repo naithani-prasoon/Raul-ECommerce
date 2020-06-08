@@ -17,6 +17,9 @@
     <thead>
     <th>Item</th>
     <th>Price</th>
+    <th>Quantity</th>
+    <th>Total Item Price</th>
+
     </thead>
     <tfoot>
     <tr>
@@ -28,8 +31,13 @@
     {% for item in cart.cartitem_set.all %}
 
 
-<tr><td> {{item.product}}</td> <td> {{item.product.price}}</td>{{item.quantity}}<td>{{item.line_total}}</td>></tr>
-        <a href="{% url 'update_cart' item.product.slug %}?qty=0">remove</a>
+<!--<tr><td> {{item.product}}</td> <td> {{item.product.price}}</td>-->
+<!--    <td>{{item.quantity}}</td><td>{{item.line_total}}</td>></tr>-->
+<!--        <a href="{% url 'update_cart' item.product.slug %}?qty=0">remove</a>-->
+
+    <tr><td> {{item.product}}</td> <td> {{item.product.price}}</td>
+        <td>{{item.quantity}}</td><td> <a>{{item.line_total}}</a><a href="{% url 'update_cart' item.product.slug %}?qty=0">         Remove</a> </tr>
+
 
     {% endfor %}
 

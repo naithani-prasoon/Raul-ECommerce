@@ -3,8 +3,11 @@
     {% load crispy_forms_tags %}
     <div class="content-section">
         <div class="'row">
+            {{single_product.image}}
             {{ single_product.title }}
             {{ single_product.price }}
+            {{single_product.description}}
+
         </div>
     </div>
 {% endblock %}
