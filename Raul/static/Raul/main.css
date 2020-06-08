@@ -48,12 +48,12 @@ figure img{
 }
 
 .bannerHead{
-    background-image: url('BannerTrial.jpeg');
+    background-image: url('Banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color:#501B1D;
+    background-image: url('Images/Banner.png');
 }
 
 #videoBG{
@@ -570,7 +570,10 @@ nav ul li a:hover{
 
     figure a{
         margin-right: 2em;
+        color:black;
+        font-family: 'Roboto Condensed';
     }
+
     figure p{
         margin-right:20px;
     }
@@ -583,14 +586,17 @@ nav ul li a:hover{
     .bannerHead{    
         height: 100vh;
         width:100vw;
-        background:transparent;
         overflow: hidden;
         position: relative;
         scroll-snap-align: start;
     }
 
+    .bannerHead video {
+        display: none;
+    }
+
     .bannerHeading figcaption{
-        font-size: 3.5em;
+        font-size: 3em;
         background-color: transparent;
         width:100%;
         height:auto;
@@ -603,129 +609,27 @@ nav ul li a:hover{
         font-weight:700;
     }
 
-    #loginText{
-        cursor: pointer;
-    }
-    
-    .loginText{
-        margin:auto;
-        width: 28em;
-        height: 28em;
-        background-color: #2E1114;
-    }
-
-    .loginText p{
-        font-size: 3em;
-        font-weight: bolder;
-        padding: 4%;
-    }
-
-    .loginText input[type=email]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .loginText input[type=password]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-       
-    }
-
-    .loginText input[type=submit]{
-        font-size: 1em;
-        padding:0.5em;
-        width: 60%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .loginText label{
-        font-size: 0.8em;
-        padding:15%;
-    }
-
-    .loginText a{
-        font-size: 0.8em;
-    }
-
-    .signUp{
-        margin:auto;
-        width: 28em;
-        height: 28em;
-        background-color: #2E1114;
-    }
-
-    .signUp p{
-        font-size: 3em;
-        font-weight: bolder;
-        padding: 4%;
-    }
-
-    .signUp input[type=email]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .signUp input[type=password]{
-        font-size: 1.3em;
-        padding:0.5em;
-        margin-top: 5%;
-        margin-bottom: 5%;
-       
-    }
-
-    .signUp input[type=submit]{
-        font-size: 1em;
-        padding:0.5em;
-        width: 60%;
-        margin-top: 5%;
-        margin-bottom: 5%;
-    }
-
-    .signUp label{
-        font-size: 0.8em;
-        padding:15%;
-    }
-
-    .signUp a{
-        font-size: 0.8em;
-    }
-
-    #arrow{
-        width:65px;
-        transition: 0.5s ease-in-out;
-    }
-
-    .arrow{
-        margin:auto;
-    }
-
     .furniture{
-        height:100vh;
+        height:800px;
         width:100%;
         background-color: white;
         scroll-snap-align: start;
+        padding:10px;
     }
 
     .shopBack{
         display: flex;
         flex-wrap: nowrap;
-        margin:40px;
+        margin:50px;
         background-color: indianred;
         width:95vw;
         height:95vh;
     }
 
     .furnitureHeading{
-        font-size:9em;
+        font-size:6em;
         font-family: 'Roboto Condensed';
-        margin:20% .5em;
+        margin:30% .5em;
         color: white;
         opacity: 1;
     }
