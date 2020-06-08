@@ -1,10 +1,14 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+
 
 # Create your models here.
 
 from Raul.models import product
+User = get_user_model()
 
 class CartItem(models.Model):
+    user = models.ForeignKey(User,blank=True,null=True,on_delete=models.CASCADE)
     cart = models.ForeignKey('Cart', null=True, blank=True,on_delete=models.CASCADE)
     product = models.ForeignKey(product,on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1, null=True)
@@ -21,6 +25,7 @@ class CartItem(models.Model):
 
 
 class Cart(models.Model):
+    user = models.ForeignKey(User,blank=True,null=True,on_delete=models.CASCADE)
     total = models.DecimalField(max_digits=100, decimal_places=2, default=1.00)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

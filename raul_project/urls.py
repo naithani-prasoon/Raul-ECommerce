@@ -28,6 +28,7 @@ urlpatterns = [
     path('category/<str:cats>/', views.CategoryView,name='cat-view'),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
+    path('profile/orders', user_views.profile, name='profile-orders'),
     path('product/', views.products, name='Raul-product'),
     path('product/<str:slug>/', views.singleView, name='Raul-single'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
