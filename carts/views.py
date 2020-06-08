@@ -42,6 +42,8 @@ def update_cart(request,slug):
         request.session['cart_id'] = new_cart.id
         the_id = new_cart.id
     cart = Cart.objects.get(id=the_id)
+
+
     try:
         producter= product.objects.get(slug=slug)
     except product.DoesNotExist:
@@ -50,6 +52,11 @@ def update_cart(request,slug):
         pass
 
     cart_item, created = CartItem.objects.get_or_create(cart= cart, product=producter)
+    if(request.user.is_authenticated):
+        cart.user = request.user
+        cart_item.user = request.user
+
+
     if created:
         print("Yes")
     #print(qty)
