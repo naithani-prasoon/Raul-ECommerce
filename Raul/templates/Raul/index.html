@@ -90,7 +90,7 @@
                             <a href="{% url 'Raul-SecondHome' %}" class="dropdown-item">Second Homepage</a>
                             <a href="{% url 'cat-view' 'Plates' %}" class="dropdown-item">Blah</a>
                             <a href="#" class="dropdown-item">Blah</a>
-                            <a href="#" class="dropdown-item">Blah</a>
+                            <a href="{% url 'Raul-product' %}" class="dropdown-item">Product</a>
                         </div>
                         {% if user.is_authenticated %}
                       <li><a href="{% url 'cart' %}" class="nav-item nav-link">Cart <span class="badge badge-light">{{ request.session.items_total }}</span> </a>
