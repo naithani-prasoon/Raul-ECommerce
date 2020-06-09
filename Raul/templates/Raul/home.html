@@ -22,9 +22,10 @@
         {% if user.is_authenticated %}
         <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
         <a href="{% url 'Raul-product' %}"><p> Store </p></a>
-<!--        <a href="{% url 'register' %}"><p> Register </p></a>-->
         <a href="{% url 'logout' %}"> <p>Logout </p></a>
         <a href="{% url 'cart' %}"> <p>Cart </p></a>
+        <a href="{% url 'profile' %}"> <p>Profile</p></a>
+
 
 
         {% else %}
@@ -63,13 +64,9 @@
                 <a>Forgot Password?</a>
             </div>
         </div>
-
-<!--
-        <a href ="#"><p> Cart </p></a>
--->
     </figure>
 
-    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"></figcaption>
+    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
 
     <nav>
         <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
@@ -101,9 +98,9 @@
     
 </header>
     <div class ="bannerHead" id = "mainBanner">
-        <video src="{% static 'Raul/Images/bgFinal.mp4' %}" autoplay loop muted id = "videoBG"></video>
+        <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
-            <figcaption> The perfect arrangment for you. </figcaption>
+            <figcaption> r a ù l </figcaption>
         </div>
         
     </div>
@@ -115,7 +112,8 @@
                 </div>
                     <span>FURNITURE</span>
                 <div class = "linksShop">
-                    <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |                
+                    <a href="{% url 'cat-view' 'Flowers' %}" >Flowers</a>
+                    | <a href="{% url 'cat-view' 'Plates' %}" >Plates</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 
@@ -127,7 +125,7 @@
                     </div>
                 </div>
 
-                <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
     </div>
@@ -151,7 +149,7 @@
                         SHOP.
                     </div>
                 </div>
-                <img src="{% static 'Raul/Images/7.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{% static 'Raul/Images/7.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
     </div>
@@ -175,7 +173,7 @@
                         SHOP.
                     </div>
                 </div>
-                <img src="{% static 'Raul/Images/8.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{% static 'Raul/Images/8.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
     </div>
@@ -199,7 +197,7 @@
                         SHOP.
                     </div>
                 </div>
-                <img src="{% static 'Raul/Images/10.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{% static 'Raul/Images/10.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
     </div>
@@ -223,7 +221,7 @@
                         SHOP.
                     </div>
                 </div>
-                <img src="{% static 'Raul/Images/11.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{% static 'Raul/Images/11.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
     </div>
@@ -235,21 +233,21 @@
                 <div class="shopNow">
                     SHOP NOW
                 </div>
-                    <span> DECORATIVE ACCESSORIES</span>
+                <span id="head">  DECORATIVE ACCESSORIES</span>
                 <div class = "linksShop">
                     | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href ="#WallSec">WALL ART</a> |
                 </div>
             </div>
-
-            <div class ="furnitureImages" id ="DecorativeSec">
+            <div class ="furnitureImages">
                 <img src="{% static 'Raul/Images/2.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
                 <div class="textMiddle">
                     <div class="textInfo">
                         SHOP.
                     </div>
                 </div>
-                <img src="{% static 'Raul/Images/11.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{% static 'Raul/Images/11.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
+
         </div>
     </div>
     <div class="contact">
@@ -267,12 +265,22 @@
         document.getElementById("contentHam").style.height = "0%";
     }
 
-    function openLogin(){
-        document.getElementById("login").style.height = "100%"
+    function openStore(){
+        document.getElementById("store").style.height = "100%"
     }
 
-    function closeLogin(){
-        document.getElementById("login").style.height = "0%"
+    function closeStore(){
+        document.getElementById("store").style.height = "0%"
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("headers").style.background = "white";
+        } else {
+            document.getElementById("headers").style.background = "black";
+        }
     }
 
 </script>

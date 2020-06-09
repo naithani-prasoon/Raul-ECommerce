@@ -1,10 +1,169 @@
 {% extends "Raul/base.html" %}
 {% block content %}
-    {% load crispy_forms_tags %}
-    <div class="content-section">
-        <div class="'row">
-            {{ single_product.title }}
-            {{ single_product.price }}
+{% load crispy_forms_tags %}
+
+<head>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+        }
+
+        .left-column {
+            width: 65%;
+            position: relative;
+        }
+
+        .right-column {
+            width: 35%;
+            margin-top: 60px;
+        }
+        /* !*Left Column*!*/
+        /*.left-column img {*/
+        /*    width: 100%;*/
+        /*    !*position: relative;*!*/
+        /*    !*left: 100%;*!*/
+        /*    !*top: 100%;*!*/
+        /*    !*opacity: 0;*!*/
+        /*    !*transition: all 0.3s ease;*!*/
+        /*}*/
+
+        /*.left-column img.active {*/
+        /*    opacity: 1;*/
+        /*}*/
+         /*Product Description */
+        .product-description {
+            border-bottom: 1px solid #E1E8EE;
+            margin-bottom: 20px;
+        }
+        .product-description span {
+            font-size: 12px;
+            color: #358ED7;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .product-description h1 {
+            font-weight: 300;
+            font-size: 52px;
+            color: #43484D;
+            letter-spacing: -2px;
+        }
+        .product-description p {
+            font-size: 16px;
+            font-weight: 300;
+            color: #86939E;
+            line-height: 24px;
+        }
+        /* Product Price */
+        .product-price {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-price span {
+            font-size: 26px;
+            font-weight: 300;
+            color: #43474D;
+            margin-right: 20px;
+        }
+
+        .cart-btn {
+            display: inline-block;
+            background-color: #7DC855;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 12px 30px;
+            transition: all .5s;
+        }
+        .cart-btn:hover {
+            background-color: #64af3d;
+        }
+
+
+    </style>
+</head>
+
+<main class="container">
+
+    <!-- Left Column / Headphones Image -->
+    <div class="left-column">
+        <img src="{{ single_product.image.url }}" width="500px" height="600px">
+        <img data-image="blue" src="images/blue.png" alt="">
+        <img data-image="red" class="active" src="images/red.png" alt="">
+
+    </div>
+
+
+    <!-- Right Column -->
+    <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+            <a href="{% url 'cat-view' 'Plates' %}" >Plates</a>
+            <h1>{{single_product.title}}</h1>
+            <p>{{single_product.description}}</p>
+        </div>
+
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+
+            <!-- Product Color -->
+<!--            <div class="product-color">-->
+<!--                <span>Color</span>-->
+
+<!--                <div class="color-choose">-->
+<!--                    <div>-->
+<!--                        <input data-image="red" type="radio" id="red" name="color" value="red" checked>-->
+<!--                        <label for="red"><span></span></label>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <input data-image="blue" type="radio" id="blue" name="color" value="blue">-->
+<!--                        <label for="blue"><span></span></label>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <input data-image="black" type="radio" id="black" name="color" value="black">-->
+<!--                        <label for="black"><span></span></label>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+            <!-- Cable Configuration -->
+<!--            <div class="cable-config">-->
+<!--                <span>Cable configuration</span>-->
+
+<!--                <div class="cable-choose">-->
+<!--                    <button>Straight</button>-->
+<!--                    <button>Coiled</button>-->
+<!--                    <button>Long-coiled</button>-->
+<!--                </div>-->
+
+<!--                <a href="#">How to configurate your headphones</a>-->
+<!--            </div>-->
+            <form class= 'form pull-right' method='GET' action="{% url 'update_cart' single_product.slug %}">
+                <input name='qty' type='number' placeholder='1' value='1' />
+                <input type='submit' value='Add to cart' />
+            </form>
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+            <span>148$</span>
+            <a href="{% url 'update_cart' single_product.slug %}?qty=1" class="cart-btn">Add to cart</a>
         </div>
     </div>
-{% endblock %}
+</main>
+
+                    {% endblock %}

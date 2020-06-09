@@ -4,77 +4,240 @@
 <!--{% block content %}
 {% load crispy_forms_tags %}-->
 
+<head>
+    <style>
+        body {
+            background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+            margin:0px;
+            font-family: 'Ubuntu', sans-serif;
+            background-size: 100% 110%;
+        }
+        h1, h2, h3, h4, h5, h6, a {
+            margin:0; padding:0;
+        }
+        .login {
+            margin:0 auto;
+            max-width:500px;
+        }
+        .login-header {
+            color: #050505;
+            text-align:center;
+            font-size:300%;
+        }
+        /* .login-header h1 {
+           text-shadow: 0px 5px 15px #000; */
+        }
+        .login-form {
+            border:.5px solid #050505;
+            background: #050505;
+            border-radius:10px;
+            box-shadow:0px 0px 10px #000;
+        }
+        .login-form h3 {
+            text-align:left;
+            margin-left:40px;
+            color: #050505;
+        }
+        .login-form {
+            box-sizing:border-box;
+            padding-top:15px;
+            padding-bottom:10%;
+            margin:5% auto;
+            text-align:center;
+        }
+        .login input[type="text"],
+        .login input[type="password"] {
+            max-width:400px;
+            width: 80%;
+            line-height:3em;
+            font-family: 'Ubuntu', sans-serif;
+            margin:1em 2em;
+            border-radius:5px;
+            border:2px solid #f2f2f2;
+            outline:none;
+            padding-left:10px;
+        }
+        .login-form input[type="button"] {
+            height:30px;
+            width:100px;
+            background: #ff002c;
+            border:1px solid #f2f2f2;
+            border-radius:20px;
+            color: slategrey;
+            text-transform:uppercase;
+            font-family: 'Ubuntu', sans-serif;
+            cursor:pointer;
+        }
+        .sign-up{
+            color: #050505;
+            margin-left:-70%;
+            cursor:pointer;
+            text-decoration:underline;
+        }
+        .no-access {
+            color: #050505;
+            margin:20px 0px 20px -57%;
+            text-decoration:underline;
+            cursor:pointer;
+        }
+        .try-again {
+            color:#f2f2f2;
+            text-decoration:underline;
+            cursor:pointer;
+        }
+
+        /*Media Querie*/
+        @media only screen and (min-width : 150px) and (max-width : 530px){
+            .login-form h3 {
+                text-align:center;
+                margin:0;
+            }
+            .sign-up, .no-access {
+                margin:10px 0;
+            }
+            .login-button {
+                margin-bottom:10px;
+            }
+        }
+    </style>
+</head>
 
 
-
-<figure>
-    {% if user.is_authenticated %}
-    <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-    <a href="{% url 'Raul-product' %}"><p> Store </p></a>
-    <!--        <a href="{% url 'register' %}"><p> Register </p></a>-->
-    <a href="{% url 'logout' %}"> <p>Logout </p></a>
-    <a href="{% url 'cart' %}"> <p>Cart </p></a>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
 
-    {% else %}
-    <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-    <a href="{% url 'Raul-product' %}"><p> Store </p></a>
-    <a href="{% url 'register' %}"><p> Register </p></a>
-    <a href="{% url 'login' %}"> <p>Login </p></a>
-    <a href="{% url 'cart' %}"> <p>Cart </p></a>
-
-
-    {% endif %}
-
-
-    <div class ="loginSlide" id="login">
-        <div class="loginText">
-            <p>L O G I N</p>
-            <input type="email" placeholder="Email ID">
-            <input type="password" placeholder="Password">
-            <input type="submit" placeholder="Login">
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember Me
-            </label>
-            <a>Forgot Password?</a>
-        </div>
-        <div class ="arrow">
-        </div>
-        <div class="signUp">
-            <p> S I G N - U P </p>
-            <input type="email" placeholder="Email ID">
-            <input type="password" placeholder="Password">
-            <input type="submit" placeholder="Login">
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember Me
-            </label>
-            <a>Forgot Password?</a>
-        </div>
+<form method="post">
+    {{ form.non_field_errors }}
+    <div class="login">
+    <div class="login-header">
+        <h1>Login</h1>
     </div>
+    <div class="login-form">
+<!--        <h3>Username:</h3>-->
+        <h3 for="{{ form.username.id_for_label }}">Username:</h3>
+<!--        <input type="text" placeholder="Username"/><br>-->
 
-    <!--
-            <a href ="#"><p> Cart </p></a>
-    -->
-</figure>
+        {{ form.username }}
+        {{ form.username.errors }}
+<!--        <input type="text" placeholder="Username"/><br>-->
+<!--        <h3>Password:</h3>-->
+<!--        <input type="password" placeholder="Password"/>-->
 
-<div class="content-section">
-    <form method="POST">
+
+        <br>
+<!--        <label placeholder="Password" for="{{ form.password.id_for_label }}">Password:</label>-->
+        <h3 for="{{ form.password.id_for_label}}">Password:</h3>
+        {{ form.password }}
+        {{ form.password.errors }}
+
+
+        <br>
+        <br>
         {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Log In</legend>
-            {{ form|crispy }}
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
-            <small class="text-muted ml-2">
-                <a href="{% url 'password_reset' %}">Forgot Password?</a>
-            </small>
-        </div>
-    </form>
-    <div class="border-top pt-3">
-        <small class="text-muted">
-            Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
-        </small>
+<!--        <input type="button" value="Login" class="login-button"/>-->
+        <button class="btn btn-outline-info" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
+
+        <a class="sign-up" href="{% url 'register' %}">Sign Up!</a>
+        <br>
+        <h6 class="no-access">Can't access your account?</h6>
     </div>
 </div>
+<div class="error-page">
+    <div class="try-again">Error: Try again?</div>
+</div>
+</form>
+
+
+
+
+
+
+
+
+<!--THIS WORKED RIGHT HERE, CUSTOM EDIT-->
+<!--<form method="post">-->
+<!--    {{ form.non_field_errors }}-->
+<!--    <div class="form-group">-->
+
+<!--        <label for="{{ form.username.id_for_label }}">Username:</label>-->
+<!--        {{ form.username }}-->
+<!--        {{ form.username.errors }}-->
+
+<!--    </div>-->
+<!--    <div class="form-group">-->
+
+<!--        <label for="{{ form.password.id_for_label }}">Password:</label>-->
+<!--        {{ form.password }}-->
+<!--        {{ form.password.errors }}-->
+<!--    </div>-->
+<!--                            {% csrf_token %}-->
+<!--    <button class="btn btn-outline-info" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>-->
+<!--</form>-->
+
+
+
+
+<!--<div class="content-section">-->
+<!--    <form method="POST">-->
+<!--        {% csrf_token %}-->
+<!--        <fieldset class="form-group">-->
+<!--            <legend class="border-bottom mb-4">Log In</legend>-->
+<!--        </fieldset>-->
+<!--        <div class="login">-->
+<!--            <div class="login-header">-->
+<!--                <h1>Login</h1>-->
+<!--            </div>-->
+<!--            <div class="login-form">-->
+<!--                        {% csrf_token %}-->
+<!--                <h3>Username:</h3>-->
+<!--                <input type="text" placeholder="Username"/><br>-->
+<!--                <h3>Password:</h3>-->
+<!--                <input type="password" placeholder="Password"/>-->
+<!--                <br>-->
+<!--                        {% csrf_token %}-->
+<!--                <button class="btn btn-outline-info" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>&ndash;&gt;-->
+<!--                <br>-->
+<!--                <a class="sign-up">Sign Up!</a>-->
+<!--                <br>-->
+<!--                <h6 class="no-access">Can't access your account?</h6>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="error-page">-->
+<!--            <div class="try-again">Error: Try again?</div>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--    <div class="border-top pt-3">-->
+<!--        <small class="text-muted">-->
+<!--            Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>-->
+<!--        </small>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+<!--<div class="content-section">-->
+<!--    <form method="POST">-->
+<!--        {% csrf_token %}-->
+<!--        <fieldset class="form-group">-->
+<!--            <legend class="border-bottom mb-4">Log In</legend>-->
+<!--            {{ form|crispy }}-->
+<!--        </fieldset>-->
+<!--        <div class="form-group">-->
+<!--            <button class="btn btn-outline-info" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>-->
+<!--            <small class="text-muted ml-2">-->
+<!--                <a href="{% url 'password_reset' %}">Forgot Password?</a>-->
+<!--            </small>-->
+<!--        </div>-->
+<!--    </form>-->
+<!--    <div class="border-top pt-3">-->
+<!--        <small class="text-muted">-->
+<!--            Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>-->
+<!--        </small>-->
+<!--    </div>-->
+<!--</div>-->
 <!--{% endblock %}-->
