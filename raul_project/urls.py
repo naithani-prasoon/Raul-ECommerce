@@ -21,6 +21,7 @@ from users import views as user_views
 from raul_project import settings
 from Raul import views
 from carts import views as cart_views
+from orders import views as orders
 
 
 urlpatterns = [
@@ -40,8 +41,12 @@ urlpatterns = [
     path('', include('Raul.urls')),
     path('s/', views.search, name='search'),
     path('cart/<str:slug>/', cart_views.update_cart, name='update_cart'),
+    path('checkout/', orders.checkout, name='checkout'),
+    path('orders/', orders.orders, name='user_orders'),
     path('cart/', cart_views.view, name='cart'),
+
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

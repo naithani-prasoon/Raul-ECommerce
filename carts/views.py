@@ -12,11 +12,11 @@ from .models import Cart
 def view(request):
     try:
         the_id = request.session['cart_id']
+        cart = Cart.objects.get(id=the_id)
     except:
         the_id= None
 
     if the_id:
-        cart = Cart.objects.get(id=the_id)
         context = {"cart": cart}
     else:
         empty_message = "Your cart is empty, go shop"
