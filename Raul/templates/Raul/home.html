@@ -16,12 +16,29 @@
 
 </head>
 <body>
-<header>
+<div class ="headers">
     <figure>
         <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%">
         {% if user.is_authenticated %}
         <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-        <a href="{% url 'Raul-product' %}"><p> Store </p></a>
+        <a  href="#" onclick="openStore()"><p> Store </p></a>
+        <div id ="store">
+            <p onclick="closeStore()" id="cross">
+                X
+            </p>
+            <p>
+                cafe flor
+            </p>
+
+            <p>
+                raul
+            </p>
+
+            <p>
+                third
+            </p>
+
+        </div>
         <a href="{% url 'logout' %}"> <p>Logout </p></a>
         <a href="{% url 'cart' %}"> <p>Cart </p></a>
         <a href="{% url 'profile' %}"> <p>Profile</p></a>
@@ -30,7 +47,25 @@
 
         {% else %}
         <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-        <a href="{% url 'Raul-product' %}"><p> Store </p></a>
+        <a href = "#" onclick="openStore()"><p> Store </p></a>
+        <div id ="store">
+            <p onclick="closeStore()" id="cross">
+                X
+            </p>
+
+            <p>
+                cafe flor
+            </p>
+
+            <p>
+                raul
+            </p>
+
+            <p>
+                third
+            </p>
+
+        </div>
         <a href="{% url 'register' %}"><p> Register </p></a>
         <a href="{% url 'login' %}"> <p>Login </p></a>
         <a href="{% url 'cart' %}"> <p>Cart </p></a>
@@ -96,14 +131,19 @@
         </ul>
     </nav>
     
-</header>
+</div>
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
-            <figcaption> r a ù l </figcaption>
+            <figcaption> r a ù l  <br> <a href="#shop"><button>shop to make the perfect arrangements</button></a></figcaption>
         </div>
-        
     </div>
+
+    <div class="shopBanner" id="shop">
+        <figcaption> SHOP </figcaption>
+        | <a href="#FlowerSec">FLORAL</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#TableSec">TABLE TOP</a> |
+    </div>
+
     <div class="furniture" id ="FurnitureSec">
         <div class="shopBack">
             <div class="furnitureHeading">                
@@ -112,8 +152,8 @@
                 </div>
                     <span>FURNITURE</span>
                 <div class = "linksShop">
-                    <a href="{% url 'cat-view' 'Flowers' %}" >Flowers</a>
-                    | <a href="{% url 'cat-view' 'Plates' %}" >Plates</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
+                   | <a href="{% url 'cat-view' 'Flowers' %}" >FLORAL</a>
+                    | <a href="{% url 'cat-view' 'Plates' %}" >TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 
@@ -138,7 +178,7 @@
                 </div>
                     <span id="Lighting">LIGHTING</span>
                 <div class = "linksShop">
-                    | <a href="">FLORAL</a> | <a href="#">TABLE TOP</a> | <a href="#">FURNITURE</a> | <a href="#">WALL ART</a> | <a href ="#">DECORATIVE ACCESSORIES</a> |
+                    | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 
@@ -162,7 +202,7 @@
                 </div>
                     <span id= "Floral">FLORAL</span>
                 <div class = "linksShop">
-                    | <a href="#">LIGHTING</a> | <a href="#">TABLE TOP</a> | <a href="#">FURNITURE</a> | <a href="#">WALL ART</a> | <a href ="#">DECORATIVE ACCESSORIES</a> |
+                    | <a href="#LightingSec">LIGHTING</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 
@@ -186,7 +226,7 @@
                 </div>
                 <span>TABLETOP</span>
                 <div class = "linksShop">
-                    | <a href="#">FLORAL</a> | <a href="#">FURNITURE</a> | <a href="#">LIGHTING</a> | <a href="#">WALL ART</a> | <a href ="#">DECORATIVE ACCESSORIES</a> |
+                    | <a href="#FlowerSec">FLORAL</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 
@@ -210,7 +250,7 @@
                 </div>
                     <span>WALLART</span>
                 <div class = "linksShop">
-                    | <a href="#">FLORAL</a> | <a href="#">TABLE TOP</a> | <a href="#">LIGHTING</a> | <a href="#">FURNITURE</a> | <a href ="#">DECORATIVE ACCESSORIES</a> |
+                    | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
             </div>
 
@@ -257,6 +297,20 @@
 
 </footer>
 <script>
+
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll > 100) {
+                $(".headers").css("background" , "header");
+            }
+
+            else{
+                $(".headers").css("background" , "transparent");   
+            }
+        })
+    })
+
     function openNav() {
         document.getElementById("contentHam").style.height = "100%";
     }
@@ -266,22 +320,13 @@
     }
 
     function openStore(){
-        document.getElementById("store").style.height = "100%"
+        document.getElementById("store").style.height = "100%";
     }
 
     function closeStore(){
-        document.getElementById("store").style.height = "0%"
+        document.getElementById("store").style.height = "0%";
     }
 
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("headers").style.background = "white";
-        } else {
-            document.getElementById("headers").style.background = "black";
-        }
-    }
 
 </script>
 </body>

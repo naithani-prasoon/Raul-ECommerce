@@ -19,25 +19,39 @@ footer{
     background-color: #ADADAD;
 }
 
-header{
+.headers{
     position: fixed;
     width: 100%;
     transition: 0.4s ease-in-out;
     top:0;
     overflow: hidden;
-    z-index: 1;
-    background-color: black;
+    z-index: 99;
+    background: #595959;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    transition: 0.4s ease-in-out;
+    top:0;
+    overflow: hidden;
+    z-index: 99;
+    background: #595959;
 }
 
 figure{
-    background: transparent;
-    transition: ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 figure a{
     text-align: center;
     text-decoration: none;
     color:white;
+    transition: 0.4s ease-in-out;
+}
+
+figure a:hover{
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 figure p{
@@ -67,6 +81,10 @@ figure img{
 .bannerHeading figcaption{
     font-family: 'Roboto', serif; /*Change the font*/
     background-color: white;
+}
+
+.bannerHeading figcaption a button{
+    display: none;
 }
 
 .menuBar{
@@ -272,7 +290,6 @@ nav ul li a:hover{
     width:60px;
 }
 
-
 /* Scroll Bar*/
 ::-webkit-scrollbar {
 	width: 6px;
@@ -344,6 +361,14 @@ nav ul li a:hover{
 }
 
 @media only screen and (max-width:640px){
+
+    #store{
+        display: none;
+    }
+    
+    .shopBanner{
+        display: none;
+    }
     
     header{
         display: grid;
@@ -586,6 +611,14 @@ nav ul li a:hover{
 
 @media only screen and (min-width:641px) and (max-width:768px){
 
+    #store{
+        display: none;
+    }
+    
+    .shopBanner{
+        display: none;
+    }
+
     header{
         display: grid;
         height: 3.5em;
@@ -804,6 +837,14 @@ nav ul li a:hover{
 
 @media only screen and (min-width:769px) and (max-width:1024px){
 
+    #store{
+        display: none;
+    }
+
+    .shopBanner{
+        display: none;
+    }
+
     header{
         display: grid;
         height: 4em;
@@ -1017,6 +1058,14 @@ nav ul li a:hover{
 }
 
 @media only screen and (min-width:1025px) and (max-width:1200px){
+
+    #store{
+        display: none;
+    }
+    
+    .shopBanner{
+        display: none;
+    }
 
     nav{
         display: none;
@@ -1240,12 +1289,8 @@ nav ul li a:hover{
         display: none;
     }
 
-    header figcaption{
+    .headers figcaption{
         display: none;
-    }
-
-    header{
-        background:#595959; /*Change to transparent*/
     }
 
     figure{
@@ -1257,16 +1302,49 @@ nav ul li a:hover{
 
     figure a{
         margin-right: 2em;
-        color:black;
-        font-family: 'Roboto Condensed';
+        font-family: 'Roboto' ,sans-serif;
         letter-spacing: 0.1em;
     }
+
     figure p{
         margin-right:20px;
     }
 
     figure img{
         padding:0px;
+    }
+
+    #store{
+        width:100%;
+        height:0%;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.95);
+        position: fixed;
+        left:0;
+        top:0;
+        color: #cfbb63;
+        font-family: 'Roboto Condensed', sans-serif;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        transition: 0.4s ease-in-out;
+    }
+
+    #store p{
+        font-size:4em;
+        padding:0px;
+        letter-spacing: 0.2em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #store #cross{
+        font-size: 2em;
+    }
+
+    #store #cross:hover{
+        cursor: pointer;
+        color:orange;
     }
 
     .bannerHead{    
@@ -1288,8 +1366,55 @@ nav ul li a:hover{
         left:0;
         text-align: center;
         color:white;
-        font-family:'Roboto';
+        font-family:'Roboto Condensed', sans-serif;
         font-weight:700;
+    }
+
+    .bannerHeading figcaption a button{
+        background:transparent;
+        margin:20px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size:0.5em;
+        outline: none;
+        padding:30px;
+        border: none;
+        color: white;
+        transition: 0.5s ease;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        border: 1px solid white;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+
+    .bannerHeading figcaption a button:hover{
+        background-color: white;
+        color:#595959;
+        cursor: pointer;
+    }  
+    
+    .shopBanner{
+        width:100%;
+        height:450px;
+        scroll-snap-align: start;
+        color: #cfbb63;
+        text-align: center;
+        padding-top:1em;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .shopBanner figcaption{
+        font-size:20em;
+    }
+
+    .shopBanner a{
+        font-size:1em;
+        color:#cfbb63;
+    }
+
+    .shopBanner a:hover{
+        color:orange;
     }
 
     .furniture{
