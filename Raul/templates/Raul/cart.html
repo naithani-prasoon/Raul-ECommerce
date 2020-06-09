@@ -25,6 +25,7 @@
                             <div class="product">
                                 <div class="row">
                                     <div class="col-md-3">
+                                        <a href="{% url 'Raul-single' item.product.slug %}" >
                                         <img class="img-fluid mx-auto d-block image" src="{{item.product.image.url}}">
                                         <a href="{% url 'update_cart' item.product.slug %}?qty=0">remove</a>
                                     </div>
