@@ -18,10 +18,10 @@
 <body>
 <div class ="headers">
     <figure>
-        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%">
+        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
         {% if user.is_authenticated %}
         <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-        <a  href="#" onclick="openStore()"><p> Store </p></a>
+        <a  href="#" onclick="openCategory()"><p> Store </p></a>
         <div id ="store">
             <p onclick="closeStore()" id="cross">
                 X
@@ -47,7 +47,7 @@
 
         {% else %}
         <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-        <a href = "#" onclick="openStore()"><p> Store </p></a>
+        <a href = "#" onclick="openCategory()"><p> Store </p></a>
         <div id ="store">
             <p onclick="closeStore()" id="cross">
                 X
@@ -132,8 +132,29 @@
     </nav>
     
 </div>
+
+<div id = "category">
+    <p>New Arrivals</p>
+    
+    <p>Décorative Accessories</p>
+    
+    <p>Tabletop</p>
+    
+    <p>Furniture</p>
+    
+    <p>Wall Art</p>
+    
+    <p>Florals</p>
+    
+    <p>Sale</p>
+    
+    <p>Venue Bookings</p>
+
+    <p onclick="closeCategory()">X</p>
+</div>
+
     <div class ="bannerHead" id = "mainBanner">
-        <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
+        <video src="{% static 'Raul/Images/Merch Video V 5.mp4' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
             <figcaption> r a ù l  <br> <a href="#shop"><button>a click away from perfect arrangements</button></a></figcaption>
         </div>
@@ -327,6 +348,14 @@
 
     function closeStore(){
         document.getElementById("store").style.height = "0%";
+    }
+
+    function openCategory(){
+        document.getElementById("category").style.height = "15%";
+    }
+
+    function closeCategory(){
+        document.getElementById("category").style.height = "0%";
     }
 
 
