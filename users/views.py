@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+# from .forms import UserRegisterForm
+from .forms import CreateUserForm
 from .forms import UserRegisterForm
 from carts.models import Cart, CartItem
 from django.contrib.auth import get_user
@@ -12,6 +14,7 @@ from django.contrib.auth import get_user
 
 def register(request):
     if request.method == 'POST':
+        form = CreateUserForm(request.POST)
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
@@ -19,6 +22,7 @@ def register(request):
             messages.success(request, f'Your account has been created! You are now able to log in')
             return redirect('login')
     else:
+        form = CreateUserForm()
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
 
