@@ -18,13 +18,13 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: #c8aa00 !important;
+            background: #050505 !important;
         }
         .user_card {
             width: 350px;
             margin-top: auto;
             margin-bottom: auto;
-            background: #050505;
+            background: #c8aa00;
             position: relative;
             display: flex;
             justify-content: center;
@@ -113,7 +113,7 @@
                     </div>
                 </form>
             </div>
-
+                {{form.errors}}
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
                     Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
