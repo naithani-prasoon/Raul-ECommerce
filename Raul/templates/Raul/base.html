@@ -3,64 +3,6 @@
 <html lang="en">
 <head>
 
-    <!-- Zoom Effect-->
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .zoom {
-            transition: transform .2s;
-            margin: 0 auto;
-        }
-
-        .zoom:hover {
-            -ms-transform: scale(1.1); /* IE 9 */
-            -webkit-transform: scale(1.1); /* Safari 3-8 */
-            transform: scale(1.1);
-        }
-
-        .container1 {
-            padding-top: 100px;
-        }
-
-        .image_Hover {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        .overlay_image {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-
-        }
-
-        .container_Hover:hover .overlay_image {
-            opacity: 1;
-        }
-
-        .Hovertext {
-            color: black;
-            font-size: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-
-    </style>
     <!-- Header Nav Bar-->
     <title>Raul Retail</title>
     <meta charset="utf-8">
@@ -71,10 +13,10 @@
 <!-- Header Nav Bar-->
 <div class ="headers">
     <figure>
-        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%">
+        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
         {% if user.is_authenticated %}
             <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-            <a  href="#" onclick="openStore()"><p> Store </p></a>
+            <a  href="#" onclick="openCategory()"><p> Store </p></a>
             <div id ="store">
                 <p onclick="closeStore()" id="cross">
                     X
@@ -93,12 +35,11 @@
             <a href="{% url 'logout' %}"> <p>Logout </p></a>
             <a href="{% url 'cart' %}"> <p>Cart </p></a>
             <a href="{% url 'profile' %}"> <p>Profile</p></a>
-
-
-
         {% else %}
             <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-            <a href = "#" onclick="openStore()"><p> Store </p></a>
+
+
+            <a href = "#" onclick="openCategory()"><p> Store </p></a>
             <div id ="store">
                 <p onclick="closeStore()" id="cross">
                     X
@@ -181,7 +122,29 @@
 
         </ul>
     </nav>
+
 </div>
+
+<div id = "category">
+    <p>New Arrivals</p>
+
+    <p>Décorative Accessories</p>
+
+    <p>Tabletop</p>
+
+    <p>Furniture</p>
+
+    <p>Wall Art</p>
+
+    <p>Florals</p>
+
+    <p>Sale</p>
+
+    <p>Venue Bookings</p>
+
+    <p onclick="closeCategory()">X</p>
+</div>
+
 
 <div class="container">
     <div class = "container1">
@@ -227,6 +190,14 @@
     function closeStore(){
         document.getElementById("store").style.height = "0%";
     }
+    function openCategory(){
+        document.getElementById("category").style.height = "15%";
+    }
+
+    function closeCategory(){
+        document.getElementById("category").style.height = "0%";
+    }
+
 
 
 </script>

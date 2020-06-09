@@ -1,15 +1,19 @@
-
-
+{% extends "Raul/base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
 <head>
     <style>
         body {
-            background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+            background-color: blue;
             margin:0px;
             font-family: 'Ubuntu', sans-serif;
             background-size: 100% 110%;
         }
-        h1, h2, h3, h4, h5, h6, a {
-            margin:0; padding:0;
+        h2, h3, h4, h5, h6, a {
+            margin:0; padding:0px;
+        }
+        h1 {
+            padding:50px
         }
         .login {
             margin:0 auto;
@@ -142,5 +146,6 @@
     <div class="try-again">Error: Try again?</div>
 </div>
 </form>
+{% endblock %}
 
 
