@@ -34,7 +34,7 @@
                                             <div class="row">
                                                 <div class="col-md-5 product-name">
                                                     <div class="product-name">
-                                                        <a href="#">{{item.product}}</a>
+                                                        <a href="{% url 'Raul-single' item.product.slug %}">{{item.product}}</a>
                                                         <div class="product-info">
                                                             <div>Display: <span class="value">studded vase ${{item.product.price}}
 																	Metal Vase Bronze 5 H x 5 W</span></div>
