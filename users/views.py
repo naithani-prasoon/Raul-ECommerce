@@ -6,6 +6,8 @@ from .forms import CreateUserForm
 # from .forms import UserRegisterForm
 from carts.models import Cart, CartItem
 from django.contrib.auth import get_user
+from django.contrib.auth import get_user_model
+
 
 
 
@@ -34,8 +36,6 @@ def profile(request):
 
 
 
-def products(request):
-    return render(request, 'product_grid/index.html.html')
 
 
 # def search(request):

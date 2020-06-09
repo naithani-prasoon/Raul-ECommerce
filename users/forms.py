@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import UserAddress
+from django.contrib.auth import get_user_model
 
 # class UserRegisterForm(UserCreationForm):
 #     email = forms.EmailField(required=True)
@@ -16,17 +18,21 @@ from django.contrib.auth.forms import UserCreationForm
 #     first_name = forms.CharField(required=True)
 #     last_name = forms.CharField(required=True)
 
+class UserAddressForm(forms.ModelForm):
+    class Meta:
+        model = UserAddress
+        fields = ['address','address2','city','state','country', 'zipcode', 'billing','phone']
+
+
+
 
 class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
         widgets = {
-            'username' : forms.TextInput(attrs = {'placeholder': 'Username'}),
-            'email'    : forms.TextInput(attrs = {'placeholder': 'E-Mail'}),
-            'password1'    : forms.TextInput(attrs = {'placeholder': 'Password'}),
-            'password2'    : forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),
-
-
+            'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
+            'email': forms.TextInput(attrs = {'placeholder': 'E-Mail'}),
+            'password1': forms.TextInput(attrs = {'placeholder': 'Password'}),
+            'password2': forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),
         }
-

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'localflavor',
     'orders',
     'carts',
     'users.apps.UsersConfig',
@@ -156,5 +157,9 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'raulwebsite069@gmail.com'
 EMAIL_HOST_PASSWORD = 'afares123'
+
+
+STRIPE_SECRET_KEY = 'sk_test_51GsD2nI9Rm3HfGNqonjh2uh9V0KPseWbADFhdNKya3XJraXxZECIJCrTCMOSGOSXJRnayYaWLvPnN8rdanYP3ztN00XXhHy0N4'
+STRIPE_PUBLISHABLE_KEY ='pk_test_51GsD2nI9Rm3HfGNqnPminNT0FCz6OGN7vIjpfl09X0OGdpQB8Z1KXQ5YH6HJFHT1BawpbX9xMHbevPlrL1VNvGQt00KKjWw3hm'
 
 
