@@ -1,9 +1,10 @@
-html,body{
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+  html,body{
     margin:0;
     padding:0;
-    height:100%;
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    height:100%;font-family: 'Oswald', sans-serif;    overflow-x: hidden;
     background-color: #595959;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
@@ -52,6 +53,7 @@ figure a{
 
 figure a:hover{
     font-family: 'Roboto Condensed', sans-serif;
+    
 }
 
 figure p{
@@ -60,6 +62,7 @@ figure p{
 
 figure img{
     margin-left:4em;
+    cursor: pointer;
 }
 
 .bannerHead{
@@ -79,7 +82,7 @@ figure img{
 }
 
 .bannerHeading figcaption{
-    font-family: 'Roboto', serif; /*Change the font*/
+    font-family: 'Roboto', serif; 
     background-color: white;
 }
 
@@ -132,8 +135,7 @@ nav ul li a:hover{
     z-index: 1;
     display: grid;
     grid-template-columns: 47.5% 5% 47.5%;
-    font-family: 'Roboto', sans-serif;
-}
+    font-family: 'Oswald', sans-serif;}
 
 .loginText input[type=email]{
     background:transparent;
@@ -180,8 +182,7 @@ nav ul li a:hover{
 
 .loginText input[type=submit]{
     background:transparent;
-    font-family: 'Roboto', sans-serif;
-    outline: none;
+    font-family: 'Oswald', sans-serif;    outline: none;
     border: none;
     color: white;
     transition: 0.5s ease;
@@ -255,8 +256,7 @@ nav ul li a:hover{
 
 .signUp input[type=submit]{
     background:transparent;
-    font-family: 'Roboto', sans-serif;
-    outline: none;
+    font-family: 'Oswald', sans-serif;    outline: none;
     border: none;
     color: white;
     transition: 0.5s ease;
@@ -441,7 +441,7 @@ nav ul li a:hover{
         left:0;
         text-align: center;
         color:white;
-        font-family:'Roboto';
+        font-family: 'Oswald', sans-serif;
         font-weight:700;
     }
 
@@ -466,8 +466,8 @@ nav ul li a:hover{
 
     .furnitureHeading{
         font-size:3.5em;
-        font-family: 'Roboto Condensed';
-        margin-top:3%; 
+        font-family: 'Oswald', sans-serif;
+        margin-top:3%;
         color: white;
         opacity: 1;
         margin-right:auto;
@@ -477,12 +477,12 @@ nav ul li a:hover{
 
     .linksShop{
         font-size:0.1em;
-        font-family:'Roboto';
+        font-family: 'Oswald', sans-serif;
         font-weight: 700;
         letter-spacing: 0.18em;
         text-align: center;
         color: whitesmoke;
-        font-family: 'Roboto Condensed';
+        font-family: 'Oswald', sans-serif;
     }
 
     .linksShop a{
@@ -492,12 +492,12 @@ nav ul li a:hover{
 
     .linksShop a:hover{
         color: black;
-        font-family: 'Roboto Condensed';
+        font-family: 'Oswald', sans-serif;
     }
 
     .shopNow {
         font-size:0.2em;
-        font-family:'Roboto';
+        font-family: 'Oswald', sans-serif;
         letter-spacing: 2.2em;
         font-weight: 700;
         text-align: center;
@@ -542,7 +542,7 @@ nav ul li a:hover{
         width:80%;
         padding: 16px 32px 16px 32px;
         font-size: 5em;
-        font-family: 'Roboto Condensed';
+        font-family: 'Oswald', sans-serif;
         background-color: white;
         color:black;  
         display: none;
@@ -676,7 +676,7 @@ nav ul li a:hover{
         left:0;
         text-align: center;
         color:white;
-        font-family:'Roboto';
+        font-family: 'Oswald', sans-serif;
         font-weight:700;
     }
 
@@ -1345,6 +1345,34 @@ nav ul li a:hover{
     #store #cross:hover{
         cursor: pointer;
         color:orange;
+    }
+
+    #category{
+        width: 100%;
+        height:15%;
+        overflow: hidden;
+        background-color: #595959;
+        position: fixed;
+        left:0;
+        top:0;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        transition: 0.4s ease-in-out;
+        z-index:100;
+        justify-content: center;
+    }
+
+    #category p{
+        padding:30px;
+    }
+
+    #category p:hover{
+        font-family: 'Roboto Condensed',sans-serif;
+        letter-spacing: 0.05em;
+        cursor: pointer;
     }
 
     .bannerHead{    

@@ -11,15 +11,22 @@ from django.contrib.auth.forms import UserCreationForm
 #         model = User
 #         fields = ['username','email','password1','password2']
 # fields = ['username','first_name','last_name','email','password1','password2']
-class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField(required=True)
-    first_name = forms.CharField(required=True)
-    last_name = forms.CharField(required=True)
+# class UserRegisterForm(UserCreationForm):
+#     email = forms.EmailField(required=True)
+#     first_name = forms.CharField(required=True)
+#     last_name = forms.CharField(required=True)
 
 
 class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
-        fields = ['username','first_name','last_name','email','password1','password2']
+        widgets = {
+            'username' : forms.TextInput(attrs = {'placeholder': 'Username'}),
+            'email'    : forms.TextInput(attrs = {'placeholder': 'E-Mail'}),
+            'password1'    : forms.TextInput(attrs = {'placeholder': 'Password'}),
+            'password2'    : forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),
+
+
+        }
 
