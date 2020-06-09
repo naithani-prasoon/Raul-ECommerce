@@ -41,13 +41,6 @@ urlpatterns = [
     path('s/', views.search, name='search'),
     path('cart/<str:slug>/', cart_views.update_cart, name='update_cart'),
     path('cart/', cart_views.view, name='cart'),
-
-
-
-                  #path('s/', auth_views.resultsView.as_view(template_name='users/results.html'), name='search'),
-
-
-
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

@@ -65,51 +65,123 @@
     <title>Raul Retail</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/design.css' %}">    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/main.css' %}">    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <body>
 
 <!-- Header Nav Bar-->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="container">
-        <a href="{% url 'Raul-Home' %}" class="navbar-brand"><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="8%"></a>
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-            <span class="menu-icon-bar"></span>
-        </button>
+<div class ="headers">
+    <figure>
+        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%">
+        {% if user.is_authenticated %}
+            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+            <a  href="#" onclick="openStore()"><p> Store </p></a>
+            <div id ="store">
+                <p onclick="closeStore()" id="cross">
+                    X
+                </p>
+                <p>
+                    cafe flor
+                </p>
+                <p>
+                    raul
+                </p>
 
-        <div id="main-nav" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link">Home</a></li>
-                <li><a href="{% url 'Raul-SecondHome' %}" class="nav-item nav-link">Other</a></li>
-                <li><a href="{% url 'Raul-Home' %}" class="nav-item nav-link">Home3</a></li>
-                <li class="dropdown">
-                    <a href="#" class="nav-item nav-link" data-toggle="dropdown">Store</a>
-                    <div class="dropdown-menu">
-                        <a href="{% url 'Raul-SecondHome' %}" class="dropdown-item">Second Homepage</a>
-                        <a href="#" class="dropdown-item">Blah</a>
-                        <a href="#" class="dropdown-item">Blah</a>
-                        <a href="#" class="dropdown-item">Blah</a>
-                        <a href="#" class="dropdown-item">Blah</a>
-                    </div>
-                    {% if user.is_authenticated %}
-                <li><a href="{% url 'profile' %}" class="nav-item nav-link">Profile</a></li>
-                <li><a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></li>
-                {% else %}
-                <li><a href="{% url 'register' %}" class="nav-item nav-link">Register</a></li>
-                <li><a href="{% url 'login' %}" class="nav-item nav-link">Login</a></li>
-                <li><a href="#" class="nav-item nav-link">Cart</a></li>
-                {% endif %}
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
 
-            </ul>
+
+
+            </div>
+            <a href="{% url 'logout' %}"> <p>Logout </p></a>
+            <a href="{% url 'cart' %}"> <p>Cart </p></a>
+            <a href="{% url 'profile' %}"> <p>Profile</p></a>
+
+
+
+        {% else %}
+            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+            <a href = "#" onclick="openStore()"><p> Store </p></a>
+            <div id ="store">
+                <p onclick="closeStore()" id="cross">
+                    X
+                </p>
+
+                <p>
+                    cafe flor
+                </p>
+
+                <p>
+                    raul
+                </p>
+
+                <p>
+                    third
+                </p>
+
+            </div>
+            <a href="{% url 'register' %}"><p> Register </p></a>
+            <a href="{% url 'login' %}"> <p>Login </p></a>
+            <a href="{% url 'cart' %}"> <p>Cart </p></a>
+
+
+        {% endif %}
+
+
+        <div class ="loginSlide" id="login">
+            <div class="loginText">
+                <p>L O G I N</p>
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="submit" placeholder="Login">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+                <a>Forgot Password?</a>
+            </div>
+            <div class ="arrow">
+                <img src="{% static 'Raul/Images/arrowDown.png' %}" onclick="closeLogin()" draggable="false" id="arrow">
+            </div>
+            <div class="signUp">
+                <p> S I G N - U P </p>
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="submit" placeholder="Login">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+                <a>Forgot Password?</a>
+            </div>
         </div>
-    </div>
-</nav>
+    </figure>
+
+    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
+
+    <nav>
+        <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+        <ul id="contentHam">
+
+            <li class="exitButton">
+                <img src="{% static 'Raul/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
+            </li>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Store</a>
+            </li>
+            <li>
+                <a href="{% url 'register' %}">Register</a>
+            </li>
+            <li>
+                <a href="{% url 'register' %}">Login</a>
+            </li>
+            <li>
+                <a href="{% url 'cart' %}">Cart</a>
+            </li>
+
+
+
+        </ul>
+    </nav>
+</div>
 
 <div class="container">
     <div class = "container1">
@@ -124,6 +196,39 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+<script>
+
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll > 100) {
+                $(".headers").css("background" , "header");
+            }
+
+            else{
+                $(".headers").css("background" , "transparent");
+            }
+        })
+    })
+
+    function openNav() {
+        document.getElementById("contentHam").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("contentHam").style.height = "0%";
+    }
+
+    function openStore(){
+        document.getElementById("store").style.height = "50%";
+    }
+
+    function closeStore(){
+        document.getElementById("store").style.height = "0%";
+    }
+
+
 </script>
 </body>
 </html>

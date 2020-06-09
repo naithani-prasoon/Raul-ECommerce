@@ -1,13 +1,11 @@
-<!--
+
 {% extends "Raul/base.html" %}
--->
-<!--{% block content %}
-{% load crispy_forms_tags %}-->
+{% block content %}
+{% load crispy_forms_tags %}
 
 <head>
     <style>
         body {
-            background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
             margin:0px;
             font-family: 'Ubuntu', sans-serif;
             background-size: 100% 110%;
@@ -106,7 +104,7 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
 
-<form method="post">
+<form method="POST">
     {{ form.non_field_errors }}
     <div class="login">
     <div class="login-header">
@@ -142,9 +140,7 @@
         <h6 class="no-access">Can't access your account?</h6>
     </div>
 </div>
-<div class="error-page">
-    <div class="try-again">Error: Try again?</div>
-</div>
+
 </form>
 
 
