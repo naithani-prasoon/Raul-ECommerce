@@ -18,12 +18,11 @@ from django.contrib.auth import get_user_model
 #     first_name = forms.CharField(required=True)
 #     last_name = forms.CharField(required=True)
 
+
 class UserAddressForm(forms.ModelForm):
     class Meta:
         model = UserAddress
         fields = ['address','address2','city','state','country', 'zipcode', 'billing','phone']
-
-
 
 
 class CreateUserForm(UserCreationForm):

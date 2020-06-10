@@ -2,7 +2,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-    <form method="POST" action="">
+    <form method="POST" action="{% url 'ajax-user-address' %}?next=checkout">
         {% csrf_token %}
         {{ address_form|crispy}}
         <input type="submit" class="btn btn-default" value="Add Address">

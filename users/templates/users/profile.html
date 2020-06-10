@@ -6,5 +6,8 @@
     {% for user in userorders %}
         {{ user.product }}
     {% endfor %}
+    {% for userAdd in userAddress %}
+        {{ userAdd.state}}
+    {% endfor %}
 {% endblock %}
 
