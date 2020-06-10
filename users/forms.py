@@ -26,7 +26,7 @@ class UserAddressForm(forms.ModelForm):
 
 
 class CreateUserForm(UserCreationForm):
-    email= forms.EmailField(label="Your Email")
+    email= forms.EmailField(label="Email")
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
