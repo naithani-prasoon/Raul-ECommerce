@@ -26,6 +26,7 @@ class UserAddressForm(forms.ModelForm):
 
 
 class CreateUserForm(UserCreationForm):
+    email= forms.EmailField(label="Your Email")
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
@@ -35,3 +36,11 @@ class CreateUserForm(UserCreationForm):
             'password1': forms.TextInput(attrs = {'placeholder': 'Password'}),
             'password2': forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),
         }
+
+    def clean_email(self):
+        email= self.cleaned_data.get("email")
+        user_count= User.objects.filter(email=email).count()
+        print(user_count)
+        if user_count > 0:
+            raise forms.ValidationError("This email has already been used")
+        return email
