@@ -43,7 +43,6 @@ def checkout(request):
 
     try:
         address_added = request.GET.get("address_added")
-        print(address_added)
     except:
         address_added = None
     if address_added is None:
@@ -52,6 +51,8 @@ def checkout(request):
         address_form = None
 
     current_addresses= UserAddress.objects.filter(user=User)
+    billing_addresses= UserAddress.objects.get_billing_addresses(user=User)
+    print(billing_addresses)
 
     if new_order.status == "Finished":
         #cart.delete
@@ -61,6 +62,7 @@ def checkout(request):
 
     context = {"address_form":address_form,
                "current_addresses": current_addresses,
+               "billing_addresses": billing_addresses,
                }
     template = "Checkout.html"
     return render(request, 'orders/Checkout.html', context)

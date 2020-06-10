@@ -1,205 +1,205 @@
-<!--{% load static %}-->
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<!--    &lt;!&ndash; Header Nav Bar&ndash;&gt;-->
-<!--    <title>Raul Retail</title>-->
-<!--    <meta charset="utf-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
-<!--    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/main.css' %}">    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />-->
-<!--<body>-->
+    <!-- Header Nav Bar-->
+    <title>Raul Retail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/main.css' %}">    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<body>
 
-<!--&lt;!&ndash; Header Nav Bar&ndash;&gt;-->
-<!--<div class ="headers">-->
-<!--    <figure>-->
-<!--        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >-->
-<!--        {% if user.is_authenticated %}-->
-<!--            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>-->
-<!--            <a  href="#" onclick="openCategory()"><p> Store </p></a>-->
-<!--            <div id ="store">-->
-<!--                <p onclick="closeStore()" id="cross">-->
-<!--                    X-->
-<!--                </p>-->
-<!--                <p>-->
-<!--                    cafe flor-->
-<!--                </p>-->
-<!--                <p>-->
-<!--                    raul-->
-<!--                </p>-->
-
-
-
-
-<!--            </div>-->
-<!--            <a href="{% url 'logout' %}"> <p>Logout </p></a>-->
-<!--            <a href="{% url 'cart' %}"> <p>Cart </p></a>-->
-<!--            <a href="{% url 'profile' %}"> <p>Profile</p></a>-->
-<!--        {% else %}-->
-<!--            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>-->
-
-
-<!--            <a href = "#" onclick="openCategory()"><p> Store </p></a>-->
-<!--            <div id ="store">-->
-<!--                <p onclick="closeStore()" id="cross">-->
-<!--                    X-->
-<!--                </p>-->
-
-<!--                <p>-->
-<!--                    cafe flor-->
-<!--                </p>-->
-
-<!--                <p>-->
-<!--                    raul-->
-<!--                </p>-->
-
-<!--                <p>-->
-<!--                    third-->
-<!--                </p>-->
-
-<!--            </div>-->
-<!--            <a href="{% url 'register' %}"><p> Register </p></a>-->
-<!--            <a href="{% url 'login' %}"> <p>Login </p></a>-->
-<!--            <a href="{% url 'cart' %}"> <p>Cart </p></a>-->
-
-
-<!--        {% endif %}-->
-
-
-<!--        <div class ="loginSlide" id="login">-->
-<!--            <div class="loginText">-->
-<!--                <p>L O G I N</p>-->
-<!--                <input type="email" placeholder="Email ID">-->
-<!--                <input type="password" placeholder="Password">-->
-<!--                <input type="submit" placeholder="Login">-->
-<!--                <label>-->
-<!--                    <input type="checkbox" checked="checked" name="remember"> Remember Me-->
-<!--                </label>-->
-<!--                <a>Forgot Password?</a>-->
-<!--            </div>-->
-<!--            <div class ="arrow">-->
-<!--                <img src="{% static 'Raul/Images/arrowDown.png' %}" onclick="closeLogin()" draggable="false" id="arrow">-->
-<!--            </div>-->
-<!--            <div class="signUp">-->
-<!--                <p> S I G N - U P </p>-->
-<!--                <input type="email" placeholder="Email ID">-->
-<!--                <input type="password" placeholder="Password">-->
-<!--                <input type="submit" placeholder="Login">-->
-<!--                <label>-->
-<!--                    <input type="checkbox" checked="checked" name="remember"> Remember Me-->
-<!--                </label>-->
-<!--                <a>Forgot Password?</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </figure>-->
-
-<!--    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>-->
-
-<!--    <nav>-->
-<!--        <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">-->
-<!--        <ul id="contentHam">-->
-
-<!--            <li class="exitButton">-->
-<!--                <img src="{% static 'Raul/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="#">Home</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="#">Store</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="{% url 'register' %}">Register</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="{% url 'register' %}">Login</a>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <a href="{% url 'cart' %}">Cart</a>-->
-<!--            </li>-->
+<!-- Header Nav Bar-->
+<div class ="headers">
+    <figure>
+        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
+        {% if user.is_authenticated %}
+            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+            <a  href="#" onclick="openCategory()"><p> Store </p></a>
+            <div id ="store">
+                <p onclick="closeStore()" id="cross">
+                    X
+                </p>
+                <p>
+                    cafe flor
+                </p>
+                <p>
+                    raul
+                </p>
 
 
 
-<!--        </ul>-->
-<!--    </nav>-->
 
-<!--</div>-->
-
-<!--<div id = "category">-->
-<!--    <p>New Arrivals</p>-->
-
-<!--    <p>Décorative Accessories</p>-->
-
-<!--    <p>Tabletop</p>-->
-
-<!--    <p>Furniture</p>-->
-
-<!--    <p>Wall Art</p>-->
-
-<!--    <p>Florals</p>-->
-
-<!--    <p>Sale</p>-->
-
-<!--    <p>Venue Bookings</p>-->
-
-<!--    <p onclick="closeCategory()">X</p>-->
-<!--</div>-->
+            </div>
+            <a href="{% url 'logout' %}"> <p>Logout </p></a>
+            <a href="{% url 'cart' %}"> <p>Cart </p></a>
+            <a href="{% url 'profile' %}"> <p>Profile</p></a>
+        {% else %}
+            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
 
 
-<!--<div class="container">-->
-<!--    <div class = "container1">-->
-<!--        {% block content %}{% endblock %}-->
-<!--    </div>-->
-<!--</div>-->
+            <a href = "#" onclick="openCategory()"><p> Store </p></a>
+            <div id ="store">
+                <p onclick="closeStore()" id="cross">
+                    X
+                </p>
+
+                <p>
+                    cafe flor
+                </p>
+
+                <p>
+                    raul
+                </p>
+
+                <p>
+                    third
+                </p>
+
+            </div>
+            <a href="{% url 'register' %}"><p> Register </p></a>
+            <a href="{% url 'login' %}"> <p>Login </p></a>
+            <a href="{% url 'cart' %}"> <p>Cart </p></a>
 
 
-<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>-->
-<!--<script src="https://unpkg.com/aos@next/dist/aos.js"></script>-->
-<!--<script>-->
-<!--    AOS.init();-->
-<!--</script>-->
-<!--<script>-->
-
-<!--    $(document).ready(function(){-->
-<!--        $(window).scroll(function(){-->
-<!--            var scroll = $(window).scrollTop();-->
-<!--            if (scroll > 100) {-->
-<!--                $(".headers").css("background" , "header");-->
-<!--            }-->
-
-<!--            else{-->
-<!--                $(".headers").css("background" , "transparent");-->
-<!--            }-->
-<!--        })-->
-<!--    })-->
-
-<!--    function openNav() {-->
-<!--        document.getElementById("contentHam").style.height = "100%";-->
-<!--    }-->
-
-<!--    function closeNav() {-->
-<!--        document.getElementById("contentHam").style.height = "0%";-->
-<!--    }-->
-
-<!--    function openStore(){-->
-<!--        document.getElementById("store").style.height = "50%";-->
-<!--    }-->
-
-<!--    function closeStore(){-->
-<!--        document.getElementById("store").style.height = "0%";-->
-<!--    }-->
-<!--    function openCategory(){-->
-<!--        document.getElementById("category").style.height = "15%";-->
-<!--    }-->
-
-<!--    function closeCategory(){-->
-<!--        document.getElementById("category").style.height = "0%";-->
-<!--    }-->
+        {% endif %}
 
 
+        <div class ="loginSlide" id="login">
+            <div class="loginText">
+                <p>L O G I N</p>
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="submit" placeholder="Login">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+                <a>Forgot Password?</a>
+            </div>
+            <div class ="arrow">
+                <img src="{% static 'Raul/Images/arrowDown.png' %}" onclick="closeLogin()" draggable="false" id="arrow">
+            </div>
+            <div class="signUp">
+                <p> S I G N - U P </p>
+                <input type="email" placeholder="Email ID">
+                <input type="password" placeholder="Password">
+                <input type="submit" placeholder="Login">
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember Me
+                </label>
+                <a>Forgot Password?</a>
+            </div>
+        </div>
+    </figure>
 
-<!--</script>-->
-<!--</body>-->
-<!--</html>-->
+    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
+
+    <nav>
+        <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+        <ul id="contentHam">
+
+            <li class="exitButton">
+                <img src="{% static 'Raul/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
+            </li>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Store</a>
+            </li>
+            <li>
+                <a href="{% url 'register' %}">Register</a>
+            </li>
+            <li>
+                <a href="{% url 'register' %}">Login</a>
+            </li>
+            <li>
+                <a href="{% url 'cart' %}">Cart</a>
+            </li>
+
+
+
+        </ul>
+    </nav>
+
+</div>
+
+<div id = "category">
+    <p>New Arrivals</p>
+
+    <p>Décorative Accessories</p>
+
+    <p>Tabletop</p>
+
+    <p>Furniture</p>
+
+    <p>Wall Art</p>
+
+    <p>Florals</p>
+
+    <p>Sale</p>
+
+    <p>Venue Bookings</p>
+
+    <p onclick="closeCategory()">X</p>
+</div>
+
+
+<div class="container">
+    <div class = "container1">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+            if (scroll > 100) {
+                $(".headers").css("background" , "header");
+            }
+
+            else{
+                $(".headers").css("background" , "transparent");
+            }
+        })
+    })
+
+    function openNav() {
+        document.getElementById("contentHam").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("contentHam").style.height = "0%";
+    }
+
+    function openStore(){
+        document.getElementById("store").style.height = "50%";
+    }
+
+    function closeStore(){
+        document.getElementById("store").style.height = "0%";
+    }
+    function openCategory(){
+        document.getElementById("category").style.height = "15%";
+    }
+
+    function closeCategory(){
+        document.getElementById("category").style.height = "0%";
+    }
+
+
+
+</script>
+</body>
+</html>

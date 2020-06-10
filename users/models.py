@@ -6,6 +6,12 @@ from django.contrib.auth.signals import user_logged_in
 
 # Create your models here.
 
+class UserAddressManager(models.Manager):
+    def get_billing_addresses(self,user):
+        return super(UserAddressManager, self).filter(billing=True).filter(user=user)
+
+
+
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
@@ -27,9 +33,11 @@ class UserAddress(models.Model):
     def __str__(self):
         return str(self.user)
 
+
     def get_address(self):
         return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
 
+    objects = UserAddressManager()
 
 
 class UserStripe(models.Model):
