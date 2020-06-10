@@ -1,12 +1,13 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # from .forms import UserRegisterForm
-from .forms import CreateUserForm
+from .forms import CreateUserForm, UserAddressForm
 # from .forms import UserRegisterForm
 from carts.models import Cart, CartItem
-from orders.models import Order
 from django.contrib.auth import get_user
+from django.urls import reverse
+from users.models import UserAddress
 from django.contrib.auth import get_user_model
 
 
@@ -31,14 +32,27 @@ def register(request):
 @login_required
 def profile(request):
     User = get_user(request)
-    UserOrders = Cart.objects.filter(user=User)
-    for i in UserOrders.all():
-        print(i.user)
-    for x in i.cartitem_set.all():
-        print(x.product)
-
-    context = {"UserOrders":UserOrders}
+    UserOrders = CartItem.objects.filter(user=User)
+    userAddress = UserAddress.objects.filter(user=User)
+    context = {"userorders":UserOrders,"userAddress":userAddress}
     return render(request, 'users/profile.html',context)
+
+def add_address(request):
+    print(request.GET)
+    try:
+        next_page = request.GET.get("next")
+    except:
+        next_page = None
+    if request.method == "POST":
+        form = UserAddressForm(request.POST)
+        if form.is_valid():
+            new_address = form.save(commit=False)
+            new_address.user = request.user
+            new_address.save()
+            if next_page is not None:
+                return HttpResponseRedirect(reverse(next_page) + "?address_added=True")
+
+
 
 
 

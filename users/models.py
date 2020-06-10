@@ -6,27 +6,38 @@ from django.contrib.auth.signals import user_logged_in
 
 # Create your models here.
 
+class UserAddressManager(models.Manager):
+    def get_billing_addresses(self,user):
+        return super(UserAddressManager, self).filter(billing=True).filter(user=user)
+
+
+
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 class UserAddress(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
-    address = models.CharField(max_length=120)
-    address2 = models.CharField(max_length=120)
-    address3 = models.CharField(max_length=120)
-    city = models.CharField(max_length=120)
-    state = models.CharField(max_length=120)
-    country = models.CharField(max_length=120)
-    zipcode = models.CharField(max_length=120)
-    phone = models.CharField(max_length=120)
-    shipping = models.BooleanField(max_length=120)
-    billing = models.BooleanField(max_length=120)
-    time_stamp = models.DateTimeField(max_length=120)
-    updated = models.DateTimeField(max_length=120)
+    address = models.CharField(max_length=120,null=True)
+    address2 = models.CharField(max_length=120,null=False)
+    address3 = models.CharField(max_length=120,null=True)
+    city = models.CharField(max_length=120,null=True)
+    state = models.CharField(max_length=120,null=True)
+    country = models.CharField(max_length=120,null=True)
+    zipcode = models.CharField(max_length=120,null=True)
+    phone = models.CharField(max_length=120,null=True)
+    shipping = models.BooleanField(max_length=120,null=True)
+    billing = models.BooleanField(max_length=120,null=True)
+    time_stamp = models.DateTimeField(max_length=120,null=True)
+    updated = models.DateTimeField(max_length=120,null=True)
 
     def __str__(self):
         return str(self.user)
 
+
+    def get_address(self):
+        return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
+
+    objects = UserAddressManager()
 
 
 class UserStripe(models.Model):

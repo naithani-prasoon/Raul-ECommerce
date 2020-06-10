@@ -3,13 +3,11 @@
 {% load crispy_forms_tags %}
     <h1>{{user.username}}</h1>
     <h1>{{user.email}}</h1>
-    {% for item in UserOrders.all %}
-        {% for prod in item.cartitem_set.all %}
-            {{ prod }}
-            {{ prod.product.price}}
-            {{ prod.quantity}}
-        {% endfor %}
+    {% for user in userorders %}
+        {{ user.product }}
     {% endfor %}
-
+    {% for userAdd in userAddress %}
+        {{ userAdd.state}}
+    {% endfor %}
 {% endblock %}
 
