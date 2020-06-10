@@ -13,16 +13,22 @@ def view(request):
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
+
+
     except:
         the_id= None
 
+
+
     if the_id:
         context = {"cart": cart}
+        print("Hi")
     else:
         empty_message = "Your cart is empty, go shop"
         context = {"empty" : True, "empty_message" : empty_message}
 
     template = "Raul/cart.html"
+    print("Hello")
     return render(request, template, context)
 
 def update_cart(request,slug):
@@ -77,7 +83,7 @@ def update_cart(request,slug):
     #item.line_total = float(item.product.price) * (item.quantity)
     for item in cart.cartitem_set.all():
         if(item.quantity != None):
-            print(item.quantity)
+            print(item.product)
             new_total += float(item.product.price) * (item.quantity)
             line_total = float(item.product.price) * (item.quantity)
             item.line_total = line_total
@@ -90,6 +96,10 @@ def update_cart(request,slug):
 
     cart.save()
     return redirect(reverse("cart"))
+
+
+
+
 
 
 

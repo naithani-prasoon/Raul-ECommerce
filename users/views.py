@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import CreateUserForm
 # from .forms import UserRegisterForm
 from carts.models import Cart, CartItem
+from orders.models import Order
 from django.contrib.auth import get_user
 from django.contrib.auth import get_user_model
 
@@ -30,8 +31,13 @@ def register(request):
 @login_required
 def profile(request):
     User = get_user(request)
-    UserOrders = CartItem.objects.filter(user=User)
-    context = {"userorders":UserOrders}
+    UserOrders = Cart.objects.filter(user=User)
+    for i in UserOrders.all():
+        print(i.user)
+    for x in i.cartitem_set.all():
+        print(x.product)
+
+    context = {"UserOrders":UserOrders}
     return render(request, 'users/profile.html',context)
 
 

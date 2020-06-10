@@ -20,10 +20,11 @@ def orders(request):
     return render(request, template, context)
 @login_required
 def checkout(request):
+    request.session.set_expiry(3)
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
-        print(cart)
+
     except:
         the_id= None
         return HttpResponseRedirect(reverse("cart"))
@@ -45,10 +46,13 @@ def checkout(request):
         new_address.save
 
     if new_order.status == "Finished":
-        #cart.delete
-        del request.session['cart_id']
-        del request.session['items_total']
+        cart.delete()
+
+        ##del  request.session['cart_id']
+        ##del request.session['items_total']
         return HttpResponseRedirect(reverse("cart"))
+
+
 
     context = {"address_form":address_form}
     template = "Checkout.html"

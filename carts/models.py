@@ -16,15 +16,13 @@ class CartItem(models.Model):
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
-    def __unicode__(self):
-        try:
-            return str(self.cart.id)
-        except:
+    def __str__(self):
             return (self.product.title)
 
 
 
 class Cart(models.Model):
+    cart_items = models.ManyToManyField(CartItem,related_name="CARTITEMS")
     user = models.ForeignKey(User,blank=True,null=True,on_delete=models.CASCADE)
     total = models.DecimalField(max_digits=100, decimal_places=2, default=1.00)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
