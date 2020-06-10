@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="address">
+    <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -155,6 +154,7 @@
       <workItem from="1591456604475" duration="17698000" />
       <workItem from="1591626302861" duration="5250000" />
       <workItem from="1591719084242" duration="1075000" />
+      <workItem from="1591801144689" duration="6308000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -324,7 +324,28 @@
       <option name="project" value="LOCAL" />
       <updated>1591758337763</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="shipping address and billing">
+      <created>1591761062501</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1591761062501</updated>
+    </task>
+    <task id="LOCAL-00026" summary="email unique and required">
+      <created>1591804405275</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1591804405275</updated>
+    </task>
+    <task id="LOCAL-00027" summary="email unique and required2">
+      <created>1591804454945</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1591804454945</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +381,10 @@
     <MESSAGE value="simple product page started" />
     <MESSAGE value="register page started, still ugly" />
     <MESSAGE value="address" />
-    <option name="LAST_COMMIT_MESSAGE" value="address" />
+    <MESSAGE value="shipping address and billing" />
+    <MESSAGE value="email unique and required" />
+    <MESSAGE value="email unique and required2" />
+    <option name="LAST_COMMIT_MESSAGE" value="email unique and required2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">
