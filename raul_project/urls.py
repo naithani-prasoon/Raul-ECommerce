@@ -44,7 +44,7 @@ urlpatterns = [
     path('checkout/', orders.checkout, name='checkout'),
     path('orders/', orders.orders, name='user_orders'),
     path('cart/', cart_views.view, name='cart'),
-    path('ajax/add_user_address/',user_views.add_address, name='ajax-user-address'),
+    path('ajax/add_user_address/',user_views.add_address, name='ajax_add_user_address'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

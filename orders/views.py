@@ -7,19 +7,19 @@ from django.contrib.auth.decorators import login_required
 from carts.models import Cart
 from .models import Order
 from .utilis import id_generator
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
-User = get_user_model()
 
 
 def orders(request):
     context = {}
     template = "users/user.html"
-
     return render(request, template, context)
+
 @login_required
 def checkout(request):
+    User = get_user(request)
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
@@ -38,9 +38,12 @@ def checkout(request):
     except:
         return HttpResponseRedirect("cart")
 
+    address_form = UserAddressForm()
+
 
     try:
         address_added = request.GET.get("address_added")
+        print(address_added)
     except:
         address_added = None
     if address_added is None:
@@ -48,7 +51,7 @@ def checkout(request):
     else:
         address_form = None
 
-
+    current_addresses= UserAddress.objects.filter(user=User)
 
     if new_order.status == "Finished":
         #cart.delete
@@ -56,6 +59,8 @@ def checkout(request):
         del request.session['items_total']
         return HttpResponseRedirect(reverse("cart"))
 
-    context = {"address_form":address_form}
+    context = {"address_form":address_form,
+               "current_addresses": current_addresses,
+               }
     template = "Checkout.html"
     return render(request, 'orders/Checkout.html', context)

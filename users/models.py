@@ -27,6 +27,9 @@ class UserAddress(models.Model):
     def __str__(self):
         return str(self.user)
 
+    def get_address(self):
+        return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
+
 
 
 class UserStripe(models.Model):
