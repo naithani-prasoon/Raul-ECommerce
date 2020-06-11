@@ -17,9 +17,6 @@ a{
     text-decoration: none;
 }
 
-footer{
-    background-color: #ADADAD;
-}
 
 .headers{
     position: fixed;
@@ -38,7 +35,7 @@ footer{
     top:0;
     overflow: hidden;
     z-index: 99;
-    background: #595959;
+    background: yellow;
 }
 
 figure{
@@ -193,29 +190,7 @@ nav ul li a:hover{
     to   { opacity: 1; }
 }
 
-@media only screen and (max-width:640px){
-
-    html,body{
-        margin:0;
-        padding:0;
-        height:100%;font-family: 'Oswald', sans-serif;    
-        overflow-x: hidden;
-        background-color: #595959;
-        scroll-behavior: smooth;
-    }
-    
-
-    body::-webkit-scrollbar{
-        display: none;
-    }
-
-    #store{
-        display: none;
-    }
-
-    #category{
-        display: none;
-    }
+@media only screen and (max-width:640px){    
     
     .headers{
         display: grid;
@@ -243,10 +218,6 @@ nav ul li a:hover{
         padding:50px 0px 0px 0px;
     }
 
-    nav ul::-webkit-scrollbar{
-        display: none;
-    }
-
     .exitButton{
         margin-bottom: 1em;
         margin: 20% 20% 0% 20%;
@@ -257,9 +228,6 @@ nav ul li a:hover{
         width: 15px;
     }
 
-    figure{
-        display: none;
-    }
 
     .bannerHead{    
         height: 100vh;
@@ -268,10 +236,6 @@ nav ul li a:hover{
         position: relative;
         background-image: url("Images/7.jpg");
         backface-visibility: hidden;
-    }
-
-    .bannerHead video {
-        display: none;
     }
 
     .bannerHeading figcaption{
@@ -366,14 +330,6 @@ nav ul li a:hover{
         font-size: 15px;
     }
 
-    .linksShop{
-        display: none;
-    }
-
-    .shopNow {
-        display: none;
-    }
-
     .furnitureImages{
         display: grid;
         grid-template-columns: auto auto;
@@ -386,6 +342,39 @@ nav ul li a:hover{
     }
 
     .textMiddle{
+        display: none;
+    }
+
+    #store{
+        display: none;
+    }
+
+    #category{
+        display: none;
+    }
+
+    
+    .linksShop{
+        display: none;
+    }
+
+    .shopNow {
+        display: none;
+    }
+
+    .bannerHead video {
+        display: none;
+    }
+
+    figure{
+        display: none;
+    }
+
+    nav ul::-webkit-scrollbar{
+        display: none;
+    }
+
+    body::-webkit-scrollbar{
         display: none;
     }
 }
@@ -1328,6 +1317,10 @@ nav ul li a:hover{
         opacity: 1;
     }
 
+    .furnitureHeading .seeMore{
+        display: none;
+    }
+
     .linksShop{
         font-size:0.1em;
         font-family:'Roboto';
@@ -1372,32 +1365,7 @@ nav ul li a:hover{
         filter: grayscale(40%) blur(1px);
     }
     
-    .textMiddle{
-        transition: 0.3s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        top:50%;
-        right:10%;
-        text-align: center; 
-        z-index: 1;
-    }
-
-    .textInfo{
-        width:80%;
-        padding: 16px 32px 16px 32px;
-        font-size: 5em;
-        font-family: 'Roboto Condensed';
-        background-color: white;
-        color:black;  
-        
-    }
-
-    .furnitureImages:hover .textMiddle{
-        opacity: 1;
-        cursor: pointer;
-        box-shadow: 0px 0px 10px 1px black;
-    }
-
+    
     #Lighting{
         letter-spacing: 0.1em;
     }
