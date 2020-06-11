@@ -21,6 +21,7 @@ def view(request):
              cart = Cart.objects.get(id=the_id)
         except:
             the_id = None
+            ali = "commit"
 
 
         try:
