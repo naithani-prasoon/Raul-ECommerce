@@ -12,6 +12,9 @@ from .models import Cart
 
 def view(request):
     User = get_user(request)
+
+
+
     if User.is_authenticated:
         template = "Raul/cart.html"
 
@@ -21,25 +24,16 @@ def view(request):
              cart = Cart.objects.get(id=the_id)
         except:
             the_id = None
-            ali = "commit"
-
-
+       
         try:
-            if(User.is_authenticated):
-                cart = Cart.objects.get(user=User)
+            cart = Cart.objects.get(user=User)
+
         except Cart.objects.get(user=User).DoesNotExist:
             pass
+
         else:
             if(User.is_authenticated):
                 request.session['cart_id'] = cart.id
-                context= {'cart':cart}
-                return render(request, template, context)
-
-        if the_id == None:
-            empty_message = "Your cart is empty, go shop"
-            context = {"empty" : True, "empty_message" : empty_message}
-            return render(request, template, context)
-
 
         try:
             cart = Cart.objects.get(id=request.session['cart_id'])
@@ -48,16 +42,11 @@ def view(request):
 
         else:
             if not cart.user and request.user.is_authenticated:
-                cart.user = request.user
+                cart.user = User
                 cart.save()
                 context = {'cart':cart}
                 return render(request, template, context)
 
-
-        cart = Cart.objects.new(request.user)
-        request.session['cart_id'] = cart.id
-        context= {'cart':cart}
-        return render(request, template, context)
 
     else:
         try:
@@ -68,10 +57,10 @@ def view(request):
         if the_id:
             context = {"cart": cart}
         else:
-            empty_message = "Your cart is empty, go shop"
-            context = {"empty" : True, "empty_message" : empty_message}
+        empty_message = "Your cart is empty, go shop"
 
-    template = "Raul/cart.html"
+     template = "Raul/cart.html"
+    context = {"empty" : True, "empty_message" : empty_message}
     return render(request, template, context)
 
 def update_cart(request,slug):

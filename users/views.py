@@ -17,12 +17,17 @@ from django.contrib.auth import get_user_model
 
 
 def register(request):
+    request.session.set_expiry(3000000)
+    User = get_user(request)
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account has been created! You are now able to log in')
+            new_cart= Cart()
+            new_cart.save()
+            request.session['cart_id'] = new_cart.id
             return redirect('login')
     else:
         form = CreateUserForm()
