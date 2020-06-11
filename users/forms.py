@@ -41,7 +41,6 @@ class CreateUserForm(UserCreationForm):
     def clean_email(self):
         email= self.cleaned_data.get("email")
         user_count= User.objects.filter(email=email).count()
-        mail= User.objects(label="email")
         print(user_count)
         if user_count > 0:
             raise forms.ValidationError("This email has already been used")
