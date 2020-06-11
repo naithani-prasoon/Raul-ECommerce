@@ -6,6 +6,15 @@ from django.contrib.auth.signals import user_logged_in
 
 # Create your models here.
 
+class UserDefaultAddress(models.Model):
+    user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    shipping= models.ForeignKey("UserAddress", null=True, blank=True,on_delete=models.CASCADE, related_name='user_address_shipping_default+' )
+    billing= models.ForeignKey("UserAddress", null=True, blank=True,on_delete=models.CASCADE, related_name='user_address_billing)default+' )
+
+    def __unicode__(self):
+        return str(self.user.username)
+
+
 class UserAddressManager(models.Manager):
     def get_billing_addresses(self,user):
         return super(UserAddressManager, self).filter(billing=True).filter(user=user)
@@ -38,6 +47,9 @@ class UserAddress(models.Model):
         return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
 
     objects = UserAddressManager()
+
+    class Meta:
+        ordering = ['-updated', '-time_stamp']
 
 
 class UserStripe(models.Model):
