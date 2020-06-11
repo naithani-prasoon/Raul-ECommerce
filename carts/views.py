@@ -12,22 +12,13 @@ from .models import Cart
 
 def view(request):
     User = get_user(request)
-    if User.is_authenticated:
-        template = "Raul/cart.html"
+    template = "Raul/cart.html"
 
-        User = get_user(request)
-        try:
-             the_id = request.session['cart_id']
-             cart = Cart.objects.get(id=the_id)
-        except:
-            the_id = None
-            ali = "commit"
-
-
+    if(User.is_authenticated):
         try:
             if(User.is_authenticated):
                 cart = Cart.objects.get(user=User)
-        except Cart.objects.get(user=User).DoesNotExist:
+        except :
             pass
         else:
             if(User.is_authenticated):
@@ -35,15 +26,9 @@ def view(request):
                 context= {'cart':cart}
                 return render(request, template, context)
 
-        if the_id == None:
-            empty_message = "Your cart is empty, go shop"
-            context = {"empty" : True, "empty_message" : empty_message}
-            return render(request, template, context)
-
-
         try:
             cart = Cart.objects.get(id=request.session['cart_id'])
-        except Cart.objects.get(id=request.session['cart_id']).DoesNotExist:
+        except :
             pass
 
         else:
@@ -53,12 +38,9 @@ def view(request):
                 context = {'cart':cart}
                 return render(request, template, context)
 
-
-        cart = Cart.objects.new(request.user)
-        request.session['cart_id'] = cart.id
-        context= {'cart':cart}
-        return render(request, template, context)
-
+        cart = Cart()
+        cart.user = User
+        context = {'cart':cart}
     else:
         try:
             the_id = request.session['cart_id']
