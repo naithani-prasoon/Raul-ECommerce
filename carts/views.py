@@ -12,40 +12,37 @@ from .models import Cart
 
 def view(request):
     User = get_user(request)
+    template = "Raul/cart.html"
 
-
-
-    if User.is_authenticated:
-        template = "Raul/cart.html"
-
-        User = get_user(request)
-        try:
-             the_id = request.session['cart_id']
-             cart = Cart.objects.get(id=the_id)
-        except:
-            the_id = None
-       
+    if(User.is_authenticated):
         try:
             cart = Cart.objects.get(user=User)
 
-        except Cart.objects.get(user=User).DoesNotExist:
+        except:
             pass
 
         else:
-            if(User.is_authenticated):
                 request.session['cart_id'] = cart.id
+                context= {'cart':cart}
+                return render(request, template, context)
 
         try:
             cart = Cart.objects.get(id=request.session['cart_id'])
-        except Cart.objects.get(id=request.session['cart_id']).DoesNotExist:
+        except :
             pass
-
         else:
             if not cart.user and request.user.is_authenticated:
                 cart.user = User
                 cart.save()
-                context = {'cart':cart}
+                cart = Cart.objects.get(user=User)
+                context = {'cart': cart}
                 return render(request, template, context)
+
+        cart = Cart()
+        request.session['cart_id'] = cart.id
+        cart.user = None
+        context = {'cart':cart}
+        return render(request, template, context)
 
 
     else:
@@ -57,10 +54,10 @@ def view(request):
         if the_id:
             context = {"cart": cart}
         else:
-        empty_message = "Your cart is empty, go shop"
+            empty_message = "Your cart is empty, go shop"
+            context = {"empty" : True, "empty_message" : empty_message}
 
-     template = "Raul/cart.html"
-    context = {"empty" : True, "empty_message" : empty_message}
+    template = "Raul/cart.html"
     return render(request, template, context)
 
 def update_cart(request,slug):
