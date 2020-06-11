@@ -1076,7 +1076,7 @@ nav ul li a:hover{
     }
 
     header{
-        background:white; /*Change to transparent*/
+        background:#595959; /*Change to transparent*/
     }
 
     figure{
@@ -1348,21 +1348,53 @@ nav ul li a:hover{
     }
 
     #category{
-        width: 100%;
-        height:15%;
+        width:100%;
+        height:0%;
         overflow: hidden;
-        background-color: #595959;
+        background-color: rgba(0,0,0,0.95);
         position: fixed;
         left:0;
         top:0;
-        color: white;
-        font-family: 'Roboto', sans-serif;
+        color: #cfbb63;
+        font-family: 'Roboto Condensed', sans-serif;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         transition: 0.4s ease-in-out;
         z-index:100;
         justify-content: center;
+    }
+
+    .dropDownMenu{
+        float: left;
+        overflow: hidden;
+    }
+
+    .dropDownMenu .dropDownButton{
+        border:none;
+        outline:none;
+        color:white;
+        padding:14px 16px;
+        margin:0;
+    }
+
+    .dropDownContent{
+        display: none;
+        position: absolute;
+        left: 0;
+        background-color: red;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .dropDownContent a{
+        color:white;
+        text-decoration: none;
+        float: left;
+    }
+
+    .dropDownMenu:hover .dropDownContent{
+        display: block;
     }
 
     #category p{
