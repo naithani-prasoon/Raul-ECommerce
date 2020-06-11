@@ -7,7 +7,8 @@
     <title>Raul Retail</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/main.css' %}">    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" type = "text/css" href="{% static 'Raul/main.css' %}">   
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <body>
 
 <!-- Header Nav Bar-->
@@ -15,58 +16,59 @@
     <figure>
         <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
         {% if user.is_authenticated %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-            <a  href="#" onclick="openCategory()"><p> Store </p></a>
-            <div id ="store">
-                <p onclick="closeStore()" id="cross">
-                    X
-                </p>
-                <p>
-                    cafe flor
-                </p>
-                <p>
-                    raul
-                </p>
+        <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+        <a  href="#" onclick="openCategory()"><p> Store </p></a>
+        <div id ="store">
+            <p onclick="closeStore()" id="cross">
+                X
+            </p>
+            <p>
+                cafe flor
+            </p>
+            <p>
+                raul
+            </p>
 
 
 
 
-            </div>
-            <a href="{% url 'logout' %}"> <p>Logout </p></a>
-            <a href="{% url 'cart' %}"> <p>Cart </p></a>
-            <a href="{% url 'profile' %}"> <p>Profile</p></a>
+        </div>
+        <a href="{% url 'logout' %}"> <p>Logout </p></a>
+        <a href="{% url 'cart' %}"> <p>Cart </p></a>
+        <a href="{% url 'profile' %}"> <p>Profile</p></a>
+
+
+
         {% else %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+        <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
+        <a href = "#" onclick="openCategory()"><p> Store </p></a>
+        <div id ="store">
+            <p onclick="closeStore()" id="cross">
+                X
+            </p>
 
+            <p>
+                cafe flor
+            </p>
 
-            <a href = "#" onclick="openCategory()"><p> Store </p></a>
-            <div id ="store">
-                <p onclick="closeStore()" id="cross">
-                    X
-                </p>
+            <p>
+                raul
+            </p>
 
-                <p>
-                    cafe flor
-                </p>
+            <p>
+                third
+            </p>
 
-                <p>
-                    raul
-                </p>
-
-                <p>
-                    third
-                </p>
-
-            </div>
-            <a href="{% url 'register' %}"><p> Register </p></a>
-            <a href="{% url 'login' %}"> <p>Login </p></a>
-            <a href="{% url 'cart' %}"> <p>Cart </p></a>
+        </div>
+        <a href="{% url 'register' %}"><p> Register </p></a>
+        <a href="{% url 'login' %}"> <p>Login </p></a>
+        <a href="{% url 'cart' %}"> <p>Cart </p></a>
 
 
         {% endif %}
 
 
-        <div class ="loginSlide" id="login">
+        <!-- <div class ="loginSlide" id="login">
             <div class="loginText">
                 <p>L O G I N</p>
                 <input type="email" placeholder="Email ID">
@@ -90,7 +92,7 @@
                 </label>
                 <a>Forgot Password?</a>
             </div>
-        </div>
+        </div> -->
     </figure>
 
     <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
@@ -122,24 +124,41 @@
 
         </ul>
     </nav>
-
+    
 </div>
 
 <div id = "category">
-    <p>New Arrivals</p>
 
-    <p>Décorative Accessories</p>
+    <p> New Arrivals </p>
 
+    <div class = "dropDownMenu">
+        <button class ="dropDownButton"> Décorative Accessories </button>
+        <div class = "dropDownContent">
+            <a href = "#"> Candlelight </a>
+            <a href = "#"> Decorative Objects </a>
+            <a href = "#"> Urn </a>
+            <a href = "#"> Vases and Cachepot</a>
+        </div>
+    </div>
+    
     <p>Tabletop</p>
-
+    
     <p>Furniture</p>
-
+    
     <p>Wall Art</p>
-
-    <p>Florals</p>
-
+    
+    <div class = "dropDownMenu">
+        <button class ="dropDownButton"> Florals </button>
+        <div class = "dropDownContent">
+            <a href = "#"> Phool </a>
+            <a href = "#"> Podhe </a>
+            <a href = "#"> Gulaab </a>
+            <a href = "#"> Kamal </a>
+        </div>
+    </div>
+    
     <p>Sale</p>
-
+    
     <p>Venue Bookings</p>
 
     <p onclick="closeCategory()">X</p>
@@ -191,7 +210,7 @@
         document.getElementById("store").style.height = "0%";
     }
     function openCategory(){
-        document.getElementById("category").style.height = "15%";
+        document.getElementById("category").style.height = "20%";
     }
 
     function closeCategory(){
