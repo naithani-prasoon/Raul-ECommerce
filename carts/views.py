@@ -16,12 +16,12 @@ def view(request):
 
     if(User.is_authenticated):
         try:
-            cart = Cart.objects.get(user=User)
-
-        except:
+            if(User.is_authenticated):
+                cart = Cart.objects.get(user=User)
+        except :
             pass
-
         else:
+            if(User.is_authenticated):
                 request.session['cart_id'] = cart.id
                 context= {'cart':cart}
                 return render(request, template, context)
@@ -30,21 +30,17 @@ def view(request):
             cart = Cart.objects.get(id=request.session['cart_id'])
         except :
             pass
+
         else:
             if not cart.user and request.user.is_authenticated:
-                cart.user = User
+                cart.user = request.user
                 cart.save()
-                cart = Cart.objects.get(user=User)
-                context = {'cart': cart}
+                context = {'cart':cart}
                 return render(request, template, context)
 
         cart = Cart()
-        request.session['cart_id'] = cart.id
-        cart.user = None
+        cart.user = User
         context = {'cart':cart}
-        return render(request, template, context)
-
-
     else:
         try:
             the_id = request.session['cart_id']

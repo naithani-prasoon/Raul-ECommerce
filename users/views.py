@@ -25,9 +25,6 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account has been created! You are now able to log in')
-            new_cart= Cart()
-            new_cart.save()
-            request.session['cart_id'] = new_cart.id
             return redirect('login')
     else:
         form = CreateUserForm()
