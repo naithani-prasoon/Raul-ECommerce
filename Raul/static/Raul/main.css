@@ -1349,9 +1349,9 @@ nav ul li a:hover{
 
     #category{
         width: 100%;
-        height:15%;
+        height:0%;
         overflow: hidden;
-        background-color: #595959;
+        background-color: black;
         position: fixed;
         left:0;
         top:0;
@@ -1361,12 +1361,64 @@ nav ul li a:hover{
         flex-wrap: nowrap;
         flex-direction: row;
         transition: 0.4s ease-in-out;
-        z-index:100;
+        z-index:98;
         justify-content: center;
+    }
+
+    .dropDownMenu{
+        float: left;
+        overflow: hidden;
+        padding:30px;
+    }
+
+    .dropDownMenu .dropDownButton{
+        border:none;
+        outline:none;
+        color:white;
+        font-size: 16px;
+        font-family: 'Roboto',sans-serif;
+        background-color:transparent;
+        margin-top:60px;
+    }
+
+    .dropDownContent{
+        display: none;
+        position: fixed;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        padding:50px;
+        z-index: 1;
+        
+    }
+
+    .dropDownContent a{
+        color:white;
+        text-decoration: none;
+        padding:30px;
+        text-align: center;
+        
+    }
+
+    .dropDownContent a:hover{
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+    }
+
+    .dropDownButton:hover{
+        font-family: 'Roboto Condensed', sans-serif;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+    }
+
+    .dropDownMenu:hover .dropDownContent{
+        display: block;
     }
 
     #category p{
         padding:30px;
+        margin-top:60px;
     }
 
     #category p:hover{

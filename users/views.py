@@ -17,6 +17,8 @@ from django.contrib.auth import get_user_model
 
 
 def register(request):
+    request.session.set_expiry(3000000)
+    User = get_user(request)
     if request.method == 'POST':
         form = CreateUserForm(request.POST)
         if form.is_valid():
