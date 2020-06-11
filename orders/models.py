@@ -22,9 +22,8 @@ class Order(models.Model):
     sub_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     tax_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     final_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
-
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
-    def __unicode__(self):
+    def __str__(self):
         return self.order_id

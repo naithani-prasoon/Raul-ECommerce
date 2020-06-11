@@ -16,6 +16,7 @@
 
 </head>
 <body>
+    <button onclick="scrollFunction()" id="scrollTop"> Top </button>
 <div class ="headers">
     <figure>
         <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
@@ -72,7 +73,7 @@
         {% endif %}
 
 
-        <div class ="loginSlide" id="login">
+        <!-- <div class ="loginSlide" id="login">
             <div class="loginText">
                 <p>L O G I N</p>
                 <input type="email" placeholder="Email ID">
@@ -96,7 +97,7 @@
                 </label>
                 <a>Forgot Password?</a>
             </div>
-        </div>
+        </div> -->
     </figure>
 
     <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
@@ -151,7 +152,15 @@
     
     <p>Wall Art</p>
     
-    <p>Florals</p>
+    <div class = "dropDownMenu">
+        <button class ="dropDownButton"> Florals </button>
+        <div class = "dropDownContent">
+            <a href = "#"> Phool </a>
+            <a href = "#"> Podhe </a>
+            <a href = "#"> Gulaab </a>
+            <a href = "#"> Kamal </a>
+        </div>
+    </div>
     
     <p>Sale</p>
     
@@ -179,6 +188,7 @@
                     SHOP NOW
                 </div>
                     <span>FURNITURE</span>
+                    <a href="#"> see more </a>
                 <div class = "linksShop">
                    | <a href="{% url 'cat-view' 'Flowers' %}" >FLORAL</a>
                     | <a href="{% url 'cat-view' 'Plates' %}" >TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
@@ -205,6 +215,7 @@
                     SHOP NOW
                 </div>
                     <span id="Lighting">LIGHTING</span>
+                    <a href="#"> see more </a>
                 <div class = "linksShop">
                     | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
@@ -229,6 +240,7 @@
                     SHOP NOW
                 </div>
                     <span id= "Floral">FLORAL</span>
+                    <a href="#"> see more </a>
                 <div class = "linksShop">
                     | <a href="#LightingSec">LIGHTING</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
@@ -253,6 +265,7 @@
                     SHOP NOW
                 </div>
                 <span>TABLETOP</span>
+                <a href="#"> see more </a>
                 <div class = "linksShop">
                     | <a href="#FlowerSec">FLORAL</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
@@ -277,6 +290,7 @@
                     SHOP NOW
                 </div>
                     <span>WALLART</span>
+                    <a href="#"> see more </a>
                 <div class = "linksShop">
                     | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> |
                 </div>
@@ -302,6 +316,7 @@
                     SHOP NOW
                 </div>
                 <span id="head">  DECORATIVE ACCESSORIES</span>
+                <a href="#"> see more </a>
                 <div class = "linksShop">
                     | <a href="#FlowerSec">FLORAL</a> | <a href="#TableSec">TABLE TOP</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href ="#WallSec">WALL ART</a> |
                 </div>
@@ -328,18 +343,37 @@
 
 <script>
 
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            var scroll = $(window).scrollTop();
-            if (scroll > 100) {
-                $(".headers").css("background" , "header");
-            }
+    // $(document).ready(function(){
+    //     $(window).scroll(function(){
+    //         var scroll = $(window).scrollTop();
+    //         if (scroll > 100) {
+    //             $(".headers").css("background" , "header");
+    //         }
 
-            else{
-                $(".headers").css("background" , "transparent");   
-            }
-        })
-    })
+    //         else{
+    //             $(".headers").css("background" , "transparent");   
+    //         }
+    //     })
+    // })
+
+    //Get the button
+    var mybutton = document.getElementById("scrollTop");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
     function openNav() {
         document.getElementById("contentHam").style.height = "100%";
