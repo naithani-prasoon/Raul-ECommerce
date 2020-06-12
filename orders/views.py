@@ -1,8 +1,10 @@
 import time
+
+import stripe
 from django.urls import reverse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-
+from django.conf import settings
 # Create your views here.
 from carts.models import Cart
 from .models import Order
@@ -11,6 +13,15 @@ from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
 
+try:
+    stripe_pub = settings.STRIPE_PUBLISHABLE_KEY
+    stripe_secret = settings.STRIPE_SECRET_KEY
+
+except Exception as e:
+    print(str(e))
+    raise NotImplementedError(str(e))
+
+stripe.api_key = stripe_secret
 
 def orders(request):
     context = {}
@@ -59,6 +70,30 @@ def checkout(request):
     billing_addresses= UserAddress.objects.get_billing_addresses(user=User)
     print(billing_addresses)
 
+
+    if request.method == "POST":
+        try:
+            user_stripe = request.user.userstripe.stripe_id
+            customer = stripe.Customer.retrieve(user_stripe)
+            print(customer)
+            #print(request.POST['id'])
+        except:
+            customer = None
+            pass
+        if customer is not None:
+            if 'stripeToken' in request.POST:
+                print(request.POST['stripeToken'])
+            token = request.POST['stripeToken']
+            card = customer.cards.create(card=token)
+            charge = stripe.Charge.create(
+                amount=400,
+                currency="usd",
+                card= card,
+                customer = customer,
+                description= "Charge for test@ex.com")
+        print(card)
+        print(charge)
+
     if new_order.status == "Finished":
         #cart.delete
         del request.session['cart_id']
@@ -68,6 +103,7 @@ def checkout(request):
     context = {"address_form":address_form,
                "current_addresses": current_addresses,
                "billing_addresses": billing_addresses,
+               "stripe_pub": stripe_pub,
                }
     template = "Checkout.html"
     return render(request, 'orders/Checkout.html', context)
