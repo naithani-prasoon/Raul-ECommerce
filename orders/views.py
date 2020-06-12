@@ -20,6 +20,11 @@ def orders(request):
 @login_required
 def checkout(request):
     User = get_user(request)
+
+    if request.method == "POST":
+        print("Hi")
+        print(request.POST['stripeToken'])
+
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
