@@ -72,6 +72,7 @@ def checkout(request):
 
 
     if request.method == "POST":
+        print("hi" + request.POST['stripeToken'])
         try:
             user_stripe = request.user.userstripe.stripe_id
             customer = stripe.Customer.retrieve(user_stripe)
@@ -86,7 +87,7 @@ def checkout(request):
                 source= token
             )
             charge = stripe.Charge.create(
-                amount=4000000000000,
+                amount= cart.pennies_total,
                 currency="usd",
                 source = source,
                 customer = customer,
