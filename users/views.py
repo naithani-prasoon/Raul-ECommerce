@@ -7,7 +7,7 @@ from .forms import CreateUserForm, UserAddressForm
 from carts.models import Cart, CartItem
 from django.contrib.auth import get_user
 from django.urls import reverse
-from users.models import UserAddress
+from users.models import UserAddress, UserDefaultAddress
 from django.contrib.auth import get_user_model
 
 
@@ -51,6 +51,11 @@ def add_address(request):
             new_address = form.save(commit=False)
             new_address.user = request.user
             new_address.save()
+            is_default= form.cleaned_data["default"]
+            if is_default:
+                default_address, created = UserDefaultAddress.objects.get_or_create(user=request.user)
+                default_address.shipping= new_address
+                default_address.save()
             if next_page is not None:
                 return HttpResponseRedirect(reverse(next_page) + "?address_added=True")
 
