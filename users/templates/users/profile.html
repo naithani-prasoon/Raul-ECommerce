@@ -6,9 +6,10 @@
     {% for user in userorders %}
         {{ user.product }}
         {{ user.product.price }}
+        {{ user.quantity }}
     {% endfor %}
     {% for userAdd in userAddress %}
-        {{ userAdd.state}}
+        {{ userAdd.address2}}
     {% endfor %}
 {% endblock %}
 

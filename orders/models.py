@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
+from users.views import UserAddress
 
 # Create your models here.
 from carts.models import Cart

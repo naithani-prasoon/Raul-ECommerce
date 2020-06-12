@@ -20,7 +20,6 @@ def orders(request):
     return render(request, template, context)
 @login_required
 def checkout(request):
-    request.session.set_expiry(3)
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
@@ -43,7 +42,7 @@ def checkout(request):
     if address_form.is_valid:
         new_address = address_form.save(commit=False)
         new_address.user = request.user
-        new_address.save
+        new_address.save()
 
     if new_order.status == "Finished":
         del request.session['cart_id']
