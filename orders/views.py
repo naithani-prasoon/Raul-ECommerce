@@ -34,7 +34,7 @@ def checkout(request):
 
     if request.method == "POST":
         print("Hi")
-        print(request.POST['stripeToken'])
+        #print(request.POST['stripeToken'])
 
     try:
         the_id = request.session['cart_id']
@@ -72,7 +72,7 @@ def checkout(request):
 
 
     if request.method == "POST":
-        print("hi" + request.POST['stripeToken'])
+        #print("hi" + request.POST['stripeToken'])
         try:
             user_stripe = request.user.userstripe.stripe_id
             customer = stripe.Customer.retrieve(user_stripe)
