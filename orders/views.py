@@ -75,24 +75,24 @@ def checkout(request):
         try:
             user_stripe = request.user.userstripe.stripe_id
             customer = stripe.Customer.retrieve(user_stripe)
-            print(customer)
-            #print(request.POST['id'])
         except:
             customer = None
-            pass
+
         if customer is not None:
-            if 'stripeToken' in request.POST:
-                print(request.POST['stripeToken'])
             token = request.POST['stripeToken']
-            card = customer.cards.create(card=token)
+
+            source = stripe.Customer.create_source(
+                user_stripe,
+                source= token
+            )
             charge = stripe.Charge.create(
-                amount=400,
+                amount=4000000000000,
                 currency="usd",
-                card= card,
+                source = source,
                 customer = customer,
-                description= "Charge for test@ex.com")
-        print(card)
-        print(charge)
+                description = "Test"
+            )
+
 
     if new_order.status == "Finished":
         #cart.delete
