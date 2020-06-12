@@ -7,11 +7,11 @@
 
 {% if address_form %}
 <div class='col-sm-6 oull-right'>
-    <h3>Add New Address</h3>
+    <h3>Add New Shipping Address</h3>
     <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
         {{ address_form.as_p}}
 
-        <input type="submit" class="btn btn-default" value="Add Address"/>
+        <input type="submit" class="btn btn-default" value="Add Shipping Address"/>
     </form>
 </div>
 {% endif %}
@@ -24,9 +24,15 @@
 <div class='col-sm-6'>
 <h3> Shipping Addresses</h3>
 {% for address in current_addresses %}
-<input type="radio" name="shipping_address" value="{{ address_id }}" /> {{ address.get_address}} <br/>
 
-{% endfor %}
+    {% if request.user.userdefaultaddress.shipping.id == address.id %}
+    <input type="radio" name="shipping_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>
+    {% else %}
+<input type="radio" name="shipping_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>
+
+    {% endif %}
+
+    {% endfor %}
 </div>
 {% endif %}
 
@@ -39,8 +45,13 @@
 <div class="col-sm-6">
 <h3>Billing Addresses</h3>
 {% for address in billing_addresses %}
-    <input type="radio" name="billing_address" value="{{ address_id }}" /> {{ address.get_address}} <br/>
 
+    {% if request.user.userdefaultaddress.billing.id == address.id %}
+    <input type="radio" name="billing_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>
+    {% else %}
+    <input type="radio" name="billing_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>
+
+    {% endif %}
 {% endfor %}
 </div>
 {% endif %}
