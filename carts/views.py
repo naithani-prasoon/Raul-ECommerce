@@ -118,6 +118,7 @@ def update_cart(request,slug):
 
     request.session['items_total'] = cart.cartitem_set.count()
     cart.total = new_total
+    cart.pennies_total = cart.total * 100
 
     cart.save()
     return redirect(reverse("cart"))

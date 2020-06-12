@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="{% static 'Raul/main.css' %}">
-    <link rel="stylesheet" href="{% static 'Raul/script.js' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul/CSS/main.css' %}">
+    <link rel="stylesheet" href="{% static 'Raul/JS/script.js' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -108,7 +108,7 @@
             <ul id="contentHam">
 
                 <li class="exitButton">
-                    <img src="{% static 'Raul/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
+                    <img src="{% static 'Raul/CSS/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
                 </li>
                 <li>
                     <a href="#">Home</a>
@@ -178,7 +178,7 @@
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
-            <figcaption> r a ù l  <br> <a href="#shop"><button> explore the shop </button></a></figcaption>
+            <figcaption> r a ù l  <br> <a href="{% url 'Raul-product' %}"><button> explore the shop </button></a></figcaption>
         </div>
     </div>
 
@@ -319,7 +319,7 @@
 
     </footer>
 
-    <script src="{% static 'Raul/script.js' %}">
+    <script src="{% static 'Raul/JS/script.js' %}">
 
     </script>
 

@@ -46,3 +46,14 @@ class CreateUserForm(UserCreationForm):
         if user_count > 0:
             raise forms.ValidationError("This email has already been used")
         return email
+
+
+class StripeForm(forms.Form):
+    stripeToken = forms.CharField(max_length=80)
+    stripeBillingName = forms.CharField(max_length=80, required=False)
+    stripeBillingAddressLine1 = forms.CharField(max_length=80, required=False)
+    stripeBillingAddressZip = forms.CharField(max_length=80, required=False)
+    stripeBillingAddressState = forms.CharField(max_length=80, required=False)
+    stripeBillingAddressCity = forms.CharField(max_length=80, required=False)
+    stripeBillingAddressCountry = forms.CharField(max_length=80, required=False)
+

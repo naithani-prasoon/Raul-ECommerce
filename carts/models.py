@@ -25,12 +25,13 @@ class Cart(models.Model):
     cart_items = models.ManyToManyField(CartItem,related_name="CARTITEMS")
     user = models.ForeignKey(User,blank=True,null=True,on_delete=models.CASCADE)
     total = models.DecimalField(max_digits=100, decimal_places=2, default=0.00)
+    pennies_total = models.DecimalField(max_digits=100000000, decimal_places=0, default=0)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     active = models.BooleanField(default=True)
 
-    def __unicode__(self):
-        return "Cart id: %s" %(self.id)
+    def __str__(self):
+        return str(self.id)
 
 
 
