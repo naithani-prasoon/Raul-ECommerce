@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,18 +83,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.check2.html">
     <configuration name="check2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/orders/templates/orders/check2.html" useBuiltInWebServerPort="true">
@@ -406,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591983972409</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="stripe...">
+      <created>1592063400876</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1592063400876</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -427,9 +420,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="yo" />
-    <MESSAGE value="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
-    <MESSAGE value="no" />
     <MESSAGE value="product grid" />
     <MESSAGE value="product grid 2" />
     <MESSAGE value="product grid 3 looks okay" />
@@ -452,7 +442,10 @@
     <MESSAGE value="Ali's3" />
     <MESSAGE value="updated amount for stripe" />
     <MESSAGE value="I think address works with stripe?" />
-    <option name="LAST_COMMIT_MESSAGE" value="I think address works with stripe?" />
+    <MESSAGE value="stripe?" />
+    <MESSAGE value="stripe? 2" />
+    <MESSAGE value="stripe..." />
+    <option name="LAST_COMMIT_MESSAGE" value="stripe..." />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">
@@ -463,10 +456,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="50" key="CommitChangelistDialog2" timestamp="1591489695239">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="331" y="54" key="CommitChangelistDialog2" timestamp="1592063400614">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1591407327778" />
+    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1592063400614" />
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="331" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1591414336005" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
@@ -495,20 +488,20 @@
     </state>
     <state x="436" y="173" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1591543504516" />
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
-    <state x="208" y="23" width="1024" height="822" key="SettingsEditor" timestamp="1591927638710">
-      <screen x="0" y="23" width="1440" height="821" />
+    <state x="208" y="23" width="1024" height="822" key="SettingsEditor" timestamp="1592063462866">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="208" y="23" width="1024" height="822" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1591069631229" />
+    <state x="208" y="23" width="1024" height="822" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1592063462866" />
     <state x="208" y="23" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1591927638710" />
     <state x="208" y="44" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1591498351558" />
     <state x="499" y="156" key="VCS.ChangeListViewerDialog" timestamp="1591489708056">
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="197" key="Vcs.Push.Dialog.v2" timestamp="1591412107073">
-      <screen x="0" y="23" width="1440" height="825" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1592063474535">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1591407345054" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1592063474535" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591407137868">
       <screen x="0" y="0" width="1440" height="900" />
@@ -518,10 +511,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1591120488524" />
-    <state x="525" y="362" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591922192402">
-      <screen x="0" y="23" width="1440" height="816" />
+    <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592063445852">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1591576598829" />
+    <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592063445852" />
     <state x="525" y="362" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1591922192402" />
     <state x="525" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1591489711874" />
     <state x="149" y="176" key="new project wizard" timestamp="1591150138984">

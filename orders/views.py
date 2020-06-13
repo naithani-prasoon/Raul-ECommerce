@@ -107,7 +107,6 @@ def checkout(request):
             if charge["captured"]:
                 new_order.status = "Finished"
                 new_order.save()
-                cart.delete()
                 del request.session['cart_id']
                 del request.session['items_total']
                 messages.success(request,"Order Done")
