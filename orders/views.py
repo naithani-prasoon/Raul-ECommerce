@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.shortcuts import render, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
+from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order
@@ -47,12 +48,21 @@ def checkout(request):
     try:
         new_order = Order.objects.get(cart= cart)
     except Order.DoesNotExist:
-        new_order = Order(cart= cart)
+        new_order = Order()
+        new_order.cart = cart
         new_order.user = request.user
         new_order.order_id = id_generator()
+        new_order.sub_total = cart.total
         new_order.save()
     except:
+        new_order = None
         return HttpResponseRedirect("cart")
+
+    final_amount = 0.0
+    if new_order is not None:
+        new_order.sub_total = cart.total
+        new_order.save()
+        final_amount = new_order.get_final_amount()
 
     address_form = UserAddressForm()
 
@@ -87,21 +97,27 @@ def checkout(request):
                 source= token
             )
             charge = stripe.Charge.create(
-                amount= cart.pennies_total,
+                amount= int(final_amount * 100),
                 currency="usd",
                 source = source,
                 customer = customer,
                 description = "Test"
             )
 
+            if charge["captured"]:
+                new_order.status = "Finished"
+                new_order.save()
+                cart.delete()
+                del request.session['cart_id']
+                del request.session['items_total']
+                messages.success(request,"Order Done")
+                return HttpResponseRedirect(reverse("user_orders"))
 
-    if new_order.status == "Finished":
-        #cart.delete
-        del request.session['cart_id']
-        del request.session['items_total']
-        return HttpResponseRedirect(reverse("cart"))
 
-    context = {"address_form":address_form,
+
+    context = {
+                "order":new_order,
+                "address_form":address_form,
                "current_addresses": current_addresses,
                "billing_addresses": billing_addresses,
                "stripe_pub": stripe_pub,

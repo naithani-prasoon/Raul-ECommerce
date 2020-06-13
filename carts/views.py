@@ -47,8 +47,16 @@ def view(request):
             cart = Cart.objects.get(id=the_id)
         except:
             the_id= None
+
         if the_id:
-            context = {"cart": cart}
+            new_total = 0.00
+            for item in cart.cartitem_set.all():
+                    line_total = float(item.product) * item.quantity
+                    new_total += line_total
+            request.session['items_total'] = cart.cartitem_set.count()
+            cart.total = new_total
+            cart.save()
+            context = {"cart":cart}
         else:
             empty_message = "Your cart is empty, go shop"
             context = {"empty" : True, "empty_message" : empty_message}
