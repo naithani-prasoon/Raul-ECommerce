@@ -13,34 +13,30 @@ from .models import Cart
 def view(request):
     User = get_user(request)
     template = "Raul/cart.html"
+    cart =  "Your cart is empty, go shop"
 
     if(User.is_authenticated):
         try:
-            if(User.is_authenticated):
-                cart = Cart.objects.get(user=User)
-        except :
+            cart = Cart.objects.get(user=User)
+        except:
             pass
         else:
-            if(User.is_authenticated):
-                request.session['cart_id'] = cart.id
-                context= {'cart':cart}
-                return render(request, template, context)
+            request.session['cart_id'] = cart.id
+            context= {'cart':cart}
+            return render(request, template, context)
 
         try:
             cart = Cart.objects.get(id=request.session['cart_id'])
         except :
             pass
-
         else:
             if not cart.user and request.user.is_authenticated:
+
                 cart.user = request.user
                 cart.save()
                 context = {'cart':cart}
                 return render(request, template, context)
 
-        cart = Cart()
-        cart.user = User
-        context = {'cart':cart}
     else:
         try:
             the_id = request.session['cart_id']
@@ -51,18 +47,24 @@ def view(request):
         if the_id:
             new_total = 0.00
             for item in cart.cartitem_set.all():
-                    line_total = float(item.product) * item.quantity
+                    line_total = float(item.product.price) * item.quantity
                     new_total += line_total
             request.session['items_total'] = cart.cartitem_set.count()
             cart.total = new_total
             cart.save()
             context = {"cart":cart}
+            return render(request, template, context)
+
         else:
             empty_message = "Your cart is empty, go shop"
             context = {"empty" : True, "empty_message" : empty_message}
+            return render(request, template, context)
 
-    template = "Raul/cart.html"
+    context = {"cart":cart}
     return render(request, template, context)
+
+
+
 
 def update_cart(request,slug):
     request.session.set_expiry(3000000)
