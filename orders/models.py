@@ -36,4 +36,4 @@ class Order(models.Model):
         instance.tax_total = Decimal(Decimal("0.08") * Decimal(self.sub_total)).quantize(two_places)
         instance.final_total = Decimal(self.sub_total) + Decimal(instance.tax_total)
         instance.save()
-        return self.final_total
+        return instance.final_total

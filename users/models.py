@@ -35,7 +35,7 @@ class UserAddress(models.Model):
     zipcode = models.CharField(max_length=120,null=True)
     phone = models.CharField(max_length=120,null=True)
     shipping = models.BooleanField(max_length=120,null=True)
-    billing = models.BooleanField(max_length=120,null=True)
+    billing = models.BooleanField(default=False)
     time_stamp = models.DateTimeField(max_length=120,null=True)
     updated = models.DateTimeField(max_length=120,null=True)
 

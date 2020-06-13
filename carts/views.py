@@ -13,11 +13,15 @@ from .models import Cart
 def view(request):
     User = get_user(request)
     template = "Raul/cart.html"
-    cart =  "Your cart is empty, go shop"
 
-    if(User.is_authenticated):
+
+
+    if User.is_authenticated:
+        # Check if an ACTIVE cart is asspcated with User #
         try:
-            cart = Cart.objects.get(user=User)
+            cart = Cart.objects.get(user=User,active=True)
+            context = {"cart":cart}
+            print("Try with User")
         except:
             pass
         else:
@@ -25,40 +29,45 @@ def view(request):
             context= {'cart':cart}
             return render(request, template, context)
 
+
+        # Check is user assoicated with an ACTIVE CartID #
         try:
-            cart = Cart.objects.get(id=request.session['cart_id'])
+            cart = Cart.objects.get(id=request.session['cart_id'],active=True)
+            context = {"cart":cart}
+            print("Try with ID")
         except :
             pass
         else:
             if not cart.user and request.user.is_authenticated:
-
                 cart.user = request.user
                 cart.save()
                 context = {'cart':cart}
                 return render(request, template, context)
 
+
+    try:
+        the_id = request.session['cart_id']
+        cart = Cart.objects.get(id=the_id,active=True)
+        print("Try with IDK")
+
+    except:
+        the_id= None
+
+    if the_id:
+        new_total = 0.00
+        for item in cart.cartitem_set.all():
+            line_total = float(item.product.price) * item.quantity
+            new_total += line_total
+        request.session['items_total'] = cart.cartitem_set.count()
+        cart.total = new_total
+        cart.save()
+        context = {"cart":cart}
+        return render(request, template, context)
+
     else:
-        try:
-            the_id = request.session['cart_id']
-            cart = Cart.objects.get(id=the_id)
-        except:
-            the_id= None
-
-        if the_id:
-            new_total = 0.00
-            for item in cart.cartitem_set.all():
-                    line_total = float(item.product.price) * item.quantity
-                    new_total += line_total
-            request.session['items_total'] = cart.cartitem_set.count()
-            cart.total = new_total
-            cart.save()
-            context = {"cart":cart}
-            return render(request, template, context)
-
-        else:
-            empty_message = "Your cart is empty, go shop"
-            context = {"empty" : True, "empty_message" : empty_message}
-            return render(request, template, context)
+        empty_message = "Your cart is empty, go shop"
+        context = {"empty" : True, "empty_message" : empty_message}
+        return render(request, template, context)
 
     context = {"cart":cart}
     return render(request, template, context)

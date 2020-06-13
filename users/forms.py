@@ -20,10 +20,10 @@ from django.contrib.auth import get_user_model
 
 
 class UserAddressForm(forms.ModelForm):
-    default= forms.BooleanField(label="Make Default")
+    default= forms.BooleanField(label="Make this your default Address?",required=False)
     class Meta:
         model = UserAddress
-        fields = ['address','address2','city','state','country', 'zipcode', 'phone']
+        fields = ['address','address2','city','state','country', 'zipcode', 'phone','billing']
 
 
 class CreateUserForm(UserCreationForm):

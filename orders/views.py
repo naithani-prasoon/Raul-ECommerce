@@ -108,17 +108,15 @@ def checkout(request):
             if charge["captured"]:
                 new_order.status = "Finished"
                 new_order.save()
+                cart.active = False
+                cart.save()
                 del request.session['cart_id']
-                del request.session['items_total']
-                messages.success(request,"Order Done")
                 return HttpResponseRedirect(reverse("user_orders"))
-
-
 
     context = {
                 "order":new_order,
                 "address_form":address_form,
-               "current_addresses": current_addresses,
+                "current_addresses": current_addresses,
                "billing_addresses": billing_addresses,
                "stripe_pub": stripe_pub,
                }
