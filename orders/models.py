@@ -1,6 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 from users.views import UserAddress
+from decimal import Decimal
 
 # Create your models here.
 from carts.models import Cart
@@ -28,3 +29,11 @@ class Order(models.Model):
 
     def __str__(self):
         return self.order_id
+
+    def get_final_amount(self):
+        instance = Order.objects.get(id =self.id)
+        two_places = Decimal(10) ** -2
+        instance.tax_total = Decimal(Decimal("0.08") * Decimal(self.sub_total)).quantize(two_places)
+        instance.final_total = Decimal(self.sub_total) + Decimal(instance.tax_total)
+        instance.save()
+        return self.final_total
