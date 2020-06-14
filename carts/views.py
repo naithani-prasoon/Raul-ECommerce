@@ -17,10 +17,30 @@ def view(request):
 
 
     if User.is_authenticated:
-        # Check if an ACTIVE cart is asspcated with User #
+
+        # Check is user assoicated with an ACTIVE CartID #
+
+        try:
+            cart = Cart.objects.get(id=request.session['cart_id'],active=True)
+            print("Try with ID")
+        except :
+            pass
+        else:
+            print("cart.user and request.user.is_authenticated:")
+            if not cart.user and request.user.is_authenticated:
+                userCartNum = Cart.objects.filter(user=User,active=True).count()
+                if userCartNum > 0:
+                    userCart = Cart.objects.get(user=User,active=True)
+                    userCart.delete()
+
+                cart.user = User
+                cart.save()
+                context = {'cart': cart}
+                return render(request, template, context)
+
+            # Check if an ACTIVE cart is asspcated with User #
         try:
             cart = Cart.objects.get(user=User,active=True)
-            context = {"cart":cart}
             print("Try with User")
         except:
             pass
@@ -28,21 +48,6 @@ def view(request):
             request.session['cart_id'] = cart.id
             context= {'cart':cart}
             return render(request, template, context)
-
-
-        # Check is user assoicated with an ACTIVE CartID #
-        try:
-            cart = Cart.objects.get(id=request.session['cart_id'],active=True)
-            context = {"cart":cart}
-            print("Try with ID")
-        except :
-            pass
-        else:
-            if not cart.user and request.user.is_authenticated:
-                cart.user = request.user
-                cart.save()
-                context = {'cart':cart}
-                return render(request, template, context)
 
 
     try:
