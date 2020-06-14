@@ -26,21 +26,21 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 class UserAddress(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
-    address = models.CharField(max_length=120,null=True)
-    address2 = models.CharField(max_length=120,null=True)
-    address3 = models.CharField(max_length=120,null=True)
-    city = models.CharField(max_length=120,null=True)
-    state = models.CharField(max_length=120,null=True)
-    country = models.CharField(max_length=120,null=True)
-    zipcode = models.CharField(max_length=120,null=True)
-    phone = models.CharField(max_length=120,null=True)
-    shipping = models.BooleanField(max_length=120,null=True)
-    billing = models.BooleanField(default=False)
-    time_stamp = models.DateTimeField(max_length=120,null=True)
-    updated = models.DateTimeField(max_length=120,null=True)
+    address = models.CharField(max_length=120,null=True,blank=True)
+    address2 = models.CharField(max_length=120,null=True,blank=True)
+    address3 = models.CharField(max_length=120,null=True,blank=True)
+    city = models.CharField(max_length=120,null=True,blank=True)
+    state = models.CharField(max_length=120,null=True,blank=True)
+    country = models.CharField(max_length=120,null=True,blank=True)
+    zipcode = models.CharField(max_length=120,null=True,blank=True)
+    phone = models.CharField(max_length=120,null=True,blank=True)
+    shipping = models.BooleanField(max_length=120,null=True,blank=True)
+    billing = models.BooleanField(default=False,blank=True)
+    time_stamp = models.DateTimeField(max_length=120,null=True,blank=True)
+    updated = models.DateTimeField(max_length=120,null=True,blank=True)
 
     def __str__(self):
-        return str(self.user)
+        return self.get_address()
 
 
     def get_address(self):
