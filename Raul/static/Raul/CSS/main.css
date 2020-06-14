@@ -4,7 +4,7 @@
   html,body{
     margin:0;
     padding:0;
-    height:100%;font-family: 'Oswald', sans-serif;    
+    height:100%;font-family: 'Roboto', sans-serif;    
     overflow-x: hidden;
     background-color: #595959;
     scroll-behavior: smooth;
@@ -121,31 +121,22 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
-.shopBack{
-    background-color: rgba(0,0,0,0.5);
-}
 
 /* Scroll Bar*/
 ::-webkit-scrollbar {
-	width: 6px;
+    width: 10px;
 	overflow: auto;
 }
 
 ::-webkit-scrollbar-track {
-	background: #f1f1f1;
-	border-radius:20px;
+	background: #595959;
+	border-radius:50px;
 	overflow: auto;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #3D444A; 
-	border-radius: 20px;
-	overflow: auto;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background: grey; 
-	cursor: pointer;
+	background: transparent; 
+	border-radius: 50px;
 	overflow: auto;
 }
 
@@ -196,6 +187,11 @@ nav ul li a:hover{
 }
 
 @media only screen and (max-width:640px){    
+    
+    
+    .feature{
+        display: none;
+    }
     
     .headers{
         display: grid;
@@ -386,47 +382,45 @@ nav ul li a:hover{
 
 @media only screen and (min-width:641px) and (max-width:768px){
 
-    #store{
+    
+    .feature{
         display: none;
     }
     
-    .shopBanner{
-        display: none;
-    }
-
-    header{
+    .headers{
         display: grid;
-        height: 3.5em;
-        grid-template-columns: auto 5em;
+        height: 4.5em;
+        grid-template-columns: auto 3em;
+        box-shadow: 0px 0px 5px 1px black;
     }
 
     .menuBar{
         width: 30px;
-        margin-top: 15%;
+        margin-top: 45%;
     }
     
-    header figcaption img{
+    .headers figcaption img{
         margin-left: 2em;
         margin-top:0.2em;
-        width:7%;
+        width:10%;
     }
 
     nav ul li a{
-        text-align: left;
-        font-size: 2.5em;
+        text-align: center;
+        font-size: 3em;
         display: block;
-        padding: 4%;
         color:#818181;
+        padding:50px 0px 0px 0px;
     }
 
     .exitButton{
         margin-bottom: 1em;
-        margin: 10%;
+        margin: 20% 20% 0% 20%;
         text-align: right;
     }
 
-    figure{
-        display: none;
+    .exitButton img{
+        width: 15px;
     }
 
     .bannerHead{    
@@ -434,11 +428,8 @@ nav ul li a:hover{
         width:100vw;
         overflow: hidden;
         position: relative;
-        scroll-snap-align: start;
-    }
-
-    .bannerHead video {
-        display: none;
+        background-image: url("../Images/7.jpg");
+        backface-visibility: hidden;
     }
 
     .bannerHeading figcaption{
@@ -451,167 +442,147 @@ nav ul li a:hover{
         left:0;
         text-align: center;
         color:white;
-        font-family: 'Oswald', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-weight:700;
     }
 
+    .bannerHeading figcaption a button{
+        background:transparent;
+        margin:20px;
+        font-family: 'Roboto', sans-serif;
+        font-size:0.8em;
+        outline: none;
+        padding:20px;
+        border: none;
+        color: white;
+        transition: 0.5s ease;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        border: 1px solid white;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+
+    .bannerHeading figcaption a button:hover{
+        background-color: white;
+        color:#595959;
+        cursor: pointer;
+    }  
+
+    .shopBanner{
+        width:100%;
+        height:20em;
+        color: #cfbb63;
+        text-align: center;
+        padding:10px 0px 30px 0px;
+        font-size:10px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .shopBanner figcaption{
+        font-size: 50px;
+    }
+
+    .shopBanner a{
+        color:#cfbb63;
+    }
+
+    .shopBanner a:hover{
+        color:orange;
+    }
     
     .furniture{
-        height:100vh;
+        height:700px;
         width:100%;
-        background-color: white;
-        scroll-snap-align: start;
-        padding:10px;
+        background-color: transparent;
+        margin:10px;
+    }
+
+    .shopBack{
+        display: grid;
+        grid-template-rows: auto auto;
+        width:100vw;
+        height:600px;
+    }
+
+    .furnitureHeading{
+        font-size:50px;
+        font-family: 'Roboto', sans-serif;
+        color: #cfbb63;
+        padding-left: 30px;
+        font-weight: bolder;
+        text-transform: lowercase;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        letter-spacing: 5px;
+    }
+
+    .furnitureHeading a{
+        text-decoration: none;
+        color:#cfbb63;
+        text-align: right;
+        padding-right:30px;
+        padding-top:10px;
+        font-size: 30px;
+    }
+
+    .furnitureImages{
+        display: grid;
+        grid-template-columns: auto auto;
     }
 
     .staticImage{
         width:90%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top:5em;
-    }
-
-    .shopBack{
-        display: flex;
-        flex-wrap: wrap-reverse;
-        flex-direction: row;
-        margin:10px;
-        background-color: indianred;
-        width:95vw;
-        height:95vh;
-    }
-
-    .furnitureHeading{
-        font-size:6em;
-        font-family: 'Roboto Condensed';
-        margin:8%; 
-        color: white;
-        opacity: 1;
-        margin-right:auto;
-        margin-left:auto;
-    }
-
-    .linksShop{
-        font-size:0.1em;
-        font-family:'Roboto';
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-align: center;
-        color: whitesmoke;
-        font-family: 'Roboto Condensed';
-    }
-
-    .linksShop a{
-        text-decoration: none;
-        color:whitesmoke;
-    }
-
-    .linksShop a:hover{
-        color: black;
-        font-family: 'Roboto Condensed';
-    }
-
-    .shopNow {
-        font-size:0.2em;
-        font-family:'Roboto';
-        letter-spacing: 2.2em;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    #hide{
-        display: none;
-    }
-
-    .furnitureImages img{
-        transition: 0.4s ease-in-out;
-        
+        padding:8px;
+        border-radius: 50px;
     }
 
     .textMiddle{
-        transition: 0.3s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        top:50%;
-        right:10%;
-        text-align: center; 
-        z-index: 1;
         display: none;
     }
 
-    .textInfo{
-        width:80%;
-        padding: 16px 32px 16px 32px;
-        font-size: 5em;
-        font-family: 'Roboto Condensed';
-        background-color: white;
-        color:black;  
+    #store{
         display: none;
-        
     }
 
-    #Lighting{
-        letter-spacing: 0.1em;
-        color:black
+    #category{
+        display: none;
     }
 
-    #lighting .furnitureHeading .linksShop a{
-        color:black;
+    
+    .linksShop{
+        display: none;
     }
 
-    #lighting .furnitureHeading .linksShop a:hover{
-        color:darkred;
+    .shopNow {
+        display: none;
     }
 
-    #lighting .furnitureHeading .linksShop{
-        color:black;
+    .bannerHead video {
+        display: none;
     }
 
-    #lighting .shopNow{
-        color:black;
+    figure{
+        display: none;
     }
 
-    #lighting{
-        background-color: #ffccbc;
+    nav ul::-webkit-scrollbar{
+        display: none;
     }
 
-    #Floral{
-        letter-spacing: 0.25em;
-    }
-
-    #flower{
-        background-color: #C96567;
-    }   
-
-    #table{
-        background-color: #86C232;
-    }
-
-    #table .shopNow{
-        letter-spacing: 2em;
-    }
-
-    #table .furnitureHeading span{
-        letter-spacing: 0.04em;
-    }
-
-    #wall .furnitureHeading{
-        letter-spacing: 0.1em;
-    }
-
-    #decorative .furnitureHeading{
-        margin:20% 0.5em;
-    }
-
-    .contact{
-        height: 100vh;
-        width:100%;
-        background-color: white;
+    body::-webkit-scrollbar{
+        display: none;
     }
 }
 
-@media only screen and (min-width:769px) and (max-width:1024px){
+@media only screen and (min-width:769px) and (max-width:1024px) /* Make adjustment for 800px ( divie 769px-1024px for better responsiveness)*/{
 
+    
+    .feature{
+        display: none;
+    }
+    
     .headers{
         display: grid;
         height: 5em;
@@ -852,6 +823,7 @@ nav ul li a:hover{
 }
 
 @media only screen and (min-width:1025px) and (max-width:1200px){
+
     
 
     nav{
@@ -1187,6 +1159,10 @@ nav ul li a:hover{
 
 @media only screen and (min-width:1200px) /*Dimensions higher than 1200px*/{
 
+    body{
+        text-transform: lowercase;
+    }
+
     #scrollTop {
         display: none;
         position: fixed;
@@ -1305,6 +1281,10 @@ nav ul li a:hover{
         transition: 0.4s ease-in-out;
     }
 
+    .dropDownButton a{
+        color:white;
+    }
+
     .dropDownContent{
         display: none;
         position: fixed;
@@ -1374,14 +1354,14 @@ nav ul li a:hover{
         left:0;
         text-align: center;
         color:white;
-        font-family:'Roboto Condensed', sans-serif;
+        font-family:'Roboto', sans-serif;
         font-weight:700;
     }
 
     .bannerHeading figcaption a button{
         background:transparent;
         margin:20px;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-size:0.5em;
         outline: none;
         padding:30px;
@@ -1400,25 +1380,65 @@ nav ul li a:hover{
         background-color: white;
         color:#595959;
         cursor: pointer;
-    }  
+    }
+    
+    .feature{
+        height: 730px;
+        width:100%;
+        scroll-snap-align: start;
+        color:#cfbb63;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-color: rgba(0,0,0,0.5);
+        margin:60px 20px;
+        text-align: center;
+    }
+
+    .featureProductsHeading{
+        font-size:8em;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 60px;
+        
+    }
+
+    .featureProducts{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        
+    }
+
+    .featureProducts  img{
+        /* margin-left: auto;
+        margin-right: auto; */
+        width:75%;
+        padding:25px;
+    }
     
     .shopBanner{
         width:100%;
-        height:450px;
+        height:380px;
         scroll-snap-align: start;
         color: #cfbb63;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        letter-spacing: 5px;
+        font-size: 1.5em;
     }
 
     .shopBanner figcaption{
-        font-size:20em;
+        font-size:10em;
+        font-weight: normal;
+        letter-spacing: normal;
     }
 
     .shopBanner a{
-        font-size:1em;
+        font-family: 'Roboto', sans-serif;
         color:#cfbb63;
+        letter-spacing: 5px;
     }
 
     .shopBanner a:hover{
@@ -1426,7 +1446,7 @@ nav ul li a:hover{
     }
 
     .furniture{
-        height:100vh;
+        height:800px;
         width:100%;
         background-color: #595959;
         scroll-snap-align: start;
@@ -1438,13 +1458,13 @@ nav ul li a:hover{
         margin:40px;
         background-color: rgba(0,0,0,0.5);
         width:95vw;
-        height:95vh;
+        height:730px;
     }
 
     .furnitureHeading{
-        font-size:9em;
-        font-family: 'Roboto Condensed';
-        margin:20% .5em;
+        font-size:12em;
+        font-family: 'Roboto', sans-serif;
+        margin:15% .5em;
         color: #cfbb63;
         opacity: 1;
     }
@@ -1454,13 +1474,13 @@ nav ul li a:hover{
     }
 
     .linksShop{
-        font-size:0.1em;
+        font-size:18px;
         font-family:'Roboto';
         font-weight: 700;
         letter-spacing: 0.18em;
         text-align: center;
         color: #cfbb63;
-        font-family: 'Roboto Condensed';
+        font-family: 'Roboto';
     }
 
     .linksShop a{
@@ -1499,28 +1519,25 @@ nav ul li a:hover{
     
     
     #Lighting{
-        letter-spacing: 0.1em;
+        letter-spacing: 13px;
     }
 
     #Floral{
-        letter-spacing: 0.25em;
-    }
-
-    #table .shopNow{
-        letter-spacing: 2em;
+        letter-spacing: 20px;
     }
 
     #table .furnitureHeading span{
-        letter-spacing: 0.04em;
+        letter-spacing: 5px;
     }
 
     #wall .furnitureHeading{
-        letter-spacing: 0.1em;
+        letter-spacing: 20px;
     }
 
     #decorative .furnitureHeading{
-        margin:15% 0.4em;
         font-size: 8em;
+        text-align: center;
+        letter-spacing: 5px;
     }
 
     .contact{
