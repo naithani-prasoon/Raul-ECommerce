@@ -13,13 +13,8 @@ from .models import Cart
 def view(request):
     User = get_user(request)
     template = "Raul/cart.html"
-
-
-
     if User.is_authenticated:
-
         # Check is user assoicated with an ACTIVE CartID #
-
         try:
             cart = Cart.objects.get(id=request.session['cart_id'],active=True)
             print("Try with ID")
