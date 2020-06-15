@@ -46,7 +46,7 @@
 <script src="https://js.stripe.com/v3/"></script>
 
 {% if address_form %}
-<div class='col-sm-6 oull-right'>
+<body class='col-sm-6 oull-right'>
 
     <h3>Add New Shipping Address</h3>
     <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
@@ -74,47 +74,10 @@
         </form>
 
     </form>
+
 </div>
 {% endif %}
 
-<!--<form method="POST" action=""> {% csrf_token %}-->
-<!--    {% if current_addresses %}-->
-<!--    <div class='col-sm-6'>-->
-<!--        <h3> Shipping Addresses</h3>-->
-<!--        {% for address in current_addresses %}-->
-
-<!--        {% if request.user.userdefaultaddress.shipping.id == address.id %}-->
-<!--        <input type="radio" name="shipping_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>-->
-<!--        {% else %}-->
-<!--        <input type="radio" name="shipping_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>-->
-
-<!--        {% endif %}-->
-
-<!--        {% endfor %}-->
-<!--    </div>-->
-<!--</form>-->
-<!--{% endif %}-->
-
-<!--<div class="row">-->
-
-<!--    {% if billing_addresses %}-->
-<!--    <div class="col-sm-6">-->
-<!--        <h3>Billing Addresses</h3>-->
-<!--        {% for address in billing_addresses %}-->
-
-<!--        {% if request.user.userdefaultaddress.shipping.id == address.id %}-->
-<!--        <input type="radio" name="billing_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>-->
-<!--        {% else %}-->
-<!--        <input type="radio" name="billing_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>-->
-
-<!--        {% endif %}-->
-<!--        {% endfor %}-->
-<!--    </div>-->
-<!--    {% endif %}-->
-
-
-
-<!--</div>-->
 
 <form action="." method="post" id="payment-form">
     {% csrf_token %}
@@ -125,10 +88,10 @@
             {% for address in current_addresses %}
 
             {% if request.user.userdefaultaddress.shipping.id == address.id %}
-            <input type="radio" name="shipping_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>
+            <input type="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
             {% else %}
-            <input type="radio" name="shipping_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>
 
+            <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
             {% endif %}
 
             {% endfor %}
@@ -143,9 +106,9 @@
             {% for address in billing_addresses %}
 
             {% if request.user.userdefaultaddress.shipping.id == address.id %}
-            <input type="radio" name="billing_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>
+            <input type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
             {% else %}
-            <input type="radio" name="billing_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>
+            <input type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
 
             {% endif %}
             {% endfor %}

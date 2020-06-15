@@ -20,7 +20,7 @@ try:
     stripe_secret = settings.STRIPE_SECRET_KEY
 
 except Exception as e:
-    #print(str(e))
+    print(str(e))
     raise NotImplementedError(str(e))
 
 stripe.api_key = stripe_secret
@@ -38,7 +38,7 @@ def checkout(request):
 
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
-        #print(cart)
+        print(cart)
     except:
         the_id= None
         return HttpResponseRedirect(reverse("cart"))
@@ -76,7 +76,7 @@ def checkout(request):
 
     current_addresses= UserAddress.objects.filter(user=User)
     billing_addresses= UserAddress.objects.get_billing_addresses(user=User)
-    #print(billing_addresses)
+    print(billing_addresses)
 
 
     if request.method == "POST":
@@ -88,45 +88,23 @@ def checkout(request):
             customer = None
 
         if customer is not None:
-            billing_a = request.POST['billing_address']
-            shipping_a = request.POST['shipping_address']
-            #print(request.POST)
+            print(request.POST)
+            billing_a = request.POST["billing_address"]
+            shipping_a = request.POST["shipping_address"]
+
             token = request.POST['stripeToken']
             try:
-                billing_addresses_instance = UserAddress.objects.get(id=billing_a)
-                #print("billing address try")
-
+                billing_address_instance = UserAddress.objects.get(id= billing_a)
             except:
-                #billing_addresses_instance= None
-                print(billing_addresses)
-                #print("billing address except")
-                #print(billing_a)
-                #print(UserAddress.objects.get_billing_addresses(user=User))
-
+                billing_address_instance = None
             try:
-                shipping_addresses_instance = UserAddress.objects.get(id=shipping_a)
+                shipping_address_instance = UserAddress.objects.get(id= shipping_a)
             except:
-                shipping_addresses_instance= None
-            #below
-            #card = customer.cards.create(card=token)
-            #print(billing_addresses_instance)
-            # billing_a.city = "Valley Stream"
-            # customer.address.city = billing_addresses_instance.city or None
-            # customer.address.line1= billing_addresses_instance.address or None
-            # customer.address.line2 =  billing_addresses_instance.address2 or None
-            # customer.address_state= billing_addresses_instance.state or None
-            # customer.address_country = billing_addresses_instance.country or None
-            # customer.address_zip= billing_addresses_instance.zipcode or None
-            customer.save()
+                shipping_address_instance = None
+            print(billing_a)
+            print(shipping_address_instance)
 
 
-            # card.address_city =billing_addresses_instance.city or None
-            # card.address_line1 = billing_addresses_instance.address or None
-            # card.address_line2 = billing_addresses_instance.address2 or None
-            # card.address_state= billing_addresses_instance.state or None
-            # card.address_country = billing_addresses_instance.country or None
-            # card.address_zip= billing_addresses_instance.zipcode or None
-            # card.save()
             source = stripe.Customer.create_source(
                 user_stripe,
                 source= token
@@ -135,25 +113,23 @@ def checkout(request):
                 amount= int(final_amount * 100),
                 currency="usd",
                 source = source,
-                #below
-                #card = card,
                 customer = customer,
                 description = "Test"
             )
-            print(source.id)
-            billing_addresses_instance = UserAddress.objects.get(id=billing_a)
-
-            bills = stripe.Customer.modify_source(
+            add_stripe_info = stripe.Customer.modify_source(
                 customer.id,
                 source.id,
-                address_city= billing_addresses_instance.city,
+                address_city = billing_address_instance.city,
+                address_country = billing_address_instance.country,
+                address_line1 = billing_address_instance.address,
+                address_zip = billing_address_instance.zipcode,
+                address_state = billing_address_instance.state,
             )
-            print(billing_addresses_instance.city)
 
             if charge["captured"]:
                 new_order.status = "Finished"
-                new_order.shipping_address = shipping_addresses_instance
-                new_order.billing_address = billing_addresses_instance
+                new_order.billing_address = billing_address_instance
+                new_order.shipping_address = shipping_address_instance
                 new_order.save()
                 cart.active = False
                 cart.save()
@@ -162,7 +138,7 @@ def checkout(request):
 
     context = {
                 "order":new_order,
-                "address_form":address_form,
+                "address_form": address_form,
                 "current_addresses": current_addresses,
                "billing_addresses": billing_addresses,
                "stripe_pub": stripe_pub,
