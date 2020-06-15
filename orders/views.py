@@ -116,6 +116,15 @@ def checkout(request):
                 customer = customer,
                 description = "Test"
             )
+            add_stripe_info = stripe.Customer.modify_source(
+                customer.id,
+                source.id,
+                address_city = billing_address_instance.city,
+                address_country = billing_address_instance.country,
+                address_line1 = billing_address_instance.address,
+                address_zip = billing_address_instance.zipcode,
+                address_state = billing_address_instance.state,
+            )
 
             if charge["captured"]:
                 new_order.status = "Finished"
