@@ -88,7 +88,22 @@ def checkout(request):
             customer = None
 
         if customer is not None:
+            print(request.POST)
+            billing_a = request.POST["billing_address"]
+            shipping_a = request.POST["shipping_address"]
+
             token = request.POST['stripeToken']
+            try:
+                billing_address_instance = UserAddress.objects.get(id= billing_a)
+            except:
+                billing_address_instance = None
+            try:
+                shipping_address_instance = UserAddress.objects.get(id= shipping_a)
+            except:
+                shipping_address_instance = None
+            print(billing_a)
+            print(shipping_address_instance)
+
 
             source = stripe.Customer.create_source(
                 user_stripe,
@@ -104,6 +119,8 @@ def checkout(request):
 
             if charge["captured"]:
                 new_order.status = "Finished"
+                new_order.billing_address = billing_address_instance
+                new_order.shipping_address = shipping_address_instance
                 new_order.save()
                 cart.active = False
                 cart.save()
@@ -112,7 +129,7 @@ def checkout(request):
 
     context = {
                 "order":new_order,
-                "address_form":address_form,
+                "address_form": address_form,
                 "current_addresses": current_addresses,
                "billing_addresses": billing_addresses,
                "stripe_pub": stripe_pub,

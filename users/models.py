@@ -40,7 +40,7 @@ class UserAddress(models.Model):
     updated = models.DateTimeField(max_length=120,null=True)
 
     def __str__(self):
-        return str(self.user)
+        return self.get_address()
 
 
     def get_address(self):

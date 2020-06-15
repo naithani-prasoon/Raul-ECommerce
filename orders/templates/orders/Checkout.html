@@ -125,10 +125,10 @@
             {% for address in current_addresses %}
 
             {% if request.user.userdefaultaddress.shipping.id == address.id %}
-            <input type="radio" name="shipping_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>
+            <input type="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
             {% else %}
-            <input type="radio" name="shipping_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>
 
+            <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
             {% endif %}
 
             {% endfor %}
@@ -143,9 +143,9 @@
             {% for address in billing_addresses %}
 
             {% if request.user.userdefaultaddress.shipping.id == address.id %}
-            <input type="radio" name="billing_address" value="{{ address_id }}" checked="checked"/> {{ address.get_address}} <br/>
+            <input type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
             {% else %}
-            <input type="radio" name="billing_address" value="{{ address_id }}"/> {{ address.get_address}} <br/>
+            <input type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
 
             {% endif %}
             {% endfor %}
