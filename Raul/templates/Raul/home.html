@@ -141,7 +141,7 @@
         <p> New Arrivals </p>
 
         <div class = "dropDownMenu">
-            <button class ="dropDownButton"> Décorative Accessories </button>
+            <button class ="dropDownButton"> décorative accessories </button>
             <div class = "dropDownContent">
                 <a href = "#"> Candlelight </a>
                 <a href = "#"> Decorative Objects </a>
@@ -162,7 +162,7 @@
 
 
         <div class = "dropDownMenu">
-            <button class ="dropDownButton"> Florals </button>
+            <button class ="dropDownButton"> <a href = "{% url 'cat-view' 'Flowers' %}">florals</a> </button>
             <div class = "dropDownContent">
                 <a href = "#"> Phool </a>
                 <a href = "#"> Podhe </a>
@@ -181,7 +181,22 @@
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
-            <figcaption> r a ù l  <br> <a href="{% url 'Raul-product' %}"><button> explore the shop </button></a></figcaption>
+            <figcaption> r a ù l  <br> <a href="#shop"><button> explore the shop </button></a></figcaption>
+        </div>
+    </div>
+
+    <div class= "feature" id="feature">
+        <div class="featureProductsHeading">
+            featured products
+        </div>
+        <div class="featureProducts">
+            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
+
+            <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo">
+            
+            <img src="{% static 'Raul/Images/8.jpg' %}" draggable="false" alt="Furniture Photo">
+
+            <img src="{% static 'Raul/Images/9.jpg' %}" draggable="false" alt="Furniture Photo">
         </div>
     </div>
 
@@ -193,9 +208,6 @@
     <div class="furniture" id ="FurnitureSec">
         <div class="shopBack">
             <div class="furnitureHeading">                
-                <div class="shopNow">
-                    SHOP NOW
-                </div>
                     <span>FURNITURE</span>
                     <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -215,9 +227,6 @@
     <div class="furniture" id ="LightingSec">
         <div class="shopBack" id="lighting">
             <div class="furnitureHeading">
-                <div class="shopNow">
-                    SHOP NOW
-                </div>
                     <span id="Lighting">LIGHTING</span>
                     <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -236,9 +245,6 @@
     <div class="furniture" id ="FlowerSec">
         <div class="shopBack" id="flower">
             <div class="furnitureHeading">
-                <div class="shopNow">
-                    SHOP NOW
-                </div>
                     <span id= "Floral">FLORAL</span>
                     <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -257,9 +263,7 @@
     <div class="furniture" id ="TableSec">
         <div class="shopBack" id="table">
             <div class="furnitureHeading">
-                <div class="shopNow">
-                    SHOP NOW
-                </div>
+                
                 <span>TABLETOP</span>
                 <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -278,9 +282,7 @@
     <div class="furniture" id ="WallSec">
         <div class="shopBack" id="wall">
             <div class="furnitureHeading">
-                <div class="shopNow">
-                    SHOP NOW
-                </div>
+                
                     <span>WALLART</span>
                     <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -300,9 +302,7 @@
     <div class="furniture" id ="DecorativeSec">
         <div class="shopBack" id="decorative">
             <div class="furnitureHeading">
-                <div class="shopNow">
-                    SHOP NOW
-                </div>
+                
                 <span id="head">  DECORATIVE ACCESSORIES</span>
                 <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -322,7 +322,7 @@
 
     </footer>
 
-    <script src="{% static 'Raul/JS/script.js' %}">
+    <script src="{% static 'Raul/JS/script.js' %}" charset="UTF-8">
 
     </script>
 
