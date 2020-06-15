@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +144,7 @@
       <workItem from="1591626302861" duration="5250000" />
       <workItem from="1591719084242" duration="1075000" />
       <workItem from="1591801144689" duration="6308000" />
-      <workItem from="1592236866099" duration="2258000" />
+      <workItem from="1592236866099" duration="2971000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -421,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592165217133</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fixes">
+      <created>1592244261972</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1592244261972</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +447,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="product grid 2" />
     <MESSAGE value="product grid 3 looks okay" />
     <MESSAGE value="started search bar" />
     <MESSAGE value="can add and remove from cart" />
@@ -467,7 +471,8 @@
     <MESSAGE value="stripe? 2" />
     <MESSAGE value="stripe..." />
     <MESSAGE value="nonsense garbage" />
-    <option name="LAST_COMMIT_MESSAGE" value="nonsense garbage" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">
