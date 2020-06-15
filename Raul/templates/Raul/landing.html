@@ -15,25 +15,49 @@
 
 </head>
 <body>
-    <a href="#">
-        <div class="container">
-            <p id= "cafe"><img src="{% static 'Raul/Images/cafe.png' %}" alt="logo"></p>
-            <video src="{% static 'Raul/Images/.flor.mp4.icloud' %}" autoplay muted loop></video>
-        </div>
-    </a>
-<!--    <a href="{% url 'Raul-Home' %}">-->
 
-    <a href="{% url 'Raul-SecondHome' %}">
-        <div class="container">
-            <p id ="raul"><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo"></p>
-            <video src="{% static 'Raul/Images/.raul.mp4.icloud' %}" autoplay muted loop></video>
-        </div>
-    </a>
-    <a href="#">
-        <div class="container">
-            <p id="third">F O <br>   U   R</p>
-            <video src="{% static 'Raul/Images/.third.mp4.icloud' %}" autoplay muted loop></video>
-        </div>
-    </a>
+    
+    
+    
+    <div class="bigContainer">
+
+        
+        
+        <a href="#">
+            <div class="container" id="cafeBanner">
+                <p id= "cafe"><img src="{% static 'Raul/Images/cafe.png' %}" alt="logo"></p>
+                <img src="{% static 'Raul/Images/coffee.jpg' %}">
+                <div class="backgroundText">
+                    <figcaption>
+                        CAFE FLOR
+                    </figcaption>
+                </div>
+            </div>
+        </a>
+
+        <a href="{% url 'Raul-SecondHome' %}">
+            <div class="container" id="raulBanner">
+                <p id ="raul"><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo"></p>
+                <img src="{% static 'Raul/Images/9.jpg' %}">
+                <div class="backgroundText2">
+                    <figcaption>
+                        RAUL
+                    </figcaption>
+                </div>
+            </div>
+        </a>
+
+        
+        <a href="#">
+            <div class="container">
+                <p id="third">F O <br>   U   R</p>
+                <img src="{% static 'Raul/Images/5.jpg' %}">
+            </div>
+        </a>
+
+        
+    </div>
+
+
 </body>
 </html>
