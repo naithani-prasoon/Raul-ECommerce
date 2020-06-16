@@ -9,15 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{% static 'Raul/CSS/main.css' %}">
-    <link rel="stylesheet" href="{% static 'Raul/JS/script.js' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 <body>
-    <button onclick="scrollFunction()" id="scrollTop"> Top </button>
+    <button onclick="topFunction()" id="scrollTop"> Top </button>
     <div class ="headers">
         <figure>
             <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
@@ -164,7 +162,7 @@
         <div class = "dropDownMenu">
             <button class ="dropDownButton"> <a href = "{% url 'cat-view' 'Flowers' %}">florals</a> </button>
             <div class = "dropDownContent">
-                <a href = "#"> Phool </a>
+                <a href = "{% url 'register' %}"> Phool </a>
                 <a href = "#"> Podhe </a>
                 <a href = "#"> Gulaab </a>
                 <a href = "#"> Kamal </a>
@@ -204,6 +202,8 @@
         <figcaption> SHOP </figcaption>
         | <a href="#FlowerSec">FLORAL</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#TableSec">TABLE TOP</a> |
     </div>
+
+<div class="horizontalScroll">
 
     <div class="furniture" id ="FurnitureSec">
         <div class="shopBack">
@@ -298,7 +298,6 @@
         </div>
     </div>
 
-    
     <div class="furniture" id ="DecorativeSec">
         <div class="shopBack" id="decorative">
             <div class="furnitureHeading">
@@ -317,12 +316,31 @@
 
         </div>
     </div>
+
+</div>
     
     <footer>
 
     </footer>
 
     <script src="{% static 'Raul/JS/script.js' %}" charset="UTF-8">
+            
+        var mybutton = document.getElementById("scrollTop");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
 
     </script>
 
