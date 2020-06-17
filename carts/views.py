@@ -36,7 +36,6 @@ def view(request):
             # Check if an ACTIVE cart is asspcated with User #
         try:
             cart = Cart.objects.get(user=User,active=True)
-            print("Try with User")
         except:
             pass
         else:
@@ -48,8 +47,6 @@ def view(request):
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id,active=True)
-        print("Try with IDK")
-
     except:
         the_id= None
 
