@@ -80,7 +80,20 @@ def update_cart(request,slug):
     except:
         qty = ''
         update_qty = False
+    notes = {}
+    try:
+        color = request.GET.get("color")
+        notes['color'] = color
+        print(color)
+    except:
+        print(color)
+        color = None
 
+    try:
+        size = request.GET.get("size")
+        notes['size'] = size
+    except:
+        size = None
     try:
         the_id = request.session['cart_id']
     except:
@@ -107,10 +120,11 @@ def update_cart(request,slug):
     if created:
         print("Yes")
     #print(qty)
-    if int(qty) == 0 and update_qty:
+    if int(qty) <= 0 and update_qty:
         cart_item.delete()
     elif update_qty:
         cart_item.quantity = qty
+        cart_item.notes = notes
         cart_item.save()
     else:
         pass

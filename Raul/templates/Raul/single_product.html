@@ -153,15 +153,42 @@
 <!--                <a href="#">How to configurate your headphones</a>-->
 <!--            </div>-->
             <form class= 'form pull-right' method='GET' action="{% url 'update_cart' single_product.slug %}">
+
                 <input name='qty' type='number' placeholder='1' value='1' />
-                <input type='submit' value='Add to cart' />
+
+
+                {% if single_product.variation_set.colors %}
+
+                <select class="form-control" name="color">
+                    {% for item in single_product.variation_set.colors %}
+                    <option value="{{item.title }}">{{item.title }}
+                    </option>
+                    {% endfor %}
+                </select>
+                {% endif %}
+
+                {% if single_product.variation_set.sizes %}
+
+                <select class="form-control" name="size">
+                    {% for item in single_product.variation_set.sizes %}
+                    <option value="{{item.title }}">{{item.title }}
+                    </option>
+                    {% endfor %}
+                </select>
+                {% endif %}
+
+                <input type='submit' value='Add to cart'
+                <a href="{% url 'update_cart' single_product.slug %}?qty=1" class="cart-btn"></a>
+
+
             </form>
+
         </div>
 
         <!-- Product Pricing -->
         <div class="product-price">
-            <span>148$</span>
-            <a href="{% url 'update_cart' single_product.slug %}?qty=1" class="cart-btn">Add to cart</a>
+            <span>${{item.price}}</span>
+
         </div>
     </div>
 </main>
