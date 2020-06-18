@@ -74,7 +74,7 @@ def view(request):
 
 
 
-def update_cart(request,slug):
+def add_to_cart(request,slug):
     request.session.set_expiry(3000000)
 
     try:
@@ -108,34 +108,45 @@ def update_cart(request,slug):
 
 
 
-        cart_item, created = CartItem.objects.get_or_create(cart= cart, product=producter)
+        cart_item = CartItem.objects.create(cart= cart, product=producter)
 
         if request.user.is_authenticated:
-            print("hi")
             cart.user = request.user
             cart_item.user = request.user
 
 
-        if int(qty) <= 0:
-            cart_item.delete()
-        else:
-            if len(pro_var) > 0:
-                cart_item.variation.clear()
-                for item in pro_var:
-                    cart_item.variation.add(item)
-            cart_item.quantity = qty
-            cart_item.save()
+        list_variations = [{}]
+        if len(pro_var) > 0:
+            for item in pro_var:
+                cart_item.variation.add(item)
+                print(item)
+            for products in cart.cartitem_set.all():
+                
+                for variation in products.variation.all():
+                    print("printing")
+                    print(variation)
+                    print("products is")
+                    print(products)
+            # print("item below")
+            # print(cart_item.product)
+            # print("set below")
+            # print(cart.cartitem_set.all())
+            # print("variations")
+            #print(cart_item.notes)
+
+        cart_item.quantity = qty
+        cart_item.save()
 
 
 
     new_total = 0.00
     for item in cart.cartitem_set.all():
         if(item.quantity != None):
-            print(item.product)
+            #print(item.product)
             new_total += float(item.product.price) * (item.quantity)
             line_total = float(item.product.price) * (item.quantity)
             item.line_total = line_total
-            print(item.line_total)
+            #print(item.line_total)
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
@@ -144,6 +155,7 @@ def update_cart(request,slug):
     cart.save()
 
     return redirect(reverse("cart"))
+
 
 
 

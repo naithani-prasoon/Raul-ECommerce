@@ -152,7 +152,7 @@
 
 <!--                <a href="#">How to configurate your headphones</a>-->
 <!--            </div>-->
-            <form class= 'form pull-right' method='POST' action="{% url 'update_cart' single_product.slug %}">
+            <form class= 'form pull-right' method='POST' action="{% url 'add_to_cart' single_product.slug %}">
             {% csrf_token %}
 
                 <input name='qty' type='number' placeholder='1' value='1' />
@@ -179,7 +179,7 @@
                 {% endif %}
 
                 <input type='submit' value='Add to cart'
-                <a href="{% url 'update_cart' single_product.slug %}?qty=1" class="cart-btn"></a>
+                <a href="{% url 'add_to_cart' single_product.slug %}?qty=1" class="cart-btn"></a>
 
 
             </form>

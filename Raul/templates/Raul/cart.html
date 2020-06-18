@@ -28,7 +28,7 @@
                                     <div class="col-md-3">
                                         <a href="{% url 'Raul-single' item.product.slug %}" >
                                         <img class="img-fluid mx-auto d-block image" src="{{item.product.image.url}}">
-                                        <a href="{% url 'update_cart' item.product.slug %}?qty=0">remove</a>
+                                        <a href="{% url 'add_to_cart' item.product.slug %}?qty=0">remove</a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="info">
@@ -45,7 +45,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 quantity">
-                                                    <form class= 'form pull-right' method='POST' action="{% url 'update_cart' item.product.slug %}">
+                                                    <form class= 'form pull-right' method='POST' action="{% url 'add_to_cart' item.product.slug %}">
                                                         {% csrf_token %}
                                                         <input name='qty' type='number' placeholder={{item.quantity}} value='{{item.quantity}}' />
                                                         <input type='submit' value='update cart' />
