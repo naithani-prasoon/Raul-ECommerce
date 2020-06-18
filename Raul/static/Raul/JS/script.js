@@ -1,7 +1,7 @@
 
  var mybutton = document.getElementById("scrollTop");
 
- window.onscroll = function() {scrollFunction()};
+ window.onscroll = function() {scrollFunction(),navbarFunction()};
 
  function scrollFunction() {
      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -15,6 +15,20 @@
      document.body.scrollTop = 0;
      document.documentElement.scrollTop = 0;
  }
+
+ 
+ function navbarFunction() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        document.getElementById("hideOnScroll").style.display = "none";
+        document.getElementById("headerOnScroll").style.height = "4.5em";
+        document.getElementById("headerOnScroll").style.borderBottom = "0.5px solid white";
+    } else {
+        document.getElementById("headerOnScroll").style.height = "7.5em";
+        document.getElementById("hideOnScroll").style.display = "flex";
+        document.getElementById("headerOnScroll").style.borderBottom = "0px";
+        
+    }
+}
 
  function openNav() {
      document.getElementById("contentHam").style.height = "100%";
@@ -32,10 +46,3 @@
      document.getElementById("store").style.height = "0%";
  }
 
- function openCategory(){
-     document.getElementById("category").style.height = "20%";
- }
-
- function closeCategory(){
-     document.getElementById("category").style.height = "0%";
- }

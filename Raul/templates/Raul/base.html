@@ -16,88 +16,47 @@
 <body>
 
 <!-- Header Nav Bar-->
-<div class ="headers">
-    <figure>
-        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
+
+<div class = "headers" id="headerOnScroll">
+    <figure id="figureOnScroll">
+
+        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" id="logo">
+
         {% if user.is_authenticated %}
-        <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-        <a  href="#" onclick="openCategory()"><p> Store </p></a>
-        <div id ="store">
-            <p onclick="closeStore()" id="cross">
-                X
-            </p>
-            <p>
-                cafe flor
-            </p>
-            <p>
-                raul
-            </p>
-
-
-
-
-        </div>
-        <a href="{% url 'logout' %}"> <p>Logout </p></a>
-        <a href="{% url 'cart' %}"> <p>Cart </p></a>
-        <a href="{% url 'profile' %}"> <p>Profile</p></a>
-
-
+        <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}"> </p></a>
+        <a href="{% url 'logout' %}"> <p> Logout </p></a>
+        <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}"> </p></a>
+        <a href="{% url 'profile' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/login.png' %}"> </p></a>
 
         {% else %}
-        <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-        <a href = "#" onclick="openCategory()"><p> Store </p></a>
-        <div id ="store">
-            <p onclick="closeStore()" id="cross">
-                X
-            </p>
-
-            <p>
-                cafe flor
-            </p>
-
-            <p>
-                raul
-            </p>
-
-            <p>
-                third
-            </p>
-
-        </div>
-        <a href="{% url 'register' %}"><p> Register </p></a>
-        <a href="{% url 'login' %}"> <p>Login </p></a>
-        <a href="{% url 'cart' %}"> <p>Cart </p></a>
-
-
+        <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}"> </p></a>
+        <a href="{% url 'login' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}"> </p></a>
+        <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}"> </p></a>
         {% endif %}
 
-
-        <!-- <div class ="loginSlide" id="login">
-            <div class="loginText">
-                <p>L O G I N</p>
-                <input type="email" placeholder="Email ID">
-                <input type="password" placeholder="Password">
-                <input type="submit" placeholder="Login">
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember Me
-                </label>
-                <a>Forgot Password?</a>
-            </div>
-            <div class ="arrow">
-                <img src="{% static 'Raul/Images/arrowDown.png' %}" onclick="closeLogin()" draggable="false" id="arrow">
-            </div>
-            <div class="signUp">
-                <p> S I G N - U P </p>
-                <input type="email" placeholder="Email ID">
-                <input type="password" placeholder="Password">
-                <input type="submit" placeholder="Login">
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember Me
-                </label>
-                <a>Forgot Password?</a>
-            </div>
-        </div> -->
     </figure>
+
+    <div class="category" id="hideOnScroll">
+
+        <p> New Arrivals </p>
+
+        <p> Decorative Accessories</p>
+        
+        <p>Tabletop</p>
+        
+        <p>Furniture</p>
+
+        <p>Floral</p>
+        
+        <p>Wall Art</p>
+
+        <p>All Products</p>
+        
+        <p>Sale</p>
+        
+        <p>Venue Bookings</p>
+
+    </div>
 
     <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
 
@@ -128,43 +87,7 @@
 
         </ul>
     </nav>
-</div>
-
-<div id = "category">
-
-    <p> New Arrivals </p>
-
-    <div class = "dropDownMenu">
-        <button class ="dropDownButton"> Décorative Accessories </button>
-        <div class = "dropDownContent">
-            <a href = "#"> Candlelight </a>
-            <a href = "#"> Decorative Objects </a>
-            <a href = "#"> Urn </a>
-            <a href = "#"> Vases and Cachepot</a>
-        </div>
-    </div>
     
-    <p>Tabletop</p>
-    
-    <p>Furniture</p>
-    
-    <p>Wall Art</p>
-    
-    <div class = "dropDownMenu">
-        <button class ="dropDownButton"> Florals </button>
-        <div class = "dropDownContent">
-            <a href = "#"> Phool </a>
-            <a href = "#"> Podhe </a>
-            <a href = "#"> Gulaab </a>
-            <a href = "#"> Kamal </a>
-        </div>
-    </div>
-    
-    <p>Sale</p>
-    
-    <p>Venue Bookings</p>
-
-    <p onclick="closeCategory()">X</p>
 </div>
 
 
@@ -183,46 +106,6 @@
 <script>
     AOS.init();
 </script>
-<script>
-
-    $(document).ready(function(){
-        $(window).scroll(function(){
-            var scroll = $(window).scrollTop();
-            if (scroll > 100) {
-                $(".headers").css("background" , "header");
-            }
-
-            else{
-                $(".headers").css("background" , "transparent");
-            }
-        })
-    })
-
-    function openNav() {
-        document.getElementById("contentHam").style.height = "100%";
-    }
-
-    function closeNav() {
-        document.getElementById("contentHam").style.height = "0%";
-    }
-
-    function openStore(){
-        document.getElementById("store").style.height = "50%";
-    }
-
-    function closeStore(){
-        document.getElementById("store").style.height = "0%";
-    }
-    function openCategory(){
-        document.getElementById("category").style.height = "20%";
-    }
-
-    function closeCategory(){
-        document.getElementById("category").style.height = "0%";
-    }
-
-
-
-</script>
+<script src="{% static 'Raul/JS/script.js' %}" charset="UTF-8"></script>
 </body>
 </html>

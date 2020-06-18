@@ -7,7 +7,7 @@
     </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="{% static 'Raul/CSS/main.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
@@ -15,92 +15,47 @@
 
 </head>
 <body>
-    <button onclick="topFunction()" id="scrollTop"> Top </button>
-    <div class ="headers">
-        <figure>
-            <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
+    
+    <div class = "headers" id="headerOnScroll">
+        <figure id="figureOnScroll">
+
+            <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" id="logo">
+
             {% if user.is_authenticated %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-            <a  href="#" onclick="openCategory()"><p> Store </p></a>
-            <div id ="store">
-                <p onclick="closeStore()" id="cross">
-                    X
-                </p>
-                <p>
-                    cafe flor
-                </p>
-                <p>
-                    raul
-                </p>
-                <p>
-                    third
-                </p>
-
-
-
-
-            </div>
-            <a href="{% url 'logout' %}"> <p>Logout </p></a>
-            <a href="{% url 'cart' %}"> <p>Cart </p></a>
-            <a href="{% url 'profile' %}"> <p>Profile</p></a>
-
-
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}"> </p></a>
+            <a href="{% url 'logout' %}"> <p> Logout </p></a>
+            <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}"> </p></a>
+            <a href="{% url 'profile' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/login.png' %}"> </p></a>
 
             {% else %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> Home </p></a>
-            <a href = "#" onclick="openCategory()"><p> Store </p></a>
-            <div id ="store">
-                <p onclick="closeStore()" id="cross">
-                    X
-                </p>
-
-                <p>
-                    cafe flor
-                </p>
-
-                <p>
-                    raul
-                </p>
-
-                <p>
-                    third
-                </p>
-
-            </div>
-            <a href="{% url 'register' %}"><p> Register </p></a>
-            <a href="{% url 'login' %}"> <p>Login </p></a>
-            <a href="{% url 'cart' %}"> <p>Cart </p></a>
-
-
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}"> </p></a>
+            <a href="{% url 'login' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}"> </p></a>
+            <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}"> </p></a>
             {% endif %}
 
-
-            <!-- <div class ="loginSlide" id="login">
-                <div class="loginText">
-                    <p>L O G I N</p>
-                    <input type="email" placeholder="Email ID">
-                    <input type="password" placeholder="Password">
-                    <input type="submit" placeholder="Login">
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember Me
-                    </label>
-                    <a>Forgot Password?</a>
-                </div>
-                <div class ="arrow">
-                    <img src="{% static 'Raul/Images/arrowDown.png' %}" onclick="closeLogin()" draggable="false" id="arrow">
-                </div>
-                <div class="signUp">
-                    <p> S I G N - U P </p>
-                    <input type="email" placeholder="Email ID">
-                    <input type="password" placeholder="Password">
-                    <input type="submit" placeholder="Login">
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember Me
-                    </label>
-                    <a>Forgot Password?</a>
-                </div>
-            </div> -->
         </figure>
+
+        <div class="category" id="hideOnScroll">
+
+            <p> New Arrivals </p>
+
+            <p> Decorative Accessories</p>
+            
+            <p>Tabletop</p>
+            
+            <p>Furniture</p>
+
+            <p>Floral</p>
+            
+            <p>Wall Art</p>
+
+            <p>All Products</p>
+            
+            <p>Sale</p>
+            
+            <p>Venue Bookings</p>
+
+        </div>
 
         <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
 
@@ -134,76 +89,106 @@
         
     </div>
 
-    <div id = "category">
+    <div id ="store">
+        <p onclick="closeStore()" id="cross">
+            X
+        </p>
 
-        <p> New Arrivals </p>
+        <p>
+            cafe flor
+        </p>
 
-        <div class = "dropDownMenu">
-            <button class ="dropDownButton"> décorative accessories </button>
-            <div class = "dropDownContent">
-                <a href = "#"> Candlelight </a>
-                <a href = "#"> Decorative Objects </a>
-                <a href = "#"> Urn </a>
-                <a href = "#"> Vases and Cachepot</a>
-            </div>
-        </div>
-        
-        <p>Tabletop</p>
-        
-        <p>Furniture</p>
-        
-        <p>Wall Art</p>
+        <p>
+            raul
+        </p>
 
-        <p>All Products</p>
+        <p>
+            third
+        </p>
 
-
-
-
-        <div class = "dropDownMenu">
-            <button class ="dropDownButton"> <a href = "{% url 'cat-view' 'Flowers' %}">florals</a> </button>
-            <div class = "dropDownContent">
-                <a href = "{% url 'register' %}"> Phool </a>
-                <a href = "#"> Podhe </a>
-                <a href = "#"> Gulaab </a>
-                <a href = "#"> Kamal </a>
-            </div>
-        </div>
-        
-        <p>Sale</p>
-        
-        <p>Venue Bookings</p>
-
-        <p onclick="closeCategory()">X</p>
     </div>
 
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
-            <figcaption> r a ù l  <br> <a href="#shop"><button> explore the shop </button></a></figcaption>
+            <figcaption><a href="#shop"><button> explore the shop </button></a></figcaption>
         </div>
     </div>
 
     <div class= "feature" id="feature">
-        <div class="featureProductsHeading">
-            featured products
+        <div class="featureProducts">
+            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
         </div>
         <div class="featureProducts">
             <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
-
-            <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo">
-            
-            <img src="{% static 'Raul/Images/8.jpg' %}" draggable="false" alt="Furniture Photo">
-
-            <img src="{% static 'Raul/Images/9.jpg' %}" draggable="false" alt="Furniture Photo">
+        </div>
+        <div class="featureProducts">
+            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
+        </div>
+        <div class="featureProductsHeading">
+            featured products
         </div>
     </div>
 
+    <div class ="bannerSecond">
+    </div>
+
+    <div class ="shopBanner">
+        <figcaption> shop for the perfect setup</figcaption>
+        
+    </div>
+
+    <div class="horizontalScroll">
+        <div class = "container">
+            <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            <div class = "text">
+                <div class = "textInfo"> Furniture </div>
+            </div>
+        </div>
+        <div class = "container">
+            <img src="{% static 'Raul/Images/8.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            <div class = "text">
+                <div class = "textInfo"> Floral </div>
+            </div>
+        </div>
+        <div class = "container">
+            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            <div class = "text">
+                <div class = "textInfo"> Lighting </div>
+            </div>
+        </div>
+        <div class = "container">
+            <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            <div class = "text">
+                <div class = "textInfo"> Wall Art </div>
+            </div>
+        </div>
+        <div class = "container">
+            <img src="{% static 'Raul/Images/10.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            <div class = "text">
+                <div class = "textInfo"> Table Top </div>
+            </div>
+        </div>
+        <div class = "container">
+            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            <div class = "text">
+                <div class = "textInfo"> Decorative Accessories </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bannerThird">
+
+    </div>
+
+    <button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>
+<!-- 
     <div class="shopBanner" id="shop">
         <figcaption> SHOP </figcaption>
         | <a href="#FlowerSec">FLORAL</a> | <a href="#FurnitureSec">FURNITURE</a> | <a href="#WallSec">WALL ART</a> | <a href ="#DecorativeSec">DECORATIVE ACCESSORIES</a> | <a href="#LightingSec">LIGHTING</a> | <a href="#TableSec">TABLE TOP</a> |
-    </div>
+    </div> -->
 
-<div class="horizontalScroll">
+<!-- <div class="horizontalScroll">
 
     <div class="furniture" id ="FurnitureSec">
         <div class="shopBack">
@@ -317,30 +302,13 @@
         </div>
     </div>
 
-</div>
+</div> -->
     
     <footer>
 
     </footer>
 
     <script src="{% static 'Raul/JS/script.js' %}" charset="UTF-8">
-            
-        var mybutton = document.getElementById("scrollTop");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
 
     </script>
 
