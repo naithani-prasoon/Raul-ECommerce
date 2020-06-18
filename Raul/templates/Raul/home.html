@@ -14,8 +14,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 </head>
+<style>
+
+    body{
+        height:100%;
+    }
+    #scrollTop {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+    }
+
+    #scrollTop:hover {
+        background-color: blue;
+    }
+
+</style>
 <body>
-    <button onclick="topFunction()" id="scrollTop"> Top </button>
+
+<button onclick="scrollFunction()" id="scrollTop"> Top </button>
     <div class ="headers">
         <figure>
             <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" >
@@ -74,7 +101,6 @@
 
             {% endif %}
 
-
             <!-- <div class ="loginSlide" id="login">
                 <div class="loginText">
                     <p>L O G I N</p>
@@ -128,10 +154,9 @@
                 </li>
 
 
-
             </ul>
         </nav>
-        
+
     </div>
 
     <div id = "category">
@@ -147,11 +172,11 @@
                 <a href = "#"> Vases and Cachepot</a>
             </div>
         </div>
-        
+
         <p>Tabletop</p>
-        
+
         <p>Furniture</p>
-        
+
         <p>Wall Art</p>
 
         <p>All Products</p>
@@ -168,9 +193,9 @@
                 <a href = "#"> Kamal </a>
             </div>
         </div>
-        
+
         <p>Sale</p>
-        
+
         <p>Venue Bookings</p>
 
         <p onclick="closeCategory()">X</p>
@@ -191,7 +216,7 @@
             <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
 
             <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo">
-            
+
             <img src="{% static 'Raul/Images/8.jpg' %}" draggable="false" alt="Furniture Photo">
 
             <img src="{% static 'Raul/Images/9.jpg' %}" draggable="false" alt="Furniture Photo">
@@ -207,7 +232,7 @@
 
     <div class="furniture" id ="FurnitureSec">
         <div class="shopBack">
-            <div class="furnitureHeading">                
+            <div class="furnitureHeading">
                     <span>FURNITURE</span>
                     <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -236,7 +261,7 @@
 
             <div class ="furnitureImages">
                 <img src="{% static 'Raul/Images/1.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
-                
+
                 <img src="{% static 'Raul/Images/7.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
@@ -254,7 +279,7 @@
 
             <div class ="furnitureImages">
                 <img src="{% static 'Raul/Images/9.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
-                
+
                 <img src="{% static 'Raul/Images/8.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
@@ -263,7 +288,6 @@
     <div class="furniture" id ="TableSec">
         <div class="shopBack" id="table">
             <div class="furnitureHeading">
-                
                 <span>TABLETOP</span>
                 <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -273,7 +297,7 @@
 
             <div class ="furnitureImages">
                 <img src="{% static 'Raul/Images/3.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
-                
+
                 <img src="{% static 'Raul/Images/10.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
@@ -282,7 +306,7 @@
     <div class="furniture" id ="WallSec">
         <div class="shopBack" id="wall">
             <div class="furnitureHeading">
-                
+
                     <span>WALLART</span>
                     <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -292,7 +316,7 @@
 
             <div class ="furnitureImages">
                 <img src="{% static 'Raul/Images/2.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
-                
+
                 <img src="{% static 'Raul/Images/11.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
         </div>
@@ -301,7 +325,7 @@
     <div class="furniture" id ="DecorativeSec">
         <div class="shopBack" id="decorative">
             <div class="furnitureHeading">
-                
+
                 <span id="head">  DECORATIVE ACCESSORIES</span>
                 <a href="#" class = "seeMore"> see more </a>
                 <div class = "linksShop">
@@ -310,7 +334,7 @@
             </div>
             <div class ="furnitureImages">
                 <img src="{% static 'Raul/Images/2.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage">
-                
+
                 <img src="{% static 'Raul/Images/11.jpg' %}"  draggable="false" alt="Furniture Photo" class="staticImage" id="hide">
             </div>
 
@@ -318,13 +342,13 @@
     </div>
 
 </div>
-    
+
     <footer>
 
     </footer>
 
-    <script src="{% static 'Raul/JS/script.js' %}" charset="UTF-8">
-            
+    <script>
+
         var mybutton = document.getElementById("scrollTop");
 
         window.onscroll = function() {scrollFunction()};

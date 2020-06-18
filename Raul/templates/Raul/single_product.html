@@ -2,7 +2,7 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<head>
+<head xmlns="http://www.w3.org/1999/html">
     <style>
         html, body {
             height: 100%;
@@ -152,7 +152,8 @@
 
 <!--                <a href="#">How to configurate your headphones</a>-->
 <!--            </div>-->
-            <form class= 'form pull-right' method='GET' action="{% url 'update_cart' single_product.slug %}">
+            <form class= 'form pull-right' method='POST' action="{% url 'update_cart' single_product.slug %}">
+            {% csrf_token %}
 
                 <input name='qty' type='number' placeholder='1' value='1' />
 
