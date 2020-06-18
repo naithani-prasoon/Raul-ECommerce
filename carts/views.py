@@ -127,22 +127,20 @@ def update_cart(request,slug):
 
 
 
-        new_total = 0.00
-        line_total = 0.00
-        #item.line_total = float(item.product.price) * (item.quantity)
-        for item in cart.cartitem_set.all():
-            if(item.quantity != None):
-                print(item.product)
-                new_total += float(item.product.price) * (item.quantity)
-                line_total = float(item.product.price) * (item.quantity)
-                item.line_total = line_total
-                print(item.line_total)
+    new_total = 0.00
+    for item in cart.cartitem_set.all():
+        if(item.quantity != None):
+            print(item.product)
+            new_total += float(item.product.price) * (item.quantity)
+            line_total = float(item.product.price) * (item.quantity)
+            item.line_total = line_total
+            print(item.line_total)
+        item.save()
 
-            item.save()
-
-        request.session['items_total'] = cart.cartitem_set.count()
-        cart.total = new_total
-        cart.pennies_total = cart.total * 100
+    request.session['items_total'] = cart.cartitem_set.count()
+    cart.total = new_total
+    cart.pennies_total = cart.total * 100
+    cart.save()
 
     return redirect(reverse("cart"))
 
