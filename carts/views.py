@@ -76,6 +76,8 @@ def view(request):
 
 def add_to_cart(request,slug):
     request.session.set_expiry(3000000)
+    key = None
+    val = None
 
     try:
         the_id = request.session['cart_id']
@@ -108,34 +110,45 @@ def add_to_cart(request,slug):
 
 
 
-        cart_item = CartItem.objects.create(cart= cart, product=producter)
-
-        if request.user.is_authenticated:
-            cart.user = request.user
-            cart_item.user = request.user
+        new_item = CartItem.objects.create(cart= cart, product=producter)
 
 
-        list_variations = [{}]
+
+
+
+
+
+        cart_products = []
+        new_products =[]
+
+
+
+
         if len(pro_var) > 0:
             for item in pro_var:
-                cart_item.variation.add(item)
-                print(item)
+                new_item.variation.add(item)
             for products in cart.cartitem_set.all():
-                
+                single_product = []
+                single_product.append(products)
                 for variation in products.variation.all():
-                    print("printing")
-                    print(variation)
-                    print("products is")
-                    print(products)
-            # print("item below")
-            # print(cart_item.product)
-            # print("set below")
-            # print(cart.cartitem_set.all())
-            # print("variations")
-            #print(cart_item.notes)
+                    single_product.append(variation)
+                cart_products.append(single_product)
+        boo = CartItem.objects.filter(cart=cart,product = producter, variation = v)
 
-        cart_item.quantity = qty
-        cart_item.save()
+        if boo.count() > 1:
+
+            new_item.delete()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
