@@ -1,7 +1,9 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.urls import reverse
-from .models import CartItem
+from .models import CartItem,Cart
 from django.contrib.auth import get_user
+from Raul.models import Variation, product
+
 
 
 # Create your views here.
@@ -72,14 +74,8 @@ def view(request):
 
 
 
-def update_cart(request,slug):
+def add_to_cart(request,slug):
     request.session.set_expiry(3000000)
-    try:
-        qty = request.GET.get('qty')
-        update_qty = True
-    except:
-        qty = ''
-        update_qty = False
 
     try:
         the_id = request.session['cart_id']
@@ -88,8 +84,8 @@ def update_cart(request,slug):
         new_cart.save()
         request.session['cart_id'] = new_cart.id
         the_id = new_cart.id
-    cart = Cart.objects.get(id=the_id)
 
+    cart = Cart.objects.get(id=the_id)
 
     try:
         producter= product.objects.get(slug=slug)
@@ -98,46 +94,68 @@ def update_cart(request,slug):
     except:
         pass
 
-    cart_item, created = CartItem.objects.get_or_create(cart= cart, product=producter)
-    if(request.user.is_authenticated):
-        cart.user = request.user
-        cart_item.user = request.user
+    pro_var = []
+    if request.method == "POST":
+        qty = request.POST['qty']
+        for item in request.POST:
+            key = item
+            val = request.POST[key]
+            try:
+                v = Variation.objects.get(product=producter, category__iexact= key, title__iexact=val)
+                pro_var.append(v)
+            except:
+                pass
 
 
-    if created:
-        print("Yes")
-    #print(qty)
-    if int(qty) == 0 and update_qty:
-        cart_item.delete()
-    elif update_qty:
+
+        cart_item = CartItem.objects.create(cart= cart, product=producter)
+
+        if request.user.is_authenticated:
+            cart.user = request.user
+            cart_item.user = request.user
+
+
+        list_variations = [{}]
+        if len(pro_var) > 0:
+            for item in pro_var:
+                cart_item.variation.add(item)
+                print(item)
+            for products in cart.cartitem_set.all():
+                
+                for variation in products.variation.all():
+                    print("printing")
+                    print(variation)
+                    print("products is")
+                    print(products)
+            # print("item below")
+            # print(cart_item.product)
+            # print("set below")
+            # print(cart.cartitem_set.all())
+            # print("variations")
+            #print(cart_item.notes)
+
         cart_item.quantity = qty
         cart_item.save()
-    else:
-        pass
-    #if cart_item not in cart.items.all():
-    #    cart.items.add(cart_item)
-    #else:
-    #    cart.items.remove(cart_item)
+
+
 
     new_total = 0.00
-    line_total = 0.00
-    #item.line_total = float(item.product.price) * (item.quantity)
     for item in cart.cartitem_set.all():
         if(item.quantity != None):
-            print(item.product)
+            #print(item.product)
             new_total += float(item.product.price) * (item.quantity)
             line_total = float(item.product.price) * (item.quantity)
             item.line_total = line_total
-            print(item.line_total)
-
+            #print(item.line_total)
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
     cart.total = new_total
     cart.pennies_total = cart.total * 100
-
     cart.save()
+
     return redirect(reverse("cart"))
+
 
 
 

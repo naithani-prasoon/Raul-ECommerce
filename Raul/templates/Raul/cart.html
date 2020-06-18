@@ -28,7 +28,7 @@
                                     <div class="col-md-3">
                                         <a href="{% url 'Raul-single' item.product.slug %}" >
                                         <img class="img-fluid mx-auto d-block image" src="{{item.product.image.url}}">
-                                        <a href="{% url 'update_cart' item.product.slug %}?qty=0">remove</a>
+                                        <a href="{% url 'add_to_cart' item.product.slug %}?qty=0">remove</a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="info">
@@ -40,11 +40,13 @@
                                                         <div class="product-info">
                                                             <div>Display: <span class="value">studded vase ${{item.product.price}}
 																	Metal Vase Bronze 5 H x 5 W</span></div>
+                                                            <div> <span class="value">{{item.variation.all}}</span></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 quantity">
-                                                    <form class= 'form pull-right' method='GET' action="{% url 'update_cart' item.product.slug %}">
+                                                    <form class= 'form pull-right' method='POST' action="{% url 'add_to_cart' item.product.slug %}">
+                                                        {% csrf_token %}
                                                         <input name='qty' type='number' placeholder={{item.quantity}} value='{{item.quantity}}' />
                                                         <input type='submit' value='update cart' />
                                                     </form>
@@ -65,7 +67,7 @@
                     <div class="col-md-12 col-lg-4">
                         <div class="summary">
                             <h3>Summary</h3>
-                            <div class="summary-item"><span class="text">Subtotal</span><span class="price">${{ cart.total  }}</span></div>
+                            <div class="summary-item"><span class="text">Subtotal</span><span class="price">${{ cart.total}}</span></div>
                             <div class="summary-item"><span class="text">Discount</span><span class="price">$0</span></div>
                             <div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span></div>
                             <div class="summary-item"><span class="text">Total</span><span class="price">${{ cart.total  }}</span></div>

@@ -13,7 +13,7 @@ from .utilis import id_generator
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
-from carts.views import update_cart
+from carts.views import add_to_cart
 
 try:
     stripe_pub = settings.STRIPE_PUBLISHABLE_KEY

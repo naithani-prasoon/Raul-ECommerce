@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from Raul.models import product,Variation
 
 
 # Create your models here.
@@ -9,10 +10,12 @@ User = get_user_model()
 
 class CartItem(models.Model):
     user = models.ForeignKey(User,blank=True,null=True,on_delete=models.CASCADE)
+    variation = models.ManyToManyField(Variation, null=True, blank=True)
     cart = models.ForeignKey('Cart', null=True, blank=True,on_delete=models.CASCADE)
     product = models.ForeignKey(product,on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1, null=True)
     line_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
+    notes = models.TextField(null=True, blank=True)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
