@@ -111,6 +111,7 @@ def update_cart(request,slug):
         cart_item, created = CartItem.objects.get_or_create(cart= cart, product=producter)
 
         if request.user.is_authenticated:
+            print("hi")
             cart.user = request.user
             cart_item.user = request.user
 
