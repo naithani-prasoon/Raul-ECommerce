@@ -164,12 +164,11 @@
                     {% for item in single_product.variation_set.colors %}
                     <option value="{{item.title }}">{{item.title }}
                     </option>
-                    {% endfor %}
-                </select>
+                {% endfor %}
+                    </select>
                 {% endif %}
 
                 {% if single_product.variation_set.sizes %}
-
                 <select class="form-control" name="size">
                     {% for item in single_product.variation_set.sizes %}
                     <option value="{{item.title }}">{{item.title }}
@@ -178,10 +177,7 @@
                 </select>
                 {% endif %}
 
-                <input type='submit' value='Add to cart'
-                <a href="{% url 'add_to_cart' single_product.slug %}?qty=1" class="cart-btn"></a>
-
-
+                <input type='submit' value='Add to cart'/>
             </form>
 
         </div>

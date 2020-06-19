@@ -1,10 +1,8 @@
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.urls import reverse
-from .models import CartItem,Cart
+from .models import CartItem, Cart
 from django.contrib.auth import get_user
 from Raul.models import Variation, product
-
-
 
 # Create your views here.
 
@@ -12,22 +10,37 @@ from Raul.models import product
 
 from .models import Cart
 
+
 def view(request):
     User = get_user(request)
     template = "Raul/cart.html"
     if User.is_authenticated:
         # Check is user assoicated with an ACTIVE CartID #
         try:
-            cart = Cart.objects.get(id=request.session['cart_id'],active=True)
+            cart = Cart.objects.get(id=request.session['cart_id'], active=True)
             print("Try with ID")
-        except :
+        except:
             pass
         else:
             print("cart.user and request.user.is_authenticated:")
             if not cart.user and request.user.is_authenticated:
-                userCartNum = Cart.objects.filter(user=User,active=True).count()
+                new_total = 0.00
+                for item in cart.cartitem_set.all():
+                    if (item.quantity != None):
+                        # print(item.product)
+                        new_total += float(item.product.price) * (item.quantity)
+                        line_total = float(item.product.price) * (item.quantity)
+                        item.line_total = line_total
+                        # print(item.line_total)
+                    item.save()
+
+                request.session['items_total'] = cart.cartitem_set.count()
+                cart.total = new_total
+                cart.pennies_total = cart.total * 100
+                cart.save()
+                userCartNum = Cart.objects.filter(user=User, active=True).count()
                 if userCartNum > 0:
-                    userCart = Cart.objects.get(user=User,active=True)
+                    userCart = Cart.objects.get(user=User, active=True)
                     userCart.delete()
 
                 cart.user = User
@@ -37,20 +50,33 @@ def view(request):
 
             # Check if an ACTIVE cart is asspcated with User #
         try:
-            cart = Cart.objects.get(user=User,active=True)
+            cart = Cart.objects.get(user=User, active=True)
         except:
             pass
         else:
-            request.session['cart_id'] = cart.id
-            context= {'cart':cart}
-            return render(request, template, context)
+            new_total = 0.00
+            for item in cart.cartitem_set.all():
+                if (item.quantity != None):
+                    # print(item.product)
+                    new_total += float(item.product.price) * (item.quantity)
+                    line_total = float(item.product.price) * (item.quantity)
+                    item.line_total = line_total
+                    # print(item.line_total)
+                item.save()
 
+            request.session['items_total'] = cart.cartitem_set.count()
+            cart.total = new_total
+            cart.pennies_total = cart.total * 100
+            cart.save()
+            request.session['cart_id'] = cart.id
+            context = {'cart': cart}
+            return render(request, template, context)
 
     try:
         the_id = request.session['cart_id']
-        cart = Cart.objects.get(id=the_id,active=True)
+        cart = Cart.objects.get(id=the_id, active=True)
     except:
-        the_id= None
+        the_id = None
 
     if the_id:
         new_total = 0.00
@@ -60,27 +86,47 @@ def view(request):
         request.session['items_total'] = cart.cartitem_set.count()
         cart.total = new_total
         cart.save()
-        context = {"cart":cart}
+        context = {"cart": cart}
         return render(request, template, context)
 
     else:
         empty_message = "Your cart is empty, go shop"
-        context = {"empty" : True, "empty_message" : empty_message}
+        context = {"empty": True, "empty_message": empty_message}
         return render(request, template, context)
 
-    context = {"cart":cart}
+    context = {"cart": cart}
     return render(request, template, context)
 
 
+def remove_from_cart(request, id):
+    try:
+        the_id = request.session['cart_id']
+        cart = Cart.objects.get(id = the_id)
+    except:
+        return HttpResponseRedirect(reverse("cart"))
+
+    cartitem = CartItem.objects.get(id=id)
+    cartitem.delete()
+    #cartitem.cart = None
+    #cartitem.save()
+    #send suc message
+    return HttpResponseRedirect(reverse("cart"))
 
 
-def add_to_cart(request,slug):
+
+
+def add_to_cart(request, slug):
     request.session.set_expiry(3000000)
+    Check = False
+    Var_items = 0
+    Var_items2 = 0
+    single_item = 0
+    zero_qty = True
 
     try:
         the_id = request.session['cart_id']
     except:
-        new_cart= Cart()
+        new_cart = Cart()
         new_cart.save()
         request.session['cart_id'] = new_cart.id
         the_id = new_cart.id
@@ -88,7 +134,7 @@ def add_to_cart(request,slug):
     cart = Cart.objects.get(id=the_id)
 
     try:
-        producter= product.objects.get(slug=slug)
+        producter = product.objects.get(slug=slug)
     except product.DoesNotExist:
         pass
     except:
@@ -96,57 +142,74 @@ def add_to_cart(request,slug):
 
     pro_var = []
     if request.method == "POST":
+        count = 0
+        print("FORM POST")
+        print(request.POST)
         qty = request.POST['qty']
         for item in request.POST:
             key = item
             val = request.POST[key]
             try:
-                v = Variation.objects.get(product=producter, category__iexact= key, title__iexact=val)
-                pro_var.append(v)
+                if count == 0:
+                    v = Variation.objects.get(product=producter, category__iexact=key, title__iexact=val)
+                    pro_var.append(v)
+                    Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
+                    count +=1
+
+                if count == 1:
+                    p = Variation.objects.get(product=producter, category__iexact=key, title__iexact=val)
+                    pro_var.append(p)
+                    Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
+                    Var_items2 = Var_items.filter(variation=p).count()
+
             except:
                 pass
 
+        new_item = CartItem.objects.create(cart=cart, product=producter)
+        single_item = CartItem.objects.filter(cart=cart, product=producter).count()
 
+        if qty == 0:
+            remove_from_cart(request, id)
+            print("yooo")
+            zero_qty = False
+            Var_items.delete()
 
-        cart_item = CartItem.objects.create(cart= cart, product=producter)
-
-        if request.user.is_authenticated:
-            cart.user = request.user
-            cart_item.user = request.user
-
-
-        list_variations = [{}]
-        if len(pro_var) > 0:
+        if len(pro_var) > 0 and zero_qty == True:
             for item in pro_var:
-                cart_item.variation.add(item)
-                print(item)
-            for products in cart.cartitem_set.all():
-                
-                for variation in products.variation.all():
-                    print("printing")
-                    print(variation)
-                    print("products is")
-                    print(products)
-            # print("item below")
-            # print(cart_item.product)
-            # print("set below")
-            # print(cart.cartitem_set.all())
-            # print("variations")
-            #print(cart_item.notes)
+                new_item.variation.add(item)
+            Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
+            Var_items2 = Var_items.filter(variation=p).count()
 
-        cart_item.quantity = qty
-        cart_item.save()
+            Check = True
 
+
+        new = []
+        cur = []
+        if Var_items2 > 1 and zero_qty == True:
+            new_item.delete()
+            current_item = CartItem.objects.filter(cart=cart, product=producter, variation=v)
+            hi = current_item.get(variation=p)
+            hi.quantity = int(qty)
+            hi.save()
+            Var_items = 0
+            Check = True
+
+        if not Check and zero_qty == True:
+            if single_item > 1:
+                new_item.delete()
+                current_item = CartItem.objects.get(cart=cart, product=producter)
+                current_item.quantity = int(qty)
+                current_item.save()
 
 
     new_total = 0.00
     for item in cart.cartitem_set.all():
-        if(item.quantity != None):
-            #print(item.product)
+        if (item.quantity != None):
+            # print(item.product)
             new_total += float(item.product.price) * (item.quantity)
             line_total = float(item.product.price) * (item.quantity)
             item.line_total = line_total
-            #print(item.line_total)
+            # print(item.line_total)
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
@@ -155,14 +218,3 @@ def add_to_cart(request,slug):
     cart.save()
 
     return redirect(reverse("cart"))
-
-
-
-
-
-
-
-
-
-
-
