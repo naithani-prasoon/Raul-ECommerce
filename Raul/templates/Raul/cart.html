@@ -36,11 +36,13 @@
                                                 <div class="col-md-5 product-name">
                                                     <div class="product-name">
 
-                                                        <a href="{% url 'Raul-single' item.product.slug %}">{{item.product.variation}}</a>
+                                                        <a href="{% url 'Raul-single' item.product.slug %}">{{item.product}}</a>
                                                         <div class="product-info">
                                                             <div>Display: <span class="value">studded vase ${{item.product.price}}
 																	Metal Vase Bronze 5 H x 5 W</span></div>
-                                                            <div> <span class="value">{{item.variation.all}}</span></div>
+                                                            {% for sub_item in item.variation.all%}
+                                                                <div> <span class="value">{{sub_item.title}}</span></div>
+                                                            {% endfor %}
                                                         </div>
                                                     </div>
                                                 </div>
