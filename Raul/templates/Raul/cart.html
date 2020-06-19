@@ -28,7 +28,7 @@
                                     <div class="col-md-3">
                                         <a href="{% url 'Raul-single' item.product.slug %}" >
                                         <img class="img-fluid mx-auto d-block image" src="{{item.product.image.url}}">
-                                        <a href="{% url 'add_to_cart' item.product.slug %}?qty=0">remove</a>
+                                        <a href="{% url 'remove_from_cart' item.id %}">remove</a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="info">
@@ -50,17 +50,22 @@
                                                     <form class= 'form pull-right' method='POST' action="{% url 'add_to_cart' item.product.slug %}">
                                                         {% csrf_token %}
                                                         <input name='qty' type='number' placeholder={{item.quantity}} value='{{item.quantity}}' />
-                                                       {% if item.variation.all %}
+                                                       {% if item.variation.colors %}
 
                                                         {% for sub_item in item.variation.colors%}
                                                         <input name="color" type="hidden" value= '{{sub_item.title}}'/>
                                                             {% endfor %}
+                                                        {% endif %}
 
+
+                                                        {% if item.variation.sizes %}
                                                            {% for sub_item in item.variation.sizes%}
                                                                <input name="size" type="hidden" value= '{{sub_item.title}}'/>
                                                            {% endfor %}
 
-                                                            {% endif %}
+                                                        {% endif %}
+
+
                                                         <input type='submit' value='update cart' />
                                                     </form>
 

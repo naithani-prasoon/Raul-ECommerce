@@ -24,6 +24,20 @@ def view(request):
         else:
             print("cart.user and request.user.is_authenticated:")
             if not cart.user and request.user.is_authenticated:
+                new_total = 0.00
+                for item in cart.cartitem_set.all():
+                    if (item.quantity != None):
+                        # print(item.product)
+                        new_total += float(item.product.price) * (item.quantity)
+                        line_total = float(item.product.price) * (item.quantity)
+                        item.line_total = line_total
+                        # print(item.line_total)
+                    item.save()
+
+                request.session['items_total'] = cart.cartitem_set.count()
+                cart.total = new_total
+                cart.pennies_total = cart.total * 100
+                cart.save()
                 userCartNum = Cart.objects.filter(user=User, active=True).count()
                 if userCartNum > 0:
                     userCart = Cart.objects.get(user=User, active=True)
@@ -40,6 +54,20 @@ def view(request):
         except:
             pass
         else:
+            new_total = 0.00
+            for item in cart.cartitem_set.all():
+                if (item.quantity != None):
+                    # print(item.product)
+                    new_total += float(item.product.price) * (item.quantity)
+                    line_total = float(item.product.price) * (item.quantity)
+                    item.line_total = line_total
+                    # print(item.line_total)
+                item.save()
+
+            request.session['items_total'] = cart.cartitem_set.count()
+            cart.total = new_total
+            cart.pennies_total = cart.total * 100
+            cart.save()
             request.session['cart_id'] = cart.id
             context = {'cart': cart}
             return render(request, template, context)
@@ -70,11 +98,30 @@ def view(request):
     return render(request, template, context)
 
 
+def remove_from_cart(request, id):
+    try:
+        the_id = request.session['cart_id']
+        cart = Cart.objects.get(id = the_id)
+    except:
+        return HttpResponseRedirect(reverse("cart"))
+
+    cartitem = CartItem.objects.get(id=id)
+    cartitem.delete()
+    #cartitem.cart = None
+    #cartitem.save()
+    #send suc message
+    return HttpResponseRedirect(reverse("cart"))
+
+
+
+
 def add_to_cart(request, slug):
     request.session.set_expiry(3000000)
     Check = False
     Var_items = 0
+    Var_items2 = 0
     single_item = 0
+    zero_qty = True
 
     try:
         the_id = request.session['cart_id']
@@ -121,8 +168,13 @@ def add_to_cart(request, slug):
         new_item = CartItem.objects.create(cart=cart, product=producter)
         single_item = CartItem.objects.filter(cart=cart, product=producter).count()
 
+        if qty == 0:
+            remove_from_cart(request, id)
+            print("yooo")
+            zero_qty = False
+            Var_items.delete()
 
-        if len(pro_var) > 0:
+        if len(pro_var) > 0 and zero_qty == True:
             for item in pro_var:
                 new_item.variation.add(item)
             Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
@@ -133,7 +185,7 @@ def add_to_cart(request, slug):
 
         new = []
         cur = []
-        if Var_items2 > 1:
+        if Var_items2 > 1 and zero_qty == True:
             new_item.delete()
             current_item = CartItem.objects.filter(cart=cart, product=producter, variation=v)
             hi = current_item.get(variation=p)
@@ -142,12 +194,13 @@ def add_to_cart(request, slug):
             Var_items = 0
             Check = True
 
-        if not Check:
+        if not Check and zero_qty == True:
             if single_item > 1:
                 new_item.delete()
                 current_item = CartItem.objects.get(cart=cart, product=producter)
                 current_item.quantity = int(qty)
                 current_item.save()
+
 
     new_total = 0.00
     for item in cart.cartitem_set.all():

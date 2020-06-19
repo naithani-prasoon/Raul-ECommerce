@@ -59,7 +59,7 @@ VAR_CATEGORIES = (
 
 class Variation(models.Model):
     product = models.ForeignKey(product, on_delete=models.PROTECT)
-    category = models.CharField(max_length=120, choices=VAR_CATEGORIES, default='size')
+    category = models.CharField(max_length=120, choices=VAR_CATEGORIES, default="size")
     title= models.CharField(max_length=120)
     image= models.ForeignKey(productimage, null=True, blank=True, on_delete=models.PROTECT)
     price = models.DecimalField(null=True, blank=True, decimal_places=2, max_digits=100)
