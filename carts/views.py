@@ -116,13 +116,13 @@ def add_to_cart(request,slug):
 
         single_item = CartItem.objects.filter(cart=cart,product = producter).count()
 
-        if len(pro_var) > 0:
+        if len(pro_var) > 1:
             print("Medium")
             for item in pro_var:
                 new_item.variation.add(item)
-            Var_items = CartItem.objects.filter(cart=cart,product = producter, variation = v).count()
 
-            Check = True
+        Var_items = CartItem.objects.filter(cart=cart,product = producter, variation = v).count()
+        Check = True
 
 
         test = CartItem.objects.filter(cart=cart,product = producter, variation = v)
@@ -135,7 +135,7 @@ def add_to_cart(request,slug):
         if Var_items > 1:
             print("Should not be here")
             new_item.delete()
-            current_item = CartItem.objects.get(cart=cart,product = producter, variation = v)
+            current_item = CartItem.objects.get(cart=cart,product = producter,variation = v)
             current_item.quantity = int(qty)
             current_item.save()
             Var_items = 0
@@ -147,6 +147,7 @@ def add_to_cart(request,slug):
                 current_item = CartItem.objects.get(cart=cart,product = producter)
                 current_item.quantity = int(qty)
                 current_item.save()
+
 
 
 
