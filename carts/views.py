@@ -76,8 +76,9 @@ def view(request):
 
 def add_to_cart(request,slug):
     request.session.set_expiry(3000000)
-    key = None
-    val = None
+    Check = False
+    Var_items = 0
+    single_item = 0
 
     try:
         the_id = request.session['cart_id']
@@ -98,6 +99,8 @@ def add_to_cart(request,slug):
 
     pro_var = []
     if request.method == "POST":
+        print("FORM POST")
+        print(request.POST)
         qty = request.POST['qty']
         for item in request.POST:
             key = item
@@ -105,48 +108,45 @@ def add_to_cart(request,slug):
             try:
                 v = Variation.objects.get(product=producter, category__iexact= key, title__iexact=val)
                 pro_var.append(v)
+                Var_items = CartItem.objects.filter(cart=cart,product = producter, variation = v).count()
             except:
                 pass
 
-
-
         new_item = CartItem.objects.create(cart= cart, product=producter)
 
-
-
-
-
-
-
-        cart_products = []
-        new_products =[]
-
-
-
+        single_item = CartItem.objects.filter(cart=cart,product = producter).count()
 
         if len(pro_var) > 0:
+            print("Medium")
             for item in pro_var:
                 new_item.variation.add(item)
-            for products in cart.cartitem_set.all():
-                single_product = []
-                single_product.append(products)
-                for variation in products.variation.all():
-                    single_product.append(variation)
-                cart_products.append(single_product)
-        boo = CartItem.objects.filter(cart=cart,product = producter, variation = v)
+            Var_items = CartItem.objects.filter(cart=cart,product = producter, variation = v).count()
 
-        if boo.count() > 1:
+            Check = True
 
+
+        test = CartItem.objects.filter(cart=cart,product = producter, variation = v)
+        for i in test:
+            print(i.variation)
+        print(test)
+        print(Var_items)
+        print("Hi")
+
+        if Var_items > 1:
+            print("Should not be here")
             new_item.delete()
+            current_item = CartItem.objects.get(cart=cart,product = producter, variation = v)
+            current_item.quantity = int(qty)
+            current_item.save()
+            Var_items = 0
+            Check = True
 
-
-
-
-
-
-
-
-
+        if Check == False:
+            if single_item > 1:
+                new_item.delete()
+                current_item = CartItem.objects.get(cart=cart,product = producter)
+                current_item.quantity = int(qty)
+                current_item.save()
 
 
 

@@ -36,7 +36,7 @@
                                                 <div class="col-md-5 product-name">
                                                     <div class="product-name">
 
-                                                        <a href="{% url 'Raul-single' item.product.slug %}">{{item.product}}</a>
+                                                        <a href="{% url 'Raul-single' item.product.slug %}">{{item.product.variation}}</a>
                                                         <div class="product-info">
                                                             <div>Display: <span class="value">studded vase ${{item.product.price}}
 																	Metal Vase Bronze 5 H x 5 W</span></div>
@@ -48,8 +48,20 @@
                                                     <form class= 'form pull-right' method='POST' action="{% url 'add_to_cart' item.product.slug %}">
                                                         {% csrf_token %}
                                                         <input name='qty' type='number' placeholder={{item.quantity}} value='{{item.quantity}}' />
+                                                       {% if item.variation.all %}
+
+                                                        {% for sub_item in item.variation.colors%}
+                                                        <input name="color" type="hidden" value= '{{sub_item.title}}'/>
+                                                            {% endfor %}
+
+                                                           {% for sub_item in item.variation.sizes%}
+                                                               <input name="size" type="hidden" value= '{{sub_item.title}}'/>
+                                                           {% endfor %}
+
+                                                            {% endif %}
                                                         <input type='submit' value='update cart' />
                                                     </form>
+
 
                                                 </div>
 
