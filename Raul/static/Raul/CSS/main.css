@@ -50,12 +50,13 @@ a{
 .headers{
     position: fixed;
     width: 100%;
-    transition: 0.4s ease-in-out;
+    transition: 0.2s ease-in;
     top:0;
     overflow: hidden;
     z-index: 99;
     color:white;
-    background:#333333;
+    /* background:#333333; */
+    background: transparent;
 }
 
 figure{
@@ -93,8 +94,8 @@ figure img{
 #videoBG{
     z-index:-1;
     opacity:0.9;
-    width:96%;
-    padding:140px 30px;
+    width:100%;
+    /* padding:140px 30px; */
     filter:brightness(60%);
 }
 
@@ -157,6 +158,7 @@ nav ul li a:hover{
 	border-radius: 50px;
 	overflow: auto;
 }
+
 
 @media only screen and (max-width:640px){    
     
@@ -1148,15 +1150,99 @@ nav ul li a:hover{
         grid-template-rows: 55% 45%;
     }
 
+    .headers figure .navbarIcons .hoverDiv{
+        color:black;
+        display: none;
+        position: fixed;
+        background-color: rgba(0,0,0,0.9);
+        min-width: 180px;
+        right:3%;
+        top:8%;
+        min-height: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 107;
+        overflow: auto;
+        padding:40px 0px 0px 0px;
+        transition: 0.4s ease-in-out;
+        text-align: center;
+    }
+
+    .headers figure .navbarIcons .hoverDiv span a{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        font-size:14px;
+        color:white;
+        text-transform: capitalize;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        transition: 0.2s ease-in-out;
+    }
+
+    .headers figure .navbarIcons:hover .hoverDiv{
+        display: block;
+    }
+
+    
+    .headers figure .navbarIcons .hoverDiv span a:hover{
+        color:#cfbb63
+    }
+
+    .headers figure .navbarIcons .hoverDiv2{
+        color:black;
+        display: none;
+        position: fixed;
+        background-color: rgba(0,0,0,0.9);
+        min-width: 250px;
+        left:3%;
+        top:8%;
+        min-height: 140px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 107;
+        overflow: auto;
+        padding:20px 0px 0px 0px;
+        transition: 0.4s ease-in-out;
+        text-align: center;
+    }
+
+    .headers figure .navbarIcons .hoverDiv2 span{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        font-size:14px;
+        color:white;
+        text-transform: none;
+        transition: 0.2s ease-in-out;
+    }
+
+    .headers figure .navbarIcons .hoverDiv2 img{
+        padding-top:1px;
+        margin-top:20px;
+        position: fixed;
+        top:15.5%;
+        left:6%;
+    }
+
+    .headers figure .navbarIcons .hoverDiv2 #phoneContact{
+        padding-top:1px;
+        margin-top:20px;
+        position: fixed;
+        top:21%;
+        left:6%;
+    }
+
+    .headers figure .navbarIcons:hover .hoverDiv2{
+        display: block;
+    }
+
+
     .category{
         overflow: hidden;
-        background-color: #333333;
-        color: white;
+        color:transparent;
         font-family: 'Roboto', sans-serif;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
-        transition: 0.4s ease-in-out;
+        transition: 0.5s ease-in;
         justify-content: center;
         padding-bottom:25px;
         height: 100%;
@@ -1164,7 +1250,7 @@ nav ul li a:hover{
 
     .category p{
         padding:0px 40px;
-        transition: 0.4s ease-in-out;
+        transition: 0.2s ease-in;
         font-size:15px;
     }
     
@@ -1182,12 +1268,12 @@ nav ul li a:hover{
         grid-template-columns: 60px 60px auto 60px 60px 60px;
         z-index: 2;
     }
-
+/* 
     figure a{
         margin-right: 0.4em;
         font-family: 'Roboto' ,sans-serif;
         letter-spacing: 0.1em;
-    }
+    } */
 
     figure #logo{
         padding:-10px 10px;
@@ -1337,7 +1423,7 @@ nav ul li a:hover{
     }
 
     .feature{
-        height: 800px;
+        height: 700px;
         width:100%;
         color:#cfbb63;
         display: grid;
@@ -1367,10 +1453,12 @@ nav ul li a:hover{
     }
     
     .bannerSecond{
-        background-image: url("Images/bannerSec.jpg");
-        height:750px;
+        background-image: url('Images/bannerSecond.png');
+        height:800px;
         width: 100%;
         overflow:hidden;
+        background-position: center;
+        background-size: cover;
     }
 
     .shopBanner{
@@ -1381,7 +1469,6 @@ nav ul li a:hover{
         text-align: center;
         padding-top:1em;
         font-family: 'Roboto', sans-serif;
-        font-weight: bolder;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -1447,6 +1534,36 @@ nav ul li a:hover{
         transition: 0.4s ease-in-out;
     }
 
+    .container button{
+        width: auto;
+        height: auto;
+        background-color: #333333;
+        outline: none;
+        border: none;
+        color: #cfbb63;
+        font-family: 'Roboto', sans-serif;
+        font-size: 50px;
+        margin:200px 0px 0px 0px;
+    }
+
+    .container #sideScroll{
+        background-color: #cfbb63;
+        color: #333333;
+        font-family: 'Roboto Condensed', sans-serif;
+        border: 1px solid #cfbb63;
+        font-weight: bolder;
+        border-radius: 60px; 
+        margin:10px 5px 0px 80px;
+        font-size:15px;        
+    }
+
+    .container span{
+        color:#cfbb63;
+        font-size:20px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
     .container:hover .imageAvatar{
         opacity: 0.8;
         filter: blur(1px) grayscale(100%);
@@ -1466,108 +1583,13 @@ nav ul li a:hover{
     .bannerThird{
         height:700px;
         width:100%;
-        background-image: url('Images/bannerThird.jpg');
+        background-image: url('Images/bannerThird.png');
         background-size: cover;
 
     }
 
-    /* .furniture{
-        height:800px;
-        width:100%;
-        background-color: #595959;
-        scroll-snap-align: start;
-    }
-
-    .shopBack{
-        display: flex;
-        flex-wrap: nowrap;
-        margin:40px;
-        background-color: rgba(0,0,0,0.5);
-        width:95vw;
-        height:730px;
-    }
-
-    .furnitureHeading{
-        font-size:12em;
-        font-family: 'Roboto', sans-serif;
-        margin:15% .5em;
-        color: #cfbb63;
-        opacity: 1;
-    }
-
-    .furnitureHeading .seeMore{
-        display: none;
-    }
-
-    .linksShop{
-        font-size:18px;
-        font-family:'Roboto';
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-align: center;
-        color: #cfbb63;
-        font-family: 'Roboto';
-    }
-
-    .linksShop a{
-        text-decoration: none;
-        color:#cfbb63;
-    }
-
-    .linksShop a:hover{
-        color:orange;
-        font-family: 'Roboto Condensed';
-    }
-
-    .shopNow {
-        font-size:0.2em;
-        font-family:'Roboto';
-        letter-spacing: 2.2em;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .furnitureImages{
-        display: grid;
-        grid-template-columns: auto auto;
-        margin:7% 0.5em;
-    }
-
-    .furnitureImages img{
-        padding:20px;
-        transition: 0.4s ease-in-out;
-        display: block;
-    }
-
-    .furnitureImages:hover .staticImage {
-        filter: grayscale(40%) blur(1px);
-    }
-
-
-    #Lighting{
-        letter-spacing: 13px;
-    }
-
-    #Floral{
-        letter-spacing: 20px;
-    }
-
-    #table .furnitureHeading span{
-        letter-spacing: 5px;
-    }
-
-    #wall .furnitureHeading{
-        letter-spacing: 20px;
-    }
-
-    #decorative .furnitureHeading{
-        font-size: 8em;
-        text-align: center;
-        letter-spacing: 5px;
-    } */
-
-    .contact{
-        height: 100vh;
+    footer{
+        height: 400px;
         width:100%;
         background-color: white;
     }
