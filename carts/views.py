@@ -118,6 +118,7 @@ def remove_from_cart(request, id):
 def add_to_cart(request, slug):
     request.session.set_expiry(3000000)
     Check = False
+    Zero_Check = False
     Var_items = 0
     Var_items2 = 0
     single_item = 0
@@ -189,8 +190,11 @@ def add_to_cart(request, slug):
             new_item.delete()
             current_item = CartItem.objects.filter(cart=cart, product=producter, variation=v)
             hi = current_item.get(variation=p)
-            hi.quantity = int(qty)
-            hi.save()
+            if qty == '0':
+                hi.delete()
+            else:
+                hi.quantity = int(qty)
+                hi.save()
             Var_items = 0
             Check = True
 
@@ -198,8 +202,11 @@ def add_to_cart(request, slug):
             if single_item > 1:
                 new_item.delete()
                 current_item = CartItem.objects.get(cart=cart, product=producter)
-                current_item.quantity = int(qty)
-                current_item.save()
+                if qty == '0':
+                    current_item.delete()
+                else:
+                    current_item.quantity = int(qty)
+                    current_item.save()
 
 
     new_total = 0.00
