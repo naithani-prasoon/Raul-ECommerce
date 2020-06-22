@@ -1156,7 +1156,7 @@ nav ul li a:hover{
         position: fixed;
         background-color: rgba(0,0,0,0.9);
         min-width: 180px;
-        right:3%;
+        right:8%;
         top:8%;
         min-height: 100px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1194,7 +1194,7 @@ nav ul li a:hover{
         position: fixed;
         background-color: rgba(0,0,0,0.9);
         min-width: 250px;
-        left:3%;
+        left:4%;
         top:8%;
         min-height: 140px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1234,6 +1234,36 @@ nav ul li a:hover{
         display: block;
     }
 
+    .headers figure .navbarIcons .hoverDiv3{
+        color:black;
+        display: none;
+        position: fixed;
+        background-color: rgba(0,0,0,0.9);
+        min-width: 250px;
+        left:8%;
+        top:8%;
+        min-height: 200px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 107;
+        overflow: auto;
+        padding:20px 0px 0px 0px;
+        transition: 0.4s ease-in-out;
+        text-align: center;
+    }
+
+    .headers figure .navbarIcons .hoverDiv3 span{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        font-size:14px;
+        color:white;
+        text-transform: none;
+        transition: 0.2s ease-in-out;
+    }
+
+    .headers figure .navbarIcons:hover .hoverDiv3{
+        display: block;
+    }
+
 
     .category{
         overflow: hidden;
@@ -1268,12 +1298,6 @@ nav ul li a:hover{
         grid-template-columns: 60px 60px auto 60px 60px 60px;
         z-index: 2;
     }
-/* 
-    figure a{
-        margin-right: 0.4em;
-        font-family: 'Roboto' ,sans-serif;
-        letter-spacing: 0.1em;
-    } */
 
     figure #logo{
         padding:-10px 10px;
@@ -1297,7 +1321,7 @@ nav ul li a:hover{
         flex-wrap: nowrap;
         flex-direction: column;
         transition: 0.4s ease-in-out;
-        z-index:3;
+        z-index:100;
     }
 
     #store p{
@@ -1423,42 +1447,107 @@ nav ul li a:hover{
     }
 
     .feature{
-        height: 700px;
+        height:750px;
         width:100%;
         color:#cfbb63;
         display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 20% auto;
         text-align: center;
         background-color: #333333;
     }
 
+    .featureImages{
+        display: grid;
+        grid-template-columns: 201.6px 201.6px 201.6px 201.6px;
+        grid-template-rows: 282.24px 282.24px ;
+    }
+
+    .featureImages #reveal1:hover .reveal1{
+        opacity: 1;
+    }
+
+    .featureImages .featureProducts .reveal1{
+        position: absolute;
+        top:115%;
+        right: 8%;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+
+    .sectionFeature{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .revealProducts{
+        background-color: rgba(0,0,0,0.6);
+        width:80%;
+        margin:100px;
+    }
+
+    .revealProducts p{
+        padding:80px 100px 0px 100px;
+        font-size: 60px;
+        letter-spacing: 2px;
+    }
+
     .featureProductsHeading{
-        font-size:5em;
+        font-size:50px;
         margin-left: auto;
         margin-right: auto;
-        padding: 260px 0px;
+        padding: 10px 0px;
         text-align: center;
-        font-weight: bolder;
+        letter-spacing: 2px;
     }
 
     .featureProducts{
         display: block;
         overflow: hidden;
-        padding-top:200px
     }
 
     .featureProducts img{
-        width:65%;
-        padding:5px;
+        width:100%;
+        padding:10px;
     }
     
     .bannerSecond{
         background-image: url('Images/bannerSecond.png');
         height:800px;
         width: 100%;
-        overflow:hidden;
+        position: relative;
         background-position: center;
         background-size: cover;
+    }
+
+    .bannerSecond .textHover{
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .textHover .textHeading{
+        background-color: #333333;
+        color: #cfbb63;
+        font-weight: bold;
+        font-size: 32px;
+        padding: 16px 32px;
+        text-align: center;
+        letter-spacing: 1px;
+        transition: 0.4s ease-in-out;
+    }
+
+    .bannerSecond:hover .textHover{
+        opacity: 1;
+    }
+
+    .textHeading:hover{
+        padding:20px 36px;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.8);
     }
 
     .shopBanner{
@@ -1476,11 +1565,6 @@ nav ul li a:hover{
     .shopBanner figcaption{
         font-size:2em;
         padding:80px 0px 40px 0px;
-    }
-
-    .shopBanner hr{
-        width:60%;  
-        background-color: #cfbb63;
     }
 
     .horizontalScroll{
@@ -1580,18 +1664,203 @@ nav ul li a:hover{
         box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.9);
     }
 
+    .tabsBanner{
+        overflow: hidden;
+        background-color:#333333;
+        color:#cfbb63;
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tabsBanner button{
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        text-transform: lowercase;
+        padding: 14px 16px;
+        font-size: 18px;
+        color:#cfbb63;
+        font-family: 'Roboto',sans-serif;
+        font-weight: 600;
+        letter-spacing: 3px;
+        transition: 0.4s ease-in-out;
+    }
+    
+    .tabsBanner button:hover{
+        border-bottom: 1px solid #cfbb63;
+    }
+
+    .tabsBanner button.active{
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .tabcontent {
+        display: none;
+        width:100%;
+        height:700px;
+        padding: 6px 12px;
+        color:#cfbb63;
+        overflow: hidden;
+        -webkit-animation: fadeEffect 2s;
+        animation: fadeEffect 2s;
+    }
+
+    @-webkit-keyframes fadeEffect {
+        from {transform: translateX(-500px);}
+        to {transform: translateX(0px);}
+      }
+      
+      @keyframes fadeEffect {
+        from {transform: translateX(-800px);opacity: 0;}
+        to {transform: translateX(0px);opacity: 1;}
+      }
+
+    .tabcontent .tabSection{
+        display: grid;
+        grid-template-columns: auto 30%;
+        padding:50px;
+    }
+
+    .tabSection .tabImagesRow{
+        display: grid;
+        grid-template-columns: auto auto;
+        padding:5px 20px;
+    }
+
+    .tabSection .tabImagesColumn{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        padding:0 20px;
+    }
+
+    .tabImagesColumn img{
+        padding:10px;
+    }
+
+    .tabSection .tabText{
+        background-color: rgba(0,0,0,0.3);
+        margin-left:auto;
+        margin-right: auto;
+        padding:200px 40px 200px 40px;
+        width:350px;
+        text-align: center;
+    }
+
+    .tabText .headingTab{
+        font-size: 95px;
+        letter-spacing: 2px;
+        font-weight: 100;
+    }
+
+    .tabText button{
+        outline:none;
+        border:1px solid #cfbb63;
+        padding:10px;
+        font-size:20px;
+        background-color: transparent;
+        color:#cfbb63;
+        width:200px;
+        font-family: 'Roboto',sans-serif;
+        margin:20px 0px 0px 0px;
+        font-weight: bolder;
+        transition: 0.4s ease-in-out;
+    }
+
+    .tabText button:hover{
+        color:#333333;
+        background-color: #cfbb63;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+        border:0px;
+        cursor: pointer;
+    }
+
     .bannerThird{
         height:700px;
         width:100%;
         background-image: url('Images/bannerThird.png');
         background-size: cover;
+        position: relative;
+    }
 
+    .bannerThird .textHover{
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .bannerThird:hover .textHover{
+        opacity: 1;
+    }
+
+
+    .collectionBanner{
+        height:200px;
+        width:100%;
+        background-color: #333333;
+        color:#cfbb63;
+        text-align: center;
+        font-size:1.5em;
+        letter-spacing: 5px;
+    }
+
+    .collectionBanner figcaption{
+        padding:50px 0px;
+        font-size:2em;
     }
 
     footer{
-        height: 400px;
+        height: 200px;
         width:100%;
-        background-color: white;
+        background-color: rgba(0,0,0,0.6);
+        display: grid;
+        grid-template-rows: 80% 20%;
+        color:white;
+        text-transform: none;
+    }
+
+    footer .footerEssentials{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .footerEssentials .logoSection{
+        display: flex;
+        flex-direction: column;
+        margin-left:20px;
+    }
+
+    .footerEssentials .logoSection #footerLogo1{
+        width:50px;
+        height:50px;
+        padding:50px 10px 0px 30px;  
+    }
+
+    .footerEssentials .logoSection #footerLogo2{
+        width:80px;
+        height:30px;
+        padding:0px 30px;
+    }
+
+    .footerEssentials .helpSection{
+        padding:50px 0px;
+    }
+
+    .footerEssentials .aboutSection{
+        padding:50px 0px;
+    }
+
+    .footerEssentials .socialSection{
+        padding:50px 0px;
     }
 
 }

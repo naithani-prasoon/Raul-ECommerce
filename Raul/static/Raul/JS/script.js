@@ -32,24 +32,38 @@
         document.getElementById("headerOnScroll").style.background = "transparent";
         document.getElementById("headerOnScroll").style.height = "7.5em";
         document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 0px 0px";
-        
-        
     }
 }
 
- function openNav() {
+function openCity(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+function openNav() {
      document.getElementById("contentHam").style.height = "100%";
- }
+}
 
- function closeNav() {
-     document.getElementById("contentHam").style.height = "0%";
- }
+function closeNav() {
+    document.getElementById("contentHam").style.height = "0%";
+}
 
- function openStore(){
-     document.getElementById("store").style.height = "100%";
- }
+function openStore(){
+    document.getElementById("store").style.height = "100%";
+}
 
- function closeStore(){
-     document.getElementById("store").style.height = "0%";
- }
+function closeStore(){
+    document.getElementById("store").style.height = "0%";
+}
 
