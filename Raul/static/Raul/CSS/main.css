@@ -1471,7 +1471,7 @@ nav ul li a:hover{
     .featureImages .featureProducts .reveal1{
         position: absolute;
         top:115%;
-        right: 8%;
+        right: 10.5%;
         opacity: 0;
         transition: 0.4s ease-in-out;
     }
