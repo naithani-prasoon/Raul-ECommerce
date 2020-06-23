@@ -140,8 +140,8 @@ def checkout(request):
                 "order":new_order,
                 "address_form": address_form,
                 "current_addresses": current_addresses,
-               "billing_addresses": billing_addresses,
-               "stripe_pub": stripe_pub,
+                "billing_addresses": billing_addresses,
+                "stripe_pub": stripe_pub,
                }
     template = "Checkout.html"
     return render(request, 'orders/Checkout.html', context)

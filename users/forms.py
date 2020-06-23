@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import UserAddress
 from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model
 
 # class UserRegisterForm(UserCreationForm):
 #     email = forms.EmailField(required=True)
@@ -24,6 +25,36 @@ class UserAddressForm(forms.ModelForm):
     class Meta:
         model = UserAddress
         fields = ['address','address2','city','state','country', 'zipcode', 'phone','billing']
+
+User = get_user_model()
+
+class LoginForms(forms.Form):
+    username = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    def clean_username(self):
+        username = self.cleaned_data.get("username")
+        try:
+            user = User.objects.get(username=username)
+        except  User.DoesNotExist:
+            raise forms.ValidationError("No User Dumbass")
+        return username
+
+    def clean_password(self):
+        username = self.cleaned_data.get("username")
+        password = self.cleaned_data.get("password")
+        try:
+            user = User.objects.get(username=username)
+        except User.DoesNotExist:
+            user = None
+        if user is not None and not user.check_password(password):
+            raise forms.ValidationError("Bad PASSWORD")
+        elif user is None:
+            pass
+        else:
+            return password
+
+
 
 
 class CreateUserForm(UserCreationForm):

@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .models import product, Category
+from users import forms
+from django.contrib.auth import login,logout,authenticate
+
 
 def search(request):
     try:
@@ -17,16 +20,24 @@ def search(request):
         template = 'Raul/results.html'
     else:
         context = {}
-        template ='Raul/product.html'
+        template = 'Raul/product.html'
     return render(request, template, context)
 
 
 def home(request):
-    return render(request, 'Raul/index.html')
+    return render(request, 'Raul_Inc/index.html')
 
 
 def secondHome(request):
-    return render(request, 'Raul/home.html')
+    form = forms.LoginForms(request.POST or None)
+    RegisterForm = forms.CreateUserForm(request.POST or None)
+    context = {'form': form,"Register_form": RegisterForm}
+    if form.is_valid():
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        user = authenticate(username=username,password=password)
+        login(request,user)
+    return render(request, 'Raul/home.html',context)
 
 
 def landingpage(request):
@@ -52,5 +63,6 @@ def singleView(request, slug):
         return render(request, 'Raul/single_product.html', context)
     except:
         raise
+
 
 # Create your views here.
