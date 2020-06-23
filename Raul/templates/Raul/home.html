@@ -14,6 +14,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'Raul/Favicons/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'Raul/Favicons/apple-icon-60x60.png'%}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'Raul/Favicons/apple-icon-72x72.png'%}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'Raul/Favicons/apple-icon-76x76.png'%}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'Raul/Favicons/apple-icon-114x114.png'%}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'Raul/Favicons/apple-icon-120x120.png'%}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'Raul/Favicons/apple-icon-144x144.png'%}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'Raul/Favicons/apple-icon-152x152.png'%}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'Raul/Favicons/apple-icon-180x180.png'%}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'Raul/Favicons/android-icon-192x192.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'Raul/Favicons/favicon-32x32.png'%}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'Raul/Favicons/favicon-96x96.png'%}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'Raul/Favicons/favicon-16x16.png'%}">
+    <link rel="manifest" href="{% static 'Raul/Favicons/manifest.json'%}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'Raul/Favicons/ms-icon-144x144.png'%}">
+    <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
     
@@ -21,38 +40,47 @@
         <figure id="figureOnScroll">
 
             <div class="navbarIcons"> 
-                <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}"></p>
+                <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
                 <div class="hoverDiv2">
                     <span style="letter-spacing: 2px;">CONTACT US</span><br><br><br>
                     <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>email@email.com</span><br><br>
                     <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" id="phoneContact"> <span> (900)-009-9090</span>
                 </div>
             </div>
-            <a href="#"> <p> <img src="{% static 'Raul/Icons/Icons_Small/location.png' %}"> </p></a>
 
-            <img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%"  onclick="openStore()" id="logo">
+            <div class="navbarIcons"> 
+                <p><img src="{% static 'Raul/Icons/Icons_Small/location.png' %}" alt="Location"></p>
+                <div class="hoverDiv3">
+                    <span style="letter-spacing: 2px;">VISIT US</span><br><br><br>
+                    <span>216 8th Avenue, <br>New York, NY 10011</span><br><br>
+                    <span>Seven Days a Week</span><br><br>
+                    <span>9:00AM - 8:00PM</span>
+                </div>
+            </div>
+
+            <img src="{% static 'Raul/Images/raullogo.png' %}" alt="Raul Logo" width="6%"  onclick="openStore()" id="logo">
 
             {% if user.is_authenticated %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}"> </p></a>
-            <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}"> </p></a>
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
             <div class="navbarIcons"> 
-                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}"></p>
+                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
                     <span><a href="{% url 'profile' %}">Profile</a></span><br><br>
                     <span><a href="{% url 'logout' %}"> <p> Logout </p></a></span>
                 </div>
             </div>
+            <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart"> </p></a>
 
             {% else %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}"> </p></a>
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
             <div class="navbarIcons"> 
-                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}"></p>
+                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
                     <span><a href="{% url 'login' %}">Login</a></span><br><br>
                     <span><a href="{% url 'register' %}">Register</a></span>
                 </div>
             </div>
-            <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}"> </p></a>
+            <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
             {% endif %}
 
         </figure>
@@ -129,39 +157,79 @@
 
     </div>
 
-    <div class ="bannerHead" id = "mainBanner" data-aos="fade-in">
+    <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
-        <div class = "bannerHeading" data-aos="fade-in">
+        <div class = "bannerHeading">
             <figcaption><a href="#shop"><button> explore the shop </button></a></figcaption>
         </div>
     </div>
 
-    <div class= "feature" id="feature" data-aos="fade-down"
-         data-aos-easing="linear"
-         data-aos-duration="1500">
-        <div class="featureProducts" data-aos="fade-down"
-             data-aos-easing="linear"
-             data-aos-duration="1500">
-            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
+    <div class= "feature" id="feature">
+        
+        <div class="featureProductsHeading">
         </div>
-        <div class="featureProducts" data-aos=data-aos="fade-down"
-             data-aos-easing="linear"
-             data-aos-duration="1500">
-            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
-        </div>
-        <div class="featureProducts" data-aos=data-aos="fade-down"
-             data-aos-easing="linear"
-             data-aos-duration="1500">
-            <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
-        </div>
-        <div class="featureProductsHeading" data-aos="fade-down"
-             data-aos-easing="linear"
-             data-aos-duration="1500">
-            featured products
+        <div class="sectionFeature">
+            <div class="featureImages">
+                <div class="featureProducts" id="reveal1">
+                    <img src="{% static 'Raul/Images/7.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/7.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+                <div class="featureProducts" id="reveal1">
+                    <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+                <div class="featureProducts" id="reveal1">
+                    <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+            
+                <div class="featureProducts" id="reveal1">
+                    <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+                <div class="featureProducts"id="reveal1">
+                    <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+                <div class="featureProducts"id="reveal1">
+                    <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+                <div class="featureProducts"id="reveal1">
+                    <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+                <div class="featureProducts"id="reveal1">
+                    <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
+                    <div class="reveal1">
+                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
+                    </div>
+                </div>
+            </div>
+            <div class ="revealProducts">
+                <p>featured products</p>
+            </div>
         </div>
     </div>
 
     <div class ="bannerSecond">
+        <div class = "textHover">
+            <div class = "textHeading"> shop this collection </div>
+        </div>
     </div>
 
     <div class ="shopBanner">
@@ -212,17 +280,174 @@
         </div>
     </div>
 
-    <div class="bannerThird">
-
+    <div class ="bannerSecond">
+        <div class = "textHover">
+            <div class = "textHeading"> shop this collection </div>
+        </div>
     </div>
 
-    <div class="socialBanner">
-
+    <div class ="shopBanner">
+        <figcaption> shop for the perfect setup</figcaption>    
     </div>
 
+    <div class="tabsBanner">
+        <button class="tablinks" onclick="openCity(event, 'Furniture')" id="defaultOpen">Furniture</button>
+        <button class="tablinks" onclick="openCity(event, 'Floral')">Floral</button>
+        <button class="tablinks" onclick="openCity(event, 'Lighting')">Lighting</button>
+        <button class="tablinks" onclick="openCity(event, 'WallArt')">Wall Art</button>
+        <button class="tablinks" onclick="openCity(event, 'TableTop')">Table Top</button>
+        <button class="tablinks" onclick="openCity(event, 'DecAcc')">Decorative Accessories</button>
+    </div>
+
+    <div id="Furniture" class="tabcontent">
+        <div class="tabSection">
+            <div class="tabImagesRow">
+                <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <div class="tabImagesColumn">
+                    <img src="{% static 'Raul/Images/furniture.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/furniture2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/furniture3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                </div>
+            </div>
+            <div class="tabText">
+                <div class="headingTab">
+                    furniture
+                </div>
+                <button>shop now</button>
+            </div>
+        </div>
+    </div>
+      
+    <div id="Floral" class="tabcontent">
+        <div class="tabSection">
+            <div class="tabImagesRow">
+                <img src="{% static 'Raul/Images/8.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <div class="tabImagesColumn">
+                    <img src="{% static 'Raul/Images/floral.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/floral2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/floral4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/floral3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                </div>
+            </div>
+            <div class="tabText">
+                <div class="headingTab">
+                    floral
+                </div>
+                <button>shop now</button>
+            </div>
+        </div>
+    </div>
     
+    <div id="Lighting" class="tabcontent">
+        <div class="tabSection">
+            <div class="tabImagesRow">
+                <img src="{% static 'Raul/Images/1.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <div class="tabImagesColumn">
+                    <img src="{% static 'Raul/Images/lighting.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/lighting2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/lighting3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/lighting4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                </div>
+            </div>
+            <div class="tabText">
+                <div class="headingTab">
+                    lighting
+                </div>
+                <button>shop now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="WallArt" class="tabcontent">
+        <div class="tabSection">
+            <div class="tabImagesRow">
+                <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <div class="tabImagesColumn">
+                    <img src="{% static 'Raul/Images/wallart3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/wallart2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/wallart4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/wallart.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                </div>
+            </div>
+            <div class="tabText">
+                <div class="headingTab">
+                    wall art
+                </div>
+                <button>shop now</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="TableTop" class="tabcontent">
+        <div class="tabSection">
+            <div class="tabImagesRow">
+                <img src="{% static 'Raul/Images/3.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <div class="tabImagesColumn">
+                    <img src="{% static 'Raul/Images/tabletop.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/tabletop2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/tabletop3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/tabletop4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                </div>
+            </div>
+            <div class="tabText">
+                <div class="headingTab">
+                    tabletop
+                </div>
+                <button>shop now</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="DecAcc" class="tabcontent">
+        <div class="tabSection">
+            <div class="tabImagesRow">
+                <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <div class="tabImagesColumn">
+                    <img src="{% static 'Raul/Images/furniture.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/furniture2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/furniture3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                    <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
+                </div>
+            </div>
+            <div class="tabText">
+                <div class="headingTab">
+                    furniture
+                </div>
+                <button>shop now</button>
+            </div>
+        </div>
+    </div>
+      
+    <div class="bannerThird">
+        <div class = "textHover">
+            <div class = "textHeading"> shop this collection </div>
+        </div>
+    </div>
+
+    <div class="collectionBanner">
+        <figcaption>shop this collection</figcaption>
+
+    </div>
 
     <footer>
+        <div class="footerEssentials">
+            <div class="logoSection">
+            </div>
+
+            <div class="helpSection">
+                Help
+            </div>
+            <div class="aboutSection">
+                About
+            </div>
+            <div class="socialSection">
+                Social
+            </div>
+        </div>  
+        <div class="copyrightSection">
+
+        </div>  
 
     </footer>
 

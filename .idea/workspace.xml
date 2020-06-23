@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
