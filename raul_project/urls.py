@@ -22,6 +22,7 @@ from raul_project import settings
 from Raul import views
 from carts import views as cart_views
 from orders import views as orders
+from Raul_Inc import views as Raul_Inc_Path
 
 
 urlpatterns = [
@@ -32,7 +33,7 @@ urlpatterns = [
     path('profile/orders', user_views.profile, name='profile-orders'),
     path('product/', views.products, name='Raul-product'),
     path('product/<str:slug>/', views.singleView, name='Raul-single'),
-    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='Raul/Base.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('password-reset/',auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
     path('password-reset/done/',auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'),name='password_reset_done'),
@@ -44,6 +45,7 @@ urlpatterns = [
     path('cart/<str:slug>/', cart_views.add_to_cart, name='add_to_cart'),
     path('checkout/', orders.checkout, name='checkout'),
     path('orders/', orders.orders, name='user_orders'),
+    path('Raul_Inc/Home', Raul_Inc_Path.home, name='Raul_Inc_Home'),
     path('cart/', cart_views.view, name='cart'),
     path('ajax/add_user_address/',user_views.add_address, name='ajax_add_user_address'),
 

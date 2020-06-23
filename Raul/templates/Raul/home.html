@@ -1,5 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
+{% load crispy_forms_tags %}
+
 <html lang="en">
 <head>
     <title>
@@ -427,6 +429,11 @@
 
     <div class="collectionBanner">
         <figcaption>shop this collection</figcaption>
+        <form method = 'POST'>
+            {% csrf_token %}
+            {{form|crispy}}
+            <input type = 'submit' value="test" class="btn"/>
+        </form>
 
     </div>
 
@@ -447,9 +454,14 @@
         </div>  
         <div class="copyrightSection">
 
-        </div>  
+        </div>
+
+
 
     </footer>
+
+
+
 
     <button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>
 
