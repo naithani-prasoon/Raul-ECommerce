@@ -9,7 +9,8 @@
             font-family: 'Roboto', sans-serif;
             background-size: 100% 110%;
             color:#cfbb63;    
-            overflow: hidden;        
+            overflow: hidden;   
+            height:100vh;   
         }
         h2, h3, h4, h5, h6, a {
             margin:0; padding:0px;
@@ -26,7 +27,8 @@
             grid-template-columns: 50% 50%;
         }
         
-        .login {
+        .logining {
+            text-transform: none;  
             margin:20% auto;
             max-width:500px;
         }
@@ -48,6 +50,7 @@
             letter-spacing: 4px;
             font-family: 'Roboto Condensed', sans-serif;
             color: #cfbb63;
+            padding:20px 0px 0px 0px;
         }
         
         .login-form {
@@ -58,8 +61,8 @@
             text-align:center;
         }
 
-        .login input[type="text"],
-        .login input[type="password"] {
+        .logining input[type="text"],
+        .logining input[type="password"] {
             max-width:400px;
             width: 80%;
             line-height:3em;
@@ -72,20 +75,19 @@
             transition: 0.4s ease-in-out;
         }
 
-        .login input[type="text"]:hover{
+        .logining input[type="text"]:hover{
             background-color: rgba(0,0,0,0.5);
             color: #cfbb63;
             cursor: pointer;
         }
 
-        .login input[type="password"]:hover{
+        .logining input[type="password"]:hover{
             background-color: rgba(0,0,0,0.5);
             color: #cfbb63;
             cursor: pointer;
         }
 
-
-        .damnSon {
+        .logining .damnSon {
             height:40px;
             width:100px;
             background: transparent;
@@ -94,9 +96,11 @@
             color: #cfbb63;
             text-transform:uppercase;
             transition: 0.4s ease-in-out;
+            margin:10px;
+            font-size: 18px;
         }
 
-        .damnSon:hover{
+        .logining .damnSon:hover{
             background-color: #cfbb63;
             color: black;
             font-weight: bolder;
@@ -157,39 +161,32 @@
 </div>
 <form method="post">
     {{ form.non_field_errors }}
-    <div class="login">
-    <div class="login-header">
-        <h1>LOGIN</h1>
-    </div>
-    <div class="login-form">
-<!--        <h3>Username:</h3>-->
-        <h3 for="{{ form.username.id_for_label }}">Username:</h3>
-<!--        <input type="text" placeholder="Username"/><br>-->
+    <div class="logining">
+        <div class="login-header">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="login-form">
+    <!--        <h3>Username:</h3>-->
+            <h3 for="{{ form.username.id_for_label }}">Username:</h3>
+    <!--        <input type="text" placeholder="Username"/><br>-->
+            {{ form.username }}
+            {{ form.username.errors }}
+    <!--        <input type="text" placeholder="Username"/><br>-->
+    <!--        <h3>Password:</h3>-->
+    <!--        <input type="password" placeholder="Password"/>-->
+            <br>
+    <!--        <label placeholder="Password" for="{{ form.password.id_for_label }}">Password:</label>-->
+            <h3 for="{{ form.password.id_for_label}}">Password:</h3>
+            {{ form.password }}
+            {{ form.password.errors }}
+            <br>
+            <br>
+            {% csrf_token %}
+            <button class="damnSon" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
 
-        {{ form.username }}
-        {{ form.username.errors }}
-<!--        <input type="text" placeholder="Username"/><br>-->
-<!--        <h3>Password:</h3>-->
-<!--        <input type="password" placeholder="Password"/>-->
-
-
-        <br>
-<!--        <label placeholder="Password" for="{{ form.password.id_for_label }}">Password:</label>-->
-        <h3 for="{{ form.password.id_for_label}}">Password:</h3>
-        {{ form.password }}
-        {{ form.password.errors }}
-
-
-        <br>
-        <br>
-        {% csrf_token %}
-<!--        <input type="button" value="Login" class="login-button"/>-->
-        <button class="damnSon" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
-
-        <a class="sign-up" href="{% url 'register' %}"> Don't have an account? </a>
-        <br>
-        <!-- <h6 class="no-access">Can't access your account?</h6> -->
-    </div>
+            <a class="sign-up" href="{% url 'register' %}"> Don't have an account? </a>
+            <br>
+        </div>
 </div>
 <!-- <div class="error-page">
     <div class="try-again">Error: Try again?</div>

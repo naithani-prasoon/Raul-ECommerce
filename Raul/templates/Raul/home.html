@@ -62,7 +62,6 @@
 
             {% if user.is_authenticated %}
             <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
-            <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart"> </p></a>
             <div class="navbarIcons"> 
                 <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
@@ -70,6 +69,7 @@
                     <span><a href="{% url 'logout' %}"> <p> Logout </p></a></span>
                 </div>
             </div>
+            <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart"> </p></a>
 
             {% else %}
             <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
@@ -157,9 +157,9 @@
 
     </div>
 
-    <div class ="bannerHead" id = "mainBanner" data-aos="fade-in">
+    <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
-        <div class = "bannerHeading" data-aos="fade-in">
+        <div class = "bannerHeading">
             <figcaption><a href="#shop"><button> explore the shop </button></a></figcaption>
         </div>
     </div>
