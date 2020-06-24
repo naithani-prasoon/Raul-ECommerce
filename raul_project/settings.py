@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'Raul_Inc',
     'localflavor',
     'orders',
     'carts',

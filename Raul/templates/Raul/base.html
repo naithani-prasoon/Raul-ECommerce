@@ -168,6 +168,41 @@
     </div>
 </div>
 
+</div>
+<form method="post">
+    {{ form.non_field_errors }}
+    <div class="logining">
+        <div class="login-header">
+            <h1>LOGIN</h1>
+        </div>
+        <div class="login-form">
+            <!--        <h3>Username:</h3>-->
+            <h3 for="{{ form.username.id_for_label }}">Username:</h3>
+            <!--        <input type="text" placeholder="Username"/><br>-->
+            {{ form.username }}
+            {{ form.username.errors }}
+            <!--        <input type="text" placeholder="Username"/><br>-->
+            <!--        <h3>Password:</h3>-->
+            <!--        <input type="password" placeholder="Password"/>-->
+            <br>
+            <!--        <label placeholder="Password" for="{{ form.password.id_for_label }}">Password:</label>-->
+            <h3 for="{{ form.password.id_for_label}}">Password:</h3>
+            {{ form.password }}
+            {{ form.password.errors }}
+            <br>
+            <br>
+            {% csrf_token %}
+            <button class="damnSon" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
+
+            <a class="sign-up" href="{% url 'register' %}"> Don't have an account? </a>
+            <br>
+        </div>
+    </div>
+    <!-- <div class="error-page">
+        <div class="try-again">Error: Try again?</div>
+    </div> -->
+</form>
+
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

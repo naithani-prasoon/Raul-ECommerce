@@ -29,13 +29,13 @@
                 </a>
             </div>
             <h5 class="text-center">{{product.title}}</h5>
-            <form class= 'form pull-right' method='GET' action="{% url 'update_cart' product.slug %}">
+            <form class= 'form pull-right' method='GET' action="{% url 'add_to_cart' product.slug %}">
                 <input name='qty' type='number' placeholder='1' value='1' />
                 <input type='submit' value='Add to cart' />
             </form>
 
             <h5 class="text-center">Price: ${{product.price}}</h5>
-            <a href="{% url 'update_cart' product.slug %}?qty=12" class="btn buy">BUY</a>
+            <a href="{% url 'add_to_cart' product.slug %}?qty=12" class="btn buy">BUY</a>
         </div>
         {% endfor %}
         <!-- ./Product -->
