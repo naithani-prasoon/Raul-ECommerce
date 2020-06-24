@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'Raul/Favicons/apple-icon-57x57.png' %}">
@@ -106,7 +107,7 @@
         
         <p id="categoryP" style="color:white;">Sale</p>
         
-        <p id="categoryPstyle="color:white;"">Venue Bookings</p>
+        <p id="categoryP" style="color:white;">Venue Bookings</p>
 
     </div>
 
@@ -161,46 +162,13 @@
 </div>
 
 
-<div class="container">
-    <div class = "container1">
+<div class="containers">
+    <div class = "containers1">
         {% block content %}{% endblock %}
     </div>
 </div>
 
 </div>
-<form method="post">
-    {{ form.non_field_errors }}
-    <div class="logining">
-        <div class="login-header">
-            <h1>LOGIN</h1>
-        </div>
-        <div class="login-form">
-            <!--        <h3>Username:</h3>-->
-            <h3 for="{{ form.username.id_for_label }}">Username:</h3>
-            <!--        <input type="text" placeholder="Username"/><br>-->
-            {{ form.username }}
-            {{ form.username.errors }}
-            <!--        <input type="text" placeholder="Username"/><br>-->
-            <!--        <h3>Password:</h3>-->
-            <!--        <input type="password" placeholder="Password"/>-->
-            <br>
-            <!--        <label placeholder="Password" for="{{ form.password.id_for_label }}">Password:</label>-->
-            <h3 for="{{ form.password.id_for_label}}">Password:</h3>
-            {{ form.password }}
-            {{ form.password.errors }}
-            <br>
-            <br>
-            {% csrf_token %}
-            <button class="damnSon" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
-
-            <a class="sign-up" href="{% url 'register' %}"> Don't have an account? </a>
-            <br>
-        </div>
-    </div>
-    <!-- <div class="error-page">
-        <div class="try-again">Error: Try again?</div>
-    </div> -->
-</form>
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -211,6 +179,6 @@
 <script>
     AOS.init();
 </script>
-<script src="{% static 'Raul/JS/script.js' %}" charset="UTF-8"></script>
+<script src="{% static 'Raul/JS/navbar.js' %}" charset="UTF-8"></script>
 </body>
 </html>
