@@ -1343,7 +1343,7 @@ nav ul li a:hover{
         color:orange;
     }
 
-    .dropDownMenu{
+    /* .dropDownMenu{
         float: left;
         overflow: hidden;
         padding:30px;
@@ -1401,7 +1401,7 @@ nav ul li a:hover{
 
     .dropDownMenu:hover .dropDownContent{
         display: block;
-    }
+    } */
 
     .bannerHead{    
         height: 750px;
@@ -1448,7 +1448,7 @@ nav ul li a:hover{
         cursor: pointer;
     }
 
-    .feature{
+    /* .feature{
         height:750px;
         width:100%;
         color:#cfbb63;
@@ -1513,7 +1513,7 @@ nav ul li a:hover{
     .featureProducts img{
         width:100%;
         padding:10px;
-    }
+    } */
     
     .bannerSecond{
         background-image: url('Images/bannerThird.jpg');
@@ -1533,6 +1533,169 @@ nav ul li a:hover{
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
     }
+
+    .bannerSecond .roundCircle{
+        width:30px;
+        height: 30px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 50px;
+        position: absolute;
+        top:450px;
+        right:450px;
+        color:#cfbb63;
+        transition: 0.4s ease-in-out;
+        overflow: hidden;
+        animation: blink 2s linear infinite;
+    }
+
+    @keyframes blink{
+        0%{opacity: 0.15;}
+        25%{opacity: 0.25;}
+        50%{opacity: .5;}
+        75%{opacity:0.75;}
+        100%{opacity: 1;background-color:rgba(0,0,0,0.9);}
+    }
+
+    .roundCircle:hover{
+        cursor: pointer;
+        overflow: visible;
+        animation: none;
+    }
+
+    .roundCircle:hover .productDisplay{
+        opacity: 1;
+    }
+
+    .roundCircle .productDisplay{
+        width:250px;
+        background:rgba(0,0,0,0.9);
+        position: absolute;
+        left:50px;
+        bottom:5px;
+        font-size: 30px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        box-shadow: 0px 0px 3px 1px black;
+    }
+
+    .productDisplay p{
+        padding-bottom: 10px;
+        margin-block-end: 20px;
+    }
+
+    .bannerSecond .roundCircle2{
+        width:30px;
+        height: 30px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 50px;
+        position: absolute;
+        top:610px;
+        right:650px;
+        color:#cfbb63;
+        transition: 0.4s ease-in-out;
+        overflow: hidden;
+        animation: blink 2s linear infinite;
+    }
+
+    .roundCircle2:hover{
+        cursor: pointer;
+        overflow: visible;
+        animation: none;
+    }
+
+    .roundCircle2:hover .productDisplay{
+        opacity: 1;
+    }
+
+    .roundCircle2 .productDisplay{
+        width:250px;
+        background:rgba(0,0,0,0.9);
+        position: absolute;
+        left:50px;
+        bottom:5px;
+        font-size: 30px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        box-shadow: 0px 0px 3px 1px black;
+    }
+
+    .bannerSecond .roundCircle3{
+        width:30px;
+        height: 30px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 50px;
+        position: absolute;
+        top:600px;
+        left:540px;
+        color:#cfbb63;
+        transition: 0.4s ease-in-out;
+        overflow: hidden;
+        animation: blink 2s linear infinite;
+    }
+
+    .roundCircle3:hover{
+        cursor: pointer;
+        overflow: visible;
+        animation: none;
+    }
+
+    .roundCircle3:hover .productDisplay{
+        opacity: 1;
+    }
+
+    .roundCircle3 .productDisplay{
+        width:300px;
+        background:rgba(0,0,0,0.9);
+        position: absolute;
+        right:50px;
+        bottom:5px;
+        font-size: 30px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        box-shadow: 0px 0px 3px 1px black;
+    }
+
+    .bannerSecond .roundCircle4{
+        width:30px;
+        height: 30px;
+        background: rgba(0,0,0,0.8);
+        border-radius: 50px;
+        position: absolute;
+        top:550px;
+        right:200px;
+        color:#cfbb63;
+        transition: 0.4s ease-in-out;
+        overflow: hidden;
+        animation: blink 2s linear infinite;
+    }
+
+    .roundCircle4:hover{
+        cursor: pointer;
+        overflow: visible;
+        animation: none;
+    }
+
+    .roundCircle4:hover .productDisplay{
+        opacity: 1;
+    }
+
+    .roundCircle4 .productDisplay{
+        width:250px;
+        background:rgba(0,0,0,0.9);
+        position: absolute;
+        right:50px;
+        top:30px;
+        font-size: 30px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+        box-shadow: 0px 0px 3px 1px black;
+
+    }
+
 
     .textHover .textHeading{
         background-color: #333333;
@@ -1555,23 +1718,6 @@ nav ul li a:hover{
         background-color: rgba(0,0,0,0.8);
     }
 
-    .shopBanner{
-        width:100%;
-        background:#333333;
-        height:250px;
-        color: #cfbb63;
-        text-align: center;
-        padding-top:1em;
-        font-family: 'Roboto', sans-serif;
-        letter-spacing: 5px;
-        font-size: 1.5em;
-    }
-
-    .shopBanner figcaption{
-        font-size:2em;
-        padding:80px 0px 40px 0px;
-    }
-
     .horizontalScroll{
         background-color: #333333;
         height: 650px;
@@ -1580,6 +1726,7 @@ nav ul li a:hover{
         flex-wrap: nowrap;
         overflow-y: hidden;
         overflow-x: auto;
+        padding:50px 0px 0px 0px;
     }
 
     .horizontalScroll::-webkit-scrollbar{
@@ -1631,8 +1778,8 @@ nav ul li a:hover{
         border: none;
         color: #cfbb63;
         font-family: 'Roboto', sans-serif;
-        font-size: 50px;
-        margin:200px 0px 0px 0px;
+        font-size: 45px;
+        margin:250px 0px 0px 20px; 
     }
 
     .container #sideScroll{
@@ -1643,7 +1790,7 @@ nav ul li a:hover{
         font-weight: bolder;
         border-radius: 60px; 
         margin:10px 5px 0px 80px;
-        font-size:15px;        
+        font-size:15px;      
     }
 
     .container span{
@@ -1667,6 +1814,23 @@ nav ul li a:hover{
         padding:18px 34px;
         font-size: 34px;
         box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.9);
+    }
+
+    .shopBanner{
+        width:100%;
+        background:#333333;
+        height:200px;
+        color: #cfbb63;
+        text-align: center;
+        padding-top:1em;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 5px;
+        font-size: 1.5em;
+    }
+
+    .shopBanner figcaption{
+        font-size:2em;
+        padding:80px 0px 40px 0px;
     }
 
     .tabsBanner{
@@ -1715,10 +1879,10 @@ nav ul li a:hover{
         animation: fadeEffect 2s;
     }
 
-    @-webkit-keyframes fadeEffect {
-        from {transform: translateX(-500px);}
-        to {transform: translateX(0px);}
-      }
+    @-webkit-keyframes fadeEffect {   
+	from {transform: translateX(-800px);opacity: 0;}
+    to {transform: translateX(0px);opacity: 1;}
+}
       
       @keyframes fadeEffect {
         from {transform: translateX(-800px);opacity: 0;}
@@ -1727,8 +1891,8 @@ nav ul li a:hover{
 
     .tabcontent .tabSection{
         display: grid;
-        grid-template-columns: auto 30%;
-        padding:50px;
+        grid-template-columns: 30% auto;
+        padding:20px;
     }
 
     .tabSection .tabImagesRow{
@@ -1758,7 +1922,7 @@ nav ul li a:hover{
     }
 
     .tabText .headingTab{
-        font-size: 95px;
+        font-size: 80px;
         letter-spacing: 2px;
         font-weight: 100;
     }
