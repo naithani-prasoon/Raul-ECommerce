@@ -1,5 +1,5 @@
 import time
-
+import os
 import stripe
 from django.urls import reverse
 from django.shortcuts import render, HttpResponseRedirect
@@ -9,17 +9,11 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order
-from .utilis import id_generator
+from .utilis import id_generator, make_invoice, sendEmail
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
 from carts.views import add_to_cart
-from django.http import HttpResponse
-from django.views.generic import View
-
-from django.template.loader import get_template
-
-from .utilis import render_to_pdf
 
 try:
     stripe_pub = settings.STRIPE_PUBLISHABLE_KEY
@@ -38,6 +32,9 @@ def orders(request):
 
 @login_required
 def checkout(request):
+    header = ['product','quantity','line_total']
+    arr = []
+    arr.append(header)
     User = get_user(request)
 
     try:
@@ -133,11 +130,18 @@ def checkout(request):
             )
 
             if charge["captured"]:
+
                 new_order.status = "Finished"
                 new_order.billing_address = billing_address_instance
                 new_order.shipping_address = shipping_address_instance
                 new_order.save()
-                #GeneratePDF(request)
+                for i in cart.cartitem_set.all():
+                    order = [i.product, i.quantity, i.line_total]
+                    arr.append(order)
+                make_invoice(arr,new_order.order_id)
+                sendEmail(request)
+                new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
+                new_order.save()
                 cart.active = False
                 cart.save()
 
@@ -153,26 +157,3 @@ def checkout(request):
                }
     template = "Checkout.html"
     return render(request, 'orders/Checkout.html', context)
-
-
-
-def GeneratePDF(request, *args, **kwargs):
-    User = get_user(request)
-
-
-    items = Cart.objects.get(user=User,active=True)
-    for something in items.cartitem_set.all():
-        print(something)
-    print(items)
-    template = get_template('orders/invoice.html')
-    context = {
-        "items": items,
-        "customer_name": "John Cooper",
-        "amount": 1399.99,
-        "today": "Today",
-    }
-    html = template.render(context)
-    pdf = render_to_pdf('orders/invoice.html',context)
-    print("Hey")
-    if pdf:
-        return HttpResponse(pdf, content_type= 'application/pdf')

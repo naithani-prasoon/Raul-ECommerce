@@ -27,8 +27,6 @@
                             <div class="product">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <img class="img-fluid mx-auto d-block image" src="{{item.product.image.url}}">
-                                        <a href="{% url 'update_cart' item.product.slug %}?qty=0">remove</a>
                                     </div>
                                     <div class="col-md-8">
                                         <div class="info">
@@ -44,7 +42,6 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4 quantity">
-                                                    <form class= 'form pull-right' method='GET' action="{% url 'update_cart' item.product.slug %}">
                                                         <input name='qty' type='number' placeholder={{item.quantity}} value='{{item.quantity}}' />
                                                         <input type='submit' value='update cart' />
                                                     </form>

@@ -29,12 +29,13 @@ from Raul_Inc import views as Raul_Inc_Path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('category/<str:cats>/', views.CategoryView,name='cat-view'),
+    path('section/<str:cats>/', views.SectionView,name='section-view'),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
     path('profile/orders', user_views.profile, name='profile-orders'),
     path('product/', views.products, name='Raul-product'),
     path('product/<str:slug>/', views.singleView, name='Raul-single'),
-    path('login/', auth_views.LoginView.as_view(template_name='Raul/Base.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     path('password-reset/',auth_views.PasswordResetView.as_view(template_name='users/password_reset.html'), name='password_reset'),
     path('password-reset/done/',auth_views.PasswordResetDoneView.as_view(template_name='users/password_reset_done.html'),name='password_reset_done'),
@@ -57,3 +58,4 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

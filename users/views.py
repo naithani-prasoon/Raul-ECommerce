@@ -5,10 +5,9 @@ from django.contrib.auth.decorators import login_required
 from .forms import CreateUserForm, UserAddressForm
 # from .forms import UserRegisterForm
 from carts.models import Cart, CartItem
-from django.contrib.auth import get_user
 from django.urls import reverse
 from users.models import UserAddress, UserDefaultAddress
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model,get_user
 
 
 
@@ -24,6 +23,9 @@ def register(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
+            email = form.cleaned_data.get('email')
+            User.email = email
+            print(User.email)
             messages.success(request, f'Your account has been created! You are now able to log in')
             return redirect('login')
     else:
