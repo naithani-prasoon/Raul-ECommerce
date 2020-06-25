@@ -1,6 +1,5 @@
 import string
 import random
-import pdfkit as pdf
 import os
 from .models import Order
 from carts.models import Cart
