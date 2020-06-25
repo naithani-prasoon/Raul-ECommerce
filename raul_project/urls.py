@@ -23,6 +23,7 @@ from Raul import views
 from carts import views as cart_views
 from orders import views as orders
 from Raul_Inc import views as Raul_Inc_Path
+#from orders.views import GeneratePDF
 
 
 urlpatterns = [
@@ -45,6 +46,7 @@ urlpatterns = [
     path('cart/<str:slug>/', cart_views.add_to_cart, name='add_to_cart'),
     path('checkout/', orders.checkout, name='checkout'),
     path('orders/', orders.orders, name='user_orders'),
+    path('pdf/', orders.GeneratePDF, name='invoice'),
     path('Raul_Inc/Home', Raul_Inc_Path.home, name='Raul_Inc_Home'),
     path('cart/', cart_views.view, name='cart'),
     path('ajax/add_user_address/',user_views.add_address, name='ajax_add_user_address'),
