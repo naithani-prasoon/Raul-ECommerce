@@ -1,5 +1,5 @@
 import time
-
+import os
 import stripe
 from django.urls import reverse
 from django.shortcuts import render, HttpResponseRedirect
@@ -9,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order
-from .utilis import id_generator
+from .utilis import id_generator, make_invoice, sendEmail
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
@@ -32,6 +32,9 @@ def orders(request):
 
 @login_required
 def checkout(request):
+    header = ['product','quantity','line_total']
+    arr = []
+    arr.append(header)
     User = get_user(request)
 
     try:
@@ -127,12 +130,21 @@ def checkout(request):
             )
 
             if charge["captured"]:
+
                 new_order.status = "Finished"
                 new_order.billing_address = billing_address_instance
                 new_order.shipping_address = shipping_address_instance
                 new_order.save()
+                for i in cart.cartitem_set.all():
+                    order = [i.product, i.quantity, i.line_total]
+                    arr.append(order)
+                make_invoice(arr,new_order.order_id)
+                sendEmail(request)
+                new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
+                new_order.save()
                 cart.active = False
                 cart.save()
+
                 del request.session['cart_id']
                 return HttpResponseRedirect(reverse("user_orders"))
 
