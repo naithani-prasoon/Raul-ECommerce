@@ -14,6 +14,12 @@ from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
 from carts.views import add_to_cart
+from django.http import HttpResponse
+from django.views.generic import View
+
+from django.template.loader import get_template
+
+from .utilis import render_to_pdf
 
 try:
     stripe_pub = settings.STRIPE_PUBLISHABLE_KEY
@@ -131,8 +137,10 @@ def checkout(request):
                 new_order.billing_address = billing_address_instance
                 new_order.shipping_address = shipping_address_instance
                 new_order.save()
+                #GeneratePDF(request)
                 cart.active = False
                 cart.save()
+
                 del request.session['cart_id']
                 return HttpResponseRedirect(reverse("user_orders"))
 
@@ -145,3 +153,26 @@ def checkout(request):
                }
     template = "Checkout.html"
     return render(request, 'orders/Checkout.html', context)
+
+
+
+def GeneratePDF(request, *args, **kwargs):
+    User = get_user(request)
+
+
+    items = Cart.objects.get(user=User,active=True)
+    for something in items.cartitem_set.all():
+        print(something)
+    print(items)
+    template = get_template('orders/invoice.html')
+    context = {
+        "items": items,
+        "customer_name": "John Cooper",
+        "amount": 1399.99,
+        "today": "Today",
+    }
+    html = template.render(context)
+    pdf = render_to_pdf('orders/invoice.html',context)
+    print("Hey")
+    if pdf:
+        return HttpResponse(pdf, content_type= 'application/pdf')
