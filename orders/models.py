@@ -20,8 +20,6 @@ class Order(models.Model):
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     order_id = models.CharField(max_length=120, default='ABC', unique=True)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-
-
     billing_address = models.ForeignKey(UserAddress, related_name= "billing_address", blank=True, null=True, on_delete=models.CASCADE)
     shipping_address = models.ForeignKey(UserAddress,related_name= "shipping_address", blank=True, null=True, on_delete=models.CASCADE)
     status = models.CharField(max_length=120, choices=STATUS_CHOICES, default="Started")
