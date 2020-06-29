@@ -2,37 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/Raul_Video.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/new_video.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Art1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian_N6Ncn40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian_Ngso4ry.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian_rtWzsnx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Confetti_Dinner_Plate_1000x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Confetti_Dinner_Plate_1000x_oPmyz52.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/LexiPotSmall_25c065c4-8d9b-4760-8570-7c1bfd73b597_2048x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Met_Gala_2019-_Salad_Plate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_VTENCTY173.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Peony_Salad_Plate_2048x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Peony_Salad_Plate_2048x_q6f1ZjW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Raul_Wine_Glass.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen_Shot_.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen_Shot__4NGtilz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen_Shot__jphqxrv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/flowers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/plates.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/table.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/table_6PNO3iE.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/utilis.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/utilis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +154,8 @@
       <workItem from="1593284202124" duration="5693000" />
       <workItem from="1593306702618" duration="48000" />
       <workItem from="1593312943630" duration="224000" />
-      <workItem from="1593313301974" duration="237000" />
+      <workItem from="1593313301974" duration="357000" />
+      <workItem from="1593395206803" duration="3328000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -470,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592244941630</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Test1">
+      <created>1593383715203</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1593383715203</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +472,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="started search bar" />
     <MESSAGE value="can add and remove from cart" />
     <MESSAGE value="can add and remove from cart 2" />
     <MESSAGE value="can add and remove from cart 3" />
@@ -516,7 +496,8 @@
     <MESSAGE value="nonsense garbage" />
     <MESSAGE value="fixes" />
     <MESSAGE value="fixes2" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes2" />
+    <MESSAGE value="Test1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="623" y="162" key="#Project_Structure" timestamp="1593226617952">
@@ -531,10 +512,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="54" key="CommitChangelistDialog2" timestamp="1592063400614">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="331" y="23" key="CommitChangelistDialog2" timestamp="1593383712559">
+      <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1592063400614" />
+    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1593383712559" />
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="331" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1591414336005" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
@@ -576,10 +558,11 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1592063474535">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2" timestamp="1593383723254">
+      <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1592063474535" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1593383723254" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
     <state x="100" y="113" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593284626200">
       <screen x="0" y="23" width="1440" height="808" />
