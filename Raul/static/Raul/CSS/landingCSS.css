@@ -3,17 +3,29 @@ body{
     padding:0;
     height:100vh;
     font-family: 'Roboto Condensed', sans-serif;
-    overflow-x: hidden;
+    overflow: hidden;
     justify-items: center;
     align-items: center;
-    background-color:#595959;
+    background-color:#333333;
 }
 
-.bigContainer{
-    display: flexbox;
-    flex-direction: row;
+.placeContainers{
+    display: grid;
+    grid-template-rows: 38% 38%;
     height:100vh;
-    z-index: 4;
+    padding:50px 0px;
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn{
+    0%{opacity: 0; transform: translateY(-50px);}
+    100%{opacity: 1; transform: translateY(0);}
+}
+
+.bigContainer2{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin:0 280px;
 }
 
 .backgroundText{
@@ -78,8 +90,8 @@ a{
 }
 
 a .container{
-    width:30%;
-    height:25%;
+    width:380px;
+    height:200px;
     overflow: hidden;
     margin-left:auto;
     margin-right: auto;
@@ -133,7 +145,7 @@ a .container video{
 }
 
 a .container:hover{
-    width:35%;
+    margin:40px auto;
     cursor: pointer;
 }
 

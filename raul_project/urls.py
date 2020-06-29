@@ -28,7 +28,6 @@ from Raul_Inc import views as Raul_Inc_Path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('category/<str:cats>/', views.CategoryView,name='cat-view'),
-    path('section/<str:cats>/', views.SectionView,name='section-view'),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
     path('profile/orders', user_views.profile, name='profile-orders'),
@@ -56,4 +55,3 @@ urlpatterns = [
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-

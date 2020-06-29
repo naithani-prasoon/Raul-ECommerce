@@ -167,8 +167,6 @@ def add_to_cart(request, slug):
                 pass
 
         new_item = CartItem.objects.create(cart=cart, product=producter)
-        new_item.quantity = qty
-        new_item.save()
         single_item = CartItem.objects.filter(cart=cart, product=producter).count()
 
         if qty == 0:

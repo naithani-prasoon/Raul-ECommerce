@@ -1404,7 +1404,7 @@ nav ul li a:hover{
     } */
 
     .bannerHead{    
-        height: 750px;
+        height: 100vh;
         width:100%;
         overflow: hidden;
         position: relative;
@@ -1517,7 +1517,7 @@ nav ul li a:hover{
     
     .bannerSecond{
         background-image: url('Images/bannerThird.jpg');
-        height:800px;
+        height:100vh;
         width: 100%;
         position: relative;
         background-position: center;
@@ -1720,21 +1720,60 @@ nav ul li a:hover{
 
     .horizontalScroll{
         background-color: #333333;
-        height: 650px;
+        height: 850px;
         width:100%;
-        display:flex;
-        flex-wrap: nowrap;
-        overflow-y: hidden;
-        overflow-x: auto;
         padding:50px 0px 0px 0px;
+        overflow: scroll;
     }
 
     .horizontalScroll::-webkit-scrollbar{
         display: none;
     }
 
+    .featureProductsHeading{
+        color:#cfbb63;
+        font-size:60px;
+        text-align: center;
+        width:100%;
+        padding-top:70px;
+    }
+
+    .marquee{
+        width:100vw;
+        height:650px;
+        background: transparent;
+        overflow: hidden;
+    }
+
+    .marqueeContent{
+        list-style: none;
+        height:100%;
+        display: flex;
+        animation: scrolling 30s linear infinite;
+    }
+
+    @keyframes scrolling{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-198vw);
+        }
+    }
+
+    .marqueeContent li{
+        width:20vw;
+        padding:0px 100px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+
+
     .horizontalScroll .container{
-        width:25%;
         position: relative;
         padding:20px;
         flex: 0 0 auto;
@@ -1880,14 +1919,14 @@ nav ul li a:hover{
     }
 
     @-webkit-keyframes fadeEffect {   
-	from {transform: translateX(-800px);opacity: 0;}
-    to {transform: translateX(0px);opacity: 1;}
-}
+	    from {transform: translateX(-800px);opacity: 0;}
+        to {transform: translateX(0px);opacity: 1;} 
+    }
       
-      @keyframes fadeEffect {
+    @keyframes fadeEffect {
         from {transform: translateX(-800px);opacity: 0;}
         to {transform: translateX(0px);opacity: 1;}
-      }
+    }
 
     .tabcontent .tabSection{
         display: grid;
@@ -1950,7 +1989,7 @@ nav ul li a:hover{
     }
 
     .bannerThird{
-        height:700px;
+        height:100vh;
         width:100%;
         background-image: url('Images/bannerSecond.jpg');
         background-size: cover;

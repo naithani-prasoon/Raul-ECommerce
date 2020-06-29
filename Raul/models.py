@@ -4,28 +4,17 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=128)
-    image =  models.ImageField(blank=True, null=True)
 
     def __str__(self):
         return self.name
 
-class Section(models.Model):
-    name = models.CharField(max_length=128)
 
-    def __str__(self):
-        return self.name
 
 
 options = Category.objects.all().values_list('name','name')
 arr = []
 for i in options:
     arr.append(i)
-
-
-options2 = Section.objects.all().values_list('name','name')
-arr2 = []
-for i in options2:
-    arr2.append(i)
 
 
 class product(models.Model):
@@ -36,7 +25,6 @@ class product(models.Model):
     image2 = models.ImageField(blank=True, null=True)
     image3 = models.ImageField(blank=True, null=True)
     category = models.CharField(max_length=128, default="Plates", choices=arr)
-    section = models.CharField(max_length=128, default="New Arrivals", choices=arr2)
     slug = models.SlugField(null = True)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

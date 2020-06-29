@@ -2,37 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/Raul_Video.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/new_video.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0002_auto_20200619_0205.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0003_auto_20200619_0210.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0004_auto_20200619_0223.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0005_auto_20200619_0226.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0007_auto_20200623_2204.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/migrations/0002_auto_20200618_2305.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Art1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian_N6Ncn40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian_Ngso4ry.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Bad_Luck_Brian_rtWzsnx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Confetti_Dinner_Plate_1000x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Confetti_Dinner_Plate_1000x_oPmyz52.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/LexiPotSmall_25c065c4-8d9b-4760-8570-7c1bfd73b597_2048x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Met_Gala_2019-_Salad_Plate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_VTENCTY173.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Peony_Salad_Plate_2048x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Peony_Salad_Plate_2048x_q6f1ZjW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Raul_Wine_Glass.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen_Shot_.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen_Shot__4NGtilz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Screen_Shot__jphqxrv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/flowers.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/plates.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/table.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/table_6PNO3iE.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/utilis.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/utilis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,10 +69,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/users/templates/users" />
@@ -99,22 +80,34 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
-      <recent name="$PROJECT_DIR$/media" />
       <recent name="C:\Users\jonat\IdeaProjects\django_prject2\orders\templates\orders" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/Raul/static.Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul/templates/Raul" />
+      <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.check2.html">
     <configuration name="check2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/orders/templates/orders/check2.html" useBuiltInWebServerPort="true">
@@ -165,23 +158,6 @@
       <workItem from="1591719084242" duration="1075000" />
       <workItem from="1591801144689" duration="6308000" />
       <workItem from="1592236866099" duration="3295000" />
-      <workItem from="1593125603255" duration="112000" />
-      <workItem from="1593125933069" duration="764000" />
-      <workItem from="1593126876561" duration="1427000" />
-      <workItem from="1593128643123" duration="3527000" />
-      <workItem from="1593143291830" duration="3132000" />
-      <workItem from="1593150194808" duration="7000" />
-      <workItem from="1593189816240" duration="1017000" />
-      <workItem from="1593224339473" duration="4838000" />
-      <workItem from="1593235717909" duration="23000" />
-      <workItem from="1593276515323" duration="1013000" />
-      <workItem from="1593280061216" duration="22000" />
-      <workItem from="1593281443261" duration="723000" />
-      <workItem from="1593283548139" duration="158000" />
-      <workItem from="1593284202124" duration="5693000" />
-      <workItem from="1593306702618" duration="48000" />
-      <workItem from="1593312943630" duration="224000" />
-      <workItem from="1593313301974" duration="237000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -519,10 +495,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="fixes2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="623" y="162" key="#Project_Structure" timestamp="1593226617952">
-      <screen x="0" y="23" width="1440" height="808" />
-    </state>
-    <state x="623" y="162" key="#Project_Structure/0.23.1440.808@0.23.1440.808" timestamp="1593226617952" />
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591326187065">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -563,13 +535,10 @@
     </state>
     <state x="436" y="173" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1591543504516" />
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
-    <state x="31" y="23" width="1024" height="808" key="SettingsEditor" timestamp="1593287533825">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state x="208" y="23" width="1024" height="822" key="SettingsEditor" timestamp="1592063462866">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="23" width="1024" height="822" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1592063462866" />
-    <state x="31" y="23" width="1024" height="808" key="SettingsEditor/0.23.1440.808@0.23.1440.808" timestamp="1593234861480" />
-    <state x="208" y="44" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1593125973176" />
-    <state x="31" y="23" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1593287533825" />
     <state x="208" y="23" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1591927638710" />
     <state x="208" y="44" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1591498351558" />
     <state x="499" y="156" key="VCS.ChangeListViewerDialog" timestamp="1591489708056">
@@ -581,11 +550,10 @@
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1592063474535" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
-    <state x="100" y="113" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593284626200">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591407137868">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1591407137868" />
-    <state x="100" y="113" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.808@0.23.1440.808" timestamp="1593284626200" />
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1591120488524">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -604,10 +572,6 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1591067545373" />
-    <state x="601" y="339" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1593289217394">
-      <screen x="0" y="23" width="1440" height="812" />
-    </state>
-    <state x="601" y="339" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.812@0.23.1440.812" timestamp="1593289217394" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/django_prject$manage.coverage" NAME="manage Coverage Results" MODIFIED="1591120754576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

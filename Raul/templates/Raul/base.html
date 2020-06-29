@@ -32,153 +32,146 @@
     <meta name="msapplication-TileImage" content="{% static 'Raul/Favicons/ms-icon-144x144.png'%}">
     <meta name="theme-color" content="#ffffff">
 
-    </head>
-
-
+</head>
 
 <body>
 
-<!-- Header Nav Bar-->
+    <div class = "headers" id="headerOnScroll" style="background-color: #333333;">
+        <figure id="figureOnScroll">
 
-<div class = "headers" id="headerOnScroll" style="background-color: #333333;">
-    <figure id="figureOnScroll">
-
-        <div class="navbarIcons"> 
-            <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
-            <div class="hoverDiv2">
-                <span style="letter-spacing: 2px;">CONTACT US</span><br><br><br>
-                <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>email@email.com</span><br><br>
-                <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" id="phoneContact"> <span> (900)-009-9090</span>
+            <div class="navbarIcons"> 
+                <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
+                <div class="hoverDiv2">
+                    <span style="letter-spacing: 2px;">CONTACT US</span><br><br><br>
+                    <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>email@email.com</span><br><br>
+                    <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" id="phoneContact"> <span> (900)-009-9090</span>
+                </div>
             </div>
+
+            <div class="navbarIcons"> 
+                <p><img src="{% static 'Raul/Icons/Icons_Small/location.png' %}" alt="Location"></p>
+                <div class="hoverDiv3">
+                    <span style="letter-spacing: 2px;">VISIT US</span><br><br><br>
+                    <span>216 8th Avenue, <br>New York, NY 10011</span><br><br>
+                    <span>Seven Days a Week</span><br><br>
+                    <span>9:00AM - 8:00PM</span>
+                </div>
+            </div>
+
+            <img src="{% static 'Raul/Images/raullogo.png' %}" alt="Raul Logo" width="6%"  onclick="openStore()" id="logo">
+
+            {% if user.is_authenticated %}
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
+            <div class="navbarIcons"> 
+                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
+                <div class="hoverDiv">
+                    <span><a href="{% url 'profile' %}">Profile</a></span><br><br>
+                    <span><a href="{% url 'logout' %}"> <p> Logout </p></a></span>
+                </div>
+            </div>
+            <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart"> </p></a>
+
+            {% else %}
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
+            <div class="navbarIcons"> 
+                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
+                <div class="hoverDiv">
+                    <span><a href="{% url 'login' %}">Login</a></span><br><br>
+                    <span><a href="{% url 'register' %}">Register</a></span>
+                </div>
+            </div>
+            <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
+            {% endif %}
+
+        </figure>
+
+        <div class="category" id="hideOnScroll" style="background-color: #333333;">
+
+            <p id="categoryP" style="color:white;"> New Arrivals </p>
+
+            <p id="categoryP" style="color:white;"> Decorative Accessories</p>
+            
+            <p id="categoryP" style="color:white;">Tabletop</p>
+            
+            <p id="categoryP" style="color:white;">Furniture</p>
+
+            <p id="categoryP" style="color:white;">Floral</p>
+            
+            <p id="categoryP" style="color:white;">Wall Art</p>
+
+            <p id="categoryP" style="color:white;">All Products</p>
+            
+            <p id="categoryP" style="color:white;">Sale</p>
+            
+            <p id="categoryP" style="color:white;">Venue Bookings</p>
+
         </div>
 
-        <div class="navbarIcons"> 
-            <p><img src="{% static 'Raul/Icons/Icons_Small/location.png' %}" alt="Location"></p>
-            <div class="hoverDiv3">
-                <span style="letter-spacing: 2px;">VISIT US</span><br><br><br>
-                <span>216 8th Avenue, <br>New York, NY 10011</span><br><br>
-                <span>Seven Days a Week</span><br><br>
-                <span>9:00AM - 8:00PM</span>
-            </div>
-        </div>
+        <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
 
-        <img src="{% static 'Raul/Images/raullogo.png' %}" alt="Raul Logo" width="6%"  onclick="openStore()" id="logo">
+        <nav>
+            <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+            <ul id="contentHam">
 
-        {% if user.is_authenticated %}
-        <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
-        <div class="navbarIcons"> 
-            <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
-            <div class="hoverDiv">
-                <span><a href="{% url 'profile' %}">Profile</a></span><br><br>
-                <span><a href="{% url 'logout' %}"> <p> Logout </p></a></span>
-            </div>
-        </div>
-        <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart"> </p></a>
+                <li class="exitButton">
+                    <img src="{% static 'Raul/CSS/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
+                </li>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Store</a>
+                </li>
+                <li>
+                    <a href="{% url 'register' %}">Register</a>
+                </li>
+                <li>
+                    <a href="{% url 'register' %}">Login</a>
+                </li>
+                <li>
+                    <a href="{% url 'cart' %}">Cart</a>
+                </li>
 
-        {% else %}
-        <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
-        <div class="navbarIcons"> 
-            <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
-            <div class="hoverDiv">
-                <span><a href="{% url 'login' %}">Login</a></span><br><br>
-                <span><a href="{% url 'register' %}">Register</a></span>
-            </div>
-        </div>
-        <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
-        {% endif %}
 
-    </figure>
-
-    <div class="category" id="hideOnScroll" style="background-color: #333333;">
-
-        <p id="categoryP" style="color:white;"> New Arrivals </p>
-
-        <p id="categoryP" style="color:white;"> Decorative Accessories</p>
-        
-        <p id="categoryP" style="color:white;">Tabletop</p>
-        
-        <p id="categoryP" style="color:white;">Furniture</p>
-
-        <p id="categoryP" style="color:white;">Floral</p>
-        
-        <p id="categoryP" style="color:white;">Wall Art</p>
-
-        <p id="categoryP" style="color:white;">All Products</p>
-        
-        <p id="categoryP" style="color:white;">Sale</p>
-        
-        <p id="categoryP" style="color:white;">Venue Bookings</p>
+            </ul>
+        </nav>
 
     </div>
 
-    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
+    <div id ="store">
+        <p onclick="closeStore()" id="cross">
+            X
+        </p>
 
-    <nav>
-        <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
-        <ul id="contentHam">
+        <p>
+            cafe flor
+        </p>
 
-            <li class="exitButton">
-                <img src="{% static 'Raul/CSS/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
-            </li>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">Store</a>
-            </li>
-            <li>
-                <a href="{% url 'register' %}">Register</a>
-            </li>
-            <li>
-                <a href="{% url 'register' %}">Login</a>
-            </li>
-            <li>
-                <a href="{% url 'cart' %}">Cart</a>
-            </li>
+        <p>
+            raul
+        </p>
 
+        <p>
+            third
+        </p>
 
-        </ul>
-    </nav>
-
-</div>
-
-<div id ="store">
-    <p onclick="closeStore()" id="cross">
-        X
-    </p>
-
-    <p>
-        cafe flor
-    </p>
-
-    <p>
-        raul
-    </p>
-
-    <p>
-        third
-    </p>
-
-</div>
-
-
-<div class="containers">
-    <div class = "containers1">
-        {% block content %}{% endblock %}
     </div>
-</div>
 
-</div>
+    <div class="containers">
+        <div class = "containers1">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="text/javascript"  src="https://js.stripe.com/v2/"></script>
-<script>
-    AOS.init();
-</script>
-<script src="{% static 'Raul/JS/navbar.js' %}" charset="UTF-8"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript"  src="https://js.stripe.com/v2/"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="{% static 'Raul/JS/navbar.js' %}" charset="UTF-8"></script>
+    
 </body>
 </html>

@@ -20,6 +20,8 @@ class Order(models.Model):
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     order_id = models.CharField(max_length=120, default='ABC', unique=True)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
+
+
     billing_address = models.ForeignKey(UserAddress, related_name= "billing_address", blank=True, null=True, on_delete=models.CASCADE)
     shipping_address = models.ForeignKey(UserAddress,related_name= "shipping_address", blank=True, null=True, on_delete=models.CASCADE)
     status = models.CharField(max_length=120, choices=STATUS_CHOICES, default="Started")
@@ -27,9 +29,8 @@ class Order(models.Model):
     tax_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     final_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
-    order_pdf = models.FileField(blank=True,null=True)
-    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
+    updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
         return self.order_id

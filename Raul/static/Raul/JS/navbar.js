@@ -1,4 +1,20 @@
 
+ function navbarFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+
+        document.getElementById("hideOnScroll").style.background = "transparent";
+        document.getElementById("hideOnScroll").style.display = "none";
+        document.getElementById("headerOnScroll").style.height = "4.5em";
+        document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 5px 1px black";
+        
+    } else {
+        document.getElementById("hideOnScroll").style.display = "flex";
+        document.getElementById("headerOnScroll").style.height = "7.5em";
+        document.getElementById("headerOnScroll").style.background = "#333333";
+        document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 0px 0px";
+    }
+}
+ 
  var mybutton = document.getElementById("scrollTop");
 
  window.onscroll = function() {scrollFunction(),navbarFunction()};
@@ -17,23 +33,7 @@
  }
 
  
- function navbarFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-
-        document.getElementById("hideOnScroll").style.background = "transparent";
-        document.getElementById("hideOnScroll").style.display = "none";
-        document.getElementById("headerOnScroll").style.height = "4.5em";
-        document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 5px 1px black";
-        
-        
-        
-    } else {
-        document.getElementById("hideOnScroll").style.display = "flex";
-        document.getElementById("headerOnScroll").style.height = "7.5em";
-        document.getElementById("headerOnScroll").style.background = "#333333";
-        document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 0px 0px";
-    }
-}
+ 
 
 function openCity(evt, tabName) {
     var i, tabcontent, tablinks;
