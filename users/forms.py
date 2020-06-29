@@ -34,8 +34,6 @@ class LoginForms(forms.Form):
 
     def clean_username(self):
         username = self.cleaned_data.get("username")
-        email = self.cleaned_data.get("email")
-        print(email)
         try:
             user = User.objects.get(username=username)
         except  User.DoesNotExist:

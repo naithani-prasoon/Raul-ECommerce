@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'storages'
 
 ]
 
@@ -139,17 +138,15 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media'
 
 
 
 LOGIN_REDIRECT_URL = 'Raul-SecondHome'
-LOGOUT_REDIRECT_URL ='Raul-SecondHome'
 
 LOGIN_URL = 'login'
 
@@ -166,14 +163,5 @@ EMAIL_HOST_PASSWORD = 'afares123'
 
 STRIPE_SECRET_KEY = 'sk_test_51GsD2nI9Rm3HfGNqhDScTY8zJuFZ9vB8D9cSBABphbXNboatVTx9XC9jNSQu3m8VGYb5cjafXXv4YQ6GUQ4nsL8H00rxP2m4Q7'
 STRIPE_PUBLISHABLE_KEY ='pk_test_51GsD2nI9Rm3HfGNqDzGloX9dMwz1QCbkCuQfSNc99EUGK4Arw7SVaC6NMGCgQMjii1WtIyEXY9FcRKQ8YCnlY9QK00kwtbjsRr'
-
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
-
-
-
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
 
 

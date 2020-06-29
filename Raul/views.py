@@ -53,20 +53,7 @@ def products(request):
 
 def CategoryView(request, cats):
     cat_products = product.objects.filter(category=cats)
-    banner = Category.objects.get(name=cats)
-    for i in cat_products:
-        print(i.title)
-    return render(request, 'Raul/categories.html', {'cats': cats, 'cat_products': cat_products,'banner':banner})
-
-
-def SectionView(request,cats):
-    print(cats)
-    cat_products = product.objects.filter(section__iexact=cats)
-
-    for i in cat_products:
-        print(i.title)
     return render(request, 'Raul/categories.html', {'cats': cats, 'cat_products': cat_products})
-
 
 
 def singleView(request, slug):
