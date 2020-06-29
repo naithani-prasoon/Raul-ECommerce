@@ -130,7 +130,6 @@ def checkout(request):
             )
 
             if charge["captured"]:
-
                 new_order.status = "Finished"
                 new_order.billing_address = billing_address_instance
                 new_order.shipping_address = shipping_address_instance
@@ -139,7 +138,6 @@ def checkout(request):
                     order = [i.product, i.quantity, i.line_total]
                     arr.append(order)
                 make_invoice(arr,new_order.order_id)
-                sendEmail(request)
                 new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                 new_order.save()
                 cart.active = False

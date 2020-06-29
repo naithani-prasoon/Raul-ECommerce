@@ -1,6 +1,5 @@
 import string
 import random
-import pdfkit as pdf
 import os
 from .models import Order
 from carts.models import Cart
@@ -28,7 +27,7 @@ def id_generator(size=10, chars=string.ascii_uppercase + string.digits):
 
 def make_invoice(data,idnum):
     outfilename = "Order_Number_" + idnum + ".pdf"
-    outfiledir = 'media'
+    outfiledir = settings.MEDIA_ROOT
     outfilepath = os.path.join( outfiledir, outfilename )
 
     pdf = SimpleDocTemplate(
@@ -40,6 +39,10 @@ def make_invoice(data,idnum):
     elems =[]
     elems.append(table)
     pdf.build(elems)
+
+
+
+
 
 def sendEmail(request):
     User = get_user(request)
