@@ -231,4 +231,4 @@ def add_to_cart(request, slug):
     cart.pennies_total = cart.total * 100
     cart.save()
 
-    return redirect(reverse("cart"))
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

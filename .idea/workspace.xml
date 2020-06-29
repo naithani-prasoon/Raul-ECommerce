@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,7 +155,8 @@
       <workItem from="1593306702618" duration="48000" />
       <workItem from="1593312943630" duration="224000" />
       <workItem from="1593313301974" duration="357000" />
-      <workItem from="1593395206803" duration="3328000" />
+      <workItem from="1593395206803" duration="3957000" />
+      <workItem from="1593446892452" duration="1107000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -451,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593383715203</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Fixed Cart">
+      <created>1593401144255</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1593401144255</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +480,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="can add and remove from cart" />
     <MESSAGE value="can add and remove from cart 2" />
     <MESSAGE value="can add and remove from cart 3" />
     <MESSAGE value="new home page set" />
@@ -497,7 +504,8 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="fixes2" />
     <MESSAGE value="Test1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test1" />
+    <MESSAGE value="Fixed Cart" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Cart" />
   </component>
   <component name="WindowStateProjectService">
     <state x="623" y="162" key="#Project_Structure" timestamp="1593226617952">
@@ -512,10 +520,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="23" key="CommitChangelistDialog2" timestamp="1593383712559">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state x="331" y="23" key="CommitChangelistDialog2" timestamp="1593401143833">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1592063400614" />
+    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1593401143833" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1593383712559" />
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="331" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1591414336005" />
@@ -558,10 +567,11 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="194" key="Vcs.Push.Dialog.v2" timestamp="1593383723254">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2" timestamp="1593401153893">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1592063474535" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1593401153893" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1593383723254" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
     <state x="100" y="113" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593284626200">
