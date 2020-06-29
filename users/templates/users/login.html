@@ -3,14 +3,15 @@
 {% load crispy_forms_tags %}
 <head>
     <style>
-        body {
+        html,body {
             background-color: rgba(0,0,0,0.5);
             margin:0px;
             font-family: 'Roboto', sans-serif;
             background-size: 100% 110%;
             color:#cfbb63;    
             overflow: hidden;   
-            height:100vh;   
+            height:100vh;  
+            width:100%; 
         }
         h2, h3, h4, h5, h6, a {
             margin:0; padding:0px;
@@ -157,8 +158,8 @@
 <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 
 <div class= "loginPhoto">
-    
 </div>
+
 <form method="post">
     {{ form.non_field_errors }}
     <div class="logining">
@@ -187,7 +188,7 @@
             <a class="sign-up" href="{% url 'register' %}"> Don't have an account? </a>
             <br>
         </div>
-</div>
+    </div>
 <!-- <div class="error-page">
     <div class="try-again">Error: Try again?</div>
 </div> -->
