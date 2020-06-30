@@ -14,7 +14,7 @@ body{
     grid-template-rows: 38% 38%;
     height:100vh;
     padding:50px 0px;
-    animation: fadeIn 2s;
+    animation: fadeIn 5s;
 }
 
 @keyframes fadeIn{
