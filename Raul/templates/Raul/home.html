@@ -40,26 +40,10 @@
 
     <div id="id01" class="modal">
   
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <p> SIGN IN</p>
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
-          </div>
-      
-          <div class="container">
-            <label for="uname">Username</label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw">Password</label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <div class="centerIt">  
-                <button type="submit">Login</button>
-            </div>
-          </div>
-          <div class="centerIt">
-            <span class="psw"><a href="#">Forgot password?</a></span>
-            <span class="psw" id ="accountCreate"><a href="#">Create an Account</a></span>
-          </div>  
+        <form class="modal-content animate" action="" method="POST">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type = 'submit' value="Login" class="button>">
         </form>
       </div>
     

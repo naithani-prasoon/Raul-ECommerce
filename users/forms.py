@@ -31,6 +31,10 @@ User = get_user_model()
 class LoginForms(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput())
+    widgets = {
+        'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
+        'password': forms.TextInput(attrs = {'placeholder': 'Password'}),
+    }
 
     def clean_username(self):
         username = self.cleaned_data.get("username")

@@ -32,6 +32,7 @@ def secondHome(request):
     form = forms.LoginForms(request.POST or None)
     RegisterForm = forms.CreateUserForm(request.POST or None)
     context = {'form': form,"Register_form": RegisterForm}
+
     if form.is_valid():
         username = form.cleaned_data['username']
         password = form.cleaned_data['password']
