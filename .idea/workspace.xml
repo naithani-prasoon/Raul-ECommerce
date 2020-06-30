@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +44,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="IgnoredFileRootStore">
@@ -133,6 +141,8 @@
       <workItem from="1591719084242" duration="1075000" />
       <workItem from="1591801144689" duration="6308000" />
       <workItem from="1592236866099" duration="3295000" />
+      <workItem from="1593480774789" duration="516000" />
+      <workItem from="1593481441213" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -510,10 +520,11 @@
     </state>
     <state x="436" y="173" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1591543504516" />
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
-    <state x="208" y="23" width="1024" height="822" key="SettingsEditor" timestamp="1592063462866">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="208" y="44" width="1024" height="822" key="SettingsEditor" timestamp="1593481790482">
+      <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="208" y="23" width="1024" height="822" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1592063462866" />
+    <state x="208" y="44" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1593481790482" />
     <state x="208" y="23" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1591927638710" />
     <state x="208" y="44" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1591498351558" />
     <state x="499" y="156" key="VCS.ChangeListViewerDialog" timestamp="1591489708056">
@@ -533,12 +544,18 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1591120488524" />
-    <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592063445852">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593480783365">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592063445852" />
+    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1593480783365" />
+    <state x="525" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.810@0.23.1440.810" timestamp="1593480707863" />
     <state x="525" y="362" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1591922192402" />
     <state x="525" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1591489711874" />
+    <state x="351" y="206" key="git4idea.merge.GitPullDialog" timestamp="1593539649563">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="351" y="206" key="git4idea.merge.GitPullDialog/0.23.1440.812@0.23.1440.812" timestamp="1593539649563" />
     <state x="149" y="176" key="new project wizard" timestamp="1591150138984">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

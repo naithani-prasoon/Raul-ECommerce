@@ -33,6 +33,7 @@ def view(request):
                         item.line_total = line_total
                         # print(item.line_total)
                     item.save()
+                    print(new_total)
 
                 request.session['items_total'] = cart.cartitem_set.count()
                 cart.total = new_total
@@ -58,11 +59,12 @@ def view(request):
             for item in cart.cartitem_set.all():
                 if (item.quantity != None):
                     # print(item.product)
-                    new_total += float(item.product.price) * (item.quantity)
-                    line_total = float(item.product.price) * (item.quantity)
+                    new_total += float(item.product.price) * item.quantity
+                    line_total = float(item.product.price) * item.quantity
                     item.line_total = line_total
                     # print(item.line_total)
                 item.save()
+                print(new_total)
 
             request.session['items_total'] = cart.cartitem_set.count()
             cart.total = new_total
@@ -84,6 +86,7 @@ def view(request):
             line_total = float(item.product.price) * item.quantity
             new_total += line_total
         request.session['items_total'] = cart.cartitem_set.count()
+        print(new_total)
         cart.total = new_total
         cart.save()
         context = {"cart": cart}
@@ -217,6 +220,7 @@ def add_to_cart(request, slug):
             line_total = float(item.product.price) * (item.quantity)
             item.line_total = line_total
             # print(item.line_total)
+        print(new_total)
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()

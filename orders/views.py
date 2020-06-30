@@ -56,7 +56,7 @@ def checkout(request):
         new_order = None
         return HttpResponseRedirect("cart")
 
-    final_amount = 0.0
+    final_amount = 0.00
     if new_order is not None:
         new_order.sub_total = cart.total
         new_order.save()

@@ -1,11 +1,11 @@
 /*hello*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
-  html,body{
+html,body{
     margin:0;
     padding:0;
     width: 100%;
-    font-family: 'Roboto', sans-serif;    
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     background-color: #333333;
     scroll-behavior: smooth;
@@ -31,16 +31,16 @@
     cursor: pointer;
     padding: 1px;
     border-radius: 50px;
-  }
+}
 
-  #scrollTop img{
-      width:100%;
-  }
+#scrollTop img{
+    width:100%;
+}
 
 #scrollTop:hover {
     background-color: #333333;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-  }
+}
 
 a{
     text-decoration: none;
@@ -144,25 +144,25 @@ nav ul li a:hover{
 /* Scroll Bar*/
 ::-webkit-scrollbar {
     width: 10px;
-	overflow: auto;
+    overflow: auto;
 }
 
 ::-webkit-scrollbar-track {
-	background: #595959;
-	border-radius:50px;
-	overflow: auto;
+    background: #595959;
+    border-radius:50px;
+    overflow: auto;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: transparent;
-	border-radius: 50px;
-	overflow: auto;
+    background: transparent;
+    border-radius: 50px;
+    overflow: auto;
 }
 
 
-@media only screen and (max-width:640px){    
-    
-    
+@media only screen and (max-width:640px){
+
+
     .feature{
         display: none;
     }
@@ -203,7 +203,7 @@ nav ul li a:hover{
         width: 15px;
     }
 
-    .bannerHead{    
+    .bannerHead{
         height: 100vh;
         width:100vw;
         overflow: hidden;
@@ -1185,7 +1185,7 @@ nav ul li a:hover{
         display: block;
     }
 
-    
+
     .headers figure .navbarIcons .hoverDiv span a:hover{
         color:#cfbb63
     }
@@ -1285,7 +1285,7 @@ nav ul li a:hover{
         transition: 0.2s ease-in;
         font-size:15px;
     }
-    
+
     .category p:hover{
         font-weight: bolder;
         cursor: pointer;
@@ -1349,7 +1349,6 @@ nav ul li a:hover{
         padding:30px;
         transition: 0.4s ease-in-out;
     }
-
     .dropDownMenu .dropDownButton{
         border:none;
         outline:none;
@@ -1360,11 +1359,9 @@ nav ul li a:hover{
         margin-top:60px;
         transition: 0.4s ease-in-out;
     }
-
     .dropDownButton a{
         color:white;
     }
-
     .dropDownContent{
         display: none;
         position: fixed;
@@ -1378,32 +1375,27 @@ nav ul li a:hover{
         text-align: center;
         transition: 0.4s ease-in-out;
     }
-
     .dropDownContent a{
         color:white;
         text-decoration: none;
         padding:30px;
         text-align: center;
-
     }
-
     .dropDownContent a:hover{
         font-family: 'Roboto Condensed', sans-serif;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
-
     .dropDownButton:hover{
         font-family: 'Roboto Condensed', sans-serif;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
-
     .dropDownMenu:hover .dropDownContent{
         display: block;
     } */
 
-    .bannerHead{    
+    .bannerHead{
         height: 100vh;
         width:100%;
         overflow: hidden;
@@ -1457,18 +1449,15 @@ nav ul li a:hover{
         text-align: center;
         background-color: #333333;
     }
-
     .featureImages{
         padding-left:30px;
         display: grid;
         grid-template-columns: 201.6px 201.6px 201.6px 201.6px;
         grid-template-rows: 282.24px 282.24px ;
     }
-
     .featureImages #reveal1:hover .reveal1{
         opacity: 1;
     }
-
     .featureImages .featureProducts .reveal1{
         position: absolute;
         top:110%;
@@ -1477,25 +1466,21 @@ nav ul li a:hover{
         transition: 0.4s ease-in-out;
         width:25%;
     }
-
     .sectionFeature{
         display: grid;
         grid-template-columns: 50% 50%;
     }
-
     .revealProducts{
         background-color: rgba(0,0,0,0.6);
         width:70%;
         height: 60%;
         margin:90px 0px 0px 150px;
     }
-
     .revealProducts p{
         padding:80px 100px 0px 100px;
         font-size: 60px;
         letter-spacing: 2px;
     }
-
     .featureProductsHeading{
         font-size:50px;
         margin-left: auto;
@@ -1504,17 +1489,15 @@ nav ul li a:hover{
         text-align: center;
         letter-spacing: 2px;
     }
-
     .featureProducts{
         display: block;
         overflow: hidden;
     }
-
     .featureProducts img{
         width:100%;
         padding:10px;
     } */
-    
+
     .bannerSecond{
         background-image: url('Images/bannerThird.jpg');
         height:100vh;
@@ -1818,7 +1801,7 @@ nav ul li a:hover{
         color: #cfbb63;
         font-family: 'Roboto', sans-serif;
         font-size: 45px;
-        margin:250px 0px 0px 20px; 
+        margin:250px 0px 0px 20px;
     }
 
     .container #sideScroll{
@@ -1827,9 +1810,9 @@ nav ul li a:hover{
         font-family: 'Roboto Condensed', sans-serif;
         border: 1px solid #cfbb63;
         font-weight: bolder;
-        border-radius: 60px; 
+        border-radius: 60px;
         margin:10px 5px 0px 80px;
-        font-size:15px;      
+        font-size:15px;
     }
 
     .container span{
@@ -1898,7 +1881,7 @@ nav ul li a:hover{
         letter-spacing: 3px;
         transition: 0.4s ease-in-out;
     }
-    
+
     .tabsBanner button:hover{
         border-bottom: 1px solid #cfbb63;
     }
@@ -1918,11 +1901,11 @@ nav ul li a:hover{
         animation: fadeEffect 2s;
     }
 
-    @-webkit-keyframes fadeEffect {   
-	    from {transform: translateX(-800px);opacity: 0;}
-        to {transform: translateX(0px);opacity: 1;} 
+    @-webkit-keyframes fadeEffect {
+        from {transform: translateX(-800px);opacity: 0;}
+        to {transform: translateX(0px);opacity: 1;}
     }
-      
+
     @keyframes fadeEffect {
         from {transform: translateX(-800px);opacity: 0;}
         to {transform: translateX(0px);opacity: 1;}
@@ -2050,7 +2033,7 @@ nav ul li a:hover{
     .footerEssentials .logoSection #footerLogo1{
         width:50px;
         height:50px;
-        padding:50px 10px 0px 30px;  
+        padding:50px 10px 0px 30px;
     }
 
     .footerEssentials .logoSection #footerLogo2{
@@ -2072,7 +2055,3 @@ nav ul li a:hover{
     }
 
 }
-
-
-
-
