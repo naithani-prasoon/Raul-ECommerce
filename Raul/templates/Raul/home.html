@@ -37,6 +37,31 @@
 
 </head>
 <body>
+
+    <div id="id01" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <p> SIGN IN</p>
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
+          </div>
+      
+          <div class="container">
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <div class="centerIt">  
+                <button type="submit">Login</button>
+            </div>
+          </div>
+          <div class="centerIt">
+            <span class="psw"><a href="#">Forgot password?</a></span>
+            <span class="psw" id ="accountCreate"><a href="#">Create an Account</a></span>
+          </div>  
+        </form>
+      </div>
     
     <div class = "headers" id="headerOnScroll">
         <figure id="figureOnScroll">
@@ -78,7 +103,7 @@
             <div class="navbarIcons"> 
                 <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
-                    <span><a href="{% url 'login' %}">Login</a></span><br><br>
+                    <span><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></span><br><br>
                     <span><a href="{% url 'register' %}">Register</a></span>
                 </div>
             </div>
@@ -158,6 +183,8 @@
         </p>
 
     </div>
+
+    
 
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
