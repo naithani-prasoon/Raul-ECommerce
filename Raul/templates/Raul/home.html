@@ -4,6 +4,12 @@
 
 <html lang="en">
 <head>
+    <style>
+        div. {
+            font-size: 15px;
+
+    </style>
+
     <title>
         Raul Retail
     </title>
@@ -39,14 +45,29 @@
 <body>
 
     <div id="id01" class="modal">
-  
+
         <form class="modal-content animate" action="" method="POST">
-            {%csrf_token%}
-            {{form.as_p}}
-            <input type = 'submit' value="Login" class="button>">
+            <div class="imgcontainer">
+                <p> SIGN IN</p>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
+            </div>
+            <div>
+                <div class="centerIt" >
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <button value="Login" type="submit">Login</button>
+                </div>
+            </div>
+
+            <div class="centerIt">
+                <span class="psw"><a href="#">Forgot password?</a></span>
+                <span class="psw" id ="accountCreate"><a href="#">Create an Account</a></span>
+            </div>
         </form>
-      </div>
-    
+    </div>
+
+   
+
     <div class = "headers" id="headerOnScroll">
         <figure id="figureOnScroll">
 
