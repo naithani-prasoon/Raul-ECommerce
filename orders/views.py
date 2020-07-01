@@ -9,11 +9,14 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order
-from .utilis import id_generator
+from .utilis import id_generator,email_test,make_invoice
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
 from carts.views import add_to_cart
+header = ['product','quantity','line_total']
+arr = []
+arr.append(header)
 
 try:
     stripe_pub = settings.STRIPE_PUBLISHABLE_KEY
@@ -33,9 +36,7 @@ def orders(request):
 @login_required
 def checkout(request):
     User = get_user(request)
-
     try:
-
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
         print(cart)
@@ -131,10 +132,17 @@ def checkout(request):
                 new_order.billing_address = billing_address_instance
                 new_order.shipping_address = shipping_address_instance
                 new_order.save()
+                for i in cart.cartitem_set.all():
+                    order = [i.product, i.quantity, i.line_total]
+                    arr.append(order)
+                make_invoice(arr,new_order.order_id)
+                new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
+                new_order.save()
+                email_test()
                 cart.active = False
                 cart.save()
                 del request.session['cart_id']
-                return HttpResponseRedirect(reverse("user_orders"))
+                return render(request,'orders/Confirmed Order.html')
 
     context = {
                 "order":new_order,
