@@ -1,11 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Order Confirmed</title>
 </head>
 <body>
-<h1>Order Got</h1>
+<h1>Order</h1>
+<h2>{%for item in cart.cartitem_set.all %}
+    {{item.product}}
+    {{item.price}}
+    {% endfor %}
+
+</h2>
 
 </body>
 </html>

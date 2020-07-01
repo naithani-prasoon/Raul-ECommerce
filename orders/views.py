@@ -9,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order
-from .utilis import id_generator,email_test,make_invoice
+from .utilis import id_generator,email_test,make_invoice,sendText
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
@@ -23,7 +23,6 @@ try:
     stripe_secret = settings.STRIPE_SECRET_KEY
 
 except Exception as e:
-    print(str(e))
     raise NotImplementedError(str(e))
 
 stripe.api_key = stripe_secret
@@ -39,7 +38,7 @@ def checkout(request):
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
-        print(cart)
+
     except:
         the_id= None
         return HttpResponseRedirect(reverse("cart"))
@@ -77,11 +76,11 @@ def checkout(request):
 
     current_addresses= UserAddress.objects.filter(user=User)
     billing_addresses= UserAddress.objects.get_billing_addresses(user=User)
-    print(billing_addresses)
+
 
 
     if request.method == "POST":
-        #print("hi" + request.POST['stripeToken'])
+
         try:
             user_stripe = request.user.userstripe.stripe_id
             customer = stripe.Customer.retrieve(user_stripe)
@@ -89,10 +88,9 @@ def checkout(request):
             customer = None
 
         if customer is not None:
-            print(request.POST)
+
             billing_a = request.POST["billing_address"]
             shipping_a = request.POST["shipping_address"]
-
             token = request.POST['stripeToken']
             try:
                 billing_address_instance = UserAddress.objects.get(id= billing_a)
@@ -102,8 +100,6 @@ def checkout(request):
                 shipping_address_instance = UserAddress.objects.get(id= shipping_a)
             except:
                 shipping_address_instance = None
-            print(billing_a)
-            print(shipping_address_instance)
 
 
             source = stripe.Customer.create_source(
@@ -135,14 +131,16 @@ def checkout(request):
                 for i in cart.cartitem_set.all():
                     order = [i.product, i.quantity, i.line_total]
                     arr.append(order)
+                context = {'cart':cart,'new_order':new_order}
                 make_invoice(arr,new_order.order_id)
+                sendText(billing_address_instance.phone)
                 new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                 new_order.save()
                 email_test()
                 cart.active = False
                 cart.save()
                 del request.session['cart_id']
-                return render(request,'orders/Confirmed Order.html')
+                return render(request,'orders/Confirmed Order.html',context)
 
     context = {
                 "order":new_order,

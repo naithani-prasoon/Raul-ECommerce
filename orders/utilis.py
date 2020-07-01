@@ -16,10 +16,11 @@ from django.core.mail import EmailMultiAlternatives
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
-from reportlab.platypus import SimpleDocTemplate
+from reportlab.platypus import SimpleDocTemplate,Paragraph
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import Table
 from django.contrib.auth import get_user_model, get_user
+from twilio.rest import Client
 
 
 from .models import Order
@@ -33,7 +34,9 @@ def id_generator(size=10, chars= string.ascii_uppercase + string.digits):
         return the_id
 
 API_KEY = "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"
-
+account_sid = 'AC0545beeb064208f5e58349de4b661665'
+auth_token = '9f904e9635a6a4f51dd6679fbd8e51c1'
+client = Client(account_sid, auth_token)
 def email_test():
     message = Mail(
         from_email='afares2009@icloud.com',
@@ -58,8 +61,16 @@ def make_invoice(data,idnum):
         outfilepath,
         pagesize = letter
     )
-
     table = Table(data)
     elems =[]
     elems.append(table)
     pdf.build(elems)
+
+def sendText(num):
+    message = client.messages \
+        .create(
+        body="Order Recieved",
+        from_='+19175403832',
+        to='+1'+num
+    )
+
