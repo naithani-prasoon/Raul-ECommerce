@@ -55,7 +55,7 @@
                 <div class="centerIt" >
                     {%csrf_token%}
                     {{form.as_p}}
-                    <button value="Login" type="submit">Login</button>
+                    <button value="Login" name="login" type="submit">Login</button>
                 </div>
             </div>
 
@@ -65,6 +65,30 @@
             </div>
         </form>
     </div>
+
+    <div id="id02" class="modal">
+
+        <form class="modal-content animate" action="" method="POST">
+            <div class="imgcontainer">
+                <p> SIGN IN</p>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
+            </div>
+            <div>
+                <div class="centerIt" >
+                    {%csrf_token%}
+                    {{Register_form.as_p}}
+                    <input type="submit" name="register" value="Register" class="button">
+                </div>
+            </div>
+
+            <div class="centerIt">
+                <span class="psw"><a href="#">Forgot password?</a></span>
+                <span class="psw" id ="accountCreate2"><a href="#">Create an Account</a></span>
+            </div>
+        </form>
+    </div>
+
+
 
    
 
@@ -109,7 +133,7 @@
                 <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
                     <span><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></span><br><br>
-                    <span><a href="{% url 'register' %}">Register</a></span>
+                    <span><a href="#" onclick="document.getElementById('id02').style.display='block'">Register</a></span>
                 </div>
             </div>
             <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
