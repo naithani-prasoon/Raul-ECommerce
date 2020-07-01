@@ -4,11 +4,6 @@
 
 <html lang="en">
 <head>
-    <style>
-        div. {
-            font-size: 15px;
-
-    </style>
 
     <title>
         Raul Retail
@@ -52,21 +47,43 @@
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
             </div>
             <div>
-                <div class="centerIt" >
+                <div class="centerIt">
                     {%csrf_token%}
                     {{form.as_p}}
                     <button value="Login" type="submit">Login</button>
                 </div>
             </div>
 
-            <div class="centerIt">
+            <div class="centerIt" id="links">
                 <span class="psw"><a href="#">Forgot password?</a></span>
                 <span class="psw" id ="accountCreate"><a href="#">Create an Account</a></span>
             </div>
         </form>
     </div>
 
-   
+    <div id="id02" class="modal2">
+
+        <form class="modal-content animate" action="" method="POST">
+            <div class="imgcontainer">
+                <p> create an account</p>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
+            </div>
+            <div>
+                <div class="centerIt" >
+                    {%csrf_token%}
+                    {{Register_form.as_p}}
+                    <input type="submit" name="register" value="Register" class="button">
+                </div>
+            </div>
+            
+            <div class="centerIt">
+                <span class="psw"><a href="#">Forgot password?</a></span>
+                <span class="psw" id ="accountCreate2"><a href="#">Create an Account</a></span>
+            </div>
+        </form>
+    </div>
+
+    
 
     <div class = "headers" id="headerOnScroll">
         <figure id="figureOnScroll">
@@ -109,7 +126,7 @@
                 <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
                     <span><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></span><br><br>
-                    <span><a href="{% url 'register' %}">Register</a></span>
+                    <span><a href="#" onclick="document.getElementById('id02').style.display='block'">Register</a></span>
                 </div>
             </div>
             <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
@@ -189,12 +206,98 @@
 
     </div>
 
-    
-
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
             <figcaption><a href="#shop"><button> explore the shop </button></a></figcaption>
+        </div>
+    </div>
+
+    <div class ="mobile-shopBanner">
+        <figcaption> shop for the perfect setup</figcaption>    
+    </div>
+
+    <div class="furniture" id ="FurnitureSec">
+        <div class="shopBack">
+            <div class="furnitureHeading">                
+                <span>FURNITURE</span>
+                <a href="{%url 'login' %}">see more</a>  
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="LightingSec">
+        <div class="shopBack" id="lighting">
+            <div class="furnitureHeading">
+                <span>LIGHTING</span>
+                <a href="{%url 'login' %}">see more</a>  
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="FlowerSec">
+        <div class="shopBack" id="flower">
+            <div class="furnitureHeading">
+                <span>FLORAL</span>
+                <a href="{%url 'login' %}">see more</a>  
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="TableSec">
+        <div class="shopBack" id="table">
+            <div class="furnitureHeading">
+                <span>TABLETOP</span>
+                <a href="{%url 'login' %}">see more</a>  
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="WallSec">
+        <div class="shopBack" id="wall">
+            <div class="furnitureHeading">
+                <span> WALLART </span>
+                <a href="{%url 'login' %}">see more</a>  
+            </div>
+
+            <div class ="furnitureImages" id ="DecorativeSec">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
+        </div>
+    </div>
+
+    <div class="furniture" id ="DecorativeSec">
+        <div class="shopBack" id="decorative">
+            <div class="furnitureHeading">                
+                <span>DECORATIVE</span>
+                <a href="{%url 'login' %}">see more</a>  
+            </div>
+
+            <div class ="furnitureImages">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+            </div>
         </div>
     </div>
 

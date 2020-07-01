@@ -8,13 +8,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'Raul/shopping-cart.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+     <!-- Favicons -->
+     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'Raul/Favicons/apple-icon-57x57.png' %}">
+     <link rel="apple-touch-icon" sizes="60x60" href="{% static 'Raul/Favicons/apple-icon-60x60.png'%}">
+     <link rel="apple-touch-icon" sizes="72x72" href="{% static 'Raul/Favicons/apple-icon-72x72.png'%}">
+     <link rel="apple-touch-icon" sizes="76x76" href="{% static 'Raul/Favicons/apple-icon-76x76.png'%}">
+     <link rel="apple-touch-icon" sizes="114x114" href="{% static 'Raul/Favicons/apple-icon-114x114.png'%}">
+     <link rel="apple-touch-icon" sizes="120x120" href="{% static 'Raul/Favicons/apple-icon-120x120.png'%}">
+     <link rel="apple-touch-icon" sizes="144x144" href="{% static 'Raul/Favicons/apple-icon-144x144.png'%}">
+     <link rel="apple-touch-icon" sizes="152x152" href="{% static 'Raul/Favicons/apple-icon-152x152.png'%}">
+     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'Raul/Favicons/apple-icon-180x180.png'%}">
+     <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'Raul/Favicons/android-icon-192x192.png'%}">
+     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'Raul/Favicons/favicon-32x32.png'%}">
+     <link rel="icon" type="image/png" sizes="96x96" href="{% static 'Raul/Favicons/favicon-96x96.png'%}">
+     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'Raul/Favicons/favicon-16x16.png'%}">
+     <link rel="manifest" href="{% static 'Raul/Favicons/manifest.json'%}">
+     <meta name="msapplication-TileColor" content="#ffffff">
+     <meta name="msapplication-TileImage" content="{% static 'Raul/Favicons/ms-icon-144x144.png'%}">
+     <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
 <main class="page">
     <section class="shopping-cart dark">
-        <div class="container">
+        <div class="container2">
             <div class="block-heading">
                 <h2>Shopping Cart</h2>
             </div>
@@ -98,6 +118,7 @@
         </div>
     </section>
 </main>
+<button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

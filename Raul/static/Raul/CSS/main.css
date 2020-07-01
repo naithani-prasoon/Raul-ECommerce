@@ -162,8 +162,15 @@ nav ul li a:hover{
 
 @media only screen and (max-width:640px){
 
-
     .feature{
+        display: none;
+    }
+
+    .category{
+        display: none;
+    }
+
+    .modal{
         display: none;
     }
 
@@ -172,6 +179,8 @@ nav ul li a:hover{
         height: 3.5em;
         grid-template-columns: auto 3em;
         box-shadow: 0px 0px 5px 1px black;
+        background: #333333;
+        max-height: 3.5em;
     }
 
     .menuBar{
@@ -275,6 +284,11 @@ nav ul li a:hover{
     .furniture{
         height:50vh;
         width:100%;
+        
+    }
+
+    #FurnitureSec{
+        padding:30px 0px 0px 0px;
     }
 
     .shopBack{
@@ -315,6 +329,37 @@ nav ul li a:hover{
         border-radius: 50px;
     }
 
+    .bannerSecond{
+        background-image: url('Images/bannerThird.jpg');
+        height:100vh;
+        width: 100%;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .mobile-shopBanner{
+        width:100%;
+        background:#333333;
+        height:250px;
+        color: #cfbb63;
+        text-align: center;
+        padding-top:1em;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 5px;
+        font-size: 1.5em;
+    }
+
+    .mobile-shopBanner figcaption{
+        font-size:2em;
+        padding:80px 0px 40px 0px;
+    }
+
+    .shopBanner{
+        display: none;
+    }
+
+
     .textMiddle{
         display: none;
     }
@@ -351,11 +396,26 @@ nav ul li a:hover{
     body::-webkit-scrollbar{
         display: none;
     }
+
+    .horizontalScroll{
+        display: none;
+    }
+
+    .tabsBanner{
+        display: none;
+    }
+
+    .tabcontent{
+        display: none;
+    }
+
+    .tabSection{
+        display: none;
+    }
 }
 
 @media only screen and (min-width:641px) and (max-width:768px){
-
-
+    
     .feature{
         display: none;
     }
@@ -549,7 +609,202 @@ nav ul li a:hover{
     }
 }
 
-@media only screen and (min-width:769px) and (max-width:1024px) /* Make adjustment for 800px ( divie 769px-1024px for better responsiveness)*/{
+@media only screen and (min-width:769px) and (max-width:900px){
+    .feature{
+        display: none;
+    }
+
+    .headers{
+        display: grid;
+        height: 4.5em;
+        grid-template-columns: auto 3em;
+        box-shadow: 0px 0px 5px 1px black;
+    }
+
+    .menuBar{
+        width: 30px;
+        margin-top: 45%;
+    }
+
+    .headers figcaption img{
+        margin-left: 2em;
+        margin-top:0.2em;
+        width:10%;
+    }
+
+    nav ul li a{
+        text-align: center;
+        font-size: 3em;
+        display: block;
+        color:#818181;
+        padding:50px 0px 0px 0px;
+    }
+
+    .exitButton{
+        margin-bottom: 1em;
+        margin: 20% 20% 0% 20%;
+        text-align: right;
+    }
+
+    .exitButton img{
+        width: 15px;
+    }
+
+    .bannerHead{
+        height: 100vh;
+        width:100vw;
+        overflow: hidden;
+        position: relative;
+        background-image: url("../Images/7.jpg");
+        backface-visibility: hidden;
+    }
+
+    .bannerHeading figcaption{
+        font-size: 2.5em;
+        background-color: transparent;
+        width:100%;
+        height:auto;
+        position: absolute;
+        top:50%;
+        left:0;
+        text-align: center;
+        color:white;
+        font-family: 'Roboto', sans-serif;
+        font-weight:700;
+    }
+
+    .bannerHeading figcaption a button{
+        background:transparent;
+        margin:20px;
+        font-family: 'Roboto', sans-serif;
+        font-size:0.8em;
+        outline: none;
+        padding:20px;
+        border: none;
+        color: white;
+        transition: 0.5s ease;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        border: 1px solid white;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+
+    .bannerHeading figcaption a button:hover{
+        background-color: white;
+        color:#595959;
+        cursor: pointer;
+    }
+
+    .shopBanner{
+        width:100%;
+        height:20em;
+        color: #cfbb63;
+        text-align: center;
+        padding:10px 0px 30px 0px;
+        font-size:10px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .shopBanner figcaption{
+        font-size: 50px;
+    }
+
+    .shopBanner a{
+        color:#cfbb63;
+    }
+
+    .shopBanner a:hover{
+        color:orange;
+    }
+
+    .furniture{
+        height:700px;
+        width:100%;
+        background-color: transparent;
+        margin:10px;
+    }
+
+    .shopBack{
+        display: grid;
+        grid-template-rows: auto auto;
+        width:100vw;
+        height:600px;
+    }
+
+    .furnitureHeading{
+        font-size:50px;
+        font-family: 'Roboto', sans-serif;
+        color: #cfbb63;
+        padding-left: 30px;
+        font-weight: bolder;
+        text-transform: lowercase;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        letter-spacing: 5px;
+    }
+
+    .furnitureHeading a{
+        text-decoration: none;
+        color:#cfbb63;
+        text-align: right;
+        padding-right:30px;
+        padding-top:10px;
+        font-size: 30px;
+    }
+
+    .furnitureImages{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .staticImage{
+        width:90%;
+        padding:8px;
+        border-radius: 50px;
+    }
+
+    .textMiddle{
+        display: none;
+    }
+
+    #store{
+        display: none;
+    }
+
+    #category{
+        display: none;
+    }
+
+
+    .linksShop{
+        display: none;
+    }
+
+    .shopNow {
+        display: none;
+    }
+
+    .bannerHead video {
+        display: none;
+    }
+
+    figure{
+        display: none;
+    }
+
+    nav ul::-webkit-scrollbar{
+        display: none;
+    }
+
+    body::-webkit-scrollbar{
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width:901px) and (max-width:1024px) /* Make adjustment for 800px ( divie 769px-1024px for better responsiveness)*/{
 
 
     .feature{
@@ -1138,11 +1393,19 @@ nav ul li a:hover{
         text-transform: lowercase;
     }
 
+    .mobile-shopBanner{
+        display:none;
+    }
+
     body::-webkit-scrollbar{
         display: none;
     }
 
     nav{
+        display: none;
+    }
+
+    .furniture{
         display: none;
     }
 
@@ -2019,13 +2282,17 @@ nav ul li a:hover{
         box-sizing: border-box;
         border-radius: 40px;
       }
+    
+      .modal li{
+          list-style: none;
+      }
 
       
-      .modal button {
+      .centerIt button {
         background-color: #cfbb63;
         color: #333333;
         padding: 14px 20px;
-        margin: 8px auto;
+        margin: 4px auto;
         border: none;
         cursor: pointer;
         width: 50%;
@@ -2033,6 +2300,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
+        font-family: 'Roboto',sans-serif;
       }
       
       .modal button:hover {
@@ -2070,16 +2338,20 @@ nav ul li a:hover{
           text-align: center;
       }
       
-      span.psw a{
+      .centerIt span.psw a{
         color:#cfbb63;
       }
 
-      span.psw{
+      .centerIt span.psw{
         margin-top: 50px;
       }
 
       .centerIt #accountCreate{
           padding-left:30px;
+      }
+
+      #links{
+        padding-top:20px;
       }
       
       .modal {
@@ -2110,7 +2382,7 @@ nav ul li a:hover{
         border-radius: 50px;
       }
 
-      .modal-content .container label{
+      .modal-content .centerIt label{
           letter-spacing: 4px;
           font-size: 18px;
           font-weight: 200;
@@ -2144,6 +2416,148 @@ nav ul li a:hover{
       @keyframes animatezoom {
         from {transform: scale(0)} 
         to {transform: scale(1)}
+      }
+
+      .modal2 input[type=text], input[type=password], input[type=email] {
+        width: 80%;
+        padding: 12px 20px;
+        margin:15px 30px;
+        display: inline-block;
+        outline:none;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 40px;
+      }
+
+      
+      .modal2 .centerIt input[type=submit] {
+        background-color: #cfbb63;
+        color: #333333;
+        padding: 14px 20px;
+        margin: 4px auto;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+        font-family: 'Roboto',sans-serif;
+      }
+      
+      .modal2 button:hover {
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+        margin:12px auto;
+      }
+
+      .modal2 .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+      }
+      
+      .modal2 .imgcontainer {
+        text-align: center;
+        margin: 24px 0 5px 0;
+        position: relative;
+      }
+
+      .modal2 .imgcontainer p{
+          font-size: 40px;          
+          letter-spacing: 4px;
+          margin-block-end: 10px;
+      }
+      
+      .modal2 .modal-content .container {
+        padding: 16px 80px;
+      }
+
+      .modal2 .centerIt{
+          margin-left: auto;
+          margin-right: auto;
+          justify-content: center;
+          align-content: center;
+          text-align: center;
+      }
+      
+      .modal2 .centerIt span.psw a{
+        color:#cfbb63;
+      }
+
+      .modal2 .centerIt span.psw{
+        margin-top: 50px;
+      }
+
+      .modal2 .centerIt #accountCreate{
+          padding-left:30px;
+      }
+
+      .modal2 #links{
+        padding-top:20px;
+      }
+      
+      .modal2 {
+        display: none; 
+        position: fixed;
+        z-index: 200; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.5);
+        padding-top: 20px;
+        overflow: scroll;
+      }
+
+      .modal2::-webkit-scrollbar{
+          display: none;
+      }
+
+      .modal2 li{
+          list-style: none;
+          font-size:12px;
+      }
+
+      .modal2 ul{
+        padding-inline-start: 0px;
+      }
+      
+      .modal2 .modal-content {
+        background-color: #333333;
+        margin: 0% auto 15% auto; 
+        border: 1px solid rgba(0,0,0,0.5);
+        color:#cfbb63;
+        width: 550px; 
+        height:800px;
+        font-family: 'Roboto',sans-serif;
+        border-radius: 50px;
+      }
+
+      .modal2 .modal-content .centerIt label{
+          letter-spacing: 4px;
+          font-size: 18px;
+          font-weight: 200;
+      }
+      
+      .close {
+        position: absolute;
+        right: 30px;
+        top: 10px;
+        color: #cfbb63;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: orange;
+        cursor: pointer;
+      }
+    
+      .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
       }
 
     footer{
