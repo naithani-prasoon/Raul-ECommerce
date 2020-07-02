@@ -40,8 +40,6 @@
 </head>
 <body>
 
-
-
     <div id="id01" class="modal">
 
         <form class="modal-content animate" action="" method="POST">
@@ -77,15 +75,7 @@
             <div>
                 <div class="centerIt" >
                     {%csrf_token%}
-                    <p> Username</p>
-                    {{Register_form.username}}
-                    <p> Email</p>
-                    {{Register_form.email}}
-                    <p> Password</p>
-                    {{Register_form.password1}}
-                    <p> Confirm Password</p>
-                    {{Register_form.password2}}
-
+                    {%crispy Register_form%}
                     <input type="submit" name="register" value="Register" class="button">
                 </div>
             </div>
@@ -96,8 +86,6 @@
             </div>
         </form>
     </div>
-
-    
 
     <div class = "headers" id="headerOnScroll">
         <figure id="figureOnScroll">
@@ -219,11 +207,15 @@
         </p>
 
     </div>
-    <div >
+    <div>
         {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
-            {{ message }}
+        <div class="popUpMessage">
+            <div class="messageRegister">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            </div>
         </div>
         {% endfor %}
         {% endif %}
