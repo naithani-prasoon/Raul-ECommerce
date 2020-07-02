@@ -32,16 +32,20 @@ def home(request):
 def secondHome(request):
     form = forms.LoginForms(request.POST or None)
     Register_form = forms.CreateUserForm(request.POST or None)
+    context = {'form': form,"Register_form": Register_form}
 
     if 'register' in request.POST:
         Register_form = forms.CreateUserForm(request.POST or None)
-        request.session.set_expiry(60)
+        request.session.set_expiry(1000000)
         if Register_form.is_valid():
             Register_form.save()
             username = Register_form.cleaned_data.get('username')
             messages.success(request, f'Your account has been created! You are now able to log in')
+            return render(request, 'Raul/home.html',context)
         else:
             Register_form = CreateUserForm()
+            return render(request, 'Raul/home.html',context)
+
 
     if 'login' in request.POST:
         if form.is_valid():
@@ -49,8 +53,9 @@ def secondHome(request):
             password = form.cleaned_data['password']
             user = authenticate(username=username,password=password)
             login(request,user)
+            return render(request, 'Raul/home.html',context)
 
-    context = {'form': form,"Register_form": Register_form}
+
     return render(request, 'Raul/home.html',context)
 
 

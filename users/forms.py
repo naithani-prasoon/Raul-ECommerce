@@ -41,7 +41,7 @@ class LoginForms(forms.Form):
         try:
             user = User.objects.get(username=username)
         except  User.DoesNotExist:
-            raise forms.ValidationError("No User Dumbass")
+            raise forms.ValidationError("User Does Not Exist")
         return username
 
     def clean_password(self):
@@ -52,7 +52,7 @@ class LoginForms(forms.Form):
         except User.DoesNotExist:
             user = None
         if user is not None and not user.check_password(password):
-            raise forms.ValidationError("Bad PASSWORD")
+            raise forms.ValidationError("Please check your password again.")
         elif user is None:
             pass
         else:
@@ -68,7 +68,7 @@ class CreateUserForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
         password1= forms.CharField(label="Password")
         widgets = {
-            'username': forms.TextInput(attrs = {'placeholder': 'Usernameeeeee'}),
+            'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
             'email': forms.TextInput(attrs = {'placeholder': 'E-Mail'}),
             'password1': forms.TextInput(attrs = {'placeholder': 'Password'}),
             'password2': forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),

@@ -2525,18 +2525,18 @@ nav ul li a:hover{
       
       .modal2 .modal-content {
         background-color: #333333;
-        margin: 0% auto 15% auto; 
+        margin: 0% auto 15% auto;
         border: 1px solid rgba(0,0,0,0.5);
         color:#cfbb63;
-        width: 550px; 
+        width: 550px;
         height:800px;
         font-family: 'Roboto',sans-serif;
         border-radius: 50px;
       }
 
       .modal2 .modal-content .centerIt label{
-          letter-spacing: 4px;
-          font-size: 18px;
+          letter-spacing: 8px;
+          font-size: 22px;
           font-weight: 200;
       }
       
