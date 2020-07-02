@@ -1965,7 +1965,7 @@ nav ul li a:hover{
     }
 
     .horizontalScroll{
-        background-color: #333333;
+        background-color: darkgray;
         height: 850px;
         width:100%;
         padding:50px 0px 0px 0px;
