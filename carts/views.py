@@ -173,7 +173,6 @@ def add_to_cart(request, slug):
 
         if len(pro_var) > 0 and zero_qty == True:
             for item in pro_var:
-                print("Qty 1")
                 new_item.variation.add(item)
             Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
             Var_items2 = Var_items.filter(variation=p).count()
@@ -181,7 +180,6 @@ def add_to_cart(request, slug):
 
 
         if int(qty) <= 0 and single_item == 1:
-            print("Qty 0")
             new_item.delete()
         elif int(qty) <= 0 and (Var_items == 1 or Var_items2 == 1):
             new_item.delete()
@@ -191,7 +189,6 @@ def add_to_cart(request, slug):
 
 
         if Var_items2 > 1 and zero_qty == True:
-            print("Qty 2")
             new_item.delete()
             current_item = CartItem.objects.filter(cart=cart, product=producter, variation=v)
             hi = current_item.get(variation=p)
@@ -206,7 +203,6 @@ def add_to_cart(request, slug):
        
         if not Check:
             if single_item > 1:
-                print("Qty 3")
                 new_item.delete()
                 current_item = CartItem.objects.get(cart=cart, product=producter)
                 if int(qty) <= 0:

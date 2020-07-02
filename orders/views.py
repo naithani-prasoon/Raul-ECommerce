@@ -34,11 +34,18 @@ def orders(request):
 
 @login_required
 def checkout(request):
+    cartBoolean = False
     User = get_user(request)
     try:
+        count = 0
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
 
+        for item in cart.cartitem_set.all():
+            count+=1
+        if count == 0:
+            cart = None
+            cart= Cart.objects.get(id=the_id, pennies_total=-1)
     except:
         the_id= None
         return HttpResponseRedirect(reverse("cart"))
