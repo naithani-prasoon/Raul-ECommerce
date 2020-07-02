@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmed</title>
+</head>
+<body>
+<h1>Order Got</h1>
+<h2>  Order Number : {{ order.order_id }}</h2>
+<h2> Shipping to : {{ shipping_address }}</h2>
+<h2> Billing to: {{ billing_address}}</h2>
+
+{% for thing in cart.cartitem_set.all %}
+<h2> {{ thing }}</h2>
+{% endfor %}
+
+</body>
+</html>

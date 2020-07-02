@@ -68,7 +68,7 @@ class CreateUserForm(UserCreationForm):
         fields = ['username', 'email', 'password1', 'password2']
         password1= forms.CharField(label="Password")
         widgets = {
-            'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
+            'username': forms.TextInput(attrs = {'placeholder': 'Usernameeeeee'}),
             'email': forms.TextInput(attrs = {'placeholder': 'E-Mail'}),
             'password1': forms.TextInput(attrs = {'placeholder': 'Password'}),
             'password2': forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),

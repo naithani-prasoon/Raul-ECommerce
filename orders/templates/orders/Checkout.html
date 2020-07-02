@@ -59,14 +59,71 @@
     .StripeElement--webkit-autofill {
         background-color: #fefde5 !important}
 
+
+    div.b {
+        position: fixed;
+        top: 0px;
+        right: 0;
+        width: 1025px;
+        height: 1220px;
+        color: gold;
+        background-color: gray;
+    }
+
+    .col-sm-6{
+        color: gold;
+        background-color: gray;
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: gray;
+    }
+
 </style>
 
 <body>
 <h1>SubTotal = {{ order.get_final_amount }}</h1>
 <script src="https://js.stripe.com/v3/"></script>
 
+<div class="b" >
+    <h1> ORDER SUMMARY: </h1>
+<!--    {% for thing in cart.cartitem_set.all %}-->
+<!--    <h1> Item: {{  thing }} {{ thing.product.price }}  {{ thing.quantity }}  {{thing.line_total}}</h1>-->
+<!--    <h2>Price: {{ thing.product.price}}</h2>-->
+<!--    {% endfor %}-->
+
+
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        {% for thing in cart.cartitem_set.all %}
+        <tr>
+            <td>{{ thing }}</td>
+            <td>{{ thing.quantity }}</td>
+            <td>{{ thing.line_total }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<body class = 'col-sm-6 pull-left'>
+
+
 {% if address_form %}
-<body class='col-sm-6 pull-right'>
 
     <h3>Add New Shipping Address</h3>
     <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
@@ -150,7 +207,9 @@
     </div>
 
     <button>Submit Payment</button>
+    </div>
 </form>
+
 
 
 
