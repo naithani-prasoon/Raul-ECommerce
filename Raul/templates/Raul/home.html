@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'Raul/Favicons/apple-icon-57x57.png' %}">
     <link rel="apple-touch-icon" sizes="60x60" href="{% static 'Raul/Favicons/apple-icon-60x60.png'%}">
@@ -39,6 +40,8 @@
 </head>
 <body>
 
+
+
     <div id="id01" class="modal">
 
         <form class="modal-content animate" action="" method="POST">
@@ -55,8 +58,11 @@
             </div>
 
             <div class="centerIt" id="links">
-                <span class="psw"><a href="#">Forgot password?</a></span>
-                <span class="psw" id ="accountCreate"><a href="#">Create an Account</a></span>
+                <small class="text-muted ml-2">
+                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                </small>
+<!--                <span class="psw"><a href="#">Forgot password?</a></span>-->
+                <span class="psw" id ="accountCreate"><a href="{% url 'register' %}">Create an Account</a></span>
             </div>
         </form>
     </div>
@@ -71,7 +77,15 @@
             <div>
                 <div class="centerIt" >
                     {%csrf_token%}
-                    {{Register_form.as_p}}
+                    <p> Username</p>
+                    {{Register_form.username}}
+                    <p> Email</p>
+                    {{Register_form.email}}
+                    <p> Password</p>
+                    {{Register_form.password1}}
+                    <p> Confirm Password</p>
+                    {{Register_form.password2}}
+
                     <input type="submit" name="register" value="Register" class="button">
                 </div>
             </div>
@@ -205,6 +219,16 @@
         </p>
 
     </div>
+    <div >
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+
 
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Merch Video V 5.m4v' %}" autoplay loop muted id = "videoBG"></video>
@@ -212,6 +236,8 @@
             <figcaption><a href="#shop"><button> explore the shop </button></a></figcaption>
         </div>
     </div>
+
+
 
     <div class ="mobile-shopBanner">
         <figcaption> shop for the perfect setup</figcaption>    

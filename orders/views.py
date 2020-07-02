@@ -23,6 +23,7 @@ try:
     stripe_secret = settings.STRIPE_SECRET_KEY
 
 except Exception as e:
+    print(str(e))
     raise NotImplementedError(str(e))
 
 stripe.api_key = stripe_secret
@@ -38,6 +39,7 @@ def checkout(request):
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id)
+        print(cart)
 
     except:
         the_id= None
@@ -75,11 +77,11 @@ def checkout(request):
 
     current_addresses= UserAddress.objects.filter(user=User)
     billing_addresses= UserAddress.objects.get_billing_addresses(user=User)
-
+    print(billing_addresses)
 
 
     if request.method == "POST":
-
+        #print("hi" + request.POST['stripeToken'])
         try:
             user_stripe = request.user.userstripe.stripe_id
             customer = stripe.Customer.retrieve(user_stripe)
@@ -87,9 +89,10 @@ def checkout(request):
             customer = None
 
         if customer is not None:
-
+            print(request.POST)
             billing_a = request.POST["billing_address"]
             shipping_a = request.POST["shipping_address"]
+
             token = request.POST['stripeToken']
             try:
                 billing_address_instance = UserAddress.objects.get(id= billing_a)
@@ -99,6 +102,8 @@ def checkout(request):
                 shipping_address_instance = UserAddress.objects.get(id= shipping_a)
             except:
                 shipping_address_instance = None
+            print(billing_a)
+            print(shipping_address_instance)
 
 
             source = stripe.Customer.create_source(
@@ -130,7 +135,6 @@ def checkout(request):
                 for i in cart.cartitem_set.all():
                     order = [i.product, i.quantity, i.line_total]
                     arr.append(order)
-                context = {'cart':cart,'new_order':new_order}
                 make_invoice(arr,new_order.order_id)
                 new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                 new_order.save()
@@ -139,6 +143,12 @@ def checkout(request):
                 cart.active = False
                 cart.save()
                 del request.session['cart_id']
+                context= {
+                    "cart": cart,
+                    "order" : new_order,
+                    "shipping_address": new_order.shipping_address,
+                    "billing_address": new_order.billing_address
+                }
                 return render(request,'orders/Confirmed Order.html',context)
 
     context = {
@@ -147,5 +157,6 @@ def checkout(request):
                 "current_addresses": current_addresses,
                 "billing_addresses": billing_addresses,
                 "stripe_pub": stripe_pub,
+                "cart" : cart
                }
     return render(request, 'orders/Checkout.html', context)

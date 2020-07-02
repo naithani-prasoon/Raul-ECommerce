@@ -47,6 +47,8 @@ button:hover {
 form {
     padding: 30px;
     height: 120px;
+    color: gold;
+    background-color: green;
 }
 
 label {

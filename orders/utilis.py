@@ -16,7 +16,7 @@ from django.core.mail import EmailMultiAlternatives
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
-from reportlab.platypus import SimpleDocTemplate,Paragraph
+from reportlab.platypus import SimpleDocTemplate
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import Table
 from django.contrib.auth import get_user_model, get_user
@@ -33,6 +33,7 @@ def id_generator(size=10, chars= string.ascii_uppercase + string.digits):
         return the_id
 
 API_KEY = "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"
+
 def email_test():
     message = Mail(
         from_email='afares2009@icloud.com',
@@ -57,8 +58,8 @@ def make_invoice(data,idnum):
         outfilepath,
         pagesize = letter
     )
+
     table = Table(data)
     elems =[]
     elems.append(table)
     pdf.build(elems)
-

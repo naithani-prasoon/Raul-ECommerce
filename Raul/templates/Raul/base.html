@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    
+
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'Raul/Favicons/apple-icon-57x57.png' %}">
@@ -39,7 +39,7 @@
     <div class = "headers" id="headerOnScroll" style="background-color: #333333;">
         <figure id="figureOnScroll">
 
-            <div class="navbarIcons"> 
+            <div class="navbarIcons">
                 <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
                 <div class="hoverDiv2">
                     <span style="letter-spacing: 2px;">CONTACT US</span><br><br><br>
@@ -48,7 +48,7 @@
                 </div>
             </div>
 
-            <div class="navbarIcons"> 
+            <div class="navbarIcons">
                 <p><img src="{% static 'Raul/Icons/Icons_Small/location.png' %}" alt="Location"></p>
                 <div class="hoverDiv3">
                     <span style="letter-spacing: 2px;">VISIT US</span><br><br><br>
@@ -62,7 +62,7 @@
 
             {% if user.is_authenticated %}
             <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
-            <div class="navbarIcons"> 
+            <div class="navbarIcons">
                 <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
                     <span><a href="{% url 'profile' %}">Profile</a></span><br><br>
@@ -73,7 +73,7 @@
 
             {% else %}
             <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
-            <div class="navbarIcons"> 
+            <div class="navbarIcons">
                 <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
                 <div class="hoverDiv">
                     <span><a href="{% url 'login' %}">Login</a></span><br><br>
@@ -90,19 +90,19 @@
             <p id="categoryP" style="color:white;"> New Arrivals </p>
 
             <p id="categoryP" style="color:white;"> Decorative Accessories</p>
-            
+
             <p id="categoryP" style="color:white;">Tabletop</p>
-            
+
             <p id="categoryP" style="color:white;">Furniture</p>
 
             <p id="categoryP" style="color:white;">Floral</p>
-            
+
             <p id="categoryP" style="color:white;">Wall Art</p>
 
             <p id="categoryP" style="color:white;">All Products</p>
-            
+
             <p id="categoryP" style="color:white;">Sale</p>
-            
+
             <p id="categoryP" style="color:white;">Venue Bookings</p>
 
         </div>
@@ -172,6 +172,6 @@
         AOS.init();
     </script>
     <script src="{% static 'Raul/JS/navbar.js' %}" charset="UTF-8"></script>
-    
+
 </body>
 </html>
