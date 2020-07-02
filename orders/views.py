@@ -9,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order
-from .utilis import id_generator,email_test,make_invoice,sendText
+from .utilis import id_generator,email_test,make_invoice
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
@@ -61,7 +61,6 @@ def checkout(request):
         new_order.sub_total = cart.total
         new_order.save()
         final_amount = new_order.get_final_amount()
-
     address_form = UserAddressForm()
 
 
@@ -133,9 +132,9 @@ def checkout(request):
                     arr.append(order)
                 context = {'cart':cart,'new_order':new_order}
                 make_invoice(arr,new_order.order_id)
-                sendText(billing_address_instance.phone)
                 new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                 new_order.save()
+
                 email_test()
                 cart.active = False
                 cart.save()
@@ -149,5 +148,4 @@ def checkout(request):
                 "billing_addresses": billing_addresses,
                 "stripe_pub": stripe_pub,
                }
-    template = "Checkout.html"
     return render(request, 'orders/Checkout.html', context)

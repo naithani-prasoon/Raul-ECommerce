@@ -33,7 +33,6 @@ def view(request):
                         item.line_total = line_total
                         # print(item.line_total)
                     item.save()
-                    print(new_total)
 
                 request.session['items_total'] = cart.cartitem_set.count()
                 cart.total = new_total
@@ -59,12 +58,11 @@ def view(request):
             for item in cart.cartitem_set.all():
                 if (item.quantity != None):
                     # print(item.product)
-                    new_total += float(item.product.price) * item.quantity
-                    line_total = float(item.product.price) * item.quantity
+                    new_total += float(item.product.price) * (item.quantity)
+                    line_total = float(item.product.price) * (item.quantity)
                     item.line_total = line_total
                     # print(item.line_total)
                 item.save()
-                print(new_total)
 
             request.session['items_total'] = cart.cartitem_set.count()
             cart.total = new_total
@@ -86,7 +84,6 @@ def view(request):
             line_total = float(item.product.price) * item.quantity
             new_total += line_total
         request.session['items_total'] = cart.cartitem_set.count()
-        print(new_total)
         cart.total = new_total
         cart.save()
         context = {"cart": cart}
@@ -172,28 +169,33 @@ def add_to_cart(request, slug):
         new_item = CartItem.objects.create(cart=cart, product=producter)
         single_item = CartItem.objects.filter(cart=cart, product=producter).count()
 
-        if qty == 0:
-            remove_from_cart(request, id)
-            print("yooo")
-            zero_qty = False
-            Var_items.delete()
+
 
         if len(pro_var) > 0 and zero_qty == True:
             for item in pro_var:
+                print("Qty 1")
                 new_item.variation.add(item)
             Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
             Var_items2 = Var_items.filter(variation=p).count()
-
             Check = True
 
 
-        new = []
-        cur = []
+        if int(qty) <= 0 and single_item == 1:
+            print("Qty 0")
+            new_item.delete()
+        elif int(qty) <= 0 and (Var_items == 1 or Var_items2 == 1):
+            new_item.delete()
+        else:
+             new_item.quantity = qty
+             new_item.save()
+
+
         if Var_items2 > 1 and zero_qty == True:
+            print("Qty 2")
             new_item.delete()
             current_item = CartItem.objects.filter(cart=cart, product=producter, variation=v)
             hi = current_item.get(variation=p)
-            if qty == '0':
+            if int(qty) <= 0:
                 hi.delete()
             else:
                 hi.quantity = int(qty)
@@ -201,11 +203,13 @@ def add_to_cart(request, slug):
             Var_items = 0
             Check = True
 
-        if not Check and zero_qty == True:
+       
+        if not Check:
             if single_item > 1:
+                print("Qty 3")
                 new_item.delete()
                 current_item = CartItem.objects.get(cart=cart, product=producter)
-                if qty == '0':
+                if int(qty) <= 0:
                     current_item.delete()
                 else:
                     current_item.quantity = int(qty)
@@ -220,7 +224,6 @@ def add_to_cart(request, slug):
             line_total = float(item.product.price) * (item.quantity)
             item.line_total = line_total
             # print(item.line_total)
-        print(new_total)
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
