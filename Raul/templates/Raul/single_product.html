@@ -185,11 +185,18 @@
 
                 <select class="form-control" name="color">
                     {% for item in single_product.variation_set.colors %}
-                    <option value="{{item.title}}">{{item.title }}
+                    <option value="{{item.title}}">{{item.title}}
                     </option>
                 {% endfor %}
                     </select>
                 {% endif %}
+                <!-- {% for item in single_product.variation_set.colors %}
+                <button class="form-control" name="color" >
+                        {{item.title }}
+                {% endfor %}
+
+                </button> -->
+                
 
                 {% if single_product.variation_set.sizes %}
                 <select class="form-control" name="size">
