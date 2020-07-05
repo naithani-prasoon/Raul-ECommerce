@@ -38,7 +38,7 @@ html,body{
 }
 
 #scrollTop:hover {
-    background-color: #333333;
+    background-color: #7a7a7a;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
 }
 
@@ -1391,6 +1391,9 @@ nav ul li a:hover{
 
     body{
         text-transform: lowercase;
+        font-family: 'Roboto', sans-serif;
+        /* background-color: #6d6d6d; */
+
     }
 
     .mobile-shopBanner{
@@ -1529,7 +1532,6 @@ nav ul li a:hover{
         display: block;
     }
 
-
     .category{
         overflow: hidden;
         color:transparent;
@@ -1541,16 +1543,18 @@ nav ul li a:hover{
         justify-content: center;
         padding-bottom:25px;
         height: 100%;
+        font-weight: 400;
     }
 
     .category p{
         padding:0px 40px;
         transition: 0.2s ease-in;
         font-size:15px;
+        letter-spacing: 1px;
     }
 
     .category p:hover{
-        font-weight: bolder;
+        font-weight: 900;
         cursor: pointer;
     }
 
@@ -1581,7 +1585,7 @@ nav ul li a:hover{
         left:0;
         top:0;
         color: #cfbb63;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: 'Roboto', sans-serif;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
@@ -1591,6 +1595,7 @@ nav ul li a:hover{
 
     #store p{
         font-size:4em;
+        font-weight: 900;
         padding:0px;
         letter-spacing: 0.2em;
         margin-left: auto;
@@ -1663,7 +1668,7 @@ nav ul li a:hover{
         width:100%;
         overflow: hidden;
         position: relative;
-        background:#333333;
+        background:#6d6d6d;
     }
 
     .bannerHeading figcaption{
@@ -1674,13 +1679,12 @@ nav ul li a:hover{
         position: absolute;
         top:80%;
         left:0px;
-        color:white;
         font-family:'Roboto', sans-serif;
         font-weight:700;
     }
 
     .bannerHeading figcaption a button{
-        background:#333333;
+        background:rgba(0,0,0,0.8);
         margin:20px;
         font-family: 'Roboto', sans-serif;
         font-size:0.4em;
@@ -1691,16 +1695,17 @@ nav ul li a:hover{
         transition: 0.5s ease;
         display: block;
         margin-left: 100px;
-        border: 1px solid #333333;
+        border: none;
         box-sizing: border-box;
         font-weight: bold;
-        border-radius:60px;
+        border-radius:60px;        
     }
 
     .bannerHeading figcaption a button:hover{
-        background-color: black;
-        color:#cfbb63;
+        border: none;
+        font-size: 0.45em;
         cursor: pointer;
+        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
     }
 
     /* .feature{
@@ -1942,9 +1947,8 @@ nav ul li a:hover{
 
     }
 
-
     .textHover .textHeading{
-        background-color: #333333;
+        background-color: #6d6d6d;
         color: #cfbb63;
         font-weight: bold;
         font-size: 32px;
@@ -1965,7 +1969,7 @@ nav ul li a:hover{
     }
 
     .horizontalScroll{
-        background-color: darkgray;
+        background-color: #bebebe;
         height: 850px;
         width:100%;
         padding:50px 0px 0px 0px;
@@ -1977,7 +1981,7 @@ nav ul li a:hover{
     }
 
     .featureProductsHeading{
-        color:#cfbb63;
+        color:#f9a602;
         font-size:60px;
         text-align: center;
         width:100%;
@@ -2017,8 +2021,6 @@ nav ul li a:hover{
         white-space: nowrap;
     }
 
-
-
     .horizontalScroll .container{
         position: relative;
         padding:20px;
@@ -2045,7 +2047,7 @@ nav ul li a:hover{
     }
 
     .horizontalScroll .container .textInfo{
-        background-color: #333333;
+        background-color: rgba(0,0,0,0.8);
         color: #cfbb63;
         font-weight: bold;
         font-size: 32px;
@@ -2058,24 +2060,13 @@ nav ul li a:hover{
     .container button{
         width: auto;
         height: auto;
-        background-color: #333333;
+        background-color: #6d6d6d;
         outline: none;
         border: none;
         color: #cfbb63;
         font-family: 'Roboto', sans-serif;
         font-size: 45px;
         margin:250px 0px 0px 20px;
-    }
-
-    .container #sideScroll{
-        background-color: #cfbb63;
-        color: #333333;
-        font-family: 'Roboto Condensed', sans-serif;
-        border: 1px solid #cfbb63;
-        font-weight: bolder;
-        border-radius: 60px;
-        margin:10px 5px 0px 80px;
-        font-size:15px;
     }
 
     .container span{
@@ -2087,7 +2078,8 @@ nav ul li a:hover{
 
     .container:hover .imageAvatar{
         opacity: 0.8;
-        filter: blur(1px) grayscale(100%);
+        filter: brightness(60%) grayscale(100%);
+        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
     }
 
     .container:hover .text{
@@ -2098,12 +2090,11 @@ nav ul li a:hover{
     .container .textInfo:hover{
         padding:18px 34px;
         font-size: 34px;
-        box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.9);
     }
 
     .shopBanner{
         width:100%;
-        background:#333333;
+        background: #6d6d6d;;
         height:200px;
         color: #cfbb63;
         text-align: center;
@@ -2120,9 +2111,10 @@ nav ul li a:hover{
 
     .tabsBanner{
         overflow: hidden;
-        background-color:#333333;
+        background-color:#6d6d6d;
         color:#cfbb63;
         width:100%;
+        height:80px;
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
@@ -2140,13 +2132,13 @@ nav ul li a:hover{
         font-size: 18px;
         color:#cfbb63;
         font-family: 'Roboto',sans-serif;
-        font-weight: 600;
+        font-weight: bolder;
         letter-spacing: 3px;
         transition: 0.4s ease-in-out;
     }
 
     .tabsBanner button:hover{
-        border-bottom: 1px solid #cfbb63;
+        border-bottom: 3px solid #cfbb63;
     }
 
     .tabsBanner button.active{
@@ -2162,6 +2154,8 @@ nav ul li a:hover{
         overflow: hidden;
         -webkit-animation: fadeEffect 2s;
         animation: fadeEffect 2s;
+        font-weight: bolder;
+        background-color: #6d6d6d;
     }
 
     @-webkit-keyframes fadeEffect {
@@ -2198,7 +2192,7 @@ nav ul li a:hover{
     }
 
     .tabSection .tabText{
-        background-color: rgba(0,0,0,0.3);
+        background-color: rgba(0,0,0,0.6);
         margin-left:auto;
         margin-right: auto;
         padding:200px 40px 200px 40px;
@@ -2209,7 +2203,7 @@ nav ul li a:hover{
     .tabText .headingTab{
         font-size: 80px;
         letter-spacing: 2px;
-        font-weight: 100;
+        font-weight: 500;
     }
 
     .tabText button{
@@ -2260,7 +2254,7 @@ nav ul li a:hover{
     .collectionBanner{
         height:200px;
         width:100%;
-        background-color: #333333;
+        background-color: #7a7a7a;
         color:#cfbb63;
         text-align: center;
         font-size:1.5em;

@@ -22,8 +22,8 @@
         document.getElementById("hideOnScroll").style.color = "white";
         document.getElementById("categoryP").style.opacity = "1";
         document.getElementById("headerOnScroll").style.height = "7.5em";
-        document.getElementById("headerOnScroll").style.background = "#333333";
-        document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 5px 1px black";
+        document.getElementById("headerOnScroll").style.background = "#6d6d6d";
+        document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 5px 1px rgba(0,0,0,0.5)";
         
     } else {
         document.getElementById("hideOnScroll").style.background = "transparent";
