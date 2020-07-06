@@ -2,6 +2,14 @@
 <html lang="en">
 
 <style>
+    body {
+        background-color: black;
+    }
+    #Order Confirm a{
+        color: #cfbb63;
+        font-size:500px
+
+    }
 
 </style>
 <head>
@@ -9,7 +17,11 @@
     <title>Order Confirmed</title>
 </head>
 <body>
-<h1>Order Got</h1>
+<div id="Order Confirm">
+    <a>Order Confirmed</a>
+</div>
+
+
 <h2>  Order Number : {{ order.order_id }}</h2>
 <h2> Shipping to : {{ shipping_address }}</h2>
 <h2> Billing to: {{ billing_address}}</h2>

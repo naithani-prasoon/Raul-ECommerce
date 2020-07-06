@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Confirmed Order.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Confirmed Order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +32,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="django_prject" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -147,14 +154,11 @@
       <workItem from="1593629407627" duration="34000" />
       <workItem from="1593629445815" duration="245000" />
       <workItem from="1593631397468" duration="536000" />
-      <workItem from="1593650902034" duration="7765000" />
-    </task>
-    <task id="LOCAL-00001" summary="yo">
-      <created>1591127410452</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1591127410453</updated>
+      <workItem from="1593650902034" duration="12277000" />
+      <workItem from="1593825755522" duration="575000" />
+      <workItem from="1593889251182" duration="1838000" />
+      <workItem from="1593996678806" duration="307000" />
+      <workItem from="1593997149441" duration="3166000" />
     </task>
     <task id="LOCAL-00002" summary="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442">
       <created>1591150764131</created>
@@ -492,7 +496,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593658011852</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="maybe?">
+      <created>1593702009709</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1593702009711</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +524,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="can add and remove from cart 3" />
     <MESSAGE value="new home page set" />
     <MESSAGE value="cart css" />
     <MESSAGE value="simple product page started" />
@@ -538,7 +548,8 @@
     <MESSAGE value="Register Pop-Up" />
     <MESSAGE value="Added Order CHeckout html and fixed pdf" />
     <MESSAGE value="Fixed Cart Again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Cart Again" />
+    <MESSAGE value="maybe?" />
+    <option name="LAST_COMMIT_MESSAGE" value="maybe?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593617500950">
@@ -550,12 +561,12 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="23" key="CommitChangelistDialog2" timestamp="1593658011653">
+    <state x="331" y="23" key="CommitChangelistDialog2" timestamp="1593702009468">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1592063400614" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1593651458432" />
-    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1593658011653" />
+    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1593702009468" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1593628212010" />
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="331" y="51" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1591414336005" />
@@ -584,11 +595,12 @@
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="156" y="133" key="MergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1593669944571" />
-    <state x="436" y="179" key="MultipleFileMergeDialog" timestamp="1593701204674">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="2021" y="298" key="MultipleFileMergeDialog" timestamp="1593996760390">
+      <screen x="1440" y="94" width="1920" height="1057" />
     </state>
     <state x="436" y="173" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1591543504516" />
-    <state x="436" y="179" key="MultipleFileMergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1593701204674" />
+    <state x="2021" y="298" key="MultipleFileMergeDialog/0.23.1440.808/1440.94.1920.1057@1440.94.1920.1057" timestamp="1593996760390" />
+    <state x="436" y="179" key="MultipleFileMergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1593742392591" />
     <state x="436" y="179" key="MultipleFileMergeDialog/0.23.1440.810@0.23.1440.810" timestamp="1593560250057" />
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
     <state x="208" y="44" width="1024" height="822" key="SettingsEditor" timestamp="1593481790482">
@@ -602,12 +614,12 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="193" key="Vcs.Push.Dialog.v2" timestamp="1593658017001">
+    <state x="320" y="193" key="Vcs.Push.Dialog.v2" timestamp="1593702020955">
       <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1593476354362" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1593651469381" />
-    <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1593658017001" />
+    <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1593702020955" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1593628223780" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
     <state x="60" y="140" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593673530992">
@@ -619,17 +631,20 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1591120488524" />
-    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593701190892">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="2140" y="534" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593997302749">
+      <screen x="1440" y="94" width="1920" height="1057" />
     </state>
     <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592063445852" />
-    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1593701190892" />
+    <state x="2140" y="534" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808/1440.94.1920.1057@1440.94.1920.1057" timestamp="1593997302749" />
+    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1593826021197" />
     <state x="525" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.810@0.23.1440.810" timestamp="1593480707863" />
     <state x="525" y="362" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1591922192402" />
     <state x="525" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1591489711874" />
-    <state x="351" y="206" key="git4idea.merge.GitPullDialog" timestamp="1593615784984">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state x="1908" y="332" key="git4idea.merge.GitPullDialog" timestamp="1594004844864">
+      <screen x="1440" y="94" width="1920" height="1057" />
     </state>
+    <state x="1908" y="332" key="git4idea.merge.GitPullDialog/0.23.1440.808/1440.94.1920.1057@1440.94.1920.1057" timestamp="1593998152305" />
+    <state x="1908" y="332" key="git4idea.merge.GitPullDialog/0.23.1440.810/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594004844864" />
     <state x="351" y="206" key="git4idea.merge.GitPullDialog/0.23.1440.810@0.23.1440.810" timestamp="1593560244968" />
     <state x="351" y="206" key="git4idea.merge.GitPullDialog/0.23.1440.812@0.23.1440.812" timestamp="1593615784984" />
     <state x="149" y="176" key="new project wizard" timestamp="1591150138984">

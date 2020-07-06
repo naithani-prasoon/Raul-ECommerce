@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 {% load crispy_forms_tags %}
 
 <html lang="en">
@@ -73,7 +73,15 @@
             <div>
                 <div class="centerIt" >
                     {%csrf_token%}
-                    {%crispy Register_form%}
+                    {{Register_form.errors}}
+                    <p>Username</p>
+                    {{Register_form.username}}
+                    <p>Email</p>
+                    {{Register_form.email}}
+                    <p>Password</p>
+                    {{Register_form.password1}}
+                    <p>Password Again</p>
+                    {{Register_form.password2}}
                     <input type="submit" name="register" value="Register" class="button">
                 </div>
             </div>
@@ -141,8 +149,8 @@
             <p id="categoryP"> Decorative Accessories</p>
             
             <p id="categoryP">Tabletop</p>
-            
-            <p id="categoryP">Furniture</p>
+
+            <p><a href="{% url 'cat-view' 'Plates' %}" style="color:white;">Plates</a></p>
 
             <p id="categoryP">Floral</p>
             
