@@ -1,221 +1,121 @@
+{% extends "Raul/base.html" %}
+{% block content %}
 {% load static %}
 <html lang="en">
 <head>
-    <title>pls</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <title>Checkout</title>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="{% static 'orders/global.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
 
 </head>
-<style type="text/css">
-
-    #scrollTop {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 30px;
-        z-index: 99;
-        font-size: 18px;
-        border: none;
-        outline: none;
-        background-color: red;
-        color: white;
-        cursor: pointer;
-        padding: 15px;
-        border-radius: 4px;
-    }
-
-    #scrollTop:hover {
-        background-color: #555;
-    }
-
-    /**
- * The CSS shown here will not be introduced in the Quickstart guide, but shows
- * how you can use CSS to style your Element's container.
- */
-    .StripeElement {
-        box-sizing: border-box;
-
-        height: 40px;
-
-        padding: 10px 12px;
-
-        border: 1px solid transparent;
-        border-radius: 4px;
-        background-color: white;
-
-        box-shadow: 0 1px 3px 0 #e6ebf1;
-        -webkit-transition: box-shadow 150ms ease;
-        transition: box-shadow 150ms ease;
-    }
-
-    .StripeElement--focus {
-        box-shadow: 0 1px 3px 0 #cfd7df;
-    }
-
-    .StripeElement--invalid {
-        border-color: #fa755a;
-    }
-
-    .StripeElement--webkit-autofill {
-        background-color: #fefde5 !important}
-
-
-    div.b {
-        position: fixed;
-        top: 0px;
-        right: 0;
-        width: 1025px;
-        height: 1220px;
-        color: gold;
-        background-color: gray;
-    }
-
-    .col-sm-6{
-        color: gold;
-        background-color: gray;
-    }
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    tr:nth-child(even) {
-        background-color: gray;
-    }
-
-</style>
 
 <body>
-<h1>SubTotal = {{ order.get_final_amount }}</h1>
-<script src="https://js.stripe.com/v3/"></script>
+<div class="checkoutPage">
+    <div class="checkoutPageDivision">
+        <div class= "leftColumn">
+            <h1>Subtotal : ${{ order.get_final_amount }}</h1>
+            {% if address_form %}
+                <button class="accordion">Add New Shipping Address</button>
+                <div class = "panel">
+                    <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
+                        {{ address_form.as_p}}
 
-<div class="b" >
-    <h1> ORDER SUMMARY: </h1>
-<!--    {% for thing in cart.cartitem_set.all %}-->
-<!--    <h1> Item: {{  thing }} {{ thing.product.price }}  {{ thing.quantity }}  {{thing.line_total}}</h1>-->
-<!--    <h2>Price: {{ thing.product.price}}</h2>-->
-<!--    {% endfor %}-->
+                        <input type="submit" class="addButton" value="Add Shipping Address"/>
 
-
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-        </tr>
-        {% for thing in cart.cartitem_set.all %}
-        <tr>
-            <td>{{ thing }}</td>
-            <td>{{ thing.quantity }}</td>
-            <td>{{ thing.line_total }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-</div>
-
-<body class = 'col-sm-6 pull-left'>
-
-
-{% if address_form %}
-
-    <h3>Add New Shipping Address</h3>
-    <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
-        {{ address_form.as_p}}
-
-        <input type="submit" class="btn btn-default" value="Add Shipping Address"/>
-
-        <script src= "https://js.stripe.com/v3/" ></script>
-
-        <form action="." method="post" id="payment-form">
-            {% csrf_token %}
-            <div class="form-row">
-                <label for="card-element">
-                    Credit or debit card
-                </label>
-                <div id="card-element">
-                    <!-- A Stripe Element will be inserted here. -->
+                        <script src= "https://js.stripe.com/v3/" ></script>
+                    </form>
                 </div>
+            {% endif %}
 
-                <!-- Used to display form errors. -->
-                <div id="card-errors" role="alert"></div>
+
+            <form action="." method="post" id="payment-form">
+                {% csrf_token %}
+                {% if current_addresses %}
+                    <div class='registeredAdd'>
+                        <h3> Shipping Addresses</h3>
+                        {% for address in current_addresses %}
+
+                        {% if request.user.userdefaultaddress.shipping.id == address.id %}
+                        <input type="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
+                        {% else %}
+
+                        <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
+                        {% endif %}
+
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                <div class="registeredAdd">
+                    {% if billing_addresses %}
+                    <div class="col-sm-6">
+                        <h3>Billing Addresses</h3>
+                        {% for address in billing_addresses %}
+
+                        {% if request.user.userdefaultaddress.shipping.id == address.id %}
+                        <input type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
+                        {% else %}
+                        <input type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="form-row">
+                    <label for="card-element">
+                    Credit or debit card
+                    </label>
+                    <div id="card-element">
+                    <!-- A Stripe Element will be inserted here. -->
+                    </div>
+                    
+                    <!-- Used to display form errors. -->
+                    <div id="card-errors" role="alert"></div>
+                    </div>
+                    
+                    <button>Submit Payment</button>
+                </div>
+            </form>
+        </div>
+        <div class="rightColumn">
+            <div class="summary" >
+                <h1> Order Summary: </h1>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                    {% for thing in cart.cartitem_set.all %}
+                    <tr>
+                        <td>{{ thing }}</td>
+                        <td>{{ thing.quantity }}</td>
+                        <td>${{ thing.line_total }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
-
-        </form>
-
-    </form>
-
+        
+        </div>
+    </div>
 </div>
-{% endif %}
-
-
-<form action="." method="post" id="payment-form">
-    {% csrf_token %}
-
-
-    {% if current_addresses %}
-        <div class='col-sm-6'>
-            <h3> Shipping Addresses</h3>
-            {% for address in current_addresses %}
-
-            {% if request.user.userdefaultaddress.shipping.id == address.id %}
-            <input type="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
-            {% else %}
-
-            <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
-            {% endif %}
-
-            {% endfor %}
-        </div>
-    {% endif %}
-
-    <div class="row">
-
-        {% if billing_addresses %}
-        <div class="col-sm-6">
-            <h3>Billing Addresses</h3>
-            {% for address in billing_addresses %}
-
-            {% if request.user.userdefaultaddress.shipping.id == address.id %}
-            <input type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
-            {% else %}
-            <input type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
-
-            {% endif %}
-            {% endfor %}
-        </div>
-        {% endif %}
-
-        <button onclick="scrollFunction()" id="scrollTop"> Top </button>
-
-    <div class="form-row">
-        <label for="card-element">
-            Credit or debit card
-        </label>
-        <div id="card-element">
-            <!-- A Stripe Element will be inserted here. -->
-        </div>
-
-        <!-- Used to display form errors. -->
-        <div id="card-errors" role="alert"></div>
-    </div>
-
-    <button>Submit Payment</button>
-    </div>
-</form>
-
-
-
-
-
-
 <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+    }
     // Create a Stripe client.
     var stripe = Stripe('pk_test_51GsD2nI9Rm3HfGNqDzGloX9dMwz1QCbkCuQfSNc99EUGK4Arw7SVaC6NMGCgQMjii1WtIyEXY9FcRKQ8YCnlY9QK00kwtbjsRr');
 
@@ -306,8 +206,6 @@
     }
 
 </script>
-
-
-
 </body>
 </html>
+{% endblock %}
