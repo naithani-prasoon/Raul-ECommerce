@@ -73,7 +73,8 @@
             <div>
                 <div class="centerIt" >
                     {%csrf_token%}
-                    {%crispy Register_form%}
+
+                    {{ Register_form.as_table }}
                     <input type="submit" name="register" value="Register" class="button">
                 </div>
             </div>

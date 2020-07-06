@@ -66,8 +66,8 @@ class CreateUserForm(UserCreationForm):
     username = forms.CharField(widget = forms.TextInput(attrs={'placeholder': 'Username'}))
     password1 = forms.CharField(widget = forms.TextInput(attrs={'placeholder': 'Password'}))
     password2 = forms.CharField(widget = forms.TextInput(attrs={'placeholder': 'Confirm Password'}))
-    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.', widget = forms.TextInput(attrs={'placeholder': 'First Name'}))
-    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.', widget = forms.TextInput(attrs={'placeholder': 'Last Name'}))
+    first_name = forms.CharField(max_length=30, required=False, widget = forms.TextInput(attrs={'placeholder': 'First Name'}))
+    last_name = forms.CharField(max_length=30, required=False, widget = forms.TextInput(attrs={'placeholder': 'Last Name'}))
     class Meta:
         model = User
         fields = ['username', 'first_name','last_name', 'email', 'password1', 'password2']
