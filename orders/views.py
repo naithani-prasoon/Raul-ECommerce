@@ -146,7 +146,7 @@ def checkout(request):
                 new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                 new_order.save()
 
-                email_test()
+                #email_test()
                 cart.active = False
                 cart.save()
                 del request.session['cart_id']

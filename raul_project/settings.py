@@ -146,7 +146,6 @@ MEDIA_ROOT = 'media'
 
 
 
-LOGIN_REDIRECT_URL = 'Raul-SecondHome'
 LOGOUT_REDIRECT_URL = 'Raul-SecondHome'
 
 LOGIN_URL = 'login'

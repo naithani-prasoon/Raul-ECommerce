@@ -16,6 +16,8 @@
     <div class="checkoutPageDivision">
         <div class= "leftColumn">
             <h1>Subtotal : ${{ order.get_final_amount }}</h1>
+            {% if current_addresses %}
+            <a> address works</a>
             {% if address_form %}
                 <button class="accordion">Add New Shipping Address</button>
                 <div class = "panel">
@@ -28,6 +30,20 @@
                     </form>
                 </div>
             {% endif %}
+
+            {% else %}
+            <button class="accordion">Add New Shipping Address</button>
+            <div class = "panel">
+                <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
+                    {{ address_form.as_p}}
+
+                    <input type="submit" class="addButton" value="Add Shipping Address"/>
+
+                    <script src= "https://js.stripe.com/v3/" ></script>
+                </form>
+            </div>
+            {% endif %}
+
 
 
             <form action="." method="post" id="payment-form">

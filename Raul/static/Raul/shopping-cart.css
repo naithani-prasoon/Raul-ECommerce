@@ -3,6 +3,11 @@ body{
 	font-family: 'Roboto',sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color:white;
+}
+
 .shopping-cart.dark{
 	background-color: #333333;
 	margin-left: auto;
@@ -234,11 +239,6 @@ figure{
 .headers p{
 	margin:16px 0px;
 }
-a {
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-bottom: .5rem;
@@ -281,6 +281,26 @@ button, input {
 
 button, input, optgroup, select, textarea {
     margin: 5px;
+    background-color: #cfbb63;
+    outline: none;
+    border: 1px solid #cfbb63;
+    color:#333333;
+    font-weight: bold;
+    cursor: pointer;
+    padding:8px;
+
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.form .pull-right a{
+    color:#cfbb63;
+    text-decoration: none;
+}
+
+.removeButtonATag{
+    margin: 50px;
     background-color: #cfbb63;
     outline: none;
     border: 1px solid #cfbb63;
