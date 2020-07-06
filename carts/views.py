@@ -99,6 +99,7 @@ def view(request):
 
 
 def remove_from_cart(request, id):
+    print("yooooo")
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id = the_id)
@@ -106,6 +107,7 @@ def remove_from_cart(request, id):
         return HttpResponseRedirect(reverse("cart"))
 
     cartitem = CartItem.objects.get(id=id)
+    print("yooooo")
     cartitem.delete()
     #cartitem.cart = None
     #cartitem.save()
@@ -227,4 +229,5 @@ def add_to_cart(request, slug):
     cart.pennies_total = cart.total * 100
     cart.save()
 
-    return redirect(reverse("cart"))
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    #return redirect(reverse("cart"))

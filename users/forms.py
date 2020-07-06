@@ -63,8 +63,8 @@ class LoginForms(forms.Form):
 
 class CreateUserForm(UserCreationForm):
     email= forms.EmailField(label="Email")
-    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    first_name = forms.CharField(max_length=30, required=False )
+    last_name = forms.CharField(max_length=30, required=False )
     class Meta:
         model = User
         fields = ['username', 'first_name','last_name', 'email', 'password1', 'password2']
