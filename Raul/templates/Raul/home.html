@@ -73,7 +73,7 @@
             <div>
                 <div class="centerIt" >
                     {%csrf_token%}
-                    {%crispy Register_form%}
+                    {{ Register_form.as_table }}
                     <input type="submit" name="register" value="Register" class="button">
                 </div>
             </div>
@@ -269,8 +269,8 @@
             </div>
 
             <div class ="furnitureImages">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/test_Pic.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/test_Pic.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
             </div>
         </div>
     </div>
@@ -283,8 +283,8 @@
             </div>
 
             <div class ="furnitureImages">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/test_Pic.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/test_Pic.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
             </div>
         </div>
     </div>
@@ -297,8 +297,8 @@
             </div>
 
             <div class ="furnitureImages" id ="DecorativeSec">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/test_Pic.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <img src="{%static 'Raul/Images/test_Pic.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
             </div>
         </div>
     </div>
@@ -325,7 +325,7 @@
             <ul class="marqueeContent">
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/1.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/LexiPotSmall_25c065c4-8d9b-4760-8570-7c1bfd73b597_2048x-removebg-preview.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> Art </div>
                         </div>
@@ -333,7 +333,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{%static 'Raul/Images/Test.png'%}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> wall art </div>
                         </div>
@@ -341,7 +341,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/3.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{%static 'Raul/Images/Test2.png'%}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> DINNERWARE </div>
                         </div>
@@ -349,7 +349,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/9.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{%static 'Raul/Images/Test3.png'%}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> FLORAL ARRANGEMENTS </div>
                         </div>
@@ -357,7 +357,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/10.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/test_pic.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> DINNERWARE </div>
                         </div>
@@ -365,7 +365,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/Test.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> WALL ART </div>
                         </div>
@@ -373,7 +373,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/1.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/Test2.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> chandelier </div>
                         </div>
@@ -381,7 +381,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/Test3.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> WAll ART </div>
                         </div>
@@ -390,7 +390,7 @@
 
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/3.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/Test.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> dinnerware </div>
                         </div>
@@ -398,7 +398,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/3.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/Test3.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> yo </div>
                         </div>
@@ -658,15 +658,13 @@
                 Help
             </div>
             <div class="aboutSection">
-                About
+
             </div>
             <div class="socialSection">
                 Social
             </div>
-        </div>  
-        <div class="copyrightSection">
-
         </div>
+
 
 
 

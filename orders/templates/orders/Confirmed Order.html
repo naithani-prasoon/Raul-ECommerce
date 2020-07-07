@@ -2,6 +2,33 @@
 <html lang="en">
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    body {
+        background-color: black;
+    }
+    #OrderConfirm {
+        color: #cfbb63;
+        font-size:100px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    #OrderNumber {
+        color: #cfbb63;
+        font-size:35px;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        padding-bottom: 20px;
+    }
+    #OrderInfo {
+        color: #cfbb63;
+        font-size:35px;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        padding-bottom: 20px;
+    }
+
 
 </style>
 <head>
@@ -9,7 +36,15 @@
     <title>Order Confirmed</title>
 </head>
 <body>
-<h1>Order Got</h1>
+<div id="OrderConfirm">
+    <a>Order Confirmed</a>
+</div>
+
+<div id="OrderNumber">
+    Your OrderID is {{ order.order_id }}
+</div>
+
+<div id="OrderInfo">
 <h2>  Order Number : {{ order.order_id }}</h2>
 <h2> Shipping to : {{ shipping_address }}</h2>
 <h2> Billing to: {{ billing_address}}</h2>
@@ -19,4 +54,5 @@
 {% endfor %}
 
 </body>
+</div>
 </html>

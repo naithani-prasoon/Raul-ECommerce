@@ -1,3 +1,4 @@
+from django import http
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, DeleteView, CreateView
 from django.http import HttpResponse
@@ -35,15 +36,16 @@ def secondHome(request):
     context = {'form': form,"Register_form": Register_form}
 
     if 'register' in request.POST:
-        Register_form = forms.CreateUserForm(request.POST or None)
-        request.session.set_expiry(1000000)
+        request.session.set_expiry(60)
         if Register_form.is_valid():
             Register_form.save()
-            username = Register_form.cleaned_data.get('username')
+            Register_form = forms.CreateUserForm()
+            context = {'form': form,"Register_form": Register_form}
             messages.success(request, f'Your account has been created! You are now able to log in')
-            return render(request, 'Raul/home.html',context)
         else:
-            Register_form = CreateUserForm()
+            messages.error(request, f'work pls')
+            Register_form = forms.CreateUserForm()
+            context = {'form': form,"Register_form": Register_form}
             return render(request, 'Raul/home.html',context)
 
 

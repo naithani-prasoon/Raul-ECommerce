@@ -179,7 +179,7 @@
             <form  method='POST' action="{% url 'add_to_cart' single_product.slug %}">
             {% csrf_token %}
 
-                <input name='qty' type='number' placeholder='Quantity' class = "numberOfItems" min="1" max="50">
+                <input name='qty' type='number' placeholder='Quantity' class = "numberOfItems" min="1" max="50" value="1">
 
                 {% if single_product.variation_set.colors %}
 
