@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/LexiPotSmall_25c065c4-8d9b-4760-8570-7c1bfd73b597_2048x-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/Test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/Test2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/Test3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/test_Pic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/shopping-cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/shopping-cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Confirmed Order.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Confirmed Order.html" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,16 +82,16 @@
     <property name="settings.editor.selected.configurable" value="experimental" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/users" />
-      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/Icons/Icons_Small" />
       <recent name="C:\Users\jonat\IdeaProjects\django_prject2\orders\templates\orders" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/Raul/static.Raul/Images" />
-      <recent name="$PROJECT_DIR$/Raul/templates/Raul" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/users" />
+      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.check2.html">
@@ -161,6 +156,7 @@
       <workItem from="1593631397468" duration="536000" />
       <workItem from="1593650902034" duration="7765000" />
       <workItem from="1594003772907" duration="794000" />
+      <workItem from="1594053273070" duration="6358000" />
     </task>
     <task id="LOCAL-00001" summary="yo">
       <created>1591127410452</created>
@@ -623,11 +619,12 @@
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1593658017001" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1593628223780" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
-    <state x="60" y="140" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1593673530992">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="60" y="141" width="1240" height="633" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594067766478">
+      <screen x="0" y="23" width="1440" height="810" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1591407137868" />
     <state x="60" y="140" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.808@0.23.1440.808" timestamp="1593673530992" />
+    <state x="60" y="141" width="1240" height="633" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.810@0.23.1440.810" timestamp="1594067766478" />
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1591120488524">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
