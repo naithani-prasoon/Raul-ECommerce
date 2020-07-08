@@ -26,7 +26,7 @@
                     <h3> Shipping Addresses</h3>
                     <h3> {{shipping_selected}}</h3>
 
-                    <input type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> {{ shipping_selected.get_address}} <br/>
+                    <input  type = "hidden" type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> <br/>
 
                 </div>
 
@@ -34,7 +34,7 @@
                     <div class="col-sm-6">
                         <h3>Billing Addresses</h3>
                         <h3> {{billing_selected}}</h3>
-                        <input type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> {{ billing_selected.get_address}} <br/>
+                        <input  type = "hidden" type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> <br/>
 
                     </div>
 
@@ -81,7 +81,7 @@
                         {% for address in current_addresses %}
 
                         {% if request.user.userdefaultaddress.shipping.id == address.id %}
-                        <input type =hidden name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
+                        <input type ="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
                         {% else %}
 
                         <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>

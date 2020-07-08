@@ -13,9 +13,7 @@ from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
 from carts.views import add_to_cart
-header = ['product','quantity','line_total']
-arr = []
-arr.append(header)
+
 
 try:
     stripe_pub = settings.STRIPE_PUBLISHABLE_KEY
@@ -150,19 +148,21 @@ def checkout(request):
                     address_state = billing_address_instance.state,
                 )
 
+                context= {
+                    "cart": cart,
+                    "order" : new_order,
+                    "shipping_address": shipping_address_instance,
+                    "billing_address": billing_address_instance
+                }
+
                 if charge["captured"]:
                     new_order.status = "Finished"
                     new_order.billing_address = billing_address_instance
                     new_order.shipping_address = shipping_address_instance
                     new_order.save()
-                    for i in cart.cartitem_set.all():
-                        order = [i.product, i.quantity, i.line_total]
-                        arr.append(order)
-                    make_invoice(arr,new_order.order_id)
+                    #pdf(new_order.order_id,context)
                     new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                     new_order.save()
-
-                    #email_test()
                     cart.active = False
                     cart.save()
                     del request.session['cart_id']
