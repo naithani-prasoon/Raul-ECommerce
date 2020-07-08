@@ -160,7 +160,7 @@ def checkout(request):
                     new_order.billing_address = billing_address_instance
                     new_order.shipping_address = shipping_address_instance
                     new_order.save()
-                    #pdf(new_order.order_id,context)
+                    pdf(new_order.order_id,context)
                     new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                     new_order.save()
                     cart.active = False
