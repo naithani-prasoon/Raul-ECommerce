@@ -1,4 +1,3 @@
-import time
 
 import stripe
 from django.urls import reverse
@@ -9,7 +8,7 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order
-from .utilis import id_generator,email_test,make_invoice
+from .utilis import id_generator,email_test,make_invoice,pdf
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
@@ -35,7 +34,6 @@ def orders(request):
 
 @login_required
 def checkout(request):
-    cartBoolean = False
     User = get_user(request)
     try:
         count = 0
@@ -84,86 +82,104 @@ def checkout(request):
 
     current_addresses= UserAddress.objects.filter(user=User)
     billing_addresses= UserAddress.objects.get_billing_addresses(user=User)
-    print(billing_addresses)
+    print()
 
 
-    if request.method == "POST":
-        #print("hi" + request.POST['stripeToken'])
-        try:
-            user_stripe = request.user.userstripe.stripe_id
-            customer = stripe.Customer.retrieve(user_stripe)
-        except:
-            customer = None
-
-        if customer is not None:
-            print(request.POST)
+    if request.method == 'POST':
+        if 'add' in request.POST:
             billing_a = request.POST["billing_address"]
             shipping_a = request.POST["shipping_address"]
-
-            token = request.POST['stripeToken']
-            try:
-                billing_address_instance = UserAddress.objects.get(id= billing_a)
-            except:
-                billing_address_instance = None
-            try:
-                shipping_address_instance = UserAddress.objects.get(id= shipping_a)
-            except:
-                shipping_address_instance = None
-            print(billing_a)
-            print(shipping_address_instance)
-
-
-            source = stripe.Customer.create_source(
-                user_stripe,
-                source= token
-            )
-            charge = stripe.Charge.create(
-                amount= int(final_amount * 100),
-                currency="usd",
-                source = source,
-                customer = customer,
-                description = "Test"
-            )
-            add_stripe_info = stripe.Customer.modify_source(
-                customer.id,
-                source.id,
-                address_city = billing_address_instance.city,
-                address_country = billing_address_instance.country,
-                address_line1 = billing_address_instance.address,
-                address_zip = billing_address_instance.zipcode,
-                address_state = billing_address_instance.state,
-            )
-
-            if charge["captured"]:
-                new_order.status = "Finished"
-                new_order.billing_address = billing_address_instance
-                new_order.shipping_address = shipping_address_instance
-                new_order.save()
-                for i in cart.cartitem_set.all():
-                    order = [i.product, i.quantity, i.line_total]
-                    arr.append(order)
-                make_invoice(arr,new_order.order_id)
-                new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
-                new_order.save()
-
-                #email_test()
-                cart.active = False
-                cart.save()
-                del request.session['cart_id']
-                context= {
-                    "cart": cart,
-                    "order" : new_order,
-                    "shipping_address": new_order.shipping_address,
-                    "billing_address": new_order.billing_address
-                }
-                return render(request,'orders/Confirmed Order.html',context)
-
-    context = {
+            billing_address_instance = UserAddress.objects.get(id= billing_a)
+            shipping_address_instance = UserAddress.objects.get(id= shipping_a)
+            context = {
                 "order":new_order,
                 "address_form": address_form,
-                "current_addresses": current_addresses,
-                "billing_addresses": billing_addresses,
+                "shipping_selected": shipping_address_instance,
+                "billing_selected":  billing_address_instance,
                 "stripe_pub": stripe_pub,
                 "cart" : cart
-               }
+            }
+            return render(request, 'orders/Checkout.html', context)
+
+
+
+        if 'stripeToken' in request.POST:
+            print(request.POST)
+            try:
+                user_stripe = request.user.userstripe.stripe_id
+                customer = stripe.Customer.retrieve(user_stripe)
+            except:
+                customer = None
+
+            if customer is not None:
+                print(request.POST)
+                billing_a = request.POST["billing_address"]
+                shipping_a = request.POST["shipping_address"]
+
+                token = request.POST['stripeToken']
+                try:
+                    billing_address_instance = UserAddress.objects.get(id= billing_a)
+                except:
+                    billing_address_instance = None
+                try:
+                    shipping_address_instance = UserAddress.objects.get(id= shipping_a)
+                except:
+                    shipping_address_instance = None
+                print(billing_a)
+                print(shipping_address_instance)
+
+
+                source = stripe.Customer.create_source(
+                    user_stripe,
+                    source= token
+                )
+                charge = stripe.Charge.create(
+                    amount= int(final_amount * 100),
+                    currency="usd",
+                    source = source,
+                    customer = customer,
+                    description = "Test"
+                )
+                add_stripe_info = stripe.Customer.modify_source(
+                    customer.id,
+                    source.id,
+                    address_city = billing_address_instance.city,
+                    address_country = billing_address_instance.country,
+                    address_line1 = billing_address_instance.address,
+                    address_zip = billing_address_instance.zipcode,
+                    address_state = billing_address_instance.state,
+                )
+
+                if charge["captured"]:
+                    new_order.status = "Finished"
+                    new_order.billing_address = billing_address_instance
+                    new_order.shipping_address = shipping_address_instance
+                    new_order.save()
+                    for i in cart.cartitem_set.all():
+                        order = [i.product, i.quantity, i.line_total]
+                        arr.append(order)
+                    make_invoice(arr,new_order.order_id)
+                    new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
+                    new_order.save()
+
+                    #email_test()
+                    cart.active = False
+                    cart.save()
+                    del request.session['cart_id']
+                    context= {
+                        "cart": cart,
+                        "order" : new_order,
+                        "shipping_address": new_order.shipping_address,
+                        "billing_address": new_order.billing_address
+                    }
+                    return render(request,'orders/Confirmed Order.html',context)
+
+    context = {
+        "order":new_order,
+        "address_form": address_form,
+        "current_addresses": current_addresses,
+        "billing_addresses": billing_addresses,
+        "stripe_pub": stripe_pub,
+        "cart" : cart
+    }
     return render(request, 'orders/Checkout.html', context)

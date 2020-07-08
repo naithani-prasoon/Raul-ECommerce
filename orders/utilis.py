@@ -6,6 +6,11 @@ from sendgrid.helpers.mail import Mail
 import string
 import random
 import os
+from django.shortcuts import render, HttpResponseRedirect
+from io import BytesIO
+from django.http import HttpResponse
+from django.template.loader import get_template
+import xhtml2pdf.pisa as pisa
 from .models import Order
 from carts.models import Cart
 from django.conf import settings
@@ -20,6 +25,7 @@ from reportlab.platypus import SimpleDocTemplate
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import Table
 from django.contrib.auth import get_user_model, get_user
+import pdfkit
 
 
 from .models import Order
@@ -49,6 +55,7 @@ def email_test():
     except Exception as e:
         print(e.message)
 
+
 def make_invoice(data,idnum):
     outfilename = "Order_Number_" + idnum + ".pdf"
     outfiledir = settings.MEDIA_ROOT
@@ -63,3 +70,13 @@ def make_invoice(data,idnum):
     elems =[]
     elems.append(table)
     pdf.build(elems)
+
+
+def pdf(idnum,context):
+    outfilename = "Order_Number_" + idnum + ".pdf"
+    outfiledir = settings.MEDIA_ROOT
+    outfilepath = os.path.join( outfiledir, outfilename )
+    rendered = render_to_string('orders/Confirmed Order.html', context)
+    pdfkit.from_string(rendered,outfilepath)
+
+
