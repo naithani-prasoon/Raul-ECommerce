@@ -7,6 +7,36 @@ body, html {
     text-transform: none;
 }
 
+.container2{
+    max-width:1580px;
+    height: auto;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.checkoutBanner{
+    height:300px;
+    width:1280px;
+    background:rgba(0,0,0,0.5);
+    padding-top: 80px;
+    margin:100px auto 50px auto;
+    text-align: center;
+    color:#cfbb63;
+}
+
+.checkoutBannerHeading{
+    text-align: center;
+    padding:32px 32px;
+    max-width: 800px;
+    max-height: 300px;
+    margin:20px auto;
+    font-size: 80px;
+    color:#cfbb63;
+    font-weight: normal;
+    font-family: 'Roboto',sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .checkoutPage{
     width:100%;
     margin:200px auto;
@@ -23,14 +53,81 @@ body, html {
 .leftColumn{
     background-color: rgba(0, 0, 0, 0.4);
     width:100%;
+    max-height: auto;
 }
 
 .rightColumn{
-    background-color: rgba(0, 0, 0, 0.4);
-    margin:0px 50px 0px 20px;
+    display: grid;
+    grid-template-rows: 50% 50%s;
+    margin:0px 50px 50px 20px;
     padding:0px 0px 50px 0px;
+    max-height: 900px;
+}
+
+.rightColumn .summary {
+    color: #cfbb63;
     max-height: auto;
-    
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.summary h1{
+    font-size: 50px;
+    padding:0px 50px;
+}
+
+table {
+    text-align: center;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin:10px auto;
+    font-size: 20px;
+}
+
+table #divide{
+    border-top:1px solid #cfbb63;
+}
+
+th{
+    border: none;
+    text-align: left;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+td{
+    border: none;
+    text-align: left;
+    padding: 25px 30px;
+    font-size: 20px;
+}
+
+.rightColumn .paymentSection{
+    color:#cfbb63;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin:20px 0px 100px 0px;
+    max-height: auto;
+    padding:0px 40px;
+}
+
+.paymentSection h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-block-start: 0px;
+    margin-block-end: 20px;
+}
+
+.paymentSection button{
+    background-color: #cfbb63;
+    padding:16px 32px;
+    color:#333333;
+    outline: none;
+    border: none;
+    font-family: 'Roboto',sans-serif;
+    font-size:20px;
 }
 
 .leftColumn h1{
@@ -231,37 +328,4 @@ label {
 }
 
 
-.rightColumn .summary {
-    color: #cfbb63;
-    background-color: transparent;
-}
 
-.summary h1{
-    font-size: 50px;
-    padding:0px 50px;
-}
-
-
-table {
-    text-align: center;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    margin:0px 100px;
-    font-size: 20px;
-}
-
-th{
-    border: none;
-    text-align: left;
-    padding: 15px 30px;
-    font-size: 20px;
-    background-color: rgba(0,0,0,0.4);
-}
-
-td{
-    border: none;
-    text-align: left;
-    padding: 25px 30px;
-    font-size: 20px;
-}
