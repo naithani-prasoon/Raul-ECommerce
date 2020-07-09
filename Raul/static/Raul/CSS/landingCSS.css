@@ -6,7 +6,9 @@ body{
     overflow: hidden;
     justify-items: center;
     align-items: center;
-    background-color: #b2b4aa;
+    background: url('Images/landing.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .placeContainers{
@@ -17,9 +19,27 @@ body{
     animation: fadeIn 5s;
 }
 
-@keyframes fadeIn{
+/* @keyframes fadeIn{
     0%{opacity: 0; transform: translateY(-50px);}
     100%{opacity: 1; transform: translateY(0);}
+} */
+
+.bigContainer{
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    animation: animateContainer 2s;
+}
+
+@keyframes animateContainer{
+    0%{
+        opacity:0; 
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0);
+    }
 }
 
 .bigContainer2{
@@ -28,11 +48,12 @@ body{
     margin:0 280px;
 }
 
+
 .backgroundText{
     position: absolute;
     justify-items: center;
-    top:120px;
-    left:0px;
+    top:-50px;
+    left:30px;
     text-align: center;
     align-items: center;
     z-index: -1;   
@@ -42,13 +63,13 @@ body{
 
 .backgroundText figcaption{
     justify-items: center;
-    font-size: 15em;
+    font-size: 400px;
     font-weight: bolder;
     opacity: 0.4;
-    color:rgba(0,0,0,0.5);
+    color:rgba(0,0,0,0.4);
     transition: ease-in-out;
     letter-spacing: 50px;
-    
+    animation: backgroundTextFade 4s;
 }
 
 .backgroundText2{
@@ -65,21 +86,99 @@ body{
 
 .backgroundText2 figcaption{
     justify-items: center;
-    font-size: 25em;
+    font-size: 400px;
     font-weight: bolder;
     opacity: 0.5;
-    color:rgba(0,0,0,0.5);
+    color:rgba(0,0,0,0.4);
     transition: ease-in-out;
     letter-spacing: 60px;
-    
+    animation: backgroundTextFade 4s
+}
+
+.backgroundText3{
+    position: absolute;
+    justify-items: center;
+    margin:0 auto;
+    top:-50px;
+    left:30px;
+    text-align: center;
+    align-items: center;
+    z-index: -1;   
+    display: none;
+    transition: 0.4s ease-in-out;
+}
+
+.backgroundText3 figcaption{
+    justify-items: center;
+    font-size: 400px;
+    font-weight: bolder;
+    opacity: 0.4;
+    color:rgba(0,0,0,0.4);
+    transition: ease-in-out;
+    letter-spacing: 50px;
+    animation: backgroundTextFade 2s
+}
+
+@keyframes backgroundTextFade{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    40%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#cafeBanners{
+    transition: 0.4s ease-in-out;
 }
 
 #cafeBanner{
     transition: 0.4s ease-in-out;
+    animation: cafeAnimation 4s;
 }
+
+@keyframes cafeAnimation{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    40%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    75%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+}
+
 
 #raulBanner{
     transition: 0.4s ease-in-out;
+    animation: raulAnimation 4s;
+}
+
+@keyframes raulAnimation{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    45%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    75%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 a{
@@ -90,43 +189,68 @@ a{
 }
 
 a .container{
-    width:380px;
     height:200px;
-    overflow: hidden;
     margin-left:auto;
     margin-right: auto;
     padding-top:50px;
     transition: 0.5s ease-in-out;
     z-index: 5;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 a .container p{
-    position: fixed;
+    background-color: rgba(0,0,0,0.9);
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    border-radius: 100px;
+    padding:30px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.bigContainer2 a #raulBanner #raul{
+    margin:0px 50px;
+}
+
+a #raulAvila{
+    text-align: center;
+    width: 30em;
+    height: 6em;
+    z-index:99;
+    margin-top:100px;
+}
+
+a #raulAvila img{
+    width: 100%;
+    margin-top: 10px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 a #raul{
-   margin-left:4%;
-   width: 13.5em;
-   height: 8em;
-   padding:10px 30px;
-   z-index:99;
-   background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    width: 15em;
+    height: 6em;
+    z-index:99;
 }
 
 a #raul img{
     align-self: center;
-    width: 65%;
-    margin-left: 2em;
+    width: 55%;
+    margin-top:-20px;
+    margin-left: auto;
     margin-right: auto;
 }
 
 a #cafe{
-   margin-left:4%;
    width:15em;
    height: 6em;
-   padding:20px;
    z-index:99;
-   background-color:rgba(0,0,0,0.9);
 }
 
 a #cafe img{
@@ -135,14 +259,6 @@ a #cafe img{
    padding-top:15px;
 }
 
-a #third{
-   margin-left:7.5%;
-   z-index:99;
-}
-
-a .container video{
-    z-index:-1;            
-}
 
 a .container:hover{
     margin:40px auto;
@@ -154,6 +270,11 @@ a .container #bgPic{
 }
 
 #cafeBanner:hover .backgroundText{
+    display: block;
+    transition: 0.4s ease-in-out;
+}
+
+#cafeBanners:hover .backgroundText3{
     display: block;
     transition: 0.4s ease-in-out;
 }
