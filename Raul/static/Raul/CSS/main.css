@@ -1534,7 +1534,7 @@ nav ul li a:hover{
     body{
         text-transform: lowercase;
         font-family: 'Roboto', sans-serif;
-        /* background-color: #6d6d6d; */
+        background-color: #6d6d6d;
 
     }
 
@@ -1579,6 +1579,16 @@ nav ul li a:hover{
         padding:40px 0px 0px 0px;
         transition: 0.4s ease-in-out;
         text-align: center;
+        animation: fadeInNavBar 1s;
+    }
+
+    @keyframes fadeInNavBar{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
     }
 
     .headers figure .navbarIcons .hoverDiv span a{
@@ -1617,6 +1627,7 @@ nav ul li a:hover{
         padding:20px 0px 0px 0px;
         transition: 0.4s ease-in-out;
         text-align: center;
+        animation: fadeInNavBar 1s;
     }
 
     .headers figure .navbarIcons .hoverDiv2 span{
@@ -1632,7 +1643,7 @@ nav ul li a:hover{
         padding-top:1px;
         margin-top:20px;
         position: fixed;
-        top:15.5%;
+        top:15%;
         left:6%;
     }
 
@@ -1640,7 +1651,7 @@ nav ul li a:hover{
         padding-top:1px;
         margin-top:20px;
         position: fixed;
-        top:21%;
+        top:19.5%;
         left:6%;
     }
 
@@ -1663,6 +1674,7 @@ nav ul li a:hover{
         padding:20px 0px 0px 0px;
         transition: 0.4s ease-in-out;
         text-align: center;
+        animation: fadeInNavBar 1s;
     }
 
     .headers figure .navbarIcons .hoverDiv3 span{
@@ -1921,6 +1933,17 @@ nav ul li a:hover{
         background-size: cover;
     }
 
+    @keyframes fadeInDisplay{
+        0%{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .bannerSecond .textHover{
         transition: 0.5s ease-in-out;
         opacity: 0;
@@ -1945,6 +1968,23 @@ nav ul li a:hover{
         animation: blink 2s linear infinite;
     }
 
+    .bannerSecond p{
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+        margin-block-end: 10px;
+        margin-block-start: 0;
+    }
+
+    .bannerSecond h6{
+        margin-block-start: 0px;
+        margin-block-end: 0px;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 300;
+    }
+
     @keyframes blink{
         0%{opacity: 0.15;}
         25%{opacity: 0.25;}
@@ -1961,6 +2001,7 @@ nav ul li a:hover{
 
     .roundCircle:hover .productDisplay{
         opacity: 1;
+        animation: fadeInDisplay 1s;
     }
 
     .roundCircle .productDisplay{
@@ -1974,11 +2015,11 @@ nav ul li a:hover{
         opacity: 0;
         transition: 0.4s ease-in-out;
         box-shadow: 0px 0px 3px 1px black;
+        padding:15px;
     }
 
-    .productDisplay p{
-        padding-bottom: 10px;
-        margin-block-end: 20px;
+    .roundCircle .productDisplay img{
+        width:100%;
     }
 
     .bannerSecond .roundCircle2{
@@ -2003,6 +2044,7 @@ nav ul li a:hover{
 
     .roundCircle2:hover .productDisplay{
         opacity: 1;
+        animation: fadeInDisplay 1s;
     }
 
     .roundCircle2 .productDisplay{
@@ -2016,6 +2058,11 @@ nav ul li a:hover{
         opacity: 0;
         transition: 0.4s ease-in-out;
         box-shadow: 0px 0px 3px 1px black;
+        padding:15px
+    }
+
+    .roundCircle2 .productDisplay img{
+        width:100%;
     }
 
     .bannerSecond .roundCircle3{
@@ -2040,19 +2087,25 @@ nav ul li a:hover{
 
     .roundCircle3:hover .productDisplay{
         opacity: 1;
+        animation: fadeInDisplay 1s;
     }
 
     .roundCircle3 .productDisplay{
-        width:300px;
+        width:250px;
         background:rgba(0,0,0,0.9);
         position: absolute;
         right:50px;
-        bottom:5px;
+        bottom:15px;
         font-size: 30px;
         text-align: center;
         opacity: 0;
         transition: 0.4s ease-in-out;
         box-shadow: 0px 0px 3px 1px black;
+        padding:15px;
+    }
+
+    .roundCircle3 .productDisplay img{
+        width:100%;
     }
 
     .bannerSecond .roundCircle4{
@@ -2077,6 +2130,7 @@ nav ul li a:hover{
 
     .roundCircle4:hover .productDisplay{
         opacity: 1;
+        animation: fadeInDisplay 1s;
     }
 
     .roundCircle4 .productDisplay{
@@ -2084,17 +2138,21 @@ nav ul li a:hover{
         background:rgba(0,0,0,0.9);
         position: absolute;
         right:50px;
-        top:30px;
+        bottom:10px;
         font-size: 30px;
         text-align: center;
         opacity: 0;
         transition: 0.4s ease-in-out;
         box-shadow: 0px 0px 3px 1px black;
+        padding:15px;
+    }
 
+    .roundCircle4 .productDisplay img{
+        width:100%;
     }
 
     .textHover .textHeading{
-        background-color: #6d6d6d;
+        background-color: rgba(0,0,0,0.5);
         color: #cfbb63;
         font-size: 32px;
         padding: 16px 32px;
@@ -2115,10 +2173,9 @@ nav ul li a:hover{
 
     .horizontalScroll{
         background-color: #6d6d6d;
-        height: 850px;
+        height: 450px;
         width:100%;
-        padding:50px 0px 0px 0px;
-        overflow: scroll;
+        padding:0px 0px 0px 0px;
     }
 
     .horizontalScroll::-webkit-scrollbar{
@@ -2130,7 +2187,7 @@ nav ul li a:hover{
         font-size:60px;
         text-align: center;
         width:100%;
-        padding-top:70px;
+        padding-top:20px;
     }
 
     .marquee{
@@ -2152,12 +2209,13 @@ nav ul li a:hover{
             transform: translateX(0);
         }
         100%{
-            transform: translateX(-198vw);
+            transform: translateX(-190vw);
         }
     }
 
     .marqueeContent li{
         width:20vw;
+        height:300px;
         padding:0px 100px;
         display: flex;
         justify-content: center;
@@ -2169,14 +2227,14 @@ nav ul li a:hover{
     .horizontalScroll .container{
         position: relative;
         padding:20px;
-        flex: 0 0 auto;
+        
     }
 
     .horizontalScroll .container .imageAvatar{
         opacity: 1;
         display: block;
         width: 100%;
-        height: auto;
+        top:10px;
         transition: 0.4s ease-in-out;
         backface-visibility: hidden;
     }
@@ -2224,7 +2282,7 @@ nav ul li a:hover{
     .container:hover .imageAvatar{
         opacity: 0.8;
         filter: brightness(60%) grayscale(100%);
-        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
+        
     }
 
     .container:hover .text{
@@ -2668,7 +2726,7 @@ nav ul li a:hover{
         border: 1px solid rgba(0,0,0,0.5);
         color:#cfbb63;
         width: 550px;
-        height:800px;
+        height:950px;
         font-family: 'Roboto',sans-serif;
         border-radius: 50px;
       }

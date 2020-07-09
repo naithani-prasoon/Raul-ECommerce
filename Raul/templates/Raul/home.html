@@ -54,10 +54,10 @@
             </div>
 
             <div class="centerIt" id="links">
-                <small class="text-muted ml-2">
+                <!-- <small class="text-muted ml-2">
                     <a href="{% url 'password_reset' %}">Forgot Password?</a>
-                </small>
-<!--                <span class="psw"><a href="#">Forgot password?</a></span>-->
+                </small> -->
+               <span class="psw"><a href="{% url 'password_reset' %}">Forgot password?</a></span>
                 <span class="psw" id ="accountCreate"><a href="{% url 'register' %}">Create an Account</a></span>
             </div>
         </form>
@@ -118,18 +118,18 @@
                     <span><a href="{% url 'logout' %}"> <p> Logout </p></a></span>
                 </div>
             </div>
-            <a href="{% url 'cart' %}"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart"> </p></a>
+            <a href="{% url 'cart' %}" title="Shopping Cart"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" > </p></a>
 
             {% else %}
             <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
             <div class="navbarIcons"> 
-                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
-                <div class="hoverDiv">
+                <p title="Login or Register"><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
+                <div class="hoverDiv" title="Login or Register">
                     <span><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></span><br><br>
                     <span><a href="#" onclick="document.getElementById('id02').style.display='block'">Register</a></span>
                 </div>
             </div>
-            <a href="{% url 'cart' %}"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
+            <a href="{% url 'cart' %}" title="Shopping Cart"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
             {% endif %}
 
         </figure>
@@ -463,7 +463,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/Test2.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/LexiPotSmall_25c065c4-8d9b-4760-8570-7c1bfd73b597_2048x-removebg-preview.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> chandelier </div>
                         </div>
@@ -471,7 +471,7 @@
                 </li>
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/Test3.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/Test.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> WAll ART </div>
                         </div>
@@ -480,17 +480,9 @@
 
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/Test.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{% static 'Raul/Images/Test2.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
                         <div class = "text">
                             <div class = "textInfo"> dinnerware </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class = "container" data-aos="fade-in">
-                        <img src="{% static 'Raul/Images/Test3.png' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-                        <div class = "text">
-                            <div class = "textInfo"> yo </div>
                         </div>
                     </div>
                 </li>
@@ -564,25 +556,33 @@
     <div class ="bannerSecond">
         <div class="roundCircle">
             <div class="productDisplay">
+                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
                 <p>graffiti wall art</p>
+                <h6>$120.00</h6>
             </div>
         </div>
 
         <div class="roundCircle2">
             <div class="productDisplay">
+                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
                 <p>confetti plate</p>
+                <h6>$120.00</h6>
             </div>
         </div>
 
         <div class="roundCircle3">
             <div class="productDisplay">
+                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
                 <p>champagne glass</p>
+                <h6>$120.00</h6>
             </div>
         </div>
 
         <div class="roundCircle4">
             <div class="productDisplay">
+                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
                 <p>hara podha</p>
+                <h6>$120.00</h6>
             </div>
         </div>
     </div>
@@ -771,6 +771,7 @@
     <script>
         AOS.init();
     </script>
+    
 
 </body>
 

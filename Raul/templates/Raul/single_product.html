@@ -3,6 +3,8 @@
 {% load crispy_forms_tags %}
 
 <head xmlns="http://www.w3.org/1999/html">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
     <style>
         body {
             width: 100%;
@@ -144,6 +146,45 @@
 
         }
 
+        .cartNotification{
+            opacity:1;
+            transform: translateX(400px);
+            position:fixed;
+            width:250px;
+            animation: none;
+            padding:50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            bottom:50px;
+            right:50px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .cartAdded{
+            font-size: 25px;
+            font-weight: 200;
+        }
+
+        @keyframes fadeInPop{
+            0%{
+                opacity: 0.5;
+                transform: translateX(100px);
+            }
+            25%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            75%{
+                opacity:0.5;
+            }
+            100%{
+                opacity: 0;
+                transform: translateX(50px);
+            }
+        }
+
 
     </style>
 </head>
@@ -207,7 +248,7 @@
                 </select>
                 {% endif %}
 
-                <input type='submit' value='Add to cart'/>
+                <input type='submit' value='Add to cart'/ onclick="cartNotification()">
             </form>
 
         </div>
@@ -215,9 +256,20 @@
         <!-- Product Pricing -->
         
     </div>
-    <button onclick="topFunction()" id="scrollTop" style="bottom:-100px">  </button>
+    
 </div>
+<div class ="cartNotification" id = "cartPopUp">
+    <div class = "cartAdded">
+        {{single_product.title}} is added to your cart. 
+    </div>
+</div>
+<button onclick="topFunction()" id="scrollTop" style="bottom:-100px">  </button>
 
+<script>
+    function cartNotification(){
+        document.getElementById('cartPopUp').style.animation = "fadeInPop 1.5s";
+    }
+</script>
 
 
 {% endblock %}
