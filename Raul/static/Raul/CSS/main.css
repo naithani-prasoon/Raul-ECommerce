@@ -2096,7 +2096,6 @@ nav ul li a:hover{
     .textHover .textHeading{
         background-color: #6d6d6d;
         color: #cfbb63;
-        font-weight: bold;
         font-size: 32px;
         padding: 16px 32px;
         text-align: center;
@@ -2115,7 +2114,7 @@ nav ul li a:hover{
     }
 
     .horizontalScroll{
-        background-color: #bebebe;
+        background-color: #6d6d6d;
         height: 850px;
         width:100%;
         padding:50px 0px 0px 0px;
@@ -2127,7 +2126,7 @@ nav ul li a:hover{
     }
 
     .featureProductsHeading{
-        color:#f9a602;
+        color:#cfbb63;
         font-size:60px;
         text-align: center;
         width:100%;

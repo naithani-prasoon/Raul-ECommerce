@@ -22,9 +22,18 @@ from django.contrib.auth import get_user_model
 
 class UserAddressForm(forms.ModelForm):
     default= forms.BooleanField(label="Make this your default Address?",required=False)
+    address2 = forms.CharField(required=False)
+    firstname = forms.CharField(label="First Name")
+    lastname = forms.CharField(label="Last Name")
+    billing = forms.BooleanField(label="Make this you billing address?")
     class Meta:
         model = UserAddress
-        fields = ['address','address2','city','state','country', 'zipcode', 'phone','billing']
+        fields = ['firstname','lastname','address','address2','city','state','country', 'zipcode', 'phone','billing']
+        widgets = {
+            'firstname': forms.TextInput(attrs = {'placeholder': 'Username'}),
+            'password': forms.TextInput(attrs = {'placeholder': 'Password'}),
+        }
+
 
 User = get_user_model()
 

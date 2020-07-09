@@ -71,17 +71,16 @@
                                                         {% csrf_token %}
                                                         <input name='qty' class= "quantityPlace" type='number' min="0" placeholder={{item.quantity}} value='{{item.quantity}}' />
                                                        {% if item.variation.colors %}
-
                                                         {% for sub_item in item.variation.colors%}
                                                         <input name="color" type="hidden" value= '{{sub_item.title}}'/>
-                                                            {% endfor %}
+                                                        {% endfor %}
                                                         {% endif %}
 
 
                                                         {% if item.variation.sizes %}
-                                                           {% for sub_item in item.variation.sizes%}
-                                                               <input name="size" type="hidden" value= '{{sub_item.title}}'/>
-                                                           {% endfor %}
+                                                        {% for sub_item in item.variation.sizes%}
+                                                        <input name="size" type="hidden" value= '{{sub_item.title}}'/>
+                                                        {% endfor %}
                                                         {% endif %}
 
 

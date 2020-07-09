@@ -12,142 +12,125 @@
 </head>
 
 <body>
-<div class="container2">
-    <div class="checkoutPage">
-        <div class = "checkoutBanner">
-            <div class = "checkoutBannerHeading">
-                secure checkout
-            </div>
-        </div>
-        <div class="checkoutPageDivision">
-            <div class= "leftColumn">
-                <h1>Subtotal : ${{ order.get_final_amount }}</h1>
-                {% if current_addresses %}
-                <a> address works</a>
-                {% if address_form %}
-                    <button class="accordion">Add New Shipping Address</button>
-                    <div class = "panel">
-                        <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
-                            {{ address_form.as_p}}
+<div class="checkoutPage">
+    <div class="checkoutPageDivision">
+        <div class= "leftColumn">
+            <h1>Subtotal : ${{ order.get_final_amount }}</h1>
 
-                            <input type="submit" class="addButton" value="Add Shipping Address"/>
+            {% if shipping_selected %}
 
-                            <script src= "https://js.stripe.com/v3/" ></script>
-                        </form>
+
+            <form action="" method="POST" id="payment-form">
+                {% csrf_token %}
+                <div class='registeredAdd'>
+                    <h3> Shipping Addresses</h3>
+                    <h3> {{shipping_selected}}</h3>
+
+                    <input  type = "hidden" type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> <br/>
+
+                </div>
+
+                <div class="registeredAdd">
+                    <div class="col-sm-6">
+                        <h3>Billing Addresses</h3>
+                        <h3> {{billing_selected}}</h3>
+                        <input  type = "hidden" type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> <br/>
+
                     </div>
-                {% endif %}
 
-                {% else %}
-                <button class="accordion">Add Shipping Address</button>
+                </div>
+
+                    <h1>Payment Information</h1>
+                    <div class="form-row">
+                        <label for = "card-element">
+                            Credit or Debit card
+                        </label>
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+                        </div>
+
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert"></div>
+                    </div>
+                    <input value="pay" name="pay" type="submit" class="button">
+
+                <!-- AFTER THIS ELSE
+              IT IS THE CASE WHEN THE USER DID NOT ADD THERE ADDRESS
+              -->
+            {%else%}
+
+            {% if address_form %}
+                <button class="accordion">Add New Shipping Address</button>
                 <div class = "panel">
                     <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
                         {{ address_form.as_p}}
 
                         <input type="submit" class="addButton" value="Add Shipping Address"/>
 
-                        <script src= "https://js.stripe.com/v3/" ></script>
+
                     </form>
                 </div>
+            {% endif %}
+
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% if current_addresses %}
+                    <div class='registeredAdd'>
+                        <h3> Shipping Addresses</h3>
+                        {% for address in current_addresses %}
+
+                        {% if request.user.userdefaultaddress.shipping.id == address.id %}
+                        <input type ="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
+                        {% else %}
+
+                        <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
+                        {% endif %}
+
+                        {% endfor %}
+                    </div>
                 {% endif %}
 
+                <div class="registeredAdd">
+                    {% if billing_addresses %}
+                    <div class="col-sm-6">
+                        <h3>Billing Addresses</h3>
+                        {% for address in billing_addresses %}
 
-
-                <form action="." method="post" id="payment-form">
-                    {% csrf_token %}
-                    {% if current_addresses %}
-                        <div class='registeredAdd'>
-                            <h3> Shipping Addresses</h3>
-                            {% for address in current_addresses %}
-
-                            {% if request.user.userdefaultaddress.shipping.id == address.id %}
-                            <input type="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
-                            {% else %}
-
-                            <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
-                            {% endif %}
-
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-
-                    <div class="registeredAdd">
-                        {% if billing_addresses %}
-                        <div class="col-sm-6">
-                            <h3>Billing Addresses</h3>
-                            {% for address in billing_addresses %}
-
-                            {% if request.user.userdefaultaddress.shipping.id == address.id %}
-                            <input type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
-                            {% else %}
-                            <input type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
+                        {% if request.user.userdefaultaddress.shipping.id == address.id %}
+                        <input type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
+                        {% else %}
+                        <input type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
                         {% endif %}
-                    </div>
-                </form> 
-            </div>
-            <div class="rightColumn">
-                <div class="summary" >
-                    <h1> Order Summary </h1>
-                    <table>
-                        <tr>
-                            <th>Item</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                        </tr>
-                        {% for thing in cart.cartitem_set.all %}
-                        <tr>
-                            <td>{{ thing }}</td>
-                            <td>{{ thing.quantity }}</td>
-                            <td>${{ thing.line_total }}</td>
-                        </tr>
                         {% endfor %}
-                        <tr>
-                            <td>Subtotal </td>
-                            <td>  </td>
-                            <td> ${{ order.get_final_amount }} </td>
-                        </tr>
-                        <tr id = "divide">
-                            <td> Taxes </td>
-                            <td>  </td>
-                            <td> $00.00 </td>
-                        </tr>
-                        <tr>
-                            <td>Shipping Fees </td>
-                            <td>  </td>
-                            <td> $00.00 </td>
-                        </tr>
-                    </table>
-                    <div class="discountSection">
-                        
+                        <input value="add" name="add" type="submit" class="button" >
                     </div>
+                    {% endif %}
                 </div>
-                <div class = "paymentSection">
-                    {% csrf_token %}
-                    <form action="." method="post" id="payment-form">
-                        <h1>Payment Information</h1>
-                        <div class="form-row">
-                            <label for = "card-element">
-                            Credit or Debit card
-                            </label>
-                            <div id="card-element">
-                            <!-- A Stripe Element will be inserted here. -->
-                            </div>
-                            
-                            <!-- Used to display form errors. -->
-                            <div id="card-errors" role="alert"></div>
-                            </div>
-                            
-                            <button>Submit Payment</button>
-                        </div>
-                    </form>
-                </div>
-            
+            </form>
+        </div>
+        <div class="rightColumn">
+            <div class="summary" >
+                <h1> Order Summary: </h1>
+                <table>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                    {% for thing in cart.cartitem_set.all %}
+                    <tr>
+                        <td>{{ thing }}</td>
+                        <td>{{ thing.quantity }}</td>
+                        <td>${{ thing.line_total }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
         </div>
     </div>
 </div>
+{%endif%}
 <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
@@ -255,4 +238,5 @@
 </script>
 </body>
 </html>
+]
 {% endblock %}

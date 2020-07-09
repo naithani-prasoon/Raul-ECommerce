@@ -1,58 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-    body {
-        background-color: black;
-    }
-    #OrderConfirm {
-        color: #cfbb63;
-        font-size:100px;
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-        padding-top: 100px;
-        padding-bottom: 70px;
-    }
-    #OrderNumber {
-        color: #cfbb63;
-        font-size:35px;
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-        padding-bottom: 20px;
-    }
-    #OrderInfo {
-        color: #cfbb63;
-        font-size:35px;
-        text-align: left;
-        font-family: 'Roboto', sans-serif;
-        padding-bottom: 20px;
-    }
-
-
-</style>
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Order Confirmed</title>
+    <meta charset="utf-8">
+    <title>Order Invoice</title>
+
+    <style>
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+
+        .invoice-box table {
+            width: 100%;
+            line-height: inherit;
+            text-align: left;
+        }
+
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
+
+        .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.top table td.title {
+            font-size: 45px;
+            line-height: 45px;
+            color: #333;
+        }
+
+        .invoice-box table tr.information table td {
+            padding-bottom: 40px;
+        }
+
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .invoice-box table tr.details td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.item td{
+            border-bottom: 1px solid #eee;
+        }
+
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
+
+        .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .invoice-box table tr.top table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .invoice-box table tr.information table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /** RTL **/
+        .rtl {
+            direction: rtl;
+            font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        }
+
+        .rtl table {
+            text-align: right;
+        }
+
+        .rtl table tr td:nth-child(2) {
+            text-align: left;
+        }
+    </style>
 </head>
+
 <body>
-<div id="OrderConfirm">
-    <a>Order Confirmed</a>
+<div class="invoice-box">
+    <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td class="title">
+                           <h1> R a u l</h1>
+                        </td>
+
+                        <td>
+                            Order#:{{order.order_id}}<br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="information">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td>
+                            {{shipping_address.address}} {{shipping_address.address2}}<br>
+                            {{shipping_address.city}}, {{shipping_address.state}} {{shipping_address.zipcode}}<br>
+                        </td>
+
+                        <td>
+                            Raul Retail<br>
+                            raul@raulretail.com
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="heading">
+            <td>
+            Item
+            </td>
+            <td>
+                Variation
+            </td>
+            <td>
+                Quantity
+            </td>
+            <td>
+                Price
+            </td>
+        </tr>
+
+        <tr class="item">
+            {% for item in cart.cartitem_set.all%}
+
+            <td>
+                {{item.product}}
+            </td>
+
+            <td>
+                {% if item.variation.colors %}
+                {% for sub_item in item.variation.colors%}
+                {{sub_item.title}}
+                {% endfor %}
+                {% endif %}
+
+                {% if item.variation.sizes %}
+                {% for sub_item in item.variation.sizes%}
+                {{sub_item.title}}
+                {% endfor %}
+                {% endif %}
+            </td>
+            <td>
+                {{item.quantity}}
+            </td>
+            <td>
+                {{item.product.price}}
+            </td>
+
+        </tr>
+        {%endfor%}
+
+        <tr class="total">
+            <td></td>
+
+            <td>
+                Total: {{order.get_final_amount}}
+            </td>
+        </tr>
+    </table>
 </div>
-
-<div id="OrderNumber">
-    Your OrderID is {{ order.order_id }}
-</div>
-
-<div id="OrderInfo">
-<h2>  Order Number : {{ order.order_id }}</h2>
-<h2> Shipping to : {{ shipping_address }}</h2>
-<h2> Billing to: {{ billing_address}}</h2>
-
-{% for thing in cart.cartitem_set.all %}
-<h2> {{ thing }}</h2>
-{% endfor %}
-
 </body>
-</div>
 </html>

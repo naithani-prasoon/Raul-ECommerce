@@ -42,6 +42,7 @@ def secondHome(request):
             Register_form = forms.CreateUserForm()
             context = {'form': form,"Register_form": Register_form}
             messages.success(request, f'Your account has been created! You are now able to log in')
+            return render(request, 'Raul/home.html',context)
         else:
             messages.error(request, f'work pls')
             Register_form = forms.CreateUserForm()
