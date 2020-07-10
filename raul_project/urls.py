@@ -28,6 +28,7 @@ from Raul_Inc import views as Raul_Inc_Path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('category/<str:cats>/', views.CategoryView,name='cat-view'),
+    path('section/<str:sec>/', views.SectionView,name='sec-view'),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
     path('profile/orders', user_views.profile, name='profile-orders'),
