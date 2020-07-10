@@ -202,7 +202,7 @@ def add_to_cart(request, slug):
             Var_items = 0
             Check = True
 
-       
+
         if not Check:
             if single_item > 1:
                 new_item.delete()
@@ -225,7 +225,7 @@ def add_to_cart(request, slug):
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
-    cart.total = new_total
+    cart.total = round(new_total,2)
     cart.pennies_total = cart.total * 100
     cart.save()
     time.sleep(1)

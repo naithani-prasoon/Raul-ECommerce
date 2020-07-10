@@ -92,7 +92,7 @@
                                                 </div>
 
                                                 <div class="colmd3 price">
-                                                    <span>${{item.line_total}}</span>
+                                                    <span> ${{item.line_total}}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@
         </div>
     </section>
     <div class="summary">
-        <div class="summary-item"><span class="text">Subtotal:</span><span class="price">${{ cart.total}}</span></div>
+        <div class="summary-item"><span class="text">Subtotal:</span><span class="price">${{cart.total}}</span></div>
 
         <a type="button" class="buttonCheckout"  href="{% url 'checkout'  %}">Checkout</a>
 
