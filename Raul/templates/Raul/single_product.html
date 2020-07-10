@@ -211,13 +211,24 @@
             <p>{{single_product.description}}</p>
             <hr>
         </div>
+
+        {% if messages %}
+        <div class="popUpMessage">
+            <div class="messageRegister">
+                {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
         
 
         <!-- Product Configuration -->
         <div class="product-configuration">
-
           
-            <form  method='POST' action="{% url 'add_to_cart' single_product.slug %}">
+            <form  method='POST' action="{% url 'ajax_add_to_cart' single_product.slug %}">
             {% csrf_token %}
 
                 <input name='qty' type='number' placeholder='Quantity' class = "numberOfItems" min="1" max="50" value="1">
@@ -248,7 +259,7 @@
                 </select>
                 {% endif %}
 
-                <input type='submit' value='Add to cart'/ onclick="cartNotification()">
+                <input type='submit' value='Add to cart' onclick="cartNotification()">
             </form>
 
         </div>

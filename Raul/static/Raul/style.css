@@ -1,6 +1,6 @@
 body{
 	color: #cfbb63;
-	background-color: #333333;
+	background-color: #7a7a7a;
 	font-family: 'Roboto', sans-serif;
 	scroll-behavior: smooth;
 	width:100%;
@@ -186,14 +186,14 @@ h5{
 
 .buy{
 	background-color: transparent;
-	color: #434444;
+	color: #7a7a7a;
 	border-radius: 0;
-	border: 1px solid #434444;
+	border: 1px solid #7a7a7a;
 	width: 100%;
 	margin-top: 20px;
 }
 .buy:hover{
-	background-color: #434444;
+	background-color: #7a7a7a;
 	color: green;
 }
 

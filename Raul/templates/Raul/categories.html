@@ -1,50 +1,55 @@
+{% extends "Raul/base.html" %}
+{% block content %}
+
 {% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Bootstrap Product Grid</title>
     <!-- Bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head> -->
 
-<!-- Style css -->
-<link rel="stylesheet" type="text/css" href="{% static 'Raul/style.css' %}">
+    <!-- Style css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
+<div class="productBanner">
+    <div class="productBanner-heading">
+        {{cats}}
+    </div>
+    <div class="arrowDown">
+        <a href="#scrollHere"><img src="{%static 'Raul/Images/arrowDown.png' %}" width="3%"></a>
+    </div>
+</div>
 
-<div class="container">
-    <h1 class="text-center">RAUL</h1>
-    <hr>
+<div class="productContainer">
 
-    <div class="row">
-        <!-- Product  -->
-        {% for product in cat_products %}
-        <div class="col-md-4 product-grid">
+    <div class="row" id="scrollHere">
+        {% for product in products %}
+        <div class="productCard">
             <div class="image">
                 <a href="{% url 'Raul-single' product.slug %}" >
-                    <img src="{{ product.image.url }}" class="w-100">
-                    <div class="overlay">
-                        <div class="detail">{{product.description}}</div>
-                    </div>
+                    <img src="{{ product.image.url }}" class="productImage">
                 </a>
-            </div>
-            <h5 class="text-center">{{product.title}}</h5>
-            <form class= 'form pull-right' method='GET' action="{% url 'add_to_cart' product.slug %}">
-                <input name='qty' type='number' placeholder='1' value='1' />
-                <input type='submit' value='Add to cart' />
-            </form>
+                <div class="overlay">
+                    <div class="actions">
+                        <p>Add to Cart</p>
+                    </div>
 
-            <h5 class="text-center">Price: ${{product.price}}</h5>
-            <a href="{% url 'add_to_cart' product.slug %}?qty=12" class="btn buy">BUY</a>
+                </div>
+            </div>
+            <h5 class="productTitle">{{product.title}}</h5>
+            <h5 class="productPrice">${{product.price}}</h5>
         </div>
         {% endfor %}
-        <!-- ./Product -->
-
-        <!-- ./Product -->
-
     </div>
 
 </div>
+
+<button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -56,3 +61,4 @@
 </body>
 
 </html>
+{% endblock %}

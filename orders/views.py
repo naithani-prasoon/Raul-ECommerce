@@ -1,3 +1,4 @@
+from decimal import Decimal
 
 import stripe
 from django.urls import reverse
@@ -13,6 +14,7 @@ from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm
 from users.models import UserAddress
 from carts.views import add_to_cart
+import pyziptax
 
 
 try:
@@ -32,6 +34,7 @@ def orders(request):
 
 @login_required
 def checkout(request):
+    pyziptax.api_key = "OL9GNXzWjylg38ma"
     User = get_user(request)
     try:
         count = 0
@@ -65,7 +68,7 @@ def checkout(request):
     if new_order is not None:
         new_order.sub_total = cart.total
         new_order.save()
-        final_amount = new_order.get_final_amount()
+        final_amount = new_order.final_total
     address_form = UserAddressForm()
 
 
@@ -89,6 +92,18 @@ def checkout(request):
             shipping_a = request.POST["shipping_address"]
             billing_address_instance = UserAddress.objects.get(id= billing_a)
             shipping_address_instance = UserAddress.objects.get(id= shipping_a)
+
+            rate = pyziptax.get_rate(shipping_address_instance.zipcode, shipping_address_instance.city, shipping_address_instance.state)
+            two_places = Decimal(10) ** -2
+            new_order.tax_total = Decimal(Decimal(rate/100) * Decimal(new_order.sub_total)).quantize(two_places)
+            new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total)
+            final_amount = new_order.final_total
+            new_order.save()
+            print(new_order.sub_total)
+            print(new_order.tax_total)
+            print(new_order.final_total)
+            print(rate)
+
             context = {
                 "order":new_order,
                 "address_form": address_form,
@@ -132,7 +147,7 @@ def checkout(request):
                     source= token
                 )
                 charge = stripe.Charge.create(
-                    amount= int(final_amount * 100),
+                    amount= int(new_order.final_total * 100),
                     currency="usd",
                     source = source,
                     customer = customer,
