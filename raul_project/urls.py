@@ -28,6 +28,7 @@ from Raul_Inc import views as Raul_Inc_Path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('category/<str:cats>/', views.CategoryView,name='cat-view'),
+    path('section/<str:sec>/', views.SectionView,name='sec-view'),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
     path('profile/orders', user_views.profile, name='profile-orders'),
@@ -48,6 +49,7 @@ urlpatterns = [
     path('Raul_Inc/Home', Raul_Inc_Path.home, name='Raul_Inc_Home'),
     path('cart/', cart_views.view, name='cart'),
     path('ajax/add_user_address/',user_views.add_address, name='ajax_add_user_address'),
+    path('ajax/add_to_cart/<str:slug>',orders.add_to_cart, name='ajax_add_to_cart'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

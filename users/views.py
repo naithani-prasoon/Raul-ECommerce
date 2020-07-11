@@ -39,7 +39,6 @@ def profile(request):
     return render(request, 'users/profile.html',context)
 
 def add_address(request):
-    print(request.GET)
     try:
         next_page = request.GET.get("next")
     except:

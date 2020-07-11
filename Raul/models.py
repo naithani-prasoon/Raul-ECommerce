@@ -8,6 +8,11 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+class Section(models.Model):
+    name = models.CharField(max_length=128)
+
+    def __str__(self):
+        return self.name
 
 
 
@@ -17,6 +22,12 @@ for i in options:
     arr.append(i)
 
 
+options2 = Section.objects.all().values_list('name','name')
+arr2 = []
+for i in options2:
+    arr2.append(i)
+
+
 class product(models.Model):
     title = models.CharField(max_length=128)
     description = models.TextField(null=True, blank=True)
@@ -24,7 +35,8 @@ class product(models.Model):
     image = models.ImageField(blank=True, null=True)
     image2 = models.ImageField(blank=True, null=True)
     image3 = models.ImageField(blank=True, null=True)
-    category = models.CharField(max_length=128, default="Plates", choices=arr)
+    category = models.CharField(max_length=128, choices=arr)
+    section = models.CharField(max_length=128, choices=arr2)
     slug = models.SlugField(null = True)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

@@ -3,6 +3,8 @@ from django.urls import reverse
 from .models import CartItem, Cart
 from django.contrib.auth import get_user
 from Raul.models import Variation, product
+from django.contrib import messages
+import time
 
 # Create your views here.
 
@@ -107,17 +109,15 @@ def remove_from_cart(request, id):
         return HttpResponseRedirect(reverse("cart"))
 
     cartitem = CartItem.objects.get(id=id)
-    print("yooooo")
     cartitem.delete()
-    #cartitem.cart = None
-    #cartitem.save()
-    #send suc message
     return HttpResponseRedirect(reverse("cart"))
 
 
 
 
 def add_to_cart(request, slug):
+
+
     request.session.set_expiry(3000000)
     Check = False
     Zero_Check = False
@@ -202,7 +202,7 @@ def add_to_cart(request, slug):
             Var_items = 0
             Check = True
 
-       
+
         if not Check:
             if single_item > 1:
                 new_item.delete()
@@ -225,9 +225,9 @@ def add_to_cart(request, slug):
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
-    cart.total = new_total
+    cart.total = round(new_total,2)
     cart.pennies_total = cart.total * 100
     cart.save()
-
+    time.sleep(1)
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
     #return redirect(reverse("cart"))

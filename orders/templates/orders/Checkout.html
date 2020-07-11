@@ -15,9 +15,10 @@
 <div class="checkoutPage">
     <div class="checkoutPageDivision">
         <div class= "leftColumn">
-            <h1>Subtotal : ${{ order.get_final_amount }}</h1>
+
 
             {% if shipping_selected %}
+            <h1>Subtotal : ${{ order.final_total}}</h1>
 
 
             <form action="" method="POST" id="payment-form">
@@ -58,6 +59,7 @@
               IT IS THE CASE WHEN THE USER DID NOT ADD THERE ADDRESS
               -->
             {%else%}
+                <h1>Subtotal : ${{ cart.total}}</h1>
 
             {% if address_form %}
                 <button class="accordion">Add New Shipping Address</button>
