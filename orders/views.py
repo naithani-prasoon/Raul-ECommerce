@@ -170,6 +170,7 @@ def checkout(request):
                     "billing_address": billing_address_instance
                 }
 
+
                 if charge["captured"]:
                     new_order.status = "Finished"
                     new_order.billing_address = billing_address_instance
