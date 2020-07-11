@@ -144,8 +144,8 @@ def checkout(request):
 
                 source = stripe.Customer.create_source(
                     user_stripe,
-                    source= token
-                )
+                    source= token)
+
                 charge = stripe.Charge.create(
                     amount= int(new_order.final_total * 100),
                     currency="usd",
