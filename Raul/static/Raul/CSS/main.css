@@ -31,6 +31,7 @@ html,body{
     cursor: pointer;
     padding: 1px;
     border-radius: 50px;
+    transition: 0.4s ease-in-out;
 }
 
 #scrollTop img{
@@ -38,8 +39,8 @@ html,body{
 }
 
 #scrollTop:hover {
-    background-color: #7a7a7a;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+    background-color: #333333;
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5);
 }
 
 a{
@@ -1719,7 +1720,7 @@ nav ul li a:hover{
     .headers figcaption{
         display: none;
     }
-
+ 
     figure{
         display: grid;
         grid-template-columns: 60px 60px auto 60px 60px 60px;
@@ -1973,6 +1974,9 @@ nav ul li a:hover{
         margin-inline-end: 0;
         margin-block-end: 10px;
         margin-block-start: 0;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .bannerSecond h6{
@@ -1983,6 +1987,9 @@ nav ul li a:hover{
         font-size: 15px;
         font-style: italic;
         font-weight: 300;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     @keyframes blink{
@@ -2006,7 +2013,7 @@ nav ul li a:hover{
 
     .roundCircle .productDisplay{
         width:250px;
-        background:rgba(0,0,0,0.9);
+        background:#333333;
         position: absolute;
         left:50px;
         bottom:5px;
@@ -2049,7 +2056,7 @@ nav ul li a:hover{
 
     .roundCircle2 .productDisplay{
         width:250px;
-        background:rgba(0,0,0,0.9);
+        background:#333333;
         position: absolute;
         left:50px;
         bottom:5px;
@@ -2092,7 +2099,7 @@ nav ul li a:hover{
 
     .roundCircle3 .productDisplay{
         width:250px;
-        background:rgba(0,0,0,0.9);
+        background:#333333;
         position: absolute;
         right:50px;
         bottom:15px;
@@ -2135,7 +2142,7 @@ nav ul li a:hover{
 
     .roundCircle4 .productDisplay{
         width:250px;
-        background:rgba(0,0,0,0.9);
+        background: #333333;
         position: absolute;
         right:50px;
         bottom:10px;
@@ -2183,11 +2190,14 @@ nav ul li a:hover{
     }
 
     .featureProductsHeading{
-        color:#cfbb63;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-size:60px;
         text-align: center;
         width:100%;
         padding-top:20px;
+        
     }
 
     .marquee{
@@ -2308,14 +2318,16 @@ nav ul li a:hover{
     }
 
     .shopBanner figcaption{
-        font-size:2em;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size:60px;
         padding:80px 0px 40px 0px;
     }
 
     .tabsBanner{
         overflow: hidden;
         background-color:#6d6d6d;
-        color:#cfbb63;
         width:100%;
         height:80px;
         margin-left: auto;
@@ -2332,8 +2344,10 @@ nav ul li a:hover{
         cursor: pointer;
         text-transform: lowercase;
         padding: 14px 16px;
-        font-size: 18px;
-        color:#cfbb63;
+        font-size: 20px;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-family: 'Roboto',sans-serif;
         font-weight: bolder;
         letter-spacing: 3px;
@@ -2341,11 +2355,18 @@ nav ul li a:hover{
     }
 
     .tabsBanner button:hover{
-        border-bottom: 3px solid #cfbb63;
+        border-bottom: 1px solid #cfbb63;
     }
 
     .tabsBanner button.active{
         background-color: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.6);
+        color: #cfbb63;
+        -webkit-text-fill-color: #cfbb63;
+    }
+
+    #decorativeHeading{
+        font-size: 60px;
     }
 
     .tabcontent {
@@ -2353,12 +2374,16 @@ nav ul li a:hover{
         width:100%;
         height:700px;
         padding: 6px 12px;
-        color:#cfbb63;
         overflow: hidden;
         -webkit-animation: fadeEffect 2s;
         animation: fadeEffect 2s;
         font-weight: bolder;
         background-color: #6d6d6d;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
     }
 
     @-webkit-keyframes fadeEffect {
@@ -2373,29 +2398,35 @@ nav ul li a:hover{
 
     .tabcontent .tabSection{
         display: grid;
-        grid-template-columns: 30% auto;
-        padding:20px;
+        grid-template-columns:35% 60%;
+        text-align: center;
     }
 
     .tabSection .tabImagesRow{
-        display: grid;
-        grid-template-columns: auto auto;
-        padding:5px 20px;
+        /* display: grid;
+        grid-template-columns: auto auto; */
+        width:900px;
+        text-align: center;
+    }
+    
+    .tabImagesRow img{
+        margin: 0px auto;
+        width:100%;
     }
 
-    .tabSection .tabImagesColumn{
+    /* .tabSection .tabImagesColumn{
         display: grid;
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         padding:0 20px;
-    }
+    } */
 
-    .tabImagesColumn img{
+    /* .tabImagesColumn img{
         padding:10px;
-    }
+    } */
 
     .tabSection .tabText{
-        background-color: rgba(0,0,0,0.6);
+        background-color: transparent;
         margin-left:auto;
         margin-right: auto;
         padding:200px 40px 200px 40px;
@@ -2404,6 +2435,9 @@ nav ul li a:hover{
     }
 
     .tabText .headingTab{
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-size: 80px;
         letter-spacing: 2px;
         font-weight: 500;
@@ -2411,12 +2445,15 @@ nav ul li a:hover{
 
     .tabText button{
         outline:none;
-        border:1px solid #cfbb63;
+        border: none;
+        border:2px solid #cfbb63;
         padding:10px;
-        font-size:20px;
+        font-size:23px;
         background-color: transparent;
-        color:#cfbb63;
-        width:200px;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width:150px;
         font-family: 'Roboto',sans-serif;
         margin:20px 0px 0px 0px;
         font-weight: bolder;
@@ -2424,10 +2461,8 @@ nav ul li a:hover{
     }
 
     .tabText button:hover{
-        color:#333333;
-        background-color: #cfbb63;
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-        border:0px;
+        font-size: 24px;
+        border: 5px solid #cfbb63;
         cursor: pointer;
     }
 

@@ -1,6 +1,5 @@
 body{
-	color: #cfbb63;
-	background-color: #333333;
+	background-color: #6d6d6d;
 	font-family: 'Roboto', sans-serif;
 	scroll-behavior: smooth;
 	width:100%;
@@ -14,7 +13,7 @@ body{
 	background:rgba(0, 0, 0, 0.5);
 	background-position: left;
 	width:85%;
-	height:560px;
+	height:580px;
 	margin:150px auto 50px auto;
 }
 
@@ -22,8 +21,13 @@ body{
 	font-size:150px;
 	font-family:'Roboto Condensed',sans-sarif;
 	text-transform: uppercase;
-	padding:180px 100px 120px 100px;
-	
+	padding:30px 100px 0px 100px;	
+}
+
+.productBanner-heading p{
+	background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .arrowDown{
@@ -144,7 +148,11 @@ body{
 
 h5{
 	text-align: center;
-	font-weight: normal;
+	font-weight: 700;
+	font-size: 20px;
+	background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .actions{

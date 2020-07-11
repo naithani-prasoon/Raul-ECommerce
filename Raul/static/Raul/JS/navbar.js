@@ -10,7 +10,7 @@
     } else {
         document.getElementById("hideOnScroll").style.display = "flex";
         document.getElementById("headerOnScroll").style.height = "7.5em";
-        document.getElementById("headerOnScroll").style.background = "#333333";
+        document.getElementById("headerOnScroll").style.background = "#6d6d6d";
         document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 0px 0px";
     }
 }

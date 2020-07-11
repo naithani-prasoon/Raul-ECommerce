@@ -1,7 +1,7 @@
 
 body{
     font-family: 'Roboto',sans-serif;
-    background-color: #333333;
+    background-color: #6d6d6d;
 }
 
 a {
@@ -10,7 +10,7 @@ a {
 }
 
 .shopping-cart.dark{
-	background-color: #333333;
+	background-color: #6d6d6d;
 	margin-left: auto;
 	margin-right:auto;
 }
@@ -31,7 +31,7 @@ a {
     height: 300px;
     width:100%;
     text-align: center;
-    background: url('Images/shoppingCartBanner.jpg');
+    /* background: url('Images/shoppingCartBanner.jpg'); */
     background-position: center left;
 }
 
@@ -41,11 +41,13 @@ a {
     max-width: 800px;
     max-height: 300px;
     margin:20px auto;
-    font-size: 80px;
-    color:#cfbb63;
-    font-weight: normal;
+    font-size: 100px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
     font-family: 'Roboto',sans-serif;
-    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .product{
@@ -58,13 +60,15 @@ a {
 
 .shopping-cart .content{
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
-	background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.2);
     padding:50px;
     color:#cfbb63;
 }
 
 .product-name a{
-    color:#cfbb63;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     letter-spacing: 2px;
 }
 
@@ -148,39 +152,6 @@ a {
 }
 }
 
-.btn-block {
-    display: block;
-    width: 100%;
-}
-.btn-group-lg>.btn, .btn-lg {
-    padding: .5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: .3rem;
-}
-.btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-}
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-	line-height: 1.5;
-	margin:30px 0px;
-    border-radius: .25rem;
-}
-
 @media (min-width: 768px){
 .col-md-8 {
     /* -webkit-box-flex: 0; */
@@ -246,7 +217,9 @@ figure{
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
-    color: inherit;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -273,7 +246,9 @@ button, input {
     text-align: center;
     outline: none;
     border-bottom: 1px solid #cfbb63;
-    color:#cfbb63;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     border-radius: 0px;
     width:100px;
     margin-bottom:15px;
@@ -296,7 +271,9 @@ button, input, optgroup, select, textarea {
 }
 
 .form .pull-right a{
-    color:#cfbb63;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
 }
 
@@ -309,7 +286,6 @@ button, input, optgroup, select, textarea {
     font-weight: bold;
     cursor: pointer;
     padding:8px;
-
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -323,34 +299,50 @@ button, input, optgroup, select, textarea {
 .shopping-cart .block-heading h2,
 .shopping-cart .block-heading h3 {
 	margin-bottom:1.2rem;
-	color: #cfbb63;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .shopping-cart .items{
-	margin: auto;
+    margin: auto;
+   
 }
 
 .shopping-cart .items .product .info{
 	padding-top: 0px;
-	text-align: center;
+    text-align: center;
+    
 }
 
 .shopping-cart .items .product .info .product-name{
-	font-weight: 600;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .shopping-cart .items .product .info .product-name .product-info{
 	font-size: 14px;
-	margin-top: 15px;
+    margin-top: 15px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .shopping-cart .items .product .info .product-name .product-info .value{
-	font-weight: 400;
+    font-weight: 400;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .shopping-cart .items .product .info .quantity .quantity-input{
     margin: auto;
     width: 80px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .shopping-cart .items .product .info .price{
@@ -358,6 +350,9 @@ button, input, optgroup, select, textarea {
     font-weight: bold;
     font-size: 22px;
     letter-spacing: 2px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
  }
 
 .summary{
@@ -366,20 +361,26 @@ button, input, optgroup, select, textarea {
     margin:10px auto;
     padding: 30px;
     text-align: right;
-    color:#cfbb63;
+    
 }
 
 .summary .text{
-	font-size: 20px;
-    font-weight: 600;
+	font-size: 25px;
+    font-weight: 700;
     margin-left: 10px;
-    font-weight: normal;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
 
 .summary .price{
-    font-size: 20px;
+    font-size: 25px;
     padding:0 10px;
     font-weight: bold;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .summary .buttonCheckout{
@@ -409,7 +410,10 @@ button, input, optgroup, select, textarea {
 	.shopping-cart .items .product .info .price {
 		font-weight: bold;
 		font-size: 22px;
-		top: 17px; 
+        top: 17px; 
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 	}
 
 	.shopping-cart .items .product .info .quantity {
