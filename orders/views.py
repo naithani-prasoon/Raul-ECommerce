@@ -108,7 +108,7 @@ def checkout(request):
             shipping_a = request.POST["shipping_address"]
             billing_address_instance = BillingAddress.objects.get(id= billing_a)
             shipping_address_instance = UserAddress.objects.get(id= shipping_a)
-            rate = pyziptax.get_rate(shipping_address_instance.zipcode, shipping_address_instance.city, shipping_address_instance.state)
+            rate = pyziptax.get_rate(shipping_address_instance.zipcode, shipping_address_instance.city)
             two_places = Decimal(10) ** -2
             new_order.tax_total = Decimal(Decimal(rate/100) * Decimal(new_order.sub_total)).quantize(two_places)
             new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total)
@@ -195,7 +195,7 @@ def checkout(request):
                     new_order.billing_address = billing_address_instance
                     new_order.shipping_address = shipping_address_instance
                     new_order.save()
-                    pdf(new_order.order_id,context)
+                    #pdf(new_order.order_id,context)
                     new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                     new_order.save()
                     cart.active = False
