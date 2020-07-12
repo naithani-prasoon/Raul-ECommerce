@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="Email User">
+    <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +76,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="experimental" />
@@ -163,14 +168,7 @@
       <workItem from="1594306831347" duration="13155000" />
       <workItem from="1594494777406" duration="17738000" />
       <workItem from="1594534636184" duration="3997000" />
-      <workItem from="1594577608920" duration="4879000" />
-    </task>
-    <task id="LOCAL-00017" summary="new home page set">
-      <created>1591561972471</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1591561972471</updated>
+      <workItem from="1594577608920" duration="7630000" />
     </task>
     <task id="LOCAL-00018" summary="cart css">
       <created>1591576623690</created>
@@ -508,7 +506,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594590882665</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Email User">
+      <created>1594591551524</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1594591551524</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,6 +562,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Email User" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1967" y="215" key="#Project_Structure" timestamp="1594593545026">
+      <screen x="1440" y="94" width="1920" height="988" />
+    </state>
+    <state x="1967" y="215" key="#Project_Structure/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594593545026" />
     <state x="446" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593617500950">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
@@ -570,7 +579,7 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="1837" y="108" width="1417" height="823" key="CommitChangelistDialog2" timestamp="1594591522528">
+    <state x="1837" y="108" width="1417" height="823" key="CommitChangelistDialog2" timestamp="1594591551333">
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
@@ -583,7 +592,7 @@
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="23" y="23" width="1417" height="823" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1594362197869" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
-    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594591522528" />
+    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594591551333" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -635,7 +644,7 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1594591534129">
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1594591575443">
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
@@ -646,7 +655,7 @@
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.813@0.23.1440.813" timestamp="1594405713923" />
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.815@0.23.1440.815" timestamp="1594503101311" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594591534129" />
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594591575443" />
     <state x="100" y="203" width="1240" height="615" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1594577604264">
       <screen x="0" y="23" width="1440" height="815" />
     </state>

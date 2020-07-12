@@ -89,20 +89,23 @@ class LoginForms(forms.Form):
 
 class CreateUserForm(UserCreationForm):
     username= forms.EmailField(label="Email")
+    email = forms.HiddenInput()
     class Meta:
         model = User
-        fields = ['username', 'password1', 'password2']
+        fields = ['username', 'password1', 'password2','email']
         widgets = {
             'password1': forms.TextInput(attrs = {'placeholder': 'Password'}),
             'password2': forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),
+            'email': forms.HiddenInput()
 
         }
 
     def clean_email(self):
         email= self.cleaned_data.get("email")
+        print(email)
         user_count= User.objects.filter(email=email).count()
         print(user_count)
-        if user_count > 0:
+        if user_count > 25:
             raise forms.ValidationError("This email has already been used")
         return email
 
