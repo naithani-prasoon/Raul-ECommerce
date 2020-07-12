@@ -44,22 +44,21 @@ def secondHome(request):
             messages.success(request, f'Your account has been created! You are now able to log in')
             return render(request, 'Raul/home.html',context)
         else:
-            messages.error(request, f'Please try again')
-            Register_form = forms.CreateUserForm()
+            messages.error(request, Register_form.error_messages)
             context = {'form': form,"Register_form": Register_form}
             return render(request, 'Raul/home.html',context)
-
 
     if 'login' in request.POST:
         if form.is_valid():
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user = authenticate(username=username,password=password)
+            context = {'form': form,"Register_form": Register_form}
             login(request,user)
             return render(request, 'Raul/home.html',context)
 
-
     return render(request, 'Raul/home.html',context)
+
 
 
 def landingpage(request):
