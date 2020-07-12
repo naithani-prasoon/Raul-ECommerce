@@ -113,6 +113,7 @@ def checkout(request):
             new_order.tax_total = Decimal(Decimal(rate/100) * Decimal(new_order.sub_total)).quantize(two_places)
             new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total)
             final_amount = new_order.final_total
+            ali =2
             new_order.save()
 
 
