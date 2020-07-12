@@ -37,6 +37,7 @@ class UserAddress(models.Model):
     zipcode = models.CharField(max_length=120,null=True)
     phone = models.CharField(max_length=120,null=True)
     shipping = models.BooleanField(max_length=120,null=True)
+    default = models.BooleanField(default=False)
     billing = models.BooleanField(default=False)
     time_stamp = models.DateTimeField(max_length=120,null=True)
     updated = models.DateTimeField(max_length=120,null=True)
@@ -76,3 +77,32 @@ def get_or_create_stripe(sender, user, *args, **kwargs):
         pass
 
 user_logged_in.connect(get_or_create_stripe)
+
+
+class BillingAddress(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    firstname = models.CharField(max_length=120,null=True)
+    lastname =  models.CharField(max_length=120,null=True)
+    address = models.CharField(max_length=120,null=True)
+    address2 = models.CharField(max_length=120,null=True)
+    address3 = models.CharField(max_length=120,null=True)
+    city = models.CharField(max_length=120,null=True)
+    state = models.CharField(max_length=120,null=True)
+    country = models.CharField(max_length=120,null=True)
+    zipcode = models.CharField(max_length=120,null=True)
+    phone = models.CharField(max_length=120,null=True)
+    shipping = models.BooleanField(max_length=120,null=True)
+    time_stamp = models.DateTimeField(max_length=120,null=True)
+    updated = models.DateTimeField(max_length=120,null=True)
+
+    def __str__(self):
+        return self.get_address()
+
+
+    def get_address(self):
+        return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
+
+    objects = UserAddressManager()
+
+    class Meta:
+        ordering = ['-updated', '-time_stamp']

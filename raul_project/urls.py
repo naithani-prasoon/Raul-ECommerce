@@ -49,6 +49,7 @@ urlpatterns = [
     path('Raul_Inc/Home', Raul_Inc_Path.home, name='Raul_Inc_Home'),
     path('cart/', cart_views.view, name='cart'),
     path('ajax/add_user_address/',user_views.add_address, name='ajax_add_user_address'),
+    path('ajax/add_user_billing_address/',user_views.add_billing_address, name='ajax_add_user_billing_address'),
     path('ajax/add_to_cart/<str:slug>',orders.add_to_cart, name='ajax_add_to_cart'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

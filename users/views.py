@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # from .forms import UserRegisterForm
-from .forms import CreateUserForm, UserAddressForm
+from .forms import CreateUserForm, UserAddressForm, BillingAddressForm
 # from .forms import UserRegisterForm
 from carts.models import Cart, CartItem
 from django.contrib.auth import get_user
@@ -50,13 +50,42 @@ def add_address(request):
             new_address.user = request.user
             new_address.save()
             is_default= form.cleaned_data["default"]
+            billing = form.cleaned_data["billing"]
+            First_Name = form.cleaned_data["zipcode"]
+            Last_Name = form.cleaned_data["city"]
             if is_default:
                 default_address, created = UserDefaultAddress.objects.get_or_create(user=request.user)
                 default_address.shipping= new_address
                 default_address.save()
+            if billing:
+                billing_form = BillingAddressForm(request.POST)
+                billing_form.zipcode = First_Name
+                billing_form.city = Last_Name
+                new_billing = billing_form.save(commit=False)
+                new_billing.user = request.user
+                new_billing.save()
+                print(billing_form.zipcode)
             if next_page is not None:
-                return HttpResponseRedirect(reverse(next_page) + "?address_added=True")
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
+def add_billing_address(request):
+    try:
+        next_page = request.GET.get("next")
+    except:
+        next_page = None
+    if request.method == "POST":
+        form = BillingAddressForm(request.POST)
+        if form.is_valid():
+            new_address = form.save(commit=False)
+            new_address.user = request.user
+            new_address.save()
+            is_default= form.cleaned_data["default"]
+            if is_default:
+                default_address, created = UserDefaultAddress.objects.get_or_create(user=request.user)
+                default_address.billing= new_address
+                default_address.save()
+            if next_page is not None:
+                return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 

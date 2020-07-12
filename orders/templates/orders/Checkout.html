@@ -17,7 +17,7 @@
         <div class= "leftColumn">
 
 
-            {% if shipping_selected %}
+            {% if shipping_selected%}
             <h1>Subtotal : ${{ order.final_total}}</h1>
 
 
@@ -58,7 +58,45 @@
                 <!-- AFTER THIS ELSE
               IT IS THE CASE WHEN THE USER DID NOT ADD THERE ADDRESS
               -->
-            {%else%}
+                {%elif billing_selected%}
+                <h1>Subtotal : ${{ order.final_total}}</h1>
+
+
+                <form action="" method="POST" id="payment-form">
+                    {% csrf_token %}
+                    <div class='registeredAdd'>
+                        <h3> Shipping Addresses</h3>
+                        <h3> {{shipping_selected}}</h3>
+
+                        <input  type = "hidden" type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> <br/>
+
+                    </div>
+
+                    <div class="registeredAdd">
+                        <div class="col-sm-6">
+                            <h3>Billing Addresses</h3>
+                            <h3> {{billing_selected}}</h3>
+                            <input  type = "hidden" type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> <br/>
+
+                        </div>
+
+                    </div>
+
+                    <h1>Payment Information</h1>
+                    <div class="form-row">
+                        <label for = "card-element">
+                            Credit or Debit card
+                        </label>
+                        <div id="card-element">
+                            <!-- A Stripe Element will be inserted here. -->
+                        </div>
+
+                        <!-- Used to display form errors. -->
+                        <div id="card-errors" role="alert"></div>
+                    </div>
+                    <input value="pay" name="pay" type="submit" class="button">
+
+                    {%else%}
                 <h1>Subtotal : ${{ cart.total}}</h1>
 
             {% if address_form %}
@@ -72,7 +110,19 @@
 
                     </form>
                 </div>
+                {% if billing_form %}
+                <button class="accordion">Add New Billing Address</button>
+                <div class = "panel">
+                    <form method="POST" action='{% url "ajax_add_user_billing_address" %}?next=checkout'>{% csrf_token %}
+                        {{ billing_form.as_p}}
+
+                        <input type="submit" class="addButton" value="Add Billing Address"/>
+
+
+                    </form>
+                </div>
             {% endif %}
+                {% endif %}
 
 
             <form action="" method="POST">
@@ -83,10 +133,10 @@
                         {% for address in current_addresses %}
 
                         {% if request.user.userdefaultaddress.shipping.id == address.id %}
-                        <input type ="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
+                        <input required type ="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
                         {% else %}
 
-                        <input type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
+                        <input required type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
                         {% endif %}
 
                         {% endfor %}
@@ -100,9 +150,9 @@
                         {% for address in billing_addresses %}
 
                         {% if request.user.userdefaultaddress.shipping.id == address.id %}
-                        <input type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
+                        <input required type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
                         {% else %}
-                        <input type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
+                        <input required type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
                         {% endif %}
                         {% endfor %}
                         <input value="add" name="add" type="submit" class="button" >
@@ -132,8 +182,12 @@
         </div>
     </div>
 </div>
+
 {%endif%}
 <script>
+    function radiocheck() {
+        document.getElementById("radio").required;
+    }
     var acc = document.getElementsByClassName("accordion");
     var i;
 

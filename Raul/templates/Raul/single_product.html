@@ -224,17 +224,17 @@
 
 
     <!-- Right Column -->
-    <div class="right-column">
-        <!-- Product Description -->
-        <div class="product-description">
-            <a href="{% url 'cat-view' 'Plates' %}" >Plates</a>
-            <h1>{{single_product.title}}</h1>
-            <div class="product-price">
-                ${{single_product.price}}
+         <div class="right-column">
+            <!-- Product Description -->
+            <div class="product-description">
+                <a href="{% url 'cat-view' single_product.category %}" >{{single_product.category}}</a>
+                <h1>{{single_product.title}}</h1>
+                <div class="product-price">
+                    ${{single_product.price}}
+                </div>
+                <p>{{single_product.description}}</p>
+                <hr>
             </div>
-            <p>{{single_product.description}}</p>
-            <hr>
-        </div>
 
         {% if messages %}
         <div class="popUpMessage">
