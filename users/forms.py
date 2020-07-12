@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import UserAddress
+from .models import UserAddress, BillingAddress
 from django.contrib.auth import get_user_model
 from django.contrib.auth import get_user_model
 
@@ -25,7 +25,7 @@ class UserAddressForm(forms.ModelForm):
     address2 = forms.CharField(required=False)
     firstname = forms.CharField(label="First Name")
     lastname = forms.CharField(label="Last Name")
-    billing = forms.BooleanField(label="Make this you billing address?")
+    billing = forms.BooleanField(label="Make this you billing address?",required=False)
     class Meta:
         model = UserAddress
         fields = ['firstname','lastname','address','address2','city','state','country', 'zipcode', 'phone','billing']
@@ -33,6 +33,23 @@ class UserAddressForm(forms.ModelForm):
             'firstname': forms.TextInput(attrs = {'placeholder': 'Username'}),
             'password': forms.TextInput(attrs = {'placeholder': 'Password'}),
         }
+
+
+User = get_user_model()
+
+class BillingAddressForm(forms.ModelForm):
+    default = forms.BooleanField(label="Make this your default Address?",required=False)
+    address2 = forms.CharField(required=False)
+    firstname = forms.CharField(label="First Name")
+    lastname = forms.CharField(label="Last Name")
+    class Meta:
+        model = BillingAddress
+        fields = ['firstname','lastname','address','address2','city','state','country', 'zipcode', 'phone','default']
+        widgets = {
+            'firstname': forms.TextInput(attrs = {'placeholder': 'Username'}),
+            'password': forms.TextInput(attrs = {'placeholder': 'Password'}),
+        }
+
 
 
 User = get_user_model()

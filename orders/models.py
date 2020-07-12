@@ -5,7 +5,7 @@ from decimal import Decimal
 
 # Create your models here.
 from carts.models import Cart
-from users.models import UserAddress
+from users.models import UserAddress, BillingAddress
 User = get_user_model()
 User2 = get_user_model()
 
@@ -20,7 +20,7 @@ class Order(models.Model):
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     order_id = models.CharField(max_length=120, default='ABC', unique=True)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
-    billing_address = models.ForeignKey(UserAddress, related_name= "billing_address", blank=True, null=True, on_delete=models.CASCADE)
+    billing_address = models.ForeignKey(BillingAddress, related_name= "billing_address", blank=True, null=True, on_delete=models.CASCADE)
     shipping_address = models.ForeignKey(UserAddress,related_name= "shipping_address", blank=True, null=True, on_delete=models.CASCADE)
     status = models.CharField(max_length=120, choices=STATUS_CHOICES, default="Started")
     sub_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
@@ -40,4 +40,11 @@ class Order(models.Model):
         instance.tax_total = Decimal(Decimal("0.08") * Decimal(self.sub_total)).quantize(two_places)
         instance.final_total = Decimal(self.sub_total) + Decimal(instance.tax_total)
         instance.save()
-        return instance.final_total
+
+class StripeInfo(models.Model):
+    user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
+    last4 = models.CharField(max_length=120, unique=True)
+    exp =  models.CharField(max_length=120, unique=True)
+    card_id = models.CharField(max_length=120, unique=True)
+
+

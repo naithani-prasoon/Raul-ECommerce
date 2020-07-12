@@ -8,11 +8,11 @@ from django.conf import settings
 from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
-from .models import Order
+from .models import Order,StripeInfo
 from .utilis import id_generator,email_test,make_invoice,pdf
 from django.contrib.auth import get_user_model, get_user
-from users.forms import UserAddressForm
-from users.models import UserAddress
+from users.forms import UserAddressForm,BillingAddressForm
+from users.models import UserAddress, BillingAddress
 from carts.views import add_to_cart
 import pyziptax
 
@@ -70,42 +70,55 @@ def checkout(request):
         new_order.save()
         final_amount = new_order.final_total
     address_form = UserAddressForm()
+    billing_form = BillingAddressForm()
 
 
     try:
         address_added = request.GET.get("address_added")
     except:
         address_added = None
+
     if address_added is None:
         address_form = UserAddressForm()
     else:
         address_form = None
 
+
+
+    try:
+        address_added = request.GET.get("billing_added")
+    except:
+        address_added = None
+
+    if address_added is None:
+        billing_form = BillingAddressForm()
+    else:
+        billing_form = None
+
+
+
     current_addresses= UserAddress.objects.filter(user=User)
-    billing_addresses= UserAddress.objects.get_billing_addresses(user=User)
-    print()
+    billing_addresses2 = BillingAddress.objects.filter(user=User)
+
 
 
     if request.method == 'POST':
         if 'add' in request.POST:
             billing_a = request.POST["billing_address"]
             shipping_a = request.POST["shipping_address"]
-            billing_address_instance = UserAddress.objects.get(id= billing_a)
+            billing_address_instance = BillingAddress.objects.get(id= billing_a)
             shipping_address_instance = UserAddress.objects.get(id= shipping_a)
-
             rate = pyziptax.get_rate(shipping_address_instance.zipcode, shipping_address_instance.city, shipping_address_instance.state)
             two_places = Decimal(10) ** -2
             new_order.tax_total = Decimal(Decimal(rate/100) * Decimal(new_order.sub_total)).quantize(two_places)
             new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total)
             final_amount = new_order.final_total
             new_order.save()
-            print(new_order.sub_total)
-            print(new_order.tax_total)
-            print(new_order.final_total)
-            print(rate)
+
 
             context = {
                 "order":new_order,
+                "billing_form": billing_form,
                 "address_form": address_form,
                 "shipping_selected": shipping_address_instance,
                 "billing_selected":  billing_address_instance,
@@ -131,7 +144,7 @@ def checkout(request):
 
                 token = request.POST['stripeToken']
                 try:
-                    billing_address_instance = UserAddress.objects.get(id= billing_a)
+                    billing_address_instance = BillingAddress.objects.get(id= billing_a)
                 except:
                     billing_address_instance = None
                 try:
@@ -145,6 +158,8 @@ def checkout(request):
                 source = stripe.Customer.create_source(
                     user_stripe,
                     source= token)
+
+
 
                 charge = stripe.Charge.create(
                     amount= int(new_order.final_total * 100),
@@ -164,6 +179,9 @@ def checkout(request):
                 )
 
                 context= {
+                    "billing_form": billing_form,
+                    "address_form": address_form,
+                    "billing_form": billing_form,
                     "cart": cart,
                     "order" : new_order,
                     "shipping_address": shipping_address_instance,
@@ -183,6 +201,9 @@ def checkout(request):
                     cart.save()
                     del request.session['cart_id']
                     context= {
+                        "billing_form": billing_form,
+                        "address_form": address_form,
+                        "billing_form": billing_form,
                         "cart": cart,
                         "order" : new_order,
                         "shipping_address": new_order.shipping_address,
@@ -191,10 +212,11 @@ def checkout(request):
                     return render(request,'orders/Confirmed Order.html',context)
 
     context = {
+        "billing_form": billing_form,
         "order":new_order,
         "address_form": address_form,
         "current_addresses": current_addresses,
-        "billing_addresses": billing_addresses,
+        "billing_addresses": billing_addresses2,
         "stripe_pub": stripe_pub,
         "cart" : cart
     }
