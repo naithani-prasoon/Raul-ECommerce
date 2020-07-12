@@ -38,13 +38,15 @@ def secondHome(request):
     if 'register' in request.POST:
         request.session.set_expiry(60)
         if Register_form.is_valid():
+            
             Register_form.save()
             Register_form = forms.CreateUserForm()
-            context = {'form': form,"Register_form": Register_form}
+            context = {'form': form,"Register_form" : Register_form}
             messages.success(request, f'Your account has been created! You are now able to log in')
             return render(request, 'Raul/home.html',context)
         else:
             messages.error(request, Register_form.error_messages)
+            form = forms.LoginForms()
             context = {'form': form,"Register_form": Register_form}
             return render(request, 'Raul/home.html',context)
 

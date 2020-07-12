@@ -88,19 +88,14 @@ class LoginForms(forms.Form):
 
 
 class CreateUserForm(UserCreationForm):
-    email= forms.EmailField(label="Email")
-    first_name = forms.CharField(max_length=30, required=False )
-    last_name = forms.CharField(max_length=30, required=False )
+    username= forms.EmailField(label="Email")
     class Meta:
         model = User
-        fields = ['username', 'first_name','last_name', 'email', 'password1', 'password2']
-        password1= forms.CharField(label="Password")
+        fields = ['username', 'password1', 'password2']
         widgets = {
-            'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
-            'email': forms.TextInput(attrs = {'placeholder': 'E-Mail'}),
             'password1': forms.TextInput(attrs = {'placeholder': 'Password'}),
             'password2': forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),
-            'first_name': forms.TextInput(attrs= {'placeholder' : 'First Name'}),
+
         }
 
     def clean_email(self):
