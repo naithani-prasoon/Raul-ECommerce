@@ -2469,12 +2469,35 @@ nav ul li a:hover{
     .bannerThird{
         height:100vh;
         width:100%;
-        background-image: url('Images/bannerSecond.jpg');
-        background-size: cover;
+        background-color: #6d6d6d;
+    }
+
+    .bannerThird .section{
+        display:grid;
+        grid-template-columns: 45% 10% 45%;
+        padding:40px 30px;
+        width:90%;
+        margin: 0 auto;
+        height:90%;
+    }
+
+    .section .firstSection{
+        background:url('Images/bannerSecond.jpg');
+        width:100%;
+        height: 100%;
+        background-position: center bottom;
         position: relative;
     }
 
-    .bannerThird .textHover{
+    .section .secondSection{
+        background: url('Images/bannerThird.jpg');
+        width:100%;
+        background-position: center;
+        height: 100%;
+        position: relative;
+    }
+
+    .textHover{
         transition: 0.5s ease-in-out;
         opacity: 0;
         position: absolute;
@@ -2484,7 +2507,11 @@ nav ul li a:hover{
         -ms-transform: translate(-50%, -50%);
     }
 
-    .bannerThird:hover .textHover{
+    .firstSection:hover .textHover{
+        opacity: 1;
+    }
+
+    .secondSection:hover .textHover{
         opacity: 1;
     }
 
@@ -2497,6 +2524,17 @@ nav ul li a:hover{
         text-align: center;
         font-size:1.5em;
         letter-spacing: 5px;
+    }
+
+    .filler{
+        width:800px;
+        height:100px;
+    }
+
+    #borderBottom{
+        border-bottom: 2px solid #cfbb63;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .collectionBanner figcaption{
