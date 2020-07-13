@@ -20,14 +20,14 @@
  function navbarFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("hideOnScroll").style.color = "white";
-        document.getElementById("categoryP").style.opacity = "1";
+        document.getElementById("hideOnScroll").style.opacity = "1";
         document.getElementById("headerOnScroll").style.height = "7.5em";
         document.getElementById("headerOnScroll").style.background = "#6d6d6d";
         document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 5px 1px rgba(0,0,0,0.5)";
         
     } else {
         document.getElementById("hideOnScroll").style.background = "transparent";
-        document.getElementById("categoryP").style.opacity = "0";
+        document.getElementById("hideOnScroll").style.opacity = "0";
         document.getElementById("hideOnScroll").style.color = "transparent";
         document.getElementById("headerOnScroll").style.background = "transparent";
         document.getElementById("headerOnScroll").style.height = "7.5em";

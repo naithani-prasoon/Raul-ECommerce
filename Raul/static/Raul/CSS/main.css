@@ -7,7 +7,7 @@ html,body{
     width: 100%;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    background-color: #333333;
+    background-color: #6d6d6d;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
@@ -184,7 +184,7 @@ nav ul li a:hover{
         height: 3.5em;
         grid-template-columns: auto 3em;
         box-shadow: 0px 0px 5px 1px black;
-        background: #333333;
+        background: #6d6d6d;
         max-height: 3.5em;
     }
 
@@ -226,46 +226,42 @@ nav ul li a:hover{
         backface-visibility: hidden;
     }
 
-    .bannerHeading figcaption{
-        font-size: 1.5em;
-        background-color: transparent;
-        width:100%;
-        height:auto;
+    .bannerHeading{
         position: absolute;
         top:50%;
-        left:0;
+        left:0%;
+        width: 100%;
+    }
+
+    .bannerHeading figcaption{
+        background-color: #6d6d6d;
+        width:60%;
+        height:auto;
         text-align: center;
-        color:white;
+        margin: 0 auto;
         font-family: 'Roboto', sans-serif;
         font-weight:700;
     }
 
     .bannerHeading figcaption a button{
-        background:transparent;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin:20px;
         font-family: 'Roboto', sans-serif;
-        font-size:0.8em;
+        font-size:20px;
         outline: none;
         padding:20px;
         border: none;
-        color: white;
         transition: 0.5s ease;
         display: block;
         margin-right: auto;
         margin-left: auto;
-        border: 1px solid white;
         box-sizing: border-box;
         font-weight: bold;
     }
 
-    .bannerHeading figcaption a button:hover{
-        background-color: white;
-        color:#595959;
-        cursor: pointer;
-    }
-
     .horizontalScroll{
-        background-color: #bebebe;
         height: 850px;
         width:100%;
         padding:50px 0px 0px 0px;
@@ -277,11 +273,13 @@ nav ul li a:hover{
     }
 
     .featureProductsHeading{
-        color:#cfbb63;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-size:60px;
         text-align: center;
         width:100%;
-        padding-top:70px;
+        padding:50px 0px;
     }
 
     .marquee{
@@ -291,107 +289,27 @@ nav ul li a:hover{
         overflow: hidden;
     }
 
-    .marqueeContent{
-        list-style: none;
-        height:100%;
-        display: flex;
-        animation: scrolling 30s linear infinite;
+    .mobileGrid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%;
     }
 
-    @keyframes scrolling{
-        0%{
-            transform: translateX(0);
-        }
-        100%{
-            transform: translateX(-198vw);
-        }
-    }
-
-    .marqueeContent li{
-        width:20vw;
-        padding:0px 100px;
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        flex-shrink: 0;
-        white-space: nowrap;
-    }
-
-    .horizontalScroll .container{
-        position: relative;
-        padding:20px;
-        flex: 0 0 auto;
-    }
-
-    .horizontalScroll .container .imageAvatar{
-        opacity: 1;
+    .mobileGrid .imageAvatar{
         display: block;
-        width: 100%;
+        width: 90%;
         height: auto;
+        padding:10px;
+        margin:0 auto;
         transition: 0.4s ease-in-out;
-        backface-visibility: hidden;
-    }
-
-    .horizontalScroll .container .text{
-        transition: 0.5s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-    }
-
-    .horizontalScroll .container .textInfo{
-        background-color: rgba(0,0,0,0.8);
-        color: #cfbb63;
-        font-weight: bold;
-        font-size: 32px;
-        padding: 16px 32px;
-        text-align: center;
-        letter-spacing: 1px;
-        transition: 0.4s ease-in-out;
-    }
-
-    .container button{
-        width: auto;
-        height: auto;
-        background-color: #6d6d6d;
-        outline: none;
-        border: none;
-        color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
-        font-size: 45px;
-        margin:250px 0px 0px 20px;
-    }
-
-    .container span{
-        color:#cfbb63;
-        font-size:20px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .container:hover .imageAvatar{
-        opacity: 0.8;
-        filter: brightness(60%) grayscale(100%);
-        box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.5);
-    }
-
-    .container:hover .text{
-        opacity: 1;
-        cursor: pointer;
-    }
-
-    .container .textInfo:hover{
-        padding:18px 34px;
-        font-size: 34px;
     }
 
     .shopBanner{
         width:100%;
         height:8em;
-        color: #cfbb63;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-align: center;
         padding:10px 0px 30px 0px;
         font-size:10px;
@@ -403,7 +321,9 @@ nav ul li a:hover{
     }
 
     .shopBanner a{
-        color:#cfbb63;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .shopBanner a:hover{
@@ -429,7 +349,9 @@ nav ul li a:hover{
     .furnitureHeading{
         font-size:30px;
         font-family: 'Roboto', sans-serif;
-        color: #cfbb63;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         padding-left: 30px;
         font-weight: bolder;
         text-transform: lowercase;
@@ -439,7 +361,9 @@ nav ul li a:hover{
 
     .furnitureHeading a{
         text-decoration: none;
-        color:#cfbb63;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-align: right;
         padding-right:30px;
         padding-top:10px;
@@ -457,20 +381,9 @@ nav ul li a:hover{
         border-radius: 50px;
     }
 
-    .bannerSecond{
-        background-image: url('Images/bannerThird.jpg');
-        height:100vh;
-        width: 100%;
-        position: relative;
-        background-position: center;
-        background-size: cover;
-    }
-
     .mobile-shopBanner{
         width:100%;
-        background:#333333;
         height:250px;
-        color: #cfbb63;
         text-align: center;
         padding-top:1em;
         font-family: 'Roboto', sans-serif;
@@ -481,10 +394,56 @@ nav ul li a:hover{
     .mobile-shopBanner figcaption{
         font-size:2em;
         padding:80px 0px 40px 0px;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .bannerThird{
+        height:100vh;
+        width:100%;
+        background-color: #6d6d6d;
+    }
+
+    .bannerThird .section{
+        display:grid;
+        grid-template-rows: 45% 10% 45%;
+        padding:50px 0px;
+        width:90%;
+        margin: 0 auto;
+        height:90%;
+    }
+
+    .section .firstSection{
+        background:url('Images/bannerSecond.jpg');
+        width:100%;
+        height: 100%;
+        background-position: center bottom;
+        position: relative;
+    }
+
+    .section .secondSection{
+        background: url('Images/bannerThird.jpg');
+        width:100%;
+        background-position: center;
+        height: 100%;
+        position: relative;
+    }
+
+    .textHover{
+        transition: 0.5s ease-in-out;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        padding:10px;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        columns: #6d6d6d;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
     }
 
     footer{
-        height:300px;
+        display: none;
     }
 
     #scrollTop {
@@ -3033,10 +2992,11 @@ nav ul li a:hover{
         color:black;
         display: none;
         position: fixed;
-        background-color: #535353;
+        background-color: #6d6d6d;
         min-width: 180px;
-        right:8%;
-        top:8%;
+        right:30px;
+        top:60px;
+        border: 1px solid rgba(0,0,0,0.6);
         min-height: 100px;
         box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.2);
         z-index: 107;
@@ -3045,7 +3005,6 @@ nav ul li a:hover{
         transition: 0.4s ease-in-out;
         text-align: center;
         animation: fadeInNavBar 1s;
-        border-radius: 40px;
     }
 
     @keyframes fadeInNavBar{
@@ -3082,7 +3041,8 @@ nav ul li a:hover{
         color:black;
         display: none;
         position: fixed;
-        background-color: #535353;
+        background-color: #6d6d6d;
+        border:1px solid rgba(0,0,0,0.6);
         min-width: 250px;
         left:4%;
         top:8%;
@@ -3094,7 +3054,6 @@ nav ul li a:hover{
         transition: 0.4s ease-in-out;
         text-align: center;
         animation: fadeInNavBar 1s;
-        border-radius: 40px;
     }
 
     .headers figure .navbarIcons .hoverDiv2 span{
@@ -3130,7 +3089,8 @@ nav ul li a:hover{
         color:black;
         display: none;
         position: fixed;
-        background-color: #535353;
+        background-color: #6d6d6d;
+        border:1px solid rgba(0,0,0,0.6);
         min-width: 250px;
         left:8%;
         top:8%;
@@ -3142,7 +3102,6 @@ nav ul li a:hover{
         transition: 0.4s ease-in-out;
         text-align: center;
         animation: fadeInNavBar 1s;
-        border-radius: 40px;
     }
 
     .headers figure .navbarIcons .hoverDiv3 span{
@@ -3169,18 +3128,20 @@ nav ul li a:hover{
         justify-content: center;
         padding-bottom:25px;
         height: 100%;
-        font-weight: 400;
+        
     }
 
     .category p{
         padding:0px 40px;
-        transition: 0.2s ease-in;
+        transition: 0.2s ease-in-out;
         font-size:15px;
         letter-spacing: 1px;
+        position: relative;
+        font-weight: 300;
     }
 
     .category p:hover{
-        font-weight: 900;
+        font-weight: 500;
         cursor: pointer;
     }
 
