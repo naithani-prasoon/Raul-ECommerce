@@ -137,6 +137,7 @@ def SectionView(request, sec):
             user = authenticate(username=username,password=password)
             context = {'cats': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             login(request,user)
+            a = 4
             return render(request, template,context)
     return render(request, template,context)
 
