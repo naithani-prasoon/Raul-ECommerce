@@ -88,26 +88,24 @@ class LoginForms(forms.Form):
 
 
 class CreateUserForm(UserCreationForm):
-    email= forms.EmailField(label="Email")
-    first_name = forms.CharField(max_length=30, required=False )
-    last_name = forms.CharField(max_length=30, required=False )
+    username= forms.EmailField(label="Email")
+    email = forms.HiddenInput()
     class Meta:
         model = User
-        fields = ['username', 'first_name','last_name', 'email', 'password1', 'password2']
-        password1= forms.CharField(label="Password")
+        fields = ['username', 'password1', 'password2','email']
         widgets = {
-            'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
-            'email': forms.TextInput(attrs = {'placeholder': 'E-Mail'}),
             'password1': forms.TextInput(attrs = {'placeholder': 'Password'}),
             'password2': forms.TextInput(attrs = {'placeholder': 'Confirm Password'}),
-            'first_name': forms.TextInput(attrs= {'placeholder' : 'First Name'}),
+            'email': forms.HiddenInput()
+
         }
 
     def clean_email(self):
         email= self.cleaned_data.get("email")
+        print(email)
         user_count= User.objects.filter(email=email).count()
         print(user_count)
-        if user_count > 0:
+        if user_count > 25:
             raise forms.ValidationError("This email has already been used")
         return email
 

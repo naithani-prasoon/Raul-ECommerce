@@ -3,8 +3,13 @@ import stripe
 from django.conf import settings
 from django.contrib.auth.signals import user_logged_in
 
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+from django.utils.translation import gettext_lazy as _
 
-# Create your models here.
+
+
+
 
 class UserDefaultAddress(models.Model):
     user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
@@ -106,3 +111,4 @@ class BillingAddress(models.Model):
 
     class Meta:
         ordering = ['-updated', '-time_stamp']
+
