@@ -114,8 +114,8 @@ def SectionView(request, sec):
     template = 'Raul/categories.html'
     form = forms.LoginForms(request.POST or None)
     Register_form = forms.CreateUserForm(request.POST or None)
-    cat_products = product.objects.filter(category__iexact=sec)
-    context = {'cats': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
+    cat_products = product.objects.filter(section__iexact=sec)
+    context = {'sec': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
     if 'register' in request.POST:
         request.session.set_expiry(60)
         if Register_form.is_valid():
@@ -129,7 +129,7 @@ def SectionView(request, sec):
         else:
             messages.error(request, Register_form.error_messages)
             form = forms.LoginForms()
-            context = {'cats': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
+            context = {'sec': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             return render(request, template,context)
 
     if 'login' in request.POST:
@@ -137,7 +137,7 @@ def SectionView(request, sec):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user = authenticate(username=username,password=password)
-            context = {'cats': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
+            context = {'sec': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             login(request,user)
             a = 4
             return render(request, template,context)
