@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, HttpResponseRedirect, redirect
 from django.urls import reverse
 from .models import CartItem, Cart
@@ -116,8 +117,6 @@ def remove_from_cart(request, id):
 
 
 def add_to_cart(request, slug):
-
-
     request.session.set_expiry(3000000)
     Check = False
     Zero_Check = False
@@ -229,5 +228,6 @@ def add_to_cart(request, slug):
     cart.pennies_total = cart.total * 100
     cart.save()
     time.sleep(1.5)
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return HttpResponse('<script>history.back();</script>')
+
     #return redirect(reverse("cart"))

@@ -1,6 +1,6 @@
+{% extends "Raul/base.html" %}
 <!DOCTYPE html>
 {% load static %}
-{% extends "Raul/base.html" %}
 {% block content %}
 <html>
 <head>
@@ -56,6 +56,18 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+<input type="hidden" id="refreshed" value="false">
+<script type="text/javascript">
+    $(window).load(function(){
+        if ($('#refreshed').val() == "false") {
+            $('#refreshed').val("true");
+        }
+        else {
+            $('#refreshed').val("false");
+            location.reload();
+        }
+    });
 </script>
 </body>
 
