@@ -226,12 +226,12 @@ def add_to_cart(request, slug):
     cart.total = round(new_total,2)
     cart.pennies_total = cart.total * 100
     cart.save()
-    time.sleep(1.5)
+    time.sleep(1.1)
     return HttpResponse('<script>history.back();</script>')
 
 
 def update_cart(request, slug):
-    print("Hello")
+    print("Update")
     request.session.set_expiry(3000000)
     Check = False
     Zero_Check = False
