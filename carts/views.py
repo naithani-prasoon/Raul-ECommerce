@@ -226,7 +226,7 @@ def add_to_cart(request, slug):
     cart.total = round(new_total,2)
     cart.pennies_total = cart.total * 100
     cart.save()
-    time.sleep(1.1)
+    time.sleep(1.5)
     return HttpResponse('<script>history.back();</script>')
 
 
