@@ -15,5 +15,8 @@ def press(request):
 def clientList(request):
     return render(request,'Raul_Inc/clientList.html')
 
+def contact(request):
+    return render(request,'Raul_Inc/contact.html')
+
 
 

@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/RaulHead.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/clientList.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,14 +177,7 @@
       <workItem from="1594614210691" duration="4441000" />
       <workItem from="1594693518557" duration="1269000" />
       <workItem from="1594750035028" duration="9205000" />
-      <workItem from="1594766165175" duration="2509000" />
-    </task>
-    <task id="LOCAL-00028" summary="email unique and required22">
-      <created>1591840890444</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1591840890444</updated>
+      <workItem from="1594766165175" duration="4376000" />
     </task>
     <task id="LOCAL-00029" summary="email unique and required222">
       <created>1591845711135</created>
@@ -522,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594766394056</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Raul_Inc">
+      <created>1594841900780</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1594841900780</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +543,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="I think address works with stripe?" />
     <MESSAGE value="stripe?" />
     <MESSAGE value="stripe? 2" />
     <MESSAGE value="stripe..." />
@@ -568,7 +567,8 @@
     <MESSAGE value="Back Featues" />
     <MESSAGE value="Form and backtrack" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="Raul_Inc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Raul_Inc" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="123" width="817" height="568" key="#Project_Structure" timestamp="1594750903967">
@@ -589,8 +589,8 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="328" y="23" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1594766393680">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1594841900432">
+      <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1593651458432" />
@@ -604,7 +604,7 @@
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="23" y="23" width="1417" height="823" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1594362197869" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
-    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594595865419" />
+    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594841900432" />
     <state x="30" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1594759285227" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
@@ -659,8 +659,8 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="195" key="Vcs.Push.Dialog.v2" timestamp="1594766401836">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1594841968909">
+      <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1593651469381" />
@@ -672,7 +672,7 @@
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.815@0.23.1440.815" timestamp="1594766401836" />
     <state x="1867" y="317" key="Vcs.Push.Dialog.v2/0.23.1440.817/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594608822255" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594595873262" />
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594841968909" />
     <state x="427" y="231" key="Vcs.Push.Dialog.v2/0.23.1920.988@0.23.1920.988" timestamp="1594759306632" />
     <state x="100" y="203" width="1240" height="615" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1594577604264">
       <screen x="0" y="23" width="1440" height="815" />
