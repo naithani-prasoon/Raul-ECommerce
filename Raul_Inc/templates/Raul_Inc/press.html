@@ -1,10 +1,508 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+{% load static %}
+<html lang="en-US"><head>
+    <title>Raúl Àvila Inc.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/font-awesome.min.css' %}">
+    <style>
+        #press {
+            margin: 0 auto;
+            text-align: left;
+            margin-top: 13%;
+            width: 640px;
+            margin-bottom: 200px;
+        }
+        #press #articles {
+            margin-top: 24px;
+        }
+        .presscolumn {
+            display: inline-block;
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 200px;
+            margin-right: 10px;
+        }
+        .pressitem {
+            display: block;
+            vertical-align: middle;
+            text-align: center;
+            width: 200px;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+        .pressitem img {
+            width: 160px;
+        }
+        body {
+            /*  background-image: url("client/_awards/2017-02_1cropped.jpg");
+              background-size: cover;
+              background-repeat: no-repeat;
+            */
+        }
+        .coverImages, .thumbImages {
+            display: none;
+        }
+        .coverImages img {
+            width: 500px;
+        }
+    </style>
 </head>
+
 <body>
 
-</body>
-</html>
+<link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/font-awesome.min.css' %}">
+
+<div id="navcontainer" class="fixed">
+    <div id="logo" class="home-logo"><img src="{%static 'Raul_Inc/Images/raulAvilaInc.png' %}"></div>
+    <ul id="navlist">
+        <li><a href="{%url 'Raul_Inc_Home' %}">HOME</a></li>
+        <li><a href="{%url 'Raul_Inc_Bio' %}">BIO</a></li>
+        <li><a href="{%url 'Raul_Inc_Press' %}">PRESS</a></li>
+        <li><a href="{%url 'Raul_Inc_clientList' %}">CLIENT LIST</a></li>
+        <li><a href="client/gallery.html">GALLERY</a></li>
+        <li><a href="{%url 'Raul_Inc_contact' %}">CONTACT</a></li>
+        <li>
+            <div id="social">
+                <a href="https://www.facebook.com/RAULAVILAINC" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/RaulAvilaInc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="http://instagram.com/raulavilainc" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="pageContent">
+
+    <div id="press">
+        <div class="presscolumn">
+            <div class="pressitem">
+                <a href="press-NYTimes.html">
+                    <img src="{% static 'Raul_Inc/Images/TheNYT-Logo.png' %}">        </a></div>
+
+
+            <div class="pressitem">
+                <a href="2019-pressvoguecom.html">
+                    <img src="{% static 'Raul_Inc/Images/voguecom-logowdotcom.png'  %}">        </a>      </div>
+
+            <div class="pressitem">
+                <a href="press-the-worlds-best-events.html">
+                    <img src="{% static 'Raul_Inc/Images/The-Worldsbestevents.png' %}">        </a>
+            </div>
+            <div class="pressitem">
+                <a href="press-jet-set.html">
+                    <img src="{% static 'Raul_Inc/Images/jetset.png' %}">
+                </a>
+            </div>
+            <div class="pressitem">
+                <a href="press-ny-post.html">
+                    <img src="{% static 'Raul_Inc/Images/newyorkpost.png' %}">
+                </a>
+            </div>
+            <div class="pressitem">
+                <a href="press-dailyfrontrow.html">
+                    <img src="{% static 'Raul_Inc/Images/dailyfrontrow.png' %}">
+                </a>
+            </div>
+        </div>
+        <div class="presscolumn">
+
+            <div class="pressitem">
+                <a href="press-NY-Magazine.html">
+                    <img src="{% static 'Raul_Inc/Images/NY-Mag-thecut.png' %}">        </a></div>
+
+            <div class="pressitem">
+                <a href="pressvogue.html">
+                    <img src="{% static 'Raul_Inc/Images/voguemagazine-logo.png' %}">
+                </a>
+            </div>
+            <div class="pressitem">
+                <a href="presswwd.html">
+                    <img src="{% static 'Raul_Inc/Images/wwd.png' %}">
+                </a>
+            </div>
+            <div class="pressitem">
+                <a href="press-looktothestars.html">
+                    <img src="{% static 'Raul_Inc/Images/looktothestars.png' %}">
+                </a>
+            </div>
+            <div class="pressitem">
+                <a href="press-pretaporter.html">
+                    <img src="{% static 'Raul_Inc/Images/pretareporter.png' %}">
+                </a>
+            </div>
+            <div class="pressitem">
+                <a href="#" target="_blank">
+                    <img src="{% static 'Raul_Inc/Images/Blank.png' %}">
+                </a>
+            </div>
+        </div>
+        <div class="presscolumn">
+            <div class="pressitem">
+                <a href="press-coveteur.html">
+                    <img src="{% static 'Raul_Inc/Images/Coveteur.png' %}">        </a>      </div>
+            <div class="pressitem">
+                <a href="press-mtv.html">
+                    <img src="{% static 'Raul_Inc/Images/MTV.png' %}">        </a>      </div>
+            <div class="pressitem">
+                <a href="press-met.html">
+                    <img src="{% static 'Raul_Inc/Images/themet-wonb.png' %}">        </a>      </div>
+
+            <div class="pressitem">
+                <a href="press-trendencias.html">
+                    <img src="{% static 'Raul_Inc/Images/trendencias.png' %}">        </a>      </div>
+            <div class="pressitem">
+                <a href="http://www.firstmondayinmay.com/" target="_blank">
+                    <img src="{% static 'Raul_Inc/Images/firstmonday.png' %}">
+                </a>
+            </div>
+
+            <div class="pressitem">
+                <a href="#" target="_blank">
+                    <img src="{% static 'Raul_Inc/Images/Blank.png' %}">
+                </a>
+            </div>
+        </div>
+
+        <!--
+            <ul class="menu" id="menu">
+              <li>
+                <a href="#">Vogue</a>
+                <div class="sc_menu_wrapper">
+                  <div class="sc_menu">
+                    <a href="#"><img src="i/retinaThumbs/August_2016_1.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/August 2016 1.jpg"/></li>
+                        <li><img src="gallery/August 2016 2.jpg"/></li>
+                        <li><img src="gallery/August 2016 4-5.jpg"/></li>
+                        <li><img src="gallery/August 2016 7.jpg"/></li>
+                        <li><img src="gallery/August 2016 9.jpg"/></li>
+                        <li><img src="gallery/August 2016 12-13.jpg"/></li>
+                        <li><img src="gallery/August 2016 16.jpg"/></li>
+                        <li><img src="gallery/August 2016 17.jpg"/></li>
+                        <li><img src="gallery/August 2016 18-19.jpg"/></li>
+                        <li><img src="gallery/August 2016 21.jpg"/></li>
+                        <li><img src="gallery/August 2016 22.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/august_2015_final_1.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/August 2015 FINAL 1.jpg"/></li>
+                        <li><img src="gallery/August 2015 FINAL 2.jpg"/></li>
+                        <li><img src="gallery/August 2015 FINAL 3.jpg"/></li>
+                        <li><img src="gallery/August 2015 FINAL 4.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/met_2015_final_1.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/Met 2015 FINAL 1.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 2.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 3.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 4.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 5.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 6.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 7.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 8.jpg"/></li>
+                        <li><img src="gallery/Met 2015 FINAL 9.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/met_2014_final_1.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/Met 2014 FINAL 1.jpg"/></li>
+                        <li><img src="gallery/Met 2014 FINAL 2.jpg"/></li>
+                        <li><img src="gallery/Met 2014 FINAL 3-4.jpg"/></li>
+                        <li><img src="gallery/Met 2014 FINAL 5.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/met_2013_final_1.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/Met 2013 FINAL 1.jpg"/></li>
+                        <li><img src="gallery/Met 2013 FINAL 4.jpg"/></li>
+                        <li><img src="gallery/Met 2013 FINAL 5.jpg"/></li>
+                        <li><img src="gallery/Met 2013 FINAL 3.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/july_2012_final_1.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/July 2012 FINAL 1.jpg"/></li>
+                        <li><img src="gallery/July 2012 FINAL 3-4.jpg"/></li>
+                        <li><img src="gallery/July 2012 FINAL 5.jpg"/></li>
+                        <li><img src="gallery/July 2012 FINAL 6.jpg"/></li>
+                        <li><img src="gallery/July 2012 FINAL 7.jpg"/></li>
+                        <li><img src="gallery/July 2012 FINAL 8.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/march_2012_final_1.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/March 2012 FINAL 1.jpg"/></li>
+                        <li><img src="gallery/March 2012 FINAL 4.jpg"/></li>
+                        <li><img src="gallery/March 2012 FINAL 5.jpg"/></li>
+                        <li><img src="gallery/March 2012 FINAL 7.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/15.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2011 July/July2011cover.jpg"/></li>
+                        <li><img src="gallery/2011 July/03_04_RevelRevel.jpg"/></li>
+                        <li><img src="gallery/2011 July/05_RevelRevel.jpg"/></li>
+                        <li><img src="gallery/2011 July/06_RevelRevel.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/14.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2010/2010 August/AugustCover2010.jpg"/></li>
+                        <li><img src="gallery/2010/2010 August/02_MirandaBrooks.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/12.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2009 July/JulyCover2009.jpg"/></li>
+                        <li><img src="gallery/2009 July/01_TheWildBunch.jpg"/></li>
+                        <li><img src="gallery/2009 July/02_TheWildBunch.jpg"/></li>
+                        <li><img src="gallery/2009 July/05_TheWildBunch.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/10.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2008 July/JulyCover2008.jpg"/></li>
+                        <li><img src="gallery/2008 July/01_02_Hero'sWelcome.jpg"/></li>
+                        <li><img src="gallery/2008 July/06_Hero'sWelcome.jpg"/></li>
+                        <li><img src="gallery/2008 July/07_Hero'sWelcome.jpg"/></li>
+                        <li><img src="gallery/2008 July/08_Hero'sWelcome.jpg"/></li>
+                        <li><img src="gallery/2008 July/12_Hero'sWelcome.jpg"/></li>
+                        <li><img src="gallery/2008 July/Superheroic.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/11.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2008 March/MarchCover2008.jpg"/></li>
+                        <li><img src="gallery/2008 March/01_TheBrideWoreRicci.jpg"/></li>
+                        <li><img src="gallery/2008 March/03_04_TheBrideWoreRicci.jpg"/></li>
+                        <li><img src="gallery/2008 March/05_TheBrideWoreRicci.jpg"/></li>
+                        <li><img src="gallery/2008 March/06_TheBrideWoreRicci.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/09.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2007 July/JulyCover.jpg"/></li>
+                        <li><img src="gallery/2007 July/01_02_GrandAffair.jpg"/></li>
+                        <li><img src="gallery/2007 July/03_GrandAffair.jpg"/></li>
+                        <li><img src="gallery/2007 July/05_06_GrandAffair.jpg"/></li>
+                        <li><img src="gallery/2007 July/08_GrandAffair.jpg"/></li>
+                        <li><img src="gallery/2007 July/09_10_GrandAffair.jpg"/></li>
+                        <li><img src="gallery/2007 July/NightattheMuseum.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/08.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2007 January/JanuaryCover.jpg"/></li>
+                        <li><img src="gallery/2007 January/01_StarQuality.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/07.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2005 2006/2006 November/NovemberCover.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2006 November/ExhibitA.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/06.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2005 2006/2006 May/MayCover.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2006 May/01_LaurenDavis.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2006 May/02_LaurenDavis.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/05.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2005 2006/2006 February/FebruaryCover.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2006 February/01_HomeAgain.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2006 February/02_HomeAgain.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/04.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2005 2006/2006 January/JanuaryCover.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2006 January/01_WhiteNight.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2006 January/02_WhiteNight.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/03.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2005 2006/2005 June/JuneCover.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2005 June/01_Weekenders.jpg"/></li>
+                        <li><img src="gallery/2005 2006/2005 June/02_Weekenders.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/02.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2004/2004 November/01_NovemberCover.jpg"/></li>
+                        <li><img src="gallery/2004/2004 November/01_HelloBeautiful.jpg"/></li>
+                        <li><img src="gallery/2004/2004 November/02_HelloBeautiful.jpg"/></li>
+                        <li><img src="gallery/2004/2004 November/03_HelloBeautiful.jpg"/></li>
+                        <li><img src="gallery/2004/2004 November/01_PilgrimsProgress.jpg"/></li>
+                        <li><img src="gallery/2004/2004 November/02_PilgrimsProgress.jpg"/></li>
+                      </ul>
+                    </a>
+                    <a href="#"><img src="i/retinaThumbs/01.jpg" alt=""/>
+                      <ul class="coverImages">
+                        <li><img src="gallery/2004/2004 October/01.jpg"/></li>
+                        <li><img src="gallery/2004/2004 October/02.jpg"/></li>
+                        <li><img src="gallery/2004/2004 October/03.jpg"/></li>
+                      </ul>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Vogue.com</a>
+                <div class="sc_menu_wrapper">
+                  <div class="sc_menu">
+                    <a href="#"><img firstCover="gallery/vogue.com/original/rose-wall.jpg" src="gallery/vogue.com/rose-wall.jpg"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/met-gala-by-numbers.jpg" src="gallery/vogue.com/met-gala-by-numbers.jpg"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/beyonce-holding.jpg" src="gallery/vogue.com/beyonce-holding.jpg"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/walk-the-red-carpet.png" src="gallery/vogue.com/walk-the-red-carpet.png"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/watch-met-gala-centerpiece.png" src="gallery/vogue.com/watch-met-gala-centerpiece.png"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/raul.jpg" src="gallery/vogue.com/raul.jpg"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/met-gala-party-planning-tips.jpg" src="gallery/vogue.com/met-gala-party-planning-tips.jpg"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/party-planning-tips-fmm.png" src="gallery/vogue.com/party-planning-tips-fmm.png"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/flowers-day-of-the-dead.jpg" src="gallery/vogue.com/flowers-day-of-the-dead.jpg"></a>
+                    <a href="#"><img firstCover="gallery/vogue.com/original/moments-from-ny-fashion-week.jpg" src="gallery/vogue.com/moments-from-ny-fashion-week.jpg"></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Pret-a-Porter</a>
+                <div class="sc_menu_wrapper">
+                  <div class="sc_menu">
+                    <a href="#"><img firstCover="" src="gallery/pret-a-porter/pink-peonies.jpg"></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">New York Post</a>
+                <div class="sc_menu_wrapper">
+                  <div class="sc_menu">
+                    <a href="#"><img firstCover="" src="gallery/new-york-post/anna-wintour.jpg"></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Jet Set</a>
+                <div class="sc_menu_wrapper">
+                  <div class="sc_menu">
+                    <a href="#"><img firstCover="" src="i/jet-set-cover.png"></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Look to the Stars</a>
+                <div class="sc_menu_wrapper">
+                  <div class="sc_menu">
+                    <a href="#"><img firstCover="" src="gallery/looktothestars/kelly-osbourne.jpg"></a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Daily Front Row</a>
+                <div class="sc_menu_wrapper">
+                  <div class="sc_menu">
+                    <a href="#"><img firstCover="" src="gallery/dailyfrontrow/jourdan-dunn.jpg"></a>
+                  </div>
+                </div>
+              </li>
+            </ul> -->
+
+        <!--     <div class="jcarousel-wrapper">
+              <div id="carousel-stage" class="jcarousel">
+              </div>
+
+              <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+              <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+              <p class="jcarousel-pagination"></p>
+            </div>
+         -->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'Raul_Inc/JS/main.js' %}"></script>
+    <!-- <script type="text/javascript" src="js/lightbox.js"></script> -->
+    <script type="text/javascript" src="{% static 'Raul_Inc/JS/main.js' %}"></script>
+    <script type="text/javascript">
+        function initCarousel() {
+            $('.jcarousel').jcarousel();
+
+            $('.jcarousel-control-prev')
+                .on('jcarouselcontrol:active', function() {
+                    $(this).removeClass('inactive');
+                })
+                .on('jcarouselcontrol:inactive', function() {
+                    $(this).addClass('inactive');
+                })
+                .jcarouselControl({
+                    target: '-=1'
+                });
+
+            $('.jcarousel-control-next')
+                .on('jcarouselcontrol:active', function() {
+                    $(this).removeClass('inactive');
+                })
+                .on('jcarouselcontrol:inactive', function() {
+                    $(this).addClass('inactive');
+                })
+                .jcarouselControl({
+                    target: '+=1'
+                });
+
+            $('.jcarousel-pagination')
+                .on('jcarouselpagination:active', 'a', function() {
+                    $(this).addClass('active');
+                })
+                .on('jcarouselpagination:inactive', 'a', function() {
+                    $(this).removeClass('active');
+                })
+                .jcarouselPagination();
+        }
+        $(document).ready(function() {
+            var allPanels = $('.accordion > dd').hide();
+            var lastClicked = null;
+            $('.accordion > dt > a').click(function() {
+                allPanels.slideUp();
+                if(this!=lastClicked) {
+                    lastClicked = this;
+                    $(this).parent().next().slideDown();
+                }
+                else {
+                    lastClicked = null;
+                }
+                return false;
+            });
+
+            // var lightbox = new Lightbox({ query:".lightbox", config:"xml/layoutRA3.xml" });
+
+            function buildThumbs($elem){
+                var $wrapper      = $elem.next();
+                var $menu       = $wrapper.find('.sc_menu');
+                var inactiveMargin  = 150;
+
+                /* move the scroll down to the
+                beggining (move as much as the height of the menu) */
+
+                $wrapper.scrollTop($menu.outerHeight());
+
+                /* when moving the mouse up or down,
+                the wrapper moves (scrolls) up or down */
+
+                $wrapper.bind('mousemove',function(e){
+                    var wrapperHeight   = $wrapper.height();
+                    var menuHeight  = $menu.outerHeight() + 2 * inactiveMargin;
+                    var top   = (e.pageY - $wrapper.offset().top) * (menuHeight - wrapperHeight) / wrapperHeight - inactiveMargin;
+                    $wrapper.scrollTop(top+10);
+                });
+            }
+
+            var stacktime;
+
+        });
+    </script>
+
+
+</div></body></html>

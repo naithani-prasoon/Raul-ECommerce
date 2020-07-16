@@ -37,7 +37,6 @@ def profile(request):
     UserOrders = Order.objects.filter(user=User)
     print(UserOrders)
     userAddress = UserAddress.objects.filter(user=User)
-
     billing_address = BillingAddress.objects.filter(user=User)
     print(billing_address)
     context = {"UserOrders":UserOrders,"userAddress":userAddress, "billing_address":billing_address}
@@ -95,7 +94,10 @@ def add_billing_address(request):
 
 
 
-
+def delete_address(request, id):
+    address = UserAddress.objects.get(id=id)
+    address.delete()
+    return HttpResponseRedirect(reverse("profile"))
 
 # def search(request):
 #     try:
