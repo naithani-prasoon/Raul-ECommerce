@@ -26,15 +26,18 @@
         <a href="{% url 'del_add' billing.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
         {% endfor %}
     </div>
-    <div>
+    <li>
         {%  for myorder in UserOrders %}
         {% for item in myorder.cart.cartitem_set.all %}
-        {{ item.product }}
-        {{ item.quantity}}
-        {{item.product.price }}
+        <div>
+            {{ item.product }}
+
+            {{ item.quantity}}
+            {{item.product.price }}
+        </div>
         {% endfor %}
         {% endfor %}
-    </div>
+    </li>
 
 
 
