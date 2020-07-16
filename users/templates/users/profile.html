@@ -22,15 +22,18 @@
         {{ billing }}
         {% endfor %}
     </div>
-    <div>
+    <li>
         {%  for myorder in UserOrders %}
         {% for item in myorder.cart.cartitem_set.all %}
-        {{ item.product }}
-        {{ item.quantity}}
-        {{item.product.price }}
+        <div>
+            {{ item.product }}
+
+            {{ item.quantity}}
+            {{item.product.price }}
+        </div>
         {% endfor %}
         {% endfor %}
-    </div>
+    </li>
 
 
 
