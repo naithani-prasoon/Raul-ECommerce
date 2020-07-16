@@ -1,6 +1,7 @@
 {% extends "Raul/base.html" %}
 {% block content %}
 {% load crispy_forms_tags %}
+{%load static%}
 
 
 <!DOCTYPE html>
@@ -8,18 +9,21 @@
 <body>
 <div class="logining">
     <h1>{{user.username}}</h1>
-    <h1>{{user.email}}</h1>
-    {% for order in orders %}
-    {{ user.order }}
+    {%  for myorder in UserOrders %}
+    <div>
+        <li>{{myorder.order_id}}</li>
+    </div>
+
     {% endfor %}
 
     {% for userAdd in userAddress %}
-    {{ userAdd.address}}
-    {{ userAdd.address2}}
+    <input required type="hidden" name="shipping_address" value="{{ userAdd.id}}"/> {{ userAdd.get_address}} <br/>
+    <a href="{% url 'del_add' userAdd.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
     {% endfor %}
     <div>
         {% for billing in billing_address %}
-        {{ billing }}
+        <input required type="hidden" name="billing_address" value="{{ billing.id}}"/> {{ billing.get_address}} <br/>
+        <a href="{% url 'del_add' billing.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
         {% endfor %}
     </div>
     <div>

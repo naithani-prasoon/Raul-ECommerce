@@ -184,7 +184,7 @@ def add_to_cart(request, slug):
         elif int(qty) <= 0 and (Var_items == 1 or Var_items2 == 1):
             new_item.delete()
         else:
-            new_item.quantity = qty
+            new_item.quantity = int(qty)
             new_item.save()
 
 
@@ -195,7 +195,7 @@ def add_to_cart(request, slug):
             if int(qty) <= 0:
                 hi.delete()
             else:
-                hi.quantity = int(qty)
+                hi.quantity += int(qty)
                 hi.save()
             Var_items = 0
             Check = True
@@ -208,7 +208,7 @@ def add_to_cart(request, slug):
                 if int(qty) <= 0:
                     current_item.delete()
                 else:
-                    current_item.quantity = int(qty)
+                    current_item.quantity += int(qty)
                     current_item.save()
 
 

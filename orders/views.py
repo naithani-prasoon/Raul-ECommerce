@@ -32,7 +32,7 @@ def orders(request):
     template = "users/user.html"
     return render(request, template, context)
 
-@login_required
+
 def checkout(request):
     pyziptax.api_key = "OL9GNXzWjylg38ma"
     User = get_user(request)
@@ -56,7 +56,7 @@ def checkout(request):
     except Order.DoesNotExist:
         new_order = Order()
         new_order.cart = cart
-        new_order.user = request.user
+        ##new_order.user = request.user
         new_order.order_id = id_generator()
         new_order.sub_total = cart.total
         new_order.save()
@@ -84,21 +84,24 @@ def checkout(request):
         address_form = None
 
 
+    if User.is_authenticated:
+        try:
+            address_added = request.GET.get("billing_added")
+        except:
+            address_added = None
 
-    try:
-        address_added = request.GET.get("billing_added")
-    except:
-        address_added = None
+        if address_added is None:
+            billing_form = BillingAddressForm()
+        else:
+            billing_form = None
 
-    if address_added is None:
-        billing_form = BillingAddressForm()
+
+
+        current_addresses= UserAddress.objects.filter(user=User)
+        billing_addresses2 = BillingAddress.objects.filter(user=User)
     else:
-        billing_form = None
-
-
-
-    current_addresses= UserAddress.objects.filter(user=User)
-    billing_addresses2 = BillingAddress.objects.filter(user=User)
+        current_addresses= None
+        billing_addresses2 = None
 
 
 
@@ -134,6 +137,7 @@ def checkout(request):
             try:
                 user_stripe = request.user.userstripe.stripe_id
                 customer = stripe.Customer.retrieve(user_stripe)
+
             except:
                 customer = None
 
@@ -157,9 +161,8 @@ def checkout(request):
 
                 source = stripe.Customer.create_source(
                     user_stripe,
-                    source= token)
-
-
+                    source= token
+                )
 
                 charge = stripe.Charge.create(
                     amount= int(new_order.final_total * 100),
@@ -168,6 +171,8 @@ def checkout(request):
                     customer = customer,
                     description = "Test"
                 )
+                print(customer.id)
+
                 add_stripe_info = stripe.Customer.modify_source(
                     customer.id,
                     source.id,

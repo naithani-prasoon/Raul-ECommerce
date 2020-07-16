@@ -8,7 +8,7 @@ from carts.models import Cart, CartItem
 from django.contrib.auth import get_user
 from django.urls import reverse
 from users.models import UserAddress, UserDefaultAddress, BillingAddress
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user
 
 
 
@@ -43,6 +43,7 @@ def profile(request):
     return render(request, 'users/profile.html',context)
 
 def add_address(request):
+    User = get_user(request)
     try:
         next_page = request.GET.get("next")
     except:
@@ -51,8 +52,9 @@ def add_address(request):
         form = UserAddressForm(request.POST)
         if form.is_valid():
             new_address = form.save(commit=False)
-            new_address.user = request.user
-            new_address.save()
+            if User.is_authenticated:
+                new_address.user = request.user
+                new_address.save()
             is_default= form.cleaned_data["default"]
             billing = form.cleaned_data["billing"]
             First_Name = form.cleaned_data["zipcode"]
@@ -95,9 +97,17 @@ def add_billing_address(request):
 
 
 def delete_address(request, id):
-    address = UserAddress.objects.get(id=id)
-    address.delete()
-    return HttpResponseRedirect(reverse("profile"))
+    try:
+        address = UserAddress.objects.get(id=id)
+        address.delete()
+    except:
+        pass
+    try:
+        address = BillingAddress.objects.get(id=id)
+        address.delete()
+    except:
+        pass
+    return HttpResponseRedirect(reverse("checkout"))
 
 # def search(request):
 #     try:
