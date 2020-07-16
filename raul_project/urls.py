@@ -51,6 +51,7 @@ urlpatterns = [
     path('Raul_Inc/bio', Raul_Inc_Path.bio, name='Raul_Inc_Bio'),
     path('Raul_Inc/press', Raul_Inc_Path.press, name='Raul_Inc_Press'),
     path('Raul_Inc/clientList', Raul_Inc_Path.clientList, name='Raul_Inc_clientList'),
+    path('Raul_Inc/gallery', Raul_Inc_Path.gallery, name='Raul_Inc_gallery'),
     path('cart/', cart_views.view, name='cart'),
     path('ajax/add_user_address/',user_views.add_address, name='ajax_add_user_address'),
     path('ajax/add_user_billing_address/',user_views.add_billing_address, name='ajax_add_user_billing_address'),
