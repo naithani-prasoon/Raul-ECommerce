@@ -1,10 +1,42 @@
 body, html {
     width: 100%;
-    background-color: #767676;
+    background-color: #6d6d6d;
     margin:0;
     padding:0;
     font-family: 'Roboto',sans-serif;
     text-transform: none;
+}
+
+.photoSummary{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    margin: 20px 0px;
+}
+
+.photoSummary .photoSummaryColumn{
+    width:10vw;
+    padding:20px 0px;
+}
+
+
+.photoSummary .photoSummaryColumn img{
+    width: 100%;
+}
+
+.photoSummary .photoSummaryColumn1 h1{
+    font-size: 20px;
+    margin: 80px 0px;
+}
+
+.photoSummary .photoSummaryColumn2 h1{
+    font-size: 20px;
+    margin:80px 0px;
+}
+
+.headers{
+    background-color: #6d6d6d;
+    text-transform: lowercase;
 }
 
 .container2{
@@ -15,45 +47,39 @@ body, html {
 }
 
 .checkoutBanner{
-    height:300px;
-    width:1280px;
-    background:rgba(0,0,0,0.5);
-    padding-top: 80px;
-    margin:100px auto 50px auto;
-    text-align: center;
-    color:#cfbb63;
+    margin:50px 0px;
+    text-align: left;
 }
 
 .checkoutBannerHeading{
-    text-align: center;
-    padding:32px 32px;
-    max-width: 800px;
-    max-height: 300px;
-    margin:20px auto;
-    font-size: 80px;
-    color:#cfbb63;
-    font-weight: normal;
+    text-align: left;
+    padding:0px 32px;
+    font-size: 50px;
+    font-weight: 700;
     font-family: 'Roboto',sans-serif;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .checkoutPage{
-    width:100%;
+    width:80%;
     margin:200px auto;
 }
 
 .checkoutPageDivision{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 60% auto;
     margin:0px auto;
     padding:0px 20px;
     width:100%;
 }
 
 .leftColumn{
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     width:100%;
     max-height: auto;
+    padding:20px 0px;
 }
 
 .rightColumn{
@@ -61,18 +87,38 @@ body, html {
     grid-template-rows: 50% 50%s;
     margin:0px 50px 50px 20px;
     padding:0px 0px 50px 0px;
-    max-height: 900px;
+    max-height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding:40px;
+}
+
+.rightColumns{
+    max-height: 400px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding:40px;
+    margin: 0px 50px 50px 20px;
 }
 
 .rightColumn .summary {
-    color: #cfbb63;
     max-height: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    
 }
 
 .summary h1{
     font-size: 50px;
     padding:0px 50px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.summary h5{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 300;
+    font-style: italic;
 }
 
 table {
@@ -94,6 +140,9 @@ th{
     padding: 15px 30px;
     font-size: 20px;
     background-color: rgba(0,0,0,0.4);
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 td{
@@ -101,15 +150,21 @@ td{
     text-align: left;
     padding: 25px 30px;
     font-size: 20px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.rightColumn .paymentSection{
-    color:#cfbb63;
-    background-color: rgba(0, 0, 0, 0.4);
+#ruleOut{
+    border-top:2px solid #cfbb63;
+}
+
+/* .rightColumn .paymentSection{
+    background-color: rgba(0, 0, 0, 0.2);
     margin:20px 0px 100px 0px;
     max-height: auto;
     padding:0px 40px;
-}
+} */
 
 .paymentSection h1{
     font-size: 50px;
@@ -118,6 +173,9 @@ td{
     margin-inline-end: 0px;
     margin-block-start: 0px;
     margin-block-end: 20px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .paymentSection button{
@@ -131,7 +189,9 @@ td{
 }
 
 .leftColumn h1{
-    color:#cfbb63;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size:50px;
     padding:10px 40px;
     font-weight: 700;
@@ -143,7 +203,7 @@ td{
     cursor: pointer;
     font-weight: 300;
     padding: 18px;
-    margin:0px 35px;
+    margin:10px 35px;
     width: 90%;
     border: none;
     text-align: left;
@@ -172,7 +232,6 @@ td{
 .panel {
     padding: 0 18px;
     background-color: rgba(0, 0, 0, 0.1);
-    color:#cfbb63;
     max-height: 0;
     overflow: hidden;
     width:85.6%;
@@ -186,6 +245,9 @@ td{
     font-size: 20px;
     text-align: left;
     padding:10px 20px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .panel .addButton{
@@ -199,12 +261,83 @@ td{
     margin:10px 200px;
 }
 
+.shippingAccordion{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #cfbb63;
+    cursor: pointer;
+    font-weight: 300;
+    padding: 18px;
+    margin:0 15px;
+    width: 90%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 30px;
+    transition: 0.4s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.active2, .shippingAccordion:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.active2:after {
+    content: "\2212";
+}
+
+.shippingAccordion:after {
+    content: '\002B';
+    color: #cfbb63;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.boxAlign{
+    width:90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    padding: 0 18px;
+    background-color: rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    margin:0 auto;
+    overflow: hidden;
+    font-size: 20px;
+    transition: max-height 0.2s ease-out;
+}
+
+.registeredAdds{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    width:50%;
+    text-align: center;
+}
+
+.registeredAdds .box{
+    width:50%;
+    margin:0 auto;
+}
+
+.registeredAdds .box h1{
+    font-size:30px;
+    padding:0px;
+}
+
+.registeredAdds .box h5{
+    font-size: 14px;
+}
 
 *, label {
     font-size: 16px;
     font-variant: normal;
     padding: 0;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;    
 }
 
 form {
@@ -218,10 +351,103 @@ label {
     margin-bottom: 8px;
 }
 
+.rightColumns .totalSummary{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin:0px auto;
+}
+
+.rightColumns hr{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    height: 3px;
+    outline : none;
+    border: none;
+}
+
+.rightColumns .finalTotal{
+    display: grid;
+    padding:0px 30px 0px 30px;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rightColumns .finalTotal h2{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:25px;
+}
+
+.rightColumns .totalSummary .totalSummaryColumn1{
+    padding:30px 30px 0px 30px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+.totalSummaryColumn1 h2{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:20px;
+}
+
+.rightColumns .totalSummary .totalSummaryColumn2{
+    padding:30px 30px 0px 30px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    text-align: center;
+}
+
+.rightColumns h1{
+    font-size:50px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin:20px auto 0px auto;
+    
+}
+
+.totalSummaryColumn2 h2{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:20px;
+}
+
+#payment-form{
+    width:auto;
+
+
+}
+
+#payment-form label{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:20px;
+}
+
+#payment-form .button{
+    background: #cfbb63;
+    color:rgba(0, 0, 0, 0.6);
+    padding:16px 32px;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    transition: 0.4s ease-in-out;
+}
+#payment-form .button:hover{
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    cursor: pointer;
+    color:rgba(0, 0, 0, 0.9);
+}
+
 #card-errors {
     height: 20px;
     padding: 4px 0;
-    color: #fa755a;
+    color: white;
 }
 
 .form-row {
@@ -274,15 +500,16 @@ label {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
-    color: white;
+    background-color: transparent;
+    color: transparent;
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
 }
 
 #scrollTop:hover {
-    background-color: #555;
+    background-color: transparent;
+    display: none;
 }
 
 /**
@@ -293,7 +520,7 @@ label {
     box-sizing: border-box;
 
     height: 40px;
-
+    width:400px;
     padding: 10px 12px;
 
     border: 1px solid transparent;
@@ -318,12 +545,36 @@ label {
 }
 
 .registeredAdd{
-    color:#cfbb63;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
     padding:0 35px;
+}
+
+.registeredAdd .button{
+    -webkit-text-fill-color:rgba(0, 0, 0, 0.6);
+    padding:16px 32px;
+    background:#cfbb63;
+    outline: none;
+    border: 1px solid #cfbb63;
+    margin:20px auto;
+    font-weight: 700;
+    border-radius: 40px;
+    transition: 1s ease-in-out;
+}
+
+.registeredAdd .button:hover{
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    cursor: pointer;
+    -webkit-text-fill-color:black;
 }
 
 .registeredAdd h3{
     font-size: 25px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     
 }
 
