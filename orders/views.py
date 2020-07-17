@@ -32,7 +32,7 @@ def orders(request):
     template = "users/user.html"
     return render(request, template, context)
 
-
+@login_required
 def checkout(request):
     pyziptax.api_key = "OL9GNXzWjylg38ma"
     User = get_user(request)
@@ -83,25 +83,22 @@ def checkout(request):
     else:
         address_form = None
 
+    try:
+        address_added = request.GET.get("billing_added")
+    except:
+        address_added = None
 
-    if User.is_authenticated:
-        try:
-            address_added = request.GET.get("billing_added")
-        except:
-            address_added = None
-
-        if address_added is None:
-            billing_form = BillingAddressForm()
-        else:
-            billing_form = None
-
-
-
-        current_addresses= UserAddress.objects.filter(user=User)
-        billing_addresses2 = BillingAddress.objects.filter(user=User)
+    if address_added is None:
+        billing_form = BillingAddressForm()
     else:
-        current_addresses= None
-        billing_addresses2 = None
+        billing_form = None
+
+
+
+    current_addresses= UserAddress.objects.filter(user=User)
+    billing_addresses2 = BillingAddress.objects.filter(user=User)
+
+
 
 
 

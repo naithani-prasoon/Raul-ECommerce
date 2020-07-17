@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/password_reset_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
@@ -685,14 +682,14 @@
     </state>
     <state x="100" y="203" width="1240" height="615" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.815@0.23.1440.815" timestamp="1594577604264" />
     <state x="133" y="241" width="1654" height="746" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1920.988@0.23.1920.988" timestamp="1594927591141" />
-    <state x="241" y="154" width="1240" height="615" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594758352819">
-      <screen x="0" y="23" width="1920" height="988" />
+    <state x="1697" y="817" width="1920" height="1057" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1594956979903">
+      <screen x="1440" y="94" width="1920" height="1057" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1591407137868" />
     <state x="60" y="140" width="1240" height="629" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.808@0.23.1440.808" timestamp="1593673530992" />
     <state x="60" y="141" width="1240" height="633" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.810@0.23.1440.810" timestamp="1594067766478" />
     <state x="0" y="41" width="1440" height="775" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.813@0.23.1440.813" timestamp="1594180634164" />
-    <state x="2273" y="217" width="1920" height="1057" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594525827292" />
+    <state x="1697" y="817" width="1920" height="1057" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594956979903" />
     <state x="1537" y="561" width="1920" height="1008" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.823/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594344448819" />
     <state x="97" y="23" width="1920" height="988" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.824@0.23.1440.824" timestamp="1594361972902" />
     <state x="1706" y="292" width="1654" height="775" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594173720832" />

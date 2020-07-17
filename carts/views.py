@@ -54,6 +54,7 @@ def view(request):
             # Check if an ACTIVE cart is asspcated with User #
         try:
             cart = Cart.objects.get(user=User, active=True)
+            print("Try with User")
         except:
             pass
         else:
@@ -75,9 +76,13 @@ def view(request):
             context = {'cart': cart}
             return render(request, template, context)
 
+
+
+
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id, active=True)
+        print("Try with User")
     except:
         the_id = None
 
@@ -116,7 +121,7 @@ def remove_from_cart(request, id):
 
 def add_to_cart(request, slug):
     print("add_to_cart")
-    request.session.set_expiry(3000000)
+    request.session.set_expiry(10000)
     Check = False
     Zero_Check = False
     Var_items = 0
