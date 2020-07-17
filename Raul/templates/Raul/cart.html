@@ -37,6 +37,9 @@
         <div class="container2">
             <div class="block-heading">
                 <p>Shopping Cart</p>
+                {% if empty %}
+                <h1> {{ empty_message}} </h1>
+                {% endif %}
             </div>
             <div class="content">
                 <div class="row">
@@ -54,6 +57,7 @@
                                             <div class="row2">
                                                 <div class="col-md-5 product-name">
                                                     <div class="product-name">
+
                                                         <a href="{% url 'Raul-single' item.product.slug %}">{{item.product}}</a>
                                                         <div class="product-info">
                                                             <div>Display: <span class="value">studded vase ${{item.product.price}}
@@ -68,6 +72,10 @@
                                                 </div>
                                                 <div class="col-md-4 quantity">
                                                     <form class= 'form pull-right' method='POST' action="{% url 'update_cart' item.product.slug %}">
+                                                        {% if empty %}
+                                                        <h1> {{ empty_message}} </h1>
+                                                        {% endif %}
+
                                                         {% csrf_token %}
                                                         <input name='qty' class= "quantityPlace" type='number' min="0" placeholder={{item.quantity}} value='{{item.quantity}}' />
                                                        {% if item.variation.colors %}
