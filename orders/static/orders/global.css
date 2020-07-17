@@ -1,9 +1,18 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
+
+
+
+
+
 body, html {
     width: 100%;
     background-color: #6d6d6d;
     margin:0;
     padding:0;
-    font-family: 'Roboto',sans-serif;
+    font-family: myFirstFont;
     text-transform: none;
 }
 
@@ -56,7 +65,7 @@ body, html {
     padding:0px 32px;
     font-size: 50px;
     font-weight: 700;
-    font-family: 'Roboto',sans-serif;
+    font-family: myFirstFont;
     background: -webkit-linear-gradient(#f8f18e,#d6a55b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -123,7 +132,7 @@ body, html {
 
 table {
     text-align: center;
-    font-family: arial, sans-serif;
+    font-family: myFirstFont;
     border-collapse: collapse;
     width: 80%;
     margin:10px auto;
@@ -184,7 +193,7 @@ td{
     color:#333333;
     outline: none;
     border: none;
-    font-family: 'Roboto',sans-serif;
+    font-family: myFirstFont;
     font-size:20px;
 }
 
@@ -210,7 +219,7 @@ td{
     outline: none;
     font-size: 30px;
     transition: 0.4s;
-    font-family: 'Roboto', sans-serif;
+    font-family: myFirstFont;
 }
 
 .active, .accordion:hover {
@@ -274,7 +283,7 @@ td{
     outline: none;
     font-size: 30px;
     transition: 0.4s;
-    font-family: 'Roboto', sans-serif;
+    font-family: myFirstFont;
 }
 
 .active2, .shippingAccordion:hover {
@@ -457,7 +466,7 @@ label {
 
 .token {
     color: #32325d;
-    font-family: 'Source Code Pro', monospace;
+    font-family: myFirstFont;
     font-weight: 500;
 }
 

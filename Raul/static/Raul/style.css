@@ -1,6 +1,11 @@
+@font-face {
+	font-family: myFirstFont;
+	src: url(avenir-lt-std-35-light.otf);
+}
+
 body{
 	background-color: #6d6d6d;
-	font-family: 'Roboto', sans-serif;
+	font-family: myFirstFont;
 	scroll-behavior: smooth;
 	width:100%;
 	margin:0px;
@@ -63,7 +68,7 @@ body{
 
 .productBanner-heading{
 	font-size:80px;
-	font-family:'Roboto Condensed',sans-sarif;
+	font-family: myFirstFont;
 	text-transform: uppercase;
 	padding:10px 100px 0px 100px;	
 	text-align: center;

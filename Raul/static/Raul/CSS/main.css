@@ -1,13 +1,18 @@
 /*hello*/
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
 
 html,body{
     margin:0;
     padding:0;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: myFirstFont;
     overflow-x: hidden;
-    background-color: rgb(200,200,200);
+    background-color: #6d6d6d;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
@@ -45,6 +50,7 @@ html,body{
 
 a{
     text-decoration: none;
+    font-family: myFirstFont;
 }
 
 
@@ -72,11 +78,12 @@ figure a{
 }
 
 figure a:hover{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: myFirstFont;
 
 }
 
 figure p{
+    font-family: myFirstFont;
     text-align: center;
 }
 
@@ -101,7 +108,7 @@ figure img{
 }
 
 .bannerHeading figcaption{
-    font-family: 'Roboto', serif;
+    font-family: myFirstFont;
     background-color: white;
 }
 
@@ -239,7 +246,7 @@ nav ul li a:hover{
         height:auto;
         text-align: center;
         margin: 0 auto;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         font-weight:700;
     }
 
@@ -248,7 +255,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size:20px;
         outline: none;
         padding:20px;
@@ -313,7 +320,7 @@ nav ul li a:hover{
         text-align: center;
         padding:10px 0px 30px 0px;
         font-size:10px;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
     }
 
     .shopBanner figcaption{
@@ -348,7 +355,7 @@ nav ul li a:hover{
 
     .furnitureHeading{
         font-size:30px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -386,7 +393,7 @@ nav ul li a:hover{
         height:250px;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -594,7 +601,7 @@ nav ul li a:hover{
         height:auto;
         text-align: center;
         margin: 0 auto;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight:700;
     }
 
@@ -603,7 +610,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size:20px;
         outline: none;
         padding:20px;
@@ -668,7 +675,7 @@ nav ul li a:hover{
         text-align: center;
         padding:10px 0px 30px 0px;
         font-size:10px;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
     }
 
     .shopBanner figcaption{
@@ -703,7 +710,7 @@ nav ul li a:hover{
 
     .furnitureHeading{
         font-size:30px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -741,7 +748,7 @@ nav ul li a:hover{
         height:250px;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -948,7 +955,7 @@ nav ul li a:hover{
         height:auto;
         text-align: center;
         margin: 0 auto;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight:700;
     }
 
@@ -957,7 +964,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size:20px;
         outline: none;
         padding:20px;
@@ -1022,7 +1029,7 @@ nav ul li a:hover{
         text-align: center;
         padding:10px 0px 30px 0px;
         font-size:10px;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
     }
 
     .shopBanner figcaption{
@@ -1057,7 +1064,7 @@ nav ul li a:hover{
 
     .furnitureHeading{
         font-size:30px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1095,7 +1102,7 @@ nav ul li a:hover{
         height:250px;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -1305,7 +1312,7 @@ nav ul li a:hover{
         height:auto;
         text-align: center;
         margin: 0 auto;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight:700;
     }
 
@@ -1314,7 +1321,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size:20px;
         outline: none;
         padding:20px;
@@ -1379,7 +1386,7 @@ nav ul li a:hover{
         text-align: center;
         padding:10px 0px 30px 0px;
         font-size:10px;
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
     }
 
     .shopBanner figcaption{
@@ -1414,7 +1421,7 @@ nav ul li a:hover{
 
     .furnitureHeading{
         font-size:30px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1452,7 +1459,7 @@ nav ul li a:hover{
         height:250px;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -1587,7 +1594,7 @@ nav ul li a:hover{
 
     body{
         text-transform: lowercase;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         background-color: #6d6d6d;
 
     }
@@ -1647,7 +1654,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv span a{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -1687,7 +1694,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv2 span{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -1735,7 +1742,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv3 span{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -1750,7 +1757,7 @@ nav ul li a:hover{
     .category{
         overflow: hidden;
         color:transparent;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -1766,11 +1773,13 @@ nav ul li a:hover{
         transition: 0.2s ease-in;
         font-size:12px;
         letter-spacing: 1px;
+        font-family: myFirstFont;
     }
 
     .category p:hover{
         font-weight: 900;
         cursor: pointer;
+        font-family: myFirstFont;
     }
 
     .headers figcaption{
@@ -1799,7 +1808,7 @@ nav ul li a:hover{
         left:0;
         top:0;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
@@ -1808,6 +1817,7 @@ nav ul li a:hover{
     }
 
     #store p{
+        font-family: myFirstFont;
         font-size:4em;
         font-weight: 900;
         padding:0px;
@@ -1836,7 +1846,7 @@ nav ul li a:hover{
         outline:none;
         color:white;
         font-size: 16px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         background-color:transparent;
         margin-top:60px;
         transition: 0.4s ease-in-out;
@@ -1864,12 +1874,12 @@ nav ul li a:hover{
         text-align: center;
     }
     .dropDownContent a:hover{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
     .dropDownButton:hover{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
@@ -1893,14 +1903,14 @@ nav ul li a:hover{
         position: absolute;
         top:65%;
         left:0px;
-        font-family:'Roboto', sans-serif;
+        font-family: myFirstFont;
         font-weight:700;
     }
 
     .bannerHeading figcaption a button{
-        background:rgba(0,0,0,0.8);
+        background:#676767;
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         font-size:0.4em;
         outline: none;
         padding:30px;
@@ -2045,6 +2055,7 @@ nav ul li a:hover{
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: myFirstFont;
     }
 
     @keyframes blink{
@@ -2331,7 +2342,7 @@ nav ul li a:hover{
         outline: none;
         border: none;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         font-size: 45px;
         margin:250px 0px 0px 20px;
     }
@@ -2366,7 +2377,7 @@ nav ul li a:hover{
         color: #cfbb63;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -2402,7 +2413,7 @@ nav ul li a:hover{
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         font-weight: bolder;
         letter-spacing: 3px;
         transition: 0.4s ease-in-out;
@@ -2508,7 +2519,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         width:150px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         margin:20px 0px 0px 0px;
         font-weight: bolder;
         transition: 0.4s ease-in-out;
@@ -2624,7 +2635,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        font-family: 'Roboto',sans-serif;
+          font-family: myFirstFont;
       }
       
       .modal button:hover {
@@ -2706,7 +2717,7 @@ nav ul li a:hover{
         border: 1px solid rgba(0,0,0,0.5);
         width: 500px; 
         height:520px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
     
       }
 
@@ -2775,7 +2786,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
       
       .modal2 button:hover {
@@ -2819,6 +2830,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0 20px;
+          font-family: myFirstFont;
       }
 
       .modal2 .centerIt span.psw{
@@ -2867,7 +2879,7 @@ nav ul li a:hover{
         color:#cfbb63;
         width: 550px;
         height: auto;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
 
       .modal2 .modal-content .centerIt label{
@@ -2925,7 +2937,7 @@ nav ul li a:hover{
         width: 400px;
         height:200px; 
         max-height:250px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         border-radius: 50px;
         
     }
@@ -3038,7 +3050,7 @@ nav ul li a:hover{
     
     body{
         text-transform: lowercase;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         background-color: #6d6d6d;
 
     }
@@ -3097,7 +3109,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv span a{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -3136,7 +3148,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv2 span{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -3183,7 +3195,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv3 span{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -3198,7 +3210,7 @@ nav ul li a:hover{
     .category{
         overflow: hidden;
         color:transparent;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -3248,7 +3260,7 @@ nav ul li a:hover{
         left:0;
         top:0;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
@@ -3285,7 +3297,7 @@ nav ul li a:hover{
         outline:none;
         color:white;
         font-size: 16px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         background-color:transparent;
         margin-top:60px;
         transition: 0.4s ease-in-out;
@@ -3313,12 +3325,12 @@ nav ul li a:hover{
         text-align: center;
     }
     .dropDownContent a:hover{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
     .dropDownButton:hover{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
@@ -3342,14 +3354,14 @@ nav ul li a:hover{
         position: absolute;
         top:65%;
         left:0px;
-        font-family:'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight:700;
     }
 
     .bannerHeading figcaption a button{
-        background:rgba(0,0,0,0.8);
+        background:#676767;
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size:0.4em;
         outline: none;
         padding:30px;
@@ -3780,7 +3792,7 @@ nav ul li a:hover{
         outline: none;
         border: none;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size: 45px;
         margin:250px 0px 0px 20px;
     }
@@ -3815,7 +3827,7 @@ nav ul li a:hover{
         color: #cfbb63;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -3851,7 +3863,7 @@ nav ul li a:hover{
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         font-weight: bolder;
         letter-spacing: 3px;
         transition: 0.4s ease-in-out;
@@ -3957,7 +3969,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         width:150px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         margin:20px 0px 0px 0px;
         font-weight: bolder;
         transition: 0.4s ease-in-out;
@@ -4073,7 +4085,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
       
       .modal button:hover {
@@ -4155,7 +4167,7 @@ nav ul li a:hover{
         border: 1px solid rgba(0,0,0,0.5);
         width: 500px; 
         height:520px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
     
       }
 
@@ -4224,7 +4236,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
       
       .modal2 button:hover {
@@ -4316,7 +4328,7 @@ nav ul li a:hover{
         color:#cfbb63;
         width: 550px;
         height: auto;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
 
       .modal2 .modal-content .centerIt label{
@@ -4374,7 +4386,7 @@ nav ul li a:hover{
         width: 400px;
         height:200px; 
         max-height:250px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         border-radius: 50px;
         
     }
@@ -4482,7 +4494,7 @@ nav ul li a:hover{
 
     body{
         text-transform: lowercase;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         background-color: #6d6d6d;
 
     }
@@ -4542,7 +4554,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv span a{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -4582,7 +4594,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv2 span{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -4630,7 +4642,7 @@ nav ul li a:hover{
     }
 
     .headers figure .navbarIcons .hoverDiv3 span{
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight: bolder;
         font-size:14px;
         color:white;
@@ -4645,7 +4657,7 @@ nav ul li a:hover{
     .category{
         overflow: hidden;
         color:transparent;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -4701,7 +4713,7 @@ nav ul li a:hover{
         left:0;
         top:0;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
@@ -4738,7 +4750,7 @@ nav ul li a:hover{
         outline:none;
         color:white;
         font-size: 16px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         background-color:transparent;
         margin-top:60px;
         transition: 0.4s ease-in-out;
@@ -4766,12 +4778,12 @@ nav ul li a:hover{
         text-align: center;
     }
     .dropDownContent a:hover{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
     .dropDownButton:hover{
-        font-family: 'Roboto Condensed', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 0.05em;
         cursor: pointer;
     }
@@ -4795,14 +4807,14 @@ nav ul li a:hover{
         position: absolute;
         top:80%;
         left:0px;
-        font-family:'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-weight:700;
     }
 
     .bannerHeading figcaption a button{
-        background:rgba(0,0,0,0.8);
+        background:#676767;
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size:0.4em;
         outline: none;
         padding:30px;
@@ -5176,7 +5188,7 @@ nav ul li a:hover{
             transform: translateX(0);
         }
         100%{
-            transform: translateX(-190vw);
+            transform: translateX(-160vw);
         }
     }
 
@@ -5234,7 +5246,7 @@ nav ul li a:hover{
         outline: none;
         border: none;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         font-size: 45px;
         margin:250px 0px 0px 20px;
     }
@@ -5269,7 +5281,7 @@ nav ul li a:hover{
         color: #cfbb63;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+       font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -5305,7 +5317,7 @@ nav ul li a:hover{
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         font-weight: bolder;
         letter-spacing: 3px;
         transition: 0.4s ease-in-out;
@@ -5411,7 +5423,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         width:150px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         margin:20px 0px 0px 0px;
         font-weight: bolder;
         transition: 0.4s ease-in-out;
@@ -5527,7 +5539,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
       
       .modal button:hover {
@@ -5609,7 +5621,7 @@ nav ul li a:hover{
         border: 1px solid rgba(0,0,0,0.5);
         width: 500px; 
         height:520px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
     
       }
 
@@ -5678,7 +5690,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
       
       .modal2 button:hover {
@@ -5770,7 +5782,7 @@ nav ul li a:hover{
         color:#cfbb63;
         width: 550px;
         height:1000px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
       }
 
       .modal2 .modal-content .centerIt label{
@@ -5828,7 +5840,7 @@ nav ul li a:hover{
         width: 400px;
         height:200px; 
         max-height:250px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         border-radius: 50px;
         
     }

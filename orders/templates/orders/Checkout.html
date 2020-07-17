@@ -176,6 +176,7 @@
                         {% if request.user.userdefaultaddress.shipping.id == address.id %}
                         <input required type ="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
                         {% else %}
+                        <a href="{% url 'del_add' address.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
 
                         <input required type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
                         {% endif %}
@@ -193,6 +194,8 @@
                         <input required type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
                         {% else %}
                         <input required type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
+                        <a href="{% url 'del_add' address.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
+
                         {% endif %}
                         {% endfor %}
                         <input value="proceed towards the payment" name="add" type="submit" class="button" >

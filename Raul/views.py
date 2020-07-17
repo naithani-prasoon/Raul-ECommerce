@@ -40,9 +40,14 @@ def secondHome(request):
             Reg = Register_form.save(commit=False)
             Reg.email = Reg.username
             Reg.save()
-            Register_form = forms.CreateUserForm()
+
             context = {'form': form,"Register_form" : Register_form}
-            messages.success(request, f'Your account has been created! You are now able to log in')
+            new_user = authenticate(username=Register_form.cleaned_data['username'],
+                                    password=Register_form.cleaned_data['password1'],
+                                    )
+            login(request, new_user)
+            Register_form = forms.CreateUserForm()
+            messages.success(request, 'You are now logged in!')
             return render(request, 'Raul/home.html',context)
         else:
             messages.error(request, Register_form.error_messages)
