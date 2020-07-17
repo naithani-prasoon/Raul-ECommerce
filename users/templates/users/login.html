@@ -10,15 +10,18 @@
 <div class= "loginPhoto">
 </div>
 
+<div>
 <form method="post">
     {%csrf_token%}
      {{form.as_p}}
     <button value="Login" name="login" type="submit">Login</button>
+</form>
+</div>
 <!-- <div class="error-page">
     <div class="try-again">Error: Try again?</div>
 </div> -->
-</form>
 
+<div>
 <form method="post">
     {%csrf_token%}
     {{Register_form.as_p}}
@@ -27,6 +30,7 @@
         <div class="try-again">Error: Try again?</div>
     </div> -->
 </form>
+</div>
 
 {% endblock %}
 

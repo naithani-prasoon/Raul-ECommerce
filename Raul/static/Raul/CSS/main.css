@@ -1,11 +1,16 @@
 /*hello*/
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
 
 html,body{
     margin:0;
     padding:0;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: myFirstFont;
     overflow-x: hidden;
     background-color: #6d6d6d;
     scroll-behavior: smooth;
@@ -45,6 +50,7 @@ html,body{
 
 a{
     text-decoration: none;
+    font-family: myFirstFont;
 }
 
 
@@ -72,11 +78,12 @@ figure a{
 }
 
 figure a:hover{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: myFirstFont;
 
 }
 
 figure p{
+    font-family: myFirstFont;
     text-align: center;
 }
 
@@ -101,7 +108,7 @@ figure img{
 }
 
 .bannerHeading figcaption{
-    font-family: 'Roboto', serif;
+    font-family: myFirstFont;
     background-color: white;
 }
 
@@ -1766,11 +1773,13 @@ nav ul li a:hover{
         transition: 0.2s ease-in;
         font-size:12px;
         letter-spacing: 1px;
+        font-family: myFirstFont;
     }
 
     .category p:hover{
         font-weight: 900;
         cursor: pointer;
+        font-family: myFirstFont;
     }
 
     .headers figcaption{
@@ -1799,7 +1808,7 @@ nav ul li a:hover{
         left:0;
         top:0;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
@@ -1808,6 +1817,7 @@ nav ul li a:hover{
     }
 
     #store p{
+        font-family: myFirstFont;
         font-size:4em;
         font-weight: 900;
         padding:0px;
@@ -1893,14 +1903,14 @@ nav ul li a:hover{
         position: absolute;
         top:65%;
         left:0px;
-        font-family:'Roboto', sans-serif;
+        font-family: myFirstFont;
         font-weight:700;
     }
 
     .bannerHeading figcaption a button{
         background:rgba(0,0,0,0.8);
         margin:20px;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         font-size:0.4em;
         outline: none;
         padding:30px;
@@ -2045,6 +2055,7 @@ nav ul li a:hover{
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: myFirstFont;
     }
 
     @keyframes blink{
@@ -2331,7 +2342,7 @@ nav ul li a:hover{
         outline: none;
         border: none;
         color: #cfbb63;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         font-size: 45px;
         margin:250px 0px 0px 20px;
     }
@@ -2366,7 +2377,7 @@ nav ul li a:hover{
         color: #cfbb63;
         text-align: center;
         padding-top:1em;
-        font-family: 'Roboto', sans-serif;
+        font-family: myFirstFont;
         letter-spacing: 5px;
         font-size: 1.5em;
     }
@@ -2402,7 +2413,7 @@ nav ul li a:hover{
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         font-weight: bolder;
         letter-spacing: 3px;
         transition: 0.4s ease-in-out;
@@ -2508,7 +2519,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         width:150px;
-        font-family: 'Roboto',sans-serif;
+        font-family: myFirstFont;
         margin:20px 0px 0px 0px;
         font-weight: bolder;
         transition: 0.4s ease-in-out;
@@ -2624,7 +2635,7 @@ nav ul li a:hover{
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-        font-family: 'Roboto',sans-serif;
+          font-family: myFirstFont;
       }
       
       .modal button:hover {
@@ -2819,6 +2830,7 @@ nav ul li a:hover{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 0 20px;
+          font-family: myFirstFont;
       }
 
       .modal2 .centerIt span.psw{
