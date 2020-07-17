@@ -2,156 +2,6 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <head>
-    <style>
-        html,body {
-            background-color: rgba(0,0,0,0.5);
-            margin:0px;
-            font-family: 'Roboto', sans-serif;
-            background-size: 100% 110%;
-            color:#cfbb63;    
-            overflow: hidden;   
-            height:100vh;  
-            width:100%; 
-        }
-        h2, h3, h4, h5, h6, a {
-            margin:0; padding:0px;
-        }
-        h1 {
-            padding:5px;
-            margin-block-end: 0.2em;
-            letter-spacing: 5px;
-            font-family: 'Roboto Condensed', sans-serif;
-        }
-
-        .containers1{
-            display: grid;
-            grid-template-columns: 50% 50%;
-        }
-        
-        .logining {
-            text-transform: none;  
-            margin:20% auto;
-            max-width:500px;
-        }
-        .login-header {
-            text-align:center;
-            font-size:300%;
-        }
-
-        .login-form {
-            border:.5px solid #050505;
-            background: rgba(0,0,0,0.5);
-            border-radius:10px;
-            box-shadow:0px 0px 10px #000;
-        }
-
-        .login-form h3 {
-            text-align:left;
-            margin-left:40px;
-            letter-spacing: 4px;
-            font-family: 'Roboto Condensed', sans-serif;
-            color: #cfbb63;
-            padding:20px 0px 0px 0px;
-        }
-        
-        .login-form {
-            box-sizing:border-box;
-            padding-top:15px;
-            padding-bottom:10%;
-            margin: 0;
-            text-align:center;
-        }
-
-        .logining input[type="text"],
-        .logining input[type="password"] {
-            max-width:400px;
-            width: 80%;
-            line-height:3em;
-            margin:1em 2em;
-            border-radius:5px;
-            border:2px solid #cfbb63;
-            outline:none;
-            background-color: #cfbb63;
-            padding-left:10px;
-            transition: 0.4s ease-in-out;
-        }
-
-        .logining input[type="text"]:hover{
-            background-color: rgba(0,0,0,0.5);
-            color: #cfbb63;
-            cursor: pointer;
-        }
-
-        .logining input[type="password"]:hover{
-            background-color: rgba(0,0,0,0.5);
-            color: #cfbb63;
-            cursor: pointer;
-        }
-
-        .logining .damnSon {
-            height:40px;
-            width:100px;
-            background: transparent;
-            border:2px solid #cfbb63;
-            border-radius:20px;
-            color: #cfbb63;
-            text-transform:uppercase;
-            transition: 0.4s ease-in-out;
-            margin:10px;
-            font-size: 18px;
-        }
-
-        .logining .damnSon:hover{
-            background-color: #cfbb63;
-            color: black;
-            font-weight: bolder;
-            cursor:pointer;
-        }
-        
-        .sign-up{
-            color:#cfbb63;
-            margin-left:-70%;
-            font-size: 10px;
-            cursor:pointer;
-            text-decoration:underline;
-            cursor: pointer;
-        }
-        
-        .no-access {
-            color:#cfbb63;
-            margin:20px 0px 20px -57%;
-            text-decoration:underline;
-            cursor:pointer;
-        }
-
-        .try-again {
-            color:#f2f2f2;
-            text-decoration:underline;
-            cursor:pointer;
-        }
-
-        .loginPhoto{
-            background:url("https://images.pexels.com/photos/1883385/pexels-photo-1883385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-            background-position: bottom;
-            width:50vw;
-            height:100vh;
-            filter: brightness(60%);
-        }
-
-        /*Media Querie*/
-        @media only screen and (min-width : 150px) and (max-width : 530px){
-            .login-form h3 {
-                text-align:center;
-                margin:0;
-            }
-            .sign-up, .no-access {
-                margin:10px 0;
-            }
-            .login-button {
-                margin-bottom:10px;
-            }
-        }
-    </style>
 </head>
 
 
@@ -161,38 +11,23 @@
 </div>
 
 <form method="post">
-    {{ form.non_field_errors }}
-    <div class="logining">
-        <div class="login-header">
-            <h1>LOGIN</h1>
-        </div>
-        <div class="login-form">
-    <!--        <h3>Username:</h3>-->
-            <h3 for="{{ form.username.id_for_label }}">Username:</h3>
-    <!--        <input type="text" placeholder="Username"/><br>-->
-            {{ form.username }}
-            {{ form.username.errors }}
-    <!--        <input type="text" placeholder="Username"/><br>-->
-    <!--        <h3>Password:</h3>-->
-    <!--        <input type="password" placeholder="Password"/>-->
-            <br>
-    <!--        <label placeholder="Password" for="{{ form.password.id_for_label }}">Password:</label>-->
-            <h3 for="{{ form.password.id_for_label}}">Password:</h3>
-            {{ form.password }}
-            {{ form.password.errors }}
-            <br>
-            <br>
-            {% csrf_token %}
-            <button class="damnSon" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
-
-            <a class="sign-up" href="{% url 'register' %}"> Don't have an account? </a>
-            <br>
-        </div>
-    </div>
+    {%csrf_token%}
+     {{form.as_p}}
+    <button value="Login" name="login" type="submit">Login</button>
 <!-- <div class="error-page">
     <div class="try-again">Error: Try again?</div>
 </div> -->
 </form>
+
+<form method="post">
+    {%csrf_token%}
+    {{Register_form.as_p}}
+    <input type="submit" name="register" value="Register" class="button">
+    <!-- <div class="error-page">
+        <div class="try-again">Error: Try again?</div>
+    </div> -->
+</form>
+
 {% endblock %}
 
 

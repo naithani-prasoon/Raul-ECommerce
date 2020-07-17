@@ -145,9 +145,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 LOGOUT_REDIRECT_URL = 'Raul-SecondHome'
-
 LOGIN_URL = 'login'
-
+PASSWORD_RESET_REDIRECT_URL='Raul-SecondHome'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 

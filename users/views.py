@@ -2,15 +2,49 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 # from .forms import UserRegisterForm
-from .forms import CreateUserForm, UserAddressForm, BillingAddressForm
+from .forms import CreateUserForm, UserAddressForm, BillingAddressForm, LoginForms
 # from .forms import UserRegisterForm
 from carts.models import Cart, CartItem
 from django.contrib.auth import get_user
 from django.urls import reverse
 from users.models import UserAddress, UserDefaultAddress, BillingAddress
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user
+from django.contrib.auth import login,logout,authenticate
 
+def login_register(request):
+    form = LoginForms(request.POST or None)
+    Register_form = CreateUserForm(request.POST or None)
+    context = {'form': form,"Register_form": Register_form}
+    if 'register' in request.POST:
+        request.session.set_expiry(60)
+        if Register_form.is_valid():
+            Reg = Register_form.save(commit=False)
+            Reg.email = Reg.username
+            Reg.save()
 
+            context = {'form': form,"Register_form" : Register_form}
+            new_user = authenticate(username=Register_form.cleaned_data['username'],
+                                    password=Register_form.cleaned_data['password1'],
+                                    )
+            login(request, new_user)
+            Register_form = CreateUserForm()
+            messages.success(request, 'You are now logged in!')
+            return HttpResponseRedirect(reverse("cart"))
+        else:
+            messages.error(request, Register_form.error_messages)
+            form = LoginForms()
+            context = {'form': form,"Register_form": Register_form}
+            return render(request, 'users/login.html',context)
+
+    if 'login' in request.POST:
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username,password=password)
+            context = {'form': form,"Register_form": Register_form}
+            login(request,user)
+            return HttpResponseRedirect(reverse("cart"))
+    return render(request, 'users/login.html',context)
 
 
 
@@ -43,6 +77,7 @@ def profile(request):
     return render(request, 'users/profile.html',context)
 
 def add_address(request):
+    User = get_user(request)
     try:
         next_page = request.GET.get("next")
     except:
@@ -51,8 +86,9 @@ def add_address(request):
         form = UserAddressForm(request.POST)
         if form.is_valid():
             new_address = form.save(commit=False)
-            new_address.user = request.user
-            new_address.save()
+            if User.is_authenticated:
+                new_address.user = request.user
+                new_address.save()
             is_default= form.cleaned_data["default"]
             billing = form.cleaned_data["billing"]
             First_Name = form.cleaned_data["zipcode"]
@@ -95,9 +131,17 @@ def add_billing_address(request):
 
 
 def delete_address(request, id):
-    address = UserAddress.objects.get(id=id)
-    address.delete()
-    return HttpResponseRedirect(reverse("profile"))
+    try:
+        address = UserAddress.objects.get(id=id)
+        address.delete()
+    except:
+        pass
+    try:
+        address = BillingAddress.objects.get(id=id)
+        address.delete()
+    except:
+        pass
+    return HttpResponseRedirect(reverse("checkout"))
 
 # def search(request):
 #     try:

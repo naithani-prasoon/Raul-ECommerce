@@ -56,7 +56,7 @@ def checkout(request):
     except Order.DoesNotExist:
         new_order = Order()
         new_order.cart = cart
-        new_order.user = request.user
+        ##new_order.user = request.user
         new_order.order_id = id_generator()
         new_order.sub_total = cart.total
         new_order.save()
@@ -83,8 +83,6 @@ def checkout(request):
     else:
         address_form = None
 
-
-
     try:
         address_added = request.GET.get("billing_added")
     except:
@@ -99,6 +97,8 @@ def checkout(request):
 
     current_addresses= UserAddress.objects.filter(user=User)
     billing_addresses2 = BillingAddress.objects.filter(user=User)
+
+
 
 
 
@@ -134,6 +134,7 @@ def checkout(request):
             try:
                 user_stripe = request.user.userstripe.stripe_id
                 customer = stripe.Customer.retrieve(user_stripe)
+
             except:
                 customer = None
 
@@ -157,9 +158,8 @@ def checkout(request):
 
                 source = stripe.Customer.create_source(
                     user_stripe,
-                    source= token)
-
-
+                    source= token
+                )
 
                 charge = stripe.Charge.create(
                     amount= int(new_order.final_total * 100),
@@ -168,6 +168,8 @@ def checkout(request):
                     customer = customer,
                     description = "Test"
                 )
+                print(customer.id)
+
                 add_stripe_info = stripe.Customer.modify_source(
                     customer.id,
                     source.id,

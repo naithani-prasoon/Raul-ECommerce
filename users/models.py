@@ -30,7 +30,7 @@ class UserAddressManager(models.Manager):
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 class UserAddress(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,blank=True,null=True)
     firstname = models.CharField(max_length=120,null=True)
     lastname =  models.CharField(max_length=120,null=True)
     address = models.CharField(max_length=120,null=True)
