@@ -1,11 +1,10 @@
 {% extends "Raul/base.html" %}
-{% block content %}
-
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
+{% block content %}
 <html>
 <head>
-    <title>Bootstrap Product Grid</title>
+    <title>Products</title>
     <!-- Bootstrap css -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head> -->
 
@@ -68,6 +67,18 @@
     function cartNotification(){
         document.getElementById('cartPopUp').style.animation = "fadeInPop 2.5s";
     }
+</script>
+<input type="hidden" id="refreshed" value="false">
+<script type="text/javascript">
+    $(window).load(function(){
+        if ($('#refreshed').val() == "false") {
+            $('#refreshed').val("true");
+        }
+        else {
+            $('#refreshed').val("false");
+            location.reload();
+        }
+    });
 </script>
 </body>
 

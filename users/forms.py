@@ -55,11 +55,12 @@ class BillingAddressForm(forms.ModelForm):
 User = get_user_model()
 
 class LoginForms(forms.Form):
-    username = forms.CharField()
+    username = forms.CharField(label='email')
     password = forms.CharField(widget=forms.PasswordInput())
     widgets = {
         'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
         'password': forms.TextInput(attrs = {'placeholder': 'Password'}),
+
     }
 
     def clean_username(self):

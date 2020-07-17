@@ -1,51 +1,47 @@
 {% extends "Raul/base.html" %}
 {% block content %}
 {% load crispy_forms_tags %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div class="logining">
     <h1>{{user.username}}</h1>
     <h1>{{user.email}}</h1>
-    {% for user in userorders %}
-        {{ user.product }}
-        {{ user.product.price }}
-        {{ user.quantity }}
+    {% for order in orders %}
+    {{ user.order }}
     {% endfor %}
+
     {% for userAdd in userAddress %}
-        {{ userAdd.address2}}
+    {{ userAdd.address}}
+    {{ userAdd.address2}}
     {% endfor %}
-    <form method="post">
-        {{ form.non_field_errors }}
-        <div class="logining">
-            <div class="login-header">
-                <h1>LOGIN</h1>
-            </div>
-            <div class="login-form">
-                <!--        <h3>Username:</h3>-->
-                <h3 for="{{ form.username.id_for_label }}">Username:</h3>
-                <!--        <input type="text" placeholder="Username"/><br>-->
-                {{ form.username }}
-                {{ form.username.errors }}
-                <!--        <input type="text" placeholder="Username"/><br>-->
-                <!--        <h3>Password:</h3>-->
-                <!--        <input type="password" placeholder="Password"/>-->
-                <br>
-                <!--        <label placeholder="Password" for="{{ form.password.id_for_label }}">Password:</label>-->
-                <h3 for="{{ form.password.id_for_label}}">Password:</h3>
-                {{ form.password }}
-                {{ form.password.errors }}
-                <br>
-                <br>
-                {% csrf_token %}
-                <button class="damnSon" href="{% url 'Raul-SecondHome' %}" type="submit">Login</button>
+    <div>
+        {% for billing in billing_address %}
+        {{ billing }}
+        {% endfor %}
+    </div>
+    <li>
+        {%  for myorder in UserOrders %}
+        {% for item in myorder.cart.cartitem_set.all %}
+        <div>
+            {{ item.product }}
 
-                <a class="sign-up" href="{% url 'register' %}"> Don't have an account? </a>
-                <br>
-            </div>
+            {{ item.quantity}}
+            {{item.product.price }}
         </div>
+        {% endfor %}
+        {% endfor %}
+    </li>
 
 
-        <!-- <div class="error-page">
-            <div class="try-again">Error: Try again?</div>
-        </div> -->
-    </form>
+
+
+</div>
+</body>
+</html>
+
 
 
 {% endblock %}

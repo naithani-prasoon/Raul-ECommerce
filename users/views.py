@@ -7,7 +7,7 @@ from .forms import CreateUserForm, UserAddressForm, BillingAddressForm
 from carts.models import Cart, CartItem
 from django.contrib.auth import get_user
 from django.urls import reverse
-from users.models import UserAddress, UserDefaultAddress
+from users.models import UserAddress, UserDefaultAddress, BillingAddress
 from django.contrib.auth import get_user_model
 
 
@@ -32,10 +32,14 @@ def register(request):
 
 @login_required
 def profile(request):
+    from orders.models import Order
     User = get_user(request)
-    UserOrders = CartItem.objects.filter(user=User)
+    UserOrders = Order.objects.filter(user=User)
+    print(UserOrders)
     userAddress = UserAddress.objects.filter(user=User)
-    context = {"userorders":UserOrders,"userAddress":userAddress}
+    billing_address = BillingAddress.objects.filter(user=User)
+    print(billing_address)
+    context = {"UserOrders":UserOrders,"userAddress":userAddress, "billing_address":billing_address}
     return render(request, 'users/profile.html',context)
 
 def add_address(request):
@@ -90,7 +94,10 @@ def add_billing_address(request):
 
 
 
-
+def delete_address(request, id):
+    address = UserAddress.objects.get(id=id)
+    address.delete()
+    return HttpResponseRedirect(reverse("profile"))
 
 # def search(request):
 #     try:

@@ -123,6 +123,7 @@ def SectionView(request, sec):
             Reg.email = Reg.username
             Reg.save()
             Register_form = forms.CreateUserForm()
+            form = forms.LoginForms()
             context = {'cats': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             messages.success(request, f'Your account has been created! You are now able to log in')
             return render(request, template,context)
