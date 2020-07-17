@@ -13,54 +13,98 @@
 
 <body>
 <div class="checkoutPage">
+    <div class="checkoutBanner">
+        <div class="checkoutBannerHeading">
+            Secure Checkout
+        </div>
+    </div>
     <div class="checkoutPageDivision">
         <div class= "leftColumn">
 
-
-            {% if shipping_selected%}
-            <h1>Subtotal : ${{ order.final_total}}</h1>
-
-
+            <!-- First Part -->
+            {% if shipping_selected%} 
             <form action="" method="POST" id="payment-form">
                 {% csrf_token %}
-                <div class='registeredAdd'>
-                    <h3> Shipping Addresses</h3>
-                    <h3> {{shipping_selected}}</h3>
-
-                    <input  type = "hidden" type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> <br/>
-
+                <h1>Order Summary</h1>
+                <div class ="photoSummary">
+                    {% for thing in cart.cartitem_set.all %}
+                    <div class = "photoSummaryColumn">
+                        <img src = "{{thing.product.image.url}}">
+                    </div>
+                    <div class = "photoSummaryColumn1">
+                        <h1>{{thing}} x {{thing.quantity}}</h1>
+                    </div>
+                    <div class="photoSummaryColumn2">
+                        <h1>{{thing.line_total}}</h1>
+                    </div>
+                    {% endfor %}
                 </div>
-
-                <div class="registeredAdd">
-                    <div class="col-sm-6">
-                        <h3>Billing Addresses</h3>
-                        <h3> {{billing_selected}}</h3>
-                        <input  type = "hidden" type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> <br/>
-
+                <div class="shippingAccordion"> Shipping and Billing Details </div>
+                <div class="boxAlign">
+                    <div class='registeredAdds'>
+                        <div class="box">
+                            <h1> Shipping Addresses</h1>
+                            <h5> {{shipping_selected}}</h5>
+                            <input  type = "hidden" type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> <br/>
+                        </div>
                     </div>
 
-                </div>
+                    <div class="registeredAdds">
+                        <div class="box">
+                            <h1>Billing Addresses</h1>
+                            <h5> {{billing_selected}}</h5>
+                            <input  type = "hidden" type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> <br/>
 
-                    <h1>Payment Information</h1>
-                    <div class="form-row">
-                        <label for = "card-element">
-                            Credit or Debit card
-                        </label>
-                        <div id="card-element">
-                            <!-- A Stripe Element will be inserted here. -->
                         </div>
 
-                        <!-- Used to display form errors. -->
-                        <div id="card-errors" role="alert"></div>
                     </div>
-                    <input value="pay" name="pay" type="submit" class="button">
+                </div>
+                
+                <h1 id ="dividor">Payment Information</h1>
+                <div class="form-row">
+                    <label for = "card-element">
+                        Credit or Debit card
+                    </label>
+                    <div id="card-element">
+                        <!-- A Stripe Element will be inserted here. -->
+                    </div>
+
+                    <!-- Used to display form errors. -->
+                    <div id="card-errors" role="alert"></div>
+                </div>
+                <input value="purchase" name="pay" type="submit" class="button">
+                </form>
+        </div>
+        <div class="rightColumns">
+            <h1>Billing Summary</h1>
+            <div class="totalSummary">
+                <div class = "totalSummaryColumn1">
+                    <h2>Subtotal</h2>
+                    <h2>Shipping</h2>
+                    <h2>Taxes</h2>
+                </div>
+                <div class ="totalSummaryColumn2">
+                    <h2>${{ order.sub_total}}</h2>
+                    <h2>$5.00</h2>
+                    <h2>${{ order.tax_total}}</h2>
+                </div>
+            </div>
+            <hr>
+            <div class="finalTotal">
+                <h2>
+                    Total
+                </h2>
+                <h2>
+                    ${{ order.final_total}}
+                </h2>
+            </div>
+        </div>
 
                 <!-- AFTER THIS ELSE
               IT IS THE CASE WHEN THE USER DID NOT ADD THERE ADDRESS
               -->
+              <!-- Part Two -->
                 {%elif billing_selected%}
-                <h1>Subtotal : ${{ order.final_total}}</h1>
-
 
                 <form action="" method="POST" id="payment-form">
                     {% csrf_token %}
@@ -97,7 +141,7 @@
                     <input value="pay" name="pay" type="submit" class="button">
 
                     {%else%}
-                <h1>Subtotal : ${{ cart.total}}</h1>
+                
 
             {% if address_form %}
                 <button class="accordion">Add New Shipping Address</button>
@@ -106,7 +150,6 @@
                         {{ address_form.as_p}}
 
                         <input type="submit" class="addButton" value="Add Shipping Address"/>
-
 
                     </form>
                 </div>
@@ -117,8 +160,6 @@
                         {{ billing_form.as_p}}
 
                         <input type="submit" class="addButton" value="Add Billing Address"/>
-
-
                     </form>
                 </div>
             {% endif %}
@@ -155,7 +196,7 @@
                         <input required type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
                         {% endif %}
                         {% endfor %}
-                        <input value="add" name="add" type="submit" class="button" >
+                        <input value="proceed towards the payment" name="add" type="submit" class="button" >
                     </div>
                     {% endif %}
                 </div>
@@ -163,7 +204,7 @@
         </div>
         <div class="rightColumn">
             <div class="summary" >
-                <h1> Order Summary: </h1>
+                <h1> Order Summary</h1>
                 <table>
                     <tr>
                         <th>Item</th>
@@ -175,19 +216,28 @@
                         <td>{{ thing }}</td>
                         <td>{{ thing.quantity }}</td>
                         <td>${{ thing.line_total }}</td>
+                        <!-- <td>{{thing.product.image.url}}</td> -->
                     </tr>
                     {% endfor %}
+                    <tr id = "ruleOut">
+                        <td> Subtotal* </td>
+                        <td></td>
+                        <td> ${{ order.sub_total}} </td>
+                    </tr>
                 </table>
+                <h5>*taxes and shipping fee not applied</h5>
             </div>
         </div>
     </div>
 </div>
 
 {%endif%}
+<button onclick="topFunction()" id="scrollTop">. </button>
 <script>
     function radiocheck() {
         document.getElementById("radio").required;
     }
+
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -202,6 +252,22 @@
         } 
     });
     }
+
+    var acc2 = document.getElementsByClassName("shippingAccordion");
+    var t;
+
+    for (t = 0; t < acc2.length; t++) {
+    acc2[t].addEventListener("click", function() {
+        this.classList.toggle("active2");
+        var panel2 = this.nextElementSibling;
+        if (panel2.style.maxHeight) {
+        panel2.style.maxHeight = null;
+        } else {
+        panel2.style.maxHeight = panel2.scrollHeight + "px";
+        } 
+    });
+    }
+
     // Create a Stripe client.
     var stripe = Stripe('pk_test_51GsD2nI9Rm3HfGNqDzGloX9dMwz1QCbkCuQfSNc99EUGK4Arw7SVaC6NMGCgQMjii1WtIyEXY9FcRKQ8YCnlY9QK00kwtbjsRr');
 
@@ -272,27 +338,7 @@
         // Submit the form
         form.submit();
     }
-
-
-    const mybutton = document.getElementById("scrollTop");
-
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-    }
-
-    function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
 </script>
 </body>
 </html>
-]
 {% endblock %}

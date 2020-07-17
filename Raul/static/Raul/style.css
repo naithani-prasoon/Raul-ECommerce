@@ -7,47 +7,83 @@ body{
 	padding:0px;
 }
 
+.headers{
+	background: #6d6d6d;
+}
+
 
 
 .productBanner{
-	background:rgba(0, 0, 0, 0.5);
-	background-position: left;
 	width:85%;
-	height:580px;
 	margin:150px auto 50px auto;
+	
+}
+
+.cartNotification{
+	opacity:1;
+	transform: translateX(400px);
+	position:fixed;
+	width:250px;
+	animation: none;
+	padding:50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	bottom:50px;
+	right:50px;
+	transition: 0.4s ease-in-out;
+}
+
+.cartAdded{
+	font-size: 25px;
+	background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 500;
+}
+
+@keyframes fadeInPop{
+	0%{
+		opacity: 0.5;
+		transform: translateX(100px);
+	}
+	25%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+	75%{
+		opacity:0.5;
+	}
+	100%{
+		opacity: 0;
+		transform: translateX(50px);
+	}
 }
 
 .productBanner-heading{
-	font-size:150px;
+	font-size:80px;
 	font-family:'Roboto Condensed',sans-sarif;
 	text-transform: uppercase;
-	padding:30px 100px 0px 100px;	
+	padding:10px 100px 0px 100px;	
+	text-align: center;
 }
 
 .productBanner-heading p{
 	background: -webkit-linear-gradient(#f8f18e,#d6a55b);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	position: relative;
+	margin-block-start: 50px;
+	margin-block-end: 10px;
 }
 
-.arrowDown{
-	margin-left:auto;
-	margin-right:auto;
-	text-align: center;
-}
-
-.arrowDown a img{
-	align-self: center;
-	justify-self: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	border-radius: 50px;
-	transition: 0.4s ease-in-out;
-	transform: rotate(180deg);
-}
-
-.arrowDown a img:hover{
-	width:3.5%;
-	cursor: pointer;
+.productBanner hr{
+	width:50%;
+	height:4px;
+	background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+	outline:none;
+	border: none;
 }
 
 
@@ -189,7 +225,9 @@ h5{
 	margin-block-start: 5px;
 	margin-block-end: 20px;
 	margin-inline-start: 0px;
-    margin-inline-end: 0px;
+	margin-inline-end: 0px;
+	font-style: italic;
+	font-weight: 400;
 }
 
 .buy{

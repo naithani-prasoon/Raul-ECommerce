@@ -4,6 +4,20 @@ body{
     background-color: #6d6d6d;
 }
 
+.headers{
+    background: #6d6d6d;
+}
+
+.headers figure .navbarIcons .hoverDiv{
+    padding:40px 0;
+}
+.headers figure .navbarIcons .hoverDiv2{
+    padding:10px 0;
+}
+.headers figure .navbarIcons .hoverDiv3{
+    padding:40px 0;
+}
+
 a {
     text-decoration: none;
     color:white;
@@ -27,25 +41,20 @@ a {
 
 .shopping-cart .block-heading{
     padding-top: 50px;
-    margin:100px auto 50px auto;
-    height: 300px;
+    margin:50px auto 0px auto;
     width:100%;
-    text-align: center;
-    /* background: url('Images/shoppingCartBanner.jpg'); */
-    background-position: center left;
+    text-align: left;
 }
 
 .shopping-cart .block-heading p{
-    text-align: center;
     padding:32px 32px;
-    max-width: 800px;
-    max-height: 300px;
     margin:20px auto;
-    font-size: 100px;
+    font-size: 50px;
     background: -webkit-linear-gradient(#f8f18e,#d6a55b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 800;
+    font-weight: 700;
+    text-transform: none;
     font-family: 'Roboto',sans-serif;
     
 }
