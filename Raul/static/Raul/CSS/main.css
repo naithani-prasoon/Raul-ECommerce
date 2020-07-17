@@ -7,7 +7,7 @@ html,body{
     width: 100%;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    background-color: rgb(200,200,200);
+    background-color: #6d6d6d;
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
@@ -5176,7 +5176,7 @@ nav ul li a:hover{
             transform: translateX(0);
         }
         100%{
-            transform: translateX(-190vw);
+            transform: translateX(-160vw);
         }
     }
 

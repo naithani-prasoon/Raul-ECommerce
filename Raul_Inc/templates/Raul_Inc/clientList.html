@@ -12,14 +12,14 @@
 <link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/font-awesome.min.css' %}">
 
 <div id="navcontainer" class="fixed">
-    <div id="logo" class="home-logo"><img src="{%static 'Raul_Inc/Images/raulAvilaInc.png' %}"/></div>
+    <div id="logo" class="home-logo"><img src="{%static 'Raul_Inc/Images/raulAvilaIncFinal.png' %}"/></div>
     <ul id="navlist">
-        <li><a href="site.html">HOME</a></li>
-        <li><a href="bio.html">BIO</a></li>
-        <li><a href="press.html">PRESS</a></li>
-        <li><a href="clientlist.html">CLIENT LIST</a></li>
+        <li><a href="{%url 'Raul_Inc_Home' %}">HOME</a></li>
+        <li><a href="{%url 'Raul_Inc_Bio' %}">BIO</a></li>
+        <li><a href="{%url 'Raul_Inc_Press' %}">PRESS</a></li>
+        <li><a href="{%url 'Raul_Inc_clientList' %}">CLIENT LIST</a></li>
         <li><a href="client/gallery.html">GALLERY</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="{%url 'Raul_Inc_contact' %}">CONTACT</a></li>
         <li>
             <div id="social">
                 <a href="https://www.facebook.com/RAULAVILAINC" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
