@@ -95,9 +95,11 @@ def view(request):
         cart.total = new_total
         cart.save()
         context = {"cart": cart}
+        cart.cartitem_set.c
         return render(request, template, context)
 
     else:
+        print("empty")
         empty_message = "Your cart is empty, go shop"
         context = {"empty": True, "empty_message": empty_message}
         return render(request, template, context)
