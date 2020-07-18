@@ -6,6 +6,14 @@ from django.contrib.auth import get_user
 from Raul.models import Variation, product
 from django.contrib import messages
 import time
+from django import http
+from django.shortcuts import render, redirect
+from django.views.generic import ListView, DeleteView, CreateView
+from django.http import HttpResponse
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from users import forms
+from django.contrib.auth import login,logout,authenticate
 
 # Create your views here.
 
@@ -15,6 +23,37 @@ from .models import Cart
 
 
 def view(request):
+    template = "Raul/cart.html"
+    form = forms.LoginForms(request.POST or None)
+    Register_form = forms.CreateUserForm(request.POST or None)
+    context = {'form': form,"Register_form": Register_form}
+    if 'register' in request.POST:
+        request.session.set_expiry(60)
+        if Register_form.is_valid():
+            Reg = Register_form.save(commit=False)
+            Reg.email = Reg.username
+            Reg.save()
+            Register_form = forms.CreateUserForm()
+            form = forms.LoginForms()
+            context = {'form': form,"Register_form": Register_form}
+            messages.success(request, f'Your account has been created! You are now able to log in')
+            return HttpResponseRedirect(reverse("cart"))
+        else:
+            messages.error(request, Register_form.error_messages)
+            form = forms.LoginForms()
+            context = {'form': form,"Register_form": Register_form}
+            return HttpResponseRedirect(reverse("cart"))
+
+    if 'login' in request.POST:
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username,password=password)
+            context = {'form': form,"Register_form": Register_form}
+            login(request,user)
+            a = 4
+            return HttpResponseRedirect(reverse("cart"))
+
     User = get_user(request)
     template = "Raul/cart.html"
     if User.is_authenticated:
@@ -48,7 +87,14 @@ def view(request):
 
                 cart.user = User
                 cart.save()
-                context = {'cart': cart}
+                context = {'cart': cart, 'form': form,"Register_form": Register_form}
+                y = 0
+                for ite in cart.cartitem_set.all():
+                    y += 1
+                if y == 0:
+                    empty_message = "Your cart is empty, go shop"
+                    context = {"empty": True, "empty_message": empty_message, 'form': form,"Register_form": Register_form}
+                    return render(request, template, context)
                 return render(request, template, context)
 
             # Check if an ACTIVE cart is asspcated with User #
@@ -67,13 +113,21 @@ def view(request):
                     item.line_total = line_total
                     # print(item.line_total)
                 item.save()
-
+            print(cart.cartitem_set.count)
             request.session['items_total'] = cart.cartitem_set.count()
             cart.total = new_total
             cart.pennies_total = cart.total * 100
             cart.save()
             request.session['cart_id'] = cart.id
-            context = {'cart': cart}
+            context = {'cart': cart, 'form': form,"Register_form": Register_form}
+            y = 0
+            for ite in cart.cartitem_set.all():
+                y += 1
+            if y == 0:
+                empty_message = "Your cart is empty, go shop"
+                context = {"empty": True, "empty_message": empty_message, 'form': form,"Register_form": Register_form}
+                return render(request, template, context)
+            print("cart message")
             return render(request, template, context)
 
 
@@ -92,19 +146,25 @@ def view(request):
             line_total = float(item.product.price) * item.quantity
             new_total += line_total
         request.session['items_total'] = cart.cartitem_set.count()
+        print(cart.cartitem_set.count)
         cart.total = new_total
         cart.save()
-        context = {"cart": cart}
-        cart.cartitem_set.c
+        context = {"cart": cart, 'form': form,"Register_form": Register_form}
+        y = 0
+        for ite in cart.cartitem_set.all():
+            y += 1
+        if y == 0:
+            empty_message = "Your cart is empty, go shop"
+            context = {"empty": True, "empty_message": empty_message, 'form': form,"Register_form": Register_form}
+            return render(request, template, context)
         return render(request, template, context)
 
     else:
-        print("empty")
         empty_message = "Your cart is empty, go shop"
-        context = {"empty": True, "empty_message": empty_message}
+        context = {"empty": True, "empty_message": empty_message, 'form': form,"Register_form": Register_form}
         return render(request, template, context)
 
-    context = {"cart": cart}
+    context = {"cart": cart, 'form': form,"Register_form": Register_form}
     return render(request, template, context)
 
 
@@ -118,6 +178,7 @@ def remove_from_cart(request, id):
 
     cartitem = CartItem.objects.get(id=id)
     cartitem.delete()
+
     return HttpResponseRedirect(reverse("cart"))
 
 
