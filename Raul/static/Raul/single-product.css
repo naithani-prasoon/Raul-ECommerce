@@ -1,9 +1,14 @@
 /* Basic Styling */
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
+
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: myFirstFont
 }
 
 .container {

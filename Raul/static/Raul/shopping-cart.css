@@ -1,6 +1,9 @@
-
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
 body{
-    font-family: 'Roboto',sans-serif;
+    font-family: myFirstFont;
     background-color: #6d6d6d;
 }
 
@@ -55,7 +58,7 @@ a {
     -webkit-text-fill-color: transparent;
     font-weight: 700;
     text-transform: none;
-    font-family: 'Roboto',sans-serif;
+    font-family: myFirstFont;
     
 }
 
