@@ -85,9 +85,8 @@
         </form>
     </div>
 
-    <div class = "headers" id="headerOnScroll">
+    <div class = "headers" id = "headerOnScroll">
         <figure id="figureOnScroll">
-
             <div class="navbarIcons"> 
                 <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
                 <div class="hoverDiv2">
@@ -155,11 +154,17 @@
             <p id="categoryP"> Venue Bookings</p>
 
         </div>
+    </div>
 
-        <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
+    <div class="mobile-headers">
+        <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo" onclick="openStore()"></figcaption>
 
         <nav>
-            <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+            <div class ="mobile-actions">
+            <img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login">
+            <img src = "{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Shopping Cart">
+            <img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+            </div>
             <ul id="contentHam">
 
                 <li class="exitButton">
@@ -184,7 +189,6 @@
 
             </ul>
         </nav>
-
     </div>
 
     <div id ="store">
@@ -663,9 +667,9 @@
 
     <div class="filler"></div>
     <div class ="featureProductsHeading" >
-
         shop by collection
     </div>
+    <div class="filler"></div>
     <div class="bannerThird">
         <div class = "section">
             <div class="firstSection">
