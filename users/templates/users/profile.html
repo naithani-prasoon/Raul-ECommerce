@@ -6,6 +6,29 @@
 
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <style>
+
+            .headers{
+                background-color: #6d6d6d;
+            }
+
+            .containers1{
+                margin: 0 auto;
+                display: block;
+            }
+
+            .logining{
+                width:100%;
+                margin:150px auto;
+            }
+
+            li{
+                list-style: none;
+            }
+
+        </style>
+    </head>
 <body>
 <div class="logining">
     <h1>{{user.username}}</h1>
@@ -15,7 +38,6 @@
     </div>
 
     {% endfor %}
-
     {% for userAdd in userAddress %}
     <input required type="hidden" name="shipping_address" value="{{ userAdd.id}}"/> {{ userAdd.get_address}} <br/>
     <a href="{% url 'del_add' userAdd.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
@@ -38,10 +60,6 @@
         {% endfor %}
         {% endfor %}
     </li>
-
-
-
-
 </div>
 </body>
 </html>

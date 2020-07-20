@@ -1,0 +1,125 @@
+/*hello*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
+
+body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    width:100%;
+    background-color: #fefefa;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-family: myFirstFont;
+    font-size: 80px;
+}
+
+#parallax{
+    background-attachment: fixed;
+    background-size: cover;
+    width:100%;
+    height:100vh;
+}
+
+.sections{
+    display:grid;
+    grid-template-columns: 60% 40%;
+    place-content: center;
+    place-items: center;
+    scroll-behavior: smooth;
+}
+
+.photo{
+    background: url('Images/cafe4.jpg');
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.heroHeading{
+    width:100%;
+    height:100vh;
+    position: relative;
+}
+
+.cafeLogo{
+    position: absolute;
+    bottom:40%; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.cafeLogo img{
+    width:400px;
+}
+
+.menuButton{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding:20px 0px;
+}
+
+.menuButton button{
+    margin: 0 10px;
+    outline:none;
+    padding:16px 32px;
+    border:none;
+    background-color: indianred;
+    color:white;
+    font-size: 20px;
+    border-radius: 40px;
+    font-family: myFirstFont;
+    transition: 0.4s ease-in-out;
+}
+
+.menuButton a{
+    color:white;
+}
+
+.menuButton button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sections1{
+    background-image: url('Images/cafe3.jpg');
+}
+
+.menu{
+    width:100%;
+    padding: 80px 0;
+    scroll-behavior: smooth;
+}
+
+.menuHead{
+    padding:80px 80px 20px 80px;
+}
+
+.hoursOfOperation{
+    padding:20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.hoursOfOperation h1{
+    font-size: 18px;
+    padding:10px 0;
+}
+
