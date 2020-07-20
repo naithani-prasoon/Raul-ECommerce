@@ -1,0 +1,67 @@
+{% load static %}
+<html lang="en-US"><head>
+    <title>Raúl Àvila Inc.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/main.css' %}">
+    <script type="text/javascript" src="{% static 'Raul_Inc/JS/library.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Raul_Inc/JS/lightbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Raul_Inc/JS/buttons.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Raul_Inc/JS/pngFixer.js' %}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            var lightbox = new Lightbox({ query:".lightbox", config:"xml/layoutRA3.xml" });
+        });
+    </script>
+
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/font-awesome.min.css' %}">
+
+<div id="navcontainer" class="fixed">
+    <div id="logo" class="home-logo"><img src="{%static 'Raul_Inc/Images/raulAvilaIncFinal.png' %}"></div>
+    <ul id="navlist">
+        <li><a href="{%url 'Raul_Inc_Home' %}">HOME</a></li>
+        <li><a href="{%url 'Raul_Inc_Bio' %}">BIO</a></li>
+        <li><a href="{%url 'Raul_Inc_Press' %}">PRESS</a></li>
+        <li><a href="{%url 'Raul_Inc_clientList' %}">CLIENT LIST</a></li>
+        <li><a href="client/gallery.html">GALLERY</a></li>
+        <li><a href="{%url 'Raul_Inc_contact' %}">CONTACT</a></li>
+        <li>
+            <div id="social">
+                <a href="https://www.facebook.com/RAULAVILAINC" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/RaulAvilaInc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="http://instagram.com/raulavilainc" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="wrapper">
+
+    <div id="articles">
+
+        <div class="group">
+            <a id="thumbs" class="lightbox" href="{% static 'Raul_Inc/Images/01_wwd-2011-10-12.jpg' %}" width="500" height="678" rel="group" num="0">
+                <img src="{% static 'Raul_Inc/Images/01_wwd-2011-10-12.jpg' %}" width="180" height="240">
+                <div class="description"><span>WWD: Met Gala 2012</span><br>October 12, 2011</div>
+            </a>
+            <a class="lightbox" href="{% static 'Raul_Inc/Images/01_wwd-2011-10-12.jpg' %}" width="500" height="678" rel="group" num="1"></a>
+        </div>
+
+        <div class="group">
+            <a id="thumbs" class="lightbox" href="{% static 'Raul_Inc/Images/01_wwd-2011-07-14.jpg' %}" width="500" height="678" rel="group" num="2">
+                <img src="{% static 'Raul_Inc/Images/01_wwd-2011-07-14.jpg' %}" alt="October Vogue" width="180" height="240">
+                <div class="description"><span>WWD: Bottega Venneta Fragrance Launch</span><br>July 14, 2011</div>
+            </a>
+            <a class="lightbox" href="{% static 'Raul_Inc/Images/07_wwd-2011-07-14.jpg' %}" width="500" height="678" rel="group" num="3"></a>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="lightbox_background" style="zoom: 1; width: 100%; height: 100%; position: fixed; top: 0px; background-image: url(&quot;i/tile.jpg&quot;); background-repeat: repeat; display: none;"></div><div class="lightbox_main" style="width: 100%; height: 100%; position: absolute; display: none;"><div class="lightbox_main_hit" style="width: 100%; height: 100%; position: absolute;"></div><div class="lightbox_center" style="width: 210px; position: relative; margin: -105px auto 0px; top: 50%;"><div class="lightbox_holder" style="width: 210px; position: relative; border-radius: 0px; padding: 0px; overflow: hidden; background-color: rgb(255, 255, 255);"><div class="lightbox_mask" style="width: 210px; height: 210px; border-radius: 0px; position: relative; float: left; overflow: hidden;"><div class="lightbox_image" style="position: absolute; opacity: 0;"></div></div><div class="lightbox_preloader" style="width: 110px; height: 14px; background-image: url(&quot;images/&quot;); background-repeat: no-repeat; margin: -7px auto 0px; top: 50%; position: absolute;"></div></div><div class="lightbox_description" style="position: relative; text-align: center; opacity: 0;"><div class="lightbox_text" style="background: rgb(0, 0, 0); border-radius: 10px; padding: 0px; font-family: Arial; color: rgb(255, 255, 255); font-size: 12px; font-weight: normal; position: relative; text-align: left; margin: 0px; display: inline-block;">This is a description</div></div><a class="lightbox_close" href="#" style="width: 40px; height: 40px; position: absolute; margin-top: 10px; margin-left: -10px; left: 100%; top: -40px;"><div class="lightbox_button" normal="i/close.png" over="" style="width: 40px; height: 40px; position: absolute; background-image: url(&quot;i/close.png&quot;);"><span class="hover" style="background-image: url(&quot;&quot;); opacity: 0; width: 40px; height: 40px; position: absolute;"></span></div></a><a class="lightbox_previous" href="#" style="width: 50px; height: 50px; position: absolute; margin-top: -35px; margin-left: -20px; left: -50px; top: 50%;"><div class="lightbox_button" normal="i/navPrev.jpg" over="" style="width: 50px; height: 50px; position: absolute; background-image: url(&quot;i/navPrev.jpg&quot;);"><span class="hover" style="background-image: url(&quot;&quot;); opacity: 0; width: 50px; height: 50px; position: absolute;"></span></div></a><a class="lightbox_next" href="#" style="width: 50px; height: 50px; position: absolute; margin-top: -35px; margin-left: 20px; left: 100%; top: 50%;"><div class="lightbox_button" normal="i/navNext.jpg" over="" style="width: 50px; height: 50px; position: absolute; background-image: url(&quot;i/navNext.jpg&quot;);"><span class="hover" style="background-image: url(&quot;&quot;); opacity: 0; width: 50px; height: 50px; position: absolute;"></span></div></a></div></div></body></html>

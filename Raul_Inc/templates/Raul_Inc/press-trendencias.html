@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Raúl Àvila Inc.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/main.css' %}">
+
+    <style>
+        #thumbs img {
+            width: 300px;
+            height: 216px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/font-awesome.min.css' %}">
+
+<div id="navcontainer" class="fixed">
+    <div id="logo" class="home-logo"><img src="{%static 'Raul_Inc/Images/raulAvilaIncFinal.png' %}"/></div>
+    <ul id="navlist">
+        <li><a href="{%url 'Raul_Inc_Home' %}">HOME</a></li>
+        <li><a href="{%url 'Raul_Inc_Bio' %}">BIO</a></li>
+        <li><a href="{%url 'Raul_Inc_Press' %}">PRESS</a></li>
+        <li><a href="{%url 'Raul_Inc_clientList' %}">CLIENT LIST</a></li>
+        <li><a href="client/gallery.html">GALLERY</a></li>
+        <li><a href="{%url 'Raul_Inc_contact' %}">CONTACT</a></li>
+        <li>
+            <div id="social">
+                <a href="https://www.facebook.com/RAULAVILAINC" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/RaulAvilaInc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="http://instagram.com/raulavilainc" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="wrapper">
+
+    <div id="articles">
+
+        <div class="group">
+            <a id="thumbs" href="https://www.trendencias.com/diseno/asi-fue-decoracion-alla-alfombra-roja-gala-met-2019-flamencos-gigantes-plumas-rosas-mucho-glamour" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/216_300.jpg' %}" alt="Así fue la decoración más allá de la alfombra roja de la Gala Met 2019" width="300" height="216">
+                <div class="description"><span>Así fue la decoración más allá de la alfombra roja de la Gala Met 2019</span><br/>May 2019</div>
+            </a>
+        </div>
+
+    </div>
+
+</div><!--wrapper-->
+
+</body>
+</html>
