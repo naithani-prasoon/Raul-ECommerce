@@ -2,43 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/01_wwd-2011-07-14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/01_wwd-2011-10-12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/216_300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2EnsembleBertrandGuyonforSchiaparelliFallWinter2017-300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/Raul_Avila-10-homepage-300x216.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/Tonys201913778.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/anna-wintour.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/jet-set-pg2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/kelly-osbourne.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/met-gala-karsten-1722-cardi-b-jumbo-300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/pink-peonies.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/raul.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/buttons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/library.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/lightbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/pngFixer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NY-Magazine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NYTimes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-coveteur.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-dailyfrontrow.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-jet-set.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-looktothestars.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-met.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-the-worlds-best-events.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-trendencias.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/presswwd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,9 +28,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="django_prject" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -90,6 +55,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ckDcNnHTB7tqcZDnbiku3EjaTa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -101,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul/static/Raul" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -123,24 +89,12 @@
       <recent name="$PROJECT_DIR$/Raul_Inc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jonat\IdeaProjects\django_prject2\Raul_Inc\static\Raul_Inc\Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/orders/static/orders" />
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
       <recent name="$PROJECT_DIR$/users" />
+      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.check2.html">
     <configuration name="check2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/orders/templates/orders/check2.html" useBuiltInWebServerPort="true">
@@ -223,8 +177,6 @@
       <workItem from="1594994863066" duration="105000" />
       <workItem from="1594994999166" duration="3037000" />
       <workItem from="1595007736535" duration="1570000" />
-      <workItem from="1595038161509" duration="9088000" />
-      <workItem from="1595205096857" duration="1926000" />
     </task>
     <task id="LOCAL-00033" summary="Ali's3">
       <created>1591885733598</created>
@@ -636,10 +588,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="328" y="23" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595008433157">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="331" y="54" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595122683679">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
+    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1595122683679" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1593651458432" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1593658011653" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1593628212010" />
@@ -704,14 +656,15 @@
     <state x="208" y="23" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1591927638710" />
     <state x="208" y="44" key="SettingsEditor/0.23.1440.823@0.23.1440.823" timestamp="1591498351558" />
     <state x="277" y="23" key="SettingsEditor/0.23.1920.988@0.23.1920.988" timestamp="1594861585063" />
-    <state x="499" y="156" key="VCS.ChangeListViewerDialog" timestamp="1591489708056">
-      <screen x="0" y="23" width="1440" height="822" />
+    <state x="499" y="146" key="VCS.ChangeListViewerDialog" timestamp="1595122705622">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="499" y="146" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1595122705621" />
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="195" key="Vcs.Push.Dialog.v2" timestamp="1595008518724">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1595122691328">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1595122691328" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1593651469381" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1593658017001" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1593628223780" />
@@ -745,10 +698,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1591120488524" />
-    <state x="525" y="362" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594994875426">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595122702328">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592063445852" />
+    <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1595122702328" />
     <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1593701190892" />
     <state x="525" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.810@0.23.1440.810" timestamp="1593480707863" />
     <state x="525" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812" timestamp="1594169353508" />

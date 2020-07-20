@@ -74,7 +74,37 @@ def landingpage(request):
 
 def products(request):
     products = product.objects.all()
-    context = {'products': products}
+    template = 'Raul/product.html'
+    form = forms.LoginForms(request.POST or None)
+    Register_form = forms.CreateUserForm(request.POST or None)
+    context = {'form': form,"Register_form": Register_form}
+    if 'register' in request.POST:
+        request.session.set_expiry(60)
+        if Register_form.is_valid():
+            Reg = Register_form.save(commit=False)
+            Reg.email = Reg.username
+            Reg.save()
+            Register_form = forms.CreateUserForm()
+            context = {'products': products, 'form': form,"Register_form": Register_form}
+            messages.success(request, f'Your account has been created! You are now able to log in')
+            return render(request, template,context)
+        else:
+            messages.error(request, Register_form.error_messages)
+            form = forms.LoginForms()
+            context = {'products': products, 'form': form,"Register_form": Register_form}
+            return render(request, template,context)
+
+    if 'login' in request.POST:
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username,password=password)
+            context = {'products': products, 'form': form,"Register_form": Register_form}
+            login(request,user)
+            return render(request, template,context)
+
+    products = product.objects.all()
+    context = {'products': products, 'form': form,"Register_form": Register_form}
     template = 'Raul/product.html'
     return render(request, template, context)
 
