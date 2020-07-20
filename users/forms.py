@@ -55,7 +55,7 @@ class BillingAddressForm(forms.ModelForm):
 User = get_user_model()
 
 class LoginForms(forms.Form):
-    username = forms.CharField(label='email')
+    username = forms.CharField(label='email address')
     password = forms.CharField(widget=forms.PasswordInput())
     widgets = {
         'username': forms.TextInput(attrs = {'placeholder': 'Username'}),
@@ -89,7 +89,7 @@ class LoginForms(forms.Form):
 
 
 class CreateUserForm(UserCreationForm):
-    username= forms.EmailField(label="Email")
+    username= forms.EmailField(label="Email Address")
     email = forms.HiddenInput()
     class Meta:
         model = User

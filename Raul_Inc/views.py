@@ -57,6 +57,9 @@ def presspretaporter(request):
 def pressdaily(request):
     return render(request, 'Raul_Inc/press-dailyfrontrow.html')
 
+def cafe(request):
+    return render(request, 'Raul_Inc/cafe.html')
+
 
 
 

@@ -118,10 +118,10 @@
                 <span><a href="{% url 'logout' %}"> <p> Logout </p></a></span>
             </div>
         </div>
-        <a href="{% url 'cart' %}" title="Shopping Cart"> <p> <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" > </p></a>
+        <a href="{% url 'cart' %}" title="Shopping Cart"> <p> {{request.session.items_total}}  <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" > </p></a>
 
         {% else %}
-        <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
+        <a href="{% url 'Raul-SecondHome' %}"><p>  <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
         <div class="navbarIcons">
             <p title="Login or Register"><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
             <div class="hoverDiv" title="Login or Register">
@@ -129,7 +129,7 @@
                 <span><a href="#" onclick="document.getElementById('id02').style.display='block'">Register</a></span>
             </div>
         </div>
-        <a href="{% url 'cart' %}" title="Shopping Cart"> <p><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
+        <a href="{% url 'cart' %}" title="Shopping Cart"> <p> {{request.session.items_total}}  <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
         {% endif %}
 
     </figure>
@@ -178,7 +178,7 @@
                 <a href="{% url 'register' %}">Login</a>
             </li>
             <li>
-                <a href="{% url 'cart' %}">Cart</a>
+                <a href="{% url 'cart' %}">  Cart {{request.session.items_total}</a>
             </li>
 
 

@@ -62,6 +62,7 @@ urlpatterns = [
     path('Raul_Inc/press-ny-post.html', Raul_Inc_Path.pressnypost, name='Raul_Inc_press-ny-post'),
     path('Raul_Inc/press-pretaporter.html', Raul_Inc_Path.presspretaporter, name='Raul_Inc_press-pretaporter'),
     path('Raul_Inc/press-dailyfrontrow.html', Raul_Inc_Path.pressdaily, name='Raul_Inc_press-dailyfrontrow'),
+    path('Raul_Inc/cafe', Raul_Inc_Path.cafe, name='Raul_Inc_cafe'),
     path('Raul_Inc/press-jet-set.html', Raul_Inc_Path.pressjet, name='Raul_Inc_press-jet-set'),
     path('Raul_Inc/clientList', Raul_Inc_Path.clientList, name='Raul_Inc_clientList'),
     path('Raul_Inc/contact', Raul_Inc_Path.contact, name='Raul_Inc_contact'),

@@ -110,7 +110,6 @@ def products(request):
 
 
 def CategoryView(request, cats):
-    a=2
     template = 'Raul/categories.html'
     form = forms.LoginForms(request.POST or None)
     Register_form = forms.CreateUserForm(request.POST or None)
