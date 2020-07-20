@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/cafe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +28,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="django_prject" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,6 +55,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ckDcNnHTB7tqcZDnbiku3EjaTa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -77,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul/static/Raul" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul/static/Raul/Images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,25 +75,25 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
-      <recent name="$PROJECT_DIR$/Raul_Inc" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/orders/static/orders" />
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
       <recent name="$PROJECT_DIR$/users" />
-      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images/Raul Website" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.check2.html">
@@ -586,10 +576,10 @@
     </state>
     <state x="395" y="123" width="817" height="568" key="#Project_Structure/0.23.1440.815@0.23.1440.815" timestamp="1595006539260" />
     <state x="1967" y="215" width="804" height="669" key="#Project_Structure/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1594610216272" />
-    <state x="446" y="256" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593617500950">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595275915060">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1591326187065" />
+    <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1595275915060" />
     <state x="446" y="256" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.808@0.23.1440.808" timestamp="1593617500950" />
     <state x="829" y="243" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594535113522">
       <screen x="0" y="23" width="1440" height="817" />
@@ -658,10 +648,10 @@
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
     <state x="1471" y="173" key="MultipleFileMergeDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595207679861" />
     <state x="31" y="102" key="MultipleFileMergeDialog/0.23.1920.988@0.23.1920.988" timestamp="1594861465629" />
-    <state x="370" y="23" width="1024" height="815" key="SettingsEditor" timestamp="1595185578281">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="208" y="23" width="1024" height="815" key="SettingsEditor" timestamp="1595276001550">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="208" y="23" width="1024" height="822" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1593999041369" />
+    <state x="208" y="23" width="1024" height="822" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1595276001550" />
     <state x="208" y="44" key="SettingsEditor/0.23.1440.810@0.23.1440.810" timestamp="1593481790482" />
     <state x="208" y="44" key="SettingsEditor/0.23.1440.814@0.23.1440.814" timestamp="1594156268068" />
     <state x="1717" y="94" key="SettingsEditor/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595121986814" />
