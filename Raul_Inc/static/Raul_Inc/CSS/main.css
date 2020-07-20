@@ -4,7 +4,7 @@
     font-size: 14px;
 }
 body {
-    background: #6d6d6d;
+    background: black;
     font-size: 7.5pt;
     font-family: Arial, sans-serif;
     /*margin: 5px 0 x`60px 0;*/
@@ -39,11 +39,11 @@ body {margin:0;padding:0;}
     width: 100%;
     height: 80px;
     font-size: 12px;
-    background-color: #6d6d6d;
+    background-color: black;
 }
 
 #navlist {
-    background-color: #6d6d6d;
+    background-color: black;
     padding-bottom: 15px;
 }
 
@@ -66,16 +66,20 @@ a:hover {
 }
 
 a:link {
-    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        
+    color:white;
+}
+
+a:active{
+    color:white;
+}
+
+a:visited{
+    color:white;
 }
 
 
 #navlist a:hover:after {
     content: '';
-    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
     width: 100%;
     left: 0px;
     position: absolute;

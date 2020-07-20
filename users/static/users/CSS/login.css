@@ -1,0 +1,21 @@
+/*hello*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    width: 100%;
+    font-family: myFirstFont;
+    overflow-x: hidden;
+    background-color: #6d6d6d;
+    text-transform: lowercase;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+}

@@ -2,34 +2,168 @@
 {% block content %}
 {% load crispy_forms_tags %}
 <head>
+    <style>
+        /*hello*/
+    @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+    @font-face {
+        font-family: myFirstFont;
+        src: url(avenir-lt-std-35-light.otf);
+    }
+
+    html,body{
+        margin:0;
+        padding:0;
+        width: 100%;
+        font-family: myFirstFont;
+        overflow-x: hidden;
+        background-color: #6d6d6d;
+        text-transform: lowercase;
+        scroll-behavior: smooth;
+        scroll-snap-type: mandatory;
+        scroll-snap-points-y: repeat(100vh);
+        scroll-snap-type: y mandatory;
+    }
+
+    .headers{
+        background-color: #6d6d6d;
+    }
+
+    .containers1{
+        height:auto;
+        padding:50px 0px;
+        margin:100px auto;
+    }
+
+    .loginRegister{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .loginForm{
+        flex:1;
+        padding: 50px 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin:0 40px;
+    }
+
+    .registerForm{
+        flex:1;
+        padding: 50px 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin:0 40px;
+    }
+
+    .loginRegister label{
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size:20px;
+        font-weight: 700;
+        text-align: left;
+    }
+
+    .loginRegister h1{
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 40px;
+        text-transform: none;
+    }
+
+    .loginRegister .button,button{
+        background: #cfbb63;
+        color:rgba(0, 0, 0, 0.6);
+        padding:16px 64px;
+        outline: none;
+        border: none;
+        border-radius: 40px;
+        font-weight: 700;
+        transition: 0.4s ease-in-out;
+        font-family: myFirstFont;
+        font-size: 20px;
+    }
+
+    .loginRegister li{
+        list-style: none;
+        text-align: center;
+        font-size: 12px;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .loginRegister .helptext::before{
+        display: inline-block;
+        content: "";
+        border-top: .3rem solid transparent;
+        width: 1rem;
+        margin: 0 1rem;
+        transform: translateY(-1rem);
+
+    }
+
+    .loginRegister .helptext{
+        font-size:12px;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+
+    @media only screen and (max-width:1200px){
+        .loginRegister{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .loginForm{
+            margin:40px;
+            padding:50px;
+        }
+
+        ul{
+            padding-inline-start: 0;
+        }
+
+        .loginRegister li{
+            font-size: 10px;
+        }
+
+        .loginRegister label{
+            margin: 30px 0px;
+        }
+    }
+
+    </style>
+
 </head>
+<div class="loginRegister">
+    <div class = "loginForm">
+        <h1>Login</h1>
+        <form method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <button value="Login" name="login" type="submit">Login</button>
+        </form>
+    </div>
 
 
-<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
-
-<div class= "loginPhoto">
-</div>
-
-<div>
-<form method="post">
-    {%csrf_token%}
-     {{form.as_p}}
-    <button value="Login" name="login" type="submit">Login</button>
-</form>
-</div>
-<!-- <div class="error-page">
-    <div class="try-again">Error: Try again?</div>
-</div> -->
-
-<div>
-<form method="post">
-    {%csrf_token%}
-    {{Register_form.as_p}}
-    <input type="submit" name="register" value="Register" class="button">
-    <!-- <div class="error-page">
-        <div class="try-again">Error: Try again?</div>
-    </div> -->
-</form>
+    <div class = "registerForm">
+        <h1>Create an Account</h1>
+        <form method="post">
+            {%csrf_token%}
+            {{Register_form.as_p}}
+            <input type="submit" name="register" value="Register" class="button">
+            <!-- <div class="error-page">
+                <div class="try-again">Error: Try again?</div>
+            </div> -->
+        </form>
+    </div>
 </div>
 
 {% endblock %}
