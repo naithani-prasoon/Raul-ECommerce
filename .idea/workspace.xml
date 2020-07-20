@@ -2,12 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/01_wwd-2011-07-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/01_wwd-2011-10-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/216_300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2EnsembleBertrandGuyonforSchiaparelliFallWinter2017-300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/Raul_Avila-10-homepage-300x216.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/Tonys201913778.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/anna-wintour.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/jet-set-pg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/kelly-osbourne.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/met-gala-karsten-1722-cardi-b-jumbo-300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/pink-peonies.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/raul.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/buttons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/library.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/JS/pngFixer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NY-Magazine.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NYTimes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-coveteur.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-dailyfrontrow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-jet-set.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-looktothestars.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-met.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-the-worlds-best-events.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-trendencias.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/presswwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/shopping-cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/shopping-cart.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/single-product.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/single-product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +101,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul/static/Raul" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -92,12 +123,24 @@
       <recent name="$PROJECT_DIR$/Raul_Inc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonat\IdeaProjects\django_prject2\Raul_Inc\static\Raul_Inc\Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/orders/static/orders" />
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
       <recent name="$PROJECT_DIR$/users" />
-      <recent name="C:\Users\jonat\IdeaProjects\django_prject\users\templates\users" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.check2.html">
     <configuration name="check2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/orders/templates/orders/check2.html" useBuiltInWebServerPort="true">
@@ -180,6 +223,8 @@
       <workItem from="1594994863066" duration="105000" />
       <workItem from="1594994999166" duration="3037000" />
       <workItem from="1595007736535" duration="1570000" />
+      <workItem from="1595038161509" duration="9088000" />
+      <workItem from="1595205096857" duration="1926000" />
     </task>
     <task id="LOCAL-00033" summary="Ali's3">
       <created>1591885733598</created>
