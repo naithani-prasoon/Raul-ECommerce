@@ -283,11 +283,17 @@
                 {% if single_product.variation_set.sizes %}
                 <select class="form-control" name="size">
                     {% for item in single_product.variation_set.sizes %}
+                    {% if item.price %}
                     <option value="{{item.title }}">{{item.title }}  {{item.price}}
                     </option>
+                    {%else%}
+                    <option value="{{item.title }}">{{item.title }}
+                    </option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 {% endif %}
+
 
                 <input type='submit' value='Add to cart' onclick="cartNotification()">
             </form>

@@ -99,6 +99,7 @@ def add_item():
                         Product.title = str(row[1])
                         Product.description = str(row[2])
                         Product.category = str(row[3])
+                        Product.section = SectionFinder(str(row[3]))
                         Product.price = str(row[6])
                         lowercase_title = str(row[1]).lower()
                         Product.slug = lowercase_title.replace(" ","_")
@@ -130,6 +131,146 @@ def add_item():
 
 
             print(f'Processed {line_count} lines.')
+
+
+
+def SectionFinder(str):
+    if str == "Baskets":
+        return "Decorative Accessories"
+    if str == "Candlesticks":
+        return "Decorative Accessories"
+    if str == "Benches":
+        return "Furniture"
+    if str == "Bowls":
+        return "Sale"
+    if str == "Bowls, Footed":
+        return "Tabletop"
+    if str == "Boxes":
+        return "Decorative Accessories"
+    if str == "Bud Vase, Hanging":
+        return "Decorative Accessories"
+    if str == "Bud Vases":
+        return "Decorative Accessories"
+    if str == "Cake Stands":
+        return "Tabletop"
+    if str == "Candelabras":
+        return "Tabletop"
+    if str == "Candle Holders":
+        return "Decorative Accessories"
+    if str == "Candle Holders, Hanging":
+        return "Decorative Accessories"
+    if str == "Candlelight":
+        return "Decorative Accessories"
+    if str == "Candlesticks":
+        return "Decorative Accessories"
+    if str == "Cashpots":
+        return "Decorative Accessories"
+    if str == "Chairs":
+        return "Furniture"
+    if str == "Clocks":
+        return "Decorative Accessories"
+    if str == "Decorative Objects":
+        return "Decorative Accessories"
+    if str == "Decorative Objects":
+        return "Decorative Accessories"
+    if str == "Dinnerware":
+        return "Tabletop"
+    if str == "Floral":
+        return "Floral"
+    if str == "Footed Vases":
+        return "Decorative Accessories"
+    if str == "Furniture":
+        return "Furniture"
+    if str == "Frames":
+        return "Decorative Accessories"
+    if str == "Glassware":
+        return "Decorative Accessories"
+    if str == "Hurricanes":
+        return "Decorative Accessories"
+    if str == "Lamps":
+        return "Decorative Accessories"
+    if str == "Lanterns":
+        return "Decorative Accessories"
+    if str == "Mirrors":
+        return "Wall Art"
+    if str == "Pitchers":
+        return "Tabletop"
+    if str == "Plant":
+        return "Floral"
+    if str == "Rugs":
+        return "Furniture"
+    if str == "Sale":
+        return "Sale"
+    if str == "Notebooks":
+        return "Decorative Accessories"
+    if str == "Saucers":
+        return "Decorative Accessories"
+    if str == "Sofas":
+        return "Furniture"
+    if str == "Statues":
+        return "Decorative Accessories"
+    if str == "Wall Art":
+        return "Wall Art"
+    if str == "Votives":
+        return "Decorative Accessories"
+    if str == "Vases, Footed":
+        return "Decorative Accessories"
+    if str == "Vases":
+        return "Decorative Accessories"
+    if str == "Urns":
+        return "Decorative Accessories"
+    if str == "Trays":
+        return "Decorative Accessories"
+    if str == "Terrariums":
+        return "Decorative Accessories"
+    if str == "Stationary":
+        return "Decorative Accessories"
+    if str == "Shelves":
+        return "Furniture"
+    if str == "Tables":
+        return "Furniture"
+    if str == "Boxes":
+        return "Furniture"
+    if str == "Glassware":
+        return "Tabletop"
+    if str == "":
+        return "Hello"
+    if str == "Miscellaneous":
+        return "Hello"
+    if str == "Stools":
+        return "Furniture"
+    if str == "Chandeliers":
+        return "Decorative Accessories"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
