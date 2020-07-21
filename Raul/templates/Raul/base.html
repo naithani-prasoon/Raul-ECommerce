@@ -155,11 +155,17 @@
         <p id="categoryP" style="color:white;">Venue Bookings</p>
 
     </div>
+</div>
 
-    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo"></figcaption>
+<div class="mobile-headers">
+    <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo" onclick="openStore()"></figcaption>
 
     <nav>
-        <img src= "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+        <div class ="mobile-actions">
+        <img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login" style="box-sizing: initial;">
+        <img src = "{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Shopping Cart" style="box-sizing: initial;">
+        <img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false" style="box-sizing: initial;">
+        </div>
         <ul id="contentHam">
 
             <li class="exitButton">
@@ -171,21 +177,10 @@
             <li>
                 <a href="#">Store</a>
             </li>
-            <li>
-                <a href="{% url 'register' %}">Register</a>
-            </li>
-            <li>
-                <a href="{% url 'register' %}">Login</a>
-            </li>
-            <li>
-                <a href="{% url 'cart' %}">  Cart {{request.session.items_total}</a>
-            </li>
-
-
         </ul>
     </nav>
-
 </div>
+
 
 <div id ="store">
     <p onclick="closeStore()" id="cross">

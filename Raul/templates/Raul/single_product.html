@@ -9,7 +9,7 @@
         body {
             width: 100%;
             margin: 0;
-            font-family: 'Roboto', sans-serif;
+            font-family: myFirstFont;
         }
 
         .headers{
@@ -24,7 +24,7 @@
             margin: 0;
             padding:5px;
             display: grid;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 60% 40%;
         }
 
         .left-column {
@@ -81,23 +81,29 @@
         }
 
         .product-configuration form{
-            display: grid;
-            grid-template-columns: 250px 250px;
-            grid-template-rows: 60px 60px;
+            display: flex;
+            flex-direction: row;
+            margin:0 auto;
+            justify-content: center;
+            align-items: center;
+            width:auto;
+            height:auto;
+            flex-wrap: wrap;
         }
 
         .numberOfItems{
-            padding:10px 10px 20px 10px;
+            padding:10px 30px;
             font-size:25px;
-            margin:10px 0px 10px 0px;
-            width:150px;
-            background: transparent;
+            margin:10px auto;
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             outline: none;
             border:none;
-            border-bottom: 1px solid #cfbb63;
-            color: #cfbb63;
-            font-family: 'Roboto',sans-serif;
+            border: 3px solid #cfbb63;
+            font-family: myFirstFont;
             text-align: center;
+            font-weight: 800;
         }
 
         .form-control{
@@ -124,16 +130,18 @@
         }
 
         form input[type = submit]{
-            background: transparent;
+            background: #cfbb63;
             border-radius: 50px;
-            font-family: 'Roboto',sans-serif;
+            font-family: myFirstFont;
             font-size: 20px;
             border:2px solid #cfbb63;
-            color:#cfbb63;
+            color:rgba(0, 0, 0, 0.8);
             outline: none;
-            padding:0px;
+            padding:16px 32px;
             transition: 0.4s ease-in-out;
             margin:0px 50px;
+            text-align: center;
+            font-weight: 800;
         }
 
         form input[type = submit]:hover{
@@ -147,25 +155,25 @@
             margin-right: auto;
             text-align: center;
             justify-content: center;
+            align-items: center;
         }
         .product-price{
             text-align: left;
             padding:10px 0px;
             font-size: 25px;
             font-weight: 700;
-            
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .product-description hr{
             width:80%;
             color:#cfbb63;
             background-color: #cfbb63;
-            border: 1px;
+            border: 2px;
             outline: none;
             border-style: solid;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
 
         }
 
@@ -209,6 +217,40 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+        }
+
+        @media (max-width:1024px){
+            .containers1{
+                margin:200px auto;
+            }
+        }
+
+        @media (max-width:900px){
+            .containers1{
+                margin:200px auto;
+            }
+
+            .container2{
+                display: grid;
+                grid-template-rows: auto auto;
+                grid-template-columns: none;
+            }
+
+            .left-column{
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .right-column{
+                margin-top: 0;
+            }
+
+            .numberOfItems{
+                margin:20px auto;
+            }
+
+
         }
 
 
@@ -257,7 +299,7 @@
             <form  method='POST' action="{% url 'ajax_add_to_cart' single_product.slug %}">
             {% csrf_token %}
 
-                <input name='qty' type='number' placeholder='Quantity' class = "numberOfItems" min="1" max="50" value="1">
+                <input name='qty' type='number' placeholder="1" class = "numberOfItems" min="1" max="50" value="1">
 
                 {% if single_product.variation_set.colors %}
 
