@@ -111,9 +111,7 @@
                     <div class='registeredAdd'>
                         <h3> Shipping Addresses</h3>
                         <h3> {{shipping_selected}}</h3>
-
                         <input  type = "hidden" type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> <br/>
-
                     </div>
 
                     <div class="registeredAdd">
@@ -121,7 +119,6 @@
                             <h3>Billing Addresses</h3>
                             <h3> {{billing_selected}}</h3>
                             <input  type = "hidden" type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> <br/>
-
                         </div>
 
                     </div>
@@ -148,7 +145,6 @@
                 <div class = "panel">
                     <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
                         {{ address_form.as_p}}
-
                         <input type="submit" class="addButton" value="Add Shipping Address"/>
 
                     </form>
@@ -158,7 +154,6 @@
                 <div class = "panel">
                     <form method="POST" action='{% url "ajax_add_user_billing_address" %}?next=checkout'>{% csrf_token %}
                         {{ billing_form.as_p}}
-
                         <input type="submit" class="addButton" value="Add Billing Address"/>
                     </form>
                 </div>
@@ -176,7 +171,7 @@
                         {% if request.user.userdefaultaddress.shipping.id == address.id %}
                         <input required type ="radio" name="shipping_address" value="{{ address.id }}" checked="checked"/> {{ address.get_address}} <br/>
                         {% else %}
-                        <a href="{% url 'del_add' address.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
+                        <!-- <a href="{% url 'del_add' address.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a> -->
 
                         <input required type="radio" name="shipping_address" value="{{ address.id }}"/> {{ address.get_address}} <br/>
                         {% endif %}
@@ -194,7 +189,7 @@
                         <input required type="radio" name="billing_address" value="{{ address.id}}" checked="checked"/> {{ address.get_address}} <br/>
                         {% else %}
                         <input required type="radio" name="billing_address" value="{{ address.id}}"/> {{ address.get_address}} <br/>
-                        <a href="{% url 'del_add' address.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
+                        <!-- <a href="{% url 'del_add' address.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a> -->
 
                         {% endif %}
                         {% endfor %}

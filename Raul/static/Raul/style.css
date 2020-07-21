@@ -16,10 +16,17 @@ body{
 	background: #6d6d6d;
 }
 
-
+.headers figure .navbarIcons .hoverDiv{
+    padding:40px 0;
+}
+.headers figure .navbarIcons .hoverDiv2{
+    padding:10px 0;
+}
+.headers figure .navbarIcons .hoverDiv3{
+    padding:40px 0;
+}
 
 .productBanner{
-	width:85%;
 	margin:150px auto 50px auto;
 	
 }
@@ -254,5 +261,12 @@ h5{
 		-ms-flex: 0 0 33.3333%;
 		flex: 0 0 33.33333%;
 		max-width: 33.3333%;
+	}
+}
+
+@media (max-width :768px){
+	.productBanner-heading {
+		font-size: 40px;
+		padding :0px 0px 0px 0px;
 	}
 }
