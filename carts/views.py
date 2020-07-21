@@ -68,12 +68,21 @@ def view(request):
                 for item in cart.cartitem_set.all():
                     if item.variation.all():
                         for itemV in item.variation.all():
-                            print( "Product Name: ",itemV,  itemV.price)
-                            new_total += float(itemV.price) * (item.quantity)
-                            print( "New Total",  new_total)
-                            line_total = float(itemV.price) * (item.quantity)
-                            print("Line Total", line_total)
-                            item.line_total = line_total
+                            if itemV.price == None:
+                                print( "Product Name: ",itemV,  itemV.price)
+                                new_total += float(itemV.product.price) * (item.quantity)
+                                print( "New Total",  new_total)
+                                line_total = float(itemV.price) * (item.quantity)
+                                print("Line Total", line_total)
+                                item.line_total = line_total
+                            else:
+                                print( "Product Name: ",itemV,  itemV.price)
+                                new_total += float(itemV.price) * (item.quantity)
+                                print( "New Total",  new_total)
+                                line_total = float(itemV.price) * (item.quantity)
+                                print("Line Total", line_total)
+                                item.line_total = line_total
+
                         item.save()
                     else:
                         print( "Product Name: ",item,  item.product.price)
@@ -116,12 +125,21 @@ def view(request):
             for item in cart.cartitem_set.all():
                 if item.variation.all():
                     for itemV in item.variation.all():
-                        print( "Product Name: ",itemV,  itemV.price)
-                        new_total += float(itemV.price) * (item.quantity)
-                        print( "New Total",  new_total)
-                        line_total = float(itemV.price) * (item.quantity)
-                        print("Line Total", line_total)
-                        item.line_total = line_total
+                        if itemV.price == None:
+                            print( "Product Name: ",itemV,  itemV.price)
+                            new_total += float(itemV.product.price) * (item.quantity)
+                            print( "New Total",  new_total)
+                            line_total = float(itemV.product.price) * (item.quantity)
+                            print("Line Total", line_total)
+                            item.line_total = line_total
+                        else:
+                            print( "Product Name: ",itemV,  itemV.price)
+                            new_total += float(itemV.price) * (item.quantity)
+                            print( "New Total",  new_total)
+                            line_total = float(itemV.price) * (item.quantity)
+                            print("Line Total", line_total)
+                            item.line_total = line_total
+
                     item.save()
                 else:
                     print( "Product Name: ",item,  item.product.price)
@@ -160,10 +178,37 @@ def view(request):
     if the_id:
         new_total = 0.00
         for item in cart.cartitem_set.all():
-            line_total = float(item.product.price) * item.quantity
-            new_total += line_total
+            if item.variation.all():
+                for itemV in item.variation.all():
+                    if itemV.price == None:
+                        print( "Product Name: ",itemV,  itemV.price)
+                        new_total += float(itemV.product.price) * (item.quantity)
+                        print( "New Total",  new_total)
+                        line_total = float(itemV.product.price) * (item.quantity)
+                        print("Line Total", line_total)
+                        item.line_total = line_total
+                    else:
+                        print( "Product Name: ",itemV,  itemV.price)
+                        new_total += float(itemV.price) * (item.quantity)
+                        print( "New Total",  new_total)
+                        line_total = float(itemV.price) * (item.quantity)
+                        print("Line Total", line_total)
+                        item.line_total = line_total
+
+                item.save()
+            else:
+                print( "Product Name: ",item,  item.product.price)
+                new_total += float(item.product.price) * (item.quantity)
+                print( "New Total",  new_total)
+                line_total = float(item.product.price) * (item.quantity)
+                print("Line Total", line_total)
+                item.line_total = line_total
+            item.save()
+
         request.session['items_total'] = cart.cartitem_set.count()
-        cart.total = new_total
+        cart.total = round(new_total,2)
+        print(cart.total)
+        cart.pennies_total = cart.total * 100
         cart.save()
         context = {"cart": cart, 'form': form,"Register_form": Register_form}
         y = 0
@@ -407,12 +452,20 @@ def update_cart(request, slug):
     for item in cart.cartitem_set.all():
         if item.variation.all():
             for itemV in item.variation.all():
-                print( "Product Name: ",itemV,  itemV.price)
-                new_total += float(itemV.price) * (item.quantity)
-                print( "New Total",  new_total)
-                line_total = float(itemV.price) * (item.quantity)
-                print("Line Total", line_total)
-                item.line_total = line_total
+                if itemV.price == None:
+                    print( "Product Name: ",itemV,  itemV.price)
+                    new_total += float(itemV.product.price) * (item.quantity)
+                    print( "New Total",  new_total)
+                    line_total = float(itemV.product.price) * (item.quantity)
+                    print("Line Total", line_total)
+                    item.line_total = line_total
+                else:
+                    print( "Product Name: ",itemV,  itemV.price)
+                    new_total += float(itemV.price) * (item.quantity)
+                    print( "New Total",  new_total)
+                    line_total = float(itemV.price) * (item.quantity)
+                    print("Line Total", line_total)
+                    item.line_total = line_total
 
             item.save()
         else:
