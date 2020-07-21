@@ -28,11 +28,14 @@
 <div class="productContainer">
 
     <div class="row" id="scrollHere">
+
         {% for product in products %}
         <div class="productCard">
             <div class="image">
                 <a href="{% url 'Raul-single' product.slug %}" >
+                    {% if product.image%}
                     <img src="{{ product.image.url }}" class="productImage">
+                    {%endif%}
                     </a>
                     <div class="overlay">
                         <div class="actions">

@@ -48,7 +48,13 @@
                 </div>
             </div>
             <h5 class="productTitle">{{product.title}}</h5>
-            <h5 class="productPrice">${{product.price}}</h5>
+                {% if product.variation_set.sizes %}
+            <h5 class="productPrice">varies</h5>
+                {% elif product.variation_set.colors %}
+                <h5 class="productPrice">varies</h5>
+                {%else%}
+                <h5 class="productPrice">${{product.price}}</h5>
+                {% endif %}
         </div>
             </form>
         {% endfor %}
