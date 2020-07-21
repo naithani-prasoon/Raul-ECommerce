@@ -261,7 +261,9 @@
 
     <!-- Left Column / Headphones Image -->
     <div class="left-column">
+        {% if single_product.image %}
         <img src="{{ single_product.image.url }}">
+        {%endif%}
         <img data-image="blue" src="images/blue.png" alt="">
         <img data-image="red" class="active" src="images/red.png" alt="">
     </div>
@@ -273,6 +275,8 @@
             <div class="product-description">
                 <a href="{% url 'cat-view' single_product.category %}" >{{single_product.category}}</a>
                 <h1>{{single_product.title}}</h1>
+                {% if single_product.variation_set.sizes %}
+                {% endif %}
                 <div class="product-price">
                     ${{single_product.price}}
                 </div>
@@ -321,7 +325,7 @@
                 {% if single_product.variation_set.sizes %}
                 <select class="form-control" name="size">
                     {% for item in single_product.variation_set.sizes %}
-                    <option value="{{item.title }}">{{item.title }}
+                    <option value="{{item.title }}">{{item.title }}  {{item.price}}
                     </option>
                     {% endfor %}
                 </select>

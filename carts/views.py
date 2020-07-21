@@ -60,24 +60,33 @@ def view(request):
         # Check is user assoicated with an ACTIVE CartID #
         try:
             cart = Cart.objects.get(id=request.session['cart_id'], active=True)
-            print("Try with ID")
         except:
             pass
         else:
-            print("cart.user and request.user.is_authenticated:")
             if not cart.user and request.user.is_authenticated:
                 new_total = 0.00
                 for item in cart.cartitem_set.all():
-                    if (item.quantity != None):
-                        # print(item.product)
+                    if item.variation.all():
+                        for itemV in item.variation.all():
+                            print( "Product Name: ",itemV,  itemV.price)
+                            new_total += float(itemV.price) * (item.quantity)
+                            print( "New Total",  new_total)
+                            line_total = float(itemV.price) * (item.quantity)
+                            print("Line Total", line_total)
+                            item.line_total = line_total
+                        item.save()
+                    else:
+                        print( "Product Name: ",item,  item.product.price)
                         new_total += float(item.product.price) * (item.quantity)
+                        print( "New Total",  new_total)
                         line_total = float(item.product.price) * (item.quantity)
+                        print("Line Total", line_total)
                         item.line_total = line_total
-                        # print(item.line_total)
                     item.save()
 
                 request.session['items_total'] = cart.cartitem_set.count()
-                cart.total = new_total
+                cart.total = round(new_total,2)
+                print(cart.total)
                 cart.pennies_total = cart.total * 100
                 cart.save()
                 userCartNum = Cart.objects.filter(user=User, active=True).count()
@@ -100,22 +109,32 @@ def view(request):
             # Check if an ACTIVE cart is asspcated with User #
         try:
             cart = Cart.objects.get(user=User, active=True)
-            print("Try with User")
         except:
             pass
         else:
             new_total = 0.00
             for item in cart.cartitem_set.all():
-                if (item.quantity != None):
-                    # print(item.product)
+                if item.variation.all():
+                    for itemV in item.variation.all():
+                        print( "Product Name: ",itemV,  itemV.price)
+                        new_total += float(itemV.price) * (item.quantity)
+                        print( "New Total",  new_total)
+                        line_total = float(itemV.price) * (item.quantity)
+                        print("Line Total", line_total)
+                        item.line_total = line_total
+                    item.save()
+                else:
+                    print( "Product Name: ",item,  item.product.price)
                     new_total += float(item.product.price) * (item.quantity)
+                    print( "New Total",  new_total)
                     line_total = float(item.product.price) * (item.quantity)
+                    print("Line Total", line_total)
                     item.line_total = line_total
-                    # print(item.line_total)
                 item.save()
-            print(cart.cartitem_set.count)
+
             request.session['items_total'] = cart.cartitem_set.count()
-            cart.total = new_total
+            cart.total = round(new_total,2)
+            print(cart.total)
             cart.pennies_total = cart.total * 100
             cart.save()
             request.session['cart_id'] = cart.id
@@ -127,7 +146,6 @@ def view(request):
                 empty_message = "Your cart is empty, go shop"
                 context = {"empty": True, "empty_message": empty_message, 'form': form,"Register_form": Register_form}
                 return render(request, template, context)
-            print("cart message")
             return render(request, template, context)
 
 
@@ -136,7 +154,6 @@ def view(request):
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id=the_id, active=True)
-        print("Try with User")
     except:
         the_id = None
 
@@ -146,7 +163,6 @@ def view(request):
             line_total = float(item.product.price) * item.quantity
             new_total += line_total
         request.session['items_total'] = cart.cartitem_set.count()
-        print(cart.cartitem_set.count)
         cart.total = new_total
         cart.save()
         context = {"cart": cart, 'form': form,"Register_form": Register_form}
@@ -169,7 +185,6 @@ def view(request):
 
 
 def remove_from_cart(request, id):
-    print("yooooo")
     try:
         the_id = request.session['cart_id']
         cart = Cart.objects.get(id = the_id)
@@ -183,7 +198,6 @@ def remove_from_cart(request, id):
 
 
 def add_to_cart(request, slug):
-    print("add_to_cart")
     request.session.set_expiry(10000)
     Check = False
     Zero_Check = False
@@ -212,8 +226,6 @@ def add_to_cart(request, slug):
     pro_var = []
     if request.method == "POST":
         count = 0
-        print("FORM POST")
-        print(request.POST)
         qty = request.POST['qty']
         for item in request.POST:
             key = item
@@ -283,11 +295,9 @@ def add_to_cart(request, slug):
     new_total = 0.00
     for item in cart.cartitem_set.all():
         if (item.quantity != None):
-            # print(item.product)
             new_total += float(item.product.price) * (item.quantity)
             line_total = float(item.product.price) * (item.quantity)
             item.line_total = line_total
-            # print(item.line_total)
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
@@ -299,7 +309,6 @@ def add_to_cart(request, slug):
 
 
 def update_cart(request, slug):
-    print("Update")
     request.session.set_expiry(3000000)
     Check = False
     Zero_Check = False
@@ -328,8 +337,6 @@ def update_cart(request, slug):
     pro_var = []
     if request.method == "POST":
         count = 0
-        print("FORM POST")
-        print(request.POST)
         qty = request.POST['qty']
         for item in request.POST:
             key = item
@@ -398,19 +405,31 @@ def update_cart(request, slug):
 
     new_total = 0.00
     for item in cart.cartitem_set.all():
-        if (item.quantity != None):
-            # print(item.product)
+        if item.variation.all():
+            for itemV in item.variation.all():
+                print( "Product Name: ",itemV,  itemV.price)
+                new_total += float(itemV.price) * (item.quantity)
+                print( "New Total",  new_total)
+                line_total = float(itemV.price) * (item.quantity)
+                print("Line Total", line_total)
+                item.line_total = line_total
+
+            item.save()
+        else:
+            print( "Product Name: ",item,  item.product.price)
             new_total += float(item.product.price) * (item.quantity)
+            print( "New Total",  new_total)
             line_total = float(item.product.price) * (item.quantity)
+            print("Line Total", line_total)
             item.line_total = line_total
-            # print(item.line_total)
         item.save()
 
     request.session['items_total'] = cart.cartitem_set.count()
     cart.total = round(new_total,2)
+    print(cart.total)
     cart.pennies_total = cart.total * 100
     cart.save()
-    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    return HttpResponseRedirect(reverse("cart"))
 
 
 

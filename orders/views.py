@@ -9,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order,StripeInfo
-from .utilis import id_generator,email_test,make_invoice,pdf
+from .utilis import id_generator,email_test,make_invoice,pdf,add_item
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm,BillingAddressForm
 from users.models import UserAddress, BillingAddress

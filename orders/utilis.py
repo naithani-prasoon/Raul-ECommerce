@@ -1,6 +1,7 @@
 import string
 import random
 import os
+import csv
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import string
@@ -26,8 +27,6 @@ from reportlab.lib.pagesizes import letter
 from reportlab.platypus import Table
 from django.contrib.auth import get_user_model, get_user
 import pdfkit
-
-
 from .models import Order
 
 def id_generator(size=10, chars= string.ascii_uppercase + string.digits):
@@ -78,5 +77,60 @@ def pdf(idnum,context):
     outfilepath = os.path.join( outfiledir, outfilename )
     rendered = render_to_string('orders/Confirmed Order.html', context)
     pdfkit.from_string(rendered,outfilepath)
+
+
+def add_item():
+    from Raul.models import product, Variation
+    with open('orders/static/orders/catalog-2020-07-20-2213.csv') as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        Count = 0
+        line_count = 0
+        for row in csv_reader:
+            Count = product.objects.filter(title=str(row[1])).count()
+            Product = product()
+            variation = Variation()
+            if line_count == 0:
+                print(f'Column names are {", ".join(row)}')
+                line_count += 1
+            else:
+                if str(row[5]) == "Regular":
+                    if(str(row[6]) != "variable"):
+                        print(f'\t Product Name:{row[1]} Product Description:{row[2]} Product Category: {row[3]} Product Price: {row[6]}.')
+                        Product.title = str(row[1])
+                        Product.description = str(row[2])
+                        Product.category = str(row[3])
+                        Product.price = str(row[6])
+                        lowercase_title = str(row[1]).lower()
+                        Product.slug = lowercase_title.replace(" ","_")
+                        Product.save()
+                        line_count += 1
+                else:
+                    if Count == 0:
+                        Product.title = str(row[1])
+                        Product.description = str(row[2])
+                        Product.category = str(row[3])
+                        if (str(row[6]) != "variable"):
+                            Product.price = str(row[6])
+                            lowercase_title = str(row[1]).lower()
+                            Product.slug = lowercase_title.replace(" ","_")
+                            Product.save()
+                        Count = product.objects.filter(title=str(row[1])).count()
+                        print(Count)
+                    if Count > 0:
+                        product_instance = product.objects.get(title=str(row[1]))
+                        print(product_instance.price)
+                        variation.product = product_instance
+                        variation.category = "size"
+                        variation.title = str(row[5])
+                        if (str(row[6]) != "variable"):
+                            variation.price = str(row[6])
+                            variation.save()
+                        Count = 0
+
+
+
+            print(f'Processed {line_count} lines.')
+
+
 
 
