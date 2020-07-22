@@ -107,12 +107,18 @@
         }
 
         .form-control{
-            background:transparent;
-            border: 1px solid #cfbb63;
-            padding:10px;
-            color:#cfbb63;
-            margin:10px 0px;
-            width:200px;
+            padding:10px 10px;
+            font-size:20px;
+            margin:10px auto;
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            outline: none;
+            border:none;
+            border: 3px solid #cfbb63;
+            font-family: myFirstFont;
+            text-align: center;
+            font-weight: 800;
         }
 
         .cart-btn {
@@ -276,10 +282,16 @@
                 <a href="{% url 'cat-view' single_product.category %}" >{{single_product.category}}</a>
                 <h1>{{single_product.title}}</h1>
                 {% if single_product.variation_set.sizes %}
-                {% endif %}
+                <p id = "priceTitle">select a price</p>
+                {%else%}
                 <div class="product-price">
                     ${{single_product.price}}
                 </div>
+
+                {% endif %}
+                <!-- <div class="product-price">
+                    ${{single_product.price}}
+                </div> -->
                 <p>{{single_product.description}}</p>
                 <hr>
             </div>
@@ -323,10 +335,10 @@
                 
 
                 {% if single_product.variation_set.sizes %}
-                <select class="form-control" name="size">
+                <select class="form-control" name="size" onchange="priceChange()" id="selectVariation">
                     {% for item in single_product.variation_set.sizes %}
                     {% if item.price %}
-                    <option value="{{item.title }}">{{item.title }}  {{item.price}}
+                    <option value="{{item.title}} ${{item.price}}"> {{item.title}}  {{item.price}}
                     </option>
                     {%else%}
                     <option value="{{item.title }}">{{item.title }}
@@ -357,6 +369,12 @@
 <script>
     function cartNotification(){
         document.getElementById('cartPopUp').style.animation = "fadeInPop 2.5s";
+    }
+</script>
+<script>
+    function priceChange(){
+        var selectedOption = document.getElementById("selectVariation").value;
+        document.getElementById("priceTitle").innerHTML = selectedOption;
     }
 </script>
 

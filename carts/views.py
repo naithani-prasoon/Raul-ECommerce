@@ -275,6 +275,7 @@ def add_to_cart(request, slug):
         for item in request.POST:
             key = item
             val = request.POST[key]
+            print(val.split('$')[0])
             try:
                 if count == 0:
                     v = Variation.objects.get(product=producter, category__iexact=key, title__iexact=val)
