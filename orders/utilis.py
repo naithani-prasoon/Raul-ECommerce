@@ -1,31 +1,14 @@
-import string
-import random
-import os
 import csv
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 import string
 import random
 import os
-from django.shortcuts import render, HttpResponseRedirect
-from io import BytesIO
-from django.http import HttpResponse
-from django.template.loader import get_template
-import xhtml2pdf.pisa as pisa
-from .models import Order
-from carts.models import Cart
 from django.conf import settings
-from django.core import mail
 from django.template.loader import render_to_string
-from django.utils.html import strip_tags
-from django.core.mail import EmailMultiAlternatives
-from reportlab.pdfgen import canvas
-from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.pdfbase import pdfmetrics
 from reportlab.platypus import SimpleDocTemplate
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import Table
-from django.contrib.auth import get_user_model, get_user
 import pdfkit
 from .models import Order
 
@@ -114,6 +97,10 @@ def add_item():
                             Product.price = str(row[6])
                             lowercase_title = str(row[1]).lower()
                             Product.slug = lowercase_title.replace(" ","_")
+                            if str(row[3]) != "Delivery":
+                                if str(row[3]) != "Shipping":
+                                    if str(row[3]) != "Event":
+                                        Product.section = SectionFinder(str(row[3]))
                             Product.save()
                         Count = product.objects.filter(title=str(row[1])).count()
                         print(Count)
@@ -241,6 +228,20 @@ def SectionFinder(str):
         return "Furniture"
     if str == "Chandeliers":
         return "Decorative Accessories"
+    if str == "Statues":
+        return "Furniture"
+    if str == "Baskets":
+        return "Decorative Accessories"
+    if str == "Bowls, Footed":
+        return "Tabletop"
+    if str == "Tabletop":
+        return "Tabletop"
+    if str == "Pillars":
+        return "Sale"
+
+
+
+
 
 
 
