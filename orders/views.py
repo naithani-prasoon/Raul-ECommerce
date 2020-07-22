@@ -34,7 +34,7 @@ def orders(request):
 
 @login_required
 def checkout(request):
-    add_item()
+
     pyziptax.api_key = "OL9GNXzWjylg38ma"
     User = get_user(request)
     try:

@@ -141,7 +141,7 @@ def delete_address(request, id):
         address.delete()
     except:
         pass
-    return HttpResponseRedirect(reverse("checkout"))
+    return HttpResponseRedirect(reverse("profile"))
 
 # def search(request):
 #     try:
