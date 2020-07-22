@@ -326,7 +326,7 @@
                 <select class="form-control" name="size">
                     {% for item in single_product.variation_set.sizes %}
                     {% if item.price %}
-                    <option value="{{item.title }}">{{item.title }}  {{item.price}}
+                    <option value="{{item.title }} {{item.price}}">{{item.title }}  {{item.price}}
                     </option>
                     {%else%}
                     <option value="{{item.title }}">{{item.title }}
