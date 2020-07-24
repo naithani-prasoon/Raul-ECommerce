@@ -4856,57 +4856,87 @@ figure img{
         margin-top:-25px;
     }
 
-    /* .dropDownMenu{
+    .dropDownMenu{
         float: left;
         overflow: hidden;
-        padding:30px;
         transition: 0.4s ease-in-out;
+        color:inherit
     }
+
     .dropDownMenu .dropDownButton{
         border:none;
         outline:none;
-        color:white;
         font-size: 16px;
         font-family: myFirstFont;
         background-color:transparent;
-        margin-top:60px;
         transition: 0.4s ease-in-out;
     }
-    .dropDownButton a{
-        color:white;
-    }
+
     .dropDownContent{
         display: none;
         position: fixed;
         left: 0;
-        background-color: black;
+        background-color: #6d6d6d;
         width: 100%;
-        padding:50px;
-        z-index: 2;
-        margin-left:auto;
-        margin-right:auto;
-        text-align: center;
+        padding:30px 0px;
+        z-index: -1;
         transition: 0.4s ease-in-out;
+        border-bottom: 1px solid black;
+        animation: slideInNav 1s;
+        text-align: center;
+       
     }
-    .dropDownContent a{
+
+    @keyframes slideInNav{
+        0%{
+            transform: translateY(-100px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+
+    .dropDownContent .dropDownContentLinks{
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dropDownContentImage{
+        flex: auto;
+        text-align: center;
+    }
+
+    .dropDownContentLinks a{
         color:white;
         text-decoration: none;
-        padding:30px;
+        padding:20px;
+        animation: fadeInNavBar 2.5s;
         text-align: center;
     }
+
+    .dropDownContent img{
+        width:300px;
+        margin: 0 auto;
+        animation: fadeInNavBar 2.5s;
+    }
+    
     .dropDownContent a:hover{
         font-family: myFirstFont;
-        letter-spacing: 0.05em;
         cursor: pointer;
     }
     .dropDownButton:hover{
         font-family: myFirstFont;
-        letter-spacing: 0.05em;
         cursor: pointer;
     }
     .dropDownMenu:hover .dropDownContent{
-        display: block;
-    } */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
 
     .bannerHead{
         height: 100vh;

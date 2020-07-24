@@ -135,21 +135,92 @@
 
         <div class="category" id="hideOnScroll">
 
-            <p id="categoryP"><a  href="{% url 'sec-view' 'New Arrivals' %}">New Arrivals</a></p>
-
-            <p id="categoryP"><a  href="{% url 'sec-view' 'Decorative Accessories' %}">Decorative Accessories</a></p>
+            <div class = "dropDownMenu">
+                <p class="dropDownButton"><a  href="{% url 'sec-view' 'New Arrivals' %}">New Arrivals</a></p>
+                <div class="dropDownContent">
+                    <div class="dropDownContentLinks">
+                        <a>Colored Glass Collection</a>
+                        <a>Floral Bird Cachepot Collection</a>
+                        <a>Blue Wave Cachepot & Bone Frame Collection</a>
+                        <a>Clear Glass Collection</a>
+                        <a>Lexi Cachepot & Cream Tealight Collection</a>
+                        <a>Ceramic & Cement Pot Collection</a>
+                        <a>Smoked Cut Glass Collection</a>
+                        <a>eylissa & norro vase collection</a>
+                    </div>
+                </div>
+            </div>
+            <div class = "dropDownMenu">
+                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Decorative Accessories' %}">Decorative Accessories</a></p>
+                <div class="dropDownContent">
+                    <div class="dropDownContentLinks">
+                        <a>Colored Glass Collection</a>
+                        <a>Floral Bird Cachepot Collection</a>
+                        <a>Blue Wave Cachepot & Bone Frame Collection</a>
+                        <a>Clear Glass Collection</a>
+                    </div>
+                </div>
+                
+            </div>
             
-            <p id="categoryP"><a  href="{% url 'sec-view' 'Tabletop' %}">Tabletop</a></p>
+            <div class = "dropDownMenu">
+                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Tabletop' %}">Tabletop</a></p>
+                <div class="dropDownContent">
+                    <div class="dropDownContentLinks">
+                        <a>Colored Glass Collection</a>
+                        <a>Floral Bird Cachepot Collection</a>
+                    </div>
 
-            <p id="categoryP"><a  href="{% url 'sec-view' 'Furniture' %}">Furniture</a></p>
+                </div>
+            </div>
+            
+            <div class = "dropDownMenu">
+                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Furniture' %}">Furniture</a></p>
+                    <div class="dropDownContent">
+                        <div class="dropDownContentLinks">
+                            <a>Colored Glass Collection</a>
+                            <a>Floral Bird Cachepot Collection</a>
+                            <a>Blue Wave Cachepot & Bone Frame Collection</a>
+                            <a>Clear Glass Collection</a>
+                        </div>
+                    </div>
+            </div>
 
-            <p id="categoryP"><a  href="{% url 'sec-view' 'Floral' %}">Floral</a></p>
+                      
+            <div class = "dropDownMenu">
+                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Floral' %}">Floral</a></p>
+            </div>
 
-            <p id="categoryP"><a  href="{% url 'sec-view' 'Wall Art' %}">Wall Art</a></p>
+            <div class = "dropDownMenu">
+                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Wall Art' %}">Wall Art</a></p>
+                <div class="dropDownContent">
+                    <div class="dropDownContentLinks">
+                        <a>Colored Glass Collection</a>
+                        <a>Floral Bird Cachepot Collection</a>
+                    </div>
+                </div>
+            </div>
 
-            <p id="categoryP"><a  href="{% url 'Raul-product' %}">All Products</a></p>
 
-            <p id="categoryP"><a  href="{% url 'sec-view' 'Sale' %}">Sale</a></p>
+            <div class = "dropDownMenu">
+                <p class="dropDownButton"><a  href="{% url 'Raul-product' %}">All Products</a></p>
+            </div>
+
+
+            <div class = "dropDownMenu">
+                <p class="dropDownButton" ><a  href="{% url 'sec-view' 'Sale' %}">Sale</a></p>
+                <div class="dropDownContent">
+                    <div class="dropDownContentLinks">
+                        <a>Colored Glass Collection</a>
+                        <a>Floral Bird Cachepot Collection</a>
+                        <a>Blue Wave Cachepot & Bone Frame Collection</a>
+                        <a>Clear Glass Collection</a>
+                        <a>Lexi Cachepot & Cream Tealight Collection</a>
+                        <a>Ceramic & Cement Pot Collection</a>
+                        <a>Smoked Cut Glass Collection</a>
+                    </div>
+                </div>
+            </div>
             
             <p id="categoryP"> Venue Bookings</p>
 
@@ -209,6 +280,7 @@
         </p>
 
     </div>
+
     <div>
         {% if messages %}
         <div class="popUpMessage">
@@ -424,6 +496,7 @@
         </div>
     </div>
     <div class="filler"></div>
+    
     <div class="filler" id ="borderBottom"></div>
 
     <div class ="shopBanner">
@@ -666,10 +739,13 @@
     </div>
 
     <div class="filler"></div>
+
     <div class ="featureProductsHeading" >
         shop by collection
     </div>
+
     <div class="filler"></div>
+
     <div class="bannerThird">
         <div class = "section">
             <div class="firstSection">
@@ -689,17 +765,6 @@
 
     <div class="filler"></div> 
 
-
-    <!-- <div class="collectionBanner">
-        <figcaption>shop this collection</figcaption>
-        <form method = 'POST'>
-            {% csrf_token %}
-            {{form|crispy}}
-            <input type = 'submit' value="test" class="btn"/>
-        </form>
-
-    </div> -->
-
     <footer>
         <div class="footerEssentials">
             <div class="logoSection">
@@ -715,10 +780,6 @@
                 Social
             </div>
         </div>
-
-
-
-
     </footer>
 
     <button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>

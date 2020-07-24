@@ -15,7 +15,7 @@
 
             .containers1{
                 margin: 0 auto;
-                display: block;
+                max-width:1280px;
             }
 
             .logining{
@@ -23,44 +23,134 @@
                 margin:150px auto;
             }
 
-            li{
-                list-style: none;
+            .logining h1{
+                background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size:55px;
+                padding:0 50px;
+                margin-block-end: 10px;
             }
+
+            li{
+                list-style: upper-roman;
+            }
+
+            .profile-tabsButton{
+                width:100%;
+                padding:50px 0;
+                margin:0 auto;
+                text-align: center;
+            }
+
+            .profile-tablinks{
+                padding:16px 32px;
+                font-size: 20px;
+                font-family: myFirstFont;
+                font-weight: 700;
+                background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                transition: 0.4s ease-in-out;
+            }
+
+            .profile-tabsButton button.active{
+                background-color: rgba(0,0,0,0.6);
+                background: rgba(0,0,0,0.6);
+                color: #cfbb63;
+                -webkit-text-fill-color: #cfbb63;
+            }
+
+            .profile-tabcontent{
+                background-color: rgba(0,0,0,0.2);
+                min-height: 200px;
+                margin:auto 10px;
+            }
+
+            .profile-tabcontent h4,li{
+                background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size:20px;
+                padding: 40px 50px;
+                font-weight: normal;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                width: fit-content;
+                text-transform: none;
+            }
+
+            #Shipping,#Billing{
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
 
         </style>
     </head>
 <body>
 <div class="logining">
     <h1>{{user.username}}</h1>
-    {%  for myorder in UserOrders %}
-    <div>
-        <li>{{myorder.order_id}}</li>
+    <div class = "profile-tabsButton">
+        <button class="profile-tablinks" onclick="openTab(event, 'Orders')" id="defaultOpen">My Orders</button>
+        <button class="profile-tablinks" onclick="openTab(event, 'Shipping')">Shipping Addresses</button>
+        <button class="profile-tablinks" onclick="openTab(event, 'Billing')">Billing Addresses</button>
     </div>
-
-    {% endfor %}
-    {% for userAdd in userAddress %}
-    <input required type="hidden" name="shipping_address" value="{{ userAdd.id}}"/> {{ userAdd.get_address}} <br/>
-    <a href="{% url 'del_add' userAdd.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
-    {% endfor %}
-    <div>
-        {% for billing in billing_address %}
-        <input required type="hidden" name="billing_address" value="{{ billing.id}}"/> {{ billing.get_address}} <br/>
-        <a href="{% url 'del_add' billing.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>
-        {% endfor %}
-    </div>
-    <li>
+    <div id = "Orders" class = "profile-tabcontent">
         {%  for myorder in UserOrders %}
-        {% for item in myorder.cart.cartitem_set.all %}
         <div>
-            {{ item.product }}
-
-            {{ item.quantity}}
-            {{item.product.price }}
+            <li>Order Number: {{myorder.order_id}}</li>
         </div>
         {% endfor %}
+    </div
+    >
+    <div id = "Shipping" class = "profile-tabcontent">
+        {% for userAdd in userAddress %}
+        <input required type="hidden" name="shipping_address" value="{{ userAdd.id}}"/> <h4><a href="{% url 'del_add' userAdd.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>  {{ userAdd.get_address}}</h4>
+        
         {% endfor %}
-    </li>
+    </div>
+    <div id = "Billing" class = "profile-tabcontent">
+        {% for billing in billing_address %}
+        <input required type="hidden" name="billing_address" value="{{ billing.id}}"/> <h4><a href="{% url 'del_add' billing.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>  {{ billing.get_address}}</h4>
+        
+        {% endfor %}
+    </div>
+        <!-- <li>
+            {%  for myorder in UserOrders %}
+            {% for item in myorder.cart.cartitem_set.all %}
+            <div>
+                {{ item.product }}
+
+                {{ item.quantity}}
+                {{item.product.price }}
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </li> -->
 </div>
+
+<script>
+
+    function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("profile-tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("profile-tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "flex";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
 </body>
 </html>
 
