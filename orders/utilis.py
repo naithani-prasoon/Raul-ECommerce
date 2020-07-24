@@ -86,6 +86,10 @@ def add_item():
                         Product.price = str(row[6])
                         lowercase_title = str(row[1]).lower()
                         Product.slug = lowercase_title.replace(" ","_")
+                        try:
+                            Product.image = str(row[1]).replace(" ","_") + ".jpg"
+                        except:
+                            pass
                         Product.save()
                         line_count += 1
                 else:
@@ -97,6 +101,10 @@ def add_item():
                             Product.price = str(row[6])
                             lowercase_title = str(row[1]).lower()
                             Product.slug = lowercase_title.replace(" ","_")
+                            try:
+                                Product.image = str(row[1]).replace(" ","_") + str(row[5])+ ".jpg"
+                            except:
+                                pass
                             if str(row[3]) != "Delivery":
                                 if str(row[3]) != "Shipping":
                                     if str(row[3]) != "Event":

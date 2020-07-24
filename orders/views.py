@@ -33,7 +33,8 @@ def orders(request):
     return render(request, template, context)
 
 @login_required
-def checkout(request):  
+def checkout(request):
+  
     pyziptax.api_key = "OL9GNXzWjylg38ma"
     User = get_user(request)
     try:
@@ -56,7 +57,7 @@ def checkout(request):
     except Order.DoesNotExist:
         new_order = Order()
         new_order.cart = cart
-        ##new_order.user = request.user
+        new_order.user = request.user
         new_order.order_id = id_generator()
         new_order.sub_total = cart.total
         new_order.save()

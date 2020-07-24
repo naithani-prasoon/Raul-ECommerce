@@ -5,7 +5,7 @@ from .models import product, productimage , Category, Variation, Section
 
 class productAdmin(admin.ModelAdmin):
         search_fields = ['title','description', 'category']
-        list_display = ['title', 'price', 'active', 'updated', 'description','category']
+        list_display = ['title', 'price', 'active', 'updated', 'description','category',"image"]
         list_editable = ['price','active']
         list_filter =['active', 'price', 'category']
         readonly_fields = ['updated', 'time_stamp']

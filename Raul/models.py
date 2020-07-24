@@ -41,6 +41,7 @@ class product(models.Model):
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     active = models.BooleanField(default=True)
+    imageFound = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
@@ -73,7 +74,7 @@ class Variation(models.Model):
     product = models.ForeignKey(product, on_delete=models.PROTECT)
     category = models.CharField(max_length=120, choices=VAR_CATEGORIES, default="size")
     title= models.CharField(max_length=120)
-    image= models.ForeignKey(productimage, null=True, blank=True, on_delete=models.PROTECT)
+    image = models.ImageField(blank=True, null=True)
     price = models.DecimalField(null=True, blank=True, decimal_places=2, max_digits=100)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     active = models.BooleanField(default=True)
