@@ -590,9 +590,61 @@ label {
     .checkoutPage{
         margin:200px 0px;
     }
+}
 
+@media(max-width:1000px){
+
+    .checkoutPage{
+        margin:200px auto;
+    }
     .checkoutPageDivision{
-        
+        display:flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media(max-width:640px){
+    .checkoutPage{
+        margin:150px auto;
+    }
+    .checkoutPageDivision{
+        display:flex;
+        flex-direction: column-reverse;
+        padding:0;
+    }
+
+    .rightColumn{
+        margin: 0 0 50px 0;
+    }
+
+    .leftColumn{
+        margin:0 auto;
+        text-align: center;
+    }
+
+    form{
+        padding: 0 0 30px 0;
+    }
+
+    .leftColumn .accordion{
+        margin:10px auto;
+    }
+
+    .panel{
+        margin:0 auto;
+        padding: 0;
+    }
+
+    .panel .addButton{
+        margin:0;
+        font-size: 16px;
+    }
+
+    .registeredAdd .button{
+        font-size: 16px;
+        padding:10px 10px;
+        width:100%;
+        border-radius: 0;
     }
 }
 

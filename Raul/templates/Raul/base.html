@@ -115,7 +115,7 @@
             <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
             <div class="hoverDiv">
                 <span><a href="{% url 'profile' %}">Profile</a></span><br><br>
-                <span><a href="{% url 'logout' %}"> <p> Logout </p></a></span>
+                <span><a href="{% url 'logout' %}"> Logout </a></span>
             </div>
         </div>
         <a href="{% url 'cart' %}" title="Shopping Cart"> <p> {{request.session.items_total}}  <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" > </p></a>
