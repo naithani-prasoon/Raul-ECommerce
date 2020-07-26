@@ -2,592 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/media/2019.02.14Raul_3382.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/3blue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_3eDRrr0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_9oSbjfj.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_Pikfbv7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_QWtI3jY.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_WmRvmm0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_dolHUuf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_fXMpmU8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_iRBz4iq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_rJQgxOD.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/9-removebg-preview_xaCh6W3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Abstract_Dessert_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Abstract_Dinner_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Abstract_Salad_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Abstract_Saucer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Aged_Florentine_Urn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AmberHurricaneLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AmberHurricaneLarge_6e941567-be01-4346-91f4-24c16febd904.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AmberHurricaneSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AmberOrganicHurricaneSmall_14bfb134-f86f-4313-b5dd-d7eb80d0e2f0.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AmberOrganicextrasmall_400x_09fb1330-eaea-4120-a017-7c35161dece3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AmberOrganicextrasmall_400x_13f9135f-23ef-4b95-b687-c8e2846e302c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Amber_Pendant_Handing_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Amber_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AntiqueAmberChandelierLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AntiqueAmberChandelierLarge_61377804-cec9-44a0-b21c-0b9922ddd9b6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AntiqueAmberChandelierMedium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AntiqueAmberChandelierMedium_a019656c-774a-4941-8c4f-357c2dcc8db3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AntiqueAmberChandelierSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/AntiqueAmberChandelierSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Antique_Mirror_Footed_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Aqua_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Aqua_Highball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Aqua_Pitcher.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Aqua_Tumbler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Aqua_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Art_Nouveau_Gold_Hurricane.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Art_Nouveau_Silver_HUrricane.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Bamboo_End_Table.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Basket_Planter_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Basket_Planter_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecHighRibbedMedium.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecHighRibbedMedium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecHighRibbedPotLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecHighRibbedPotLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecHighRibbedSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecHighRibbedSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecLowRibbedPotLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecLowRibbedPotMedium.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecLowRibbedPotSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecShortLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecShortMed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BecShortSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeeHammeredVase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeAngularTealightLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeAngularTealightLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeAngularTealightSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeAngularTealightSmall_27fa9ac2-f243-4dd3-8529-1ad2ee7f807d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeBowlTealight.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeTriangleTealightLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeTriangleTealightLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeTriangleTealightSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BeigeTriangleTealightSmall_f6178d23-11aa-4ca7-adeb-686e126a0a50.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Belle_Terrarium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BendingFlamingo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Birch_Tree_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BirdWavePlanterLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BirdWavePlanterSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BirdWavePlanterSmall_8b5c20f0-6c57-4412-8965-925e817b9a1f.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BirdWaveVaseLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BirdWaveVaseLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BirdWaveVaseSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BirdWaveVaseSmall_102d495e-2804-4468-b318-85747ea3579c.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Black_Cylinder_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Black_Pendant_Hanging_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Blossom_Bud_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BlueSquareVase.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BlueWavePlanterExtraLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BlueWavePlanterExtraLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BlueWavePlanterLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/BlueWavePlanterLarge_44e818d3-0b7e-4b6e-9ed8-b45d92e55d23.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Blue_Botanical_With_Lid_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Blue_Flower_Bowl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Blue_Leaves_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Bone_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Bottle_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Box_Pleat_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Box_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_ALL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_ALL_0f8f9ad5-861c-4072-9274-fcc52c242273.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_ALL_6921646b-74c8-41eb-91c1-f1c56f5d3464.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_ALL_d9363313-9fb2-45e4-a08d-bbbc46484aec.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_Extra_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_Medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Braided_Basket_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Brek_Box_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Brek_Box_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Bronze_Lotus_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Bronze_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Brushstroke_Dinner_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Buck_Antler_Candlestick_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Calaisio_Round_Tray.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CelineShortVaseSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CelineShortVaseSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Celine_Large_c61db834-5143-4945-b9ea-a8aa7a658b96.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Ceramic_Bulb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chalice_Footed_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Champagne_Flute.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cherry_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chiffon_Silver_Box.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chiffon_Silver_Frame_2x3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chiffon_Silver_Frame_4x6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chiffron_Candlestick_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chiffron_Candlestick_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chinese_Urn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Chocolate_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Circus_Pitcher_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Circus_Pitcher_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Clear_Beads_Candlestick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Clear_Disks_Candlestick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Clear_Pendant_Handing_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Clear_Shadow_Candlestick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cobalt_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cobalt_Highball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cobalt_Pitcher.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cobalt_Tumbler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cobalt_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cobalt_Wine_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cold_Grey_Notebook_A4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cold_Grey_Notebook_A5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Confetti_Dinner_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Corvus_Silver_Bowl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cosmos_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cottage_End_Table.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightExtraSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightExtraSmall_f8517178-18cc-4a3e-8b12-d5d9151a3372.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightLarge_f38141cb-7176-4574-b9a2-c7717189b554.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightMedium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightMedium_634c349a-6275-4bb3-8a07-4e14341c1a4d.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CreamLeafTealightSmall_15d7c501-25ba-4954-8f90-51cbc8a30267.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CrockyPotExtraSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CrockyPotSmall_9771e8fe-8a2c-42f5-9320-a8098386dd0c.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CrownFloralVase.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CrystalFrameLarge8x12.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/CrystalFrameMedium9x8.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Crystal_Cut_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cylinder_Hurricane.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cylindrica_Cashpot_Medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Cylindrica_Cashpot_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_112.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_113.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_114.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_115.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_116.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_117.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_118.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_119.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_120.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_121.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_122.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_123.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_124.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_125.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_126.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_129.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_130.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_131_b2570b9f-5436-4b15-8aec-11dba92e45ce.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_133.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_134.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_135.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_137.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_143.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_146.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_148.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/DRAM_09.03.2019_150.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Daffodil_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dark_Fiber_Clay_Pot_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dark_Fiber_Clay_Pot_Medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dark_Fiber_Clay_Pot_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Deco_End_Table.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dendur_Urn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dew_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dog-Rose_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dotted_Hanging_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Dusk_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/E11A3639.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/E11A9910.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/E11A9936.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/E11A9936_0fcdbb39-801c-4eb3-ad87-0f95127a328f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/E11A9939.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/E11A9942.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Eclipse_Bowl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Ellery_Side_Table.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/ElysiaCoralPot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/ElysiaCoralStatue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Emerald_Highball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Emerald_Pitcher.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Emerald_Shot_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Emerald_Tumbler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Emerald_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/English_Planter_Extra_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/English_Planter_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Evening_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Evening_Highball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Evening_Tumbler_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Exploding_Rose_Dinner_Plate_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Exploding_Rose_Dinner_Plate_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Exploding_Rose_Dinner_Plate_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Exploding_Rose_Dinner_Plate_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Exploding_Rose_Dinner_Plate_5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Eyelet_Candle_Holder_Aqua.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Eyelet_Candle_Holder_Grey.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Eyelet_Candle_Holder_Olive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Faux_Snake_Natural_5x7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Faux_Snake_Natural_8x10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Faux_Snake_Natural_Clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/FeathersMirror.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fiber_Clay_Base_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fiber_Clay_Base_Medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fiber_Clay_Base_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fingertip_Footed_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fishbowl_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Flat_Cylinder_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Floating_Lantern.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/FootedBirdVaseRegular.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Footed_Bud_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Footed_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Footed_Mercury_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fossil_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fossil_Vase_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fred.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fur_Tray_ALL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fur_Tray_ALL_784bf456-df64-469c-9ca7-40db2e56f630.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fur_Tray_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Fur_Tray_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Garland_Bud_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Garland_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Garland_Pitcher_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Garland_Pitcher_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Garland_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gilded_Footed_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/GlassChandelierLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/GlassChandelierLarge_3e52c84c-ccd5-42d7-9638-0dabfbca074b.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/GlassChandelierMedium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/GlassChandelierMedium_fa3dab00-5f4f-45d4-a61d-3d00b82aec84.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/GlassChandelierSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/GlassChandelierSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Glass_Cake_Stand_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Glass_Cake_Stand_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Glass_Candlestick_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Globe_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Blue_Box.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Blue_Clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Blue_Frame_2x3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Blue_Frame_4x6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Cube_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Cylinder_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Dash_Tray_ALL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Dash_Tray_ALL_d781c87c-8bdd-4b0f-b3ac-ded4caef984d.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Dash_Tray_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Dash_Tray_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Footed_Bowl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Mirror_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Mirror_Vase_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_Pyramid_Lantern.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_White_Box.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_White_Frame_2x3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gold_White_Frame_8x10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gossamer_Candlestick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gothic_End_Chair.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gothic_Side_Chair.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gunmetal_Candlestick_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gunmetal_Candlestick_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Gunmetal_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Hibiscus_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Indigo_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/KI93GmWN_jpeg (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/KI93GmWN_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Landscape_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/LargeAngular_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/LargeCrystalFrame.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/LargeFrame_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Lattice_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Luar_Cashpot_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Luar_Cashpot_Small_2328da7c-bbfe-42a8-9045-908be28701c9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Matte_White_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/MediumCrystalFrame.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/MediumFrame_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/MediumMix_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/MixedCutSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Mixed_Cut_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Morning_Footed_Drinking_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Morning_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Morning_Stemless_Drinking_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Night_Footed_Drinking_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Night_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Night_Stemless_Drinking_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Noon_Footed_Drinking_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Noon_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Noon_Highball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Noon_Tumbler_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/OrganicSmokeMed.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/OysterLusterChandelierLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/OysterLusterChandelierLarge_b189850d-e83f-40dc-b52c-b86c73a7b7ad.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/OysterLusterChandelierMedium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/OysterLusterChandelierMedium_957472ab-05e2-4e9e-b34d-1fcdc363e0a4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/OysterLusterChandelierSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/OysterLusterChandelierSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PLarageBowl__jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PSmallBowl_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PeacockStatueHigh.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PeacockStatueLow.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pearl_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Peony_DInner_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Peony_Salad_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Petal_Urn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PetrifiedWoodCloseup.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PetrifiedWoodTableLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PetrifiedWoodTableMedium.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PetrifiedWoodTableSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pewter_Ribbed_Vase_Extra_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pewter_Ribbed_Vase_Extra_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pewter_Ribbed_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pewter_Ribbed_Vase_Medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pewter_Ribbed_Vase_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Photo_Jun_20_2_43_19_PM.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkAngularTealightLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkAngularTealightLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkAngularTealightSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkAngularTealightSmall_c9e75041-0000-43f0-b9d7-aa23f11fad02.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkBowlTealightLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkBowlTealightLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkBowlTealightSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkBowlTealightSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkTriangleTealightLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkTriangleTealightLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkTriangleTealightSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PinkTriangleTealightSmall_acb8f424-42c0-4242-9068-551972ae0611.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pink_Peacock_Charger.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Plain_Weave_Basket_ALL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Plain_Weave_Basket_ALL_279097a7-4a1c-45cd-8969-7c1e072d391c (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Plain_Weave_Basket_ALL_279097a7-4a1c-45cd-8969-7c1e072d391c.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Plain_Weave_Basket_ALL_fb721581-5608-4866-b246-a693092188f7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Plain_Weave_Basket_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Plain_Weave_Basket_Medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Plain_Weave_Basket_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Poet_s_Narcissus_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Polished_Stone_Vase_Large (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Polished_Stone_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Polished_Stone_Vase_SMALL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Pop_Art_Flower_Dinner_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Prism_Candlestick_Holder_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Prism_Candlestick_Holder_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Prism_Tea_Light_Holder (1).jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Prism_Tea_Light_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/RAI_Dramatic_June2019_14187.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/RAI_Dramatic_June2019_14188.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/RaulPOS02.13.20193301.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Really_Love___._oil_on_canvas._96__x_96_._2015.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Rectangular_Prism_Candlestick_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Red_Champion_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Red_Marigold_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Rhinestone_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/RibbedMirror.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Ripple_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Rising_Sun_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Robin_s_Egg_Footed_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Robin_s_Egg_Footed_Vase_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Romantic_Urn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Rose_Gold_Handing_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Rose_Gold_Taupe_Clock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Rose_Gold_Taupe_Frame_5x7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Round_Footed_Bowl.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screen_Shot_2019-06-20_at_2.55.53_AM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screen_Shot_2020-06-07_at_7.48.21_PM.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Screen_Shot_2020-06-07_at_7.48.21_PM_bM1WtVT.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Silver_Mirror_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmallAngular_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmallCrystalFrame.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmallCrystalFrame_c8fa0788-d78e-49f2-aa63-4342bbbdeb75.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmallFrame_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmallMix_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmallTriangle_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmokeMixedCutVaseLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmokeMixedCutVaseLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmokeMixedCutVaseSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmokeMixedCutVaseSmall_127b34e1-e8ed-4855-882c-415475e52221.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmokeOrganicRimHurricaneLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmokeOrganicRimHurricaneSmall_73f26055-74d6-4af6-a910-9ee7a092f8ea.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SmokeOrganicRimxsmall_400x_40b36fa7-5211-4395-9380-bb7d4dc1b585.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Snapdragon_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Speckled_Gold_Hanging_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Speckled_Silver_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Spiral_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Spiral_Pitcher.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Spiral_Shot_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Spiral_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Spiral_Wine_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Spring_Bud_Footed_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Spring_Bud_Footed_Vase_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SquareCutVotiveMedium_06a8497a-a290-4bdb-b224-0c2cff632508.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SquareCutVotiveMedium_4967ced8-145b-4287-b144-f7a025b7e14b.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SquareCutVotiveSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/SquareCutVotiveSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Square_Footed_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/StandingFlamingo.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Stemless_Wine_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Studded_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Succulent_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Succulent_Vase_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Sun_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Sun_Vase_Thin.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tall_Footed_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tall_Square_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tapered_Glass_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tapered_Glass_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tapered_Gold_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tapered_Prism_Bud_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teak_Bench.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teak_Stool.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teak_Tray_ALL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teak_Tray_ALL_62dafed1-7911-40b4-b311-e511be0bb053.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teak_Tray_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teak_Tray_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teardrop_Candle_Holder_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Teardrop_Candle_Holder_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Technicolor_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Technicolor_Wine_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Textured_Rim_Silver_Bowl_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Textured_Rim_Silver_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Textured_Silver_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Topaz_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tudor_King_Candlestick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tudor_Queen_Candlestick.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tulip_Decorative_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Turquoise_Vase_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Turquoise_Vase_Small_8e94861f-a67c-48bb-a6d3-bee520f83747.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Umbria_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VesterPalmPot.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VickyGlassFootedVaseLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VickyGlassFootedVaseLarge_aa53c1c6-baba-47b2-9142-691935b301b9 (1).jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VickyGlassFootedVaseLarge_aa53c1c6-baba-47b2-9142-691935b301b9.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VickyGlassFootedVaseMedium.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VickyGlassFootedVaseMedium_9dbec03d-ee9a-45a6-863e-635a40cb00ae.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VickyGlassFootedVaseSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VickyGlassFootedVaseSmall_d417bd2e-32a4-4d92-847f-e92921fc6766.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Victorian_Cashpot_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Victorian_Cashpot_Medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Victorian_Cashpot_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Village_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Village_cropped.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wall_Candle_Holder_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wall_Candle_Holder_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Walnut_Cashpot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteBoneBoxLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteBoneBoxLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteBoneBoxSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteBoneBoxSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteBoneFrameLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteBoneFrameMedium.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteBoneFrameSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightExtraSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightExtraSmall_57c6ab71-f7a7-4bca-97e2-3f31e7cc8317.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightExtraSmall_6cbdef5a-25ef-45fb-83be-6e321bda188e.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightLarge.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightLarge.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightMedium.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightMedium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightMedium_1bf0afdd-359e-4148-82b1-0225c7b49229.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightSmall.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightSmall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WhiteSilverTealightSmall_35118b81-6067-410c-9b97-c34f7a4293a2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/WideMouthFloralDish.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wine_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Extra_Small_Fishscale.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Extra_Small_Floral.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Extra_Small_Geometric.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Large_Fishscale.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Large_Floral.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Large_Geometric.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Medium_Fishscale.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Medium_Floral.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Medium_Geometric.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Small_Fishscale.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Small_Floral.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Wooden_Bowl_Small_Geometric.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Woven_Armchair.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/XSmallMix_jpeg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Zoe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/bamboo_sofa_crop.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/crop_Bamboo_Chair.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/crop_Bamboo_Table.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/crop_sunburst_large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/crop_sunburst_medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/crop_sunburst_small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/dove_cropped.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/loveseat_cropped.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Abstract_Dessert_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Abstract_Dinner_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Abstract_Salad_Plate.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Abstract_Saucer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Aged_Florentine_Urn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Amber_Pendant_Handing_Candle_Holder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Amber_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Antique_Mirror_Footed_Vase.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Aqua_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Aqua_Highball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Aqua_Pitcher.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Aqua_Tumbler.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Aqua_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Basket_Planter_Large.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Basket_Planter_Small.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Belle_Terrarium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Birch_Tree_Votive.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Morning_Footed_Drinking_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Morning_Goblet.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/Morning_Stemless_Drinking_Glass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orders/static/orders/Product_Images/crop_Bamboo_Chair.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/cafe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/cafe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_0AE72NDRXA.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_0FOQ22LYJY.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_0RFTYKH17R.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_2647VYRU6F.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_2PR0DGG0ZY.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_2YW3TCXW5Z.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_45GVMJ2AGA.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_4DTX8XDOVN.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_6G4CQYZE0X.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_6S4GEY4KZC.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_6WTGUEPEKG.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_7I3CWCJWIK.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_9IDSSKGYNE.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_9LDV3N8IRO.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_ABK60FDG06.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_B660CR17J9.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_B9FH43RFUI.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_D5D23ORQP0.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_DEH2DX9BV4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_DRAO0SNNPC.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_E47Q7M1KDE.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_F9WILFEGLR.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_FL84WGHSAK.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_FLNMH2GNHH.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_FN16KXKWND.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_HNUBAYSXQL.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_IR49GLLFZA.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_J7VSL269XQ.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_JCM9XGQZWJ.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_JP24STB90U.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_KCA1R5VRG6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_KHYVQA32KX.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_KM12EY08W7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_LTNZCB9TC7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_M24WBZ2FRR.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_OXUPOTUSQN.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_PIK9MLMDQM.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_QGTAD5ZZ4G.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_QLRBCP06TW.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_QWFUHK81TO.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_RRF6OYEY2K.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_S8XO9O36FE.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_T3XM8NG8VH.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_T6HB8C3YR6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_TD78X4IMRK.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_V2OU3WMTJK.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_XT3UGPL2CY.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_Z3RLPI1TSX.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_ZCY4AZGH2J.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_ZUB90GDRHS.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_ZUGRTB8F0I.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_ZUJLTNP7BM.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Order_Number_ZVHQU3RW3W.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/RibbedMirror_400x.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/single_floral_stem.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/single_floral_stem.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/utilis.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/utilis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -776,14 +196,8 @@
       <workItem from="1595462194351" duration="3141000" />
       <workItem from="1595552533502" duration="632000" />
       <workItem from="1595570957974" duration="581000" />
-      <workItem from="1595613953709" duration="1778000" />
-    </task>
-    <task id="LOCAL-00039" summary="nonsense garbage">
-      <created>1592165217133</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1592165217133</updated>
+      <workItem from="1595613953709" duration="4014000" />
+      <workItem from="1595711601371" duration="2225000" />
     </task>
     <task id="LOCAL-00040" summary="fixes">
       <created>1592244261972</created>
@@ -1121,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595397352650</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="click">
+      <created>1595619800496</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1595619800497</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1142,7 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Fixed Cart Again" />
     <MESSAGE value="Prasoon here" />
     <MESSAGE value="Fixed" />
     <MESSAGE value="testing" />
@@ -1167,7 +587,8 @@
     <MESSAGE value="Ok almost done" />
     <MESSAGE value="Statues, Baskets" />
     <MESSAGE value="prasoon" />
-    <option name="LAST_COMMIT_MESSAGE" value="prasoon" />
+    <MESSAGE value="click" />
+    <option name="LAST_COMMIT_MESSAGE" value="click" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="123" width="817" height="568" key="#Project_Structure" timestamp="1595006539260">
@@ -1188,8 +609,8 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="6" y="23" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595397352394">
-      <screen x="0" y="23" width="1440" height="813" />
+    <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595619796752">
+      <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1593651458432" />
@@ -1203,7 +624,7 @@
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="23" y="23" width="1417" height="823" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1594362197869" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
-    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595386158852" />
+    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595619796752" />
     <state x="30" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1595365245951" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
@@ -1298,8 +719,8 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="195" key="Vcs.Push.Dialog.v2" timestamp="1595397361839">
-      <screen x="0" y="23" width="1440" height="813" />
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1595619817247">
+      <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1593651469381" />
@@ -1311,7 +732,7 @@
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.815@0.23.1440.815" timestamp="1595008518724" />
     <state x="1867" y="317" key="Vcs.Push.Dialog.v2/0.23.1440.817/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594608822255" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595386195432" />
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595619817247" />
     <state x="427" y="231" key="Vcs.Push.Dialog.v2/0.23.1920.988@0.23.1920.988" timestamp="1595365295742" />
     <state x="133" y="241" width="1654" height="746" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1594927591141">
       <screen x="0" y="23" width="1920" height="988" />
