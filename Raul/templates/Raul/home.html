@@ -232,9 +232,9 @@
 
         <nav>
             <div class ="mobile-actions">
-            <img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login">
-            <img src = "{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Shopping Cart">
-            <img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false">
+                <a href="{% url 'login' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login"></a>
+            <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"></a>
+            <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false"></a>
             </div>
             <ul id="contentHam">
 
@@ -242,19 +242,103 @@
                     <img src="{% static 'Raul/CSS/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
                 </li>
                 <li>
-                    <a href="#">Home</a>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown()">
+                            new arrivals
+                            <i class="arrow down"></i>
+                        </button>
+                        <div id="mobile-dropdown" class="mobile-dropdownContent">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                          </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="#">Store</a>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown2()">
+                            decorative accessories
+                            <i class="arrow down"></i>
+                        </button>
+                        <div id="mobile-dropdown2" class="mobile-dropdownContent">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                          </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="{% url 'register' %}">Register</a>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown3()">
+                            tabletop
+                            <i class="arrow down"></i>
+                        </button>
+                        <div id="mobile-dropdown3" class="mobile-dropdownContent">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                          </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="{% url 'register' %}">Login</a>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown4()">
+                            furniture
+                            <i class="arrow down"></i>
+                        </button>
+                        <div id="mobile-dropdown4" class="mobile-dropdownContent">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                          </div>
+                    </div>
                 </li>
                 <li>
-                    <a href="{% url 'cart' %}">Cart {{request.session.items_total}} </a>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" >
+                            floral
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown5()">
+                            wall art
+                            <i class="arrow down"></i>
+                        </button>
+                        <div id="mobile-dropdown5" class="mobile-dropdownContent">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                          </div>
+                    </div>
+                </li>
+                <li>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton">
+                            all products
+                        </button>
+                    </div>
+                </li>
+                <li>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown6()">
+                            sale
+                            <i class="arrow down"></i>
+                        </button>
+                        <div id="mobile-dropdown6" class="mobile-dropdownContent">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                          </div>
+                    </div>
+                </li>
+                <li>
+                    <div class = "menuDropdown">
+                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown()">
+                            venue bookings
+                        </button>
+                    </div>
                 </li>
 
 

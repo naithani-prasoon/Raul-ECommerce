@@ -68,7 +68,7 @@ def register(request):
 def profile(request):
     from orders.models import Order
     User = get_user(request)
-    UserOrders = Order.objects.filter(user=User)
+    UserOrders = Order.objects.filter(user=User,status='Finished')
     print(UserOrders)
     userAddress = UserAddress.objects.filter(user=User)
     billing_address = BillingAddress.objects.filter(user=User)

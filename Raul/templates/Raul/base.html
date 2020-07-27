@@ -233,9 +233,9 @@
 
     <nav>
         <div class ="mobile-actions">
-        <img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login" style="box-sizing: initial;">
-        <img src = "{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Shopping Cart" style="box-sizing: initial;">
-        <img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false" style="box-sizing: initial;">
+            <a href="{% url 'login' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login"></a>
+        <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"></a>
+        <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false"></a>
         </div>
         <ul id="contentHam">
 
@@ -248,6 +248,17 @@
             <li>
                 <a href="#">Store</a>
             </li>
+            <li>
+                <a href="{% url 'register' %}">Register</a>
+            </li>
+            <li>
+                <a href="{% url 'register' %}">Login</a>
+            </li>
+            <li>
+                <a href="{% url 'cart' %}">Cart {{request.session.items_total}} </a>
+            </li>
+
+
         </ul>
     </nav>
 </div>

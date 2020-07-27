@@ -71,6 +71,45 @@ window.onclick = function(event) {
     }
 }
 
+function mobileDropDown() {
+    document.getElementById("mobile-dropdown").classList.toggle("show");
+  }
+
+
+  function mobileDropDown2() {
+    document.getElementById("mobile-dropdown2").classList.toggle("show");
+  }
+
+  function mobileDropDown3() {
+    document.getElementById("mobile-dropdown3").classList.toggle("show");
+  }
+
+  function mobileDropDown4() {
+    document.getElementById("mobile-dropdown4").classList.toggle("show");
+  }
+
+  function mobileDropDown5() {
+    document.getElementById("mobile-dropdown5").classList.toggle("show");
+  }
+
+  function mobileDropDown6() {
+    document.getElementById("mobile-dropdown6").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.mobile-dropdownButton')) {
+      var dropdowns = document.getElementsByClassName("mobile-dropdownContent");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
 
 
 function openNav() {
