@@ -601,11 +601,26 @@ label {
         display:flex;
         flex-direction: column-reverse;
     }
+    
+    .rightColumns{
+        margin: 0 0 50px 0;
+    }
+
+    .rightColumn{
+        margin: 0 0 50px 0;
+    }
+
+    .registeredAdd.button{
+        border-radius: unset;
+        padding:16 64px;
+        font-size:20px;
+    }
 }
 
 @media(max-width:640px){
     .checkoutPage{
         margin:150px auto;
+        width:90%;
     }
     .checkoutPageDivision{
         display:flex;
@@ -617,9 +632,95 @@ label {
         margin: 0 0 50px 0;
     }
 
+    .rightColumns{
+        margin: 0 0 50px 0;
+    }
+
+    
+
+    .rightColumns .totalSummary .totalSummaryColumn1{
+        padding:20px 0 0 0;
+        place-items: center;
+    }
+
+    .rightColumns .totalSummary .totalSummaryColumn2{
+        padding:20px 0 0 0;
+    }
+
+    .photoSummary{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: unset;
+    }
+
+    .photoSummary .photoSummaryColumn{
+        width:auto;
+        padding:0px 20px;
+    }
+
+    .photoSummary .photoSummaryColumn1 h1{
+        margin:0;
+    }
+
+    .photoSummary .photoSummaryColumn2 h1{
+        margin:0 0 15px 0;
+    }
+
+    .shippingAccordion{
+        width:auto;
+        margin: 0 10px;
+    }
+
+    .boxAlign{
+        width:auto;
+        height:auto;
+        flex-direction: column;
+        justify-content: unset;
+        margin: 0 10px;
+        text-align:center;
+        padding:0;
+    }
+
+    .leftColumn h1 {
+        font-size:30px;
+    }
+
+    .rightColumns h1{
+        font-size:30px;
+        text-align:center;
+    }
+
+    .registeredAdds{
+        width: 100%;
+    }
+
+
     .leftColumn{
         margin:0 auto;
         text-align: center;
+    }
+
+    .StripeElement{
+        width:90%;
+        margin:0 auto;
+    }
+
+    .form-row{
+        float: unset;
+        text-align: center;
+        margin: 0 auto;
+        width:100%;
+    }
+
+    #payment-form label{
+        text-align: center;
+        width:100%;
+    }
+
+    #payment-form .button{
+        border-radius: unset;
+        padding:16px 64px;
+        font-size:20px;
     }
 
     form{
@@ -635,6 +736,10 @@ label {
         padding: 0;
     }
 
+    .summary h5{
+        text-align: center;
+    }
+
     .panel .addButton{
         margin:0;
         font-size: 16px;
@@ -645,6 +750,31 @@ label {
         padding:10px 10px;
         width:100%;
         border-radius: 0;
+    }
+
+    .rightColumn .summary{
+        width:100%;
+        margin: 0 auto;
+        text-align: unset;
+    }
+
+    .rightColumn .summary h1{
+        padding:0;
+        font-size:30px;
+        text-align: center;
+    }
+
+    table{
+        width:100%;
+    }
+
+    th{
+        padding: 15px 15px;
+    }
+
+    td{
+        padding:20px 0;
+        text-align: center;
     }
 }
 

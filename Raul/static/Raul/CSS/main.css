@@ -133,7 +133,7 @@ nav ul{
     left:0;
     top:0;
     height: 0;
-    margin:0;
+    margin:0 auto;
     list-style: none;
     overflow-x: hidden;
     transition: 0.5s ease-in-out;
@@ -280,6 +280,66 @@ figure img{
     filter:brightness(60%);
 }
 
+nav li {
+    margin:0 auto;
+    text-align: left;
+    padding: 0 0 0 50px;
+}
+
+.mobile-dropdownButton{
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    border:none;
+  }
+
+  
+  .menuDropdown {
+    position: relative;
+    display: inline-block;
+    padding:10px 0;
+  }
+  
+  .mobile-dropdownContent {
+    display: none;
+    background-color: transparent;
+    min-width: 160px;
+    overflow: auto;
+    z-index: 1;
+  }
+  
+  .mobile-dropdownContent a {
+    color: white;
+    font-size: 16px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .menuDropdown a:hover {background-color: #ddd;}
+
+  .show {display: block;}
+
+  .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 8px;
+    margin-bottom:4px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
 /* Body Ended */
 
 /* Animations */
@@ -344,11 +404,10 @@ figure img{
         background: #6d6d6d;
     }
 
-    .mobile-actions img{
+    .mobile-headers img{
         padding: 0px 20px;
         width:20px;
     }
-
     .mobile-actions{
         margin:20px auto 0 auto;
     }
@@ -357,8 +416,6 @@ figure img{
         margin:5px 0px 0px 30px;
         width:50px;
     }
-
-    
 
     nav ul li a{
         text-align: center;
@@ -711,6 +768,10 @@ figure img{
         margin:25px auto;
     }
 
+    .mobile-dropdownButton {
+        font-size:25px;
+    }
+
     .menuBar{
         width: 30px;
     }
@@ -727,7 +788,7 @@ figure img{
 
     nav ul li a{
         text-align: center;
-        font-size: 1.9em;
+        font-size: 25px;
         display: block;
         color:#818181;
         padding:50px 0px 0px 0px;
@@ -1072,6 +1133,11 @@ figure img{
 
     .menuBar{
         width: 30px;
+    }
+
+    
+    .mobile-dropdownButton {
+        font-size:25px;
     }
 
     .mobile-actions img{
@@ -1419,6 +1485,11 @@ figure img{
 
     .headers{
         display: none;
+    }
+
+    
+    .mobile-dropdownButton {
+        font-size:35px;
     }
 
     .mobile-headers{
