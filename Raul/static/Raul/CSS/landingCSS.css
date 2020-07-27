@@ -52,13 +52,20 @@ body{
 .backgroundText{
     position: absolute;
     justify-items: center;
-    top:-50px;
-    left:30px;
+    /* top:-50px;
+    left:30px; */
+    top:0;
+    left:0;
     text-align: center;
     align-items: center;
+    width:100%;
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
+    background: url('Images/cafe4.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .backgroundText figcaption{
@@ -75,13 +82,21 @@ body{
 .backgroundText2{
     position: absolute;
     justify-items: center;
-    top:160px;
-    left:160px;
+    /* top:160px;
+    left:160px; */
+    width:100%;
+    top:0;
+    left:0;
     text-align: center;
     align-items: center;
-    z-index: -2;   
+    z-index: -1;   
+    height: 100vh;
     display: none;
     transition: 0.4s ease-in-out;
+    background: url('Images/bannerThird.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .backgroundText2 figcaption{
@@ -99,13 +114,18 @@ body{
     position: absolute;
     justify-items: center;
     margin:0 auto;
-    top:-50px;
-    left:30px;
+    top:0;
+    left:0;
+    width:100%;
     text-align: center;
     align-items: center;
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
+    background: url('Images/raul.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .backgroundText3 figcaption{
