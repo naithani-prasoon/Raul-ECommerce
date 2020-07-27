@@ -4,7 +4,7 @@ from django.views.generic import ListView, DeleteView, CreateView
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from .models import product, Category
+from .models import product, Category, FeatuedProducts
 from users import forms
 from django.contrib.auth import login,logout,authenticate
 from users.forms import CreateUserForm, UserAddressForm
@@ -31,9 +31,10 @@ def home(request):
 
 
 def secondHome(request):
+    featProd = FeatuedProducts.objects.all()
     form = forms.LoginForms(request.POST or None)
     Register_form = forms.CreateUserForm(request.POST or None)
-    context = {'form': form,"Register_form": Register_form}
+    context = {'form': form,"Register_form": Register_form,"Feat":featProd}
     if 'register' in request.POST:
         request.session.set_expiry(60)
         if Register_form.is_valid():
@@ -41,7 +42,7 @@ def secondHome(request):
             Reg.email = Reg.username
             Reg.save()
 
-            context = {'form': form,"Register_form" : Register_form}
+            context = {'form': form,"Register_form" : Register_form,"Feat":featProd}
             new_user = authenticate(username=Register_form.cleaned_data['username'],
                                     password=Register_form.cleaned_data['password1'],
                                     )
@@ -52,7 +53,7 @@ def secondHome(request):
         else:
             messages.error(request, Register_form.error_messages)
             form = forms.LoginForms()
-            context = {'form': form,"Register_form": Register_form}
+            context = {'form': form,"Register_form": Register_form,"Feat":featProd}
             return render(request, 'Raul/home.html',context)
 
     if 'login' in request.POST:
@@ -60,7 +61,7 @@ def secondHome(request):
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
             user = authenticate(username=username,password=password)
-            context = {'form': form,"Register_form": Register_form}
+            context = {'form': form,"Register_form": Register_form,"Feat":featProd}
             login(request,user)
             return render(request, 'Raul/home.html',context)
 

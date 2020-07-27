@@ -78,11 +78,16 @@ class Variation(models.Model):
     price = models.DecimalField(null=True, blank=True, decimal_places=2, max_digits=100)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     active = models.BooleanField(default=True)
-
     objects = VariationManager()
 
     def __str__(self):
         return self.title
+
+class FeatuedProducts(models.Model):
+    product = models.ForeignKey(product, on_delete=models.PROTECT)
+
+    def  __str__(self):
+        return self.product.title
 
 
 
