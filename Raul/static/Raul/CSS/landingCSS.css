@@ -6,7 +6,7 @@ body{
     overflow: hidden;
     justify-items: center;
     align-items: center;
-    background: url('Images/FullSize_MetGala2019_001.jpg');
+    background: url('Images/RaulCafe_Nov22nd_2499.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -122,7 +122,7 @@ body{
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
-    background: url('Images/Raul_Inc_Landing.jpg');
+    background: url('Images/RaulCafe_Nov22nd_2499.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;

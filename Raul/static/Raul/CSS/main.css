@@ -6,6 +6,7 @@
     src: url(avenir-lt-std-35-light.otf);
 }
 
+
 html,body{
     margin:0;
     padding:0;
@@ -351,6 +352,7 @@ nav li {
         opacity: 1;
     }
 }
+
 
 /* Animations Ended */
 
@@ -6049,44 +6051,15 @@ nav li {
         text-transform: none;
     }
 
-    footer .footerEssentials{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 24px;
+    .hoursOfOperation{
+        padding:20px 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .footerEssentials .logoSection{
-        display: flex;
-        flex-direction: column;
-        margin-left:20px;
+    .hoursOfOperation h1{
+        font-size: 18px;
+        padding:10px 0;
     }
-
-    .footerEssentials .logoSection #footerLogo1{
-        width:50px;
-        height:50px;
-        padding:50px 10px 0px 30px;
-    }
-
-    .footerEssentials .logoSection #footerLogo2{
-        width:80px;
-        height:30px;
-        padding:0px 30px;
-    }
-
-    .footerEssentials .helpSection{
-        padding:50px 0px;
-    }
-
-    .footerEssentials .aboutSection{
-        padding:50px 0px;
-    }
-
-    .footerEssentials .socialSection{
-        padding:50px 0px;
-    }
-
 
 }

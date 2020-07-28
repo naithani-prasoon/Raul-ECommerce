@@ -250,7 +250,7 @@
                         <div id="mobile-dropdown" class="mobile-dropdownContent">
                             <a href="#home">Home</a>
                             <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                            <a href="#Venue Book">Contact</a>
                           </div>
                     </div>
                 </li>
@@ -261,9 +261,10 @@
                             <i class="arrow down"></i>
                         </button>
                         <div id="mobile-dropdown2" class="mobile-dropdownContent">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                            <a href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                            <a href="{% url 'cat-view' 'Decorative Objects' %}">Decorative Objects</a>
+                            <a  href="{% url 'cat-view' 'Urns' %}">Urns</a>
+                            <a  href="{% url 'cat-view' 'Vases and Cachepots' %}">Vases & Cachepots</a>
                           </div>
                     </div>
                 </li>
@@ -274,9 +275,8 @@
                             <i class="arrow down"></i>
                         </button>
                         <div id="mobile-dropdown3" class="mobile-dropdownContent">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                            <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>
+                            <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>
                           </div>
                     </div>
                 </li>
@@ -287,9 +287,10 @@
                             <i class="arrow down"></i>
                         </button>
                         <div id="mobile-dropdown4" class="mobile-dropdownContent">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                            <a  href="{% url 'cat-view' 'Chairs' %}">Chairs</a>
+                            <a  href="{% url 'cat-view' 'End Tables' %}">End Tables</a>
+                            <a  href="{% url 'cat-view' 'Ottoman & Benches' %}">Ottoman & Benches</a>
+                            <a  href="{% url 'cat-view' 'Outdoor Furniture' %}">Outdoor Furniture</a>
                           </div>
                     </div>
                 </li>
@@ -307,9 +308,8 @@
                             <i class="arrow down"></i>
                         </button>
                         <div id="mobile-dropdown5" class="mobile-dropdownContent">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                            <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>
+                            <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>
                           </div>
                     </div>
                 </li>
@@ -327,9 +327,12 @@
                             <i class="arrow down"></i>
                         </button>
                         <div id="mobile-dropdown6" class="mobile-dropdownContent">
-                            <a href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
+                            <a  href="{% url 'cat-view' 'All Sale Items' %}">All Sale Items</a>
+                            <a  href="{% url 'cat-view' 'Bowls' %}">Bowls</a>
+                            <a  href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                            <a  href="{% url 'cat-view' 'Glasswear' %}">Glasswear</a>
+                            <a href="{% url 'cat-view' 'Vases & Cachepots' %}">Vases and Cachepots</a>
+                            <a href="{% url 'cat-view' 'Votives' %}">Votives</a>
                           </div>
                     </div>
                 </li>
@@ -783,23 +786,27 @@
         
     </div>
 
-    <div class="filler"></div> 
+    <div class="filler"></div>
 
     <footer>
-        <div class="footerEssentials">
-            <div class="logoSection">
-            </div>
-
-            <div class="helpSection">
-                Help
-            </div>
-            <div class="aboutSection">
-
-            </div>
-            <div class="socialSection">
-                Social
-            </div>
+        <div class = "hoursOfOperation">
+            <h1>
+                Monday - Friday: 7AM - 8PM
+            </h1>
+            <h1>
+                Phone: 1 (347) 974-7200
+            </h1>
+            <h1>
+                Address: 218 8th Avenue, New York, NY 10011, USA
+            </h1>
+            <h1>
+                Questions? please email us at raul@raulavilainc.com
+            </h1>
+            <h1>
+                Social Media :
+            </h1>
         </div>
+
     </footer>
 
     <button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>
