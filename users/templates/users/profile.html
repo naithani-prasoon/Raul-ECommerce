@@ -106,17 +106,17 @@
             <l1>{{myorder.final_total}}</l1>
         </div>
         {% endfor %}
-    </div
-    >
+    </div>
     <div id = "Shipping" class = "profile-tabcontent">
         {% for userAdd in userAddress %}
-        <input required type="hidden" name="shipping_address" value="{{ userAdd.id}}"/> <h4><a href="{% url 'del_add' userAdd.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>  {{ userAdd.get_address}}</h4>
-        
+        <input required type="hidden" name="shipping_address" value="{{ userAdd.id}}"/> <br/>
+        <input  type="hidden" name="billing_address" value="{{ userAdd.id}}"/> <h4><a href="{% url 'del_add' userAdd.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>  {{ userAdd.get_address}}</h4>
         {% endfor %}
     </div>
+
     <div id = "Billing" class = "profile-tabcontent">
         {% for billing in billing_address %}
-        <input required type="hidden" name="billing_address" value="{{ billing.id}}"/> <h4><a href="{% url 'del_add' billing.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>  {{ billing.get_address}}</h4>
+        <input  type="hidden" name="billing_address" value="{{ billing.id}}"/> <h4><a href="{% url 'del_add' billing.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>  {{ billing.get_address}}</h4>
         
         {% endfor %}
     </div>

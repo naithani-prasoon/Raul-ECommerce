@@ -62,7 +62,7 @@ body{
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
-    background: url('Images/cafe4.jpg');
+    background: url('Images/Cafe_Landing.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +93,7 @@ body{
     height: 100vh;
     display: none;
     transition: 0.4s ease-in-out;
-    background: url('Images/bannerThird.jpg');
+    background: url('Images/Retail_Landing.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -122,7 +122,7 @@ body{
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
-    background: url('Images/raul.jpg');
+    background: url('Images/Raul_Inc_Landing.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
