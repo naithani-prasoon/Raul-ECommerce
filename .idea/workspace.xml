@@ -2,169 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/010.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/011.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/012.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/020.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/021.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/040.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/041.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/042.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/050.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/051.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/060.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/080.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/081.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/09-05-15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/100.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/101.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/102.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/103.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/110.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/111.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/112.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/113.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/120.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/121.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/130.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/131.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/132.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/140.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/141.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/150.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/160.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/170.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/171.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/180.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/181.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/190.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/1Tonys201913811.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/200.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2017-02-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2017-02_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2017-02_10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2017-02_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2017-02_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2017-02_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/210.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/220.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/240.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/241.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/25.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/250.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/251.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/26.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/27.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/28.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/280.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/29.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/2Tonys201913795.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/30.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/300.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/31.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/310.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/311.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/32.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/320.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/33.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/330.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/34.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/340.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/35.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/350.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/36.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/360.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/37.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/370.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/38.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/380.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/39.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/390.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/3Tonys201913788.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/40.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/400.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/410.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/42.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/420.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/43.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/430.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/44.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/440.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/45.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/450.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/46.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/460.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/47.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/470.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/48.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/480.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/49.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/4Tonys201913797.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/50.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/51.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/52.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/53.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/60.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/70.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/90.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/CFDA.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/HT2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/HT7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/HThomson.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/amFAR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/chanel-black-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/chanel-floral-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/met-2015-05_0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/met-2015-05_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/met2016_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/met2016_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/next.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/prev.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/raulAvila.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/tonys2016_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/tonys2016_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/tonys2016_3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -355,13 +195,6 @@
       <workItem from="1595570957974" duration="581000" />
       <workItem from="1595613953709" duration="4014000" />
       <workItem from="1595711601371" duration="4349000" />
-    </task>
-    <task id="LOCAL-00041" summary="fixes2">
-      <created>1592244941630</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1592244941630</updated>
     </task>
     <task id="LOCAL-00042" summary="fixes2">
       <created>1593539659835</created>
@@ -699,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595739808399</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="gallery">
+      <created>1595885544170</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1595885544171</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -720,7 +560,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Prasoon here" />
     <MESSAGE value="Fixed" />
     <MESSAGE value="testing" />
     <MESSAGE value="Recipt" />
@@ -745,7 +584,8 @@
     <MESSAGE value="Statues, Baskets" />
     <MESSAGE value="prasoon" />
     <MESSAGE value="click" />
-    <option name="LAST_COMMIT_MESSAGE" value="click" />
+    <MESSAGE value="gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="gallery" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="123" width="817" height="568" key="#Project_Structure" timestamp="1595006539260">
@@ -766,10 +606,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="328" y="23" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595739807738">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="331" y="54" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595885526809">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
+    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1595885526809" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1593651458432" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1593658011653" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1593628212010" />
@@ -876,10 +716,10 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1595619817247">
-      <screen x="1440" y="94" width="1920" height="988" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1595885609756">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1595885609756" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1593651469381" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1593658017001" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1593628223780" />
