@@ -13,8 +13,8 @@ from django.utils.translation import gettext_lazy as _
 
 class UserDefaultAddress(models.Model):
     user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
-    shipping= models.ForeignKey("UserAddress", null=True, blank=True,on_delete=models.CASCADE, related_name='user_address_shipping_default+' )
-    billing= models.ForeignKey("UserAddress", null=True, blank=True,on_delete=models.CASCADE, related_name='user_address_billing)default+' )
+    shipping= models.ForeignKey("UserAddress", null=True, blank=True,on_delete=models.PROTECT, related_name='user_address_shipping_default+' )
+    billing= models.ForeignKey("UserAddress", null=True, blank=True,on_delete=models.PROTECT, related_name='user_address_billing)default+' )
 
     def __unicode__(self):
         return str(self.user.username)

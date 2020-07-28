@@ -69,10 +69,8 @@ def profile(request):
     from orders.models import Order
     User = get_user(request)
     UserOrders = Order.objects.filter(user=User,status='Finished')
-    print(UserOrders)
     userAddress = UserAddress.objects.filter(user=User)
     billing_address = BillingAddress.objects.filter(user=User)
-    print(billing_address)
     context = {"UserOrders":UserOrders,"userAddress":userAddress, "billing_address":billing_address}
     return render(request, 'users/profile.html',context)
 
@@ -132,11 +130,13 @@ def add_billing_address(request):
 
 def delete_address(request, id):
     try:
+        print("User")
         address = UserAddress.objects.get(id=id)
         address.delete()
     except:
         pass
     try:
+        print("Bill")
         address = BillingAddress.objects.get(id=id)
         address.delete()
     except:

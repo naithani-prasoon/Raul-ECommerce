@@ -60,6 +60,9 @@ def pressdaily(request):
 def cafe(request):
     return render(request, 'Raul_Inc/cafe.html')
 
+def gallery(request):
+    return render(request, 'Raul_Inc/gallery.html')
+
 
 
 

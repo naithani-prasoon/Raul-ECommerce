@@ -66,6 +66,7 @@ urlpatterns = [
     path('Raul_Inc/press-jet-set.html', Raul_Inc_Path.pressjet, name='Raul_Inc_press-jet-set'),
     path('Raul_Inc/clientList', Raul_Inc_Path.clientList, name='Raul_Inc_clientList'),
     path('Raul_Inc/contact', Raul_Inc_Path.contact, name='Raul_Inc_contact'),
+    path('Raul_Inc/gallery', Raul_Inc_Path.gallery, name='Raul_Inc_gallery'),
     path('cart/', cart_views.view, name='cart'),
     path('profile/<int:id>/', user_views.delete_address, name='del_add'),
     path('ajax/add_user_address/',user_views.add_address, name='ajax_add_user_address'),
