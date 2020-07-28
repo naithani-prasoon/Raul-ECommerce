@@ -31,6 +31,7 @@ urlpatterns = [
     path('section/<str:sec>/', views.SectionView,name='sec-view'),
     path('register/', user_views.register, name='register'),
     path('profile/', user_views.profile, name='profile'),
+    path('venue/', user_views.venue, name='venue'),
     path('profile/orders', user_views.profile, name='profile-orders'),
     path('product/', views.products, name='Raul-product'),
     path('product/<str:slug>/', views.singleView, name='Raul-single'),
