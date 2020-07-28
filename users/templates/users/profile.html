@@ -67,7 +67,11 @@
             .profile-tabcontent{
                 background-color: rgba(0,0,0,0.2);
                 min-height: 200px;
-                margin:auto 10px;
+                width: 80%;
+                margin:10px auto;
+                height: auto;
+                padding:20px;
+                text-align: center;
             }
 
             .profile-tabcontent h4,li{
@@ -88,6 +92,97 @@
                 flex-wrap: wrap;
             }
 
+            .profile-accordion{
+                width:auto;
+                background-color: rgba(0, 0, 0, 0.1);
+                color: #cfbb63;
+                cursor: pointer;
+                font-weight: 300;
+                padding: 18px;
+                margin:10px auto;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 30px;
+                transition: 0.4s;
+                font-family: myFirstFont;
+            }
+
+            .profile-accordion::after{
+                content: '\002B';
+                color: #cfbb63;
+                font-weight: bold;
+                float: right;
+                margin:0 0 0 60px;
+            }
+
+            .active2, .profile-accordion:hover {
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+
+            .active2:after {
+                content: "\2212";
+            }
+
+            .profile-panel{
+                padding: 0 18px;
+                background-color: rgba(0, 0, 0, 0.1);
+                max-height: 0;
+                overflow: hidden;
+                width:500px;
+                margin:0px auto;
+                font-size: 20px;
+                transition: max-height 0.2s ease-out;
+                text-align: center;
+            }
+
+            .profile-panel table{
+                height:auto;
+                margin:20px auto;
+                width:auto;
+                background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .profile-panel th{
+                background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                padding:10px 32px;
+            }
+
+            .profile-panel td{
+                padding:10px 0px;
+            }
+
+            #total{
+                border-top: 2px solid #cfbb63;
+                background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                width:50%;
+                padding:20px 0;
+                margin:0 auto;
+            }
+
+            @media(max-width:768px){
+                .profile-panel{
+                    width:auto;
+                    padding:0;
+                }
+
+                .profile-panel th{
+                    padding: 10px 10px;
+                }
+
+                #total{
+                    margin: 20px auto;
+                }
+            }
+            
+
+
 
         </style>
     </head>
@@ -101,13 +196,38 @@
     </div>
     <div id = "Orders" class = "profile-tabcontent">
         {%  for myorder in UserOrders %}
-        <div>
-            <li>Order Number: {{myorder.order_id}}</li>
-            <l1>{{myorder.final_total}}</l1>
+        <button class = "profile-accordion">
+            Order Number: {{myorder.order_id}}
+        </button>
+        <div class ="profile-panel">
+            <table>
+                <tr>
+                    <th>
+                        Product
+                    </th>
+                    <th>
+                        Quantity
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                </tr>
+                    {%  for myorder in UserOrders %}
+                    {% for item in myorder.cart.cartitem_set.all %}
+                    <tr>
+                        <td>{{ item.product }}</td>
+
+                        <td> {{ item.quantity}}</td>
+                        <td>${{item.product.price }}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endfor %}
+            </table>  
+            <p id ="total">Total Amount: ${{myorder.final_total}}</p>  
         </div>
         {% endfor %}
-    </div
-    >
+    </div>
+
     <div id = "Shipping" class = "profile-tabcontent">
         {% for userAdd in userAddress %}
         <input required type="hidden" name="shipping_address" value="{{ userAdd.id}}"/> <h4><a href="{% url 'del_add' userAdd.id %}"><img src="{%static 'Raul/Icons/Icons_Small/baseline_delete_outline_white_18dp.png' %}"></a>  {{ userAdd.get_address}}</h4>
@@ -120,19 +240,6 @@
         
         {% endfor %}
     </div>
-        <li>
-            {%  for myorder in UserOrders %}
-            {% for item in myorder.cart.cartitem_set.all %}
-            <div>
-                {{ item.product }}
-
-                {{ item.quantity}}
-                {{item.product.price }}
-            </div>
-            {% endfor %}
-            {% endfor %}
-        </li>
-</div>
 
 <script>
 
@@ -146,11 +253,26 @@
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "flex";
+    document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
 
 document.getElementById("defaultOpen").click();
+
+    var acc = document.getElementsByClassName("profile-accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+    });
+    }
 </script>
 </body>
 </html>

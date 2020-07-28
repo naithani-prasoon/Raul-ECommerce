@@ -99,9 +99,9 @@ body{
 }
 
 
-*, ::after, ::before {
+/* *, ::after, ::before {
     box-sizing: border-box;
-}
+} */
 
 .productContainer{
 	max-width: 1300px;
