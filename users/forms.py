@@ -101,6 +101,7 @@ class CreateUserForm(UserCreationForm):
 
         }
 
+
     def clean_email(self):
         email= self.cleaned_data.get("email")
         print(email)
@@ -109,6 +110,13 @@ class CreateUserForm(UserCreationForm):
         if user_count > 25:
             raise forms.ValidationError("This email has already been used")
         return email
+
+
+
+    def __init__(self, *args, **kwargs):
+        self.error_messages['invalid_login'] = 'The Username and Password did Not Match'
+        self.error_messages['password_mismatch'] = 'The Two Passwords Do Not Match or Your password is to similar '
+        super().__init__(*args, **kwargs)
 
 
 class StripeForm(forms.Form):

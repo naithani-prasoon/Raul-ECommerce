@@ -161,7 +161,9 @@
         <h1>Create an Account</h1>
         <form method="post">
             {%csrf_token%}
-            {{Register_form.errors}}
+            {% if Register_form.errors %}
+            <p>The Two Passwords Don't Match</p>
+            {% endif %}
             <h4>Email Address</h4>
             {{Register_form.username}}
             <h4>Password</h4>
