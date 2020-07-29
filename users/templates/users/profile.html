@@ -212,10 +212,11 @@
                         Price
                     </th>
                 </tr>
+                <td>Tracking Status: {{myorder.Tracking_Status}}
+                    Tracking Number: {{myorder.Tracking_Number}}</td>
                     {% for item in myorder.cart.cartitem_set.all %}
                     <tr>
                         <td>{{ item.product }}</td>
-
                         <td> {{ item.quantity}}</td>
                         <td>${{item.product.price }}</td>
                     </tr>
