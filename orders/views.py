@@ -9,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order,StripeInfo
-from .utilis import id_generator,email_test,make_invoice,pdf,add_item
+from .utilis import id_generator,email_test,pdf,add_item
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm,BillingAddressForm
 from users.models import UserAddress, BillingAddress
@@ -131,7 +131,6 @@ def checkout(request):
 
 
         if 'stripeToken' in request.POST:
-            print(request.POST)
             try:
                 user_stripe = request.user.userstripe.stripe_id
                 customer = stripe.Customer.retrieve(user_stripe)
@@ -153,9 +152,6 @@ def checkout(request):
                     shipping_address_instance = UserAddress.objects.get(id= shipping_a)
                 except:
                     shipping_address_instance = None
-                print(billing_a)
-                print(shipping_address_instance)
-
 
                 source = stripe.Customer.create_source(
                     user_stripe,
@@ -169,8 +165,6 @@ def checkout(request):
                     customer = customer,
                     description = "Test"
                 )
-                print(customer.id)
-
                 add_stripe_info = stripe.Customer.modify_source(
                     customer.id,
                     source.id,
@@ -198,6 +192,7 @@ def checkout(request):
                     new_order.billing_address = billing_address_instance
                     new_order.shipping_address = shipping_address_instance
                     new_order.save()
+                    email_test(context)
                     new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                     new_order.save()
                     cart.active = False

@@ -16,6 +16,12 @@ STATUS_CHOICES = (
     ("Finished", "Finished"),
 )
 
+SHIPPING_CHOICES = (
+    ("Processing", "Processing"),
+    ("Shipped", "Shipped"),
+    ("Cancelled", "Cancelled"),
+)
+
 class Order(models.Model):
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
     order_id = models.CharField(max_length=120, default='ABC', unique=True)
@@ -26,6 +32,8 @@ class Order(models.Model):
     sub_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     tax_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     final_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
+    Tracking_Status = models.CharField(max_length=120, choices=SHIPPING_CHOICES, default="Processing",blank=True, null=True)
+    Tracking_Number = models.CharField(max_length=120,blank=True, null=True)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     order_pdf = models.FileField(blank=True,null=True)
 

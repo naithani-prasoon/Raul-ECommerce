@@ -2,15 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/RaulCafe_Nov22nd_2499.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0002_section.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0003_product_section.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/migrations/0004_auto_20200712_0124.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/migrations/0002_auto_20200712_1810.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0002_auto_20200712_1810.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0002_stripeinfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0003_auto_20200712_0411.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0004_merge_20200713_0216.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/migrations/0005_auto_20200724_2207.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/utilis.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/utilis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_billingaddress.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0003_useraddress_default.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0004_auto_20200724_2207.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0005_auto_20200712_1510.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0006_merge_20200724_2208.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,13 +220,8 @@
       <workItem from="1595711601371" duration="4349000" />
       <workItem from="1595876838408" duration="7711000" />
       <workItem from="1595971935346" duration="1953000" />
-    </task>
-    <task id="LOCAL-00043" summary="fixes2">
-      <created>1593543740056</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1593543740057</updated>
+      <workItem from="1595973902659" duration="1515000" />
+      <workItem from="1596033401615" duration="2581000" />
     </task>
     <task id="LOCAL-00044" summary="fixes2">
       <created>1593560238736</created>
@@ -547,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595905936330</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="jon">
+      <created>1595974052701</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1595974052702</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +587,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="testing" />
     <MESSAGE value="Recipt" />
     <MESSAGE value="Prasoon" />
     <MESSAGE value="Sections" />
@@ -593,7 +611,8 @@
     <MESSAGE value="click" />
     <MESSAGE value="feat prod" />
     <MESSAGE value="Login/Cafe Menu / NavBar Animation / Landing Page Transition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login/Cafe Menu / NavBar Animation / Landing Page Transition" />
+    <MESSAGE value="jon" />
+    <option name="LAST_COMMIT_MESSAGE" value="jon" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="123" width="817" height="568" key="#Project_Structure" timestamp="1595006539260">
@@ -614,7 +633,7 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595905935483">
+    <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1595974051842">
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
@@ -629,7 +648,7 @@
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="23" y="23" width="1417" height="823" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1594362197869" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
-    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595905935483" />
+    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595974051842" />
     <state x="30" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1595365245951" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
@@ -696,7 +715,7 @@
     </state>
     <state x="156" y="133" key="MergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1593669944571" />
     <state x="1648" y="238" key="MergeDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595038125902" />
-    <state x="1471" y="173" key="MultipleFileMergeDialog" timestamp="1595900308415">
+    <state x="1471" y="173" key="MultipleFileMergeDialog" timestamp="1595974103490">
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="23" y="72" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1594004787625" />
@@ -707,7 +726,7 @@
     <state x="1471" y="179" key="MultipleFileMergeDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595038129746" />
     <state x="23" y="88" key="MultipleFileMergeDialog/0.23.1440.815@0.23.1440.815" timestamp="1595008502116" />
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
-    <state x="1471" y="173" key="MultipleFileMergeDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595900308415" />
+    <state x="1471" y="173" key="MultipleFileMergeDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595974103490" />
     <state x="31" y="102" key="MultipleFileMergeDialog/0.23.1920.988@0.23.1920.988" timestamp="1595365282396" />
     <state x="370" y="23" width="1024" height="815" key="SettingsEditor" timestamp="1595185578281">
       <screen x="0" y="23" width="1440" height="815" />
@@ -724,7 +743,7 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1595905947902">
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1595974124707">
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
@@ -737,7 +756,7 @@
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.815@0.23.1440.815" timestamp="1595008518724" />
     <state x="1867" y="317" key="Vcs.Push.Dialog.v2/0.23.1440.817/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594608822255" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595905947902" />
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595974124707" />
     <state x="427" y="231" key="Vcs.Push.Dialog.v2/0.23.1920.988@0.23.1920.988" timestamp="1595365295742" />
     <state x="133" y="241" width="1654" height="746" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1594927591141">
       <screen x="0" y="23" width="1920" height="988" />

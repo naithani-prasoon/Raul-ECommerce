@@ -9,8 +9,7 @@ from django.contrib.auth import get_user
 from django.urls import reverse
 from users.models import UserAddress, UserDefaultAddress, BillingAddress
 from django.contrib.auth import get_user
-from django.contrib.auth import login,logout,authenticate,hashers
-import  django.contrib.auth.hashers
+from django.contrib.auth import login,logout,authenticate
 
 def login_register(request):
     form = LoginForms(request.POST or None)
@@ -25,15 +24,13 @@ def login_register(request):
 
             context = {'form': form,"Register_form" : Register_form}
             new_user = authenticate(username=Register_form.cleaned_data['username'],
-                                    password=Register_form.cleaned_data['password1'],
+                                    password=Register_form.cleaned_data['password'],
                                     )
             login(request, new_user)
             Register_form = CreateUserForm()
             messages.success(request, 'You are now logged in!')
             return HttpResponseRedirect(reverse("cart"))
         else:
-            for j in Register_form.error_messages.values():
-                messages.error(request, j)
             form = LoginForms()
             context = {'form': form,"Register_form": Register_form}
             return render(request, 'users/login.html',context)
