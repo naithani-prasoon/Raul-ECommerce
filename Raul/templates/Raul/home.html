@@ -91,8 +91,8 @@
                 <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
                 <div class="hoverDiv2">
                     <span style="letter-spacing: 2px;">CONTACT US</span><br><br><br>
-                    <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>email@email.com</span><br><br>
-                    <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" id="phoneContact"> <span> (900)-009-9090</span>
+                    <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>raul@raulavilainc.com</span><br><br>
+                    <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" id="phoneContact"> <span> (347)-432-5436</span>
                 </div>
             </div>
 
@@ -695,13 +695,15 @@
         <div class = "section">
             <div class="firstSection">
                 <div class = "textHover">
-                    <div class = "textHeading"> shop this collection </div>
+                    <a href="{% url 'sec-view' 'Rug Collection' %}">  <div class = "textHeading"> shop this collection </div></a>
+
                 </div>
             </div>
             <div></div>
             <div class="secondSection">
                 <div class = "textHover">
-                    <div class = "textHeading"> shop this collection </div>
+                  
+                    <a href="{% url 'sec-view' 'Pot Collection' %}">  <div class = "textHeading"> shop this collection </div></a>
                 </div>
             </div>
         </div>
