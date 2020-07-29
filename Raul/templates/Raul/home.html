@@ -396,14 +396,11 @@
             featured products
         </div>
         <div class="mobileGrid">
-            <img src="{% static 'Raul/Images/furniture.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-            <img src="{% static 'Raul/Images/furniture2.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-            <img src="{% static 'Raul/Images/furniture3.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-            <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-            <img src="{% static 'Raul/Images/furniture.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-            <img src="{% static 'Raul/Images/furniture2.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-            <img src="{% static 'Raul/Images/furniture3.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
-            <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            {%for item in Feat%}
+                    <img src="{{item.product.image.url}}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+            {%endfor%}
+                </div>
+
            
         </div>
     </div>
@@ -530,7 +527,6 @@
     <div class="tabsBanner">
         <button class="tablinks" onclick="openCity(event, 'Furniture')" id="defaultOpen">Furniture</button>
         <button class="tablinks" onclick="openCity(event, 'Floral')">Floral</button>
-        <button class="tablinks" onclick="openCity(event, 'Lighting')">Lighting</button>
         <button class="tablinks" onclick="openCity(event, 'WallArt')">Wall Art</button>
         <button class="tablinks" onclick="openCity(event, 'TableTop')">Table Top</button>
         <button class="tablinks" onclick="openCity(event, 'DecAcc')">Decorative Accessories</button>
@@ -552,7 +548,7 @@
                     <img src="{% static 'Raul/Images/furniture3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
                     <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
                 </div> -->
-                <img src="{% static 'Raul/Images/FurnitureFinalI.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/FurnitureCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
             </div>
             
         </div>
@@ -574,32 +570,12 @@
                     <img src="{% static 'Raul/Images/floral3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
                 </div>
                 <img src="{% static 'Raul/Images/8.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/FurnitureFinalI.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/FloralCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
             </div>
         </div>
     </div>
     
-    <div id="Lighting" class="tabcontent">
-        <div class="tabSection">
-            <div class="tabText">
-                <div class="headingTab">
-                    lighting
-                </div>
-                <a  href="{% url 'sec-view' 'Lighting' %}"><button>shop now</button></a>
-            </div>
-            <div class="tabImagesRow">
-                <!-- <div class="tabImagesColumn">
-                    <img src="{% static 'Raul/Images/lighting.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/lighting2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/lighting3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/lighting4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                </div>
-                <img src="{% static 'Raul/Images/1.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/FurnitureFinalI.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
-            </div>
-            
-        </div>
-    </div>
+
 
     <div id="WallArt" class="tabcontent">
         <div class="tabSection">
@@ -617,7 +593,7 @@
                     <img src="{% static 'Raul/Images/wallart.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
                 </div>
                 <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/FurnitureFinalI.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/WallArtCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
             </div>
             
         </div>
@@ -639,7 +615,7 @@
                     <img src="{% static 'Raul/Images/tabletop4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
                 </div>
                 <img src="{% static 'Raul/Images/3.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/FurnitureFinalI.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/TabletopCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
             </div>
         </div>
     </div>
@@ -648,7 +624,7 @@
         <div class="tabSection">
             <div class="tabText">
                 <div class="headingTab" id ="decorativeHeading">
-                    decorative 
+                    decorative accessories
                 </div>
                 <a  href="{% url 'sec-view' 'Decorative Accessories' %}"><button>shop now</button></a>
             </div>
@@ -660,73 +636,18 @@
                     <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
                 </div>
                 <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/FurnitureFinalI.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/DecoAcc.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
             </div>
         </div>
     </div>
 
-    
-    <!-- <div class= "feature" id="feature">
-        
-        <div class="featureProductsHeading">
-        </div>
-        <div class="sectionFeature">
-            <div class="featureImages">
-                <div class="featureProducts" id="reveal1">
-                    <img src="{% static 'Raul/Images/7.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/7.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-                <div class="featureProducts" id="reveal1">
-                    <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-                <div class="featureProducts" id="reveal1">
-                    <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-            
-                <div class="featureProducts" id="reveal1">
-                    <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/5.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-                <div class="featureProducts"id="reveal1">
-                    <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-                <div class="featureProducts"id="reveal1">
-                    <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-                <div class="featureProducts"id="reveal1">
-                    <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/11.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-                <div class="featureProducts"id="reveal1">
-                    <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
-                    <div class="reveal1">
-                        <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo">
-                    </div>
-                </div>
-            </div>
-            <div class ="revealProducts">
-                <p>featured products</p>
-            </div>
-        </div>
-    </div> -->
+    <div class="filler"></div>
+
+    <div class ="featureProductsHeading" >
+        shop by layout
+    </div>
+
+    <div class="filler"></div>
 
     <div class ="bannerSecond">
         <div class="roundCircle">
