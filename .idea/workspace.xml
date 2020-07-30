@@ -5,6 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,14 +204,7 @@
       <workItem from="1596033401615" duration="3722000" />
       <workItem from="1596051032202" duration="586000" />
       <workItem from="1596051890373" duration="2483000" />
-      <workItem from="1596055548562" duration="1358000" />
-    </task>
-    <task id="LOCAL-00046" summary="Added Order CHeckout html and fixed pdf">
-      <created>1593620373475</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1593620373475</updated>
+      <workItem from="1596055548562" duration="4605000" />
     </task>
     <task id="LOCAL-00047" summary="Added Order CHeckout html and fixed pdf">
       <created>1593628212477</created>
@@ -546,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596056336520</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="more pics">
+      <created>1596057138167</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1596057138167</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +570,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Sections" />
     <MESSAGE value="Billing addy" />
     <MESSAGE value="erros" />
     <MESSAGE value="Email User" />
@@ -592,7 +594,8 @@
     <MESSAGE value="jon" />
     <MESSAGE value="hi" />
     <MESSAGE value="pictues fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="pictues fixes" />
+    <MESSAGE value="more pics" />
+    <option name="LAST_COMMIT_MESSAGE" value="more pics" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="123" width="817" height="568" key="#Project_Structure" timestamp="1595006539260">
@@ -613,7 +616,7 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1596056335509">
+    <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1596057137610">
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
@@ -628,7 +631,7 @@
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="23" y="23" width="1417" height="823" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1594362197869" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
-    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596056335509" />
+    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596057137610" />
     <state x="30" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1595365245951" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
@@ -723,7 +726,7 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1596056382370">
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1596057144492">
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
@@ -736,7 +739,7 @@
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.815@0.23.1440.815" timestamp="1595008518724" />
     <state x="1867" y="317" key="Vcs.Push.Dialog.v2/0.23.1440.817/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594608822255" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
-    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596056382370" />
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596057144492" />
     <state x="427" y="231" key="Vcs.Push.Dialog.v2/0.23.1920.988@0.23.1920.988" timestamp="1595365295742" />
     <state x="133" y="241" width="1654" height="746" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1594927591141">
       <screen x="0" y="23" width="1920" height="988" />

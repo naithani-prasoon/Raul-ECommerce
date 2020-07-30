@@ -33,6 +33,7 @@ class Order(models.Model):
     tax_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     final_total = models.DecimalField(default=1000.00, max_digits=1000, decimal_places=2)
     Tracking_Status = models.CharField(max_length=120, choices=SHIPPING_CHOICES, default="Processing",blank=True, null=True)
+    Shipping = models.DecimalField(max_length=120,default=9.00,blank=True,null=True,max_digits=1000, decimal_places=2)
     Tracking_Number = models.CharField(max_length=120,blank=True, null=True)
     time_stamp = models.DateTimeField(auto_now_add=True, auto_now= False)
     order_pdf = models.FileField(blank=True,null=True)
