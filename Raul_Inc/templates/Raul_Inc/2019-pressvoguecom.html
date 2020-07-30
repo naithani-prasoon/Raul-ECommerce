@@ -1,0 +1,141 @@
+{% load static %}
+<html lang="en-US"><head>
+    <title>Raul Àvila Inc.</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/font-awesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Raul_Inc/CSS/main.css' %}">
+
+    <style>
+        #thumbs img {
+            width: 300px;
+            height: 216px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+<div id="navcontainer" class="fixed">
+    <div id="logo" class="home-logo"><img src="{% static 'Raul_Inc/Images/raulAvila.png' %}"></div>
+    <ul id="navlist">
+        <li><a href="{%url 'Raul_Inc_Home' %}">HOME</a></li>
+        <li><a href="{%url 'Raul_Inc_Bio' %}">BIO</a></li>
+        <li><a href="{%url 'Raul_Inc_Press' %}">PRESS</a></li>
+        <li><a href="{%url 'Raul_Inc_clientList' %}">CLIENT LIST</a></li>
+        <li><a href="client/gallery.html">GALLERY</a></li>
+        <li><a href="{%url 'Raul_Inc_contact' %}">CONTACT</a></li>
+        <li>
+            <div id="social">
+                <a href="https://www.facebook.com/RAULAVILAINC" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/RaulAvilaInc" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="http://instagram.com/raulavilainc" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="wrapper">
+
+    <div id="articles">
+        <div class="group">
+            <a id="thumbs" href="https://www.vogue.com/article/how-world-pride-inspired-the-design-of-the-2019-tony-awards-red-carpet" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/Tonys201913778.jpg' %}" alt="How World Pride Inspired the Design of the 2019 Tony Awards Red Carpet" width="301" height="216">
+                <div class="description"><span>How World Pride Inspired the Design of the 2019 Tony Awards Red Carpet</span><br>June 2019</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="https://www.vogue.com/article/met-gala-menu-dinner-table-settings-2019" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/00-story-image-table-settings-decor-met-gala-2019.jpg' %}" alt="What’s for Dinner at the Met Gala? A Look at the 2019 Menu and Table Settings" width="100" height="72">
+                <div class="description"><span>What’s for Dinner at the Met Gala? A Look at the 2019 Menu and Table Settings</span><br>May 2019</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="https://www.vogue.com/article/met-gala-2019-flamingo-centerpiece/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/00-story-image-met-gala-2019-decor-centerpiece-grand-entry-hall.jpg' %}" width="324" height="216">
+                <div class="description"><span>Everything You Need to Know About the Met Gala’s Wild Flamingo Centerpiece</span><br>
+                    May 2019</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="https://www.vogue.com/article/how-40000-roses-find-their-way-onto-the-tonys-red-carpet/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/00-story-rose-wall.jpg' %}" width="100" height="72">
+                <div class="description"><span>How 40,000 Roses Find Their Way Onto the Tonys Red Carpet</span><br>June 2018</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="https://www.vogue.com/article/met-gala-decor/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/met-gala-decor.jpg' %}" width="100" height="72">
+                <div class="description"><span>The Divine Inspiration Behind the Met Gala’s Floral Centerpiece</span><br>May 2018</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13445189/raul-avila-roses-flower-wall-tony-awards/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/holding-rose-wall.jpg' %}" width="302" height="216">
+                <div class="description"><span>Raul Àvila Builds the Most Spectacular Tonys Red Carpet Backdrop Using 100,000 Roses</span><br>June 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13431718/met-gala-2016-by-the-numbers/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/met-gala-by-numbers.jpg' %}" width="100" height="72">
+                <div class="description"><span>500,000 Roses, 325 Bottles of Champagne . . . Last Night's Met Gala by the Numbers</span><br>May 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13429589/met-gala-2016-live-blog-fashion-celebrity-arrivals/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/beyonce-holding.jpg' %}" width="100" height="72">
+                <div class="description"><span>Met Gala 2016 Live Blog: Beyoncé and More Celebrity Red Carpet Arrivals</span><br>May 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13432289/met-gala-2016-stop-motion-red-carpet-alicia-vikander-selena-gomez-grimes/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/walk-the-red-carpet.png' %}" width="100" height="72">
+                <div class="description"><span>Here's What It's Like to Walk the Red Carpet at the Met Gala 2016</span><br>May 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13431875/met-gala-2016-centerpiece-double-helix-roses/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/watch-met-gala-centerpiece.png' %}" width="100" height="72">
+                <div class="description"><span>80,000 Red Roses and 200,000 Silk Roses: Watch the Met Gala 2016 Centerpiece Take Shape</span><br>May 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13428592/raul-avila-profile-met-gala/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/raul.jpg' %}" width="100" height="72">
+                <div class="description"><span>Meet the Designer Behind the Met Gala's Fantastical Decorations</span><br>April 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13429028/met-gala-party-planning-tips-sylvana-ward-durrett/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/met-gala-party-planning-tips1.jpg' %}" width="100" height="72">
+                <div class="description"><span>Met Gala Party-Planning Secrets—From Invitations to Icebreakers</span><br>April 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13426539/parties-the-first-monday-in-may-anna-wintour-met-gala-2016/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/party-planning-tips-fmm.png' %}" width="100" height="72">
+                <div class="description"><span>7 Met Gala Party-Planning Tips From The First Monday in May</span><br>April 2016</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/13365487/flowers-day-of-the-dead-raul-avila-met-gala/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/01-dia-de-los-muertos-flowers2.jpg' %}" width="100" height="72">
+                <div class="description"><span>Day of the Dead–Inspired Flowers From the Creative Mind Behind the Met Gala, Raúl Àvila</span><br>October 2015</div>
+            </a>
+        </div>
+        <div class="group">
+            <a id="thumbs" href="http://www.vogue.com/1443595/floral-moments-from-nyfw-spring-2015/" target="_blank" rel="group">
+                <img src="{% static 'Raul_Inc/Images/moments-from-ny-fashion-week.jpg' %}" width="100" height="72">
+                <div class="description"><span>6 of Our Favorite Floral Moments from New York Fashion Week</span><br>September 2014</div>
+            </a>
+        </div>
+
+    </div>
+
+
+</div><!--wrapper-->
+
+
+
+</body></html>
