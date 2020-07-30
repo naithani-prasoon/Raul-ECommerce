@@ -85,23 +85,7 @@ class Variation(models.Model):
 
 class FeatuedProducts(models.Model):
     product = models.ForeignKey(product, on_delete=models.PROTECT)
-    def  __str__(self):
-        return self.product.title
 
-
-class Collection1(models.Model):
-    product = models.ForeignKey(product, on_delete=models.PROTECT)
-    def  __str__(self):
-        return self.product.title
-
-class Collection2(models.Model):
-    product = models.ForeignKey(product, on_delete=models.PROTECT)
-    def  __str__(self):
-        return self.product.title
-
-
-class LayoutView(models.Model):
-    product = models.ForeignKey(product, on_delete=models.PROTECT)
     def  __str__(self):
         return self.product.title
 
