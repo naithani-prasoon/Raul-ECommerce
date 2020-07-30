@@ -211,7 +211,11 @@ h5{
 	height:40px;
 	background-color: rgba(0, 0, 0, 0.7);
 	color:white;
+<<<<<<< HEAD
+	border-radius:5px;
+=======
 	border-radius:20px;
+>>>>>>> fae54cab85169e71c29c02c13d1a09dc4426d61f
 	text-align: center;
 	position: relative;
 	top:80%;

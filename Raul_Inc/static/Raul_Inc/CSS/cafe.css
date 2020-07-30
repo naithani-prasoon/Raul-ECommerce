@@ -79,6 +79,10 @@ h1{
     width:400px;
 }
 
+.menuGrid h1{
+    font-size:30px;
+}
+
 .menuButton{
     width:100%;
     display: flex;
@@ -122,8 +126,8 @@ h1{
 }
 
 .menuGrid{
-    display: grid;
-    grid-template-rows: auto auto auto auto;
+    display: flex;
+    flex-direction: column;
     place-content: center;
     place-items: center;
     margin:0 auto;
@@ -135,8 +139,10 @@ h1{
     padding:10px 0px;
     margin:20px auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .menuItems{

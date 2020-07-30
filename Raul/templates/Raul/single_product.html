@@ -29,12 +29,12 @@
 
         .left-column {
             position: relative;
-            justify-content: right;
-            text-align: right;
+            justify-content: center;
+            text-align: center;
         }
 
         .left-column img{
-            width:80%;
+            width:75%;
             margin-left:auto;
             margin-right: auto;
         }
@@ -137,7 +137,7 @@
 
         form input[type = submit]{
             background: #cfbb63;
-            border-radius: 50px;
+            border-radius: 5px;
             font-family: myFirstFont;
             font-size: 20px;
             border:2px solid #cfbb63;
@@ -154,6 +154,7 @@
             background-color:#cfbb63;
             color:black;
             cursor: pointer;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
         }
 
         form{
@@ -258,6 +259,53 @@
 
             .form-control{
                 margin:20px auto;
+            }
+
+            form input[type = submit]{
+                margin:20px auto;
+            }
+
+            .cartNotification{
+                opacity:1;
+                transform: translateX(600px);
+                position:fixed;
+                width:100%;
+                animation: none;
+                padding:60px 0px;
+                background-color: rgba(0, 0, 0, 0.5);
+                bottom:0;
+                left:0;
+                transition: 0.4s ease-in-out;
+            }
+
+            .cartAdded{
+                font-size: 22px;
+                background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: 500;
+                text-align:center;
+            }
+
+            @keyframes fadeInPop{
+                0%{
+                    opacity: 0.5;
+                    transform: translateY(500px);
+                }
+                25%{
+                    opacity: 1;
+                }
+                50%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                75%{
+                    opacity:0.5;
+                }
+                100%{
+                    opacity: 0;
+                    transform: translateY(500px);
+                }
             }
         }
 
