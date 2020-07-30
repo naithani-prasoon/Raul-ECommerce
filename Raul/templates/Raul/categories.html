@@ -41,16 +41,18 @@
                         <form method='POST' action="{% url 'ajax_add_to_cart' product.slug %}">
                             {% csrf_token %}
                             <input type="hidden" name='qty' type='number' placeholder='Quantity' class = "numberOfItems" min="1" max="50" value="1">
-                            <input type='submit' value='Add to cart' onclick="cartNotification()">
+                            <input type='submit' value='Add to Cart' onclick="cartNotification()">
                             </form>
 
                     </div>
                 </div>
             </div>
             <h5 class="productTitle">{{product.title}}</h5>
-                {% if product.variation %}
+                {% if product.variation_set.sizes %}
             <h5 class="productPrice">varies</h5>
-                {% else %}
+                {% elif product.variation_set.colors %}
+                <h5 class="productPrice">varies</h5>
+                {%else%}
                 <h5 class="productPrice">${{product.price}}</h5>
                 {% endif %}
         </div>
