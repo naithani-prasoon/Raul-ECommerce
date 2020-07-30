@@ -20,6 +20,13 @@ html,body{
     scroll-snap-type: y mandatory;
 }
 
+input[type=text], input[type=password],input[type=email]{
+    border-radius: 5px;
+    padding:10px 16px;
+    outline: none;
+    border:none;
+}
+
 #store{
     width:100%;
     height:0%;
@@ -340,6 +347,41 @@ nav li {
     -webkit-transform: rotate(45deg);
   }
 
+  .popUpMessage{
+    display: block; 
+    position: fixed;
+    z-index: -1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: transparent;
+    padding-top: 20px;
+    overflow: hidden;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: 5s fadeout ;
+}
+
+.messageRegister{
+    background-color:rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 80px;
+    right:40px;
+    padding:50px 40px;
+    font-family: myFirstFont;
+}
+
+.messageRegister div{
+    text-align: center;
+    margin: 0px auto;
+    padding:16px 16px;
+    font-size: 24px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 /* Body Ended */
 
 /* Animations */
@@ -351,6 +393,50 @@ nav li {
         opacity: 1;
     }
 }
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+@keyframes fadeout {
+    0%{
+        opacity:0.5;
+        z-index: 190;
+        transform: translateX(500px);
+    }
+    25%{
+        opacity: 0.8;
+        z-index: 200;
+        transform: translateX(500px);
+    }
+    50%{
+        opacity:1;
+        z-index: 200;
+        transform: translateX(0);
+    }
+    75%{
+        opacity: 0.5;
+        z-index: 200;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+        transform: translateX(300px);
+    }
+  }
+
 
 /* Animations Ended */
 
@@ -477,6 +563,7 @@ nav li {
         margin-left: auto;
         box-sizing: border-box;
         font-weight: bold;
+        border-radius:5px;   
     }
 
     .horizontalScroll{
@@ -779,6 +866,7 @@ nav li {
     .mobile-actions img{
         padding: 0px 20px;
         width:30px;
+        box-sizing: unset;
     }
 
     .mobile-headers figcaption img{
@@ -837,6 +925,7 @@ nav li {
         margin-left: auto;
         box-sizing: border-box;
         font-weight: bold;
+        border-radius:5px;   
     }
 
     .horizontalScroll{
@@ -1143,6 +1232,7 @@ nav li {
     .mobile-actions img{
         padding: 0px 20px;
         width:30px;
+        box-sizing: unset;
     }
 
     .mobile-headers figcaption img{
@@ -1201,6 +1291,7 @@ nav li {
         margin-left: auto;
         box-sizing: border-box;
         font-weight: bold;
+        border-radius:5px;   
     }
 
     .horizontalScroll{
@@ -1506,6 +1597,7 @@ nav li {
 
     .mobile-actions img{
         padding: 0px 20px;
+        box-sizing: unset;
     }
 
     .mobile-headers figcaption img{
@@ -1548,7 +1640,6 @@ nav li {
         font-size:45px;
         outline: none;
         padding:30px;
-        
         border: none;
         transition: 0.5s ease;
         display: block;
@@ -1556,6 +1647,7 @@ nav li {
         margin-left: auto;
         box-sizing: border-box;
         font-weight: bold;
+        border-radius:5px;   
     }
 
     .horizontalScroll{
@@ -2208,7 +2300,7 @@ nav li {
         border: none;
         box-sizing: border-box;
         font-weight: bold;
-        border-radius:60px;        
+        border-radius:5px;        
     }
 
     .bannerHeading figcaption a button:hover{
@@ -2901,7 +2993,7 @@ nav li {
         outline:none;
         border: 1px solid #ccc;
         box-sizing: border-box;
-        border-radius: 40px;
+        border-radius: 5px;
       }
     
       .modal li{
@@ -2910,8 +3002,8 @@ nav li {
 
       
       .centerIt button {
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        color: #6d6d6d;
+        background: #cfbb63;
+        color: rgba(0,0,0,0.6);
         padding: 14px 20px;
         margin: 4px auto;
         border: none;
@@ -2921,12 +3013,12 @@ nav li {
         text-align: center;
         font-weight: bold;
         transition: 0.4s ease-in-out;
-          font-family: myFirstFont;
+        font-family: myFirstFont;
+        border-radius:5px;   
       }
       
       .modal button:hover {
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-        margin:12px auto;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
       }
 
       .cancelbtn {
@@ -3056,13 +3148,13 @@ nav li {
         outline:none;
         border: 1px solid #ccc;
         box-sizing: border-box;
-        border-radius: 40px;
+        border-radius: 5px;
       }
 
       
       .modal2 .centerIt input[type=submit] {
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        color: #6d6d6d;
+        background: #cfbb63;
+        color: rgba(0,0,0,0.6);
         padding: 14px 20px;
         margin: 20px auto;
         border: none;
@@ -3073,11 +3165,11 @@ nav li {
         font-weight: bold;
         transition: 0.4s ease-in-out;
         font-family: myFirstFont;
+        border-radius: 5px;
       }
       
       .modal2 button:hover {
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-        margin:12px auto;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
       }
 
       .modal2 .cancelbtn {
@@ -3199,83 +3291,7 @@ nav li {
         animation: animatezoom 0.6s
       }
 
-    .popUpMessage{
-        display: block; 
-        position: fixed;
-        z-index: -1; 
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        background-color: rgb(0,0,0); 
-        background-color: rgba(0,0,0,0.5);
-        padding-top: 20px;
-        overflow: hidden;
-        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-        animation: 5s fadeout ;
-    }
-
-    .messageRegister{
-        background-color: #333333;
-        margin: 15% auto 15% auto; 
-        border: 1px solid rgba(0,0,0,0.5);
-        color:#cfbb63;
-        width: 400px;
-        height:200px; 
-        max-height:250px;
-        font-family: myFirstFont;
-        border-radius: 50px;
-        
-    }
-
-    .messageRegister div{
-        text-align: center;
-        width:200px;
-        margin: 0px auto;
-        padding:60px 0px;
-        font-size: 19px;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    @-webkit-keyframes fadein {
-        from {bottom: 0; opacity: 0;} 
-        to {bottom: 30px; opacity: 1;}
-      }
-      
-      @keyframes fadein {
-        from {bottom: 0; opacity: 0;}
-        to {bottom: 30px; opacity: 1;}
-      }
-      
-      @-webkit-keyframes fadeout {
-        from {bottom: 30px; opacity: 1;} 
-        to {bottom: 0; opacity: 0;}
-      }
-      
-      @keyframes fadeout {
-        0%{
-            opacity:0.5;
-            z-index: 190;
-        }
-        25%{
-            opacity: 0.8;
-            z-index: 200;
-        }
-        50%{
-            opacity:1;
-            z-index: 200;
-        }
-        75%{
-            opacity: 0.5;
-            z-index: 200;
-        }
-        100%{
-            opacity: 0;
-            z-index: -1;
-        }
-      }
+    
 
     footer{
         height: 400px;
@@ -3656,7 +3672,7 @@ nav li {
         border: none;
         box-sizing: border-box;
         font-weight: bold;
-        border-radius:60px;        
+        border-radius:5px;        
     }
 
     .bannerHeading figcaption a button:hover{
@@ -4348,7 +4364,7 @@ nav li {
         outline:none;
         border: 1px solid #ccc;
         box-sizing: border-box;
-        border-radius: 40px;
+        border-radius: 5px;
       }
     
       .modal li{
@@ -4357,8 +4373,8 @@ nav li {
 
       
       .centerIt button {
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        color: #6d6d6d;
+        background: #cfbb63;
+        color: rgba(0,0,0,0.6);
         padding: 14px 20px;
         margin: 4px auto;
         border: none;
@@ -4369,11 +4385,11 @@ nav li {
         font-weight: bold;
         transition: 0.4s ease-in-out;
         font-family: myFirstFont;
+        border-radius:5px;   
       }
       
       .modal button:hover {
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-        margin:12px auto;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
       }
 
       .cancelbtn {
@@ -4503,13 +4519,13 @@ nav li {
         outline:none;
         border: 1px solid #ccc;
         box-sizing: border-box;
-        border-radius: 40px;
+        border-radius: 5px;
       }
 
       
       .modal2 .centerIt input[type=submit] {
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        color: #6d6d6d;
+        background: #cfbb63;
+        color: rgba(0,0,0,0.6);
         padding: 14px 20px;
         margin: 20px auto;
         border: none;
@@ -4520,11 +4536,11 @@ nav li {
         font-weight: bold;
         transition: 0.4s ease-in-out;
         font-family: myFirstFont;
+        border-radius: 5px;
       }
       
       .modal2 button:hover {
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-        margin:12px auto;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
       }
 
       .modal2 .cancelbtn {
@@ -4645,7 +4661,7 @@ nav li {
         animation: animatezoom 0.6s
       }
 
-    .popUpMessage{
+    /* .popUpMessage{
         display: block; 
         position: fixed;
         z-index: -1; 
@@ -4721,7 +4737,7 @@ nav li {
             opacity: 0;
             z-index: -1;
         }
-      }
+      } */
 
     footer{
         height: 400px;
@@ -4996,7 +5012,10 @@ nav li {
     }
     
     .dropDownContent a:hover{
-        font-family: myFirstFont;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
         cursor: pointer;
     }
     .dropDownButton:hover{
@@ -5044,7 +5063,7 @@ nav li {
         border: none;
         box-sizing: border-box;
         font-weight: bold;
-        border-radius:60px;        
+        border-radius:5px;        
     }
 
     .bannerHeading figcaption a button:hover{
@@ -5663,7 +5682,7 @@ nav li {
         outline:none;
         border: 1px solid #ccc;
         box-sizing: border-box;
-        border-radius: 40px;
+        border-radius: 5px;
       }
     
       .modal li{
@@ -5672,8 +5691,8 @@ nav li {
 
       
       .centerIt button {
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        color: #6d6d6d;
+        background: #cfbb63;
+        color: rgba(0,0,0,0.6);
         padding: 14px 20px;
         margin: 4px auto;
         border: none;
@@ -5684,11 +5703,11 @@ nav li {
         font-weight: bold;
         transition: 0.4s ease-in-out;
         font-family: myFirstFont;
+        border-radius:5px;   
       }
       
       .modal button:hover {
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-        margin:12px auto;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
       }
 
       .cancelbtn {
@@ -5819,13 +5838,13 @@ nav li {
         outline:none;
         border: 1px solid #ccc;
         box-sizing: border-box;
-        border-radius: 40px;
+        border-radius: 5px;
       }
 
       
       .modal2 .centerIt input[type=submit] {
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        color: #6d6d6d;
+        background: #cfbb63;
+        color: rgba(0,0,0,0.6);
         padding: 14px 20px;
         margin: 20px auto;
         border: none;
@@ -5836,11 +5855,11 @@ nav li {
         font-weight: bold;
         transition: 0.4s ease-in-out;
         font-family: myFirstFont;
+        border-radius: 5px;
       }
       
       .modal2 button:hover {
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-        margin:12px auto;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
       }
 
       .modal2 .cancelbtn {
@@ -5962,7 +5981,7 @@ nav li {
         animation: animatezoom 0.6s
       }
 
-    .popUpMessage{
+    /* .popUpMessage{
         display: block; 
         position: fixed;
         z-index: -1; 
@@ -6038,7 +6057,7 @@ nav li {
             opacity: 0;
             z-index: -1;
         }
-      }
+      } */
 
     footer{
         height: 400px;

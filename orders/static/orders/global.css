@@ -185,6 +185,7 @@ td{
     border: none;
     font-family: myFirstFont;
     font-size:20px;
+    border-radius: 5px;
 }
 
 .leftColumn h1{
@@ -257,8 +258,16 @@ td{
     color:rgba(0, 0, 0, 0.6);
     padding:16px 32px;
     font-weight: 500;
-    margin:10px 200px;
+    margin:10px auto;
     font-family: myFirstFont;
+    transition: 0.4s ease-in-out;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.panel .addButton:hover{
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .shippingAccordion{
@@ -431,18 +440,17 @@ label {
 #payment-form .button{
     background: #cfbb63;
     color:rgba(0, 0, 0, 0.6);
-    padding:16px 32px;
+    padding:12px 40px;
     outline: none;
     border: none;
     font-family: myFirstFont;
-    border-radius: 40px;
+    border-radius: 5px;
     font-weight: 700;
     transition: 0.4s ease-in-out;
 }
 #payment-form .button:hover{
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
     cursor: pointer;
-    color:rgba(0, 0, 0, 0.9);
 }
 
 #card-errors {
@@ -555,21 +563,21 @@ label {
 
 .registeredAdd .button{
     -webkit-text-fill-color:rgba(0, 0, 0, 0.6);
-    padding:16px 32px;
+    padding:12px 40px;
     background:#cfbb63;
     outline: none;
     border: 1px solid #cfbb63;
     margin:20px auto;
     font-weight: 700;
-    border-radius: 40px;
+    border-radius: 5px;
     transition: 1s ease-in-out;
     font-family: myFirstFont;
+    font-size: 18px;
 }
 
 .registeredAdd .button:hover{
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
     cursor: pointer;
-    -webkit-text-fill-color:black;
 }
 
 .registeredAdd h3{
@@ -611,7 +619,7 @@ label {
     }
 
     .registeredAdd.button{
-        border-radius: unset;
+        border-radius: 5px;
         padding:16 64px;
         font-size:20px;
     }
@@ -718,7 +726,7 @@ label {
     }
 
     #payment-form .button{
-        border-radius: unset;
+        border-radius: 5px;
         padding:16px 64px;
         font-size:20px;
     }
@@ -743,13 +751,14 @@ label {
     .panel .addButton{
         margin:0;
         font-size: 16px;
+        border-radius: 5px;
     }
 
     .registeredAdd .button{
         font-size: 16px;
         padding:10px 10px;
         width:100%;
-        border-radius: 0;
+        border-radius: 5px;
     }
 
     .rightColumn .summary{
