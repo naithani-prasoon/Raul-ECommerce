@@ -9,7 +9,7 @@ from django.contrib import messages
 # Create your views here.
 from carts.models import Cart
 from .models import Order,StripeInfo
-from .utilis import id_generator,email_test,make_invoice,pdf,add_item
+from .utilis import id_generator,email_test,pdf,add_item
 from django.contrib.auth import get_user_model, get_user
 from users.forms import UserAddressForm,BillingAddressForm
 from users.models import UserAddress, BillingAddress
@@ -109,10 +109,12 @@ def checkout(request):
             shipping_a = request.POST["shipping_address"]
             billing_address_instance = BillingAddress.objects.get(id= billing_a)
             shipping_address_instance = UserAddress.objects.get(id= shipping_a)
+            # Calculate Price with Tax and Shipping
+
             rate = pyziptax.get_rate(shipping_address_instance.zipcode, shipping_address_instance.city)
             two_places = Decimal(10) ** -2
             new_order.tax_total = Decimal(Decimal(rate/100) * Decimal(new_order.sub_total)).quantize(two_places)
-            new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total)
+            new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total) + new_order.Shipping
             final_amount = new_order.final_total
             new_order.save()
 
@@ -131,7 +133,6 @@ def checkout(request):
 
 
         if 'stripeToken' in request.POST:
-            print(request.POST)
             try:
                 user_stripe = request.user.userstripe.stripe_id
                 customer = stripe.Customer.retrieve(user_stripe)
@@ -153,9 +154,6 @@ def checkout(request):
                     shipping_address_instance = UserAddress.objects.get(id= shipping_a)
                 except:
                     shipping_address_instance = None
-                print(billing_a)
-                print(shipping_address_instance)
-
 
                 source = stripe.Customer.create_source(
                     user_stripe,
@@ -169,8 +167,6 @@ def checkout(request):
                     customer = customer,
                     description = "Test"
                 )
-                print(customer.id)
-
                 add_stripe_info = stripe.Customer.modify_source(
                     customer.id,
                     source.id,
@@ -198,6 +194,7 @@ def checkout(request):
                     new_order.billing_address = billing_address_instance
                     new_order.shipping_address = shipping_address_instance
                     new_order.save()
+                    email_test(context)
                     new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                     new_order.save()
                     cart.active = False
