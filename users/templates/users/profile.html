@@ -217,15 +217,15 @@
                         Price
                     </th>
                 </tr>
-                <td>Tracking Status: {{myorder.Tracking_Status}}
-                    Tracking Number: {{myorder.Tracking_Number}}</td>
+                    {%  for myorder in UserOrders %}
                     {% for item in myorder.cart.cartitem_set.all %}
                     <tr>
                         <td>{{ item.product }}</td>
+
                         <td> {{ item.quantity}}</td>
                         <td>${{item.product.price }}</td>
                     </tr>
-
+                    {% endfor %}
                     {% endfor %}
             </table>  
             <p id ="total">Total Amount: ${{myorder.final_total}}</p>  

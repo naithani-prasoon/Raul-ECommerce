@@ -51,7 +51,7 @@ def secondHome(request):
             messages.success(request, 'You are now logged in!')
             return render(request, 'Raul/home.html',context)
         else:
-            messages.error(request, 'Please Try Again')
+            messages.error(request, Register_form.error_messages)
             form = forms.LoginForms()
             context = {'form': form,"Register_form": Register_form,"Feat":featProd}
             return render(request, 'Raul/home.html',context)
