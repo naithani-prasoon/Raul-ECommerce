@@ -27,6 +27,10 @@ input[type=text], input[type=password],input[type=email]{
     border:none;
 }
 
+.mobile-headers img{
+    box-sizing: unset;
+}
+
 #store{
     width:100%;
     height:0%;
