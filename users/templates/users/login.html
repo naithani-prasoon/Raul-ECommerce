@@ -277,7 +277,6 @@
     </div>
 
 
-<<<<<<< HEAD
     <div class = "registerForm" id ="register">
         <div class="register-card" >
             <h1>Create an Account</h1>
@@ -297,26 +296,6 @@
             </form>
             <a href="#login">Already have an account?</a>
         </div>
-=======
-    <div class = "registerForm">
-        <h1>Create an Account</h1>
-        <form method="post">
-            {%csrf_token%}
-            {% if Register_form.errors %}
-            <p>The Two Passwords Don't Match</p>
-            {% endif %}
-            <h4>Email Address</h4>
-            {{Register_form.username}}
-            <h4>Password</h4>
-            {{Register_form.password1}}
-            <h4>Password Confirmation</h4>
-            {{Register_form.password2}}
-            <input type="submit" name="register" value="Register" class="button">
-            <!-- <div class="error-page">
-                <div class="try-again">Error: Try again?</div>
-            </div> -->
-        </form>
->>>>>>> fae54cab85169e71c29c02c13d1a09dc4426d61f
     </div>
 </div>
 

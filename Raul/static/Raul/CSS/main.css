@@ -6,7 +6,6 @@
     src: url(avenir-lt-std-35-light.otf);
 }
 
-
 html,body{
     margin:0;
     padding:0;
@@ -395,7 +394,6 @@ nav li {
     }
 }
 
-<<<<<<< HEAD
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;} 
     to {bottom: 30px; opacity: 1;}
@@ -439,8 +437,6 @@ nav li {
     }
   }
 
-=======
->>>>>>> fae54cab85169e71c29c02c13d1a09dc4426d61f
 
 /* Animations Ended */
 
@@ -724,7 +720,7 @@ nav li {
     }
 
     .section .firstSection{
-        background:url('Images/Collection1.jpg');
+        background:url('Images/bannerSecond.jpg');
         width:100%;
         height: 100%;
         background-position: center bottom;
@@ -732,7 +728,7 @@ nav li {
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        background: url('Images/bannerThird.jpg');
         width:100%;
         background-position: center;
         height: 100%;
@@ -1093,7 +1089,7 @@ nav li {
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        background: url('Images/bannerThird.jpg');
         width:100%;
         background-position: center;
         height: 100%;
@@ -1462,7 +1458,7 @@ nav li {
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        background: url('Images/bannerThird.jpg');
         width:100%;
         background-position: center;
         height: 100%;
@@ -1896,7 +1892,7 @@ nav li {
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        background: url('Images/bannerThird.jpg');
         width:100%;
         background-position: center;
         height: 100%;
@@ -2929,7 +2925,7 @@ nav li {
     }
 
     .section .firstSection{
-        background:url('Images/Collection1.jpg');
+        background:url('Images/bannerSecond.jpg');
         width:100%;
         height: 100%;
         background-position: center bottom;
@@ -2937,7 +2933,7 @@ nav li {
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        background: url('Images/bannerThird.jpg');
         width:100%;
         background-position: center;
         height: 100%;
@@ -3745,7 +3741,7 @@ nav li {
     } */
 
     .bannerSecond{
-        background-image: url('Images/Layout.jpg');
+        background-image: url('Images/bannerThird.jpg');
         height:100vh;
         width: 100%;
         position: relative;
@@ -4300,7 +4296,7 @@ nav li {
     }
 
     .section .firstSection{
-        background:url('Images/Collection1.jpg');
+        background:url('Images/V1D_2.jpg');
         width:100%;
         height: 100%;
         background-position: center bottom;
@@ -4308,7 +4304,7 @@ nav li {
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        background: url('Images/V1D_2.jpg');
         width:100%;
         background-position: center;
         height: 100%;
@@ -5079,7 +5075,7 @@ nav li {
 
     
     .bannerSecond{
-        background-image: url('Images/Layout.jpg');
+        background-image: url('Images/bannerThird.jpg');
         height:100vh;
         width: 100%;
         position: relative;
@@ -5633,7 +5629,7 @@ nav li {
     }
 
     .section .firstSection{
-        background:url('Images/Collection1.jpg');
+        background:url('Images/V1D_2.jpg');
         width:100%;
         height: 100%;
         background-position: center bottom;
@@ -5641,7 +5637,7 @@ nav li {
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        background: url('Images/V2D.jpg');
         width:100%;
         background-position: center;
         height: 100%;
@@ -6072,15 +6068,44 @@ nav li {
         text-transform: none;
     }
 
-    .hoursOfOperation{
-        padding:20px 0;
-        width: 100%;
-        text-align: center;
+    footer .footerEssentials{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 24px;
     }
 
-    .hoursOfOperation h1{
-        font-size: 18px;
-        padding:10px 0;
+    .footerEssentials .logoSection{
+        display: flex;
+        flex-direction: column;
+        margin-left:20px;
     }
+
+    .footerEssentials .logoSection #footerLogo1{
+        width:50px;
+        height:50px;
+        padding:50px 10px 0px 30px;
+    }
+
+    .footerEssentials .logoSection #footerLogo2{
+        width:80px;
+        height:30px;
+        padding:0px 30px;
+    }
+
+    .footerEssentials .helpSection{
+        padding:50px 0px;
+    }
+
+    .footerEssentials .aboutSection{
+        padding:50px 0px;
+    }
+
+    .footerEssentials .socialSection{
+        padding:50px 0px;
+    }
+
 
 }
