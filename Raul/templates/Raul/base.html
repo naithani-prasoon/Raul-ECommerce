@@ -62,7 +62,6 @@
         </div>
     </form>
 </div>
-
 <div id="id02" class="modal2">
 
     <form class="modal-content animate" action="" method="POST">
@@ -71,7 +70,7 @@
             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
         </div>
         <div>
-            <div class="centerIt" >
+            <div class="centerIt" id="hi">
                 {%csrf_token%}
                 {{ Register_form.as_table }}
                 <input type="submit" name="register" value="Register" class="button">
@@ -79,21 +78,20 @@
         </div>
 
         <div class="centerIt">
-            <span class="psw"><a href="#">Forgot password?</a></span>
-            <span class="psw" id ="accountCreate2"><a href="#">Create an Account</a></span>
+
+            <span class="psw" id ="accountCreate2"><a href="#">Already have an Account?</a></span>
         </div>
     </form>
 </div>
 
-<div class = "headers" id="headerOnScroll">
+<div class = "headers" id = "headerOnScroll">
     <figure id="figureOnScroll">
-
         <div class="navbarIcons">
             <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
             <div class="hoverDiv2">
                 <span style="letter-spacing: 2px;">CONTACT US</span><br><br><br>
-                <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>email@email.com</span><br><br>
-                <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" id="phoneContact"> <span> (900)-009-9090</span>
+                <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>raul@raulavilainc.com</span><br><br>
+                <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" id="phoneContact"> <span> (347)-432-5436</span>
             </div>
         </div>
 
@@ -121,7 +119,7 @@
         <a href="{% url 'cart' %}" title="Shopping Cart"> <p> {{request.session.items_total}}  <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" > </p></a>
 
         {% else %}
-        <a href="{% url 'Raul-SecondHome' %}"><p>  <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
+        <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
         <div class="navbarIcons">
             <p title="Login or Register"><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
             <div class="hoverDiv" title="Login or Register">
@@ -129,15 +127,15 @@
                 <span><a href="#" onclick="document.getElementById('id02').style.display='block'">Register</a></span>
             </div>
         </div>
-        <a href="{% url 'cart' %}" title="Shopping Cart"> <p> {{request.session.items_total}}  <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
+        <a href="{% url 'cart' %}" title="Shopping Cart"> <p>{{request.session.items_total}}    <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
         {% endif %}
 
     </figure>
 
-    <div class="category" id="hideOnScroll" style="padding-bottom:0">
+    <div class="category" id="hideOnScroll">
 
         <div class = "dropDownMenu">
-            <p class="dropDownButton"><a  href="{% url 'sec-view' 'New Arrivals' %}" style="color:white">New Arrivals</a></p>
+            <p class="dropDownButton"><a  href="{% url 'sec-view' 'New Arrivals' %}">New Arrivals</a></p>
             <div class="dropDownContent">
                 <div class="dropDownContentLinks">
                     <a>Colored Glass Collection</a>
@@ -152,78 +150,79 @@
             </div>
         </div>
         <div class = "dropDownMenu">
-            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Decorative Accessories' %}" style="color:white">Decorative Accessories</a></p>
+            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Decorative Accessories' %}">Decorative Accessories</a></p>
             <div class="dropDownContent">
                 <div class="dropDownContentLinks">
-                    <a>Colored Glass Collection</a>
-                    <a>Floral Bird Cachepot Collection</a>
-                    <a>Blue Wave Cachepot & Bone Frame Collection</a>
-                    <a>Clear Glass Collection</a>
+                    <a href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                    <a href="{% url 'cat-view' 'Decorative Objects' %}">Decorative Objects</a>
+                    <a  href="{% url 'cat-view' 'Urns' %}">Urns</a>
+                    <a  href="{% url 'cat-view' 'Vases and Cachepots' %}">Vases & Cachepots</a>
                 </div>
             </div>
-            
+
         </div>
-        
+
         <div class = "dropDownMenu">
-            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Tabletop' %}" style="color:white">Tabletop</a></p>
+            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Tabletop' %}">Tabletop</a></p>
             <div class="dropDownContent">
                 <div class="dropDownContentLinks">
-                    <a>Colored Glass Collection</a>
-                    <a>Floral Bird Cachepot Collection</a>
+                    <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>
+                    <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>
                 </div>
 
             </div>
         </div>
-        
-        <div class = "dropDownMenu">
-            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Furniture' %}" style="color:white">Furniture</a></p>
-                <div class="dropDownContent">
-                    <div class="dropDownContentLinks">
-                        <a>Colored Glass Collection</a>
-                        <a>Floral Bird Cachepot Collection</a>
-                        <a>Blue Wave Cachepot & Bone Frame Collection</a>
-                        <a>Clear Glass Collection</a>
-                    </div>
-                </div>
-        </div>
-
-                  
-        <div class = "dropDownMenu">
-            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Floral' %}" style="color:white">Floral</a></p>
-        </div>
 
         <div class = "dropDownMenu">
-            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Wall Art' %}" style="color:white">Wall Art</a></p>
+            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Furniture' %}">Furniture</a></p>
             <div class="dropDownContent">
                 <div class="dropDownContentLinks">
-                    <a>Colored Glass Collection</a>
-                    <a>Floral Bird Cachepot Collection</a>
+                    <a  href="{% url 'cat-view' 'Chairs' %}">Chairs</a>
+                    <a  href="{% url 'cat-view' 'End Tables' %}">End Tables</a>
+                    <a  href="{% url 'cat-view' 'Ottoman & Benches' %}">Ottoman & Benches</a>
+                    <a  href="{% url 'cat-view' 'Outdoor Furniture' %}">Outdoor Furniture</a>
                 </div>
             </div>
         </div>
 
 
         <div class = "dropDownMenu">
-            <p class="dropDownButton"><a  href="{% url 'Raul-product' %}" style="color:white">All Products</a></p>
+            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Floral' %}">Floral</a></p>
+        </div>
+
+        <div class = "dropDownMenu">
+            <p class="dropDownButton"><a  href="{% url 'sec-view' 'Wall Art' %}">Wall Art</a></p>
+            <div class="dropDownContent">
+                <div class="dropDownContentLinks">
+                    <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>
+                    <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>
+                </div>
+            </div>
         </div>
 
 
         <div class = "dropDownMenu">
-            <p class="dropDownButton" ><a  href="{% url 'sec-view' 'Sale' %}" style="color:white">Sale</a></p>
+            <p class="dropDownButton"><a  href="{% url 'Raul-product' %}">All Products</a></p>
+        </div>
+
+
+        <div class = "dropDownMenu">
+            <p class="dropDownButton" ><a  href="{% url 'sec-view' 'Sale' %}">Sale</a></p>
             <div class="dropDownContent">
                 <div class="dropDownContentLinks">
-                    <a>Colored Glass Collection</a>
-                    <a>Floral Bird Cachepot Collection</a>
-                    <a>Blue Wave Cachepot & Bone Frame Collection</a>
-                    <a>Clear Glass Collection</a>
-                    <a>Lexi Cachepot & Cream Tealight Collection</a>
-                    <a>Ceramic & Cement Pot Collection</a>
-                    <a>Smoked Cut Glass Collection</a>
+                    <a  href="{% url 'cat-view' 'All Sale Items' %}">All Sale Items</a>
+                    <a  href="{% url 'cat-view' 'Bowls' %}">Bowls</a>
+                    <a  href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                    <a  href="{% url 'cat-view' 'Glasswear' %}">Glasswear</a>
+                    <a href="{% url 'cat-view' 'Vases & Cachepots' %}">Vases and Cachepots</a>
+                    <a href="{% url 'cat-view' 'Votives' %}">Votives</a>
+                    <a>f</a>
                 </div>
             </div>
         </div>
-        
-        <p id="categoryP" style="color:white"> Venue Bookings</p>
+
+        <p class="dropDownButton"><a>Venue Bookings</a></p>
+
 
     </div>
 </div>
@@ -234,8 +233,8 @@
     <nav>
         <div class ="mobile-actions">
             <a href="{% url 'login' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login"></a>
-        <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Cart"></a>
-        <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false"></a>
+            <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Cart"></a>
+            <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false"></a>
         </div>
         <ul id="contentHam">
 
@@ -251,8 +250,8 @@
                     <div id="mobile-dropdown" class="mobile-dropdownContent">
                         <a href="#home">Home</a>
                         <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a href="#Venue Book">Contact</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -262,10 +261,11 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown2" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                        <a href="{% url 'cat-view' 'Decorative Objects' %}">Decorative Objects</a>
+                        <a  href="{% url 'cat-view' 'Urns' %}">Urns</a>
+                        <a  href="{% url 'cat-view' 'Vases and Cachepots' %}">Vases & Cachepots</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -275,10 +275,9 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown3" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>
+                        <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -288,10 +287,11 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown4" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a  href="{% url 'cat-view' 'Chairs' %}">Chairs</a>
+                        <a  href="{% url 'cat-view' 'End Tables' %}">End Tables</a>
+                        <a  href="{% url 'cat-view' 'Ottoman & Benches' %}">Ottoman & Benches</a>
+                        <a  href="{% url 'cat-view' 'Outdoor Furniture' %}">Outdoor Furniture</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -308,10 +308,9 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown5" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>
+                        <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -328,10 +327,13 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown6" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a  href="{% url 'cat-view' 'All Sale Items' %}">All Sale Items</a>
+                        <a  href="{% url 'cat-view' 'Bowls' %}">Bowls</a>
+                        <a  href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                        <a  href="{% url 'cat-view' 'Glasswear' %}">Glasswear</a>
+                        <a href="{% url 'cat-view' 'Vases & Cachepots' %}">Vases and Cachepots</a>
+                        <a href="{% url 'cat-view' 'Votives' %}">Votives</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -346,7 +348,6 @@
         </ul>
     </nav>
 </div>
-
 
 <div id ="store">
     <p onclick="closeStore()" id="cross">
@@ -366,6 +367,7 @@
     </p>
 
 </div>
+
 <div>
     {% if messages %}
     <div class="popUpMessage">
