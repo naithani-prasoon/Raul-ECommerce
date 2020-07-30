@@ -143,6 +143,10 @@ def delete_address(request, id):
         pass
     return HttpResponseRedirect(reverse("profile"))
 
+
+def venue(request):
+    return render(request, 'users/venue.html')
+
 # def search(request):
 #     try:
 #         q= request.GET.get('q')

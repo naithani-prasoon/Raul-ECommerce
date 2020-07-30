@@ -62,6 +62,7 @@
         </div>
     </form>
 </div>
+
 <div id="id02" class="modal2">
 
     <form class="modal-content animate" action="" method="POST">
@@ -70,7 +71,7 @@
             <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
         </div>
         <div>
-            <div class="centerIt" id="hi">
+            <div class="centerIt" >
                 {%csrf_token%}
                 {{ Register_form.as_table }}
                 <input type="submit" name="register" value="Register" class="button">
@@ -221,7 +222,7 @@
             </div>
         </div>
 
-        <p class="dropDownButton"><a>Venue Bookings</a></p>
+        <p class="dropDownButton"><a href="{% url 'venue' %}">Venue Bookings</a></p>
 
 
     </div>

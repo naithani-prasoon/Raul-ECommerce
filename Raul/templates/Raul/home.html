@@ -62,6 +62,7 @@
             </div>
         </form>
     </div>
+
     <div id="id02" class="modal2">
 
         <form class="modal-content animate" action="" method="POST">
@@ -70,7 +71,7 @@
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
             </div>
             <div>
-                <div class="centerIt" id="hi">
+                <div class="centerIt" >
                     {%csrf_token%}
                     {{ Register_form.as_table }}
                     <input type="submit" name="register" value="Register" class="button">
@@ -221,7 +222,7 @@
                 </div>
             </div>
             
-            <p class="dropDownButton"><a>Venue Bookings</a></p>
+            <p class="dropDownButton"><a href="{% url 'venue' %}">Venue Bookings</a></p>
 
 
         </div>
@@ -410,42 +411,39 @@
 
     <div class="furniture" id ="FurnitureSec">
         <div class="shopBack">
-            <div class="furnitureHeading">                
-                <span>FURNITURE</span>
-                <a href="{%url 'login' %}">see more</a>  
-            </div>
-
-            <div class ="furnitureImages">
-                <img src="{%static 'Raul/Images/1.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-            </div>
-        </div>
-    </div>
-
-    <div class="furniture" id ="LightingSec">
-        <div class="shopBack" id="lighting">
             <div class="furnitureHeading">
-                <span>LIGHTING</span>
-                <a href="{%url 'login' %}">see more</a>  
+                <span>FURNITURE</span>
+                <a href="{% url 'sec-view' 'Furniture' %}">see more</a>
             </div>
 
             <div class ="furnitureImages">
-                <img src="{%static 'Raul/Images/3.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/4.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+
+
+                <a href="{% url 'sec-view' 'Furniture' %}">
+                    <img src="{% static 'Raul/Images/FurnitureCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
+                <a href="{% url 'sec-view' 'Furniture' %}">
+                    <img src="{%static 'Raul/Images/Furniture2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
             </div>
         </div>
     </div>
+
 
     <div class="furniture" id ="FlowerSec">
         <div class="shopBack" id="flower">
             <div class="furnitureHeading">
                 <span>FLORAL</span>
-                <a href="{%url 'login' %}">see more</a>  
+                <a href="{% url 'sec-view' 'Floral' %}">see more</a>
             </div>
 
             <div class ="furnitureImages">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/6.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <a href="{% url 'sec-view' 'Floral' %}">
+                    <img src="{% static 'Raul/Images/FloralCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
+                <a href="{% url 'sec-view' 'Floral' %}">
+                    <img src="{%static 'Raul/Images/Floral2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
             </div>
         </div>
     </div>
@@ -454,12 +452,16 @@
         <div class="shopBack" id="table">
             <div class="furnitureHeading">
                 <span>TABLETOP</span>
-                <a href="{%url 'login' %}">see more</a>  
+                <a href="{% url 'sec-view' 'Tabletop' %}">see more</a>
             </div>
 
             <div class ="furnitureImages">
-                <img src="{%static 'Raul/Images/7.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/8.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <a href="{% url 'sec-view' 'Tabletop' %}">
+                    <img src="{% static 'Raul/Images/TabletopCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
+                <a href="{% url 'sec-view' 'Tabletop' %}">
+                    <img src="{%static 'Raul/Images/Tabletop2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
             </div>
         </div>
     </div>
@@ -468,32 +470,39 @@
         <div class="shopBack" id="wall">
             <div class="furnitureHeading">
                 <span> WALLART </span>
-                <a href="{%url 'login' %}">see more</a>  
+                <a href="{% url 'sec-view' 'Wallart' %}">see more</a>
             </div>
 
             <div class ="furnitureImages" id ="DecorativeSec">
-                <img src="{%static 'Raul/Images/9.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/10.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <a href="{% url 'sec-view' 'Wallart' %}">
+                    <img src="{% static 'Raul/Images/WallArtCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
+                <a href="{% url 'sec-view' 'Wallart' %}">
+                    <img src="{%static 'Raul/Images/WallArt2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
             </div>
         </div>
     </div>
 
     <div class="furniture" id ="DecorativeSec">
         <div class="shopBack" id="decorative">
-            <div class="furnitureHeading">                
+            <div class="furnitureHeading">
                 <span>DECORATIVE</span>
-                <a href="{%url 'login' %}">see more</a>  
+                <a href="{% url 'sec-view' 'Decorative' %}">see more</a>
             </div>
 
             <div class ="furnitureImages">
-                <img src="{%static 'Raul/Images/11.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
-                <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                <a href="{% url 'sec-view' 'Decorative' %}">
+                    <img src="{% static 'Raul/Images/DecoAcc.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
+                <a href="{% url 'sec-view' 'Decorative' %}">
+                    <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                </a>
             </div>
         </div>
     </div>
 
     <div class="filler" id ="borderBottom"></div>
-    ]
 
     <div class="horizontalScroll" id="shop">
         <div class ="featureProductsHeading" >
@@ -640,7 +649,6 @@
         </div>
     </div>
 
-    <div class="filler" id ="borderBottom"></div>
     <div class="filler"></div>
 
     <div class ="featureProductsHeading" >
@@ -660,9 +668,8 @@
 
         <div class="roundCircle2">
             <div class="productDisplay">
-                <a href="{% url 'sec-view' 'Shopping The Layout' %}" >
-                    <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
-                </a>
+                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
+                <a href="{% url 'sec-view' 'Shopping The Layout' %}" ></a>
                 <p>confetti plate</p>
                 <h6>$120.00</h6>
             </div>
@@ -685,8 +692,8 @@
         </div>
     </div>
 
-    <div class="filler" id ="borderBottom"></div>
     <div class="filler"></div>
+
     <div class ="featureProductsHeading" >
         shop by collection
     </div>
