@@ -5,12 +5,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
 >>>>>>> parent of b9c46bb... wine menu
+=======
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +211,25 @@
       <workItem from="1596033401615" duration="3722000" />
       <workItem from="1596051032202" duration="586000" />
       <workItem from="1596051890373" duration="2483000" />
+<<<<<<< HEAD
       <workItem from="1596055548562" duration="7989000" />
+=======
+      <workItem from="1596055548562" duration="1358000" />
+    </task>
+    <task id="LOCAL-00046" summary="Added Order CHeckout html and fixed pdf">
+      <created>1593620373475</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1593620373475</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added Order CHeckout html and fixed pdf">
+      <created>1593628212477</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1593628212477</updated>
+>>>>>>> parent of 2eea1ab... Revert "changes"
     </task>
     <task id="LOCAL-00048" summary="Fixed Cart Again">
       <created>1593651458829</created>
@@ -538,6 +560,7 @@
       <option name="project" value="LOCAL" />
       <updated>1596056336520</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00095" summary="more pics">
       <created>1596057138167</created>
       <option name="number" value="00095" />
@@ -553,6 +576,9 @@
       <updated>1596072487694</updated>
     </task>
     <option name="localTasksCounter" value="97" />
+=======
+    <option name="localTasksCounter" value="95" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,6 +599,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+<<<<<<< HEAD
+=======
+    <MESSAGE value="Sections" />
+    <MESSAGE value="Billing addy" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     <MESSAGE value="erros" />
     <MESSAGE value="Email User" />
     <MESSAGE value="Big Fixes" />
@@ -596,9 +627,13 @@
     <MESSAGE value="jon" />
     <MESSAGE value="hi" />
     <MESSAGE value="pictues fixes" />
+<<<<<<< HEAD
     <MESSAGE value="more pics" />
     <MESSAGE value="dan" />
     <option name="LAST_COMMIT_MESSAGE" value="dan" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="pictues fixes" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="123" width="817" height="568" key="#Project_Structure" timestamp="1595006539260">
@@ -619,7 +654,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
+<<<<<<< HEAD
     <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1596072486737">
+=======
+    <state x="1837" y="108" width="1890" height="1057" key="CommitChangelistDialog2" timestamp="1596056335509">
+>>>>>>> parent of 2eea1ab... Revert "changes"
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1594004761493" />
@@ -634,7 +673,11 @@
     <state x="331" y="50" key="CommitChangelistDialog2/0.23.1440.822@0.23.1440.822" timestamp="1591489695239" />
     <state x="23" y="23" width="1417" height="823" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1594362197869" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
+<<<<<<< HEAD
     <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596072486737" />
+=======
+    <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596056335509" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     <state x="30" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1595365245951" />
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1591151709999">
       <screen x="0" y="0" width="1440" height="900" />
@@ -701,7 +744,11 @@
     </state>
     <state x="156" y="133" key="MergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1593669944571" />
     <state x="1648" y="238" key="MergeDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595038125902" />
+<<<<<<< HEAD
     <state x="1471" y="173" key="MultipleFileMergeDialog" timestamp="1596075433521">
+=======
+    <state x="1471" y="173" key="MultipleFileMergeDialog" timestamp="1596056367304">
+>>>>>>> parent of 2eea1ab... Revert "changes"
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="23" y="72" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1594004787625" />
@@ -712,7 +759,11 @@
     <state x="1471" y="179" key="MultipleFileMergeDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595038129746" />
     <state x="23" y="88" key="MultipleFileMergeDialog/0.23.1440.815@0.23.1440.815" timestamp="1595008502116" />
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
+<<<<<<< HEAD
     <state x="1471" y="173" key="MultipleFileMergeDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596075433521" />
+=======
+    <state x="1471" y="173" key="MultipleFileMergeDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596056367304" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     <state x="31" y="102" key="MultipleFileMergeDialog/0.23.1920.988@0.23.1920.988" timestamp="1595365282396" />
     <state x="370" y="23" width="1024" height="815" key="SettingsEditor" timestamp="1595185578281">
       <screen x="0" y="23" width="1440" height="815" />
@@ -729,7 +780,11 @@
       <screen x="0" y="23" width="1440" height="822" />
     </state>
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
+<<<<<<< HEAD
     <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1596072512999">
+=======
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2" timestamp="1596056382370">
+>>>>>>> parent of 2eea1ab... Revert "changes"
       <screen x="1440" y="94" width="1920" height="988" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594004770666" />
@@ -742,7 +797,11 @@
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.815@0.23.1440.815" timestamp="1595008518724" />
     <state x="1867" y="317" key="Vcs.Push.Dialog.v2/0.23.1440.817/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594608822255" />
     <state x="320" y="197" key="Vcs.Push.Dialog.v2/0.23.1440.825@0.23.1440.825" timestamp="1591412107073" />
+<<<<<<< HEAD
     <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596072512999" />
+=======
+    <state x="1867" y="303" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596056382370" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     <state x="427" y="231" key="Vcs.Push.Dialog.v2/0.23.1920.988@0.23.1920.988" timestamp="1595365295742" />
     <state x="133" y="241" width="1654" height="746" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1594927591141">
       <screen x="0" y="23" width="1920" height="988" />
@@ -766,8 +825,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1591120488524" />
+<<<<<<< HEAD
     <state x="2140" y="505" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596077790639">
       <screen x="1440" y="94" width="1920" height="988" />
+=======
+    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596037457580">
+      <screen x="0" y="23" width="1440" height="808" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     </state>
     <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592063445852" />
     <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1596037457580" />
@@ -780,7 +844,11 @@
     <state x="525" y="362" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.816@0.23.1440.816" timestamp="1591922192402" />
     <state x="525" y="363" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.817@0.23.1440.817" timestamp="1595286198214" />
     <state x="525" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1591489711874" />
+<<<<<<< HEAD
     <state x="2140" y="505" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596077790639" />
+=======
+    <state x="2140" y="505" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1595971952125" />
+>>>>>>> parent of 2eea1ab... Revert "changes"
     <state x="700" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.988@0.23.1920.988" timestamp="1594927625627" />
     <state x="268" y="125" width="903" height="610" key="find.popup" timestamp="1595007762846">
       <screen x="0" y="23" width="1440" height="815" />

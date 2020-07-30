@@ -24,14 +24,13 @@ def login_register(request):
 
             context = {'form': form,"Register_form" : Register_form}
             new_user = authenticate(username=Register_form.cleaned_data['username'],
-                                    password=Register_form.cleaned_data['password1'],
+                                    password=Register_form.cleaned_data['password'],
                                     )
             login(request, new_user)
             Register_form = CreateUserForm()
             messages.success(request, 'You are now logged in!')
             return HttpResponseRedirect(reverse("cart"))
         else:
-            messages.error(request, Register_form.error_messages)
             form = LoginForms()
             context = {'form': form,"Register_form": Register_form}
             return render(request, 'users/login.html',context)
@@ -142,6 +141,10 @@ def delete_address(request, id):
     except:
         pass
     return HttpResponseRedirect(reverse("profile"))
+
+
+def venue(request):
+    return render(request, 'users/venue.html')
 
 # def search(request):
 #     try:
