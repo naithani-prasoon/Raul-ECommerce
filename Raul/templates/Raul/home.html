@@ -62,7 +62,6 @@
             </div>
         </form>
     </div>
-
     <div id="id02" class="modal2">
 
         <form class="modal-content animate" action="" method="POST">
@@ -71,7 +70,7 @@
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Login Pop-up">&times;</span>
             </div>
             <div>
-                <div class="centerIt" >
+                <div class="centerIt" id="hi">
                     {%csrf_token%}
                     {{ Register_form.as_table }}
                     <input type="submit" name="register" value="Register" class="button">
@@ -222,7 +221,7 @@
                 </div>
             </div>
             
-            <p class="dropDownButton">Venue Bookings</a></p>
+            <p class="dropDownButton"><a>Venue Bookings</a></p>
 
 
         </div>
@@ -668,8 +667,9 @@
 
         <div class="roundCircle2">
             <div class="productDisplay">
-                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
-                <a href="{% url 'sec-view' 'Shopping The Layout' %}" ></a>
+                <a href="{% url 'sec-view' 'Shopping The Layout' %}" >
+                    <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
+                </a>
                 <p>confetti plate</p>
                 <h6>$120.00</h6>
             </div>
