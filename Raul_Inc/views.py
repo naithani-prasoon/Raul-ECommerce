@@ -63,7 +63,11 @@ def cafe(request):
 def gallery(request):
     return render(request, 'Raul_Inc/gallery.html')
 
+def vougue(request):
+    return render(request, 'Raul_Inc/2019-pressvoguecom.html')
 
+def vougue2(request):
+    return render(request, 'Raul_Inc/pressvogue.html')
 
 
 

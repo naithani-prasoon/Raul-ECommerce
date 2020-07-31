@@ -12,6 +12,16 @@ from reportlab.platypus import Table
 import pdfkit
 from .models import Order
 
+from django.core import mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+
+
+
+
+
+
+
 def id_generator(size=10, chars= string.ascii_uppercase + string.digits):
     the_id = "".join(random.choice(chars) for x in range(size))
     try:
@@ -22,36 +32,30 @@ def id_generator(size=10, chars= string.ascii_uppercase + string.digits):
 
 API_KEY = "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"
 
-def email_test():
-    message = Mail(
-        from_email='afares2009@icloud.com',
-        to_emails='aifares@buffalo.edu',
-        subject='Sending with Twilio SendGrid is Fun',
-        html_content='<strong>and easy to do anywhere, even with Python</strong>')
-    try:
-        sg = SendGridAPIClient(API_KEY)
-        response = sg.send(message)
-        print(response.status_code)
-        print(response.body)
-        print(response.headers)
-    except Exception as e:
-        print(e.message)
+def email_test(context):
+    subject = 'Subject'
+    html_message = render_to_string('orders/Confirmed Order.html', context)
+    plain_message = strip_tags(html_message)
+    from_email = 'From <raulwebsite069@gmail.com>'
+    to = 'dberhan@buffalo.edu'
 
+    mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
 
-def make_invoice(data,idnum):
-    outfilename = "Order_Number_" + idnum + ".pdf"
-    outfiledir = settings.MEDIA_ROOT
-    outfilepath = os.path.join( outfiledir, outfilename )
+    def make_invoice(data,idnum):
+        outfilename = "Order_Number_" + idnum + ".pdf"
+        outfiledir = settings.MEDIA_ROOT
+        outfilepath = os.path.join( outfiledir, outfilename )
 
-    pdf = SimpleDocTemplate(
-        outfilepath,
-        pagesize = letter
-    )
+        pdf = SimpleDocTemplate(
+            outfilepath,
+            pagesize = letter
+        )
 
-    table = Table(data)
-    elems =[]
-    elems.append(table)
-    pdf.build(elems)
+        table = Table(data)
+        elems =[]
+        elems.append(table)
+        pdf.build(elems)
+
 
 
 def pdf(idnum,context):
@@ -60,8 +64,6 @@ def pdf(idnum,context):
     outfilepath = os.path.join( outfiledir, outfilename )
     rendered = render_to_string('orders/Confirmed Order.html', context)
     pdfkit.from_string(rendered,outfilepath)
-
-
 def add_item():
     from Raul.models import product, Variation
     with open('orders/static/orders/catalog-2020-07-20-2213.csv') as csv_file:
@@ -126,9 +128,6 @@ def add_item():
 
 
             print(f'Processed {line_count} lines.')
-
-
-
 def SectionFinder(str):
     if str == "Baskets":
         return "Decorative Accessories"
