@@ -723,17 +723,20 @@ nav li {
 
     .section .firstSection{
         background:url('Images/Collection1.jpg');
+        object-fit: fill;
         width:100%;
         height: 100%;
-        background-position: center bottom;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
     .section .secondSection{
-        background: url('Images/Collection2.jpg');
+        object-fit: fill;
         width:100%;
-        background-position: center;
         height: 100%;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -1092,9 +1095,11 @@ nav li {
 
     .section .secondSection{
         background: url('Images/Collection2.jpg');
+        object-fit: fill;
         width:100%;
-        background-position: center;
         height: 100%;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -1461,9 +1466,11 @@ nav li {
 
     .section .secondSection{
         background: url('Images/Collection2.jpg');
+        object-fit: fill;
         width:100%;
-        background-position: center;
         height: 100%;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -1895,9 +1902,11 @@ nav li {
 
     .section .secondSection{
         background: url('Images/Collection2.jpg');
+        object-fit: fill;
         width:100%;
-        background-position: center;
         height: 100%;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -2928,17 +2937,21 @@ nav li {
 
     .section .firstSection{
         background:url('Images/Collection1.jpg');
+        object-fit: fill;
         width:100%;
         height: 100%;
-        background-position: center bottom;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
     .section .secondSection{
         background: url('Images/Collection2.jpg');
+        object-fit: fill;
         width:100%;
-        background-position: center;
         height: 100%;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -4299,17 +4312,21 @@ nav li {
 
     .section .firstSection{
         background:url('Images/Collection1.jpg');
+        object-fit: fill;
         width:100%;
         height: 100%;
-        background-position: center bottom;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
     .section .secondSection{
         background: url('Images/Collection2.jpg');
+        object-fit: fill;
         width:100%;
-        background-position: center;
         height: 100%;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -5632,17 +5649,22 @@ nav li {
 
     .section .firstSection{
         background:url('Images/Collection1.jpg');
+        object-fit: fill;
         width:100%;
         height: 100%;
-        background-position: center bottom;
+        background-position: center;
+        background-size: cover;
         position: relative;
+
     }
 
     .section .secondSection{
         background: url('Images/Collection2.jpg');
+        object-fit: fill;
         width:100%;
-        background-position: center;
         height: 100%;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
