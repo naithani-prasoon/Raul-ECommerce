@@ -10,6 +10,23 @@
       <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/2019-pressvoguecom.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/2019-pressvoguecom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/clientList.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/clientList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NY-Magazine.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NY-Magazine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NYTimes.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NYTimes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-coveteur.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-coveteur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-dailyfrontrow.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-dailyfrontrow.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-jet-set.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-jet-set.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-looktothestars.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-looktothestars.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-met.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-met.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
@@ -110,6 +127,18 @@
       <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.cart.html">
     <configuration name="cart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/templates/Raul/cart.html" useBuiltInWebServerPort="true">
