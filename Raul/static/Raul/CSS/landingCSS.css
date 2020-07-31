@@ -14,17 +14,40 @@ body{
     overflow: hidden;
     justify-items: center;
     align-items: center;
-    background: url('Images/FullSize_MetGala2019_001.jpg');
+    /* background: url('Images/FullSize_MetGala2019_001.jpg'); */
     background-position: center;
     background-size: cover;
+    /* filter: brightness(60%); */
+}
+
+.initialBack{
+    margin:0;
+    padding:0;
+    left:0;
+    top:0;
+    position: absolute;
+    background: url('Images/initialBack.jpg');
+    width:100%;
+    height: 100vh;
+    z-index: -1;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(50%);
+
 }
 
 .placeContainers{
-    display: grid;
-    grid-template-rows: 38% 38%;
-    height:100vh;
-    padding:50px 0px;
+    /* display: grid;
+    grid-template-rows: auto auto; */
+    /* height:100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px auto;
     animation: fadeIn 5s;
+    /* filter: brightness(100%); */
+    padding:30vh 0;
 }
 
 @keyframes backgroundImage{
@@ -42,7 +65,7 @@ body{
 } */
 
 .bigContainer{
-    width: 100%;
+    /* width: 100%; */
     margin-left:auto;
     margin-right: auto;
     animation: animateContainer 2s;
@@ -60,9 +83,12 @@ body{
 }
 
 .bigContainer2{
-    display:grid;
-    grid-template-columns: 50% 50%;
-    margin:0 280px;
+    display: flex;
+    flex-direction: row;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
 }
 
 
@@ -86,6 +112,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     animation: backgroundImage 1s;
+    filter: brightness(60%);
 }
 
 .backgroundText figcaption{
@@ -120,6 +147,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     animation: backgroundImage 1s;
+    filter: brightness(60%);
 }
 
 .backgroundText2 figcaption{
@@ -152,6 +180,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     animation: backgroundImage 1s;
+    filter: brightness(60%);
 }
 
 .backgroundText3 figcaption{
@@ -237,10 +266,10 @@ a{
 }
 
 a .container{
-    height:200px;
+    /* height:200px; */
     /* margin-left:auto;
     margin-right: auto; */
-    padding-top:50px;
+    /* padding-top:50px; */
     transition: 0.5s ease-in-out;
     z-index: 5;
     justify-content: center;
@@ -254,14 +283,16 @@ a .container p{
     margin-block-start: 0;
     margin-inline-end: 0;
     margin-inline-start: 0;
-    border-radius: 100px;
-    padding:30px;
+    /* border-radius: 100px; */
+    padding:30px 30px 5px 30px;
     margin-left:auto;
     margin-right: auto;
-    font-size: 50px;
+    font-size: 75px;
     color: white;
     font-family: myFirstFont;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    transition: 0.4s ease-in-out;
 }
 /* 
 .bigContainer2 a #raulBanner #raul{
@@ -270,10 +301,10 @@ a .container p{
 
 a #raulAvila{
     text-align: center;
-    width: 30em;
-    height: 6em;
+    /* width: 30em;
+    height: 6em; */
     z-index:99;
-    margin-top:-40px;
+    /* margin-top:-40px; */
 }
 
 a #raulAvila img{
@@ -285,11 +316,11 @@ a #raulAvila img{
 }
 
 a #raul{
-    text-align: left;
+    /* text-align: left;
     width: 15em;
-    height: 6em;
+    height: 6em; */
     z-index:99;
-    margin:0 5rem 0 0;
+    /* margin:0 5rem 0 0; */
    
 }
 
@@ -300,8 +331,8 @@ a #raul img{
 
 a #cafe{
     /* text-align: right; */
-    width:15em;
-    height: 6em;
+    /* width:15em; */
+    /* height: 6em; */
     z-index:99;
     /* margin:0px 0px 0px 16rem; */
 }
@@ -313,7 +344,6 @@ a #cafe img{
 
 
 a .container:hover{
-    margin:40px auto;
     cursor: pointer;
 }
 
@@ -337,5 +367,22 @@ a .container #bgPic{
 
 a .container:hover p{
     opacity: 1;
+    border-bottom: 3px solid white;
     
+}
+
+@media (max-width:768px){
+    a .container p{
+        padding:0;
+        font-size: 30px;
+        margin:20px auto;
+    }
+
+    .placeContainers{
+        padding:35vh 0; 
+    }
+
+    .bigContainer2{
+        flex-direction: column;
+    }
 }

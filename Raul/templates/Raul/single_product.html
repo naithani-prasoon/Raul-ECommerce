@@ -370,6 +370,7 @@
                 {% if single_product.variation_set.colors %}
 
                 <select class="form-control" name="color">
+                    <option>Select A Color</option>
                     {% for item in single_product.variation_set.colors %}
                     <option value="{{item.title}}">{{item.title}}
                     </option>
@@ -386,9 +387,11 @@
 
                 {% if single_product.variation_set.sizes %}
                 <select class="form-control" name="size" onchange="priceChange()" id="selectVariation">
+                    <option selected>Select A Size</option>
                     {% for item in single_product.variation_set.sizes %}
                     {% if item.price %}
-                    <option value="{{item.title }} {{item.price}}">{{item.title }}  {{item.price}}
+                    
+                    <option value="{{item.title }} {{item.price}}">{{item.title }} {{item.price}}
                     </option>
                     {%else%}
                     <option value="{{item.title }}">{{item.title }}

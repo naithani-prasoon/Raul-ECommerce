@@ -32,6 +32,32 @@
      document.documentElement.scrollTop = 0;
  }
 
+ function mobileDropDown() {
+    document.getElementById("mobile-dropdown").classList.toggle("show");
+  }
+
+
+  function mobileDropDown2() {
+    document.getElementById("mobile-dropdown2").classList.toggle("show");
+  }
+
+  function mobileDropDown3() {
+    document.getElementById("mobile-dropdown3").classList.toggle("show");
+  }
+
+  function mobileDropDown4() {
+    document.getElementById("mobile-dropdown4").classList.toggle("show");
+  }
+
+  function mobileDropDown5() {
+    document.getElementById("mobile-dropdown5").classList.toggle("show");
+  }
+
+  function mobileDropDown6() {
+    document.getElementById("mobile-dropdown6").classList.toggle("show");
+  }
+
+
  
  
 

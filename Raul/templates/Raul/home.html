@@ -420,10 +420,12 @@
 
 
                 <a href="{% url 'sec-view' 'Furniture' %}">
-                    <img src="{% static 'Raul/Images/FurnitureCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                   <div class="furnitureImageMobile-1"></div>
+                    <!-- <img src="{% static 'Raul/Images/FurnitureCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Furniture' %}">
-                    <img src="{%static 'Raul/Images/Furniture2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <div class="furnitureImageMobile-2"></div>
+                    <!-- <img src="{%static 'Raul/Images/Furniture2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -439,10 +441,12 @@
 
             <div class ="furnitureImages">
                 <a href="{% url 'sec-view' 'Floral' %}">
-                    <img src="{% static 'Raul/Images/FloralCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <!-- <img src="{% static 'Raul/Images/FloralCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
+                    <div class="floralImageMobile-1"></div>
                 </a>
                 <a href="{% url 'sec-view' 'Floral' %}">
-                    <img src="{%static 'Raul/Images/Floral2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <!-- <img src="{%static 'Raul/Images/Floral2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
+                    <div class="floralImageMobile-2"></div>
                 </a>
             </div>
         </div>
@@ -457,10 +461,12 @@
 
             <div class ="furnitureImages">
                 <a href="{% url 'sec-view' 'Tabletop' %}">
-                    <img src="{% static 'Raul/Images/TabletopCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <div class="tableImageMobile-1"></div>
+                    <!-- <img src="{% static 'Raul/Images/TabletopCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Tabletop' %}">
-                    <img src="{%static 'Raul/Images/Tabletop2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <div class="tableImageMobile-2"></div>
+                    <!-- <img src="{%static 'Raul/Images/Tabletop2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -475,10 +481,12 @@
 
             <div class ="furnitureImages" id ="DecorativeSec">
                 <a href="{% url 'sec-view' 'Wallart' %}">
-                    <img src="{% static 'Raul/Images/WallArtCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <div class="wallImageMobile-1"></div>
+                    <!-- <img src="{% static 'Raul/Images/WallArtCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Wallart' %}">
-                    <img src="{%static 'Raul/Images/WallArt2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <div class="wallImageMobile-2"></div>
+                    <!-- <img src="{%static 'Raul/Images/WallArt2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -493,10 +501,12 @@
 
             <div class ="furnitureImages">
                 <a href="{% url 'sec-view' 'Decorative' %}">
-                    <img src="{% static 'Raul/Images/DecoAcc.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <div class="decImageMobile-1"></div>
+                    <!-- <img src="{% static 'Raul/Images/DecoAcc.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Decorative' %}">
-                    <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage">
+                    <div class="decImageMobile-2"></div>
+                    <!-- <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -656,7 +666,7 @@
 
 
 
-    <div class ="featureProductsHeading" >
+    <div class ="featureProductsHeading" id = "mobile">
         shop by layout
     </div>
 
@@ -733,7 +743,7 @@
                 Monday - Friday: 7AM - 8PM
             </h1>
             <h1>
-                Questions? please email us at raul@raulavilainc.com
+                Questions? <br>Please email us at raul@raulavilainc.com
             </h1>
             <a href = "https://www.instagram.com/raulavilainc/"> <img src="{%static 'Raul/Images/instagram-logo.png' %}" height="20"></a>
 

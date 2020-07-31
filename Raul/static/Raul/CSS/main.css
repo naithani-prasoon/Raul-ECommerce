@@ -323,6 +323,7 @@ nav li {
     min-width: 160px;
     overflow: auto;
     z-index: 1;
+    opacity: 1;
   }
   
   .mobile-dropdownContent a {
@@ -384,6 +385,104 @@ nav li {
     background: -webkit-linear-gradient(#f8f18e,#d6a55b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.floralImageMobile-1{
+    background: url('Images/FloralCategory.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.floralImageMobile-2{
+    background: url('Images/Floral2.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.furnitureImageMobile-1{
+    background: url('Images/FurnitureCategory.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.furnitureImageMobile-2{
+    background: url('Images/Furniture2.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.tableImageMobile-1{
+    background: url('Images/TabletopCategory.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.tableImageMobile-2{
+    background: url('Images/Tabletop2.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.wallImageMobile-1{
+    background: url('Images/WallArtCategory.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.wallImageMobile-2{
+    background: url('Images/WallArt2.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.decImageMobile-1{
+    background: url('Images/DecoAcc.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.decImageMobile-2{
+    background: url('Images/5.jpg');
+    background-position: center;
+    background-size: cover;
+    width:90%;
+    margin:0 auto;
+    height:300px;
+}
+
+.section .secondSection{
+    background: url('Images/Collection2.jpg');
+}
+
+.textHover a{
+    color: black;
 }
 
 
@@ -485,6 +584,10 @@ nav li {
     }
 
     .modal2{
+        display: none;
+    }
+
+    #mobile{
         display: none;
     }
 
@@ -686,10 +789,35 @@ nav li {
         grid-template-columns: auto auto;
     }
 
+    .furnitureImages a{
+        overflow: hidden;
+        height:auto;
+    }
+
     .staticImage{
-        width:90%;
+
+        width:100%;
+        /* height: 100%; */
         padding:8px;
-        border-radius: 50px;
+        border-radius: 5px;
+    }
+
+    .floralImageMobile-1{
+        background: url('Images/FloralCategory.jpg');
+        background-position: center;
+        background-size: cover;
+        width:90%;
+        margin:0 auto;
+        height:300px;
+    }
+
+    .floralImageMobile-2{
+        background: url('Images/Floral2.jpg');
+        background-position: center;
+        background-size: cover;
+        width:90%;
+        margin:0 auto;
+        height:300px;
     }
 
     .mobile-shopBanner{
@@ -833,6 +961,11 @@ nav li {
 @media only screen and (min-width:641px) and (max-width:768px){
     
     .feature{
+        display: none;
+    }
+
+    
+    #mobile{
         display: none;
     }
 
@@ -1207,6 +1340,11 @@ nav li {
         display: none;
     }
 
+    
+    #mobile{
+        display: none;
+    }
+
     .modal{
         display: none;
     }
@@ -1576,6 +1714,11 @@ nav li {
     }
 
     .category{
+        display: none;
+    }
+
+    
+    #mobile{
         display: none;
     }
 
@@ -6088,7 +6231,7 @@ nav li {
       } */
 
     footer{
-        height: 400px;
+        height: 200px;
         width:100%;
         background-color: #929292;
         display: grid;

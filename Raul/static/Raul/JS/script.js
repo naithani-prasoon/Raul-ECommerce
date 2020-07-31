@@ -29,7 +29,8 @@
         document.getElementById("hideOnScroll").style.background = "transparent";
         document.getElementById("hideOnScroll").style.opacity = "0";
         document.getElementById("hideOnScroll").style.color = "transparent";
-
+        // document.getElementById("mobile-dropdown").style.display = "none";
+        
         document.getElementById("headerOnScroll").style.background = "transparent";
         document.getElementById("headerOnScroll").style.height = "7.5em";
         document.getElementById("headerOnScroll").style.boxShadow = "0px 0px 0px 0px";
