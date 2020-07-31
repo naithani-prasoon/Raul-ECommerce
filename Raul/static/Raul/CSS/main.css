@@ -21,6 +21,10 @@ html,body{
     scroll-snap-type: y mandatory;
 }
 
+.mobile-headers img{
+    box-sizing: unset;
+}
+
 input[type=text], input[type=password],input[type=email]{
     border-radius: 5px;
     padding:10px 16px;

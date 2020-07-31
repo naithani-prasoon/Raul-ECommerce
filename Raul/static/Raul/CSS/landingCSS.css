@@ -1,3 +1,11 @@
+/*hello*/
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
+
 body{
     margin:0;
     padding:0;
@@ -17,6 +25,15 @@ body{
     height:100vh;
     padding:50px 0px;
     animation: fadeIn 5s;
+}
+
+@keyframes backgroundImage{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 /* @keyframes fadeIn{
@@ -59,18 +76,21 @@ body{
     text-align: center;
     align-items: center;
     width:100%;
+    height: 100vh;
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
     background: url('Images/Cafe_Landing.jpg');
+    background-color: black;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: backgroundImage 1s;
 }
 
 .backgroundText figcaption{
     justify-items: center;
-    font-size: 400px;
+    font-size: 0px;
     font-weight: bolder;
     opacity: 0.4;
     color:rgba(0,0,0,0.4);
@@ -87,21 +107,24 @@ body{
     width:100%;
     top:0;
     left:0;
+    height: 100vh;
     text-align: center;
     align-items: center;
     z-index: -1;   
     height: 100vh;
     display: none;
     transition: 0.4s ease-in-out;
+    background-color: black;
     background: url('Images/Retail_Landing.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: backgroundImage 1s;
 }
 
 .backgroundText2 figcaption{
     justify-items: center;
-    font-size: 400px;
+    font-size: 0px;
     font-weight: bolder;
     opacity: 0.5;
     color:rgba(0,0,0,0.4);
@@ -117,20 +140,23 @@ body{
     top:0;
     left:0;
     width:100%;
+    height: 100vh;
     text-align: center;
     align-items: center;
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
     background: url('Images/Raul_Inc_Landing.jpg');
+    background-color: black;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: backgroundImage 1s;
 }
 
 .backgroundText3 figcaption{
     justify-items: center;
-    font-size: 400px;
+    font-size: 0px;
     font-weight: bolder;
     opacity: 0.4;
     color:rgba(0,0,0,0.4);
@@ -206,6 +232,8 @@ a{
    text-emphasis: none;
    margin-left:auto;
    margin-right:auto;
+   color:white;
+   text-decoration: none;
 }
 
 a .container{
@@ -230,6 +258,10 @@ a .container p{
     padding:30px;
     margin-left:auto;
     margin-right: auto;
+    font-size: 50px;
+    color: white;
+    font-family: myFirstFont;
+    letter-spacing: 2px;
 }
 /* 
 .bigContainer2 a #raulBanner #raul{
@@ -267,11 +299,11 @@ a #raul img{
 }
 
 a #cafe{
-    text-align: right;
+    /* text-align: right; */
     width:15em;
     height: 6em;
     z-index:99;
-    margin:0px 0px 0px 16rem;
+    /* margin:0px 0px 0px 16rem; */
 }
 
 a #cafe img{
