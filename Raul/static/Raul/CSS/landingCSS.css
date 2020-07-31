@@ -26,7 +26,7 @@ body{
     left:0;
     top:0;
     position: absolute;
-    background: url('Images/initialBack.jpg');
+    background: url('Images/initialBack.jpeg');
     width:100%;
     height: 100vh;
     z-index: -1;
@@ -106,7 +106,7 @@ body{
     z-index: -1;   
     display: none;
     transition: 0.4s ease-in-out;
-    background: url('Images/Cafe_Landing.jpg');
+    background: url('Images/RaulCafe_2566.jpg');
     background-color: black;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -301,6 +301,7 @@ a .container p{
 
 a #raulAvila{
     text-align: center;
+    font-size: 60px;
     /* width: 30em;
     height: 6em; */
     z-index:99;
@@ -319,7 +320,7 @@ a #raul{
     /* text-align: left;
     width: 15em;
     height: 6em; */
-    z-index:99;
+    z-index:90;
     /* margin:0 5rem 0 0; */
    
 }
@@ -334,6 +335,7 @@ a #cafe{
     /* width:15em; */
     /* height: 6em; */
     z-index:99;
+
     /* margin:0px 0px 0px 16rem; */
 }
 
