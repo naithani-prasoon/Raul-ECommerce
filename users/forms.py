@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import UserAddress, BillingAddress
 from django.contrib.auth import get_user_model
 from django.contrib.auth import get_user_model
+from django.contrib import messages
 
 # class UserRegisterForm(UserCreationForm):
 #     email = forms.EmailField(required=True)
@@ -33,6 +34,16 @@ class UserAddressForm(forms.ModelForm):
             'firstname': forms.TextInput(attrs = {'placeholder': 'Username'}),
             'password': forms.TextInput(attrs = {'placeholder': 'Password'}),
         }
+    def clean_zipcode(self):
+        zipcode  = self.cleaned_data.get("zipcode")
+        if len(zipcode) != 5:
+
+            raise forms.ValidationError("Invalid Zipcode")
+        else:
+            return zipcode
+
+
+
 
 
 User = get_user_model()

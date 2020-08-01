@@ -82,6 +82,7 @@ def add_address(request):
         next_page = None
     if request.method == "POST":
         form = UserAddressForm(request.POST)
+        context = {"form" :form}
         if form.is_valid():
             new_address = form.save(commit=False)
             if User.is_authenticated:
@@ -105,6 +106,9 @@ def add_address(request):
                 print(billing_form.zipcode)
             if next_page is not None:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+        else:
+            messages.error(request,"no")
+            return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 def add_billing_address(request):
     try:
