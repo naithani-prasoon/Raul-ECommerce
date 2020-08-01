@@ -2,31 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/RaulCafe_2566.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/initialBack.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images/RaulRetail_Feb13th2020__3176.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0101.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0202.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0303.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0404.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0505.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0606.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0707.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0808.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/0909.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/1010.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/1111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/122.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/144.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/155.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/July2011cover.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/blank.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/jet-set-pg1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/initialBack.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/2019-pressvoguecom.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/2019-pressvoguecom.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/clientList.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/clientList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NY-Magazine.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NY-Magazine.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NYTimes.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-NYTimes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-coveteur.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-coveteur.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-dailyfrontrow.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-dailyfrontrow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-jet-set.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-jet-set.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-looktothestars.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-looktothestars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-met.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-met.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/Blank.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/pressvogue.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/pressvogue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/carts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
@@ -99,7 +111,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul/static/Raul/Images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -113,19 +125,19 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
-      <recent name="$PROJECT_DIR$/media" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
-      <recent name="$PROJECT_DIR$/orders/static/orders" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jonat\IdeaProjects\django_prject2\Raul_Inc\static\Raul_Inc\Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonat\IdeaProjects\django_prject2\Raul_Inc\static\Raul_Inc\Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
+      <recent name="$PROJECT_DIR$/media" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -240,13 +252,6 @@
       <workItem from="1596082467320" duration="1494000" />
       <workItem from="1596084245519" duration="7564000" />
       <workItem from="1596163281767" duration="4671000" />
-    </task>
-    <task id="LOCAL-00055" summary="Prasoon">
-      <created>1594405485413</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1594405485413</updated>
     </task>
     <task id="LOCAL-00056" summary="Sections">
       <created>1594410772061</created>
@@ -584,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596156790500</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="gallery">
+      <created>1596224538105</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1596224538107</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +617,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="Back Featues" />
     <MESSAGE value="Form and backtrack" />
     <MESSAGE value="Raul_Inc" />
     <MESSAGE value="Raulllll" />
@@ -630,7 +641,8 @@
     <MESSAGE value="Oush" />
     <MESSAGE value="HomePage FIxes" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="gallery" />
+    <option name="LAST_COMMIT_MESSAGE" value="gallery" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="123" width="817" height="568" key="#Project_Structure" timestamp="1595006539260">

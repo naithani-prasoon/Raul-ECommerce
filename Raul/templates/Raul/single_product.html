@@ -319,6 +319,9 @@
     <div class="left-column">
         {% if single_product.image %}
         <img src="{{ single_product.image.url }}">
+        {% if single_product.image2 %}
+        <img src="{{ single_product.image2.url }}">
+        {%endif%}
         {%endif%}
         <img data-image="blue" src="images/blue.png" alt="">
         <img data-image="red" class="active" src="images/red.png" alt="">
@@ -367,23 +370,30 @@
 
                 <input name='qty' type='number' placeholder="1" class = "numberOfItems" min="1" max="50" value="1">
 
-                {% if single_product.variation_set.colors %}
 
-                <select class="form-control" name="color">
-                    <option>Select A Color</option>
-                    {% for item in single_product.variation_set.colors %}
-                    <option value="{{item.title}}">{{item.title}}
-                    </option>
-                {% endfor %}
-                    </select>
-                {% endif %}
                 <!-- {% for item in single_product.variation_set.colors %}
                 <button class="form-control" name="color" >
                         {{item.title }}
                 {% endfor %}
 
                 </button> -->
-                
+
+                {% if single_product.variation_set.colors %}
+                <select class="form-control" name="color" onchange="priceChange()" id="selectVariation">
+                    <option selected>Select A Color</option>
+                    {% for item in single_product.variation_set.colors %}
+                    {% if item.price %}
+
+                    <option value="{{item.title }} {{item.price}}">{{item.title }} {{item.price}}
+                    </option>
+                    {%else%}
+                    <option value="{{item.title }}">{{item.title }}
+                    </option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                {% endif %}
+
 
                 {% if single_product.variation_set.sizes %}
                 <select class="form-control" name="size" onchange="priceChange()" id="selectVariation">

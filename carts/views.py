@@ -72,7 +72,8 @@ def view(request):
                                 print( "Product Name: ",itemV,  itemV.price)
                                 new_total += float(itemV.product.price) * (item.quantity)
                                 print( "New Total",  new_total)
-                                line_total = float(itemV.price) * (item.quantity)
+                                print("Item Price", item.product.price)
+                                line_total = float(item.product.price) * (item.quantity)
                                 print("Line Total", line_total)
                                 item.line_total = line_total
                             else:
