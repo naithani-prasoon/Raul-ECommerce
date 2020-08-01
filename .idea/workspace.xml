@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/RaulCafe_2566.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/initialBack.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images/RaulRetail_Feb13th2020__3176.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/Facebook1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/Twitter1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/Facebook1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/TWITTER10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/Twitter1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/facebook10.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/ig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/ig10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/ig2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/ig5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/instagram1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/initialBack.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/2019-pressvoguecom.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/2019-pressvoguecom.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/bio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/clientList.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/clientList.html" afterDir="false" />
@@ -26,8 +33,12 @@
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-mtv.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-ny-post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-pretaporter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-the-worlds-best-events.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-the-worlds-best-events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-trendencias.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press-trendencias.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/press.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/pressvogue.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/pressvogue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/presswwd.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/presswwd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/urls.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,6 +124,13 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
@@ -120,25 +138,6 @@
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
       <recent name="$PROJECT_DIR$/orders/static/orders" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.cart.html">
     <configuration name="cart.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/django_prject/templates/Raul/cart.html" useBuiltInWebServerPort="true">
