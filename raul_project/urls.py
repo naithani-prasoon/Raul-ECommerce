@@ -47,6 +47,7 @@ urlpatterns = [
     path('cart/<str:slug>/', cart_views.update_cart, name='update_cart'),
     path('cart/<str:slug>/', cart_views.add_to_cart, name='add_to_cart'),
     path('checkout/', orders.checkout, name='checkout'),
+    path('OrderConfirmation/', orders.checkout , name='OrderConfirmation'),
     path('orders/', orders.orders, name='user_orders'),
     path('Raul_Inc/Home', Raul_Inc_Path.home, name='Raul_Inc_Home'),
     path('Raul_Inc/gallery', Raul_Inc_Path.gallery, name='Raul_Inc_gallery'),

@@ -1,0 +1,39 @@
+{% extends "Raul/base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    h1{
+        position: absolute;
+        left: 120px;
+        top: 150px;
+
+    }
+
+    p{
+        position: absolute;
+        left: 120px;
+        top: 490px;
+        background-color: #cfbb63;
+        padding:16px 32px;
+        color:#333333;
+        outline: none;
+        border: none;
+        font-family: myFirstFont;
+        font-size:20px;
+    }
+</style>
+<body>
+
+<h1> Thank you for your order - Order#:{{order.order_id}}</h1>
+
+</body>
+</html>
+
+{% endblock %}
