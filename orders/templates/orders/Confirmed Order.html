@@ -6,6 +6,12 @@
     <title>Order Invoice</title>
 
     <style>
+        img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }
         .invoice-box {
             max-width: 800px;
             margin: auto;
@@ -156,6 +162,8 @@
             {% for item in cart.cartitem_set.all%}
 
             <td>
+
+                <img src="{{item.product.image.url}}" style="width:150px">
                 {{item.product}}
             </td>
 

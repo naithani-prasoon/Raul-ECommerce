@@ -110,9 +110,9 @@ def checkout(request):
             billing_address_instance = BillingAddress.objects.get(id= billing_a)
             shipping_address_instance = UserAddress.objects.get(id= shipping_a)
             # Calculate Price with Tax and Shipping
-            result = Geocoder.geocode("1600 amphiteather parkway, mountain view")
-            result.valid_address
-            print(result)
+            #result = Geocoder.geocode("1600 amphiteather parkway, mountain view")
+            #result.valid_address
+            #print(result)
             rate = pyziptax.get_rate(shipping_address_instance.zipcode, shipping_address_instance.city)
             two_places = Decimal(10) ** -2
             new_order.tax_total = Decimal(Decimal(rate/100) * Decimal(new_order.sub_total)).quantize(two_places)
