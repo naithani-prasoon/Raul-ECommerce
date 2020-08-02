@@ -107,7 +107,7 @@ def add_address(request):
             if next_page is not None:
                 return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
         else:
-            messages.error(request,"no")
+            messages.error(request,"Invalid ZipCode")
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 def add_billing_address(request):

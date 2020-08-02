@@ -81,7 +81,7 @@ class Variation(models.Model):
     objects = VariationManager()
 
     def __str__(self):
-        return self.title
+        return self.product.title
 
 class FeatuedProducts(models.Model):
     product = models.ForeignKey(product, on_delete=models.PROTECT)

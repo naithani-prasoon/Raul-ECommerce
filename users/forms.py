@@ -37,7 +37,6 @@ class UserAddressForm(forms.ModelForm):
     def clean_zipcode(self):
         zipcode  = self.cleaned_data.get("zipcode")
         if len(zipcode) != 5:
-
             raise forms.ValidationError("Invalid Zipcode")
         else:
             return zipcode
