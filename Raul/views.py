@@ -42,16 +42,16 @@ def secondHome(request):
             Reg.email = Reg.username
             Reg.save()
 
-            context = {'form': form,"Register_form" : Register_form,"Feat":featProd}
             new_user = authenticate(username=Register_form.cleaned_data['username'],
                                     password=Register_form.cleaned_data['password1'],
                                     )
             login(request, new_user)
             Register_form = forms.CreateUserForm()
+            context = {'form': form,"Register_form" : Register_form,"Feat":featProd}
             messages.success(request, 'You are now logged in!')
             return render(request, 'Raul/home.html',context)
         else:
-            messages.error(request, Register_form.error_messages)
+            messages.error(request, "Oops something went wrong please try again.")
             form = forms.LoginForms()
             context = {'form': form,"Register_form": Register_form,"Feat":featProd}
             return render(request, 'Raul/home.html',context)
@@ -63,6 +63,9 @@ def secondHome(request):
             user = authenticate(username=username,password=password)
             context = {'form': form,"Register_form": Register_form,"Feat":featProd}
             login(request,user)
+            return render(request, 'Raul/home.html',context)
+        else:
+            messages.error(request, 'Oops please try again')
             return render(request, 'Raul/home.html',context)
 
     return render(request, 'Raul/home.html',context)
@@ -74,23 +77,29 @@ def landingpage(request):
 
 
 def products(request):
+    featProd = FeatuedProducts.objects.all()
     products = product.objects.all()
     template = 'Raul/product.html'
     form = forms.LoginForms(request.POST or None)
     Register_form = forms.CreateUserForm(request.POST or None)
-    context = {'form': form,"Register_form": Register_form}
+    context = {'form': form,"Register_form" : Register_form,"Feat":featProd}
     if 'register' in request.POST:
         request.session.set_expiry(60)
         if Register_form.is_valid():
             Reg = Register_form.save(commit=False)
             Reg.email = Reg.username
             Reg.save()
-            Register_form = forms.CreateUserForm()
             context = {'products': products, 'form': form,"Register_form": Register_form}
-            messages.success(request, f'Your account has been created! You are now able to log in')
+            new_user = authenticate(username=Register_form.cleaned_data['username'],
+                                    password=Register_form.cleaned_data['password1'],
+                                    )
+
+            login(request, new_user)
+            Register_form = forms.CreateUserForm()
+            messages.success(request, 'You are now logged in!')
             return render(request, template,context)
         else:
-            messages.error(request, Register_form.error_messages)
+            messages.error(request, "Oops something went wrong please try again.")
             form = forms.LoginForms()
             context = {'products': products, 'form': form,"Register_form": Register_form}
             return render(request, template,context)
@@ -103,6 +112,11 @@ def products(request):
             context = {'products': products, 'form': form,"Register_form": Register_form}
             login(request,user)
             return render(request, template,context)
+        else:
+            messages.error(request, 'Oops please try again')
+            return render(request, template,context)
+
+
 
     products = product.objects.all()
     context = {'products': products, 'form': form,"Register_form": Register_form}
@@ -122,12 +136,16 @@ def CategoryView(request, cats):
             Reg = Register_form.save(commit=False)
             Reg.email = Reg.username
             Reg.save()
-            Register_form = forms.CreateUserForm()
+
+            new_user = authenticate(username=Register_form.cleaned_data['username'],
+                                    password=Register_form.cleaned_data['password1'],
+                                    )
+            login(request, new_user)
             context = {'cats': cats, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             messages.success(request, f'Your account has been created! You are now able to log in')
             return render(request, template,context)
         else:
-            messages.error(request, Register_form.error_messages)
+            messages.error(request,"Oops please try again.")
             form = forms.LoginForms()
             context = {'cats': cats, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             return render(request, template,context)
@@ -139,6 +157,9 @@ def CategoryView(request, cats):
             user = authenticate(username=username,password=password)
             context = {'cats': cats, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             login(request,user)
+            return render(request, template,context)
+        else:
+            messages.error(request, 'Oops please try again')
             return render(request, template,context)
     return render(request, template,context)
 
@@ -157,6 +178,11 @@ def SectionView(request, sec):
             Reg = Register_form.save(commit=False)
             Reg.email = Reg.username
             Reg.save()
+
+            new_user = authenticate(username=Register_form.cleaned_data['username'],
+                                password=Register_form.cleaned_data['password1'],
+                                )
+            login(request, new_user)
             Register_form = forms.CreateUserForm()
             form = forms.LoginForms()
             context = {'cats': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
@@ -176,7 +202,12 @@ def SectionView(request, sec):
             context = {'sec': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             login(request,user)
             a = 4
+        else:
+            messages.error(request, Register_form.error_messages)
+            form = forms.LoginForms()
+            context = {'sec': sec, 'cat_products': cat_products,'form': form,"Register_form": Register_form}
             return render(request, template,context)
+
     return render(request, template,context)
 
 

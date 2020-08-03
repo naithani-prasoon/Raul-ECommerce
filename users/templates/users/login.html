@@ -265,6 +265,7 @@
             <h1>Login</h1>
             <form method="post">
                 {%csrf_token%}
+                {{form.errors}}
                 <h4>Email Address</h4>
                 {{form.username}}
                 <h4>Password</h4>

@@ -16,12 +16,11 @@ def login_register(request):
     Register_form = CreateUserForm(request.POST or None)
     context = {'form': form,"Register_form": Register_form}
     if 'register' in request.POST:
-        request.session.set_expiry(60)
+        request.session.set_expiry(6000)
         if Register_form.is_valid():
             Reg = Register_form.save(commit=False)
             Reg.email = Reg.username
             Reg.save()
-
             context = {'form': form,"Register_form" : Register_form}
             new_user = authenticate(username=Register_form.cleaned_data['username'],
                                     password=Register_form.cleaned_data['password1'],
@@ -31,7 +30,6 @@ def login_register(request):
             messages.success(request, 'You are now logged in!')
             return HttpResponseRedirect(reverse("cart"))
         else:
-            messages.error(request, Register_form.error_messages)
             form = LoginForms()
             context = {'form': form,"Register_form": Register_form}
             return render(request, 'users/login.html',context)
@@ -44,6 +42,10 @@ def login_register(request):
             context = {'form': form,"Register_form": Register_form}
             login(request,user)
             return HttpResponseRedirect(reverse("cart"))
+        else:
+            Register_form = CreateUserForm()
+            context = {'form': form,"Register_form": Register_form}
+            return render(request, 'users/login.html',context)
     return render(request, 'users/login.html',context)
 
 
