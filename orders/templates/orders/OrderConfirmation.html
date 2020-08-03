@@ -252,15 +252,38 @@
                 margin: 50px 30px;
                 width: auto;
             }
+
         }
 
     </style>
 
 
+
 </head>
 
-<div>
-    <h1> Thank you for your order - Order#:{{order.order_id}}</h1>
+<style>
+    .message1 {
+        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size:60px;
+        text-align: center;
+        width:100%;
+        padding-top:20px;
+    }
+</style>
+
+
+<div class="message1" >
+    <h1> Thank you for your order! </h1>
+
+</div>
+<div class="message1" >
+    <h2> Order#: {{order.order_id}}</h2>
+</div>
+<div class="message1" >
+        <h3> If you would like to see the status of your order, go to your <a href="{% url 'profile' %}" >
+            <u> profile </u> </a> </h3>
 
 </div>
 

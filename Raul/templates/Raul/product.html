@@ -30,6 +30,7 @@
     <div class="row" id="scrollHere">
 
         {% for product in products %}
+        {% if product.active %}
         <div class="productCard">
             <div class="image">
                 <a href="{% url 'Raul-single' product.slug %}" >
@@ -51,6 +52,7 @@
             <h5 class="productTitle">{{product.title}}</h5>
             <h5 class="productPrice">${{product.price}}</h5>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 
