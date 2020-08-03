@@ -178,7 +178,7 @@ def SectionView(request, sec):
             Reg = Register_form.save(commit=False)
             Reg.email = Reg.username
             Reg.save()
-            #hi
+            #hiiii
             new_user = authenticate(username=Register_form.cleaned_data['username'],
                                 password=Register_form.cleaned_data['password1'],
                                 )
