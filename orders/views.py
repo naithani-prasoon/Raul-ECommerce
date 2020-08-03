@@ -210,9 +210,9 @@ def checkout(request):
                         "cart": cart,
                         "order" : new_order,
                         "shipping_address": new_order.shipping_address,
-                        "billing_address": new_order.billing_address
+                        "billing_address": new_order.billing_address,
                     }
-                    return render(request,'orders/Confirmed Order.html',context)
+                    return render(request,'orders/OrderConfirmation.html',context)
 
     context = {
         "billing_form": billing_form,

@@ -1,39 +1,268 @@
 {% extends "Raul/base.html" %}
 {% block content %}
-{% load crispy_forms_tags %}
 {%load static%}
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <style>
+        /*hello*/
+        @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+        @font-face {
+            font-family: myFirstFont;
+            src: url(avenir-lt-std-35-light.otf);
+        }
+
+        input[type=text], input[type=password],input[type=email]{
+            border-radius: 5px;
+            padding:10px 27px;
+            outline: none;
+            border:none;
+        }
+
+        html,body{
+            margin:0;
+            padding:0;
+            width: 100%;
+            font-family: myFirstFont;
+            overflow-x: hidden;
+            background-color: #6d6d6d;
+            text-transform: lowercase;
+            scroll-behavior: smooth;
+            scroll-snap-type: mandatory;
+            scroll-snap-points-y: repeat(100vh);
+            scroll-snap-type: y mandatory;
+        }
+
+        .headers{
+            background-color: #6d6d6d;
+        }
+
+        .containers1{
+            height:auto;
+            padding:50px 0px;
+            margin:100px auto;
+        }
+
+        .loginRegister{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .loginForm{
+            padding:50px 0;
+            margin:0 auto;
+            width: 100%;
+            height:50vh;
+        }
+
+        .login-card{
+            background-color: rgba(0, 0, 0, 0.2);
+            padding:50px;
+            margin: 50px auto;
+            width:30vw;
+        }
+
+        .registerForm{
+            padding:50px 0;
+            margin:100px auto;
+            width: 100%;
+            height:50vh;
+        }
+
+        .register-card{
+            background-color: rgba(0, 0, 0, 0.2);
+            padding:50px;
+            margin: 100px auto;
+            width:30vw;
+        }
+
+        .loginRegister label{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size:20px;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .loginRegister h1{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 40px;
+            text-transform: none;
+        }
+
+        .loginRegister .button,button{
+            background: #cfbb63;
+            color:rgba(0, 0, 0, 0.6);
+            padding:16px 64px;
+            outline: none;
+            border: none;
+            border-radius: 40px;
+            font-weight: 700;
+            transition: 0.4s ease-in-out;
+            font-family: myFirstFont;
+            font-size: 20px;
+        }
+
+        .loginRegister li{
+            list-style: none;
+            text-align: center;
+            font-size: 12px;
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .loginRegister .helptext::before{
+            display: inline-block;
+            content: "";
+            border-top: .3rem solid transparent;
+            width: 1rem;
+            margin: 0 1rem;
+            transform: translateY(-1rem);
+
+        }
+
+        form h4{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-block-start: 5px;
+            margin-block-end: 5px;
+            font-size: 20px;
+        }
+
+        .loginRegister .helptext{
+            font-size:12px;
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        /* .loginRegister .button, button {
+            background: #cfbb63;
+            color: rgba(0, 0, 0, 0.6);
+            padding: 16px 64px;
+            outline: none;
+            border: none;
+            border-radius: 0;
+            font-weight: 700;
+            transition: 0.4s ease-in-out;
+            font-family: myFirstFont;
+            font-size: 20px;
+            margin:10px auto;
+        } */
+
+        .loginRegister .button, button {
+            background: #cfbb63;
+            color: rgba(0, 0, 0, 0.6);
+            padding: 16px 64px;
+            outline: none;
+            border: none;
+            border-radius: 0;
+            font-weight: 700;
+            transition: 0.4s ease-in-out;
+            font-family: myFirstFont;
+            font-size: 20px;
+            margin:10px auto;
+            border-radius: 5px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .button:hover,button:hover{
+            cursor: pointer;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-card a{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .register-card a{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media only screen and (max-width:1200px){
+            .loginRegister{
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .loginForm{
+                margin:0;
+                padding:0;
+            }
+
+            ul{
+                padding-inline-start: 0;
+            }
+
+            .loginRegister li{
+                font-size: 10px;
+            }
+
+            .loginRegister label{
+                margin: 30px 0px;
+            }
+        }
+
+        @media only screen and (max-width:560px){
+            .loginRegister{
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .loginForm{
+                margin:0;
+                padding:0;
+            }
+
+            ul{
+                padding-inline-start: 0;
+            }
+
+            .loginRegister li{
+                font-size: 10px;
+            }
+
+            .loginRegister label{
+                margin: 30px 0px;
+            }
+
+            .login-card{
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 50px;
+                margin: 50px 30px;
+                width: auto;
+            }
+
+            .register-card{
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 50px;
+                margin: 50px 30px;
+                width: auto;
+            }
+        }
+
+    </style>
+
+
 </head>
-<style>
-    h1{
-        position: absolute;
-        left: 120px;
-        top: 150px;
 
-    }
+<div>
+    <h1> Thank you for your order - Order#:{{order.order_id}}</h1>
 
-    p{
-        position: absolute;
-        left: 120px;
-        top: 490px;
-        background-color: #cfbb63;
-        padding:16px 32px;
-        color:#333333;
-        outline: none;
-        border: none;
-        font-family: myFirstFont;
-        font-size:20px;
-    }
-</style>
-<body>
+</div>
 
-<h1> Thank you for your order - Order#:{{order.order_id}}</h1>
-
-</body>
-</html>
 
 {% endblock %}
