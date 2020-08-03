@@ -42,6 +42,8 @@ class product(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
     active = models.BooleanField(default=True)
     imageFound = models.BooleanField(default=False)
+    Overweight = models.BooleanField(default=False)
+    SuperOverweight = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
