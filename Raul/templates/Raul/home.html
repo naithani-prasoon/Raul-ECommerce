@@ -390,7 +390,8 @@
         </div>
         <div class="mobileGrid">
             {%for item in Feat%}
-                    <img src="{{item.product.image.url}}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                    <a href="{% url 'Raul-single' item.product.slug %}">
+            <img src="{{item.product.image.url}}" draggable="false" alt="Furniture Photo" class="imageAvatar"></a>
             {%endfor%}
                 </div>
 
@@ -666,38 +667,7 @@
     <div class="filler"></div>
 
     <div class ="bannerSecond">
-        <div class="roundCircle">
-            <div class="productDisplay">
-                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
-                <p>graffiti wall art</p>
-                <h6>$120.00</h6>
-            </div>
-        </div>
 
-        <div class="roundCircle2">
-            <div class="productDisplay">
-                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
-                <a href="{% url 'sec-view' 'Shopping The Layout' %}" ></a>
-                <p>confetti plate</p>
-                <h6>$120.00</h6>
-            </div>
-        </div>
-
-        <div class="roundCircle3">
-            <div class="productDisplay">
-                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
-                <p>champagne glass</p>
-                <h6>$120.00</h6>
-            </div>
-        </div>
-
-        <div class="roundCircle4">
-            <div class="productDisplay">
-                <img src="{%static 'Raul/Images/Raul Website/Photo May 20, 5 03 10 PM.jpg' %}">
-                <p>hara podha</p>
-                <h6>$120.00</h6>
-            </div>
-        </div>
     </div>
 
     <div class="filler" id ="borderBottom"></div>

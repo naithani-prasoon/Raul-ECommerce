@@ -166,29 +166,29 @@
             {% for item in cart.cartitem_set.all%}
 
             <td>
-                {{item.product}}
+                {{item.product}}<br>
             </td>
 
             <td>
                 {% if item.variation.colors %}
                 {% for sub_item in item.variation.colors%}
-                {{sub_item.title}}
+                {{sub_item.title}}<br>
                 {% endfor %}
                 {% endif %}
 
                 {% if item.variation.sizes %}
                 {% for sub_item in item.variation.sizes%}
-                {{sub_item.title}}
+                {{sub_item.title}}<br>
                 {% endfor %}
                 {% endif %}
             </td>
 
             <td>
-                {{item.quantity}}
+                {{item.quantity}}<br>
             </td>
 
             <td>
-                {{item.product.price}}
+                {{item.product.price}}<br>
             </td>
 
         </tr>

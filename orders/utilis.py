@@ -32,12 +32,12 @@ def id_generator(size=10, chars= string.ascii_uppercase + string.digits):
 
 API_KEY = "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"
 
-def email_test(context):
-    subject = 'Your Raul Retail Order'
+def email_test(context,user):
+    subject = 'Raul Order'
     html_message = render_to_string('orders/Confirmed Order.html', context)
     plain_message = strip_tags(html_message)
-    from_email = 'From <raulwebsite069@gmail.com>'
-    to = 'dberhan@buffalo.edu'
+    from_email = 'Raul Orders <raul.order@gmail.com>'
+    to = user
 
     mail.send_mail(subject, plain_message, from_email, [to], html_message=html_message)
 
