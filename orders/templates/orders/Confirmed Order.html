@@ -1,17 +1,10 @@
-{% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Order Invoice</title>
+    <title>A simple, clean, and responsive HTML invoice template</title>
 
     <style>
-        img {
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 5px;
-            width: 150px;
-        }
         .invoice-box {
             max-width: 800px;
             margin: auto;
@@ -114,11 +107,12 @@
                 <table>
                     <tr>
                         <td class="title">
-                            <h2 style="color: goldenrod">r a u l</h2>
+                            Raul Retail
                         </td>
 
                         <td>
-                            Order#:{{order.order_id}}<br>
+                            Invoice #: {{order.order_id}}<br>
+                            {{order.user}}
                         </td>
                     </tr>
                 </table>
@@ -130,29 +124,39 @@
                 <table>
                     <tr>
                         <td>
-                            {{shipping_address.address}} {{shipping_address.address2}}<br>
-                            {{shipping_address.city}}, {{shipping_address.state}} {{shipping_address.zipcode}}<br>
+                            Shipping Address<br>
+                            {{shipping_address.address}}<br>
+                            {% if  shipping_address.address1%}
+                            {{shipping_address.address2}}<br>
+                            {%else%}
+                            {{shipping_address.city}}, {{shipping_address.state}} {{shipping_address.zipcode}}
+                            {%endif%}
                         </td>
 
                         <td>
-                            Raul Retail<br>
-                            raul@raulretail.com
+                            Billing Address<br>
+                            {{billing_address.address}}<br>
+                            {% if  billing_address.address1%}
+                            {{billing_address.address2}}<br>
+                            {%else%}
+                            {{billing_address.city}}, {{billing_address.state}} {{billing_address.zipcode}}
+                            {%endif%}
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
 
+
+
         <tr class="heading">
             <td>
-            Item
+                Item
             </td>
+
             <td>
-                Variation
-            </td>
-            <td>
-                Quantity
-            </td>
+                Description
+        </td>
             <td>
                 Price
             </td>
@@ -162,8 +166,6 @@
             {% for item in cart.cartitem_set.all%}
 
             <td>
-
-                <img src="{{item.product.image.url}}" style="width:150px">
                 {{item.product}}
             </td>
 
@@ -180,9 +182,11 @@
                 {% endfor %}
                 {% endif %}
             </td>
+
             <td>
                 {{item.quantity}}
             </td>
+
             <td>
                 {{item.product.price}}
             </td>
@@ -190,12 +194,16 @@
         </tr>
         {%endfor%}
 
+
+
         <tr class="total">
             <td></td>
-
             <td>
-                Total: {{order.final_total}}
-            </td>
+                Shipping: {{order.Shipping}}<br>
+                Taxes: {{order.tax_total}}<br>
+                Total: {{order.final_total}}<br>
+
+        </td>
         </tr>
     </table>
 </div>
