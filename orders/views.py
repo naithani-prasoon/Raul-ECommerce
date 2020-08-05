@@ -113,10 +113,15 @@ def checkout(request):
             #result = Geocoder.geocode("1600 amphiteather parkway, mountain view")
             #result.valid_address
             #print(result)
+            for products in cart.cartitem_set.all():
+                if products.product.Overweight == True:
+                    new_order.Shipping = 25.00
+                if products.product.SuperOverweight == True:
+                    new_order.Shipping = 35.00
             rate = pyziptax.get_rate(shipping_address_instance.zipcode, shipping_address_instance.city)
             two_places = Decimal(10) ** -2
             new_order.tax_total = Decimal(Decimal(rate/100) * Decimal(new_order.sub_total)).quantize(two_places)
-            new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total) + new_order.Shipping
+            new_order.final_total = Decimal(new_order.sub_total) + Decimal(new_order.tax_total) + Decimal(new_order.Shipping)
             final_amount = new_order.final_total
             new_order.save()
 
@@ -196,7 +201,7 @@ def checkout(request):
                     new_order.billing_address = billing_address_instance
                     new_order.shipping_address = shipping_address_instance
                     new_order.save()
-                    # email_test(context)
+                    email_test(context,User)
                     new_order.order_pdf = "Order_Number_" + new_order.order_id + ".pdf"
                     new_order.save()
                     cart.active = False

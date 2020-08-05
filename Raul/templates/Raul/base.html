@@ -138,18 +138,18 @@
 
         <div class = "dropDownMenu">
             <p class="dropDownButton"><a  href="{% url 'sec-view' 'New Arrivals' %}" style="color:white">New Arrivals</a></p>
-            <div class="dropDownContent">
-                <div class="dropDownContentLinks">
-                    <a>Colored Glass Collection</a>
-                    <a>Floral Bird Cachepot Collection</a>
-                    <a>Blue Wave Cachepot & Bone Frame Collection</a>
-                    <a>Clear Glass Collection</a>
-                    <a>Lexi Cachepot & Cream Tealight Collection</a>
-                    <a>Ceramic & Cement Pot Collection</a>
-                    <a>Smoked Cut Glass Collection</a>
-                    <a>eylissa & norro vase collection</a>
-                </div>
-            </div>
+<!--            <div class="dropDownContent">-->
+<!--                <div class="dropDownContentLinks">-->
+<!--                    <a>Colored Glass Collection</a>-->
+<!--                    <a>Floral Bird Cachepot Collection</a>-->
+<!--                    <a>Blue Wave Cachepot & Bone Frame Collection</a>-->
+<!--                    <a>Clear Glass Collection</a>-->
+<!--                    <a>Lexi Cachepot & Cream Tealight Collection</a>-->
+<!--                    <a>Ceramic & Cement Pot Collection</a>-->
+<!--                    <a>Smoked Cut Glass Collection</a>-->
+<!--                    <a>eylissa & norro vase collection</a>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
         <div class = "dropDownMenu">
             <p class="dropDownButton"><a  href="{% url 'sec-view' 'Decorative Accessories' %}" style="color:white">Decorative Accessories</a></p>
@@ -231,10 +231,13 @@
 
     <nav>
         <div class ="mobile-actions">
-            <a href="{% url 'Raul-SecondHome' %}"><img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"></a>
-            <a href="{% url 'login' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></a>
-            <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"></a>
-        <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false"></a>
+            {% if user.is_authenticated %}
+            <a href="{% url 'profile' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login"></a>
+            {% else %}
+            <a href="{% url 'login' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login"></a>
+            {% endif %}
+            <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Cart"></a>
+            <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false"></a>
         </div>
         <ul id="contentHam">
 
@@ -245,13 +248,6 @@
                 <div class = "menuDropdown">
                     <button class = "mobile-dropdownButton" onclick = "mobileDropDown()">
                         new arrivals
-                        <i class="arrow down"></i>
-                    </button>
-                    <div id="mobile-dropdown" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
                 </div>
             </li>
             <li>
@@ -261,10 +257,11 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown2" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                        <a href="{% url 'cat-view' 'Decorative Objects' %}">Decorative Objects</a>
+                        <a  href="{% url 'cat-view' 'Urns' %}">Urns</a>
+                        <a  href="{% url 'cat-view' 'Vases and Cachepots' %}">Vases & Cachepots</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -274,10 +271,9 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown3" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>
+                        <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -287,10 +283,11 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown4" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a  href="{% url 'cat-view' 'Chairs' %}">Chairs</a>
+                        <a  href="{% url 'cat-view' 'End Tables' %}">End Tables</a>
+                        <a  href="{% url 'cat-view' 'Ottoman & Benches' %}">Ottoman & Benches</a>
+                        <a  href="{% url 'cat-view' 'Outdoor Furniture' %}">Outdoor Furniture</a>
+                    </div>
                 </div>
             </li>
             <li>
@@ -307,16 +304,15 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown5" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>
+                        <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>
+                    </div>
                 </div>
             </li>
             <li>
                 <div class = "menuDropdown">
                     <button class = "mobile-dropdownButton">
-                        all products
+                        <a href="{% url 'Raul-product' %}">all products</a>
                     </button>
                 </div>
             </li>
@@ -327,10 +323,13 @@
                         <i class="arrow down"></i>
                     </button>
                     <div id="mobile-dropdown6" class="mobile-dropdownContent">
-                        <a href="#home">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
-                      </div>
+                        <a  href="{% url 'cat-view' 'All Sale Items' %}">All Sale Items</a>
+                        <a  href="{% url 'cat-view' 'Bowls' %}">Bowls</a>
+                        <a  href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
+                        <a  href="{% url 'cat-view' 'Glasswear' %}">Glasswear</a>
+                        <a href="{% url 'cat-view' 'Vases & Cachepots' %}">Vases and Cachepots</a>
+                        <a href="{% url 'cat-view' 'Votives' %}">Votives</a>
+                    </div>
                 </div>
             </li>
             <li>
