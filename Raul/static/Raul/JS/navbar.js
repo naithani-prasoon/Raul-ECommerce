@@ -93,3 +93,13 @@ function closeStore(){
     document.getElementById("store").style.height = "0%";
 }
 
+function openProfile(){
+  document.getElementById("profileDrop").style.height = "100%";
+  document.getElementById("profileDrop").style.padding = "250px 0";
+}
+
+function closeProfile(){
+  document.getElementById("profileDrop").style.height = "0%";
+  document.getElementById("profileDrop").style.padding = "0";
+}
+

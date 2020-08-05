@@ -255,37 +255,63 @@
 
         }
 
+        .orderConfirmPage{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin:100px auto;
+            padding:50px;
+            width:50%;
+            text-align: center;
+        }
+
+        .orderConfirmed h1{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0 30px;
+        }
+
+        .orderConfirmed h2{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0 30px;
+        }
+
+        .goToProfile{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0 30px;
+        }
+
+        .goToProfile h3{
+            padding:20px 0;
+        }
+
+        .goToProfile h3 a{
+            text-decoration: underline;
+        }
     </style>
 
 
 
 </head>
 
-<style>
-    .message1 {
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size:60px;
-        text-align: center;
-        width:100%;
-        padding-top:20px;
-    }
-</style>
 
-
-<div class="message1" >
-    <h1> Thank you for your order! </h1>
-
+<div class="orderConfirmPage">
+    <div class="orderConfirmed" >
+        <h1> Thank you for your order! </h1>
+        <h2> Order#: {{order.order_id}}</h2>
+    
+    </div>
+    <div class="goToProfile" >
+            <h3> If you would like to see the status of your order, go to your <a href="{% url 'profile' %}" > profile</a>.</h3>
+    </div>
 </div>
-<div class="message1" >
-    <h2> Order#: {{order.order_id}}</h2>
-</div>
-<div class="message1" >
-        <h3> If you would like to see the status of your order, go to your <a href="{% url 'profile' %}" >
-            <u> profile </u> </a> </h3>
 
-</div>
 
 
 {% endblock %}

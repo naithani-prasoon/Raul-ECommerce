@@ -117,6 +117,16 @@ function openNav() {
      document.getElementById("contentHam").style.height = "100%";
 }
 
+function openProfile(){
+  document.getElementById("profileDrop").style.height = "100%";
+  document.getElementById("profileDrop").style.padding = "250px 0";
+}
+
+function closeProfile(){
+  document.getElementById("profileDrop").style.height = "0%";
+  document.getElementById("profileDrop").style.padding = "0";
+}
+
 function closeNav() {
     document.getElementById("contentHam").style.height = "0%";
 }

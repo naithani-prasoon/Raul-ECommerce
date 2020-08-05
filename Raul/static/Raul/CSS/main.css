@@ -174,6 +174,42 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
+.profileDropDown{
+    text-align: center;
+}
+
+.profileDropDown .profileOptions{
+    width: 100%;
+    position: fixed ;
+    left:0px;
+    top:0px;
+    height:0;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.9);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 150;
+    transition: 0.5s ease-in-out;
+    /* padding:50px 0; */
+}
+
+.profileOptions::-webkit-scrollbar{
+    display: none;
+}
+
+.profileDropDown::-webkit-scrollbar{
+    display: none;
+}
+
+.profileOptions a{
+    color:white;
+    font-size: 20px;
+    padding:20px 0;
+    
+}
+
 .dropDownMenu{
     float: left;
     overflow: hidden;
@@ -571,6 +607,50 @@ nav li {
     color: black;
 }
 
+.textHover{
+    border-radius: 6px;
+}
+
+.textHover .textHeading{
+    border-radius: 6px;
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+.layout{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+    transition: 0.4s ease-in-out;
+    margin:0 auto;
+    text-align: center;
+    opacity: 0;
+}
+
+.layoutButton{
+    background-color: rgba(0,0,0,0.8);
+    color:#cfbb63;
+    padding:32px 32px;
+    margin:50vh auto;
+    width:200px;
+    font-size: 25px;
+    border-radius: 6px;
+    transition: 0.4s ease-in-out;
+}
+
+.layoutButton:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.bannerSecond:hover .layout{
+    opacity: 1;
+}
+
 /* Body Ended */
 
 /* Footer Started */
@@ -816,19 +896,23 @@ footer{
         /* display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%; */
+        /* width: 100%;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
+
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 
     .mobileGrid .imageAvatar{
         display: block;
-        width: 90%;
+        /* width: 90%; */
         height: auto;
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
-        width:40%;
+        width:80%;
     }
 
     .shopBanner{
@@ -990,7 +1074,8 @@ footer{
         top: 45%;
         left: 50%;
         padding:10px;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        /* background: -webkit-linear-gradient(#f8f18e,#d6a55b); */
+        background-color: rgba(0,0,0,0.8);
         columns: #6d6d6d;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -1218,19 +1303,22 @@ footer{
         /* display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%; */
-        display: flex;
+        /* display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
+
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 
     .mobileGrid .imageAvatar{
         display: block;
-        width: 90%;
+        /* width: 90%; */
         height: auto;
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
-        width: 30%;
+        width: 80%;
     }
 
     .shopBanner{
@@ -1369,7 +1457,8 @@ footer{
         position: absolute;
         top: 45%;
         left: 50%;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        /* background: -webkit-linear-gradient(#f8f18e,#d6a55b); */
+        background-color: rgba(0,0,0,0.8);
         columns: #6d6d6d;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -1599,20 +1688,21 @@ footer{
         /* display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%; */
-
-        display: flex;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        /* display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
     }
 
     .mobileGrid .imageAvatar{
         display: block;
-        width: 90%;
+        /* width: 90%; */
         height: auto;
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
-        width:30%;
+        width:80%;
     }
 
     .shopBanner{
@@ -1754,7 +1844,8 @@ footer{
         position: absolute;
         top: 45%;
         left: 50%;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        /* background: -webkit-linear-gradient(#f8f18e,#d6a55b); */
+        background-color: rgba(0,0,0,0.8);
         columns: #6d6d6d;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -1972,9 +2063,11 @@ footer{
     }
 
     .mobileGrid{
-        display: flex;
+        /* display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-columns: 50% 50%;
         
         /* grid-template-columns: 50% 50%;
         grid-template-rows: 25% 25% 25% 25%; */
@@ -1986,7 +2079,7 @@ footer{
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
-        width: 30%;
+        width: 80%;
     }
 
     .shopBanner{
@@ -2204,7 +2297,8 @@ footer{
         top: 45%;
         left: 50%;
         padding:16px 32px;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+        /* background: -webkit-linear-gradient(#f8f18e,#d6a55b); */
+        background-color: rgba(0,0,0,0.8);
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
     }
@@ -2687,230 +2781,6 @@ footer{
         background-size: cover;
     }
 
-    @keyframes fadeInDisplay{
-        0%{
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .bannerSecond .textHover{
-        transition: 0.5s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-    }
-
-    .bannerSecond .roundCircle{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:450px;
-        right:450px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .bannerSecond p{
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        margin-block-end: 10px;
-        margin-block-start: 0;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .bannerSecond h6{
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-size: 15px;
-        font-style: italic;
-        font-weight: 300;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: myFirstFont;
-    }
-
-    @keyframes blink{
-        0%{opacity: 0.15;}
-        25%{opacity: 0.25;}
-        50%{opacity: .5;}
-        75%{opacity:0.75;}
-        100%{opacity: 1;background-color:rgba(0,0,0,0.9);}
-    }
-
-    .roundCircle:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        left:50px;
-        bottom:5px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle2{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:610px;
-        right:650px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle2:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle2:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle2 .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        left:50px;
-        bottom:5px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle2 .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle3{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:600px;
-        left:540px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle3:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle3:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle3 .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        right:50px;
-        bottom:15px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle3 .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle4{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:550px;
-        right:200px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle4:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle4:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle4 .productDisplay{
-        width:250px;
-        background: #6d6d6d;
-        position: absolute;
-        right:50px;
-        bottom:10px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-        padding:15px;
-    }
-
-    .roundCircle4 .productDisplay img{
-        width:100%;
-    }
 
     .textHover .textHeading{
         background-color: rgba(0,0,0,0.5);
@@ -2927,9 +2797,9 @@ footer{
     }
 
     .textHeading:hover{
-        padding:20px 36px;
+        /* padding:20px 36px; */
         cursor: pointer;
-        background-color: rgba(0,0,0,0.8);
+        background-color: black;
     }
 
     .horizontalScroll{
@@ -4021,230 +3891,7 @@ footer{
         background-size: cover;
     }
 
-    @keyframes fadeInDisplay{
-        0%{
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .bannerSecond .textHover{
-        transition: 0.5s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-    }
-
-    .bannerSecond .roundCircle{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:450px;
-        right:450px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .bannerSecond p{
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        margin-block-end: 10px;
-        margin-block-start: 0;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .bannerSecond h6{
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-size: 15px;
-        font-style: italic;
-        font-weight: 300;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    @keyframes blink{
-        0%{opacity: 0.15;}
-        25%{opacity: 0.25;}
-        50%{opacity: .5;}
-        75%{opacity:0.75;}
-        100%{opacity: 1;background-color:rgba(0,0,0,0.9);}
-    }
-
-    .roundCircle:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        left:50px;
-        bottom:5px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle2{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:610px;
-        right:650px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle2:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle2:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle2 .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        left:50px;
-        bottom:5px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle2 .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle3{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:600px;
-        left:540px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle3:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle3:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle3 .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        right:50px;
-        bottom:15px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle3 .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle4{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:550px;
-        right:200px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle4:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle4:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle4 .productDisplay{
-        width:250px;
-        background: #6d6d6d;
-        position: absolute;
-        right:50px;
-        bottom:10px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-        padding:15px;
-    }
-
-    .roundCircle4 .productDisplay img{
-        width:100%;
-    }
-
+   
     .textHover .textHeading{
         background-color: rgba(0,0,0,0.5);
         color: #cfbb63;
@@ -4260,9 +3907,9 @@ footer{
     }
 
     .textHeading:hover{
-        padding:20px 36px;
+        /* padding:20px 36px; */
         cursor: pointer;
-        background-color: rgba(0,0,0,0.8);
+        background-color: black;
     }
 
     .horizontalScroll{
@@ -5311,227 +4958,7 @@ footer{
         background-size: cover;
     }
 
-    @keyframes fadeInDisplay{
-        0%{
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        100%{
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 
-    .bannerSecond .textHover{
-        transition: 0.5s ease-in-out;
-        opacity: 0;
-        position: absolute;
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-    }
-
-    .bannerSecond .roundCircle{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:450px;
-        right:450px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .bannerSecond p{
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        margin-block-end: 10px;
-        margin-block-start: 0;
-        
-    }
-
-    .bannerSecond h6{
-        margin-block-start: 0px;
-        margin-block-end: 0px;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-size: 15px;
-        font-style: italic;
-        font-weight: 300;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    @keyframes blink{
-        0%{opacity: 0.15;}
-        25%{opacity: 0.25;}
-        50%{opacity: .5;}
-        75%{opacity:0.75;}
-        100%{opacity: 1;background-color:rgba(0,0,0,0.9);}
-    }
-
-    .roundCircle:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        left:50px;
-        bottom:5px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle2{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:610px;
-        right:650px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle2:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle2:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle2 .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        left:50px;
-        bottom:5px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle2 .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle3{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:600px;
-        left:540px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle3:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle3:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle3 .productDisplay{
-        width:250px;
-        background:#6d6d6d;
-        position: absolute;
-        right:50px;
-        bottom:15px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        padding:15px;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-    }
-
-    .roundCircle3 .productDisplay img{
-        width:100%;
-    }
-
-    .bannerSecond .roundCircle4{
-        width:30px;
-        height: 30px;
-        background: rgba(0,0,0,0.8);
-        border-radius: 50px;
-        position: absolute;
-        top:550px;
-        right:200px;
-        color:#cfbb63;
-        transition: 0.4s ease-in-out;
-        overflow: hidden;
-        animation: blink 2s linear infinite;
-    }
-
-    .roundCircle4:hover{
-        cursor: pointer;
-        overflow: visible;
-        animation: none;
-    }
-
-    .roundCircle4:hover .productDisplay{
-        opacity: 1;
-        animation: fadeInDisplay 1s;
-    }
-
-    .roundCircle4 .productDisplay{
-        width:250px;
-        background: #6d6d6d;
-        position: absolute;
-        right:50px;
-        bottom:10px;
-        font-size: 30px;
-        text-align: center;
-        opacity: 0;
-        transition: 0.4s ease-in-out;
-        box-shadow: 0px 0px 2px 0.5px rgba(0,0,0,0.5);
-        padding:15px;
-    }
-
-    .roundCircle4 .productDisplay img{
-        width:100%;
-    }
 
     .textHover .textHeading{
         background-color: rgba(0,0,0,0.8);
@@ -5548,9 +4975,9 @@ footer{
     }
 
     .textHeading:hover{
-        padding:20px 36px;
+        /* padding:20px 36px; */
         cursor: pointer;
-        background-color: rgba(0,0,0,0.8);
+        background-color: black;
     }
 
     .horizontalScroll{
