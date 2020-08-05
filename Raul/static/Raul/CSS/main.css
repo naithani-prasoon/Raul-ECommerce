@@ -174,6 +174,92 @@ nav ul li a:hover{
     cursor: pointer;
 }
 
+.dropDownMenu{
+    float: left;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    color:inherit
+}
+
+.dropDownMenu .dropDownButton{
+    border:none;
+    outline:none;
+    font-size: 16px;
+    font-family: myFirstFont;
+    background-color:transparent;
+    transition: 0.4s ease-in-out;
+}
+
+.dropDownContent{
+    display: none;
+    position: fixed;
+    left: 0;
+    background-color: #6d6d6d;
+    width: 100%;
+    padding:30px 0px;
+    z-index: -1;
+    transition: 0.4s ease-in-out;
+    border-bottom: 1px solid black;
+    animation: slideInNav 1s;
+    text-align: center;
+   
+}
+
+@keyframes slideInNav{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.dropDownContent .dropDownContentLinks{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropDownContentImage{
+    flex: auto;
+    text-align: center;
+}
+
+.dropDownContentLinks a{
+    color:white;
+    text-decoration: none;
+    padding:20px;
+    animation: fadeInNavBar 2.5s;
+    text-align: center;
+}
+
+.dropDownContent img{
+    width:300px;
+    margin: 0 auto;
+    animation: fadeInNavBar 2.5s;
+}
+
+.dropDownContent a:hover{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+.dropDownButton:hover{
+    font-family: myFirstFont;
+    cursor: pointer;
+}
+.dropDownMenu:hover .dropDownContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
 figure{
     transition: 0.4s ease-in-out;
 }
@@ -485,8 +571,31 @@ nav li {
     color: black;
 }
 
-
 /* Body Ended */
+
+/* Footer Started */
+footer{
+    height: auto;
+    width:100%;
+    background-color: #929292;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    text-transform: none;
+    padding:50px 0;
+}
+
+.hoursOfOperation{
+    padding:20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.hoursOfOperation h1{
+    font-size: 18px;
+    padding:10px 0;
+}
+
+/* Footer Ended */
 
 /* Animations */
 @keyframes fadeInNavBar{
@@ -600,7 +709,7 @@ nav li {
     }
 
     .mobile-headers img{
-        padding: 0px 20px;
+        padding: 0px 10px;
         width:20px;
     }
     .mobile-actions{
@@ -704,9 +813,12 @@ nav li {
     }
 
     .mobileGrid{
-        display: grid;
+        /* display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .mobileGrid .imageAvatar{
@@ -716,6 +828,7 @@ nav li {
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
+        width:40%;
     }
 
     .shopBanner{
@@ -795,7 +908,6 @@ nav li {
     }
 
     .staticImage{
-
         width:100%;
         /* height: 100%; */
         padding:8px;
@@ -884,8 +996,12 @@ nav li {
         -ms-transform: translate(-50%, -50%);
     }
 
-    footer{
+    /* footer{
         display: none;
+    } */
+
+    .hoursOfOperation{
+        padding:0;
     }
 
     #scrollTop {
@@ -1099,9 +1215,12 @@ nav li {
     }
 
     .mobileGrid{
-        display: grid;
+        /* display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .mobileGrid .imageAvatar{
@@ -1111,6 +1230,7 @@ nav li {
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
+        width: 30%;
     }
 
     .shopBanner{
@@ -1142,7 +1262,7 @@ nav li {
     .furniture{
         height:50vh;
         width:100%;
-        padding: 50px 0px;  
+        padding: 5px 0px;  
         
     }
 
@@ -1180,14 +1300,18 @@ nav li {
     .furnitureImages{
         display: grid;
         grid-template-columns: auto auto;
-        place-content: center;
-        place-items: center;
+    }
+
+    .furnitureImages a{
+        overflow: hidden;
+        height:auto;
     }
 
     .staticImage{
-        width:90%;
-        margin:0 auto;
-        border-radius: 50px;
+        width:100%;
+        /* height: 100%; */
+        padding:8px;
+        border-radius: 5px;
     }
 
     .mobile-shopBanner{
@@ -1256,9 +1380,9 @@ nav li {
         padding:16px 32px;
     }
 
-    footer{
-        display: none;
-    }
+   .hoursOfOperation h1{
+       font-size: 25px;
+   }
 
     #scrollTop {
         width:40px;
@@ -1472,9 +1596,13 @@ nav li {
     }
 
     .mobileGrid{
-        display: grid;
+        /* display: grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-rows: 25% 25% 25% 25%; */
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .mobileGrid .imageAvatar{
@@ -1484,6 +1612,7 @@ nav li {
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
+        width:30%;
     }
 
     .shopBanner{
@@ -1556,14 +1685,18 @@ nav li {
     .furnitureImages{
         display: grid;
         grid-template-columns: auto auto;
-        place-content: center;
-        place-items: center;
+    }
+
+    .furnitureImages a{
+        overflow: hidden;
+        height:auto;
     }
 
     .staticImage{
-        width:90%;
-        margin:0 auto;
-        border-radius: 50px;
+        width:100%;
+        /* height: 100%; */
+        padding:8px;
+        border-radius: 5px;
     }
 
     .mobile-shopBanner{
@@ -1631,9 +1764,13 @@ nav li {
         font-size: 25px;
         padding:16px 32px;
     }
-
+/* 
     footer{
         display: none;
+    } */
+
+    .hoursOfOperation h1{
+        font-size: 25px;
     }
 
     #scrollTop {
@@ -1835,9 +1972,12 @@ nav li {
     }
 
     .mobileGrid{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 25% 25% 25% 25%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        /* grid-template-columns: 50% 50%;
+        grid-template-rows: 25% 25% 25% 25%; */
     }
 
     .mobileGrid .imageAvatar{
@@ -1846,6 +1986,7 @@ nav li {
         padding:10px;
         margin:0 auto;
         transition: 0.4s ease-in-out;
+        width: 30%;
     }
 
     .shopBanner{
@@ -1922,7 +2063,7 @@ nav li {
         display: none;
         width:100%;
         height:auto;
-        padding: 6px 12px;
+        /* padding: 6px 12px; */
         overflow: hidden;
         -webkit-animation: fadeEffect 2s;
         animation: fadeEffect 2s;
@@ -2062,15 +2203,22 @@ nav li {
         position: absolute;
         top: 45%;
         left: 50%;
-        padding:10px;
+        padding:16px 32px;
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        columns: #6d6d6d;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
     }
 
-    footer{
+    .textHover a {
+        font-size: 25px;
+    }
+
+    /* footer{
         display: none;
+    } */
+
+    .hoursOfOperation h1{
+        font-size: 25px;
     }
 
     #scrollTop {
@@ -2316,6 +2464,10 @@ nav li {
         font-weight: 900;
         cursor: pointer;
         font-family: myFirstFont;
+    }
+
+    .category p a{
+        color:inherit;
     }
 
     .headers figcaption{
@@ -3455,53 +3607,7 @@ nav li {
 
     
 
-    footer{
-        height: 400px;
-        width:100%;
-        background-color: #929292;
-        display: grid;
-        grid-template-rows: 80% 20%;
-        text-transform: none;
-    }
-
-    footer .footerEssentials{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 24px;
-    }
-
-    .footerEssentials .logoSection{
-        display: flex;
-        flex-direction: column;
-        margin-left:20px;
-    }
-
-    .footerEssentials .logoSection #footerLogo1{
-        width:50px;
-        height:50px;
-        padding:50px 10px 0px 30px;
-    }
-
-    .footerEssentials .logoSection #footerLogo2{
-        width:80px;
-        height:30px;
-        padding:0px 30px;
-    }
-
-    .footerEssentials .helpSection{
-        padding:50px 0px;
-    }
-
-    .footerEssentials .aboutSection{
-        padding:50px 0px;
-    }
-
-    .footerEssentials .socialSection{
-        padding:50px 0px;
-    }
+    
 
     #videoBG{
         display: none;
@@ -3687,6 +3793,10 @@ nav li {
         transition: 0.2s ease-in;
         font-size:14px;
         letter-spacing: 1px;
+    }
+
+    .category p a{
+        color:inherit;
     }
 
     .category p:hover{
@@ -4905,54 +5015,6 @@ nav li {
         }
       } */
 
-    footer{
-        height: 400px;
-        width:100%;
-        background-color: #929292;
-        display: grid;
-        grid-template-rows: 80% 20%;
-        text-transform: none;
-    }
-
-    footer .footerEssentials{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 24px;
-    }
-
-    .footerEssentials .logoSection{
-        display: flex;
-        flex-direction: column;
-        margin-left:20px;
-    }
-
-    .footerEssentials .logoSection #footerLogo1{
-        width:50px;
-        height:50px;
-        padding:50px 10px 0px 30px;
-    }
-
-    .footerEssentials .logoSection #footerLogo2{
-        width:80px;
-        height:30px;
-        padding:0px 30px;
-    }
-
-    .footerEssentials .helpSection{
-        padding:50px 0px;
-    }
-
-    .footerEssentials .aboutSection{
-        padding:50px 0px;
-    }
-
-    .footerEssentials .socialSection{
-        padding:50px 0px;
-    }
-
 }
 
 @media only screen and (min-width:1400px){
@@ -5208,7 +5270,7 @@ nav li {
         width:100%;
         height:auto;
         position: absolute;
-        top:80%;
+        top:70%;
         left:0px;
        font-family: myFirstFont;
         font-weight:700;

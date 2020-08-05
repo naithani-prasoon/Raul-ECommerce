@@ -51,17 +51,25 @@
             </div>
             <h5 class="productTitle">{{product.title}}</h5>
             <h5 class="productPrice">${{product.price}}</h5>
+
+            
+
         </div>
         {% endif %}
+        <div class ="cartNotification" id = "cartPopUp">
+            <div class = "cartAdded">
+               item added to your cart. 
+            </div>
+        </div>
         {% endfor %}
     </div>
 
 </div>
-<div class ="cartNotification" id = "cartPopUp">
+<!-- <div class ="cartNotification" id = "cartPopUp">
     <div class = "cartAdded">
-        Added to your cart. 
+       {{product.title}} added to your cart. 
     </div>
-</div>
+</div> -->
 
 <button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>
 

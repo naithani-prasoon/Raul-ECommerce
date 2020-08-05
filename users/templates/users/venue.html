@@ -13,6 +13,11 @@
             src: url(avenir-lt-std-35-light.otf);
         }
 
+        body{
+            position: relative;
+            
+        }
+
         input[type=text], input[type=password],input[type=email]{
             border-radius: 5px;
             padding:10px 27px;
@@ -20,19 +25,88 @@
             border:none;
         }
 
+        .venueBackground{
+            margin:0;
+            padding:0;
+            left:0;
+            top:0;
+            position: absolute;
+            background-image: url('Images/venueBack.jpg');
+            width:100%;
+            height: 100vh;
+            z-index: -1;
+            background-position: center;
+            background-size: cover;
+            filter: brightness(50%);
+            overflow: hidden;
+        }
+
+        .venueBox{
+            margin:0 auto;
+            padding:20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            width:600px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .venueButton{
+            margin:0 auto 20px auto;
+
+        }
+
+        #emailButton{
+            background-color: #cfbb63;
+            border-radius: 6px;
+            padding:16px 32px;
+            margin:0 auto;
+            width:150px;
+            text-align: center;
+            transition: 0.4s ease-in-out;
+        }
+
+        #emailButton:hover{
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        #emailButton a{
+            color: rgba(0, 0, 0, 0.6);
+            font-family: myFirstFont;
+            font-size:20px;
+            font-weight: bold;
+        }
+
+        #text{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            justify-content:center;
+            text-align: center;
+            margin:100px 100px 0 100px;
+            font-size: 25px;
+        }
+
+        #text2{
+            background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            justify-content:center;
+            text-align: center;
+            margin:20px 100px 100px 100px;
+            font-size: 25px;
+        }
 
         html,body{
             margin:0;
             padding:0;
             width: 100%;
             font-family: myFirstFont;
-            overflow-x: hidden;
+            overflow: hidden;
             background-color: #6d6d6d;
             text-transform: lowercase;
             scroll-behavior: smooth;
-            scroll-snap-type: mandatory;
-            scroll-snap-points-y: repeat(100vh);
-            scroll-snap-type: y mandatory;
         }
 
         .headers{
@@ -41,8 +115,8 @@
 
         .containers1{
             height:auto;
-            padding:50px 0px;
-            margin:100px auto;
+          
+            margin:200px auto;
         }
 
         .loginRegister{
@@ -195,6 +269,10 @@
             -webkit-text-fill-color: transparent;
         }
 
+       
+
+
+
         @media only screen and (max-width:1200px){
             .loginRegister{
                 flex-wrap: wrap;
@@ -263,9 +341,16 @@
 
 
 </head>
-<h1> Please click the button below to send us an e-mail to reserve either raul retail or cafe-floor  Please make sure to include dates, times, and type of event. We can't wait to speak with you! </h1>
-<p><a href="mailto:dberhan@buffalo.edu">Send email</a></p>
 
-
+<div class = "venueBackground"></div>
+<div class = "venueBox">
+    <div class="venueText">
+        <h1 id = "text"> Please click the button below to send us an e-mail to reserve either raul retail or cafe-floor</h1>
+        <h1 id="text2">Please make sure to include dates, times, and type of event. We can't wait to speak with you! </h1>
+    </div>
+    <div class ="venueButton">
+        <p id="emailButton"><a href="mailto:dberhan@buffalo.edu" id ="email">Send email</a></p>
+    </div>
+</div>
 
 {% endblock %}
