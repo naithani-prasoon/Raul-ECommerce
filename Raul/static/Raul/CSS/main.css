@@ -8,6 +8,8 @@
 
 
 html,body{
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
     margin:0;
     padding:0;
     width: 100%;
@@ -551,7 +553,7 @@ nav li {
 }
 
 .furnitureImageMobile-2{
-    background: url('Images/Furn2.jpg');
+    background: url('Images/fun2.jpg');
     background-position: center;
     background-size: cover;
     width:90%;
@@ -977,7 +979,6 @@ footer{
 
     .furnitureHeading{
         font-size:30px;
-       font-family: myFirstFont;
         background: -webkit-linear-gradient(#f8f18e,#d6a55b);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -1026,7 +1027,7 @@ footer{
     }
 
     .floralImageMobile-2{
-        background: url('Images/Flow2.jpg');
+        background: url('Images/flow2.jpg');
         background-position: center;
         background-size: cover;
         width:90%;
