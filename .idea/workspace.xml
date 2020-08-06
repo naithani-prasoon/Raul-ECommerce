@@ -209,13 +209,6 @@
       <workItem from="1596391868844" duration="8213000" />
       <workItem from="1596677241130" duration="12258000" />
     </task>
-    <task id="LOCAL-00069" summary="Navbar fixed">
-      <created>1594604471293</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1594604471293</updated>
-    </task>
     <task id="LOCAL-00070" summary="maybe?">
       <created>1594606839441</created>
       <option name="number" value="00070" />
@@ -552,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596742225362</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="explore">
+      <created>1596742503353</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1596742503353</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +573,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="feat prod" />
     <MESSAGE value="Login/Cafe Menu / NavBar Animation / Landing Page Transition" />
     <MESSAGE value="jon" />
     <MESSAGE value="hi" />
@@ -598,7 +597,8 @@
     <MESSAGE value="commit push" />
     <MESSAGE value="gallery final" />
     <MESSAGE value="raul inc contact" />
-    <option name="LAST_COMMIT_MESSAGE" value="raul inc contact" />
+    <MESSAGE value="explore" />
+    <option name="LAST_COMMIT_MESSAGE" value="explore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="144" width="817" height="568" key="#Project_Structure" timestamp="1596684587150">
@@ -620,10 +620,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="54" width="1440" height="817" key="CommitChangelistDialog2" timestamp="1596742224898">
+    <state x="331" y="54" width="1440" height="817" key="CommitChangelistDialog2" timestamp="1596742502902">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596742224898" />
+    <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596742502902" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1596036105829" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1596435420157" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1593628212010" />
@@ -735,10 +735,10 @@
     </state>
     <state x="499" y="146" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1596078362744" />
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1596742237393">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1596742509628">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1596742237393" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1596742509628" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1596036114393" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1596435479430" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1593628223780" />
