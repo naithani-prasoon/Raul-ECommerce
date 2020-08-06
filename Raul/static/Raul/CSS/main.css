@@ -25,6 +25,12 @@ html,body{
     box-sizing: unset;
 }
 
+.mobile-dropdownButton a{
+    padding:0;
+    font-size: 18px;
+    color:white;
+}
+
 input[type=text], input[type=password],input[type=email]{
     border-radius: 5px;
     padding:10px 16px;
@@ -220,7 +226,7 @@ nav ul li a:hover{
 .dropDownMenu .dropDownButton{
     border:none;
     outline:none;
-    font-size: 16px;
+    /* font-size: 16px; */
     font-family: myFirstFont;
     background-color:transparent;
     transition: 0.4s ease-in-out;
@@ -760,6 +766,10 @@ footer{
         display: none;
     }
 
+    .layout{
+        display: none;
+    }
+
     .category{
         display: none;
     }
@@ -824,7 +834,7 @@ footer{
         width:100vw;
         overflow: hidden;
         position: relative;
-        background-image: url("../Images/8.jpg");
+        /* background-image: url("../Images/8.jpg"); */
         backface-visibility: hidden;
     }
 
@@ -1165,6 +1175,9 @@ footer{
         display: none;
     }
 
+    .layout{
+        display: none;
+    }
     
     #mobile{
         display: none;
@@ -1546,6 +1559,10 @@ footer{
 
 @media only screen and (min-width:769px) and (max-width:900px){
     .feature{
+        display: none;
+    }
+
+    .layout{
         display: none;
     }
 
@@ -1939,6 +1956,10 @@ footer{
 
     .feature{
         display: none;
+    }
+
+    .layout{
+        display:none;
     }
 
     .category{
@@ -2670,11 +2691,16 @@ footer{
     } */
 
     .bannerHead{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-image: url("Images/bannerSecond.jpg");
         height: 100vh;
         width:100%;
         overflow: hidden;
         position: relative;
-        background:#6d6d6d;
+        /* background:#6d6d6d; */
     }
 
     .bannerHeading figcaption{
@@ -2773,7 +2799,7 @@ footer{
     } */
 
     .bannerSecond{
-        background-image: url('Images/bannerThird.jpg');
+        background-image: url('Images/Layout.jpg');
         height:100vh;
         width: 100%;
         position: relative;
@@ -2783,7 +2809,9 @@ footer{
 
 
     .textHover .textHeading{
-        background-color: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.7);
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
         color: #cfbb63;
         font-size: 32px;
         padding: 16px 32px;
@@ -3893,7 +3921,9 @@ footer{
 
    
     .textHover .textHeading{
-        background-color: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.7);
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
         color: #cfbb63;
         font-size: 32px;
         padding: 16px 32px;
@@ -4961,7 +4991,9 @@ footer{
 
 
     .textHover .textHeading{
-        background-color: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.7);
+        -webkit-text-fill-color: unset;
+        -webkit-background-clip: unset;
         color: #cfbb63;
         font-size: 32px;
         padding: 16px 32px;

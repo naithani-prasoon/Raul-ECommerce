@@ -58,7 +58,7 @@
                     <a href="{% url 'password_reset' %}">Forgot Password?</a>
                 </small> -->
                <span class="psw"><a href="{% url 'password_reset' %}">Forgot password?</a></span>
-                <span class="psw" id ="accountCreate"><a href="{% url 'register' %}">Create an Account</a></span>
+                <span class="psw" id ="accountCreate"><a href="{% url 'login' %}">Create an Account</a></span>
             </div>
         </form>
     </div>
@@ -80,7 +80,7 @@
             
             <div class="centerIt">
                 
-                <span class="psw" id ="accountCreate2"><a href="#">Already have an Account?</a></span>
+                <span class="psw" id ="accountCreate2"><a href="{%url 'login'%}">Already have an Account?</a></span>
             </div>
         </form>
     </div>
@@ -259,7 +259,7 @@
                 <li>
                     <div class = "menuDropdown">
                         <button class = "mobile-dropdownButton" onclick = "mobileDropDown()">
-                            new arrivals
+                            <a  href="{% url 'sec-view' 'New Arrivals' %}"> new arrivals</a>
                     </div>
                 </li>
                 <li>
@@ -323,9 +323,9 @@
                 </li>
                 <li>
                     <div class = "menuDropdown">
-                       <a href="{% url 'Raul-product' %}"> <button class = "mobile-dropdownButton">
-                            all products
-                        </button></a>
+                        <button class = "mobile-dropdownButton">
+                            <a  href="{% url 'Raul-product' %}">all products</a>
+                        </button>
                     </div>
                 </li>
                 <li>
@@ -347,7 +347,7 @@
                 <li>
                     <div class = "menuDropdown">
                         <button class = "mobile-dropdownButton" onclick = "mobileDropDown()">
-                            venue bookings
+                            <a href ="{% url 'venue' %}">venue bookings</a>
                         </button>
                     </div>
                 </li>
@@ -394,11 +394,11 @@
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Raul_Movie_Fast.mp4' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
-            <figcaption><a href="#borderBottom"><button> explore the shop </button></a></figcaption>
+            <figcaption><a href="#here"><button> explore the shop </button></a></figcaption>
         </div>
     </div>
 
-    <div class="mobile-featured">
+    <div class="mobile-featured" id ="here">
         <div class ="featureProductsHeading" >
             featured products
         </div>
@@ -522,7 +522,7 @@
 
     <div class="filler" id ="borderBottom"></div>
 
-    <div class="horizontalScroll" id="shop">
+    <div class="horizontalScroll" id="here">
         <div class ="featureProductsHeading" >
             featured products
         </div>
