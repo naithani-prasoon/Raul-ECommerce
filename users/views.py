@@ -27,7 +27,6 @@ def login_register(request):
                                     )
             login(request, new_user)
             Register_form = CreateUserForm()
-            messages.success(request, 'You are now logged in!')
             return HttpResponseRedirect(reverse("cart"))
         else:
             form = LoginForms()
