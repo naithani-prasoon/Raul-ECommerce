@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>A simple, clean, and responsive HTML invoice template</title>
+    <title>Order Confirmed</title>
 
     <style>
         .invoice-box {
@@ -16,7 +16,6 @@
             font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
             color: #555;
         }
-
         .invoice-box table {
             width: 100%;
             line-height: inherit;
@@ -107,7 +106,7 @@
                 <table>
                     <tr>
                         <td class="title">
-                            Raul Retail
+                            Raùl
                         </td>
 
                         <td>
@@ -134,14 +133,14 @@
                         </td>
 
                         <td>
-                            Billing Address<br>
-                            {{billing_address.address}}<br>
-                            {% if  billing_address.address1%}
-                            {{billing_address.address2}}<br>
-                            {%else%}
-                            {{billing_address.city}}, {{billing_address.state}} {{billing_address.zipcode}}
-                            {%endif%}
-                        </td>
+                        Billing Address<br>
+                        {{billing_address.address}}<br>
+                        {% if  billing_address.address1%}
+                        {{billing_address.address2}}<br>
+                        {%else%}
+                        {{billing_address.city}}, {{billing_address.state}} {{billing_address.zipcode}}
+                        {%endif%}
+                    </td>
                     </tr>
                 </table>
             </td>
@@ -158,15 +157,17 @@
                 Description
         </td>
             <td>
+                Quantity
+            </td>
+            <td>
                 Price
             </td>
         </tr>
-
+        {% for item in cart.cartitem_set.all%}
         <tr class="item">
-            {% for item in cart.cartitem_set.all%}
 
             <td>
-                {{item.product}}<br>
+                {{item.product}}
             </td>
 
             <td>
@@ -188,7 +189,20 @@
             </td>
 
             <td>
-                {{item.product.price}}<br>
+                {% if item.variation.colors %}
+                {% for sub_item in item.variation.colors%}
+                {{sub_item.price}}<br>
+                {% endfor %}
+
+
+                {% elif item.variation.sizes %}
+                {% for sub_item in item.variation.sizes%}
+                {{sub_item.price}}<br>
+                {% endfor %}
+
+                {%else%}
+                {{item.product.price}}
+                {% endif %}
             </td>
 
         </tr>

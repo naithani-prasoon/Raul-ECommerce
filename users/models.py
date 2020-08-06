@@ -34,7 +34,7 @@ class UserAddress(models.Model):
     firstname = models.CharField(max_length=120,null=True)
     lastname =  models.CharField(max_length=120,null=True)
     address = models.CharField(max_length=120,null=True)
-    address2 = models.CharField(max_length=120,null=True)
+    address2 = models.CharField(max_length=120,null=True,default="")
     address3 = models.CharField(max_length=120,null=True)
     city = models.CharField(max_length=120,null=True)
     state = models.CharField(max_length=120,null=True)
@@ -52,7 +52,7 @@ class UserAddress(models.Model):
 
 
     def get_address(self):
-        return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
+        return "%s, %s, %s, %s, %s" %(self.address, self.address2, self.city, self.state, self.zipcode)
 
     objects = UserAddressManager()
 
@@ -89,7 +89,7 @@ class BillingAddress(models.Model):
     firstname = models.CharField(max_length=120,null=True)
     lastname =  models.CharField(max_length=120,null=True)
     address = models.CharField(max_length=120,null=True)
-    address2 = models.CharField(max_length=120,null=True)
+    address2 = models.CharField(max_length=120,null=True,default="")
     address3 = models.CharField(max_length=120,null=True)
     city = models.CharField(max_length=120,null=True)
     state = models.CharField(max_length=120,null=True)
@@ -105,7 +105,7 @@ class BillingAddress(models.Model):
 
 
     def get_address(self):
-        return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
+        return "%s, %s, %s, %s, %s" %(self.address, self.address2,self.city, self.state, self.zipcode)
 
     objects = UserAddressManager()
 
