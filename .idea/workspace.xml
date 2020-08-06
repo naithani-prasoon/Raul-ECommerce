@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/furn2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/Images/fun2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/single_product.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,19 +88,19 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
-      <recent name="$PROJECT_DIR$/media" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
-      <recent name="$PROJECT_DIR$/orders/static/orders" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
+      <recent name="$PROJECT_DIR$/media" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul" />
+      <recent name="$PROJECT_DIR$/orders/static/orders" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.cart.html">
