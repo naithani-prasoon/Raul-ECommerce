@@ -22,14 +22,13 @@ from django.contrib import messages
 
 
 class UserAddressForm(forms.ModelForm):
-    default= forms.BooleanField(label="Make this your default Address?",required=False)
     address2 = forms.CharField(required=False)
     firstname = forms.CharField(label="First Name")
     lastname = forms.CharField(label="Last Name")
     billing = forms.BooleanField(label="Make this you billing address?",required=False)
     class Meta:
         model = UserAddress
-        fields = ['firstname','lastname','address','address2','city','state','country', 'zipcode', 'phone','billing']
+        fields = ['firstname','lastname','address','address2','city','state','zipcode', 'phone','billing']
         widgets = {
             'firstname': forms.TextInput(attrs = {'placeholder': 'Username'}),
             'password': forms.TextInput(attrs = {'placeholder': 'Password'}),
@@ -48,13 +47,12 @@ class UserAddressForm(forms.ModelForm):
 User = get_user_model()
 
 class BillingAddressForm(forms.ModelForm):
-    default = forms.BooleanField(label="Make this your default Address?",required=False)
     address2 = forms.CharField(required=False)
     firstname = forms.CharField(label="First Name")
     lastname = forms.CharField(label="Last Name")
     class Meta:
         model = BillingAddress
-        fields = ['firstname','lastname','address','address2','city','state','country', 'zipcode', 'phone','default']
+        fields = ['firstname','lastname','address','address2','city','state','zipcode','phone']
         widgets = {
             'firstname': forms.TextInput(attrs = {'placeholder': 'Username'}),
             'password': forms.TextInput(attrs = {'placeholder': 'Password'}),

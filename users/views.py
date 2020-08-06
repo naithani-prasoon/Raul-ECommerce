@@ -90,14 +90,14 @@ def add_address(request):
             if User.is_authenticated:
                 new_address.user = request.user
                 new_address.save()
-            is_default= form.cleaned_data["default"]
+            #is_default= form.cleaned_data["default"]
             billing = form.cleaned_data["billing"]
             First_Name = form.cleaned_data["zipcode"]
             Last_Name = form.cleaned_data["city"]
-            if is_default:
-                default_address, created = UserDefaultAddress.objects.get_or_create(user=request.user)
-                default_address.shipping= new_address
-                default_address.save()
+            #if is_default:
+               # default_address, created = UserDefaultAddress.objects.get_or_create(user=request.user)
+               # default_address.shipping= new_address
+               # default_address.save()
             if billing:
                 billing_form = BillingAddressForm(request.POST)
                 billing_form.zipcode = First_Name

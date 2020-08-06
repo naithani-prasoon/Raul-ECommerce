@@ -397,7 +397,7 @@ figure img{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: url('Images/bannerSecond.jpg');
+    background-image: url('Images/mainbanner.jpg');
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -444,8 +444,16 @@ nav li {
     display: inline-block;
     padding:10px 0;
   }
-  
-  .mobile-dropdownContent {
+
+.menuDropdown2 {
+    position: relative;
+    display: inline-block;
+    padding:10px 0;
+}
+
+
+
+.mobile-dropdownContent {
     display: none;
     background-color: transparent;
     min-width: 160px;
@@ -525,7 +533,7 @@ nav li {
 }
 
 .floralImageMobile-2{
-    background: url('Images/Floral2.jpg');
+    background: url('Images/flow2.jpg');
     background-position: center;
     background-size: cover;
     width:90%;
@@ -543,7 +551,7 @@ nav li {
 }
 
 .furnitureImageMobile-2{
-    background: url('Images/Furniture2.jpg');
+    background: url('Images/Furn2.jpg');
     background-position: center;
     background-size: cover;
     width:90%;
@@ -561,7 +569,7 @@ nav li {
 }
 
 .tableImageMobile-2{
-    background: url('Images/Tabletop2.jpg');
+    background: url('Images/Tabletopfinal.jpg');
     background-position: center;
     background-size: cover;
     width:90%;
@@ -579,7 +587,7 @@ nav li {
 }
 
 .wallImageMobile-2{
-    background: url('Images/WallArt2.jpg');
+    background: url('Images/WallArtfinal.jpg');
     background-position: center;
     background-size: cover;
     width:90%;
@@ -597,7 +605,7 @@ nav li {
 }
 
 .decImageMobile-2{
-    background: url('Images/5.jpg');
+    background: url('Images/DecoAcc2.jpg');
     background-position: center;
     background-size: cover;
     width:90%;
@@ -1018,7 +1026,7 @@ footer{
     }
 
     .floralImageMobile-2{
-        background: url('Images/Floral2.jpg');
+        background: url('Images/Flow2.jpg');
         background-position: center;
         background-size: cover;
         width:90%;
@@ -1448,10 +1456,12 @@ footer{
     }
 
     .section .firstSection{
-        background:url('Images/bannerSecond.jpg');
+        background:url('Images/Collection1.jpg');
+        object-fit: fill;
         width:100%;
         height: 100%;
-        background-position: center bottom;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -1839,10 +1849,12 @@ footer{
     }
 
     .section .firstSection{
-        background:url('Images/bannerSecond.jpg');
+        background:url('Images/Collection1.jpg');
+        object-fit: fill;
         width:100%;
         height: 100%;
-        background-position: center bottom;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -2295,10 +2307,12 @@ footer{
     }
 
     .section .firstSection{
-        background:url('Images/bannerSecond.jpg');
+        background:url('Images/Collection1.jpg');
+        object-fit: fill;
         width:100%;
         height: 100%;
-        background-position: center bottom;
+        background-position: center;
+        background-size: cover;
         position: relative;
     }
 
@@ -2318,8 +2332,7 @@ footer{
         top: 45%;
         left: 50%;
         padding:16px 32px;
-        /* background: -webkit-linear-gradient(#f8f18e,#d6a55b); */
-        background-color: rgba(0,0,0,0.8);
+        background: rgba(0, 0, 0, 0.8) -webkit-linear-gradient(#f8f18e, #d6a55b);
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
     }
