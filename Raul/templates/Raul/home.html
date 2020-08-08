@@ -394,7 +394,7 @@
     <div class ="bannerHead" id = "mainBanner">
         <video src="{% static 'Raul/Images/Raul_Movie_Fast.mp4' %}" autoplay loop muted id = "videoBG"></video>
         <div class = "bannerHeading">
-            <figcaption><a href="#here"><button> explore the shop </button></a></figcaption>
+            <figcaption><a href="#here"><button> <div class="shopButton">explore the shop</div> </button></a></figcaption>
         </div>
     </div>
 
@@ -420,13 +420,13 @@
     <div class="furniture" id ="FurnitureSec">
         <div class="shopBack">
             <div class="furnitureHeading">
-                <span>FURNITURE</span>
+                <div class="shopButton">
+                    FURNITURE
+                </div>
                 <a href="{% url 'sec-view' 'Furniture' %}">see more</a>
             </div>
 
             <div class ="furnitureImages">
-
-
                 <a href="{% url 'sec-view' 'Furniture' %}">
                    <div class="furnitureImageMobile-1"></div>
                     <!-- <img src="{% static 'Raul/Images/FurnitureCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
@@ -443,7 +443,9 @@
     <div class="furniture" id ="FlowerSec">
         <div class="shopBack" id="flower">
             <div class="furnitureHeading">
-                <span>FLORAL</span>
+                <div class="shopButton">
+                    FLORAL
+                </div>
                 <a href="{% url 'sec-view' 'Floral' %}">see more</a>
             </div>
 
@@ -463,7 +465,9 @@
     <div class="furniture" id ="TableSec">
         <div class="shopBack" id="table">
             <div class="furnitureHeading">
-                <span>TABLETOP</span>
+                <div class="shopButton">
+                    TABLETOP
+                </div>
                 <a href="{% url 'sec-view' 'Tabletop' %}">see more</a>
             </div>
 
@@ -483,7 +487,9 @@
     <div class="furniture" id ="WallSec">
         <div class="shopBack" id="wall">
             <div class="furnitureHeading">
-                <span> WALLART </span>
+                <div class="shopButton">
+                    WALLART
+                </div>
                 <a href="{% url 'sec-view' 'Wall Art' %}">see more</a>
             </div>
 
@@ -503,7 +509,9 @@
     <div class="furniture" id ="DecorativeSec">
         <div class="shopBack" id="decorative">
             <div class="furnitureHeading">
-                <span>DECORATIVE</span>
+                <div class="shopButton">
+                    DECORATIVE
+                </div>
                 <a href="{% url 'sec-view' 'Decorative Accessories' %}">see more</a>
             </div>
 
@@ -551,11 +559,11 @@
     </div>
 
     <div class="tabsBanner">
-        <button class="tablinks" onclick="openCity(event, 'Furniture')" id="defaultOpen">Furniture</button>
-        <button class="tablinks" onclick="openCity(event, 'Floral')">Floral</button>
-        <button class="tablinks" onclick="openCity(event, 'WallArt')">Wall Art</button>
-        <button class="tablinks" onclick="openCity(event, 'TableTop')">Table Top</button>
-        <button class="tablinks" onclick="openCity(event, 'DecAcc')">Decorative Accessories</button>
+        <button class="tablinks" onclick="openCity(event, 'Furniture')" id="defaultOpen"><div class="shopButton">Furniture</div></button>
+        <button class="tablinks" onclick="openCity(event, 'Floral')"><div class="shopButton">Floral</div></button>
+        <button class="tablinks" onclick="openCity(event, 'WallArt')"><div class="shopButton">Wall Art</div></button>
+        <button class="tablinks" onclick="openCity(event, 'TableTop')"><div class="shopButton">Table Top</div></button>
+        <button class="tablinks" onclick="openCity(event, 'DecAcc')"><div class="shopButton">Decorative Accessories</div></button>
     </div>
 
     <div id="Furniture" class="tabcontent">
@@ -565,7 +573,7 @@
                 <div class="headingTab">
                     furniture
                 </div>
-                <a  href="{% url 'sec-view' 'Furniture' %}"><button>shop now</button></a>
+                <a  href="{% url 'sec-view' 'Furniture' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
                 <!-- <div class="tabImagesColumn">
@@ -586,7 +594,7 @@
                 <div class="headingTab">
                     floral
                 </div>
-                <a  href="{% url 'sec-view' 'Floral' %}"><button>shop now</button></a>
+                <a  href="{% url 'sec-view' 'Floral' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
                 <!-- <div class="tabImagesColumn">
@@ -609,7 +617,7 @@
                 <div class="headingTab">
                     wall art
                 </div>
-                <a  href="{% url 'sec-view' 'Wall Art' %}"><button>shop now</button></a>
+                <a  href="{% url 'sec-view' 'Wall Art' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
                 <!-- <div class="tabImagesColumn">
@@ -631,7 +639,7 @@
                 <div class="headingTab">
                     tabletop
                 </div>
-                <a  href="{% url 'sec-view' 'Tabletop' %}"><button>shop now</button></a>
+                <a  href="{% url 'sec-view' 'Tabletop' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
                 <!-- <div class="tabImagesColumn">
@@ -652,7 +660,7 @@
                 <div class="headingTab" id ="decorativeHeading">
                     decorative accessories
                 </div>
-                <a  href="{% url 'sec-view' 'Decorative Accessories' %}"><button>shop now</button></a>
+                <a  href="{% url 'sec-view' 'Decorative Accessories' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
                 <!-- <div class="tabImagesColumn">
@@ -747,7 +755,6 @@
         AOS.init();
     </script>
     
-
 </body>
 
 </html>

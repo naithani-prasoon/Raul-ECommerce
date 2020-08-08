@@ -111,7 +111,7 @@
             }
 
             .profile-accordion{
-                width:auto;
+                width:600px;
                 background-color: rgba(0, 0, 0, 0.1);
                 color: #cfbb63;
                 cursor: pointer;
@@ -194,6 +194,10 @@
             }
 
             @media(max-width:768px){
+
+                .logining{
+                    margin:100px auto;
+                }
                 .profile-panel{
                     width:auto;
                     padding:0;
@@ -203,12 +207,28 @@
                     padding: 10px 10px;
                 }
 
+                .profile-accordion{
+                    width: auto;
+                }
+
                 #total{
                     margin: 10px auto;
                 }
 
                 #shippingTrack{
                     width:100%;
+                }
+
+                .logining h1{
+                    text-align: center;
+                    font-size: 2em;
+                    padding: 0;
+                    margin:0 auto;
+                }
+
+                td{
+                    font-size:15px;
+                    width:30px;
                 }
             }
             
@@ -221,9 +241,9 @@
 <div class="logining">
     <h1>{{user.username}}</h1>
     <div class = "profile-tabsButton">
-        <button class="profile-tablinks" onclick="openTab(event, 'Orders')" id="defaultOpen">My Orders</button>
-        <button class="profile-tablinks" onclick="openTab(event, 'Shipping')">Shipping Addresses</button>
-        <button class="profile-tablinks" onclick="openTab(event, 'Billing')">Billing Addresses</button>
+        <button class="profile-tablinks" onclick="openTab(event, 'Orders')" id="defaultOpen"><div class="shopButton">My Orders</div></button>
+        <button class="profile-tablinks" onclick="openTab(event, 'Shipping')"><div class="shopButton">Shipping Addresses</div></button>
+        <button class="profile-tablinks" onclick="openTab(event, 'Billing')"><div class="shopButton">Billing Addresses</div></button>
     </div>
     <div id = "Orders" class = "profile-tabcontent">
         {%  for myorder in UserOrders %}
@@ -246,9 +266,9 @@
                 </tr>
                     {% for item in myorder.cart.cartitem_set.all %}
                     <tr>
-                        <td>{{ item.product }}</td>
-                        <td> {{ item.quantity}}</td>
-                        <td>${{item.product.price }}</td>
+                        <td><div class="shopButton">{{ item.product }}</div></td>
+                        <td> <div class="shopButton">{{ item.quantity}}</div></td>
+                        <td><div class="shopButton">${{item.product.price }}</div></td>
                     </tr>
                     {% endfor %}
             </table>  

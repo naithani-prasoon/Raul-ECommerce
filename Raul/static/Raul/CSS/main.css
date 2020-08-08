@@ -47,7 +47,7 @@ input[type=text], input[type=password],input[type=email]{
     left:0;
     top:0;
     color: #cfbb63;
-   font-family: myFirstFont;
+    font-family: myFirstFont;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -123,7 +123,6 @@ a{
     width: 100%;
     transition: 0.2s ease-in;
     top:0;
-    overflow: hidden;
     z-index: 99;
     color:white;
     background: transparent;
@@ -411,6 +410,12 @@ figure img{
 
 .bannerHeading figcaption a button{
     display: none;
+}
+
+.shopButton{
+    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #videoBG{
@@ -864,9 +869,7 @@ footer{
     }
 
     .bannerHeading figcaption a button{
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: transparent;
         margin:20px;
        font-family: myFirstFont;
         font-size:20px;
@@ -881,6 +884,8 @@ footer{
         font-weight: bold;
         border-radius:5px;   
     }
+
+
 
     .horizontalScroll{
         height: 850px;
@@ -1274,9 +1279,7 @@ footer{
     }
 
     .bannerHeading figcaption a button{
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: transparent;
         margin:20px;
         font-family: myFirstFont;
         font-size:35px;
@@ -1665,10 +1668,7 @@ footer{
     }
 
     .bannerHeading figcaption a button{
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin:20px;
+        background: transparent;
         font-family: myFirstFont;
         font-size:35px;
         outline: none;
@@ -2050,9 +2050,7 @@ footer{
     }
 
     .bannerHeading figcaption a button{
-        background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        background: transparent;
         font-family: myFirstFont;
         font-size:45px;
         outline: none;
