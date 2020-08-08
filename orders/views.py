@@ -229,7 +229,7 @@ def checkout(request):
         "stripe_pub": stripe_pub,
         "cart" : cart
     }
-    return render(request, 'orders/checkout.html', context)
+    return render(request, 'orders/Checkout.html', context)
 
 def OrderConfirmation(request):
     context= {}
