@@ -44,7 +44,7 @@
                     <div class='registeredAdds'>
                         <div class="box">
                             <h1> Shipping Addresses</h1>
-                            <h5> {{shipping_selected}}</h5>
+                            <h5> <div class="shopButton">{{shipping_selected}}</div></h5>
                             <input  type = "hidden" type = "radio" name="shipping_address" value="{{ shipping_selected.id }}" checked="checked"/> <br/>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                     <div class="registeredAdds">
                         <div class="box">
                             <h1>Billing Addresses</h1>
-                            <h5> {{billing_selected}}</h5>
+                            <h5> <div class="shopButton">{{billing_selected}}</div></h5>
                             <input  type = "hidden" type = "radio" name="billing_address" value="{{ billing_selected.id }}" checked="checked"/> <br/>
 
                         </div>

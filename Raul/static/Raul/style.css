@@ -217,9 +217,8 @@ h5{
 	transition: 0.4s ease-in-out;
 }
 .actions input{
-	background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color:#cfbb63;
+	background: transparent;
 	outline:none;
 	border:none;
 	padding:16px 10px;
