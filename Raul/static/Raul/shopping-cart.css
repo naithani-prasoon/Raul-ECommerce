@@ -178,6 +178,8 @@
 
     .summary{
         text-align: center;
+        justify-content: center;
+        align-items: center;
     }
 
     .summary .buttonCheckout{
@@ -466,6 +468,10 @@ input:hover{
     max-width:1100px;
     margin:10px auto;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
     
 }
 
@@ -496,6 +502,7 @@ input:hover{
     outline: none;
     border-radius: 5px;
     transition: 0.4s ease-in-out;
+    -webkit-appearance: none;
 }
 
 .summary .buttonCheckout:hover{
