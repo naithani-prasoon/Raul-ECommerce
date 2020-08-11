@@ -150,7 +150,47 @@ def delete_address(request, id):
 
 
 def venue(request):
-    return render(request, 'users/venue.html')
+    template = 'users/venue.html'
+    form = LoginForms(request.POST or None)
+    Register_form = CreateUserForm(request.POST or None)
+    cat_products = 1
+    context = {'cat_products': cat_products,'form': form,"Register_form": Register_form}
+    if 'register' in request.POST:
+        request.session.set_expiry(60)
+        if Register_form.is_valid():
+            Reg = Register_form.save(commit=False)
+            Reg.email = Reg.username
+            Reg.save()
+            #hiiii
+            new_user = authenticate(username=Register_form.cleaned_data['username'],
+                                    password=Register_form.cleaned_data['password1'],
+                                    )
+            login(request, new_user)
+            Register_form = CreateUserForm()
+            form = LoginForms()
+            context = { 'cat_products': cat_products,'form': form,"Register_form": Register_form}
+            messages.success(request, f'Your account has been created! You are now able to log in')
+            return render(request, template,context)
+        else:
+            messages.error(request, Register_form.error_messages)
+            form =LoginForms()
+            context = { 'cat_products': cat_products,'form': form,"Register_form": Register_form}
+            return render(request, template,context)
+
+    if 'login' in request.POST:
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username,password=password)
+            context = { 'cat_products': cat_products,'form': form,"Register_form": Register_form}
+            login(request,user)
+            a = 4
+        else:
+            messages.error(request, Register_form.error_messages)
+            form = LoginForms()
+            context = { 'cat_products': cat_products,'form': form,"Register_form": Register_form}
+            return render(request, template,context)
+    return render(request, template,context)
 
 # def search(request):
 #     try:
