@@ -706,12 +706,12 @@ footer{
 }
 
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes -webkit-fadein {
     from {bottom: 0; opacity: 0;} 
     to {bottom: 30px; opacity: 1;}
   }
   
-@keyframes fadein {
+@keyframes -webkit-fadein {
     from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}
   }
