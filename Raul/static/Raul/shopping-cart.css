@@ -347,9 +347,8 @@ button, input {
     text-align: center;
     outline: none;
     border: 2px solid #cfbb63;
-    background: -webkit-linear-gradient(#f8f18e,#d6a55b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: transparent;
+    color:#cfbb63;
     border-radius: 0px;
     width:100px;
     margin-bottom:15px;
