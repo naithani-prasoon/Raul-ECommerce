@@ -27,21 +27,66 @@
             grid-template-columns: 60% 40%;
         }
 
-        .left-column {
+        /* .left-column {
             position: relative;
             justify-content: center;
             text-align: center;
-        }
-
+        } */
+/* 
         .left-column img{
             width:75%;
             margin-left:auto;
             margin-right: auto;
+        } */
+
+        .left-column{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .imageThumbs{
+            display: grid;
+            grid-template-rows: 150px 150px auto auto;
+            padding:20px;
+        }
+
+        .imageTabLinks{
+            width:100px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .imageTabLinks:hover{
+            cursor: pointer;
+        }
+
+        .imageTabLinks img{
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+        }
+
+        .imageThumbsOutput{
+            padding:20px;
+            text-align: center;
+        }
+
+        .imageTabContent{
+            display: none;
+            width:90%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .imageTabContent img{
+            width:100%;
         }
 
         .right-column {
             margin-top: 60px;
-            padding:50px;
+            padding:50px 20px;
         }
 
         .product-description a{
@@ -82,7 +127,7 @@
 
         .product-configuration form{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin:0 auto;
             justify-content: center;
             align-items: center;
@@ -106,8 +151,8 @@
         }
 
         .form-control{
-            padding:10px 10px;
-            font-size:20px;
+            padding:10px 30px;
+            font-size:25px;
             margin:10px auto;
             background: transparent;
             color: #cfbb63;
@@ -147,6 +192,7 @@
             margin:0px 50px;
             text-align: center;
             font-weight: 800;
+            -webkit-appearance: none;
         }
 
         form input[type = submit]:hover{
@@ -242,10 +288,32 @@
                 grid-template-columns: none;
             }
 
-            .left-column{
+            /* .left-column{
                 justify-content: center;
                 align-items: center;
                 text-align: center;
+            } */
+
+            .left-column{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .imageTabLinks{
+                width:50px;
+                overflow: hidden;
+                position: relative;
+                padding:10px;
+                margin:0px 10px;
+            }
+
+            .imageThumbs{
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: 80px;
+                padding:20px;
+                place-content: center;
+
             }
 
             .right-column{
@@ -257,7 +325,7 @@
             }
 
             .form-control{
-                margin:20px auto;
+                margin:20px auto 0 auto;
             }
 
             form input[type = submit]{
@@ -318,12 +386,36 @@
 
     <!-- Left Column / Headphones Image -->
     <div class="left-column">
+        <div class="imageThumbs">
         {% if single_product.image %}
+            <div class="imageTabLinks" onclick="openImage(event, 'Img1')" id="defaultOpen">
+                <img src="{{ single_product.image.url }}">
+            </div>
+        {% if single_product.image3 %}
+            <div class="imageTabLinks" onclick="openImage(event, 'Img2')">
+                <img src="{{ single_product.image2.url }}">
+            </div>
+        {%endif%}
+        {%endif%}
+        </div>
+        <div class="imageThumbsOutput">
+            {% if single_product.image %}
+            <div class="imageTabContent" id = "Img1">
+                <img src="{{ single_product.image.url }}">
+            </div>
+            {% if single_product.image3 %}
+            <div class="imageTabContent" id = "Img2">
+                <img src="{{ single_product.image2.url }}">
+            </div>
+            {%endif%}
+            {%endif%}
+        </div>
+        <!-- {% if single_product.image %}
         <img src="{{ single_product.image.url }}">
         {% if single_product.image3 %}
         <img src="{{ single_product.image2.url }}">
         {%endif%}
-        {%endif%}
+        {%endif%} -->
     </div>
 
 
@@ -438,6 +530,23 @@
         var selectedOption = document.getElementById("selectVariation").value;
         document.getElementById("priceTitle").innerHTML = selectedOption;
     }
+</script>
+<script>
+    function openImage(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("imageTabContent");
+        for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("imageTabLinks");
+        for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    document.getElementById("defaultOpen").click();
 </script>
 
 
