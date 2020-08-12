@@ -4,8 +4,11 @@
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/categories.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,13 +213,6 @@
       <workItem from="1596329951223" duration="729000" />
       <workItem from="1596391868844" duration="8213000" />
       <workItem from="1596677241130" duration="12258000" />
-    </task>
-    <task id="LOCAL-00075" summary="Form and backtrack">
-      <created>1594759285519</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1594759285520</updated>
     </task>
     <task id="LOCAL-00076" summary="fixes">
       <created>1594766394056</created>
@@ -554,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597227449201</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="hi">
+      <created>1597255052474</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1597255052474</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +578,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="hi" />
     <MESSAGE value="pictues fixes" />
     <MESSAGE value="more pics" />
     <MESSAGE value="wine menu" />
@@ -600,7 +602,8 @@
     <MESSAGE value="explore" />
     <MESSAGE value="push" />
     <MESSAGE value="pics" />
-    <option name="LAST_COMMIT_MESSAGE" value="pics" />
+    <MESSAGE value="hi" />
+    <option name="LAST_COMMIT_MESSAGE" value="hi" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="144" width="817" height="568" key="#Project_Structure" timestamp="1596684587150">
@@ -622,11 +625,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="23" width="1440" height="817" key="CommitChangelistDialog2" timestamp="1597227448601">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state x="331" y="23" width="1440" height="817" key="CommitChangelistDialog2" timestamp="1597255052255">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596742502902" />
-    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1597163680284" />
+    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1597255052255" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1597227448601" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1593628212010" />
     <state x="1881" y="109" key="CommitChangelistDialog2/0.23.1440.813/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594262605846" />
@@ -737,11 +740,11 @@
     </state>
     <state x="499" y="146" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1596078362744" />
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="193" key="Vcs.Push.Dialog.v2" timestamp="1597227459726">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state x="320" y="193" key="Vcs.Push.Dialog.v2" timestamp="1597255060725">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1596742509628" />
-    <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1597163690749" />
+    <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1597255060725" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1597227459726" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1593628223780" />
     <state x="1867" y="318" key="Vcs.Push.Dialog.v2/0.23.1440.813/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594262625376" />
