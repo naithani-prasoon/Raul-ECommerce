@@ -59,7 +59,7 @@
 
                                                         <a href="{% url 'Raul-single' item.product.slug %}">{{item.product}}</a>
                                                         <div class="product-info">
-                                                            <div>Description: <span class="value">{{item.product.description}}</span></div>
+                                                            <div>Description:<br> <span class="value">{{item.product.description}}</span></div>
                                                             {% for sub_item in item.variation.all%}
                                                                 <div> <span class="value">{{sub_item.title}}</span></div>
                                                             {% endfor %}

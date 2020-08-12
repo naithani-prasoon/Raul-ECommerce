@@ -255,7 +255,7 @@
             <li>
                 <div class = "menuDropdown">
                     <button class = "mobile-dropdownButton">
-                       <a href ="{% url 'cart' %}" > new arrivals </a>
+                       <a href ="{% url 'sec-view' 'New Arrivals' %}" > new arrivals </a>
                         </button>
                 </div>
             </li>
@@ -320,9 +320,9 @@
             </li>
             <li>
                 <div class = "menuDropdown">
-                    <a href="{% url 'Raul-product' %}"><button class = "mobile-dropdownButton">
-                        all products
-                    </button></a>
+                    <button class = "mobile-dropdownButton">
+                        <a  href="{% url 'Raul-product' %}">all products</a>
+                    </button>
                 </div>
             </li>
             <li>

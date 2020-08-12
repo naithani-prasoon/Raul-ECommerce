@@ -353,7 +353,7 @@ def add_to_cart(request, slug):
     cart.pennies_total = cart.total * 100
     cart.save()
     time.sleep(1.5)
-    return HttpResponse('<script>history.back();</script>')
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
 def update_cart(request, slug):
