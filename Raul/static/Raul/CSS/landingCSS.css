@@ -6,11 +6,16 @@
     src: url(avenir-lt-std-35-light.otf);
 }
 
+@font-face {
+    font-family: mySecondFont;
+    src: url(BrisaRegular.ttf);
+}
+
 body{
     margin:0;
     padding:0;
     height:100vh;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: myFirstFont;
     overflow: hidden;
     justify-items: center;
     align-items: center;
@@ -289,7 +294,7 @@ a .container p{
     margin-right: auto;
     font-size: 75px;
     color: white;
-    font-family: myFirstFont;
+    font-family: mySecondFont;
     letter-spacing: 4px;
     font-weight: bolder;
     transition: 0.4s ease-in-out;
