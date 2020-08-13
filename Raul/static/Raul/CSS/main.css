@@ -4894,6 +4894,8 @@ footer{
         transition: 0.4s ease-in-out;
         border-bottom: 1px solid black;
         animation: slideInNav 1s;
+        -webkit-animation-duration: 1s;
+        -webkit-animation: slideInNav;
         text-align: center;
        
     }
@@ -4904,6 +4906,15 @@ footer{
         }
         100%{
             transform: translateY(0);
+        }
+    }
+
+    @-webkit-keyframes slideInNav{
+        0%{
+            -webkit-transform: translateY(-100px);
+        }
+        100%{
+            -webkit-transform: translateY(0);
         }
     }
 
@@ -4920,6 +4931,7 @@ footer{
         flex: auto;
         text-align: center;
     }
+
 
     .dropDownContentLinks a{
         color:white;
