@@ -54,8 +54,8 @@ h1{
     background-image: url('Images/RaulRetail_Feb13th2020__3176.jpg');
     width:100%;
     height:100vh;
-    background-size: cover;
-    background-position: bottom center;
+    background-size: contain;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -230,7 +230,7 @@ h1{
     padding:10px 0;
 }
 
-@media only screen and (max-width:px){
+@media only screen and (max-width:768px){
     .cafeLogo img{
         width:90%;
     }
