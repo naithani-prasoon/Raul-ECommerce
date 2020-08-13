@@ -2572,7 +2572,7 @@ footer{
     }
 
     .category{
-        overflow: hidden;
+        /* overflow: hidden; */
         color:transparent;
         font-family: myFirstFont;
         display: flex;
@@ -3691,7 +3691,7 @@ footer{
     }
 
     .category{
-        overflow: hidden;
+        /* overflow: hidden; */
         color:transparent;
        font-family: myFirstFont;
         display: flex;
@@ -4817,7 +4817,7 @@ footer{
     }
 
     .category{
-        overflow: hidden;
+        /* overflow: hidden; */
         color:transparent;
        font-family: myFirstFont;
         display: flex;
