@@ -37,14 +37,101 @@
             color: #ffffff;
             font-size: 30px;
         }
+
+        .fixed{
+            background-color: transparent;
+        }
+
+        #navcontainers.fixed{
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 80px;
+            font-size: 12px;
+        }
+
+        #navlists{
+            background-color: transparent;
+        }
+
+        #store{
+            width:100%;
+            height:0%;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.95);
+            position: fixed;
+            left:0;
+            top:0;
+            color: #cfbb63;
+            font-family: myFirstFont;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            transition: 0.4s ease-in-out;
+            z-index:100;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #store a p{
+            font-size:4em;
+            font-weight: 900;
+            padding:0px;
+            letter-spacing: 0.2em;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            color:#cfbb63;
+        }
+
+        #store #cross{
+            font-size: 2em;
+            color: #cfbb63;
+            margin-bottom: 20px;
+        }
+
+        #store a p:hover{
+            color: orange;
+            cursor: pointer;
+        }
+
+        #store #cross:hover{
+            cursor: pointer;
+            color:orange;
+        }
+
+        #navlists li {
+            /*background: #000;*/
+            margin-top: 10px;
+            display: inline-block;
+            padding: 0 44px 0 44px;
+        }
+        /*
+        @media (min-aspect-ratio: 16/9) {
+          .fullscreen-bg__video {
+            height: 300%;
+            top: -100%;
+          }
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+          .fullscreen-bg__video {
+            width: 300%;
+            left: -100%;
+          }
+        }
+        */
     </style>
 </head>
 
 <body>
 
-<div id="navcontainer" class="fixed">
-    <div id="logo">
-        <img src="{%static 'Raul_Inc/Images/raulAvila.png' %}"/>
+<div id="navcontainers" class="fixed">
+    <div id="logo" class="home-logo" onclick="openStore()"> <img src="{%static 'Raul_Inc/Images/raulAvila.png' %}"/>
     </div>
     <ul id="navlist">
         <li><a href="{%url 'Raul_Inc_Home' %}">HOME</a></li>
@@ -59,7 +146,7 @@
                     <img src="{%static 'Raul_Inc/Images/facebook.ico' %}" width="17" height="17">
                 </a>
                 <a href="https://twitter.com/RaulAvilaInc">
-                    <img src="{%static 'Raul_Inc/Images/Twitter10.png' %}" width="17" height="17">
+                    <img src="{%static 'Raul_Inc/Images/twitter10.png' %}" width="17" height="17">
                 </a>
                 <a href="http://instagram.com/raulavilainc">
                     <img src="{%static 'Raul_Inc/Images/ig10.png' %}" width="17" height="17">
@@ -70,6 +157,7 @@
 </div>
 
 <div id="scrolldown"><a onClick="return window.scrollBy(0, 0.5*window.innerHeight);"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a></div>
+
 
 <div id="pageContent">
 
@@ -318,8 +406,34 @@
     </div>
 
 </div> <!-- pageContent -->
+<div id ="store">
+    <p onclick="closeStore()" id="cross">
+        X
+    </p>
 
+    <a href = "{% url 'Raul_Inc_cafe' %}">
+        <p>
+            Cafe-Flor
+        </p>
+    </a>
+
+    <a href ="{% url 'Raul-SecondHome' %}">
+        <p>
+            raùl
+        </p>
+    </a>
+</div>
 <!--  JAVASCRIPT -->
+<script type="text/javascript" src="{% static 'Raul_Inc/JS/main.js' %}" ></script>
+<script>
+    function openStore(){
+        document.getElementById("store").style.height = "100%";
+    }
+
+    function closeStore(){
+        document.getElementById("store").style.height = "0%";
+    }
+</script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
 <script type="text/javascript">
@@ -871,6 +985,8 @@
             }
         }
 
+
+
         //when we stop sliding
         //we may want that the closest picture to the center
         //of the window stays centered
@@ -898,8 +1014,6 @@
         }
     });
 </script>
-
-<script type="text/javascript" src="js/main.js" ></script>
 
 </body>
 </html>

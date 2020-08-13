@@ -230,10 +230,11 @@ h1{
     padding:10px 0;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:px){
     .cafeLogo img{
         width:90%;
     }
+
     .menuButton button{
         margin: 10px;
     }
