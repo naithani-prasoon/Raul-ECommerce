@@ -16,6 +16,13 @@ body {
 html {overflow-x:hidden;}
 body {margin:0;padding:0;}
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(avenir-lt-std-35-light.otf);
+}
+
 
 #wrapper {
     border: 1px solid black;
@@ -385,20 +392,73 @@ a:link {
 #thumbContainer .content img {
     width: 100%;
 }
+
+
 @media (min-width: 769px) {
     #thumbContainer .container {
         width: 760px;
+    }
+    .fullscreen-bg {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
+        height: 100%;
+    
+    }
+    
+    .fullscreen-bg__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width:100vw;
     }
 }
 @media (min-width: 1200px) {
     #thumbContainer .container {
         width: 1210px;
     }
+    .fullscreen-bg {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -100;
+        height: 100%;
+    
+    }
+    
+    .fullscreen-bg__video {
+        position: absolute;
+        top: -600px;
+        left: 0;
+        width:100vw;
+    }
 }
 @media (min-width: 1600px) {
     #thumbContainer .container {
         width: 1590px;
     }
+    .fullscreen-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+    height: 100%;
+
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: -600px;
+    left: 0;
+    width:100vw;
+}
 }
 #thumbContainer hr {
     border-bottom: 1px dotted #333;
@@ -413,4 +473,14 @@ a:link {
     font-size: 18px;
     padding: 10px;
     color: #999;
+}
+
+@media only screen and (max-width: 768px) {
+    .fullscreen-bg {
+        background: url("{%static 'Raul/Images/Timelapse_MetGala2019_Sqaure.m4v' %}") center center / cover no-repeat;
+    }
+
+    .fullscreen-bg__video {
+        display: none;
+    }
 }

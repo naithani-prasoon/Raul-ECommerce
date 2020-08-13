@@ -230,3 +230,41 @@ h1{
     padding:10px 0;
 }
 
+@media only screen and (max-width:768px){
+    .cafeLogo img{
+        width:90%;
+    }
+    .menuButton button{
+        margin: 10px;
+    }
+
+    .menuHead{
+        padding:0;
+    }
+
+    .menus{
+        height: 400px;
+        margin: 20px auto;
+    }
+
+    .text{
+        bottom:0;
+        top:50px;
+        left:0;
+        text-align: center;
+    }
+
+    .menuHeros{
+        grid-template-columns: unset;
+        grid-template-rows: auto auto;
+        /* place-content: center; */
+        /* align-items: center; */
+        text-align: center;
+    }
+
+    .hoursOfOperation{
+        width:90%;
+        margin: auto;
+    }
+}
+

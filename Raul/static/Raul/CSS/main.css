@@ -55,19 +55,29 @@ input[type=text], input[type=password],input[type=email]{
     flex-direction: column;
     transition: 0.4s ease-in-out;
     z-index:100;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-#store p{
+#store a p{
     font-size:4em;
     font-weight: 900;
     padding:0px;
     letter-spacing: 0.2em;
     margin-left: auto;
     margin-right: auto;
+    color:#cfbb63;
 }
 
 #store #cross{
     font-size: 2em;
+    color: #cfbb63;
+}
+
+#store a p:hover{
+    color: orange;
+    cursor: pointer;
 }
 
 #store #cross:hover{
@@ -404,6 +414,9 @@ figure img{
     background-position: center;
     background-attachment: fixed;
     background-image: url('Images/mainbanner.jpg');
+    -webkit-background-size:cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -855,8 +868,6 @@ footer{
         width:100vw;
         overflow: hidden;
         position: relative;
-        /* background-image: url("../Images/8.jpg"); */
-        backface-visibility: hidden;
     }
 
     .bannerHeading{
@@ -2718,7 +2729,6 @@ footer{
         width:100%;
         overflow: hidden;
         position: relative;
-        /* background:#6d6d6d; */
     }
 
     .bannerHeading figcaption{
@@ -4895,7 +4905,7 @@ footer{
         border-bottom: 1px solid black;
         animation: slideInNav 1s;
         -webkit-animation-duration: 1s;
-        -webkit-animation: slideInNav;
+        -webkit-animation: slideInNav 1s;
         text-align: center;
        
     }

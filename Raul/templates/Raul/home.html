@@ -54,9 +54,6 @@
             </div>
 
             <div class="centerIt" id="links">
-                <!-- <small class="text-muted ml-2">
-                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
-                </small> -->
                <span class="psw"><a href="{% url 'password_reset' %}">Forgot password?</a></span>
                 <span class="psw" id ="accountCreate"><a href="{% url 'login' %}">Create an Account</a></span>
             </div>
@@ -88,16 +85,16 @@
     <div class = "headers" id = "headerOnScroll">
         <figure id="figureOnScroll">
             <div class="navbarIcons"> 
-                <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us"></p>
+                <p><img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}" alt="Contact Us" draggable="false"></p>
                 <div class="hoverDiv2">
                     <span style="letter-spacing: 2px;">CONTACT US</span><br><br><br>
-                    <img src="{% static 'Raul/Icons/Icons_Small/email.png' %}"> <span>sales@raulretail.com</span><br><br>
-                    <img src="{% static 'Raul/Icons/Icons_Small/phone.png' %}"id="phoneContact"> <span>(347)-947-7200</span>
+                    <span>sales@raulretail.com</span><br><br>
+                    <span>(347)-947-7200</span>
                 </div>
             </div>
 
             <div class="navbarIcons"> 
-                <p><img src="{% static 'Raul/Icons/Icons_Small/location.png' %}" alt="Location"></p>
+                <p><img src="{% static 'Raul/Icons/Icons_Small/location.png' %}" alt="Location" draggable="false"></p>
                 <div class="hoverDiv3">
                     <span style="letter-spacing: 2px;">VISIT US</span><br><br><br>
                     <span>216 8th Avenue, <br>New York, NY 10011</span><br><br>
@@ -106,29 +103,29 @@
                 </div>
             </div>
 
-            <img src="{% static 'Raul/Images/raullogo.png' %}" alt="Raul Logo" width="6%"  onclick="openStore()" id="logo">
+            <img src="{% static 'Raul/Images/raullogo.png' %}" alt="Raul Logo" width="6%"  onclick="openStore()" id="logo" draggable="false">
 
             {% if user.is_authenticated %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home Icon" draggable="false"> </p></a>
             <div class="navbarIcons"> 
-                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
+                <p><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login Icon" draggable="false"></p>
                 <div class="hoverDiv">
                     <span><a href="{% url 'profile' %}">Profile</a></span><br><br>
                     <span><a href="{% url 'logout' %}"> Logout </a></span>
                 </div>
             </div>
-            <a href="{% url 'cart' %}" title="Shopping Cart"> <p> {{request.session.items_total}}  <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" > </p></a>
+            <a href="{% url 'cart' %}" title="Shopping Cart"> <p> {{request.session.items_total}}  <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" draggable="false"> </p></a>
 
             {% else %}
-            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home"> </p></a>
+            <a href="{% url 'Raul-SecondHome' %}"><p> <img src="{% static 'Raul/Icons/Icons_Small/home.png' %}" alt="Home Icon" draggable="false"> </p></a>
             <div class="navbarIcons"> 
-                <p title="Login or Register"><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login"></p>
+                <p title="Login or Register"><img src="{% static 'Raul/Icons/Icons_Small/login.png' %}" alt="Login Icon" draggable="false"></p>
                 <div class="hoverDiv" title="Login or Register">
                     <span><a href="#" onclick="document.getElementById('id01').style.display='block'">Login</a></span><br><br>
                     <span><a href="#" onclick="document.getElementById('id02').style.display='block'">Register</a></span>
                 </div>
             </div>
-            <a href="{% url 'cart' %}" title="Shopping Cart"> <p>{{request.session.items_total}}    <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Cart"> </p></a>
+            <a href="{% url 'cart' %}" title="Shopping Cart"> <p>{{request.session.items_total}}    <img src="{% static 'Raul/Icons/Icons_Small/cart.png' %}" alt="Shopping Cart" draggable="false"></p></a>
             {% endif %}
 
         </figure>
@@ -137,18 +134,6 @@
 
             <div class = "dropDownMenu">
                 <p class="dropDownButton"><a  href="{% url 'sec-view' 'New Arrivals' %}">New Arrivals</a></p>
-<!--                <div class="dropDownContent">-->
-<!--                    <div class="dropDownContentLinks">-->
-<!--                        <a>Colored Glass Collection</a>-->
-<!--                        <a>Floral Bird Cachepot Collection</a>-->
-<!--                        <a>Blue Wave Cachepot & Bone Frame Collection</a>-->
-<!--                        <a>Clear Glass Collection</a>-->
-<!--                        <a>Lexi Cachepot & Cream Tealight Collection</a>-->
-<!--                        <a>Ceramic & Cement Pot Collection</a>-->
-<!--                        <a>Smoked Cut Glass Collection</a>-->
-<!--                        <a>eylissa & norro vase collection</a>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
             <div class = "dropDownMenu">
                 <p class="dropDownButton"><a  href="{% url 'sec-view' 'Decorative Accessories' %}">Decorative Accessories</a></p>
@@ -231,30 +216,30 @@
     </div>
 
     <div class="mobile-headers">
-        <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="logo" width="6%" id="logo" onclick="openStore()"></figcaption>
+        <figcaption><img src="{% static 'Raul/Images/raullogo.png' %}" alt="Raul Logo" width="6%" id="logo" onclick="openStore()" draggable="false"></figcaption>
 
         <nav>
             <div class ="mobile-actions">
-                <a href="{% url 'Raul-SecondHome' %}"><img src="{% static 'Raul/Icons/Icons_Large/home.png' %}" alt="Home"></a>
+                <a href="{% url 'Raul-SecondHome' %}"><img src="{% static 'Raul/Icons/Icons_Large/home.png' %}" alt="Mobile Home Icon" draggable="false"></a>
                 {% if user.is_authenticated %}
-                <a onclick="openProfile()"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login"></a>
+                <a onclick="openProfile()"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Mobile Login Icon" draggable="false"></a>
                 <div class = "profileDropDown">
                     <div class="profileOptions" id = "profileDrop">
-                        <a onclick="closeProfile()">X</a>
+                        <a onclick="closeProfile()" title="Close This">X</a>
                         <a href="{% url 'profile' %}">Profile</a>
                         <a href="{% url 'logout' %}">Logout</a>
                     </div>
                 </div>
                 {% else %}
-                <a href="{% url 'login' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Login"></a>
+                <a href="{% url 'login' %}" title="Shopping Cart" id = "mobile-shopping"><img src = "{% static 'Raul/Icons/Icons_Large/login.png' %}" alt="Mobile Login Icon" draggable="false"></a>
                 {% endif %}
-                <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Cart"></a>
-                <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false"></a>
+                <a href="{% url 'cart' %}" title="Shopping Cart" id = "mobile-shopping"><img src="{% static 'Raul/Icons/Icons_Large/cart.png' %}" alt="Mobile Shopping-Cart" draggable="false"></a>
+                <a><img src = "{% static 'Raul/Images/hamburgerIcon.png' %}" class="menuBar" id="menuHam" onclick="openNav()" draggable="false" alt="Categories Menu"></a>
             </div>
             <ul id="contentHam">
 
                 <li class="exitButton">
-                    <img src="{% static 'Raul/CSS/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false">
+                    <img src="{% static 'Raul/CSS/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false" alt="Close Categories" draggable="false">
                 </li>
                 <li>
                     <div class = "menuDropdown">
@@ -358,7 +343,7 @@
     </div>
 
     <div id ="store">
-        <p onclick="closeStore()" id="cross">
+        <p onclick="closeStore()" id="cross" title="Close This">
             X
         </p>
 
@@ -392,7 +377,7 @@
 
 
     <div class ="bannerHead" id = "mainBanner">
-        <video src="{% static 'Raul/Images/Raul_Movie_Fast.mp4' %}" autoplay loop muted id = "videoBG"></video>
+        <video src="{% static 'Raul/Images/Raul_Movie_Fast.mp4' %}" autoplay loop muted id = "videoBG" alt ="Raul Video"></video>
         <div class = "bannerHeading">
             <figcaption><a href="#borderBottom"><button> <div class="shopButton">explore the shop</div> </button></a></figcaption>
         </div>
@@ -405,7 +390,7 @@
         <div class="mobileGrid">
             {%for item in Feat%}
                     <a href="{% url 'Raul-single' item.product.slug %}">
-            <img src="{{item.product.image.url}}" draggable="false" alt="Furniture Photo" class="imageAvatar"></a>
+            <img src="{{item.product.image.url}}" draggable="false" alt="Featured Products" class="imageAvatar"></a>
             {%endfor%}
                 </div>
 
@@ -429,11 +414,9 @@
             <div class ="furnitureImages">
                 <a href="{% url 'sec-view' 'Furniture' %}">
                    <div class="furnitureImageMobile-1"></div>
-                    <!-- <img src="{% static 'Raul/Images/FurnitureCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Furniture' %}">
                     <div class="furnitureImageMobile-2"></div>
-                    <!-- <img src="{%static 'Raul/Images/Furniture2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -451,11 +434,9 @@
 
             <div class ="furnitureImages">
                 <a href="{% url 'sec-view' 'Floral' %}">
-                    <!-- <img src="{% static 'Raul/Images/FloralCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                     <div class="floralImageMobile-1"></div>
                 </a>
                 <a href="{% url 'sec-view' 'Floral' %}">
-                    <!-- <img src="{%static 'Raul/Images/Floral2.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                     <div class="floralImageMobile-2"></div>
                 </a>
             </div>
@@ -474,11 +455,9 @@
             <div class ="furnitureImages">
                 <a href="{% url 'sec-view' 'Tabletop' %}">
                     <div class="tableImageMobile-1"></div>
-                    <!-- <img src="{% static 'Raul/Images/TabletopCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Tabletop' %}">
                     <div class="tableImageMobile-2"></div>
-                    <!-- <img src="{%static 'Raul/Images/Tabletopfinal.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -496,11 +475,9 @@
             <div class ="furnitureImages" id ="DecorativeSec">
                 <a href="{% url 'sec-view' 'Wall Art' %}">
                     <div class="wallImageMobile-1"></div>
-                    <!-- <img src="{% static 'Raul/Images/WallArtCategory.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Wall Art' %}">
                     <div class="wallImageMobile-2"></div>
-                    <!-- <img src="{%static 'Raul/Images/WallArtfinal.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -518,11 +495,9 @@
             <div class ="furnitureImages">
                 <a href="{% url 'sec-view' 'Decorative Accessories' %}">
                     <div class="decImageMobile-1"></div>
-                    <!-- <img src="{% static 'Raul/Images/DecoAcc.jpg' %}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
                 <a href="{% url 'sec-view' 'Decorative Accessories' %}">
                     <div class="decImageMobile-2"></div>
-                    <!-- <img src="{%static 'Raul/Images/5.jpg'%}" draggable="false" alt="Furniture Photo" class="staticImage"> -->
                 </a>
             </div>
         </div>
@@ -540,9 +515,9 @@
                 {%for item in Feat%}
                 <li>
                     <div class = "container" data-aos="fade-in">
-                        <img src="{{item.product.image.url}}" draggable="false" alt="Furniture Photo" class="imageAvatar">
+                        <img src="{{item.product.image.url}}" draggable="false" alt="Featured Products" class="imageAvatar">
                         <div class = "text">
-                            <a href ="{% url 'Raul-single' item.product.slug %}">   <div class = "textInfo"> {{item.product.title}}    </div></a>
+                            <a href ="{% url 'Raul-single' item.product.slug %}"><div class = "textInfo"> {{item.product.title}}    </div></a>
                         </div>
                     </div>
                 </li>
@@ -559,11 +534,11 @@
     </div>
 
     <div class="tabsBanner">
-        <button class="tablinks" onclick="openCity(event, 'Furniture')" id="defaultOpen"><div class="shopButton">Furniture</div></button>
-        <button class="tablinks" onclick="openCity(event, 'Floral')"><div class="shopButton">Floral</div></button>
-        <button class="tablinks" onclick="openCity(event, 'WallArt')"><div class="shopButton">Wall Art</div></button>
-        <button class="tablinks" onclick="openCity(event, 'TableTop')"><div class="shopButton">Table Top</div></button>
-        <button class="tablinks" onclick="openCity(event, 'DecAcc')"><div class="shopButton">Decorative Accessories</div></button>
+        <button class="tablinks" onclick="openTab(event, 'Furniture')" id="defaultOpen"><div class="shopButton">Furniture</div></button>
+        <button class="tablinks" onclick="openTab(event, 'Floral')"><div class="shopButton">Floral</div></button>
+        <button class="tablinks" onclick="openTab(event, 'WallArt')"><div class="shopButton">Wall Art</div></button>
+        <button class="tablinks" onclick="openTab(event, 'TableTop')"><div class="shopButton">Table Top</div></button>
+        <button class="tablinks" onclick="openTab(event, 'DecAcc')"><div class="shopButton">Decorative Accessories</div></button>
     </div>
 
     <div id="Furniture" class="tabcontent">
@@ -576,12 +551,6 @@
                 <a  href="{% url 'sec-view' 'Furniture' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
-                <!-- <div class="tabImagesColumn">
-                    <img src="{% static 'Raul/Images/furniture.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/furniture2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/furniture3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                </div> -->
                 <img src="{% static 'Raul/Images/FurnitureCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
             </div>
             
@@ -597,20 +566,11 @@
                 <a  href="{% url 'sec-view' 'Floral' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
-                <!-- <div class="tabImagesColumn">
-                    <img src="{% static 'Raul/Images/floral.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/floral2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/floral4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/floral3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                </div>
-                <img src="{% static 'Raul/Images/8.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/FloralCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/FloralCategory.jpg' %}" draggable="false" alt="Floral Photo" width="100%">
             </div>
         </div>
     </div>
     
-
-
     <div id="WallArt" class="tabcontent">
         <div class="tabSection">
             <div class="tabText">
@@ -620,14 +580,7 @@
                 <a  href="{% url 'sec-view' 'Wall Art' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
-                <!-- <div class="tabImagesColumn">
-                    <img src="{% static 'Raul/Images/wallart3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/wallart2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/wallart4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/wallart.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                </div>
-                <img src="{% static 'Raul/Images/2.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/WallArtCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/WallArtCategory.jpg' %}" draggable="false" alt="Wall Art Photo" width="100%">
             </div>
             
         </div>
@@ -642,14 +595,7 @@
                 <a  href="{% url 'sec-view' 'Tabletop' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
-                <!-- <div class="tabImagesColumn">
-                    <img src="{% static 'Raul/Images/tabletop.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/tabletop2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/tabletop3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/tabletop4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                </div>
-                <img src="{% static 'Raul/Images/3.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/TabletopCategory.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/TabletopCategory.jpg' %}" draggable="false" alt="Table Top Photo" width="100%">
             </div>
         </div>
     </div>
@@ -663,24 +609,14 @@
                 <a  href="{% url 'sec-view' 'Decorative Accessories' %}"><button><div class="shopButton">shop now</div></button></a>
             </div>
             <div class="tabImagesRow">
-                <!-- <div class="tabImagesColumn">
-                    <img src="{% static 'Raul/Images/furniture.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/furniture2.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/furniture3.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                    <img src="{% static 'Raul/Images/furniture4.jpg' %}" draggable="false" alt="Furniture Photo" width="93%">
-                </div>
-                <img src="{% static 'Raul/Images/6.jpg' %}" draggable="false" alt="Furniture Photo" width="100%"> -->
-                <img src="{% static 'Raul/Images/DecoAcc.jpg' %}" draggable="false" alt="Furniture Photo" width="100%">
+                <img src="{% static 'Raul/Images/DecoAcc.jpg' %}" draggable="false" alt="Decorative Accessories Photo" width="100%">
             </div>
         </div>
     </div>
 
-
-
     <div class="filler" id ="borderBottom"></div>
+
     <div class="filler"></div>
-
-
 
     <div class ="featureProductsHeading" id = "mobile">
         shop by layout
@@ -698,6 +634,7 @@
     </div>
 
     <div class="filler" id ="borderBottom"></div>
+    
     <div class="filler"></div>
 
     <div class ="featureProductsHeading" >
@@ -711,13 +648,11 @@
             <div class="firstSection">
                 <div class = "textHover">
                     <a href="{% url 'sec-view' 'Rug Collection' %}">  <div class = "textHeading"> <div class="shopButton">shop this collection</div> </div></a>
-
                 </div>
             </div>
             <div></div>
             <div class="secondSection">
                 <div class = "textHover">
-
                     <a href="{% url 'sec-view' 'Pot Collection' %}">  <div class = "textHeading"> <div class="shopButton">shop this collection </div></div></a>
                 </div>
             </div>
@@ -735,15 +670,14 @@
             <h1>
                 Questions? <br>Please email us at sales@raulretail.com
             </h1>
-            <a href = "https://www.instagram.com/raulavilainc/"> <img src="{%static 'Raul/Images/instagram-logo.png' %}" height="20"> </a>
-            <a href = "https://www.facebook.com/RAULAVILAINC/"> <img src="{%static 'Raul/Images/facebook1.png' %}" height="32"> </a>
-            <a href = "https://twitter.com/RaulAvilaInc/"> <img src="{%static 'Raul/Images/iconmonstr-twitter-1.svg' %}" height="23"> </a>
-
+            <a href = "https://www.instagram.com/raulavilainc/"> <img src="{%static 'Raul/Images/instagram-logo.png' %}" height="20" draggable="false" alt="Instagram Logo"> </a>
+            <a href = "https://www.facebook.com/RAULAVILAINC/"> <img src="{%static 'Raul/Images/facebook1.png' %}" height="32" draggable="false" alt="Facebook Logo"> </a>
+            <a href = "https://twitter.com/RaulAvilaInc/"> <img src="{%static 'Raul/Images/iconmonstr-twitter-1.svg' %}" height="23" draggable="false" alt="Twitter Logo"> </a>
         </div>
 
     </footer>
 
-    <button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}"> </button>
+    <button onclick="topFunction()" id="scrollTop"> <img src="{% static 'Raul/Images/arrowDown.png' %}" draggable="false" alt="Scrool To Top Navigation"> </button>
 
     <script src="{% static 'Raul/JS/script.js' %}" charset="UTF-8">
     </script>

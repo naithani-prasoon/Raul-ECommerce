@@ -37,7 +37,7 @@
     }
 }
 
-function openCity(evt, tabName) {
+function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -53,24 +53,11 @@ function openCity(evt, tabName) {
 
 document.getElementById("defaultOpen").click();
 
-// Get the modal
 var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 var modal2 = document.getElementById('id02');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
+
 
 function mobileDropDown() {
     document.getElementById("mobile-dropdown").classList.toggle("show");
@@ -110,8 +97,6 @@ function mobileDropDown() {
       }
     }
   }
-
-
 
 function openNav() {
      document.getElementById("contentHam").style.height = "100%";
