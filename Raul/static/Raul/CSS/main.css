@@ -412,16 +412,14 @@ figure img{
 .bannerHead{
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
     background-image: url('Images/mainbanner.jpg');
     -webkit-background-size:cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
-    position: relative;
-
 }
 
 .bannerHeading figcaption{

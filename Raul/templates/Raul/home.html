@@ -132,9 +132,9 @@
 
         <div class="category" id="hideOnScroll">
 
-            <div class = "dropDownMenu">
-                <p class="dropDownButton"><a  href="{% url 'sec-view' 'New Arrivals' %}">New Arrivals</a></p>
-            </div>
+<!--            <div class = "dropDownMenu">-->
+<!--                <p class="dropDownButton"><a  href="{% url 'sec-view' 'New Arrivals' %}">New Arrivals</a></p>-->
+<!--            </div>-->
             <div class = "dropDownMenu">
                 <p class="dropDownButton"><a  href="{% url 'sec-view' 'Decorative Accessories' %}">Decorative Accessories</a></p>
                 <div class="dropDownContent">
@@ -143,22 +143,23 @@
                         <a href="{% url 'cat-view' 'Decorative Objects' %}">Decorative Objects</a>
                         <a  href="{% url 'cat-view' 'Urns' %}">Urns</a>
                         <a  href="{% url 'cat-view' 'Vases and Cachepots' %}">Vases & Cachepots</a>
+                        <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>
                     </div>
                 </div>
                 
             </div>
             
-            <div class = "dropDownMenu">
-                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Tabletop' %}">Tabletop</a></p>
-                <div class="dropDownContent">
-                    <div class="dropDownContentLinks">
-                        <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>
-                        <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>
-                    </div>
+<!--            <div class = "dropDownMenu">-->
+<!--                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Tabletop' %}">Tabletop</a></p>-->
+<!--                <div class="dropDownContent">-->
+<!--                    <div class="dropDownContentLinks">-->
+<!--                        <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>-->
+<!--                        <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>-->
+<!--                    </div>-->
 
-                </div>
-            </div>
-            
+<!--                </div>-->
+<!--            </div>-->
+<!--            -->
             <div class = "dropDownMenu">
                 <p class="dropDownButton"><a  href="{% url 'sec-view' 'Furniture' %}">Furniture</a></p>
                     <div class="dropDownContent">
@@ -176,27 +177,26 @@
                 <p class="dropDownButton"><a  href="{% url 'sec-view' 'Floral' %}">Floral</a></p>
             </div>
 
-            <div class = "dropDownMenu">
-                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Wall Art' %}">Wall Art</a></p>
-                <div class="dropDownContent">
-                    <div class="dropDownContentLinks">
-                        <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>
-                        <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>
-                    </div>
-                </div>
-            </div>
+<!--            <div class = "dropDownMenu">-->
+<!--                <p class="dropDownButton"><a  href="{% url 'sec-view' 'Wall Art' %}">Wall Art</a></p>-->
+<!--                <div class="dropDownContent">-->
+<!--                    <div class="dropDownContentLinks">-->
+<!--                        <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>-->
+<!--                        <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
 
 
-            <div class = "dropDownMenu">
-                <p class="dropDownButton"><a  href="{% url 'Raul-product' %}">All Products</a></p>
-            </div>
+<!--            <div class = "dropDownMenu">-->
+<!--                <p class="dropDownButton"><a  href="{% url 'Raul-product' %}">All Products</a></p>-->
+<!--            </div>-->
 
 
             <div class = "dropDownMenu">
                 <p class="dropDownButton" ><a  href="{% url 'sec-view' 'Sale' %}">Sale</a></p>
                 <div class="dropDownContent">
                     <div class="dropDownContentLinks">
-                        <a  href="{% url 'cat-view' 'All Sale Items' %}">All Sale Items</a>
                         <a  href="{% url 'cat-view' 'Bowls' %}">Bowls</a>
                         <a  href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
                         <a  href="{% url 'cat-view' 'Glasswear' %}">Glasswear</a>
@@ -241,12 +241,12 @@
                 <li class="exitButton">
                     <img src="{% static 'Raul/CSS/exit.svg' %}" id="exitButton" onclick="closeNav()" draggable="false" alt="Close Categories" draggable="false">
                 </li>
-                <li>
-                    <div class = "menuDropdown">
-                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown()">
-                            <a  href="{% url 'sec-view' 'New Arrivals' %}"> new arrivals</a>
-                    </div>
-                </li>
+<!--                <li>-->
+<!--                    <div class = "menuDropdown">-->
+<!--                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown()">-->
+<!--                            <a  href="{% url 'sec-view' 'New Arrivals' %}"> new arrivals</a>-->
+<!--                    </div>-->
+<!--                </li>-->
                 <li>
                     <div class = "menuDropdown">
                         <button class = "mobile-dropdownButton" onclick = "mobileDropDown2()">
@@ -258,21 +258,22 @@
                             <a href="{% url 'cat-view' 'Decorative Objects' %}">Decorative Objects</a>
                             <a  href="{% url 'cat-view' 'Urns' %}">Urns</a>
                             <a  href="{% url 'cat-view' 'Vases and Cachepots' %}">Vases & Cachepots</a>
-                          </div>
-                    </div>
-                </li>
-                <li>
-                    <div class = "menuDropdown">
-                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown3()">
-                            tabletop
-                            <i class="arrow down"></i>
-                        </button>
-                        <div id="mobile-dropdown3" class="mobile-dropdownContent">
                             <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>
-                            <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>
                           </div>
                     </div>
                 </li>
+<!--                <li>-->
+<!--                    <div class = "menuDropdown">-->
+<!--                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown3()">-->
+<!--                            tabletop-->
+<!--                            <i class="arrow down"></i>-->
+<!--                        </button>-->
+<!--                        <div id="mobile-dropdown3" class="mobile-dropdownContent">-->
+<!--                            <a href="{% url 'cat-view' 'Dinnerware' %}">Dinnerware</a>-->
+<!--                            <a  href="{% url 'cat-view' 'Pitchers' %}">Pitchers</a>-->
+<!--                          </div>-->
+<!--                    </div>-->
+<!--                </li>-->
                 <li>
                     <div class = "menuDropdown">
                         <button class = "mobile-dropdownButton" onclick = "mobileDropDown4()">
@@ -294,25 +295,25 @@
                         </button>
                     </div>
                 </li>
-                <li>
-                    <div class = "menuDropdown">
-                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown5()">
-                            wall art
-                            <i class="arrow down"></i>
-                        </button>
-                        <div id="mobile-dropdown5" class="mobile-dropdownContent">
-                            <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>
-                            <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>
-                          </div>
-                    </div>
-                </li>
-                <li>
-                    <div class = "menuDropdown">
-                        <button class = "mobile-dropdownButton">
-                            <a  href="{% url 'Raul-product' %}">all products</a>
-                        </button>
-                    </div>
-                </li>
+<!--                <li>-->
+<!--                    <div class = "menuDropdown">-->
+<!--                        <button class = "mobile-dropdownButton" onclick = "mobileDropDown5()">-->
+<!--                            wall art-->
+<!--                            <i class="arrow down"></i>-->
+<!--                        </button>-->
+<!--                        <div id="mobile-dropdown5" class="mobile-dropdownContent">-->
+<!--                            <a  href="{% url 'cat-view' 'Artwork' %}">ArtWork</a>-->
+<!--                            <a  href="{% url 'cat-view' 'Mirrors' %}">Mirrors</a>-->
+<!--                          </div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <div class = "menuDropdown">-->
+<!--                        <button class = "mobile-dropdownButton">-->
+<!--                            <a  href="{% url 'Raul-product' %}">all products</a>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </li>-->
                 <li>
                     <div class = "menuDropdown">
                         <button class = "mobile-dropdownButton" onclick = "mobileDropDown6()">
@@ -320,7 +321,6 @@
                             <i class="arrow down"></i>
                         </button>
                         <div id="mobile-dropdown6" class="mobile-dropdownContent">
-                            <a  href="{% url 'cat-view' 'All Sale Items' %}">All Sale Items</a>
                             <a  href="{% url 'cat-view' 'Bowls' %}">Bowls</a>
                             <a  href="{% url 'cat-view' 'Candlelight' %}">Candlelight</a>
                             <a  href="{% url 'cat-view' 'Glasswear' %}">Glasswear</a>
