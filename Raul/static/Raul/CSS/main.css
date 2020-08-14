@@ -1146,9 +1146,13 @@ footer{
         display: none;
     }
 
-    #store{
-        display: none;
+    #store a p {
+        font-size: 25px;
     }
+
+    /* #store{
+        display: none;
+    } */
 
     #category{
         display: none;
@@ -1533,8 +1537,8 @@ footer{
         display: none;
     }
 
-    #store{
-        display: none;
+    #store a p {
+        font-size: 25px;
     }
 
     #category{
@@ -1927,8 +1931,8 @@ footer{
         display: none;
     }
 
-    #store{
-        display: none;
+    #store a p {
+        font-size: 25px;
     }
 
     #category{
