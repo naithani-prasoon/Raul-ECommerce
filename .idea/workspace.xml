@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/Brisa-Regular.7z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/BrisaRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul/static/Raul/Images/RaulRetail_Feb13th2020__3198.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images/RaulRetail_Feb13th2020__3194.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images/RaulRetail_Feb13th2020__3198.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/IMG_1288.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images/RaulRetail_Feb13th2020__3194.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raul_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/static/Raul/CSS/landingCSS.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul/templates/Raul/landing.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/cafe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/cafe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/cafe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +87,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul/static/Raul/Images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -90,18 +102,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
-      <recent name="$PROJECT_DIR$/orders/static/orders" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.cart.html">
@@ -208,27 +220,6 @@
       <workItem from="1596329951223" duration="729000" />
       <workItem from="1596391868844" duration="8213000" />
       <workItem from="1596677241130" duration="12258000" />
-    </task>
-    <task id="LOCAL-00077" summary="Raul_Inc">
-      <created>1594841900780</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1594841900780</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Raulllll">
-      <created>1594843782849</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1594843782849</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Double Form?">
-      <created>1594957208148</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1594957208148</updated>
     </task>
     <task id="LOCAL-00080" summary="Fonts">
       <created>1595006938919</created>
@@ -552,7 +543,28 @@
       <option name="project" value="LOCAL" />
       <updated>1597256932022</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="maybe commit">
+      <created>1597268154358</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1597268154359</updated>
+    </task>
+    <task id="LOCAL-00127" summary="fixes">
+      <created>1597333230115</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1597333230116</updated>
+    </task>
+    <task id="LOCAL-00128" summary="fixxes">
+      <created>1597340804754</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1597340804755</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -573,7 +585,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="more pics" />
     <MESSAGE value="wine menu" />
     <MESSAGE value="home pics iphone x" />
     <MESSAGE value="home pics done" />
@@ -586,7 +597,6 @@
     <MESSAGE value="poop" />
     <MESSAGE value="added page 7 of products" />
     <MESSAGE value="page 5" />
-    <MESSAGE value="fixes" />
     <MESSAGE value="all products should be done!" />
     <MESSAGE value="Address" />
     <MESSAGE value="Hello" />
@@ -598,7 +608,9 @@
     <MESSAGE value="pics" />
     <MESSAGE value="hi" />
     <MESSAGE value="maybe commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="maybe commit" />
+    <MESSAGE value="fixes" />
+    <MESSAGE value="fixxes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixxes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="144" width="817" height="568" key="#Project_Structure" timestamp="1596684587150">
@@ -620,13 +632,13 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="448" y="48" key="#manage/0.0.1440.900@0.0.1440.900" timestamp="1591151265388" />
-    <state x="331" y="23" width="1440" height="817" key="CommitChangelistDialog2" timestamp="1597256931463">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="331" y="23" width="958" height="808" key="CommitChangelistDialog2" timestamp="1597340804157">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596742502902" />
-    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1597256931463" />
+    <state x="331" y="23" width="958" height="808" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1597333229790" />
     <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.810@0.23.1440.810" timestamp="1597227448601" />
-    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1593628212010" />
+    <state x="331" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1597340804157" />
     <state x="1881" y="109" key="CommitChangelistDialog2/0.23.1440.813/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594262605846" />
     <state x="6" y="23" key="CommitChangelistDialog2/0.23.1440.813@0.23.1440.813" timestamp="1596252914574" />
     <state x="1470" y="94" key="CommitChangelistDialog2/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595037710757" />
@@ -704,11 +716,11 @@
     <state x="156" y="133" key="MergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1593669944571" />
     <state x="156" y="134" key="MergeDialog/0.23.1440.813@0.23.1440.813" timestamp="1596394490895" />
     <state x="1648" y="238" key="MergeDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595038125902" />
-    <state x="23" y="93" key="MultipleFileMergeDialog" timestamp="1596694412104">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="436" y="179" key="MultipleFileMergeDialog" timestamp="1597329418840">
+      <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="23" y="72" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1596078387430" />
-    <state x="436" y="179" key="MultipleFileMergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1595876912014" />
+    <state x="436" y="179" key="MultipleFileMergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1597329418840" />
     <state x="436" y="179" key="MultipleFileMergeDialog/0.23.1440.810@0.23.1440.810" timestamp="1596435006417" />
     <state x="23" y="88" key="MultipleFileMergeDialog/0.23.1440.812@0.23.1440.812" timestamp="1596133544302" />
     <state x="1471" y="179" key="MultipleFileMergeDialog/0.23.1440.813/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594261656154" />
@@ -735,13 +747,13 @@
     </state>
     <state x="499" y="146" key="VCS.ChangeListViewerDialog/0.0.1440.900@0.0.1440.900" timestamp="1596078362744" />
     <state x="499" y="156" key="VCS.ChangeListViewerDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489708056" />
-    <state x="320" y="193" key="Vcs.Push.Dialog.v2" timestamp="1597256940722">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2" timestamp="1597347380592">
+      <screen x="0" y="23" width="1440" height="812" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1596742509628" />
-    <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1597256940722" />
+    <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.808@0.23.1440.808" timestamp="1597333237815" />
     <state x="320" y="193" key="Vcs.Push.Dialog.v2/0.23.1440.810@0.23.1440.810" timestamp="1597227459726" />
-    <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1593628223780" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1597347380592" />
     <state x="1867" y="318" key="Vcs.Push.Dialog.v2/0.23.1440.813/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594262625376" />
     <state x="320" y="195" key="Vcs.Push.Dialog.v2/0.23.1440.813@0.23.1440.813" timestamp="1596252894428" />
     <state x="1867" y="317" key="Vcs.Push.Dialog.v2/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595038137926" />
@@ -774,11 +786,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1591120488524" />
-    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597254886763">
+    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597329407204">
       <screen x="0" y="23" width="1440" height="808" />
     </state>
     <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592063445852" />
-    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1597254886763" />
+    <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1597329407204" />
     <state x="525" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.810@0.23.1440.810" timestamp="1596435012994" />
     <state x="525" y="360" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.812@0.23.1440.812" timestamp="1596469355548" />
     <state x="2140" y="534" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.813/1440.94.1920.1057@1440.94.1920.1057" timestamp="1594261647969" />
