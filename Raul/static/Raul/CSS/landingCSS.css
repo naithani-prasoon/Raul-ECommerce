@@ -197,12 +197,45 @@ body{
     animation: backgroundTextFade 2s
 }
 
+.backgroundText4{
+    position: absolute;
+    justify-items: center;
+    margin:0 auto;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    z-index: -1;   
+    display: none;
+    transition: 0.4s ease-in-out;
+    background: url('Images/Raul_Inc_Landing.jpg');
+    background-color: black;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: backgroundImage 1s;
+    filter: brightness(60%);
+}
+
+.backgroundText4 figcaption{
+    justify-items: center;
+    font-size: 0px;
+    font-weight: bolder;
+    opacity: 0.4;
+    color:rgba(0,0,0,0.4);
+    transition: ease-in-out;
+    letter-spacing: 50px;
+    animation: venueAnimation 2s
+}
+
 @keyframes backgroundTextFade{
     0%{
         opacity: 0;
         transform: translateY(-100px);
     }
-    40%{
+    30%{
         opacity: 1;
         transform: translateY(0);
     }
@@ -222,15 +255,15 @@ body{
         opacity: 0;
         transform: translateY(-50px);
     }
-    40%{
+    20%{
         opacity: 0;
         transform: translateY(-50px);
     }
-    75%{
+    65%{
         opacity: 0;
         transform: translateY(-50px);
     }
-    100%{
+    90%{
         opacity: 1;
         transform: translateY(0);
     }
@@ -249,11 +282,46 @@ body{
         opacity: 0;
         transform: translateY(-50px);
     }
-    45%{
+    35%{
         opacity: 0;
         transform: translateY(-50px);
     }
-    75%{
+    65%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#venueBanner{
+    transition: 0.4s ease-in-out;
+    animation: venueAnimation 4s;
+}
+
+#venue{
+    font-size: 40px;
+}
+
+
+@keyframes venueAnimation{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    20%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    65%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    90%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100%{
         opacity: 1;
         transform: translateY(0);
     }
@@ -335,6 +403,20 @@ a #raul img{
     margin-top:-20px;
 }
 
+a #venue{
+    font-family: myFirstFont;
+    /* text-align: left;
+    width: 15em;
+    height: 6em; */
+    z-index:90;
+}
+
+a #venue img{
+    width: 55%;
+    margin-top:-20px;
+}
+}
+
 a #cafe{
     font-family: mySecondFont;
     /* text-align: right; */
@@ -372,6 +454,10 @@ a .container #bgPic{
     display: block;
 }
 
+#venueBanner:hover .backgroundText4{
+    display: block;
+}
+
 a .container:hover p{
     opacity: 1;
     border-bottom: 3px solid white;
@@ -383,6 +469,10 @@ a .container:hover p{
         padding:0;
         font-size: 30px;
         margin:20px auto;
+    }
+
+    #venue{
+        font-size: 30px;
     }
 
     a #raulAvila{
