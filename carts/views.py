@@ -281,14 +281,12 @@ def add_to_cart(request, slug):
                 if count == 0:
                     v = Variation.objects.get(product=producter, category__iexact=key, title__iexact=val.split(" ")[0])
                     pro_var.append(v)
-                    print(pro_var)
                     print("Hi")
                     Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
                     count +=1
                 if count == 1:
                     p = Variation.objects.get(product=producter, category__iexact=key, title__iexact=val.split(" ")[0])
                     pro_var.append(p)
-                    print(pro_var)
                     Var_items = CartItem.objects.filter(cart=cart, product=producter, variation=v)
                     Var_items2 = Var_items.filter(variation=p).count()
             except:
