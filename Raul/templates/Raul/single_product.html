@@ -391,11 +391,17 @@
             <div class="imageTabLinks" onclick="openImage(event, 'Img1')" id="defaultOpen">
                 <img src="{{ single_product.image.url }}">
             </div>
-        {% if single_product.image3 %}
+
+        {% if single_product.image2 %}
             <div class="imageTabLinks" onclick="openImage(event, 'Img2')">
                 <img src="{{ single_product.image2.url }}">
             </div>
         {%endif%}
+            {% if single_product.image3 %}
+            <div class="imageTabLinks" onclick="openImage(event, 'Img3')">
+                <img src="{{ single_product.image3.url }}">
+            </div>
+            {%endif%}
         {%endif%}
         </div>
         <div class="imageThumbsOutput">
@@ -403,9 +409,14 @@
             <div class="imageTabContent" id = "Img1">
                 <img src="{{ single_product.image.url }}">
             </div>
-            {% if single_product.image3 %}
+            {% if single_product.image2 %}
             <div class="imageTabContent" id = "Img2">
                 <img src="{{ single_product.image2.url }}">
+            </div>
+            {%endif%}
+            {% if single_product.image3 %}
+            <div class="imageTabContent" id = "Img3">
+                <img src="{{ single_product.image3.url }}">
             </div>
             {%endif%}
             {%endif%}
