@@ -21,9 +21,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*j5dh5_qmf(7r#(m8*uj)x&t&6_e+7mj_@mlfji7osu6w0c1*_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["45.79.24.143"]
+ALLOWED_HOSTS = ["45.79.24.143","www.raulavilainc.com"]
 
 
 # Application definition
@@ -162,5 +162,5 @@ EMAIL_HOST_PASSWORD = 'RaulWebsite123!'
 #STRIPE_PUBLISHABLE_KEY ='pk_test_51GsD2nI9Rm3HfGNqDzGloX9dMwz1QCbkCuQfSNc99EUGK4Arw7SVaC6NMGCgQMjii1WtIyEXY9FcRKQ8YCnlY9QK00kwtbjsRr'
 
 
-STRIPE_SECRET_KEY = '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'
+STRIPE_SECRET_KEY = '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'
 STRIPE_PUBLISHABLE_KEY = 'pk_live_51GsD2nI9Rm3HfGNqUsbxYjl65l8yax2MtPfkw6KGLHcWjlAjN0uG6bHj0P1FHete4YPNW1gr5ft2olhFAcpEcw8x00Hs3xE87c'
