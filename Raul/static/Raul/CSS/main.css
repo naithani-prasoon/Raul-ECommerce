@@ -1282,6 +1282,13 @@ footer{
         width: 15px;
     }
 
+    .bannerHead {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+    }
+
     .bannerHeading{
         position: absolute;
         top:50%;
@@ -1671,6 +1678,13 @@ footer{
         width: 15px;
     }
 
+    .bannerHead {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+    }
+
     .bannerHeading{
         position: absolute;
         top:50%;
@@ -2051,6 +2065,13 @@ footer{
     .exitButton{
         margin-bottom: 1em;
         margin: 20% 20% 0% 20%;
+    }
+
+    .bannerHead {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
     }
 
     .bannerHeading{
@@ -2670,66 +2691,9 @@ footer{
         color:orange;
     }
 
-    /* .dropDownMenu{
-        float: left;
-        overflow: hidden;
-        padding:30px;
-        transition: 0.4s ease-in-out;
-    }
-    .dropDownMenu .dropDownButton{
-        border:none;
-        outline:none;
-        color:white;
-        font-size: 16px;
-        font-family: myFirstFont;
-        background-color:transparent;
-        margin-top:60px;
-        transition: 0.4s ease-in-out;
-    }
-    .dropDownButton a{
-        color:white;
-    }
-    .dropDownContent{
-        display: none;
-        position: fixed;
-        left: 0;
-        background-color: black;
-        width: 100%;
-        padding:50px;
-        z-index: 2;
-        margin-left:auto;
-        margin-right:auto;
-        text-align: center;
-        transition: 0.4s ease-in-out;
-    }
-    .dropDownContent a{
-        color:white;
-        text-decoration: none;
-        padding:30px;
-        text-align: center;
-    }
-    .dropDownContent a:hover{
-        font-family: myFirstFont;
-        letter-spacing: 0.05em;
-        cursor: pointer;
-    }
-    .dropDownButton:hover{
-        font-family: myFirstFont;
-        letter-spacing: 0.05em;
-        cursor: pointer;
-    }
-    .dropDownMenu:hover .dropDownContent{
-        display: block;
-    } */
-
-    .bannerHead{
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        background-image: url("Images/bannerSecond.jpg");
+    .bannerHead {
         height: 100vh;
-        width:100%;
+        width: 100vw;
         overflow: hidden;
         position: relative;
     }
