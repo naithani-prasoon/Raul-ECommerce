@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28c6dbdf-8ad1-47de-9590-26835f1c1452" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Doc/wine menu.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul/static/Raul/Images/Raul_Movie_Fast.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/cafe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Raul_Inc/templates/Raul_Inc/cafe.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/static/orders/cc.js" beforeDir="false" afterPath="$PROJECT_DIR$/orders/static/orders/cc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/orders/templates/orders/Checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orders/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/orders/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raul_project/static/Raul/JS/cc.js" beforeDir="false" afterPath="$PROJECT_DIR$/raul_project/static/Raul/JS/cc.js" afterDir="false" />
     </list>
     <list id="a9a38701-7380-49df-95dd-216e1a931700" name="Revert &quot;yo&quot;" comment="Revert &quot;yo&quot;&#10;&#10;This reverts commit 6f0c8442" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,19 +93,19 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Doc" />
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
-      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
-      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS/Images" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
       <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$/Raul/static/Raul" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Doc" />
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/CSS/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/CSS" />
+      <recent name="$PROJECT_DIR$/Raul_Inc/static/Raul_Inc/Images" />
+      <recent name="$PROJECT_DIR$/Raul/static/Raul/Images" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.cart.html">
@@ -213,14 +214,8 @@
       <workItem from="1596677241130" duration="12258000" />
       <workItem from="1598538974229" duration="1099000" />
       <workItem from="1598824470154" duration="135000" />
-      <workItem from="1599850079571" duration="236000" />
-    </task>
-    <task id="LOCAL-00083" summary="cafe">
-      <created>1595210833210</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1595210833210</updated>
+      <workItem from="1599850079571" duration="1221000" />
+      <workItem from="1599928833638" duration="1185000" />
     </task>
     <task id="LOCAL-00084" summary="Ok almost done">
       <created>1595300075368</created>
@@ -558,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598539275095</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="Menu">
+      <created>1599850374048</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1599850374049</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +581,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="PlsWork" />
     <MESSAGE value="Werk" />
     <MESSAGE value="Oush" />
     <MESSAGE value="HomePage FIxes" />
@@ -604,7 +605,8 @@
     <MESSAGE value="new font" />
     <MESSAGE value="NavBar CHanges" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu" />
   </component>
   <component name="WindowStateProjectService">
     <state x="527" y="144" width="817" height="568" key="#Project_Structure" timestamp="1596684587150">
@@ -622,8 +624,8 @@
       <screen x="0" y="23" width="1440" height="817" />
     </state>
     <state x="829" y="243" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.817@0.23.1440.817" timestamp="1594535113522" />
-    <state x="331" y="23" width="958" height="808" key="CommitChangelistDialog2" timestamp="1598539274620">
-      <screen x="0" y="23" width="1440" height="810" />
+    <state x="30" y="23" width="958" height="808" key="CommitChangelistDialog2" timestamp="1599850373403">
+      <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="331" y="54" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1596742502902" />
     <state x="331" y="23" width="958" height="808" key="CommitChangelistDialog2/0.23.1440.808@0.23.1440.808" timestamp="1597333229790" />
@@ -639,7 +641,7 @@
     <state x="23" y="23" width="1417" height="823" key="CommitChangelistDialog2/0.23.1440.823@0.23.1440.823" timestamp="1594362197869" />
     <state x="331" y="53" key="CommitChangelistDialog2/0.23.1440.825@0.23.1440.825" timestamp="1591412085808" />
     <state x="1837" y="108" key="CommitChangelistDialog2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596685703030" />
-    <state x="30" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1596680464732" />
+    <state x="30" y="23" key="CommitChangelistDialog2/0.23.1920.988@0.23.1920.988" timestamp="1599850373403" />
     <state x="0" y="23" key="FileDocumentManager.FileCacheConflict" timestamp="1594577538363">
       <screen x="0" y="23" width="1440" height="815" />
     </state>
@@ -698,8 +700,8 @@
     <state x="156" y="133" key="MergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1593669944571" />
     <state x="156" y="134" key="MergeDialog/0.23.1440.813@0.23.1440.813" timestamp="1596394490895" />
     <state x="1648" y="238" key="MergeDialog/0.23.1440.815/1440.94.1920.1057@1440.94.1920.1057" timestamp="1595038125902" />
-    <state x="436" y="179" key="MultipleFileMergeDialog" timestamp="1597329418840">
-      <screen x="0" y="23" width="1440" height="808" />
+    <state x="31" y="102" key="MultipleFileMergeDialog" timestamp="1599850395040">
+      <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="23" y="72" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1596078387430" />
     <state x="436" y="179" key="MultipleFileMergeDialog/0.23.1440.808@0.23.1440.808" timestamp="1597329418840" />
@@ -712,7 +714,7 @@
     <state x="436" y="181" key="MultipleFileMergeDialog/0.23.1440.822@0.23.1440.822" timestamp="1591489718586" />
     <state x="1471" y="173" key="MultipleFileMergeDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596082267647" />
     <state x="23" y="93" key="MultipleFileMergeDialog/0.23.1440.877@0.23.1440.877" timestamp="1596694412104" />
-    <state x="31" y="102" key="MultipleFileMergeDialog/0.23.1920.988@0.23.1920.988" timestamp="1596680112897" />
+    <state x="31" y="102" key="MultipleFileMergeDialog/0.23.1920.988@0.23.1920.988" timestamp="1599850395040" />
     <state x="370" y="23" width="1024" height="815" key="SettingsEditor" timestamp="1597427346864">
       <screen x="0" y="23" width="1440" height="812" />
     </state>
@@ -765,8 +767,8 @@
     <state x="97" y="23" width="1920" height="988" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.824@0.23.1440.824" timestamp="1594361972902" />
     <state x="1706" y="292" width="1654" height="775" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596082161129" />
     <state x="241" y="154" width="1240" height="615" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1920.988@0.23.1920.988" timestamp="1596682106535" />
-    <state x="525" y="361" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597639863369">
-      <screen x="0" y="23" width="1440" height="813" />
+    <state x="700" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599850387209">
+      <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="525" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1592063445852" />
     <state x="525" y="359" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.808@0.23.1440.808" timestamp="1597329407204" />
@@ -781,11 +783,12 @@
     <state x="525" y="365" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1591489711874" />
     <state x="2140" y="505" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.94.1920.988@1440.94.1920.988" timestamp="1596685689038" />
     <state x="525" y="388" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1596694398056" />
-    <state x="700" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.988@0.23.1920.988" timestamp="1596680105188" />
-    <state x="268" y="125" width="903" height="610" key="find.popup" timestamp="1595007762846">
-      <screen x="0" y="23" width="1440" height="815" />
+    <state x="700" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.988@0.23.1920.988" timestamp="1599850387209" />
+    <state x="357" y="147" width="1204" height="740" key="find.popup" timestamp="1599930248146">
+      <screen x="0" y="23" width="1920" height="988" />
     </state>
     <state x="268" y="125" width="903" height="610" key="find.popup/0.23.1440.815@0.23.1440.815" timestamp="1595007762846" />
+    <state x="357" y="147" width="1204" height="740" key="find.popup/0.23.1920.988@0.23.1920.988" timestamp="1599930248146" />
     <state x="468" y="246" key="git4idea.merge.GitPullDialog" timestamp="1599850358728">
       <screen x="0" y="23" width="1920" height="988" />
     </state>

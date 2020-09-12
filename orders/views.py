@@ -151,8 +151,8 @@ def checkout(request):
                 print(request.POST)
                 billing_a = request.POST["billing_address"]
                 shipping_a = request.POST["shipping_address"]
-
                 token = request.POST['stripeToken']
+
                 try:
                     billing_address_instance = BillingAddress.objects.get(id= billing_a)
                 except:
